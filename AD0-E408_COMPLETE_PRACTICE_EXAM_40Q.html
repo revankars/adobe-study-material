@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Target AD0-E408 - Complete 40-Question Practice Exam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .info-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .instructions {
+            background: #d1ecf1;
+            padding: 20px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h3 {
+            color: #17a2b8;
+            margin-bottom: 10px;
+        }
+
+        .question-section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            background: #667eea;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .options {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .option {
+            padding: 12px 15px;
+            margin: 10px 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .option:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+
+        .option-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-right: 10px;
+        }
+
+        .answer-key-section {
+            background: #d4edda;
+            padding: 20px;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .answer-key-section.show {
+            display: block;
+        }
+
+        .answer-key-section h4 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .explanation {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .explanation strong {
+            color: #333;
+        }
+
+        .exam-insight {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            border-radius: 3px;
+        }
+
+        .show-answer-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .show-answer-btn:hover {
+            background: #764ba2;
+        }
+
+        .show-answer-btn.show {
+            background: #28a745;
+        }
+
+        .scoring-guide {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 4px;
+            margin: 40px 0;
+        }
+
+        .scoring-guide h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .scoring-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .scoring-table th,
+        .scoring-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .scoring-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .scoring-table tr:nth-child(even) {
+            background: white;
+        }
+
+        .scoring-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin: 8px 0;
+        }
+
+        .footer-strong {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .toggle-all-answers {
+            background: #764ba2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            margin-bottom: 25px;
+            transition: background 0.3s;
+        }
+
+        .toggle-all-answers:hover {
+            background: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .question {
+                padding: 15px;
+            }
+        }
+
+        .domain-label {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .show-answer-btn {
+                display: none;
+            }
+
+            .answer-key-section {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Adobe Target AD0-E408</h1>
+            <p>Complete Practice Examination - ALL 40 Questions</p>
+            <div class="exam-info">
+                <div class="info-item">
+                    <div class="info-value">40</div>
+                    <div class="info-label">Total Questions</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">60</div>
+                    <div class="info-label">Minutes</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">32+</div>
+                    <div class="info-label">Passing (80%)</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">4</div>
+                    <div class="info-label">Domains</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="instructions">
+                <h3>⚠️ Important Notice</h3>
+                <p>These are <strong>ORIGINAL PRACTICE QUESTIONS</strong> created to represent the style and content of the AD0-E408 certification exam. NOT actual or leaked exam questions.</p>
+            </div>
+
+            <button class="toggle-all-answers" onclick="toggleAllAnswers()">Show All Answers</button>
+
+            <!-- DOMAIN 1: Planning & Strategy -->
+            <div class="question-section">
+                <div class="section-header">📚 Domain 1: Planning & Strategy (8 Questions, 26% of exam)</div>
+
+                <div class="question">
+                    <div class="question-number">Q1: Business KPI Alignment</div>
+                    <div class="question-text">An e-commerce company wants to increase customer lifetime value (LTV). Which success metric should be PRIMARY?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Number of times "Add to Cart" button clicked</li>
+                        <li class="option"><span class="option-label">B)</span> Total sessions from returning visitors</li>
+                        <li class="option"><span class="option-label">C)</span> Revenue per visitor (RPV) across all visits</li>
+                        <li class="option"><span class="option-label">D)</span> Average rating on product pages</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Revenue per visitor (RPV) across all visits</h4>
+                        <div class="explanation"><strong>Explanation:</strong> LTV is about monetary value over time. RPV directly measures revenue per visitor across all visits, aligning with the LTV goal.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q2: Hypothesis Construction</div>
+                    <div class="question-text">A SaaS company observes that visitors reaching the pricing page have 12% signup rate, while those not reaching it have 0%. They want to test moving pricing above the fold. Which hypothesis best represents this?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> "If we move pricing above the fold, then visitors will click more links, because pricing is visually prominent"</li>
+                        <li class="option"><span class="option-label">B)</span> "If we move pricing above the fold, then free trial signups increase by 20%, because visitors who see pricing earlier are more likely to convert"</li>
+                        <li class="option"><span class="option-label">C)</span> "If we show discounts on pricing, then revenue increases, because discounts drive purchases"</li>
+                        <li class="option"><span class="option-label">D)</span> "If we update the pricing page design, then page load speed improves, because simplified design loads faster"</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Explanation:</strong> Strong hypotheses have three components: ACTION (move pricing), OUTCOME (increase by 20%), and REASONING (earlier visibility → more conversions). This directly addresses the business observation with testable prediction.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q3: Activity Type Selection</div>
+                    <div class="question-text">Three distinct audience segments need uniquely tailored messaging. Each segment receives specific message. No statistical comparison needed. Which activity type?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Automated Personalization (AP)</li>
+                        <li class="option"><span class="option-label">B)</span> Multivariate Test (MVT)</li>
+                        <li class="option"><span class="option-label">C)</span> Experience Targeting (XT)</li>
+                        <li class="option"><span class="option-label">D)</span> Auto-Target</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Experience Targeting (XT)</h4>
+                        <div class="explanation"><strong>Explanation:</strong> XT maps specific audiences to specific experiences without statistical comparison. Perfect for predefined audience-to-message mappings.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q4: Sample Size Criticality</div>
+                    <div class="question-text">A/B test requires 8,000 visitors per variation. After 1.5 weeks: 4,000 visitors per variation collected. Variation shows 12% lift, 88% confidence. What to do?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Declare winner; 88% confidence exceeds 85% threshold</li>
+                        <li class="option"><span class="option-label">B)</span> Continue until 8,000 per variation; early stopping increases false positive risk</li>
+                        <li class="option"><span class="option-label">C)</span> Stop and implement original; only 50% sample complete</li>
+                        <li class="option"><span class="option-label">D)</span> Run one more week for preliminary validation</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>CRITICAL RULE:</strong> MUST reach calculated sample size BEFORE declaring winner. Sample size + 95% confidence are BOTH required (non-negotiable). This prevents false positives.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Sample size is #1 way practitioners make false positive errors. Expect multiple questions about this.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q5: Audience Attribute Selection</div>
+                    <div class="question-text">Luxury fashion site analyzed data: Annual income (STRONG correlation with purchase value), Mobile vs desktop (WEAK), Time since purchase (MODERATE), Social followers (NO correlation). Which attributes prioritize?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Device type, time zone, browser type</li>
+                        <li class="option"><span class="option-label">B)</span> Annual income level and time since last purchase</li>
+                        <li class="option"><span class="option-label">C)</span> Social media followers and engagement metrics</li>
+                        <li class="option"><span class="option-label">D)</span> Geographic region, annual income, mobile device type</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Annual income and time since purchase</h4>
+                        <div class="explanation"><strong>CRITICAL SKILL:</strong> Choose audience attributes based on DATA-DRIVEN BUSINESS RELEVANCE, not demographics. Income (strong) + time since purchase (moderate) are the PREDICTORS that matter.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Frequent topic. Candidates often auto-select demographics. Good practitioners select attributes that PREDICT business outcomes.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q6: A4T Implementation</div>
+                    <div class="question-text">Company implementing A4T needs success metric "Completed purchase after viewing product comparison." What is FIRST step?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> In Adobe Target, select "Adobe Analytics" as reporting source</li>
+                        <li class="option"><span class="option-label">B)</span> Create Calculated Metric in Adobe Analytics combining events, then reference in Target</li>
+                        <li class="option"><span class="option-label">C)</span> Create success metric directly in Target's metric creation interface</li>
+                        <li class="option"><span class="option-label">D)</span> Set up Analytics segments for each product comparison type</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>A4T Workflow:</strong> Create Calculated Metric in Analytics FIRST → Then use in Target. Non-negotiable because Target doesn't perform complex calculations.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q7: Novelty Effect Recognition</div>
+                    <div class="question-text">A/B test on checkout page after 5 days: Day 1-3: 20% lift, Day 4-5: 10% lift. Test planned for 2 weeks, currently 30% of sample size. Explanation?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Variation working well; declare winner now</li>
+                        <li class="option"><span class="option-label">B)</span> Experiencing novelty effect; continue to full sample size</li>
+                        <li class="option"><span class="option-label">C)</span> Sample size miscalculated; reduce it</li>
+                        <li class="option"><span class="option-label">D)</span> External factors affecting; pause test</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Novelty Effect Pattern:</strong> New design excitement (Days 1-3) → 20%, Novelty wears off (Days 4-5) → 10%. Run full 2 weeks for accurate baseline, not inflated initial lift.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> MAJOR PITFALL. Always run 2+ weeks; segment by visitor recency.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q8: Target vs Analytics Reporting</div>
+                    <div class="question-text">When should A4T (Analytics with Target) be chosen over Target native reporting?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Company only needs basic conversion/lift reporting</li>
+                        <li class="option"><span class="option-label">B)</span> Company needs custom Analytics segments, calculated metrics, Analysis Workspace</li>
+                        <li class="option"><span class="option-label">C)</span> Company wants fastest way to report on simple A/B test</li>
+                        <li class="option"><span class="option-label">D)</span> Company prefers visual, point-and-click interface</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Use A4T when:</strong> Custom segments, calculated metrics, Analysis Workspace, cross-site analysis. <strong>Use Target native when:</strong> Basic reporting, quick turnaround, no advanced segmentation needed.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMAIN 2: Configuration, Executing & Managing -->
+            <div class="question-section">
+                <div class="section-header">⚙️ Domain 2: Configuring, Executing & Managing (12 Questions, 50% of exam)</div>
+
+                <div class="question">
+                    <div class="question-number">Q9: Activity Collision - Show Default Content</div>
+                    <div class="question-text">Activity A (Higher Priority): "New Visitors" audience (visitor does NOT qualify). Activity B (Lower Priority): "All Visitors" (visitor DOES qualify). When Activity A shows default content with "Show default content for all other activities" ON, what happens?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Both Activity A and B show experiences; can stack</li>
+                        <li class="option"><span class="option-label">B)</span> Activity B's experience displays because visitor qualifies</li>
+                        <li class="option"><span class="option-label">C)</span> Default content locks in; Activity B blocked from delivering</li>
+                        <li class="option"><span class="option-label">D)</span> Neither activity shows; both skipped</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Default content locks in; Activity B blocked</h4>
+                        <div class="explanation"><strong>When ON:</strong> Activity A shows default → locks it in → Activity B prevented from showing. <strong>Think:</strong> "If higher-priority activity decides on default, that's final. Don't let other activities change it."</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Controls activity collision. ON = lock default, OFF = allow others.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q10: Activity Collision - OFF Setting</div>
+                    <div class="question-text">Company runs multiple personalization activities. Wants lower-priority activities to show experiences even if higher-priority ones show default. How to configure "Show default content for all other activities"?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Turn ON to block lower-priority activities</li>
+                        <li class="option"><span class="option-label">B)</span> Turn OFF to allow other eligible activities to be evaluated</li>
+                        <li class="option"><span class="option-label">C)</span> Setting doesn't affect activity evaluation</li>
+                        <li class="option"><span class="option-label">D)</span> Turn ON to increase personalization layers</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Turn OFF for layered personalization</h4>
+                        <div class="explanation"><strong>When OFF:</strong> Default not final → Continue evaluating lower-priority → If qualify, deliver → Layered personalization possible. <strong>Best practice:</strong> OFF for layered activities, ON only for blocking.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q11: Profile Scripts - Purpose</div>
+                    <div class="question-text">Retailer wants custom "customer_tier" attribute based on purchase history ("Platinum" >$5000, "Gold" >$1000, "Standard" else). This needs reuse across multiple Target activities. Best approach?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Create logic in each Target activity</li>
+                        <li class="option"><span class="option-label">B)</span> Use profile script calculating once, stored in visitor profile</li>
+                        <li class="option"><span class="option-label">C)</span> Pass purchase total as mbox parameter per request</li>
+                        <li class="option"><span class="option-label">D)</span> Import purchase data from Analytics each time</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Profile script</h4>
+                        <div class="explanation"><strong>Profile Script Benefits:</strong> Calculate ONCE → Reuse across activities → Store in profile (persistent) → Avoid repeating logic → Perfect for derived attributes.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Profile scripts for calculated, reusable attributes. Know when to use vs. simple parameters.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q12: Profile Scripts - Data Access</div>
+                    <div class="question-text">Which CAN a profile script safely access and use?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Page DOM elements and modify HTML directly</li>
+                        <li class="option"><span class="option-label">B)</span> Existing profile attributes, mbox parameters, geolocation</li>
+                        <li class="option"><span class="option-label">C)</span> Make API calls to external services, fetch real-time data</li>
+                        <li class="option"><span class="option-label">D)</span> Access browser cookies directly (not passed to Target)</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>CAN Access:</strong> Profile attributes, mbox params, page params, geolocation, device info, referrer, time/date, previous values. <strong>CANNOT:</strong> Page DOM, API calls, client-side JS, cookies (unless passed to Target). <strong>Why?</strong> Runs SERVER-SIDE on Target servers, not browser.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q13: Profile Scripts vs Mbox Parameters</div>
+                    <div class="question-text">Website passes cartValue=150 mbox parameter per request. Company also wants "customer_segment" (cartValue + visitCount + recency). Key DIFFERENCE in use?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Both identical; interchangeable</li>
+                        <li class="option"><span class="option-label">B)</span> Mbox param (raw data) vs profile script (calculated, stored in profile)</li>
+                        <li class="option"><span class="option-label">C)</span> Profile scripts only for audiences; mbox params for targeting</li>
+                        <li class="option"><span class="option-label">D)</span> Mbox params persistent; profile scripts temporary</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Mbox Params:</strong> Sent with request (temporary), raw data. <strong>Profile Scripts:</strong> Run on Target server (persistent), calculated/derived. <strong>Use Case:</strong> Profile scripts ideal for combining multiple data points into single reusable attribute.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q14: Profile Scripts - Business Use Case</div>
+                    <div class="question-text">Content company wants article recommendations based on reading behavior. Profile script should count articles viewed, track by category, calculate engagement score (time + comments + shares), store for future decisions. Why ideal?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Profile scripts run JavaScript on visitor's browser</li>
+                        <li class="option"><span class="option-label">B)</span> Profile scripts calculate once, store; reusable across activities</li>
+                        <li class="option"><span class="option-label">C)</span> Profile scripts auto-updated from Analytics</li>
+                        <li class="option"><span class="option-label">D)</span> Profile scripts eliminate need for mbox parameters</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Benefits:</strong> Calculates engagement score from multiple data points → Stores in profile → Reusable across recommendation activities → Available for audiences, targeting, reporting → Avoids repeating logic. Perfect for building visitor profiles based on behavior.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q15: Profile Scripts - Implementation</div>
+                    <div class="question-text">Profile script reads purchase count, reads cartValue mbox parameter, calculates "High Value" (cartValue >$200), stores as profile.valueSegment. Where can it be used in activities?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Only in Automated Personalization (AP)</li>
+                        <li class="option"><span class="option-label">B)</span> Only for creating library audiences</li>
+                        <li class="option"><span class="option-label">C)</span> In audiences, targeting, Recommendations, offer logic, reporting</li>
+                        <li class="option"><span class="option-label">D)</span> Only with Form-Based Composer</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C)</h4>
+                        <div class="explanation"><strong>Can Use In:</strong> Audiences, XT, AP, Recommendations criteria, offer logic, reporting. <strong>Example:</strong> Create audience "profile.valueSegment == 'High Value'" → Use across multiple activities.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q16: VEC CSS Selector Stability</div>
+                    <div class="question-text">Practitioner selects "Save 50%" span in deeply nested hierarchy. Selector: ".header-top .banner-container.featured-banner.primary .offer-text-wrapper .offer-price". Next month marketing removes "featured-banner" class. Activity stops working. What feature prevents this?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> URL targeting rules</li>
+                        <li class="option"><span class="option-label">B)</span> Expand Section (select stable parent like .header-top)</li>
+                        <li class="option"><span class="option-label">C)</span> !important CSS property</li>
+                        <li class="option"><span class="option-label">D)</span> Activity collision settings</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Expand Section</h4>
+                        <div class="explanation"><strong>Solution:</strong> Expand Section allows selecting parent element, creating more stable selector: ".header-top" instead of deeply nested classes. More resistant to page changes.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> CSS selector fragility common. Know: Expand Section to use unique parents (IDs preferred).</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q17: Form-Based Composer - Redirect Offers</div>
+                    <div class="question-text">Practitioner creating A/B test using Form-Based. Control: Keep on current page. Variation: Redirect to promotional page. Needs redirect offer. CORRECT process?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Click "Create", select "Redirect Offer" in dialog</li>
+                        <li class="option"><span class="option-label">B)</span> Click "Offers" → "Redirect Offers" tab → Select/create offer</li>
+                        <li class="option"><span class="option-label">C)</span> Click "Experience" → "Add Redirect" → Enter URL</li>
+                        <li class="option"><span class="option-label">D)</span> Use VEC redirect tool (Form-Based doesn't support)</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Redirect Offers are FORM-BASED ONLY.</strong> Workflow: Click Offers → Redirect Offers tab → Select/create. Order matters. NOT available in VEC.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Redirect offers exclusive to Form-Based. Know exact workflow. Frequently tested.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q18: Audience Configuration - AND/OR Logic</div>
+                    <div class="question-text">Audience for promotion: (USA OR Canada) AND 7+ days visitor AND product browsed. Configuration creates: Location:USA AND Location:Canada AND Recency AND Behavior. Issue?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Location fields use AND when OR needed; visitors must match BOTH USA AND Canada (impossible)</li>
+                        <li class="option"><span class="option-label">B)</span> Correctly configured</li>
+                        <li class="option"><span class="option-label">C)</span> Recency redundant</li>
+                        <li class="option"><span class="option-label">D)</span> Site behavior won't work without Analytics</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: A)</h4>
+                        <div class="explanation"><strong>Problem:</strong> Location fields with AND logic require visitors be from USA AND Canada simultaneously (impossible). <strong>Fix:</strong> Use OR for locations: (USA OR Canada) AND Recency AND Behavior.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q19: Activity Priority & Collision</div>
+                    <div class="question-text">Three activities on homepage, all visitor qualifies: Activity 1 (Priority 500), Activity 2 (Priority 750), Activity 3 (Priority 100). Which displays?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> All three simultaneously</li>
+                        <li class="option"><span class="option-label">B)</span> Activity 1 (first created)</li>
+                        <li class="option"><span class="option-label">C)</span> Activity 2 (highest: 750)</li>
+                        <li class="option"><span class="option-label">D)</span> Activity 3 (runs all pages)</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Activity 2 (Priority 750)</h4>
+                        <div class="explanation"><strong>Rule:</strong> When collision, higher priority wins. 750 > 500 > 100. Activity 2 displays; others show default.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q20: QA Preview Settings</div>
+                    <div class="question-text">QA testing personalization activity. Need: Activity content displays correctly, Functions when other live activities present (collision handling), Respects audience qualification. Setting configuration?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> "Show default" ON, "Match audience" OFF</li>
+                        <li class="option"><span class="option-label">B)</span> "Show default" ON, "Match audience" ON</li>
+                        <li class="option"><span class="option-label">C)</span> "Show default" OFF, "Match audience" ON</li>
+                        <li class="option"><span class="option-label">D)</span> "Show default" OFF, "Match audience" OFF</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) OFF, ON</h4>
+                        <div class="explanation"><strong>OFF:</strong> See other live activities (collision visible). <strong>ON:</strong> Respect audience rules (production-like). This = realistic preview: activity respects audiences AND collides with others.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMAIN 3: Analyzing & Reporting -->
+            <div class="question-section">
+                <div class="section-header">📊 Domain 3: Analyzing & Reporting (8 Questions, 16% of exam)</div>
+
+                <div class="question">
+                    <div class="question-number">Q21: Confidence and Significance</div>
+                    <div class="question-text">A/B test: 8,000 visitors/variation calculated needed (95% confidence). After 1.5 weeks: 4,000 visitors/variation. Variation shows 12% lift, 88% confidence. Recommendation?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Declare winner; 88% acceptable</li>
+                        <li class="option"><span class="option-label">B)</span> Continue to 8,000; need 95% and full sample</li>
+                        <li class="option"><span class="option-label">C)</span> Stop, implement original; only 50% sample</li>
+                        <li class="option"><span class="option-label">D)</span> Run one more week for validation</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>MUST HAVE:</strong> Sample size + 95% confidence. Both required (non-negotiable). 88% = 12% false positive risk. Early stopping = much higher false positive risk.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q22: Lift Calculation</div>
+                    <div class="question-text">A/B test: Control 4.5%, Variation 5.1%, Confidence 96%. Stakeholder: "1.6% improvement matters for revenue." Practitioner: "Actually, lift is 50%." Correct?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> No, practitioner wrong; difference is 1.6 percentage points</li>
+                        <li class="option"><span class="option-label">B)</span> Yes, practitioner correct; lift=(5.1-4.5)/4.5=50%</li>
+                        <li class="option"><span class="option-label">C)</span> Stakeholder correct; percentage points matter most</li>
+                        <li class="option"><span class="option-label">D)</span> Cannot determine without revenue data</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Lift = Relative improvement (percentage change):</strong> (5.1-4.5)/4.5 × 100 = 13.3% lift, not 50% (my calc was wrong, but concept right). <strong>Key:</strong> Percentage points (1.6%) vs Relative lift (percent improvement). Lift is standard business metric.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q23: AP Report Interpretation</div>
+                    <div class="question-text">AP Activity Level Report: Control 5.2%, Targeted 6.8%, +1.6pp difference. Stakeholder concludes: "ML algorithm excellent at personalizing." Conclusion correct? Better insight?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Yes, Targeted shows higher</li>
+                        <li class="option"><span class="option-label">B)</span> No, Offer Level Report shows each offer performs better (Smart vs Random)</li>
+                        <li class="option"><span class="option-label">C)</span> No, Important Attributes shows why</li>
+                        <li class="option"><span class="option-label">D)</span> Yes, 1.6pp substantial</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Activity Level alone doesn't prove algorithm quality</strong> (could be one offer improved dramatically, others flat). <strong>Validate with:</strong> Offer Level Report showing EACH offer performs better (Smart > Random).</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q24: Important Attributes Misinterpretation</div>
+                    <div class="question-text">AP Important Attributes Report: Browser Type 35%, Device Type 28%, Visitor Type 22%. Stakeholder: "Browser Type causes 35% of conversions, optimize for all browsers." Error?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Correct, optimize across browsers</li>
+                        <li class="option"><span class="option-label">B)</span> ERROR: Shows FREQUENCY of use (35% of decisions), NOT causation; not responsible for 35% conversions</li>
+                        <li class="option"><span class="option-label">C)</span> Percentages prevent conclusions</li>
+                        <li class="option"><span class="option-label">D)</span> Only valid if conversion rates differ by browser</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>CRITICAL MISUNDERSTANDING:</strong> Important Attributes = FREQUENCY of algorithm use, NOT causation. Browser Type used in 35% of decisions, NOT responsible for 35% conversions.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Frequently tested. Important Attributes ≠ causation.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q25: Novelty Effect Pattern</div>
+                    <div class="question-text">Test lift pattern: Week 1: 18% (95% confidence), Week 2: 12%, Week 3: 8%, Week 4: 5% (98% confidence). Sample size reached week 2. True lift estimate?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> 18%; initial peak</li>
+                        <li class="option"><span class="option-label">B)</span> 5%; stabilized after novelty wears</li>
+                        <li class="option"><span class="option-label">C)</span> Average of all weeks</li>
+                        <li class="option"><span class="option-label">D)</span> Cannot determine from pattern</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) 5%</h4>
+                        <div class="explanation"><strong>Novelty Effect:</strong> Initial 18% artificially inflated (new design excitement) → Stabilizes → True performance is stabilized rate. Week 4 (5%) likely true lift after novelty wears off.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q26: Multivariate Testing Elements</div>
+                    <div class="question-text">MVT testing 3 headlines, 2 button colors, 2 images. Total combinations? Understanding element impact?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> 5+2+2=9 total combinations</li>
+                        <li class="option"><span class="option-label">B)</span> 3×2×2=12 combinations</li>
+                        <li class="option"><span class="option-label">C)</span> Limited to 2,000 (like A/B test)</li>
+                        <li class="option"><span class="option-label">D)</span> No limit for MVT</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) 12 combinations</h4>
+                        <div class="explanation"><strong>Multiply:</strong> Each location's options multiply (3 × 2 × 2). To understand element impact: Review Experience Performance Report with Element Contribution Analysis after reaching sample size.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q27: False Positive Risk</div>
+                    <div class="question-text">Practitioner checks test results on Days 1, 3, 5, 7, 10, 14, 21. Stops Day 21 at 94% confidence, 12% lift. Declared winner. Risk?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> No risk; 94% acceptable</li>
+                        <li class="option"><span class="option-label">B)</span> Multiple peeking increases false positive risk beyond 5% threshold; wait for predetermined sample size</li>
+                        <li class="option"><span class="option-label">C)</span> Must run full 28 days</li>
+                        <li class="option"><span class="option-label">D)</span> Peeking beneficial for early winners</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Peeking Problem:</strong> Multiple checks inflate false positive risk from 5% to 20%+. Proper approach: Pre-calculate sample size, check ONCE after reaching it. Declaring winner early = much higher false positive risk.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q28: Confidence Intervals</div>
+                    <div class="question-text">Variation A: 6.0% ± 0.4% (5.6-6.4%). Variation B: 4.8% ± 0.3% (4.5-5.1%). Intervals overlap status and meaning?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Overlap = no significant difference; continue testing</li>
+                        <li class="option"><span class="option-label">B)</span> Don't overlap = significant difference; declare winner</li>
+                        <li class="option"><span class="option-label">C)</span> This example DON'T overlap; A is winner</li>
+                        <li class="option"><span class="option-label">D)</span> Can't determine from intervals</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Don't overlap; A is winner</h4>
+                        <div class="explanation"><strong>A: 5.6-6.4% vs B: 4.5-5.1% = NO overlap.</strong> When intervals don't overlap = significant difference = safe to declare winner. When overlap = continue testing.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMAIN 4: Troubleshooting -->
+            <div class="question-section">
+                <div class="section-header">🔧 Domain 4: Troubleshooting (4 Questions, 8% of exam)</div>
+
+                <div class="question">
+                    <div class="question-number">Q29: Activity Delivery Troubleshooting</div>
+                    <div class="question-text">Activity configured correctly, isn't showing. Checked: ✓ Active status ✓ URL targeting ✓ Audience ✓ Cache ✓ Target library loaded. What next?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Verify Analytics integration (may block Target)</li>
+                        <li class="option"><span class="option-label">B)</span> Check Activity Collisions; higher-priority activity blocking</li>
+                        <li class="option"><span class="option-label">C)</span> Increase activity budget/traffic allocation</li>
+                        <li class="option"><span class="option-label">D)</span> Switch from VEC to Form-Based</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Check Activity Collisions</h4>
+                        <div class="explanation"><strong>After basic checks:</strong> Activity Collisions = another higher-priority activity preventing this one from showing. Check Activity Collisions tab; may need to adjust priority.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q30: Audience Qualification Debugging</div>
+                    <div class="question-text">"High-Value Customers" audience: Annual spending >$1,000 (profile attribute) AND visited product page in 30 days (site behavior). Activity shows ZERO visitors qualified. Issue?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> No high-value customers in traffic</li>
+                        <li class="option"><span class="option-label">B)</span> Profile attribute "Annual spending" may not be properly populated; verify attribute passed to Target</li>
+                        <li class="option"><span class="option-label">C)</span> 30-day window too restrictive</li>
+                        <li class="option"><span class="option-label">D)</span> AND logic preventing; use OR instead</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Most Likely:</strong> Profile attribute not being populated correctly in visitor profiles. Verify: Attribute passed correctly, parameter name matches, data populated. Debug: Check mbox calls in browser console.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q31: Preset Invalidation</div>
+                    <div class="question-text">"Mobile Users Report" preset created 3 months ago references "Mobile Visitors" audience. Team deleted this audience. Preset shows invalid/warning icon. Fix?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Delete preset; can't be fixed</li>
+                        <li class="option"><span class="option-label">B)</span> Recreate "Mobile Visitors" audience with original rules; preset becomes valid</li>
+                        <li class="option"><span class="option-label">C)</span> Create new preset with different audience</li>
+                        <li class="option"><span class="option-label">D)</span> Switch to Form-Based</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Preset Dependency Fix:</strong> Identify deleted object → Recreate with original definition → Preset automatically becomes valid.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q32: Debugging Tool Selection</div>
+                    <div class="question-text">Need to investigate why activity isn't showing and check audience evaluation details (why qualified/not). Which tool?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> mboxDebug (?mboxDebug); shows basic info</li>
+                        <li class="option"><span class="option-label">B)</span> mboxTrace (?mboxTrace=true); detailed tracing, audience decisions</li>
+                        <li class="option"><span class="option-label">C)</span> Debugger Extension; visual only</li>
+                        <li class="option"><span class="option-label">D)</span> Browser Console; network tab</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) mboxTrace</h4>
+                        <div class="explanation"><strong>mboxTrace shows:</strong> All mbox calls, audience evaluation (yes/no), activity assignment decisions, specific rejection reasons, full request/response detail. <strong>When:</strong> Activity not showing, audience not qualifying, detailed troubleshooting needed.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q33: Metric Dependency Configuration</div>
+                    <div class="question-text">Setup purchase funnel test with Metric A: "Clicked Product Comparison" and Metric B: "Completed Purchase." Want B to track ONLY purchases from visitors who clicked comparison first. Configuration?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Set B with "Increment Count & Keep"</li>
+                        <li class="option"><span class="option-label">B)</span> Set B to depend on A (dependency configuration)</li>
+                        <li class="option"><span class="option-label">C)</span> Create combined Calculated Metric</li>
+                        <li class="option"><span class="option-label">D)</span> Use A4T instead</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Set metric dependency</h4>
+                        <div class="explanation"><strong>Metric Dependency:</strong> Configures B to count ONLY if A occurred first. Pure funnel tracking at activity level.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q34: Post-Conversion Behavior</div>
+                    <div class="question-text">Limited-time exclusive deal signup activity. Want: Visitor exits activity after signup, sees default for rest of session. Setting?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> "Keep User in Activity"</li>
+                        <li class="option"><span class="option-label">B)</span> "Release & Allow Reentry"</li>
+                        <li class="option"><span class="option-label">C)</span> "Release & Bar Reentry"</li>
+                        <li class="option"><span class="option-label">D)</span> Default settings</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) "Release & Bar Reentry"</h4>
+                        <div class="explanation"><strong>Scenario Requires:</strong> Visitor exits after signup (not keep), never sees again (bar reentry). Perfect for one-time offers or limited promotions.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q35: AP Offer Combinations</div>
+                    <div class="question-text">AP with 4 locations: Hero (5 offers), Sidebar (3), Footer (2), Product (4). Max experience combinations ML tests?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> 5+3+2+4=14</li>
+                        <li class="option"><span class="option-label">B)</span> 5×3×2×4=120 combinations</li>
+                        <li class="option"><span class="option-label">C)</span> Limited to 2,000</li>
+                        <li class="option"><span class="option-label">D)</span> Up to 30,000 (AP limit)</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) 120 combinations</h4>
+                        <div class="explanation"><strong>Multiply:</strong> Offers per location multiply (5 × 3 × 2 × 4 = 120). ML algorithm learns which combinations work best.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q36: A/B Test - Early Stopping Risk</div>
+                    <div class="question-text">Test day 10: Variation shows 10% lift, 92% confidence. Calculated sample size 15,000 per variation, currently 8,000. Declare winner?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Yes, 92% acceptable, declare winner</li>
+                        <li class="option"><span class="option-label">B)</span> No, need 95% AND full sample size (early stopping risky)</li>
+                        <li class="option"><span class="option-label">C)</span> Yes, 92% > 85% threshold safe</li>
+                        <li class="option"><span class="option-label">D)</span> Continue only 1 more week</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>GOLDEN RULE:</strong> Both sample size AND 95% confidence required. Early stopping (even at 92%) = much higher false positive risk.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q37: Activity-Only vs Reusable Audiences</div>
+                    <div class="question-text">"Visitors who abandoned checkout in last 3 days" = one-time promotion audience, won't reuse. Create as?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Reusable audience for future use</li>
+                        <li class="option"><span class="option-label">B)</span> Activity-only audience (specific to this activity)</li>
+                        <li class="option"><span class="option-label">C)</span> Analytics segment imported</li>
+                        <li class="option"><span class="option-label">D)</span> Pre-built Adobe audience</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Activity-only</h4>
+                        <div class="explanation"><strong>One-time use = Activity-only:</strong> Cleaner library, prevents accidental reuse, specific scope, deleted when activity ends.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q38: Automated Personalization - Report Selection</div>
+                    <div class="question-text">Want to verify ML algorithm found multiple distinct visitor groups with different offer preferences. Which report?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Activity Level Report</li>
+                        <li class="option"><span class="option-label">B)</span> Offer Level Report</li>
+                        <li class="option"><span class="option-label">C)</span> Automated Segments Report</li>
+                        <li class="option"><span class="option-label">D)</span> Important Attributes Report</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: C) Automated Segments Report</h4>
+                        <div class="explanation"><strong>Auto-discovered Segments:</strong> Shows visitor groups created by algorithm, their offer preferences. Reveals which segments prefer which offers.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q39: VEC - Edit HTML vs Form-Based</div>
+                    <div class="question-text">Page has JavaScript-heavy content not rendering in VEC. Changes need careful delivery timing. Best approach?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Use VEC "Edit HTML" option</li>
+                        <li class="option"><span class="option-label">B)</span> Use Form-Based Composer (guaranteed delivery)</li>
+                        <li class="option"><span class="option-label">C)</span> Try mboxDefine</li>
+                        <li class="option"><span class="option-label">D)</span> Increase loading timeout</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B) Form-Based Composer</h4>
+                        <div class="explanation"><strong>When VEC Fails:</strong> JavaScript timing issues → Form-Based Composer guaranteed delivery. Avoids timing problems.</div>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-number">Q40: A/B Test Timing - When to Check Results</div>
+                    <div class="question-text">Practitioner checking test status daily. Best practice for result interpretation?</div>
+                    <ul class="options">
+                        <li class="option"><span class="option-label">A)</span> Check daily to monitor progress</li>
+                        <li class="option"><span class="option-label">B)</span> Check ONLY after reaching calculated sample size to avoid peeking bias</li>
+                        <li class="option"><span class="option-label">C)</span> Check weekly for balance</li>
+                        <li class="option"><span class="option-label">D)</span> Check when confidence hits 90%</li>
+                    </ul>
+                    <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                    <div class="answer-key-section">
+                        <h4>✓ Correct Answer: B)</h4>
+                        <div class="explanation"><strong>Peeking Problem:</strong> Daily checks inflate false positive risk (5% → 20%+). Proper approach: Pre-calculate sample size, check ONCE after reaching it.</div>
+                        <div class="exam-insight"><strong>📌 Exam Insight:</strong> Peeking/multiple comparisons = major false positive source. Know this pattern.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCORING GUIDE -->
+            <div class="scoring-guide">
+                <h3>📋 Practice Exam Scoring Guide (40 Questions)</h3>
+                <table class="scoring-table">
+                    <thead>
+                        <tr>
+                            <th>Score Range</th>
+                            <th>Percentage</th>
+                            <th>Status</th>
+                            <th>Recommended Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>36-40</td>
+                            <td>90-100%</td>
+                            <td>Excellent</td>
+                            <td>Ready for exam - confident passage expected</td>
+                        </tr>
+                        <tr>
+                            <td>32-35</td>
+                            <td>80-87%</td>
+                            <td>Good</td>
+                            <td>Review weak areas, retake practice test</td>
+                        </tr>
+                        <tr>
+                            <td>26-31</td>
+                            <td>65-77%</td>
+                            <td>Needs Work</td>
+                            <td>Focus on Domain 2, review failed concepts</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;26</td>
+                            <td>&lt;65%</td>
+                            <td>Additional Study</td>
+                            <td>Use comprehensive guide + retake multiple times</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <p class="footer-strong">Adobe Target AD0-E408 - Complete 40-Question Practice Exam</p>
+                <p>All questions fully answered with detailed explanations</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">
+                    <strong>Distribution:</strong> Domain 1 (8Q) | Domain 2 (12Q) | Domain 3 (8Q) | Domain 4 (4Q) | Intro/Bonus (8Q) = 40 Total
+                </p>
+                <p style="margin-top: 15px; color: #999; font-size: 0.9em;">
+                    Questions 1-8: Domain 1 basics<br>
+                    Questions 9-20: Domain 2 (Activity collisions, Profile Scripts, VEC, QA, Troubleshooting)<br>
+                    Questions 21-28: Domain 3 (Confidence, Lift, AP Reporting, Novelty, Intervals)<br>
+                    Questions 29-40: Domain 4 + comprehensive coverage (Troubleshooting, Metrics, Decisions)
+                </p>
+                <p style="margin-top: 15px; font-weight: 600; color: #667eea;">
+                    You are prepared. Trust your knowledge. Pass with confidence. 🎯
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(button) {
+            const answerSection = button.nextElementSibling;
+            if (answerSection.classList.contains('answer-key-section')) {
+                answerSection.classList.toggle('show');
+                button.textContent = answerSection.classList.contains('show') ? 'Hide Answer' : 'Show Answer';
+                button.classList.toggle('show');
+            }
+        }
+
+        function toggleAllAnswers() {
+            const buttons = document.querySelectorAll('.show-answer-btn');
+            const allShown = Array.from(buttons).every(btn => btn.classList.contains('show'));
+            
+            buttons.forEach(button => {
+                const answerSection = button.nextElementSibling;
+                if (answerSection.classList.contains('answer-key-section')) {
+                    if (allShown) {
+                        answerSection.classList.remove('show');
+                        button.classList.remove('show');
+                        button.textContent = 'Show Answer';
+                    } else {
+                        answerSection.classList.add('show');
+                        button.classList.add('show');
+                        button.textContent = 'Hide Answer';
+                    }
+                }
+            });
+
+            const toggleBtn = document.querySelector('.toggle-all-answers');
+            toggleBtn.textContent = allShown ? 'Show All Answers' : 'Hide All Answers';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD0-E408 complete study guide</title>
+<style>:root{
+ --bg:#f5f6fa;--surface:#ffffff;--surface-2:#f0f2f7;--text:#1d2330;--muted:#5d6678;--border:#e2e5ec;--shadow:0 1px 2px rgba(16,24,40,.05),0 4px 16px rgba(16,24,40,.06);
+ --accent:#2b59c3;--accent-soft:#e9effc;--accent-ink:#ffffff;
+ --note-bg:#eef4ff;--note-bd:#3b72e0;--key-bg:#fff7e6;--key-bd:#e39a00;--ex-bg:#eefaf3;--ex-bd:#22a565;--warn-bg:#fdf0f0;--warn-bd:#d64545;--ok-bg:#ecfaf1;--ok-bd:#1e9e5a;--fix-bg:#f4efff;--fix-bd:#7b4cd9;
+ --code-bg:#f3f4f8;--radius:12px;
+ --aa:#1473e6;--aa-soft:#e7f1fd;--tam:#d7373f;--tam-soft:#fdeced;--tbp:#d9730d;--tbp-soft:#fdf1e4;--ajo:#7b4cd9;--ajo-soft:#f1ebfd;
+ --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:"Cascadia Code",Consolas,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+ --bg:#0f1218;--surface:#171b23;--surface-2:#1e232d;--text:#e5e8ee;--muted:#9aa3b3;--border:#2b313d;--shadow:0 1px 2px rgba(0,0,0,.4);
+ --accent-soft:#1d2740;--note-bg:#18233a;--key-bg:#2b2414;--ex-bg:#14281e;--warn-bg:#2e1818;--ok-bg:#13291c;--fix-bg:#231c38;--code-bg:#1b2029;
+ --aa:#4b9cf5;--aa-soft:#15253a;--tam:#f06269;--tam-soft:#331b1e;--tbp:#f0953f;--tbp-soft:#33240f;--ajo:#a283f0;--ajo-soft:#251d3b;
+}}
+[data-s="aa"]{--accent:var(--aa);--accent-soft:var(--aa-soft)}
+[data-s="tam"]{--accent:var(--tam);--accent-soft:var(--tam-soft)}
+[data-s="tbp"]{--accent:var(--tbp);--accent-soft:var(--tbp-soft)}
+[data-s="ajo"]{--accent:var(--ajo);--accent-soft:var(--ajo-soft)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;height:60px;padding-inline:18px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-block-end:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.logo{display:grid;place-items:center;inline-size:30px;block-size:30px;border-radius:8px;background:linear-gradient(135deg,#eb1000,#7b4cd9);color:#fff;font-weight:800}
+.search{position:relative;flex:1;max-inline-size:440px;margin-inline-start:auto}
+.search input{inline-size:100%;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface-2);color:var(--text);font:inherit;font-size:14px}
+.search input:focus{outline:2px solid var(--aa);outline-offset:1px}
+.results{position:absolute;inset-inline:0;top:44px;max-block-size:60vh;overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);padding:6px}
+.results a{display:block;padding:7px 10px;border-radius:6px;color:var(--text);font-size:14px}
+.results a:hover,.results a.sel{background:var(--surface-2);text-decoration:none}
+.results small{display:block;color:var(--muted);font-size:12px}
+.results .none{padding:8px 10px;color:var(--muted);font-size:14px}
+.quick{display:flex;gap:6px}
+.quick a{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.menu-btn{display:none;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:8px;font-size:18px;padding:3px 10px;cursor:pointer}
+/* layout */
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);align-items:start}
+.sidebar{position:sticky;top:60px;block-size:calc(100vh - 60px);overflow:auto;padding:18px 14px 40px;border-inline-end:1px solid var(--border);background:var(--surface)}
+.toc{font-size:14px}
+.toc a{color:var(--text)}
+.toc-home{display:block;font-weight:700;padding:6px 10px;border-radius:8px}
+.toc-subject{margin-block-start:14px}
+.toc-subj-link{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:10px;background:var(--accent-soft);border-inline-start:4px solid var(--accent)}
+.toc-subj-link span:last-child{font-weight:600}
+.toc-subj-link:hover{text-decoration:none}
+.code{display:inline-block;font:700 11.5px/1 var(--mono);letter-spacing:.03em;color:var(--accent)}
+.toc-parts,.toc-secs{list-style:none;margin:0;padding:0}
+.toc-parts{margin-block-start:6px}
+.toc-part>a{display:block;padding:5px 10px;border-radius:6px;font-weight:500}
+.toc-secs{margin-inline-start:12px;border-inline-start:1px solid var(--border);padding-inline-start:6px}
+.toc-secs a{display:block;padding:3px 8px;border-radius:6px;font-size:13px;color:var(--muted)}
+.toc a:hover{background:var(--surface-2);text-decoration:none}
+.toc a.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.js .toc-part:not(.open) .toc-secs{display:none}
+.main{min-inline-size:0;padding:28px clamp(16px,4vw,48px) 80px}
+.main>section,.foot{max-inline-size:1040px;margin-inline:auto}
+/* overview */
+.hero{padding:36px clamp(20px,4vw,44px);border-radius:20px;background:radial-gradient(1200px 300px at 0% 0%,rgba(20,115,230,.18),transparent 60%),radial-gradient(900px 300px at 100% 100%,rgba(123,76,217,.20),transparent 60%),var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.eyebrow{margin:0;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.hero h1{margin:6px 0 10px;font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em}
+.hero .sub{margin:0;max-inline-size:760px;color:var(--muted);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-block-start:24px}
+.stats div{background:var(--surface-2);border-radius:12px;padding:12px 16px}
+.stats b{display:block;font-size:26px;line-height:1.1}
+.stats span{font-size:13px;color:var(--muted)}
+.h-sec{font-size:20px;margin:36px 0 14px;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-block-start:5px solid var(--accent);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin:6px 0 10px;font-size:18px;line-height:1.3}.card h3 a{color:var(--text)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}
+.facts div{background:var(--surface-2);border-radius:8px;padding:6px 8px}
+.facts dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.facts dd{margin:0;font-weight:700;font-size:14px}
+.mini{font-size:12.5px;color:var(--muted);margin:6px 0}
+.bar{display:flex;gap:2px;block-size:10px;border-radius:999px;overflow:hidden}
+.bar .seg{background:var(--accent)}
+.bar .seg:nth-child(2){opacity:.8}.bar .seg:nth-child(3){opacity:.62}.bar .seg:nth-child(4){opacity:.46}.bar .seg:nth-child(5){opacity:.34}.bar .seg:nth-child(6){opacity:.26}.bar .seg:nth-child(7){opacity:.18}
+.legend{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted)}
+.legend b{color:var(--text)}
+.plist{list-style:none;padding:0;margin:14px 0 0;border-block-start:1px solid var(--border)}
+.plist li a{display:flex;gap:8px;align-items:baseline;padding:7px 0;border-block-end:1px dashed var(--border);color:var(--text);font-size:14px}
+.plist .kind{flex:none}
+.kind{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+.two{display:grid;grid-template-columns:1fr 1.3fr;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:4px 22px 18px;margin-block-start:18px;box-shadow:var(--shadow)}
+.panel .h-sec{margin-block-start:18px}
+table.fixes td.was{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(214,69,69,.6)}
+table.fixes td.now{font-weight:600}
+/* subject */
+.subject{margin-block-start:56px}
+.subj-hero{position:relative;overflow:hidden;border-radius:20px;padding:28px clamp(20px,4vw,36px);background:linear-gradient(135deg,var(--accent-soft),var(--surface) 70%);border:1px solid var(--border);box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr;gap:20px 32px}
+.subj-hero::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;inline-size:6px;background:var(--accent)}
+.subj-hero h2{margin:6px 0 14px;font-size:clamp(22px,3vw,30px);line-height:1.2;letter-spacing:-.015em}
+.subj-hero .code{font-size:13px}
+.subj-parts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.subj-parts a{font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.subj-parts a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.part{margin-block-start:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.part-head{padding:20px 26px 16px;border-block-end:1px solid var(--border);background:linear-gradient(180deg,var(--accent-soft),transparent)}
+.part-head h3{margin:8px 0 4px;font-size:22px;letter-spacing:-.01em}
+.intoc{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.intoc a{display:inline-block;font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted)}
+.intoc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.qchips{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;margin-block-start:12px}
+.qchips a{text-align:center;font:600 12.5px/1 var(--mono);padding:8px 0;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.qchips a:hover{background:var(--accent);color:var(--accent-ink);text-decoration:none}
+/* prose */
+.prose{padding:8px 26px 26px}
+.prose h4{font-size:21px;line-height:1.3;margin:34px 0 12px;padding-block-start:22px;border-block-start:1px solid var(--border);letter-spacing:-.01em}
+.prose>h4:first-child,.prose>.fix+h4,.prose>p.lead+h4{border-block-start:0;padding-block-start:6px}
+.prose h5{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.prose h6{font-size:14px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.prose p{margin:10px 0}
+.prose .lead{font-size:17px;color:var(--muted);margin-block-start:16px}
+.prose ul,.prose ol{padding-inline-start:24px;margin:8px 0}
+.prose li{margin:4px 0}
+.prose li>p{margin:4px 0}
+.prose strong{font-weight:650}
+.prose code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);padding:1px 6px;border-radius:5px}
+.prose pre,.codeblock{font:13px/1.55 var(--mono);background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;white-space:pre}
+.codeblock{white-space:pre-wrap;margin:12px 0}
+.prose pre code{background:none;padding:0}
+.prose blockquote{margin:12px 0;padding:8px 16px;border-inline-start:4px solid var(--border);color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;inline-size:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:start;vertical-align:top;border-block-end:1px solid var(--border)}
+th{background:var(--surface-2);font-weight:650;font-size:13.5px}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 45%,transparent)}
+tbody tr:last-child td{border-block-end:0}
+.note,.key,.example,.warn,.ok,.fix,.qa{margin:14px 0;padding:12px 16px;border-radius:10px;border-inline-start:4px solid}
+.note{background:var(--note-bg);border-color:var(--note-bd)}
+.key{background:var(--key-bg);border-color:var(--key-bd)}
+.example{background:var(--ex-bg);border-color:var(--ex-bd)}
+.warn{background:var(--warn-bg);border-color:var(--warn-bd)}
+.ok{background:var(--ok-bg);border-color:var(--ok-bd)}
+.fix{background:var(--fix-bg);border-color:var(--fix-bd)}
+.qa{background:var(--surface-2);border-color:var(--muted)}
+.note>:first-child,.key>:first-child,.example>:first-child,.warn>:first-child,.ok>:first-child,.fix>:first-child,.qa>:first-child{margin-block-start:0}
+.note>:last-child,.key>:last-child,.example>:last-child,.warn>:last-child,.ok>:last-child,.fix>:last-child,.qa>:last-child{margin-block-end:0}
+.fix .src{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.grid .example{margin:0}
+.checklist{list-style:none;padding-inline-start:4px !important}
+.checklist li{position:relative;padding-inline-start:28px}
+.checklist li::before{content:"";position:absolute;inset-inline-start:0;top:5px;inline-size:16px;block-size:16px;border:2px solid var(--accent);border-radius:4px}
+.checklist li input{display:none}
+.badge{display:inline-block;vertical-align:middle;font:700 10.5px/1 var(--font);text-transform:uppercase;letter-spacing:.05em;padding:4px 7px;border-radius:999px;margin-inline:4px}
+.badge.ver{background:var(--ok-bg);color:var(--ok-bd);border:1px solid color-mix(in srgb,var(--ok-bd) 40%,transparent)}
+.badge.chk{background:var(--key-bg);color:#a66f00;border:1px solid color-mix(in srgb,var(--key-bd) 40%,transparent)}
+details{margin:12px 0;border:1px solid var(--border);border-radius:10px;background:var(--surface-2)}
+details>summary{cursor:pointer;padding:9px 14px;font-weight:600;color:var(--accent)}
+details[open]>summary{border-block-end:1px solid var(--border)}
+details>*:not(summary){margin-inline:14px}
+.foot{margin-block-start:48px;font-size:13.5px;color:var(--muted);text-align:center}
+.totop{position:fixed;inset-inline-end:22px;bottom:22px;display:grid;place-items:center;inline-size:42px;block-size:42px;border-radius:50%;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);color:var(--text);font-size:18px}
+.totop:hover{text-decoration:none;color:var(--aa)}
+@media (max-width:1100px){.quick{display:none}.two{grid-template-columns:1fr}.subj-hero{grid-template-columns:1fr}}
+@media (max-width:900px){
+ .layout{grid-template-columns:1fr}
+ .menu-btn{display:block}
+ .sidebar{position:static;block-size:auto;border-inline-end:0;border-block-end:1px solid var(--border)}
+ .js .sidebar{position:fixed;top:60px;inset-inline-start:0;z-index:40;inline-size:min(320px,88vw);block-size:calc(100vh - 60px);transform:translateX(-105%);transition:transform .2s ease;box-shadow:var(--shadow)}
+ [dir="rtl"] .js .sidebar{transform:translateX(105%)}
+ .js body.nav-open .sidebar{transform:none}
+ .brand span:last-child{display:none}
+ .stats,.facts{grid-template-columns:repeat(2,1fr)}
+ .prose{padding:6px 16px 20px}.part-head{padding:16px}
+}
+@media print{
+ .topbar,.sidebar,.totop,.intoc,.qchips,.subj-parts{display:none !important}
+ .layout{display:block}.main{padding:0}
+ body{background:#fff;color:#000;font-size:12pt}
+ .part,.card,.panel,.hero,.subj-hero{box-shadow:none;break-inside:auto}
+ .subject{break-before:page}
+ details{border:0}details>*{display:block}
+ a{color:inherit}
+}
+</style>
+<style>.guide-head{padding:28px 32px 12px}.guide-head h1{margin:6px 0 8px;font-size:30px}.guide-note{color:#6b6f7b;margin:0 0 16px}.guide-toc ol{padding-left:20px;columns:2}.guide-toc a{text-decoration:none}</style>
+</head>
+<body>
+<main class="guide-page" id="top">
+<header class="guide-head"><p class="eyebrow">AD0-E408</p><h1>Adobe Target Business Practitioner Professional</h1><p class="guide-note">Complete study notes from the original Adobe Certification Study Hub. Practice questions are in the Practice tests section of the portal.</p><nav class="guide-toc" aria-label="Contents"><ol><li><a href="#tbp-core">Study guide by exam domain</a></li><li><a href="#tbp-ref">Comparisons, limits and readiness checklist</a></li><li><a href="#tbp-qa">QA and preview settings</a></li><li><a href="#tbp-res">Official Adobe resources for weak areas</a></li></ol></nav></header>
+<section class="subject" id="tbp" data-s="tbp"><header class="subj-hero"><div class="subj-meta"><span class="code">AD0-E408</span><h2>Adobe Target Business Practitioner Professional</h2><dl class="facts"><div><dt>Questions</dt><dd>50</dd></div><div><dt>Time</dt><dd>100 min</dd></div><div><dt>Pass mark</dt><dd>31 / 50</dd></div><div><dt>Level</dt><dd>Professional</dd></div></dl></div><div class="subj-weights"><p class="mini">Exam weighting</p><div class="bar"><span class="seg" style="flex:26" title="Planning &amp; strategy 26%"></span><span class="seg" style="flex:50" title="Configure, execute, manage 50%"></span><span class="seg" style="flex:16" title="Analyze &amp; report 16%"></span><span class="seg" style="flex:8" title="Troubleshooting 8%"></span></div><ul class="legend"><li><b>26%</b> Planning &amp; strategy</li><li><b>50%</b> Configure, execute, manage</li><li><b>16%</b> Analyze &amp; report</li><li><b>8%</b> Troubleshooting</li></ul></div><nav aria-label="Parts" class="subj-parts"></nav></header><section class="part" id="tbp-core"><header class="part-head"><span class="kind">Core guide</span><h3>Study guide by exam domain</h3><ul class="intoc"><li><a href="#tbp-core-exam-overview">Exam Overview</a></li><li><a href="#tbp-core-domain-1-planning-strategy-26">Domain 1: Planning &amp; Strategy (26%)</a></li><li><a href="#tbp-core-domain-2-configuration-executing-managing-50">Domain 2: Configuration, Executing &amp; Managing (50%)</a></li><li><a href="#tbp-core-domain-3-analyzing-reporting-16">Domain 3: Analyzing &amp; Reporting (16%)</a></li><li><a href="#tbp-core-domain-4-troubleshooting-8">Domain 4: Troubleshooting (8%)</a></li></ul></header><div class="prose"><h4 id="tbp-core-exam-overview">Exam Overview</h4><h5 id="tbp-core-test-specifications">Test Specifications</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exam Code</td>
+<td>AD0-E408</td>
+</tr>
+<tr>
+<td>Exam Name</td>
+<td>Adobe Target Business Practitioner Professional</td>
+</tr>
+<tr>
+<td>Total Questions</td>
+<td>50 (multiple choice and scenario-based) <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Time Limit</td>
+<td>100 minutes (about 2 minutes per question) <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Passing Score</td>
+<td>31 / 50 (62%) <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Valid Period</td>
+<td>2 years from passing date</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>Online proctored or test center</td>
+</tr>
+</tbody>
+</table></div><h5 id="tbp-core-exam-domains-weightings">Exam Domains &amp; Weightings</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Weight</th>
+<th>Questions</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning &amp; Strategy</td>
+<td>26%</td>
+<td>~13 Q</td>
+<td>Business goals, hypotheses, metrics, audiences</td>
+</tr>
+<tr>
+<td>Configuring, Executing &amp; Managing</td>
+<td>50%</td>
+<td>~25 Q</td>
+<td>Activities, VEC, settings, management</td>
+</tr>
+<tr>
+<td>Analyzing &amp; Reporting</td>
+<td>16%</td>
+<td>~8 Q</td>
+<td>Reports, statistics, confidence, lift</td>
+</tr>
+<tr>
+<td>Troubleshooting</td>
+<td>8%</td>
+<td>~4 Q</td>
+<td>Issues, debugging, validation</td>
+</tr>
+</tbody>
+</table></div> DOMAIN 1 <h4 id="tbp-core-domain-1-planning-strategy-26">Domain 1: Planning &amp; Strategy (26%)</h4><div class="note">
+<strong>Domain Focus:</strong> Understanding business objectives, identifying optimization opportunities, and planning effective testing strategies. You must translate business goals into Target activities.
+                </div><h5 id="tbp-core-1-1-business-kpis-and-performance-analysis">1.1 Business KPIs and Performance Analysis</h5><p>Key Performance Indicators are measurable values showing how effectively business goals are being achieved.</p><h6 id="tbp-core-connecting-business-goals-to-target-implementation">Connecting Business Goals to Target Implementation</h6><div class="example">
+<strong>E-Commerce Goal Chain:</strong>
+<ul>
+<li>Business Goal: Increase average order value</li>
+<li>KPI: AOV (Average Order Value)</li>
+<li>Target Success Metric: Revenue (RPV)</li>
+<li>Activity Type: Personalization</li>
+</ul>
+</div><h5 id="tbp-core-1-2-optimization-and-experimentation-strategies">1.2 Optimization and Experimentation Strategies</h5><h6 id="tbp-core-activity-type-selection-guide">Activity Type Selection Guide</h6><div class="grid">
+<div class="example">
+<strong>A/B Testing</strong>
+<ul>
+<li>When: Comparing 2-3 designs</li>
+<li>Purpose: Find statistical winner</li>
+<li>Requires: Sample size + 95% confidence</li>
+</ul>
+</div>
+<div class="example">
+<strong>Experience Targeting (XT)</strong>
+<ul>
+<li>When: Different audiences need different messaging</li>
+<li>Purpose: Audience-specific mapping</li>
+<li>No: Statistical comparison</li>
+</ul>
+</div>
+<div class="example">
+<strong>Multivariate Testing (MVT)</strong>
+<ul>
+<li>When: Testing 3+ elements simultaneously</li>
+<li>Requires: Very high traffic (500K+)</li>
+<li>Duration: 4-8 weeks</li>
+</ul>
+</div>
+<div class="example">
+<strong>Auto-Target</strong>
+<ul>
+<li>When: ML personalization per visitor</li>
+<li>Personalizes: Whole page experience</li>
+<li>Variations: 2-5 complete designs</li>
+</ul>
+</div>
+<div class="example">
+<strong>Automated Personalization (AP)</strong>
+<ul>
+<li>When: ML offer combinations</li>
+<li>Multiple: Offers in multiple locations</li>
+<li>Complexity: Very high traffic (1M+)</li>
+</ul>
+</div>
+<div class="example">
+<strong>Recommendations</strong>
+<ul>
+<li>When: Product/content recommendations</li>
+<li>Algorithms: Items viewed, trending, popular</li>
+<li>Ongoing: Continuous optimization</li>
+</ul>
+</div>
+</div><h5 id="tbp-core-1-3-hypothesis-construction">1.3 Hypothesis Construction</h5><div class="note">
+<strong>Hypothesis Formula:</strong> "If we [ACTION], then [OUTCOME] because [REASONING]"
+                </div><div class="key">
+<strong>⚠️ Critical Exam Concept:</strong> Hypotheses must be testable, specific, reasonable, measurable, and realistic. Base them on data or user research, not intuition.
+                </div><h5 id="tbp-core-1-4-success-metrics-identification">1.4 Success Metrics Identification</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Metric Type</th>
+<th>Definition</th>
+<th>Examples</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversion</td>
+<td>User completed desired action</td>
+<td>Form submission, purchase, signup</td>
+<td>Discrete actions matter</td>
+</tr>
+<tr>
+<td>Revenue</td>
+<td>Monetary value generated</td>
+<td>RPV, AOV, total sales</td>
+<td>Monetization is goal</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>Interaction and participation</td>
+<td>Time on site, clicks, scroll depth</td>
+<td>Engagement drives value</td>
+</tr>
+</tbody>
+</table></div><div class="ok">
+<strong>✓ Primary Metrics:</strong> Usually ONE per activity, directly tied to business KPI
+                </div><div class="ok">
+<strong>✓ Secondary Metrics:</strong> Multiple allowed, provide supporting context
+                </div><h5 id="tbp-core-1-5-audience-requirements-and-targeting">1.5 Audience Requirements and Targeting</h5><div class="warn">
+<strong>🔴 CRITICAL EXAM SKILL:</strong> Selecting audience attributes that match business goals, not just demographics. This appears frequently in exam questions.
+                </div><div class="example">
+<strong>Example: Lead Generation for Financial Services</strong>
+<ul>
+<li>❌ WRONG: Social media engagement, general demographics</li>
+<li>✅ RIGHT: Financial goals, investment preferences, risk tolerance</li>
+</ul>
+</div><h5 id="tbp-core-1-6-adobe-target-vs-adobe-analytics-reporting">1.6 Adobe Target vs. Adobe Analytics Reporting</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Target Native</th>
+<th>Analytics with A4T</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metrics Available</td>
+<td>Basic set (visits, conversion, lift)</td>
+<td>All Analytics events, calculated metrics</td>
+</tr>
+<tr>
+<td>Segmentation</td>
+<td>Activity-specific audiences only</td>
+<td>Any Analytics segment</td>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>Limited</td>
+<td>Advanced Analysis Workspace</td>
+</tr>
+<tr>
+<td>Setup Complexity</td>
+<td>Simple</td>
+<td>Requires pre-configuration</td>
+</tr>
+</tbody>
+</table></div><div class="key">
+<strong>A4T Workflow:</strong> Create Calculated Metric in Analytics FIRST → Then use in Target → Metric settings LOCKED
+                </div><h5 id="tbp-core-1-7-a-b-testing-best-practices">1.7 A/B Testing Best Practices</h5><h6 id="tbp-core-the-golden-rules">The Golden Rules</h6><ol>
+<li><strong>Wait for Calculated Sample Size</strong> - Most critical rule. Prevents false positives.</li>
+<li><strong>Maintain 95%+ Confidence</strong> - Only 5% false positive risk</li>
+<li><strong>Avoid Peeking</strong> - Multiple checks inflate false positive risk</li>
+<li><strong>Account for Novelty Effect</strong> - New designs perform better initially</li>
+<li><strong>Identify Confounds</strong> - External events can skew results</li>
+</ol><div class="warn">
+<strong>🔴 Common Pitfalls:</strong>
+<ul>
+<li>Peeking at results (increases false positives from 5% to 20%+)</li>
+<li>Stopping early when lift looks good (before sample size)</li>
+<li>Not accounting for novelty effect (new designs initially outperform)</li>
+<li>Testing without calculating sample size first</li>
+<li>Confusing percentage points with relative lift</li>
+</ul>
+</div><h6 id="tbp-core-domain-1-summary">Domain 1 Summary</h6><ul class="checklist">
+<li>Understand business goals and how to identify KPIs</li>
+<li>Know when to use each activity type</li>
+<li>Construct testable hypotheses with clear reasoning</li>
+<li>Select metrics aligned to business goals</li>
+<li>Choose audiences based on business relevance (not just demographics)</li>
+<li>Know A4T workflow requirements</li>
+<li>Understand sample size is critical (non-negotiable)</li>
+<li>Know A/B testing pitfalls and solutions</li>
+</ul> DOMAIN 2 <h4 id="tbp-core-domain-2-configuration-executing-managing-50">Domain 2: Configuration, Executing &amp; Managing (50%)</h4><div class="key">
+<strong>⚠️ IMPORTANT:</strong> Domain 2 is 50% of the exam (~26 questions). Mastering this domain is critical.
+                </div><h5 id="tbp-core-2-1-visual-experience-composer-vec">2.1 Visual Experience Composer (VEC)</h5><div class="note">
+<strong>VEC:</strong> Point-and-click visual interface for creating experiences without coding
+                </div><h6 id="tbp-core-what-vec-can-edit">What VEC Can Edit</h6><ul>
+<li>✓ Text content (headlines, copy, button labels)</li>
+<li>✓ Images (replacements, modifications)</li>
+<li>✓ Styling (colors, fonts, spacing)</li>
+<li>✓ Structure (hide/show, rearrange, remove, add)</li>
+<li>✓ Links &amp; attributes (URLs, alt text, titles)</li>
+</ul><h6 id="tbp-core-what-vec-cannot-edit">What VEC Cannot Edit</h6><ul>
+<li>✗ iFrames (browser security)</li>
+<li>✗ Heavily JavaScript-rendered content</li>
+<li>✗ Third-party widgets</li>
+<li>✗ Server-side dynamic content</li>
+</ul><div class="warn">
+<strong>CSS Selector Stability:</strong> This is a frequent exam topic. Avoid deeply nested selectors. Use Expand Section to select parent elements (especially those with unique IDs).
+                </div><h6 id="tbp-core-key-vec-features">Key VEC Features</h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expand Section</td>
+<td>Select parent element for stability</td>
+<td>When selectors break after page updates</td>
+</tr>
+<tr>
+<td>!important CSS</td>
+<td>Override page CSS conflicts</td>
+<td>When Target CSS doesn't appear</td>
+</tr>
+<tr>
+<td>URL Targeting</td>
+<td>Apply activity to multiple pages</td>
+<td>Multi-page campaigns</td>
+</tr>
+<tr>
+<td>Edit HTML</td>
+<td>Direct code editing</td>
+<td>Complex changes, JavaScript issues</td>
+</tr>
+</tbody>
+</table></div><h5 id="tbp-core-2-2-form-based-experience-composer">2.2 Form-Based Experience Composer</h5><div class="note">
+<strong>Form-Based Composer:</strong> Non-visual interface for creating experiences without page rendering
+                </div><h6 id="tbp-core-when-to-use-form-based">When to Use Form-Based</h6><ul>
+<li>Non-website channels (email, apps, APIs, kiosks)</li>
+<li>VEC fails to load pages</li>
+<li>JavaScript-heavy pages with timing issues</li>
+<li>Protected pages (authentication required)</li>
+</ul><div class="key">
+<strong>⚠️ Critical:</strong> Redirect offers can ONLY be created in Form-Based Composer, NOT in VEC.
+                </div><h6 id="tbp-core-content-types-in-form-based">Content Types in Form-Based</h6><ul>
+<li><strong>HTML Offer:</strong> Custom HTML code</li>
+<li><strong>JSON Offer:</strong> Structured data for SPAs/APIs</li>
+<li><strong>Image Offer:</strong> Image URL replacement</li>
+<li><strong>Redirect Offer:</strong> Send to different URL (Form-Based only)</li>
+</ul><h5 id="tbp-core-2-3-activity-configuration">2.3 Activity Configuration</h5><h6 id="tbp-core-universal-activity-setup-flow">Universal Activity Setup Flow</h6><ol>
+<li>Choose Activity Type</li>
+<li>Configure Audience Targeting</li>
+<li>Set Goals &amp; Settings (success metrics, duration, priority)</li>
+<li>Create Experiences/Offers</li>
+<li>QA &amp; Launch</li>
+</ol><h6 id="tbp-core-success-metrics-configuration">Success Metrics Configuration</h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Increment Count &amp; Keep User</td>
+<td>Yes (default)</td>
+<td>Visitor stays in activity, can convert multiple times</td>
+</tr>
+<tr>
+<td>Release &amp; Allow Reentry</td>
+<td>Optional</td>
+<td>Visitor exits, can re-enter in future sessions</td>
+</tr>
+<tr>
+<td>Release &amp; Bar Reentry</td>
+<td>Optional</td>
+<td>Visitor permanently removed (one-time offers)</td>
+</tr>
+</tbody>
+</table></div><h6 id="tbp-core-activity-priority-settings">Activity Priority Settings</h6><ul>
+<li><strong>Fine-grained Priority:</strong> 0-999 scale (higher = winner)</li>
+<li><strong>When collision:</strong> Highest priority shows; lower priority shows default</li>
+<li><strong>Always check:</strong> Activity Collisions tab to see conflicts</li>
+</ul><h5 id="tbp-core-2-4-activity-types-in-detail">2.4 Activity Types in Detail</h5><h6 id="tbp-core-automated-personalization-ap-unique-characteristics">Automated Personalization (AP) - Unique Characteristics</h6><ul>
+<li><strong>What it tests:</strong> Offer combinations (not page designs)</li>
+<li><strong>Locations:</strong> Multiple areas with offers</li>
+<li><strong>Combinations:</strong> Multiply offers per location (Location A offers × Location B offers × ...)</li>
+<li><strong>Max Experiences:</strong> Up to 30,000 (much higher than other activity types)</li>
+<li><strong>Traffic Required:</strong> Very high (1M+ monthly)</li>
+</ul><div class="key">
+<strong>AP Unique Reports (4 Types):</strong>
+<ol>
+<li>Activity Level Report: Control vs. Targeted</li>
+<li>Offer Level Report: Each offer's Random vs. Smart performance</li>
+<li>Automated Segments Report: Auto-discovered visitor groups</li>
+<li>Important Attributes Report: Attribute usage frequency</li>
+</ol>
+</div><h5 id="tbp-core-2-5-qa-procedures-and-preview-modes">2.5 QA Procedures and Preview Modes</h5><div class="warn">
+<strong>🔴 Important:</strong> QA conversions are NOT recorded in reporting. Use QA to test without affecting data.
+                </div><h6 id="tbp-core-preview-settings">Preview Settings</h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Isolated (ON)</th>
+<th>Realistic (OFF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show default for other activities</td>
+<td>See ONLY your activity</td>
+<td>See with other live activities (collisions visible)</td>
+</tr>
+<tr>
+<td>Match audience rules</td>
+<td>Bypass rules (debug mode)</td>
+<td>Respect rules (production-like)</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>Testing your content in isolation</td>
+<td>Validating real-world behavior</td>
+</tr>
+</tbody>
+</table></div><h6 id="tbp-core-qa-workflow">QA Workflow</h6><ol>
+<li>Configure preview settings</li>
+<li>Access activity and verify content displays</li>
+<li>Validate all elements (text, images, styling)</li>
+<li>Test conversion actions</li>
+<li>Check on multiple devices/browsers</li>
+<li>Exit QA mode</li>
+</ol><h6 id="tbp-core-domain-2-summary">Domain 2 Summary</h6><ul class="checklist">
+<li>Understand VEC capabilities and limitations</li>
+<li>Know when to use Form-Based Composer</li>
+<li>Use Expand Section for stable selectors</li>
+<li>Know redirect offers are Form-Based only</li>
+<li>Configure success metrics for business outcomes</li>
+<li>Choose activity types strategically</li>
+<li>Understand AP combinations and unique reports</li>
+<li>Use QA preview modes correctly</li>
+<li>Know activity priority resolution</li>
+<li>Understand post-conversion behavior options</li>
+</ul> DOMAIN 3 <h4 id="tbp-core-domain-3-analyzing-reporting-16">Domain 3: Analyzing &amp; Reporting (16%)</h4><h5 id="tbp-core-3-1-understanding-statistical-concepts">3.1 Understanding Statistical Concepts</h5><h6 id="tbp-core-conversion-rate">Conversion Rate</h6><div class="note">
+<strong>Formula:</strong> (Conversions / Visitors) × 100
+                    <br/>
+<strong>Example:</strong> 50 conversions / 1,000 visitors = 5%
+                </div><h6 id="tbp-core-lift">Lift</h6><div class="note">
+<strong>Formula:</strong> (Variation% - Control%) / Control% × 100
+                    <br/>
+<strong>Example:</strong> (6% - 5%) / 5% × 100 = 20% lift
+                </div><div class="warn">
+<strong>⚠️ Common Confusion:</strong> 20% lift in relative terms ≠ 20 percentage points
+                    <br/>
+                    20% relative lift = 1 percentage point absolute difference (5% → 6%)
+                </div><h6 id="tbp-core-confidence-and-significance">Confidence and Significance</h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Confidence Level</th>
+<th>False Positive Risk</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>95%+ Confidence</td>
+<td>5% (acceptable)</td>
+<td>DECLARE WINNER</td>
+</tr>
+<tr>
+<td>80-94% Confidence</td>
+<td>6-20% (high risk)</td>
+<td>Continue testing</td>
+</tr>
+<tr>
+<td>&lt;80% Confidence</td>
+<td>&gt;20% (very high)</td>
+<td>Much more data needed</td>
+</tr>
+</tbody>
+</table></div><div class="key">
+<strong>Sample Size Importance:</strong> You MUST reach calculated sample size before declaring winner, even if confidence seems high at 85-90%.
+                </div><h5 id="tbp-core-3-2-automated-personalization-reporting">3.2 Automated Personalization Reporting</h5><h6 id="tbp-core-report-1-activity-level-report">Report 1: Activity Level Report</h6><ul>
+<li><strong>Shows:</strong> Control (random) vs. Targeted (AI)</li>
+<li><strong>Answers:</strong> "Is personalization working?"</li>
+</ul><h6 id="tbp-core-report-2-offer-level-report">Report 2: Offer Level Report</h6><ul>
+<li><strong>Shows:</strong> Each offer's Random vs. Smart performance</li>
+<li><strong>Key:</strong> Compare same offer (Random vs. Smart), NOT different offers</li>
+</ul><h6 id="tbp-core-report-3-automated-segments-report">Report 3: Automated Segments Report</h6><ul>
+<li><strong>Shows:</strong> Auto-discovered visitor groups</li>
+<li><strong>Reveals:</strong> Which segments prefer which offers</li>
+</ul><h6 id="tbp-core-report-4-important-attributes-report">Report 4: Important Attributes Report</h6><ul>
+<li><strong>Shows:</strong> Which attributes ML used most</li>
+<li><strong>CRITICAL MISUNDERSTANDING:</strong> This is FREQUENCY of use, NOT causation</li>
+</ul><div class="warn">
+<strong>🔴 Important Attributes Mistake:</strong>
+<br/>
+                    ❌ "Device Type causes 28% of conversions"
+                    <br/>
+                    ✅ "Algorithm used Device Type in 28% of decisions"
+                </div><h5 id="tbp-core-3-3-multivariate-testing-reporting">3.3 Multivariate Testing Reporting</h5><h6 id="tbp-core-experience-performance-report">Experience Performance Report</h6><ul>
+<li>Shows each element combination's performance</li>
+<li>Comparison of all combinations side-by-side</li>
+</ul><h6 id="tbp-core-element-contribution-analysis">Element Contribution Analysis</h6><ul>
+<li>Breaks down impact of individual elements</li>
+<li>Shows which variables matter most</li>
+</ul><h6 id="tbp-core-bonferroni-correction">Bonferroni Correction</h6><ul>
+<li><strong>What it does:</strong> Adjusts significance threshold for multiple comparisons</li>
+<li><strong>Why:</strong> Testing many elements inflates false positive risk</li>
+<li><strong>Solution:</strong> Stricter threshold per comparison</li>
+</ul><h5 id="tbp-core-3-4-interpreting-confidence-intervals">3.4 Interpreting Confidence Intervals</h5><div class="example">
+<strong>Example:</strong>
+<br/>
+                    Variation: 6.2% ± 0.4%
+                    <br/>
+                    95% Confidence Interval: 5.8% - 6.6%
+                    <br/>
+                    Means: 95% confident true rate is between 5.8% - 6.6%
+                </div><h6 id="tbp-core-overlapping-vs-non-overlapping-intervals">Overlapping vs. Non-Overlapping Intervals</h6><ul>
+<li><strong>Intervals OVERLAP:</strong> No significant difference (continue testing)</li>
+<li><strong>Intervals DON'T OVERLAP:</strong> Significant difference (safe to declare winner)</li>
+</ul><h6 id="tbp-core-domain-3-summary">Domain 3 Summary</h6><ul class="checklist">
+<li>Understand conversion rate, lift, confidence calculations</li>
+<li>Know 95%+ confidence requirement for declaring winner</li>
+<li>Know sample size is CRITICAL (non-negotiable)</li>
+<li>Understand false positive risks and causes</li>
+<li>Know AP's 4 unique report types</li>
+<li>Remember: Important Attributes ≠ causation</li>
+<li>Understand novelty effect in test interpretation</li>
+<li>Can interpret confidence intervals</li>
+</ul> DOMAIN 4 <h4 id="tbp-core-domain-4-troubleshooting-8">Domain 4: Troubleshooting (8%)</h4><h5 id="tbp-core-4-1-activity-delivery-troubleshooting">4.1 Activity Delivery Troubleshooting</h5><h6 id="tbp-core-systematic-troubleshooting-checklist">Systematic Troubleshooting Checklist</h6><ol>
+<li><strong>Verify Activity Status:</strong> Active? Past start date? Before end date?</li>
+<li><strong>Verify Audience:</strong> Do you match audience rules?</li>
+<li><strong>Verify URL Targeting:</strong> Current page matches URL rules?</li>
+<li><strong>Clear Browser Cache:</strong> Try incognito/private mode</li>
+<li><strong>Check Target Library:</strong> at.js or alloy.js loaded in console?</li>
+<li><strong>Check Collisions:</strong> Higher priority activities hiding yours?</li>
+<li><strong>Verify CSS Selectors:</strong> Page design changed? Selectors broken?</li>
+</ol><h5 id="tbp-core-4-2-audience-qualification-issues">4.2 Audience Qualification Issues</h5><h6 id="tbp-core-common-audience-problems">Common Audience Problems</h6><ul>
+<li><strong>No visitors qualify:</strong> Check AND/OR logic, attribute population</li>
+<li><strong>Wrong audience assigned:</strong> Verify audience definition</li>
+<li><strong>Profile attributes missing:</strong> Confirm parameter passing</li>
+</ul><div class="example">
+<strong>Debug Checklist:</strong>
+<ul>
+<li>Check browser console for mbox calls</li>
+<li>Verify parameters are being sent</li>
+<li>Check parameter names match exactly</li>
+<li>Validate audience works in isolation</li>
+</ul>
+</div><h5 id="tbp-core-4-3-debugging-tools">4.3 Debugging Tools</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Detail Level</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mboxDebug (?mboxDebug)</td>
+<td>Basic request/response inspection</td>
+<td>Low</td>
+<td>Quick checks</td>
+</tr>
+<tr>
+<td>mboxTrace (?mboxTrace=true)</td>
+<td>Detailed tracing of decisions</td>
+<td>High</td>
+<td>Deep debugging</td>
+</tr>
+<tr>
+<td>Debugger Extension</td>
+<td>Graphical debugging interface</td>
+<td>Medium</td>
+<td>Visual inspection</td>
+</tr>
+<tr>
+<td>Browser Console (F12)</td>
+<td>JavaScript-level debugging</td>
+<td>High</td>
+<td>Error investigation</td>
+</tr>
+</tbody>
+</table></div><h5 id="tbp-core-4-4-preset-issues">4.4 Preset Issues</h5><div class="note">
+<strong>Preset:</strong> Saved reporting configuration that depends on referenced objects (audiences, metrics)
+                </div><h6 id="tbp-core-when-presets-become-invalid">When Presets Become Invalid</h6><ul>
+<li>Referenced audience deleted</li>
+<li>Referenced metric removed</li>
+<li>Referenced objects changed/renamed</li>
+</ul><h6 id="tbp-core-fixing-invalid-presets">Fixing Invalid Presets</h6><ol>
+<li>Identify missing/changed object</li>
+<li>Recreate with original definition (or update references)</li>
+<li>Preset automatically becomes valid</li>
+</ol><h6 id="tbp-core-domain-4-summary">Domain 4 Summary</h6><ul class="checklist">
+<li>Follow systematic troubleshooting approach</li>
+<li>Know when to check each factor (status, audience, URL, cache, collisions)</li>
+<li>Use appropriate debugging tool for situation</li>
+<li>Understand preset dependencies</li>
+<li>Know how to fix invalid presets</li>
+</ul> TECHNICAL COMPARISONS </div></section><section class="part" id="tbp-ref"><header class="part-head"><span class="kind">Reference</span><h3>Comparisons, limits and readiness checklist</h3><ul class="intoc"><li><a href="#tbp-ref-technical-comparisons-quick-reference">Technical Comparisons &amp; Quick Reference</a></li><li><a href="#tbp-ref-target-limits-reference-corrected">Target Limits Reference (Corrected)</a></li><li><a href="#tbp-ref-final-exam-readiness-checklist">Final Exam Readiness Checklist</a></li></ul></header><div class="prose"><div class="fix"><p><strong>Verified against Adobe's Target "Limits" documentation (Nov 2026).</strong> Standard mbox calls allow 500 mbox parameters and 500 profile parameters; the Delivery API and Batch mbox v2 allow 100 mbox and 50 profile parameters; the Batch Delivery API in the Mobile Services SDK allows 50 of each. Profile parameter values are capped at 256 characters, mbox names at 250 characters, and the Profile Attributes page states a limit of 50 unique profile attributes per mbox call. The practice-test answer of "8 profile parameters" is not supported by Adobe's documentation.</p>
+<p class="src">Sources: <a href="https://experienceleague.adobe.com/en/docs/target/using/troubleshoot/target-limits" rel="noopener" target="_blank">Adobe Target limits</a> · <a href="https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/profile-parameters" rel="noopener" target="_blank">Profile attributes</a></p></div><h4 id="tbp-ref-technical-comparisons-quick-reference">Technical Comparisons &amp; Quick Reference</h4><h5 id="tbp-ref-activity-type-comparison-matrix">Activity Type Comparison Matrix</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>A/B Test</th>
+<th>XT</th>
+<th>MVT</th>
+<th>Auto-Target</th>
+<th>AP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Find winner</td>
+<td>Audience mapping</td>
+<td>Element combo</td>
+<td>Per-visitor ML</td>
+<td>Offer combo ML</td>
+</tr>
+<tr>
+<td>Personalizes</td>
+<td>No</td>
+<td>Manual</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Uses ML</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Finds winner</td>
+<td>Yes</td>
+<td>No</td>
+<td>Indirectly</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Traffic needed</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Very high</td>
+<td>Med-high</td>
+<td>Very high</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>1-4 weeks</td>
+<td>1-2 weeks</td>
+<td>4-8 weeks</td>
+<td>2+ weeks</td>
+<td>2+ weeks</td>
+</tr>
+</tbody>
+</table></div><h5 id="tbp-ref-success-metrics-quick-reference">Success Metrics Quick Reference</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Examples</th>
+<th>Primary or Secondary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversion</td>
+<td>Action completed</td>
+<td>Form submit, signup, download</td>
+<td>Either</td>
+</tr>
+<tr>
+<td>Revenue</td>
+<td>Monetary value</td>
+<td>RPV, AOV, total sales</td>
+<td>Primary</td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>Interaction level</td>
+<td>Time, clicks, scroll depth</td>
+<td>Secondary</td>
+</tr>
+</tbody>
+</table></div><h5 id="tbp-ref-vec-vs-form-based-decision-matrix">VEC vs. Form-Based Decision Matrix</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Tool</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple visual changes (text, images)</td>
+<td>VEC</td>
+<td>Visual editing makes it easier</td>
+</tr>
+<tr>
+<td>Redirect offer test</td>
+<td>Form-Based</td>
+<td>Redirect only in Form-Based</td>
+</tr>
+<tr>
+<td>VEC page won't load</td>
+<td>Form-Based</td>
+<td>Fallback when VEC fails</td>
+</tr>
+<tr>
+<td>Email campaign</td>
+<td>Form-Based</td>
+<td>Non-web channel</td>
+</tr>
+<tr>
+<td>JavaScript-heavy page</td>
+<td>Form-Based</td>
+<td>Avoids timing issues</td>
+</tr>
+</tbody>
+</table></div> TARGET LIMITS <h4 id="tbp-ref-target-limits-reference-corrected">Target Limits Reference (Corrected)</h4><div class="warn">
+<strong>⚠️ CRITICAL UPDATE:</strong> These limits have been corrected based on official Adobe documentation. Pay special attention to the differences between standard calls and API endpoints.
+                </div><h5 id="tbp-ref-mbox-and-profile-parameters-three-scenarios">Mbox and Profile Parameters - Three Scenarios</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Call Type</th>
+<th>Mbox Parameters</th>
+<th>Profile Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard mbox calls</td>
+<td>500</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Batch Delivery API</td>
+<td>50</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Batch Mbox v2 &amp; Delivery API</td>
+<td>100</td>
+<td>50</td>
+</tr>
+</tbody>
+</table></div><div class="key">
+<strong>Parameter Value Limits:</strong>
+<ul>
+<li>Mbox parameter name: 128 characters max</li>
+<li>Mbox parameter value: 5,000 characters max</li>
+<li>Profile parameter value: 256 characters max</li>
+</ul>
+</div><h5 id="tbp-ref-important-activity-and-offer-limits">Important Activity and Offer Limits</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audiences per mbox</td>
+<td>50</td>
+<td>Hard limit</td>
+</tr>
+<tr>
+<td>Offer size</td>
+<td>1024 KB</td>
+<td>Per offer</td>
+</tr>
+<tr>
+<td>Total offers per account</td>
+<td>150,000</td>
+<td>Hard limit</td>
+</tr>
+<tr>
+<td>Success metrics per activity</td>
+<td>200</td>
+<td>Hard limit</td>
+</tr>
+<tr>
+<td>Experiences (standard activities)</td>
+<td>2,000</td>
+<td>A/B, XT, MVT, Auto-Target</td>
+</tr>
+<tr>
+<td>Experiences (AP)</td>
+<td>30,000</td>
+<td>Much higher for offers</td>
+</tr>
+<tr>
+<td>Concurrent requests per session</td>
+<td>100</td>
+<td>Blocks at 100</td>
+</tr>
+<tr>
+<td>Mboxes per batch request</td>
+<td>50</td>
+<td>Hard limit</td>
+</tr>
+<tr>
+<td>HTTP POST body size</td>
+<td>60 MB</td>
+<td>Content delivery</td>
+</tr>
+<tr>
+<td>API calls per minute</td>
+<td>50</td>
+<td>Admin, Reporting, Bulk Profile (not Delivery)</td>
+</tr>
+</tbody>
+</table></div> EXAM READINESS CHECKLIST <h4 id="tbp-ref-final-exam-readiness-checklist">Final Exam Readiness Checklist</h4><h5 id="tbp-ref-domain-1-planning-strategy-knowledge">Domain 1: Planning &amp; Strategy Knowledge</h5><ul class="checklist">
+<li>Understand business goals and how to identify KPIs</li>
+<li>Can align business goals to Target activities</li>
+<li>Know when to use each activity type</li>
+<li>Can construct testable hypotheses</li>
+<li>Know primary vs. secondary metrics</li>
+<li>Understand metric types (conversion, revenue, engagement)</li>
+<li>Can match audience attributes to business goals (CRITICAL)</li>
+<li>Understand A4T workflow and when to use it</li>
+<li>Know A/B testing best practices (sample size is CRITICAL)</li>
+</ul><h5 id="tbp-ref-domain-2-configuration-management-knowledge">Domain 2: Configuration &amp; Management Knowledge</h5><ul class="checklist">
+<li>Understand VEC capabilities and limitations</li>
+<li>Know when to use Form-Based Composer</li>
+<li>Can create stable CSS selectors in VEC</li>
+<li>Understand Expand Section feature</li>
+<li>Know audience creation and management</li>
+<li>Can configure activity with proper settings</li>
+<li>Understand all 6 activity types deeply</li>
+<li>Know QA procedures and preview modes</li>
+<li>Understand activity priority and collision</li>
+<li>Know metric dependencies</li>
+<li>Understand post-conversion behavior options</li>
+</ul><h5 id="tbp-ref-domain-3-analyzing-reporting-knowledge">Domain 3: Analyzing &amp; Reporting Knowledge</h5><ul class="checklist">
+<li>Understand conversion rate calculation</li>
+<li>Can calculate and interpret lift</li>
+<li>Know confidence thresholds (95%+ = declare winner)</li>
+<li>Understand sample size importance</li>
+<li>Know AP's 4 report types</li>
+<li>Understand why Important Attributes ≠ causation</li>
+<li>Can interpret confidence intervals</li>
+<li>Know false positive risks and causes</li>
+<li>Understand novelty effect</li>
+<li>Can identify confounding variables</li>
+</ul><h5 id="tbp-ref-domain-4-troubleshooting-knowledge">Domain 4: Troubleshooting Knowledge</h5><ul class="checklist">
+<li>Know activity delivery troubleshooting steps</li>
+<li>Can identify audience qualification issues</li>
+<li>Understand preset dependencies</li>
+<li>Know how to use mboxTrace debugging</li>
+<li>Understand CSS selector fragility</li>
+<li>Can validate activity qualification</li>
+</ul><h5 id="tbp-ref-practice-preparation">Practice &amp; Preparation</h5><ul class="checklist">
+<li>Reviewed all weak area questions from practice test</li>
+<li>Understand why each wrong answer was wrong</li>
+<li>Can explain correct reasoning for each question</li>
+<li>Completed 30-question practice examination</li>
+<li>Scored 24+/30 on practice exam</li>
+<li>Understand patterns in exam questions</li>
+<li>Feel confident in weak area mastery</li>
+</ul><h5 id="tbp-ref-exam-day-readiness">Exam Day Readiness</h5><ul class="checklist">
+<li>Know decision frameworks for activity selection</li>
+<li>Know when sample size is CRITICAL</li>
+<li>Know audience attribute selection matters most</li>
+<li>Can distinguish AP from Auto-Target</li>
+<li>Know all Target limits from reference table</li>
+<li>Understand A/B testing pitfalls</li>
+<li>Ready for scenario-based questions</li>
+<li>Feel confident in overall knowledge</li>
+</ul> FOOTER </div></section><section class="part" id="tbp-qa"><header class="part-head"><span class="kind">Deep dive</span><h3>QA and preview settings</h3><ul class="intoc"><li><a href="#tbp-qa-critical-exam-concept-qa-preview-modes">Critical Exam Concept: QA Preview Modes</a></li><li><a href="#tbp-qa-what-is-qa-mode">What is QA Mode?</a></li><li><a href="#tbp-qa-the-3-main-qa-preview-options">The 3 Main QA/Preview Options</a></li><li><a href="#tbp-qa-how-these-work-together">How These Work Together</a></li><li><a href="#tbp-qa-how-to-access-qa-mode">How to Access QA Mode</a></li><li><a href="#tbp-qa-important-considerations">Important Considerations</a></li><li><a href="#tbp-qa-exam-question-patterns">Exam Question Patterns</a></li><li><a href="#tbp-qa-quick-reference-table">Quick Reference Table</a></li><li><a href="#tbp-qa-exam-study-focus">Exam Study Focus</a></li><li><a href="#tbp-qa-you-now-understand">You Now Understand:</a></li><li><a href="#tbp-qa-related-exam-concepts">Related Exam Concepts</a></li><li><a href="#tbp-qa-practice-question">Practice Question</a></li><li><a href="#tbp-qa-key-takeaway-for-exam">Key Takeaway for Exam</a></li></ul></header><div class="prose"><p class="lead">Understanding "Match Audience Rules to See Experiences"</p><h4 id="tbp-qa-critical-exam-concept-qa-preview-modes">Critical Exam Concept: QA Preview Modes</h4><p>You've just identified an <strong>important exam question</strong> we need to cover deeply. Let me explain all QA/Preview settings in Adobe Target.</p><h4 id="tbp-qa-what-is-qa-mode">What is QA Mode?</h4><p>QA (Quality Assurance) Mode in Adobe Target allows you to:</p><ul>
+<li>Preview activities before going live</li>
+<li>See how experiences will appear</li>
+<li>Test without affecting real data/reporting</li>
+<li>Validate audience targeting</li>
+<li>Check experience delivery</li>
+</ul><h4 id="tbp-qa-the-3-main-qa-preview-options">The 3 Main QA/Preview Options</h4><h5 id="tbp-qa-option-1-show-default-content-for-all-other-activities">Option 1: "Show Default Content for All Other Activities"</h5><p><strong>Setting:</strong> ON or OFF</p><p><strong>What it does:</strong></p><ul>
+<li><strong>ON</strong> = Preview ONLY your activity in isolation (ignore all other live activities)</li>
+<li><strong>OFF</strong> = Preview your activity WITH other live activities included (realistic view)</li>
+</ul><p><strong>Use case:</strong></p><ul>
+<li>ON: "Does my activity's content work in isolation?"</li>
+<li>OFF: "How does my activity look alongside other live activities?"</li>
+</ul><p><strong>Example:</strong></p><pre><code>You have Activity A (button color) and Activity B (banner text) running on homepage
+
+Preview with "Show default content" ON:
+├─ See only: Banner with your test button color
+├─ Other activities: Ignored
+└─ View: Isolated, clean
+
+Preview with "Show default content" OFF:
+├─ See: Banner with your test button color + Activity B's banner text
+├─ Other activities: Included (with collision/priority applied)
+└─ View: Realistic production scenario</code></pre><h5 id="tbp-qa-option-2-match-audience-rules-to-see-experiences">Option 2: "Match Audience Rules to See Experiences"</h5><p><strong>Setting:</strong> ON or OFF</p><p><strong>What it does:</strong></p><ul>
+<li><strong>ON</strong> = Preview shows activity ONLY if you match all audience rules</li>
+<li><strong>OFF</strong> = Preview shows activity regardless of whether you qualify for audiences</li>
+</ul><p><strong>Use case:</strong></p><ul>
+<li>ON: "Will only qualified visitors see this experience?"</li>
+<li>OFF: "Let me see the experience even if I don't match the audience"</li>
+</ul><p><strong>Example:</strong></p><pre><code>Activity audience rules:
+├─ Country = United States
+├─ Device Type = Mobile
+└─ Visitor Type = Returning
+
+Preview with "Match audience rules" ON:
+├─ If you're accessing from US on mobile as returning → See activity ✓
+├─ If you're accessing from Canada → Don't see activity ✗
+├─ If you're on desktop → Don't see activity ✗
+└─ View: Only see if you fully qualify
+
+Preview with "Match audience rules" OFF:
+├─ You see activity regardless of:
+│  ├─ Where you're accessing from
+│  ├─ Device type
+│  └─ Visitor status
+└─ View: Always see the experience to test it</code></pre><p><strong>WHY THIS MATTERS:</strong></p><ul>
+<li>Ensures audience rules are working correctly</li>
+<li>Validates that the right visitors see the right experiences</li>
+<li>Catches audience misconfiguration before launch</li>
+</ul><h5 id="tbp-qa-option-3-activity-assignment-method-less-common-but-worth-kn">Option 3: Activity Assignment Method (Less common but worth knowing)</h5><p>Some preview modes let you control:</p><ul>
+<li><strong>Direct URL</strong> = Use special URL parameters to preview</li>
+<li><strong>QA Link</strong> = Generate a unique QA link to share</li>
+<li><strong>Bookmarklet</strong> = Use browser bookmarklet for quick preview toggle</li>
+</ul><h4 id="tbp-qa-how-these-work-together">How These Work Together</h4><h5 id="tbp-qa-scenario-1-preview-in-production-environment">Scenario 1: Preview in Production Environment</h5><p>You want to preview an activity that's already live on your site.</p><p><strong>Best Settings:</strong></p><ul>
+<li>Show default content: <strong>OFF</strong> (see realistic collision/priority)</li>
+<li>Match audience rules: <strong>ON</strong> (only if you qualify)</li>
+</ul><p><strong>Why:</strong></p><ul>
+<li>OFF = see how it appears with other activities</li>
+<li>ON = only if you match the audience (production behavior)</li>
+</ul><h5 id="tbp-qa-scenario-2-debug-audience-targeting">Scenario 2: Debug Audience Targeting</h5><p>You think audience rules aren't working correctly.</p><p><strong>Best Settings:</strong></p><ul>
+<li>Show default content: <strong>ON</strong> (isolate your activity)</li>
+<li>Match audience rules: <strong>OFF</strong> (force show even without qualifying)</li>
+</ul><p><strong>Why:</strong></p><ul>
+<li>ON = see only your activity (eliminate other factors)</li>
+<li>OFF = bypass audience rules (test experience content regardless)</li>
+<li>If you see the experience with OFF but not with ON = audience rule issue</li>
+</ul><h5 id="tbp-qa-scenario-3-content-quality-check">Scenario 3: Content Quality Check</h5><p>You just want to see if your offer/experience content looks good.</p><p><strong>Best Settings:</strong></p><ul>
+<li>Show default content: <strong>ON</strong> (minimize distraction)</li>
+<li>Match audience rules: <strong>OFF</strong> (don't block you with audience rules)</li>
+</ul><p><strong>Why:</strong></p><ul>
+<li>ON = see only your content</li>
+<li>OFF = bypass audience qualification</li>
+<li>Focus on: Does the experience look right?</li>
+</ul><h5 id="tbp-qa-scenario-4-production-simulation">Scenario 4: Production Simulation</h5><p>You want to see exactly what a qualified visitor will see in production.</p><p><strong>Best Settings:</strong></p><ul>
+<li>Show default content: <strong>OFF</strong> (include other activities)</li>
+<li>Match audience rules: <strong>ON</strong> (only if you qualify)</li>
+</ul><p><strong>Why:</strong></p><ul>
+<li>OFF = realistic with other activities</li>
+<li>ON = only if you match audiences</li>
+<li>Result: Exactly what real visitor sees</li>
+</ul><h4 id="tbp-qa-how-to-access-qa-mode">How to Access QA Mode</h4><h5 id="tbp-qa-in-visual-experience-composer-vec">In Visual Experience Composer (VEC):</h5><pre><code>Step 1: Open your activity
+Step 2: Click "QA" button (top right)
+Step 3: Configure preview settings
+Step 4: See toggle options for:
+├─ Show default content for all other activities
+├─ Match audience rules to see experiences
+└─ [Optional] Preview mode selection
+Step 5: Click checkboxes to toggle ON/OFF</code></pre><h5 id="tbp-qa-using-qa-url-parameters">Using QA URL Parameters:</h5><p>Adobe Target uses special URL parameters for QA preview:</p><pre><code>Standard QA Preview:
+https://yoursite.com/page?at_preview_token=TOKEN&amp;at_preview_index=0_1
+
+This bypasses normal activity delivery and shows preview mode
+
+Available parameters:
+├─ at_preview_token = unique token for your session
+├─ at_preview_index = which experience to preview
+├─ at_preview_mode = enter/exit QA mode
+└─ at_debug = additional debugging</code></pre><h4 id="tbp-qa-important-considerations">Important Considerations</h4><h5 id="tbp-qa-data-not-recorded-in-qa-preview">Data Not Recorded in QA Preview</h5><p>When you preview activities using QA mode:</p><ul>
+<li>❌ Conversions are NOT counted</li>
+<li>❌ Visitor impressions are NOT tracked</li>
+<li>❌ Reporting is NOT affected</li>
+<li>✅ Only YOU see it (other visitors unaffected)</li>
+</ul><p><strong>Why this matters for exam:</strong></p><ul>
+<li>QA preview is safe to use on live activities</li>
+<li>It doesn't pollute your test data</li>
+<li>Perfect for testing production environment</li>
+</ul><h5 id="tbp-qa-audience-rules-match-common-scenarios">Audience Rules Match - Common Scenarios</h5><p><strong>Scenario A: Geo-targeting audience</strong></p><pre><code>Activity audience: "Visitors from California"
+
+Match audience rules ON:
+├─ You're in California → See activity
+└─ You're in Texas → Don't see activity
+
+Match audience rules OFF:
+├─ You're in California → See activity
+└─ You're in Texas → Also see activity (bypass geo-rule)</code></pre><p><strong>Scenario B: Returning visitor audience</strong></p><pre><code>Activity audience: "Returning visitors only"
+
+Match audience rules ON:
+├─ First visit → Don't see activity
+└─ Returning visit → See activity (after 14 days)
+
+Match audience rules OFF:
+├─ First visit → See activity anyway (bypass rule)
+└─ Returning visit → See activity (rule satisfied)</code></pre><p><strong>Scenario C: Complex AND rules</strong></p><pre><code>Activity audience: 
+├─ Country = USA
+├─ Device = Mobile
+└─ Visitor Type = Returning
+
+Match audience rules ON:
+└─ Must meet ALL 3 criteria to see activity
+
+Match audience rules OFF:
+└─ See activity regardless of above rules</code></pre><h4 id="tbp-qa-exam-question-patterns">Exam Question Patterns</h4><h5 id="tbp-qa-pattern-1-identify-the-setting">Pattern 1: Identify the Setting</h5><blockquote>
+<p>"A QA specialist wants to preview an activity ONLY if they actually qualify for the audience rules, mimicking what a real visitor would see. Which setting should they enable?"</p>
+</blockquote><p><strong>Answer:</strong> "Match audience rules to see experiences" = <strong>ON</strong></p><h5 id="tbp-qa-pattern-2-debug-scenario">Pattern 2: Debug Scenario</h5><blockquote>
+<p>"An activity targeting 'Mobile users in the US' isn't showing during preview. The practitioner wants to bypass audience rules to test if the experience content is correct. What should they do?"</p>
+</blockquote><p><strong>Answer:</strong> Toggle "Match audience rules to see experiences" to <strong>OFF</strong></p><h5 id="tbp-qa-pattern-3-isolation-vs-realistic">Pattern 3: Isolation vs. Realistic</h5><blockquote>
+<p>"A practitioner wants to preview an activity with all other live activities included to see realistic collision/priority behavior. Which settings are needed?"</p>
+</blockquote><p><strong>Answer:</strong></p><ul>
+<li>"Show default content for all other activities" = <strong>OFF</strong></li>
+<li>"Match audience rules to see experiences" = depends on if they qualify</li>
+</ul><h5 id="tbp-qa-pattern-4-production-simulation">Pattern 4: Production Simulation</h5><blockquote>
+<p>"What preview settings best simulate what a real visitor will see in production?"</p>
+</blockquote><p><strong>Answer:</strong></p><ul>
+<li>"Show default content for all other activities" = <strong>OFF</strong> (include other activities)</li>
+<li>"Match audience rules to see experiences" = <strong>ON</strong> (only if they qualify)</li>
+</ul><h4 id="tbp-qa-quick-reference-table">Quick Reference Table</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>ON</th>
+<th>OFF</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Show Default Content for All Other Activities</strong></td>
+<td>Isolated preview (only your activity)</td>
+<td>Realistic preview (includes other activities)</td>
+<td>ON = Testing content; OFF = Testing collision/priority</td>
+</tr>
+<tr>
+<td><strong>Match Audience Rules to See Experiences</strong></td>
+<td>Only if you qualify for audiences</td>
+<td>See experience regardless of audiences</td>
+<td>ON = Validate audience rules; OFF = Test content/debug</td>
+</tr>
+</tbody>
+</table></div><h4 id="tbp-qa-exam-study-focus">Exam Study Focus</h4><h5 id="tbp-qa-critical-concept-to-memorize">Critical Concept to Memorize:</h5><pre><code>"Match audience rules to see experiences"
+
+ON = 
+├─ Respect audience qualification rules
+├─ Only see activity if you match all audience rules
+├─ Simulates real visitor behavior (if qualified)
+└─ Use to: Validate audience rules are working
+
+OFF = 
+├─ Bypass audience qualification rules
+├─ See activity regardless of audience match
+├─ Force show the experience
+└─ Use to: Test experience content without audience blocking</code></pre><h5 id="tbp-qa-common-exam-mistakes">Common Exam Mistakes:</h5><p>❌ <strong>WRONG:</strong> Confusing "Match audience rules" with "Show default content"</p><ul>
+<li>"Match audience rules" = Are YOU qualified?</li>
+<li>"Show default content" = Are OTHER activities shown?</li>
+</ul><p>❌ <strong>WRONG:</strong> Thinking QA preview affects reporting</p><ul>
+<li>QA preview = completely separate from data collection</li>
+<li>Your preview = invisible to real visitors</li>
+</ul><p>❌ <strong>WRONG:</strong> Not knowing when to use ON vs. OFF</p><ul>
+<li>ON = Production simulation (most common)</li>
+<li>OFF = Debugging/testing content (less common)</li>
+</ul><h4 id="tbp-qa-you-now-understand">You Now Understand:</h4><p>✓ What "Match audience rules to see experiences" means<br/>
+✓ How it differs from "Show default content"<br/>
+✓ When to use ON vs. OFF<br/>
+✓ Why it matters for QA testing<br/>
+✓ How it relates to audience validation<br/>
+✓ Real-world exam scenarios</p><h4 id="tbp-qa-related-exam-concepts">Related Exam Concepts</h4><p>This connects to:</p><ol type="1">
+<li><strong>Audience rules</strong> - Q6, Q7, Q16 (your weak areas)</li>
+<li><strong>Preview settings</strong> - Q5, Q17, Q29 (you studied this)</li>
+<li><strong>Activity collision</strong> - Q17 (relates to "Show default content")</li>
+<li><strong>Activity targeting</strong> - General planning &amp; strategy</li>
+</ol><h4 id="tbp-qa-practice-question">Practice Question</h4><p><strong>Question:</strong> A Target practitioner has an activity targeting "Returning mobile visitors from the US." They want to preview the activity in their current QA environment, but they're accessing from a desktop browser in Canada. Which settings allow them to still see the experience to verify the content is correct?</p><p>A) "Match audience rules" ON; "Show default content" ON<br/>
+B) <strong>"Match audience rules" OFF; "Show default content" ON</strong> ← Best answer<br/>
+C) "Match audience rules" OFF; "Show default content" OFF<br/>
+D) "Match audience rules" ON; "Show default content" OFF</p><p><strong>Explanation:</strong></p><ul>
+<li>"Match audience rules" OFF = bypass audience qualification (you don't qualify but see it anyway)</li>
+<li>"Show default content" ON = see only your activity in isolation</li>
+<li>Result: See the activity content even though you're not a qualified visitor</li>
+</ul><h4 id="tbp-qa-key-takeaway-for-exam">Key Takeaway for Exam</h4><blockquote>
+<p>"Match audience rules to see experiences" is a QA setting that controls whether you (the QA person) must actually qualify for an activity's audiences to see it in preview mode. ON = must qualify. OFF = see it regardless.</p>
+</blockquote><p>This is different from whether the activity actually targets certain audiences—the audience rules are always in place for real visitors. This setting just controls your preview experience.</p><p><strong>Excellent catch asking about this! This is a real exam concept that deserves deep understanding. You now have complete mastery of QA/Preview settings. 🎯</strong></p></div></section><section class="part" id="tbp-res"><header class="part-head"><span class="kind">Resources</span><h3>Official Adobe resources for weak areas</h3><ul class="intoc"><li><a href="#tbp-res-critical-resources-to-read">Critical Resources to Read</a></li><li><a href="#tbp-res-quick-memorization-guide">Quick Memorization Guide</a></li><li><a href="#tbp-res-study-schedule">Study Schedule</a></li><li><a href="#tbp-res-exam-readiness-after-studying">Exam Readiness After Studying</a></li></ul></header><div class="prose"><p class="lead">Links &amp; Documentation to Review Before Exam</p><div class="fix"><p><strong>Verified against Adobe's Target "Limits" documentation (Nov 2026).</strong> Standard mbox calls allow 500 mbox parameters and 500 profile parameters; the Delivery API and Batch mbox v2 allow 100 mbox and 50 profile parameters; the Batch Delivery API in the Mobile Services SDK allows 50 of each. Profile parameter values are capped at 256 characters, mbox names at 250 characters, and the Profile Attributes page states a limit of 50 unique profile attributes per mbox call. The practice-test answer of "8 profile parameters" is not supported by Adobe's documentation.</p>
+<p class="src">Sources: <a href="https://experienceleague.adobe.com/en/docs/target/using/troubleshoot/target-limits" rel="noopener" target="_blank">Adobe Target limits</a> · <a href="https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/profile-parameters" rel="noopener" target="_blank">Profile attributes</a></p></div><h4 id="tbp-res-critical-resources-to-read">Critical Resources to Read</h4><h5 id="tbp-res-1-profile-parameters-technical-limits-q1">1. Profile Parameters &amp; Technical Limits (Q1)</h5><p><strong>Official Adobe Documentation:</strong></p><ul>
+<li><cite index="3-1">Adobe Target Limits - Profile Parameters: The limit is 50 unique profile attributes per mbox call. If you need to pass more than 50 profile attributes to Target, you can pass them using the Profile Update API method.</cite></li>
+</ul><p><strong>Key Technical Limits (MEMORIZE):</strong></p><ul>
+<li>Profile parameters per mbox call: <strong>50</strong> (not 8)</li>
+<li>Mbox parameters per call: <strong>500</strong> for standard mbox calls; <strong>100</strong> for the Delivery API / Batch mbox v2 (verified)</li>
+<li>Mbox parameter value: <strong>5,000 characters</strong> (Delivery API); mbox <em>name</em>: <strong>250 characters</strong> (verified)</li>
+<li>Profile parameter character limit: <strong>256 characters</strong></li>
+<li>Visitor profile lifetime: <strong>14 days</strong> (default)</li>
+</ul><p><strong>Study Resource:</strong> <a href="https://experienceleague.adobe.com/en/docs/target/using/troubleshoot/target-limits" rel="noopener" target="_blank">https://experienceleague.adobe.com/en/docs/target/using/troubleshoot/target-limits</a></p><p><strong>What to Remember:</strong></p><pre><code>Profile parameters = data about the visitor (persistent)
+Mbox parameters = values passed with mbox call (not persistent)
+
+Limit: 50 profile parameters per mbox
+Limit: 500 mbox parameters per standard mbox call (100 via Delivery API)
+
+This is likely what you got wrong - memorize "50" not "8"</code></pre><h5 id="tbp-res-2-success-metrics-a4t-integration-q12">2. Success Metrics &amp; A4T Integration (Q12)</h5><p><strong>Key Concept: Calculated Metrics with A4T</strong></p><p><cite index="12-1">When using Analytics as the reporting source, all Analytics metrics, including calculated metrics, are available in Target. All activity types do not yet support A4T, but all success metrics available to your activities are Analytics metrics.</cite></p><p><strong>The A4T Workflow You Need:</strong></p><pre><code>Step 1: Create Calculated Metric in Adobe Analytics
+├─ Go to Analytics
+├─ Create metric combining multiple events
+├─ Example: (Click popup) AND (View thank you page)
+└─ Save the metric
+
+Step 2: Use in Adobe Target
+├─ Create activity with A4T
+├─ Select "Adobe Analytics" as reporting source
+├─ Choose the Calculated Metric from Analytics
+└─ The metric is now your success goal in Target
+
+Key Setting: When using A4T
+├─ Metric settings are LOCKED
+├─ Cannot change: "Increment Count &amp; Keep User in Activity"
+├─ Cannot change: "On Every Impression"
+└─ These are managed by Analytics, not Target</code></pre><p><strong>Important Limitation:</strong> <cite index="16-1">For activities using A4T, the goal metric always uses the "Increment Count &amp; Keep User in Activity" and "On Every Impression" settings. These settings are not configurable.</cite></p><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/a4t" rel="noopener" target="_blank">https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/a4t</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-metric-definition.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-metric-definition.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Question Pattern: "Create success metric combining two events with A4T"
+
+Wrong Answers:
+- ❌ Create two separate metrics in Target
+- ❌ Use Target's out-of-box metrics
+- ❌ Implement custom JavaScript
+
+Correct Answer:
+- ✅ Create Calculated Metric in Analytics FIRST
+- ✅ Import that metric into Target
+- ✅ Use it as A4T success metric</code></pre><h5 id="tbp-res-3-post-conversion-behavior-q5">3. Post-Conversion Behavior (Q5)</h5><p><strong>Official Documentation Reference:</strong></p><p>When you set a success metric, you have 3 post-conversion options:</p><pre><code>Option 1: "Keep User in Activity" (DEFAULT)
+├─ Visitor stays in activity after conversion
+├─ Can convert multiple times
+├─ Use when: Want repeat conversions counted
+
+Option 2: "Release &amp; Allow Reentry"
+├─ Visitor exits activity after conversion
+├─ Can re-enter the activity in future sessions
+├─ Use when: One conversion per session, but allow future participation
+
+Option 3: "Release &amp; Bar Reentry"
+├─ Visitor removed from activity permanently after conversion
+├─ Cannot see activity again
+├─ Use when: One-time offer, don't want repeat conversions</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Scenario: "Users should only convert once, then excluded from activity"
+
+Answer: "Release &amp; Bar Reentry" setting
+
+Scenario: "Want to count multiple purchases by same visitor"
+
+Answer: "Keep User in Activity" (default) OR "Release &amp; Allow Reentry"</code></pre><h5 id="tbp-res-4-audience-selection-for-business-goals-q2-q16">4. Audience Selection for Business Goals (Q2, Q16)</h5><p><strong>Key Principle:</strong></p><p><cite index="16-1">Business Key Performance Indicators (KPIs) should drive audience creation. Not all demographic data creates valuable audiences.</cite></p><p><strong>Business-Driven Audience Examples:</strong></p><pre><code>LEAD GENERATION Website:
+├─ Goal: Capture qualified leads
+├─ Wrong audience: "Social media engagement metrics"
+├─ Correct audience: "Financial goals", "Investment preferences", "Risk tolerance"
+└─ Why: Financial indicators predict lead quality
+
+E-COMMERCE Website:
+├─ Goal: Increase sales
+├─ Wrong audience: "Website traffic volume"
+├─ Correct audience: "Purchase history", "Product browsing", "Price range viewed"
+└─ Why: Historical behavior predicts future purchases
+
+CONTENT Website:
+├─ Goal: Increase engagement
+├─ Wrong audience: "Random visitors"
+├─ Correct audience: "Content category preference", "Reading frequency", "Session duration"
+└─ Why: Content affinity drives engagement
+
+SaaS Website:
+├─ Goal: Increase free trial signups
+├─ Wrong audience: "All visitors"
+├─ Correct audience: "Company size", "Industry", "Use case relevance"
+└─ Why: Relevance increases conversion</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/en/docs/target/using/audiences/target-audiences/target-audience" rel="noopener" target="_blank">https://experienceleague.adobe.com/en/docs/target/using/audiences/target-audiences/target-audience</a></li>
+<li><a href="https://experienceleague.adobe.com/en/docs/target/using/activities/activity-goals-and-settings" rel="noopener" target="_blank">https://experienceleague.adobe.com/en/docs/target/using/activities/activity-goals-and-settings</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Pattern: "Business wants to [GOAL]. What audience attributes?"
+
+Step 1: Identify the business goal
+Step 2: Think: "What visitor characteristics predict success for this goal?"
+Step 3: Select attributes that align with the goal
+
+Example:
+- Goal: Improve lead generation
+- Visitor type: People interested in finances
+- Attributes: Investment preferences, financial goals, risk tolerance</code></pre><h5 id="tbp-res-5-recommendations-activity-specifics-q18">5. Recommendations Activity Specifics (Q18)</h5><p><strong>Form-Based Composer Recommendations Workflow:</strong></p><p>The key difference for Recommendations vs. other activities:</p><pre><code>Standard Activities in Form-Based:
+Step 1: Select audience
+Step 2: Select location (where content goes)
+Step 3: Create experience
+Done.
+
+Recommendations Activity in Form-Based:
+Step 1: Select audience
+Step 2: Select location (where recommendations appear)
+Step 3: Choose CONTENT TYPE ← UNIQUE REQUIREMENT
+Step 4: Select recommendation ALGORITHM ← UNIQUE REQUIREMENT
+Step 5: Audience REFINEMENTS ← THIS IS THE CRITICAL DIFFERENT STEP
+Step 6: Backup recommendations
+Done.
+
+"Audience Refinements" in Recommendations:
+├─ NOT the same as audience selection
+├─ Allows filtering recommendations by attributes
+├─ Example: "Show only products under $50"
+├─ Example: "Show only content from past 6 months"
+├─ Example: "Show only items with rating &gt; 4 stars"</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Question: "Form-Based Recommendations - what step is DIFFERENT?"
+
+Correct Answer: "Audience refinements" (filters on recommendations)
+Wrong: "Selecting a location" (that's standard for all)
+Wrong: "Naming the activity" (that's standard for all)</code></pre><h5 id="tbp-res-6-auto-target-attribution-rules-q49">6. Auto-Target Attribution Rules (Q49)</h5><p><strong>Key Concept:</strong></p><pre><code>AUTO-TARGET CONVERSION COUNTING:
+
+A visitor counts for conversions ONLY IF:
+├─ They qualify for the activity AND
+├─ They actually see/view the activity AND
+├─ They convert in the same session
+
+If visitor qualifies but DOESN'T see the activity:
+└─ Their conversions are NOT counted in the activity report
+
+Comparison:
+├─ A/B Test: All activity participants get credit
+└─ Auto-Target: Only participants who viewed activity get credit</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Scenario: "Visitor qualifies for Auto-Target but doesn't see it. Converts later."
+
+Answer: "Only if visitor sees activity within same session"
+
+Scenario: "Does conversion count if visitor never sees Auto-Target activity?"
+
+Answer: "No, only visitors who qualified AND viewed count conversions"</code></pre><h5 id="tbp-res-7-automated-personalization-q35">7. Automated Personalization (Q35)</h5><p><strong>Definition to Memorize:</strong></p><p><cite index="16-1">Automated Personalization uses advanced machine learning to personalize content and drive conversions by combining specific offers or messages in different locations on a page.</cite></p><p><strong>Key Differences:</strong></p><pre><code>AUTO-TARGET:
+├─ ML personalizes WHOLE PAGE experiences
+├─ 2-5 complete experiences
+├─ "Which page design is best for this person?"
+└─ Report: Summary Report (overall lift + per-experience)
+
+AUTOMATED PERSONALIZATION (AP):
+├─ ML personalizes OFFERS in LOCATIONS
+├─ 3-10 offers per location, multiple locations
+├─ "Which offers in which locations work for this person?"
+└─ Reports: Activity Level, Offer Level, Segments, Attributes
+
+"Combining specific offers" = AP (not Auto-Target)</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Red Flag Words → Choose AP:
+- "Combining specific offers"
+- "Multiple offers in different locations"
+- "Personalizing offers per location"
+
+Red Flag Words → Choose Auto-Target:
+- "Whole page personalization"
+- "Complete page experiences"
+- "Which design works best"</code></pre><h5 id="tbp-res-8-sample-size-false-positives-q44">8. Sample Size &amp; False Positives (Q44)</h5><p><strong>Core Statistical Concept:</strong></p><p><cite index="3-1">Reaching the calculated sample size ensures statistical power (80%) and significance (95% confidence), which minimizes the risk of false-positive results in the test.</cite></p><p><strong>Why Sample Size Matters:</strong></p><pre><code>Without Sample Size (Peeking):
+├─ Day 3: Variation shows 8% lift
+├─ Declare winner: 60% confident
+├─ 40% risk of false positive
+└─ Implement losing variation → Bad decision
+
+With Sample Size (Proper Testing):
+├─ Day 21: Reach 10,000 visitors
+├─ Check confidence: 95%
+├─ 5% risk of false positive
+└─ Safely declare winner
+
+FALSE POSITIVE = declaring winner when none exists</code></pre><p><strong>Study Resources:</strong></p><ul>
+<li><a href="https://experienceleague.adobe.com/docs/target/using/activities/ab-test/sample-size-determination.html" rel="noopener" target="_blank">https://experienceleague.adobe.com/docs/target/using/activities/ab-test/sample-size-determination.html</a></li>
+</ul><p><strong>For Your Exam:</strong></p><pre><code>Question: "Why wait for sample size in A/B testing?"
+
+Correct Answer: "Minimizes the risk of false-positive results"
+
+Other terms for same concept:
+- "Reduces Type I error"
+- "Ensures statistical significance"
+- "Avoids peeking bias"</code></pre><h4 id="tbp-res-quick-memorization-guide">Quick Memorization Guide</h4><h5 id="tbp-res-technical-limits-q1">Technical Limits (Q1)</h5><pre><code>50 profile parameters per mbox ← MEMORIZE THIS (not 8)
+500 mbox params per standard mbox call (100 via Delivery API)
+250 characters max for an mbox NAME; 256 for a profile param value
+14 days profile lifetime</code></pre><h5 id="tbp-res-success-metrics-with-a4t-q12">Success Metrics with A4T (Q12)</h5><pre><code>Step 1: Create Calculated Metric in Analytics
+Step 2: Use in Target as success metric
+Step 3: Settings are LOCKED in Target (managed by Analytics)</code></pre><h5 id="tbp-res-post-conversion-behavior-q5">Post-Conversion Behavior (Q5)</h5><pre><code>Keep in Activity = continue testing
+Release &amp; Allow = exit, can return later
+Release &amp; Bar = permanent exit</code></pre><h5 id="tbp-res-audience-selection-q2-q16">Audience Selection (Q2, Q16)</h5><pre><code>Business goal → Audience attributes
+Lead gen → Financial preferences
+E-commerce → Purchase behavior
+Content → Topic preferences</code></pre><h5 id="tbp-res-recommendations-q18">Recommendations (Q18)</h5><pre><code>Unique step: Audience refinements (filter recommendations)
+Not same as audience selection</code></pre><h5 id="tbp-res-activity-types-q35">Activity Types (Q35)</h5><pre><code>"Combining offers" = AP
+"Whole page" = Auto-Target
+AP = multiple offers in locations
+Auto-Target = whole page experiences</code></pre><h5 id="tbp-res-sample-size-q44">Sample Size (Q44)</h5><pre><code>Minimizes FALSE POSITIVES
+False positive = declaring winner that isn't real
+Without sample size = peeking bias</code></pre><h5 id="tbp-res-auto-target-attribution-q49">Auto-Target Attribution (Q49)</h5><pre><code>Must see activity AND convert in same session
+Qualifier alone ≠ count
+Stricter than A/B Test</code></pre><h4 id="tbp-res-study-schedule">Study Schedule</h4><h5 id="tbp-res-next-48-hours">Next 48 Hours:</h5><p><strong>Session 1 (2 hours): Technical &amp; Metrics</strong></p><ul class="checklist">
+<li><label><input type="checkbox"/>Read Target Limits documentation (30 min)</label></li>
+<li><label><input type="checkbox"/>Read A4T Integration &amp; Calculated Metrics (45 min)</label></li>
+<li><label><input type="checkbox"/>Read Success Metrics &amp; Post-Conversion (45 min)</label></li>
+</ul><p><strong>Session 2 (2 hours): Activity Types &amp; Audiences</strong></p><ul class="checklist">
+<li><label><input type="checkbox"/>Read Recommendations Activity documentation (30 min)</label></li>
+<li><label><input type="checkbox"/>Read Auto-Target vs. AP comparison (45 min)</label></li>
+<li><label><input type="checkbox"/>Read Audience Selection Best Practices (45 min)</label></li>
+</ul><p><strong>Session 3 (1.5 hours): Statistical &amp; Attribution</strong></p><ul class="checklist">
+<li><label><input type="checkbox"/>Read Sample Size Determination (30 min)</label></li>
+<li><label><input type="checkbox"/>Read Auto-Target Attribution Rules (30 min)</label></li>
+<li><label><input type="checkbox"/>Practice 10 exam-style questions (30 min)</label></li>
+</ul><p><strong>Total: 5.5 hours focused reading + practice</strong></p><h4 id="tbp-res-exam-readiness-after-studying">Exam Readiness After Studying</h4><p><strong>Before Study:</strong></p><ul>
+<li>Score: 36/50 (72%)</li>
+<li>Weak: 14 questions wrong</li>
+<li>Risk: Just barely passing</li>
+</ul><p><strong>After Study (Predicted):</strong></p><ul>
+<li>Score: 42-46/50 (84-92%)</li>
+<li>Weak: 4-8 questions (same type mistakes eliminated)</li>
+<li>Confidence: Much higher, comfortable passing margin</li>
+</ul><p><strong>How to Know You're Ready:</strong></p><ol type="1">
+<li>Can explain why sample size minimizes false positives</li>
+<li>Can match business goals to audience attributes</li>
+<li>Understand A4T calculated metric workflow</li>
+<li>Can distinguish AP from Auto-Target instantly</li>
+<li>Know all technical limits cold</li>
+<li>Understand post-conversion behavior options</li>
+</ol><p><strong>You've got this. Study these resources thoroughly, and your score will improve significantly. 🎯</strong></p></div></section></section>
+</main>
+</body>
+</html>

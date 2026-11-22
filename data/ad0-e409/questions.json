@@ -1,0 +1,1947 @@
+{
+  "certificationId": "ad0-e409",
+  "source": "Independently authored practice items based on the user-provided study guide. They are not actual Adobe exam questions.",
+  "questions": [
+    {
+      "id": "e409-practice-001",
+      "domainId": "fundamentals",
+      "topic": "Activity types",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "A team wants to show different content to defined audience segments but does not need a statistical comparison between those experiences. Which activity type best fits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A/B test"
+        },
+        {
+          "id": "B",
+          "text": "Experience Targeting"
+        },
+        {
+          "id": "C",
+          "text": "Multivariate test"
+        },
+        {
+          "id": "D",
+          "text": "Auto-Allocate"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Experience Targeting presents experiences to qualifying segments. A/B and multivariate activities are experiments, while Auto-Allocate shifts traffic within a test.",
+      "incorrectExplanations": {
+        "A": "A/B testing compares outcomes across experiences.",
+        "C": "A multivariate test evaluates combinations of changes.",
+        "D": "Auto-Allocate optimizes traffic among test experiences."
+      },
+      "chapterId": "fundamentals"
+    },
+    {
+      "id": "e409-practice-002",
+      "domainId": "fundamentals",
+      "topic": "Sample ratio mismatch",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Observed traffic allocation differs substantially from the configured split in an otherwise active experiment. What should the team investigate first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sample ratio mismatch and delivery or implementation behavior"
+        },
+        {
+          "id": "B",
+          "text": "The activity's business hypothesis wording"
+        },
+        {
+          "id": "C",
+          "text": "The recommendation catalog"
+        },
+        {
+          "id": "D",
+          "text": "Whether the test has reached statistical significance"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A gap between configured and observed allocation is a sample ratio mismatch. Investigate implementation and delivery before interpreting outcomes.",
+      "incorrectExplanations": {
+        "B": "Hypothesis wording does not usually explain an observed traffic split.",
+        "C": "Catalog configuration is unrelated unless this is specifically a recommendations issue.",
+        "D": "Significance concerns outcome confidence, not whether visitors were assigned as expected."
+      },
+      "chapterId": "fundamentals"
+    },
+    {
+      "id": "e409-practice-003",
+      "domainId": "integrations",
+      "topic": "A4T",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "What is the primary purpose of Analytics for Target (A4T)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace the Target delivery engine with Analytics"
+        },
+        {
+          "id": "B",
+          "text": "Report Target activity and experience data in Adobe Analytics"
+        },
+        {
+          "id": "C",
+          "text": "Automatically render AEM components"
+        },
+        {
+          "id": "D",
+          "text": "Create every Target audience without activation"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A4T makes Target activity and experience data available for Analytics reporting. It does not replace Target delivery or automatically render AEM content.",
+      "incorrectExplanations": {
+        "A": "Target remains responsible for its delivery decisions.",
+        "C": "AEM rendering requires its own configured integration.",
+        "D": "Audience creation and activation are separate concerns."
+      },
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-004",
+      "domainId": "governance",
+      "topic": "Environment separation",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Why should teams validate Target changes in staging before production rollout?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase the activity's traffic allocation"
+        },
+        {
+          "id": "B",
+          "text": "To test changes before they affect live visitors"
+        },
+        {
+          "id": "C",
+          "text": "To eliminate the need for audiences"
+        },
+        {
+          "id": "D",
+          "text": "To avoid documenting the activity"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Environment separation enables a controlled check of implementation and experience behavior before production visitors are affected.",
+      "incorrectExplanations": {
+        "A": "Staging does not inherently change production traffic allocation.",
+        "C": "Audiences may still be part of the activity design.",
+        "D": "Documentation remains important in every environment."
+      },
+      "chapterId": "governance"
+    },
+    {
+      "id": "e409-practice-005",
+      "domainId": "touchpoints",
+      "topic": "Server-side delivery",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A decision must be available before above-the-fold content is rendered to minimize browser-side flicker. Which approach most directly addresses that requirement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Server-side delivery with the decision made before rendering"
+        },
+        {
+          "id": "B",
+          "text": "Client-side tags that run after the page is painted"
+        },
+        {
+          "id": "C",
+          "text": "Email personalization at send time"
+        },
+        {
+          "id": "D",
+          "text": "Remove the default experience"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A server-side decision can be incorporated before the page is rendered, avoiding the client-side swap that causes flicker.",
+      "incorrectExplanations": {
+        "B": "Applying a client-side offer after paint can create visible flicker.",
+        "C": "Email delivery is unrelated to page rendering.",
+        "D": "Removing the default does not ensure a timely decision or reliable fallback."
+      },
+      "chapterId": "touchpoints"
+    },
+    {
+      "id": "e409-practice-006",
+      "domainId": "recommendations",
+      "topic": "Empty recommendations",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "A recommendations request returns no eligible items for every visitor. What is the best first investigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the activity's traffic allocation"
+        },
+        {
+          "id": "B",
+          "text": "Review criteria restrictions and catalog item data"
+        },
+        {
+          "id": "C",
+          "text": "Rename the page mbox"
+        },
+        {
+          "id": "D",
+          "text": "Replace the algorithm without checking inputs"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Overly restrictive criteria or missing, stale, or ineligible catalog items commonly explain empty recommendations.",
+      "incorrectExplanations": {
+        "A": "Traffic allocation does not make excluded catalog items eligible.",
+        "C": "A name change is not the first evidence-based check.",
+        "D": "The catalog and criteria should be validated before changing algorithms."
+      },
+      "chapterId": "recommendations"
+    },
+    {
+      "id": "e409-practice-007",
+      "domainId": "architecture",
+      "topic": "Global mbox",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Why does the provided study guide recommend keeping global Target behavior lightweight?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It can run on every page where the library is loaded, so extra work affects many pages"
+        },
+        {
+          "id": "B",
+          "text": "It cannot return offers"
+        },
+        {
+          "id": "C",
+          "text": "It is only available to mobile applications"
+        },
+        {
+          "id": "D",
+          "text": "It replaces page-specific requests in every implementation"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The guide describes the global request as running on pages with the library; keeping it lightweight limits cost across the site. Verify current behavior in Adobe documentation.",
+      "incorrectExplanations": {
+        "B": "The guide does not state that global behavior cannot return offers.",
+        "C": "The concept is described for pages where the web library is loaded.",
+        "D": "The guide recommends page-specific requests for page-level experiences."
+      },
+      "chapterId": "architecture",
+      "verification": "The exact global mbox behavior and naming are marked for current-documentation verification."
+    },
+    {
+      "id": "e409-practice-008",
+      "domainId": "architecture",
+      "topic": "Duplicate order events",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A customer can refresh the order confirmation page. What measurement risk should the implementation guard against?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Duplicate conversion or revenue counting"
+        },
+        {
+          "id": "B",
+          "text": "An automatic change to audience membership"
+        },
+        {
+          "id": "C",
+          "text": "A lower recommendation catalog quality score"
+        },
+        {
+          "id": "D",
+          "text": "A change to the test's configured traffic split"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "If order confirmation logic fires again on refresh or back navigation, conversion and revenue can be duplicated.",
+      "incorrectExplanations": {
+        "B": "Page refresh does not inherently alter audience membership.",
+        "C": "Order-event firing is separate from catalog quality.",
+        "D": "Duplicate conversion events do not directly reconfigure traffic allocation."
+      },
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-009",
+      "domainId": "troubleshooting",
+      "topic": "Missing request",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Staging sends a Target request, but production sends none. Which set of checks should come first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Production library and tag loading, consent state, and script blocking"
+        },
+        {
+          "id": "B",
+          "text": "Recommendations ranking strategy"
+        },
+        {
+          "id": "C",
+          "text": "Analytics attribution window only"
+        },
+        {
+          "id": "D",
+          "text": "The activity's statistical significance"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "No request points first to delivery: verify that production loads the library and tag and that consent, blocking, or script errors are not preventing the request.",
+      "incorrectExplanations": {
+        "B": "Ranking strategy cannot explain a request that never fires.",
+        "C": "Attribution does not control whether a request is sent.",
+        "D": "Significance is evaluated after eligible traffic and outcomes are collected."
+      },
+      "chapterId": "troubleshooting"
+    },
+    {
+      "id": "e409-practice-010",
+      "domainId": "troubleshooting",
+      "topic": "No-offer response",
+      "difficulty": "medium",
+      "type": "multi",
+      "question": "A request fires, but the expected experience is not returned. Which checks are appropriate next steps? Select all that apply.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confirm the activity is live and within its scheduled dates"
+        },
+        {
+          "id": "B",
+          "text": "Check audience qualification and traffic allocation"
+        },
+        {
+          "id": "C",
+          "text": "Check whether the offer is active and correctly mapped"
+        },
+        {
+          "id": "D",
+          "text": "Change the page font before inspecting the response"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "Once delivery is confirmed, check activity status and dates, audience qualification, allocation, and offer configuration. These checks cover common reasons for a missing experience.",
+      "incorrectExplanations": {
+        "D": "Font styling is unrelated to whether Target returns the offer; inspect request and response evidence first."
+      },
+      "chapterId": "troubleshooting"
+    },
+    {
+      "id": "e409-practice-011",
+      "domainId": "architecture",
+      "topic": "Hybrid delivery",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A retailer needs private logged-in pricing decided before rendering but also wants inexpensive client-side tests for non-sensitive layout changes. Which design is most suitable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use client-side delivery for all decisions, including pricing"
+        },
+        {
+          "id": "B",
+          "text": "Use a hybrid design and keep visitor identity consistent across delivery paths"
+        },
+        {
+          "id": "C",
+          "text": "Use email delivery for both page experiences"
+        },
+        {
+          "id": "D",
+          "text": "Place every decision in the global mbox"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A hybrid design can use server-side delivery for the pricing decision and client-side delivery for simpler layout tests. Shared identity helps keep decisions consistent.",
+      "incorrectExplanations": {
+        "A": "Client-only delivery does not meet the stated before-render requirement.",
+        "C": "Email delivery does not personalize the live page.",
+        "D": "The guide advises keeping global behavior lightweight rather than putting every decision there."
+      },
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-012",
+      "domainId": "integrations",
+      "topic": "Measurement discrepancies",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Target conversions are higher than Analytics orders for the same reporting period. What should the team compare before changing the activity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Attribution windows, deduplication, identity, and time zones"
+        },
+        {
+          "id": "B",
+          "text": "The recommendations catalog's image URLs"
+        },
+        {
+          "id": "C",
+          "text": "The activity's name only"
+        },
+        {
+          "id": "D",
+          "text": "Whether to remove all conversion metrics"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Differences in attribution, deduplication, identity, and time-zone handling can lead systems to report different conversion totals.",
+      "incorrectExplanations": {
+        "B": "Catalog image URLs do not explain conversion reporting differences.",
+        "C": "Renaming an activity does not align measurement definitions.",
+        "D": "Removing metrics hides the discrepancy rather than diagnosing it."
+      },
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-013",
+      "domainId": "integrations",
+      "topic": "Question 1",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A Client wants to display a real-time Abandoned Cart message on the homepage when a customer reaches the “Review Order” page but does not complete the order. The Abandoned Cart message should contain the product categories, total price, and a link back to the cart contents. The client also wants to report on the activity's success using Adobe Analytics.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Analytics segments"
+        },
+        {
+          "id": "B",
+          "text": "Target segments"
+        },
+        {
+          "id": "C",
+          "text": "Multiple profile scripts"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q1)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-014",
+      "domainId": "architecture",
+      "topic": "Question 2",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The client ran A/B Test activities on their website for a year without the Tag Management System. The client is now using a data layer and asks the Adobe Target Architect to use values from the data layer for website personalization.",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the bottom of the <BODY> section before referencing at.js"
+        },
+        {
+          "id": "B",
+          "text": "At the bottom of the <BODY> section after referencing at.js"
+        },
+        {
+          "id": "C",
+          "text": "In the <HEAD> section after referencing at.js"
+        },
+        {
+          "id": "D",
+          "text": "In the <HEAD> section before referencing at.js"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q2)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-015",
+      "domainId": "architecture",
+      "topic": "Question 3",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "A client would like to test alternate images within their email campaigns.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Redirector"
+        },
+        {
+          "id": "B",
+          "text": "AdBox"
+        },
+        {
+          "id": "C",
+          "text": "getOffer/applyOffer"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q3)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-016",
+      "domainId": "architecture",
+      "topic": "Question 4",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Once the Target request (mbox) is received by Adobe Target, what gets executed first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DOM Manipulation"
+        },
+        {
+          "id": "B",
+          "text": "Profile scripts"
+        },
+        {
+          "id": "C",
+          "text": "Content scripts"
+        },
+        {
+          "id": "D",
+          "text": "Audience qualification"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q4)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-017",
+      "domainId": "architecture",
+      "topic": "Question 5",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client would like to run two activities on their homepage and does not want these activities to overlap.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Traffic Allocation"
+        },
+        {
+          "id": "B",
+          "text": "Data Providers"
+        },
+        {
+          "id": "C",
+          "text": "Profile Script"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q5)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-018",
+      "domainId": "architecture",
+      "topic": "Question 6",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "A retail company is planning to use Automated Personalization from Adobe Target to personalize content based on user visits.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mbox parameters"
+        },
+        {
+          "id": "B",
+          "text": "Experience Cloud Audiences"
+        },
+        {
+          "id": "C",
+          "text": "Rawbox implementations"
+        },
+        {
+          "id": "D",
+          "text": "Emails"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q6)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-019",
+      "domainId": "integrations",
+      "topic": "Question 7",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A financial services website has been struggling to run their personalization activities effectively. Too many of their customers are only using the website to pay their bills once a month and are consistently showing up in the reports as New Visitors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the Target profile expiration from the default of 14 days to a value greater than one month."
+        },
+        {
+          "id": "B",
+          "text": "Migrate Experience Targeting activities to Automated Personalization activities to capitalize on machine learning benefits."
+        },
+        {
+          "id": "C",
+          "text": "Modify the audience criteria to include returning visitors to target website traffic at every stage of the customer journey."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q7)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-020",
+      "domainId": "fundamentals",
+      "topic": "Question 8",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "An optimization team is struggling to manually update the image tags in the HTML code of the page and would prefer to use the Visual Experience Composer (VEC) to more easily swap images.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Share image folders from Adobe Experience Cloud Assets Core Service with Adobe Target."
+        },
+        {
+          "id": "B",
+          "text": "Contact Adobe Customer Care to provision Image Offers."
+        },
+        {
+          "id": "C",
+          "text": "Upload image files to Adobe Experience Cloud Assets Core Service."
+        },
+        {
+          "id": "D",
+          "text": "Enable Image Offers in Adobe Target > Setup."
+        },
+        {
+          "id": "E",
+          "text": "Contact Adobe Customer Care to request the Scene7 Account Configuration."
+        }
+      ],
+      "correctAnswers": [
+        "C",
+        "E"
+      ],
+      "explanation": "Question from practice exam (Q8)",
+      "incorrectExplanations": {},
+      "chapterId": "fundamentals"
+    },
+    {
+      "id": "e409-practice-021",
+      "domainId": "integrations",
+      "topic": "Question 9",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wants to set up an Activity using Analytics for Target (A4T) and needs to send Target-based conversion data to Adobe Analytics.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activity Impressions"
+        },
+        {
+          "id": "B",
+          "text": "Activity Conversions"
+        },
+        {
+          "id": "C",
+          "text": "Activity Goals"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q9)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-022",
+      "domainId": "architecture",
+      "topic": "Question 10",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wants to personalize their homepage using segments sourced from Adobe Audience Manager (AAM) without affecting page-load performance.",
+      "options": [
+        {
+          "id": "A",
+          "text": "AAM Dynamic Integration Library (DIL)"
+        },
+        {
+          "id": "B",
+          "text": "Experience Cloud ID Service"
+        },
+        {
+          "id": "C",
+          "text": "Analytics for Target (A4T)"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q10)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-023",
+      "domainId": "integrations",
+      "topic": "Question 11",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An Adobe Target architect is designing an implementation that requires the use of Analytics for Target (A4T).",
+      "options": [
+        {
+          "id": "A",
+          "text": "at.js"
+        },
+        {
+          "id": "B",
+          "text": "appMeasurement.js"
+        },
+        {
+          "id": "C",
+          "text": "VisitorAPI.js"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q11)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-024",
+      "domainId": "architecture",
+      "topic": "Question 12",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wishes to increase content velocity and reuse by utilizing content created in Adobe Experience Manager (AEM) within Adobe Target Automated Personalization activities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the Adobe Target createOffer API to pass JSON Offers to Adobe Target."
+        },
+        {
+          "id": "B",
+          "text": "Use AEM Experience Fragments as Adobe Target Offers."
+        },
+        {
+          "id": "C",
+          "text": "Use AEM Content Fragments as Adobe Target Offers."
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q12)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-025",
+      "domainId": "architecture",
+      "topic": "Question 13",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "A client has recently upgraded their Adobe Experience Manager (AEM) instance to version 6.5 and would like to utilize Experience Fragments (XFs) in Adobe Target.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Configure at.js to load in the site header template in AEM."
+        },
+        {
+          "id": "B",
+          "text": "Add the Cloud Services for Adobe Target in AEM."
+        },
+        {
+          "id": "C",
+          "text": "Configure the AEM Link Externalizer."
+        },
+        {
+          "id": "D",
+          "text": "Provision Analytics for Target (A4T) Integration."
+        },
+        {
+          "id": "E",
+          "text": "Enable Response Tokens in Adobe Target."
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q13)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-026",
+      "domainId": "integrations",
+      "topic": "Question 14",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A credit card company would like to use Adobe Target to personalize their website for visitors who have used their platinum card to purchase airline tickets with their affiliate booking company. They also need to combine this data with anonymous third-party attributes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adobe Campaign"
+        },
+        {
+          "id": "B",
+          "text": "Adobe Target"
+        },
+        {
+          "id": "C",
+          "text": "Adobe Audience Manager"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q14)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-027",
+      "domainId": "integrations",
+      "topic": "Question 15",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wishes to execute their A/B Testing activities on the homepage and combine the testing results with additional traffic/behavior that resides in Adobe Analytics.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implement server-side forwarding in Adobe Analytics."
+        },
+        {
+          "id": "B",
+          "text": "Import Adobe Analytics segments using Experience Cloud Audiences."
+        },
+        {
+          "id": "C",
+          "text": "Implement Analytics for Target (A4T) for results and reporting."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q15)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-028",
+      "domainId": "integrations",
+      "topic": "Question 16",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A client would like to create an Activity that shows a promotional message to visitors on the checkout success page of their site when the total value of the visitor's order is over $100. The visitor must be identified based on information gathered on the same Target request (mbox) as the page the experience is served from.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adobe Analytics Audiences"
+        },
+        {
+          "id": "B",
+          "text": "Audience Library Audiences (People Core Service)"
+        },
+        {
+          "id": "C",
+          "text": "Adobe Target Audiences"
+        },
+        {
+          "id": "D",
+          "text": "Adobe Experience Cloud Device Co-Op Audiences"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q16)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-029",
+      "domainId": "troubleshooting",
+      "topic": "Question 17",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client is getting an error message in the Visual Experience Composer (VEC). The message indicates that no property is associated with a particular activity, even though there is a property assigned.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The client is assigned to the wrong User Group."
+        },
+        {
+          "id": "B",
+          "text": "The activity is in the incorrect Workspace."
+        },
+        {
+          "id": "C",
+          "text": "The wrong entity.id is set for the activity."
+        },
+        {
+          "id": "D",
+          "text": "at_property is missing in the Adobe Target request (mbox)."
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q17)",
+      "incorrectExplanations": {},
+      "chapterId": "troubleshooting"
+    },
+    {
+      "id": "e409-practice-030",
+      "domainId": "architecture",
+      "topic": "Question 18",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "A retail company is planning to use Adobe Target to implement A/B Testing. They are concerned that bot traffic might impact the results.",
+      "options": [
+        {
+          "id": "A",
+          "text": "It does not create or retrieve a visitor profile."
+        },
+        {
+          "id": "B",
+          "text": "It logs data to be sent to the Adobe Experience Platform."
+        },
+        {
+          "id": "C",
+          "text": "It does not log an activity visit for reporting."
+        },
+        {
+          "id": "D",
+          "text": "It uses bot traffic in modeling and serving personalized content."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q18)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-031",
+      "domainId": "integrations",
+      "topic": "Question 19",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The reporting team has been struggling to segment internal development and stage environment traffic from the live website data in Adobe Target reporting. This is impacting their ability to evaluate the statistical significance of activities.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hosts"
+        },
+        {
+          "id": "B",
+          "text": "Custom Global Target request (mbox)"
+        },
+        {
+          "id": "C",
+          "text": "Properties"
+        },
+        {
+          "id": "D",
+          "text": "Custom Response Tokens"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q19)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-032",
+      "domainId": "architecture",
+      "topic": "Question 20",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wishes to serve Adobe Target content to their mobile application. They prefer to manage the content using the Adobe Target UI and have the mobile application developers apply the necessary formatting/design within the application.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Build JSON Offers within Adobe Target."
+        },
+        {
+          "id": "B",
+          "text": "Add HTML offer using the Visual Experience Composer."
+        },
+        {
+          "id": "C",
+          "text": "Expose Experience Fragments to the mobile application."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q20)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-033",
+      "domainId": "architecture",
+      "topic": "Question 21",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "When specifying a server-side implementation of Adobe Target, which ID will be generated if not explicitly defined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "thirdPartyId"
+        },
+        {
+          "id": "B",
+          "text": "aamUUID"
+        },
+        {
+          "id": "C",
+          "text": "indexId"
+        },
+        {
+          "id": "D",
+          "text": "tntId"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q21)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-034",
+      "domainId": "integrations",
+      "topic": "Question 22",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client would like to use at.js 2.x to integrate third-party weather data from a service that provides the temperature of the site visitor's location based on IP. This will allow the client to promote products to visitors based on their local weather.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The window.targetPageParams() function disables body hiding when used."
+        },
+        {
+          "id": "B",
+          "text": "Content hiding is enabled until the Data Provider resolves using the callback function passed to the Data Provider."
+        },
+        {
+          "id": "C",
+          "text": "Data Providers offer a built in XHR function to make a third party request to the weather service."
+        },
+        {
+          "id": "D",
+          "text": "The targetPageParams() function is not supported in at.js 2.x."
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q22)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-035",
+      "domainId": "recommendations",
+      "topic": "Question 23",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An eCommerce website uses Adobe Target Recommendations. The modules on the website consistently recommend popular products that are out of stock despite having a filter set correctly that excludes products with zero inventory.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a Collection of items that regularly sell out quickly and apply this collection to the criteria of each Recommendations activity."
+        },
+        {
+          "id": "B",
+          "text": "Change the product feed to use Analytics Classifications instead of the CSV product feed."
+        },
+        {
+          "id": "C",
+          "text": "Set the entity.inventory Target request (mbox) parameter value to the current live inventory value from the data layer on the Target request that is fired on the product page."
+        },
+        {
+          "id": "D",
+          "text": "Change the product feed to use their Google Product feed data instead of the CSV product feed currently implemented. Set this to ingest at the same interval as the custom CSV product feed."
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q23)",
+      "incorrectExplanations": {},
+      "chapterId": "recommendations"
+    },
+    {
+      "id": "e409-practice-036",
+      "domainId": "architecture",
+      "topic": "Question 24",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The client wants to be able to recommend high-profit-margin products on low-profit-margin product pages.",
+      "options": [
+        {
+          "id": "A",
+          "text": "URL parameter"
+        },
+        {
+          "id": "B",
+          "text": "Feeds Entity"
+        },
+        {
+          "id": "C",
+          "text": "Data Source"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q24)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-037",
+      "domainId": "architecture",
+      "topic": "Question 25",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "An Adobe Target Architect sends product information via a Target request (mbox) in order to update the product data inside the product catalog for a specific geographic market of a client's website. Each geographic market has a unique product catalog, and each market has a distinct top level domain for its site.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A custom Target request (mbox) parameter"
+        },
+        {
+          "id": "B",
+          "text": "The at_property Target request (mbox) parameter"
+        },
+        {
+          "id": "C",
+          "text": "Fully qualified domain name (including sub domain)"
+        },
+        {
+          "id": "D",
+          "text": "Fully qualified top level domain (excluding sub domain)"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q25)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-038",
+      "domainId": "integrations",
+      "topic": "Question 26",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A digital retail client wishes to show an Adobe Target Recommendations “Most Popular Products” component on their homepage. They wish to use the same data used for organic search product messaging, as well as automate the inclusion of the product data. The client also wants to have Adobe Analytics capture recommended product click-throughs from the web and the “Most Popular Products” component.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Manual upload of a CSV file"
+        },
+        {
+          "id": "B",
+          "text": "Import Experience Cloud Audiences"
+        },
+        {
+          "id": "C",
+          "text": "Google Product Feeds"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q26)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-039",
+      "domainId": "architecture",
+      "topic": "Question 27",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client wants to display the most-purchased products in a specific category on that category's landing page.",
+      "options": [
+        {
+          "id": "A",
+          "text": "entity.id with a single value only"
+        },
+        {
+          "id": "B",
+          "text": "entity.categoryId with one or more values separated by a comma"
+        },
+        {
+          "id": "C",
+          "text": "entity.id with one or more values separated by a comma"
+        },
+        {
+          "id": "D",
+          "text": "entity.categoryId with a single value only"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q27)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-040",
+      "domainId": "fundamentals",
+      "topic": "Question 28",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "Which two Adobe Target activity types can be created in the Mobile App Visual Experience Composer? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Experience Targeting"
+        },
+        {
+          "id": "B",
+          "text": "Multivariate Test"
+        },
+        {
+          "id": "C",
+          "text": "A/B Test"
+        },
+        {
+          "id": "D",
+          "text": "Recommendations"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q28)",
+      "incorrectExplanations": {},
+      "chapterId": "fundamentals"
+    },
+    {
+      "id": "e409-practice-041",
+      "domainId": "architecture",
+      "topic": "Question 29",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "In an iOS native application with an Adobe Target implementation, what are the two primary methods to create a targeted location? (Choose two.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "targetLoadRequest"
+        },
+        {
+          "id": "B",
+          "text": "targetCreateLocation"
+        },
+        {
+          "id": "C",
+          "text": "targetLoadRequestWithName"
+        },
+        {
+          "id": "D",
+          "text": "targetCreateRequest"
+        },
+        {
+          "id": "E",
+          "text": "targetCreateRequestWithName"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "E"
+      ],
+      "explanation": "Question from practice exam (Q29)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-042",
+      "domainId": "integrations",
+      "topic": "Question 30",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A Healthcare company wants to develop personalized experiences based on the age and location of the visitor. The Optimization Lead wants to use JSON to pass these parameters into Adobe Target. This requires additional targeting/context information to be passed into Adobe Target.",
+      "options": [
+        {
+          "id": "A",
+          "text": "adobe.target.triggerView()"
+        },
+        {
+          "id": "B",
+          "text": "registerExtension"
+        },
+        {
+          "id": "C",
+          "text": "adobe.target.getOffers()"
+        },
+        {
+          "id": "D",
+          "text": "targetPageParams()"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q30)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-043",
+      "domainId": "integrations",
+      "topic": "Question 31",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client has recently implemented Adobe Target for an Android application that uses AEP Mobile SDK and passes a custom visitor ID from a CRM system.",
+      "options": [
+        {
+          "id": "A",
+          "text": "getTntId()"
+        },
+        {
+          "id": "B",
+          "text": "getThirdPartyId()"
+        },
+        {
+          "id": "C",
+          "text": "Visitor.getInstance('YOUR-UNIQUE-ORG-ID@AdobeOrg').getMarketingCloudVisitorID();"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q31)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-044",
+      "domainId": "architecture",
+      "topic": "Question 32",
+      "difficulty": "hard",
+      "type": "multiple",
+      "question": "A client has users that authenticate on their site on every visit, but they also tend to utilize the site on multiple different devices, including laptops, mobile, and tablets at different times of the day. The client wants to ensure that a user has a consistent experience of their site across each of their devices, including showing the same user the same experience from an Adobe Target activity, regardless of what device they have authenticated on.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Populate the mbox3rdPartyId Adobe Target request (mbox) parameter with the user's ID."
+        },
+        {
+          "id": "B",
+          "text": "Populate a custom Adobe Target request (mbox) parameter with the user's email address."
+        },
+        {
+          "id": "C",
+          "text": "Use the Adobe Experience Cloud Visitor API method setCustomerIDs with the user's ID and authenticated state."
+        },
+        {
+          "id": "D",
+          "text": "Use Adobe Experience Cloud Triggers to know when a specific user is visiting the site."
+        },
+        {
+          "id": "E",
+          "text": "Utilize Customer Attributes in the Adobe Experience Cloud."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q32)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-045",
+      "domainId": "architecture",
+      "topic": "Question 33",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "A client would like to use the Category Affinity feature of Adobe Target.",
+      "options": [
+        {
+          "id": "A",
+          "text": "entity.categoryId"
+        },
+        {
+          "id": "B",
+          "text": "user.categoryId"
+        },
+        {
+          "id": "C",
+          "text": "profile.categoryId"
+        },
+        {
+          "id": "D",
+          "text": "user.categoryAffinities"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q33)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-046",
+      "domainId": "architecture",
+      "topic": "Question 34",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A retail company wants to track which store is the user's preferred store, which is only available in the site's data layer.",
+      "options": [
+        {
+          "id": "A",
+          "text": "People Core Services Customer Attributes"
+        },
+        {
+          "id": "B",
+          "text": "Target request (mbox) profile attributes"
+        },
+        {
+          "id": "C",
+          "text": "Data Providers"
+        },
+        {
+          "id": "D",
+          "text": "Script profile parameters"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q34)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-047",
+      "domainId": "architecture",
+      "topic": "Question 35",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "An eCommerce client has Adobe Target correctly installed on their website. They have an auto-created global Target request (mbox) that runs early on in the page load but after the data layer has initialized. Many of the items in the data layer are applied to the auto-created global Target request (mbox).",
+      "options": [
+        {
+          "id": "A",
+          "text": "Set up a product feed to ingest the product data each day at midnight."
+        },
+        {
+          "id": "B",
+          "text": "Create a second Target global mbox request including the product ID when available."
+        },
+        {
+          "id": "C",
+          "text": "Delay the auto-created Target global mbox request until after the product ID has loaded into the data layer."
+        },
+        {
+          "id": "D",
+          "text": "Create a second Target request (mbox) called 'product-data' including the product ID when available."
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q35)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-048",
+      "domainId": "integrations",
+      "topic": "Question 36",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An eCommerce company wants to track order conversions in real-time, and then show recommendations based on conversions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Script Profile Attributes"
+        },
+        {
+          "id": "B",
+          "text": "Data Providers"
+        },
+        {
+          "id": "C",
+          "text": "Target request (mbox) parameters"
+        },
+        {
+          "id": "D",
+          "text": "In-page Profile Attributes"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q36)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-049",
+      "domainId": "integrations",
+      "topic": "Question 37",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The eCommerce team wants to run an A/B test to promote the company email newsletter, but only to first time visitors who are not logged in and have not arrived at the website with an email campaign id.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adobe Target Product Admin"
+        },
+        {
+          "id": "B",
+          "text": "Enterprise User Permissions Group"
+        },
+        {
+          "id": "C",
+          "text": "Web Services Access Group in Adobe Analytics"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q37)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-050",
+      "domainId": "recommendations",
+      "topic": "Question 38",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "A developer recently created a new criterion for the recommendation service.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Results are not yet cached at the nearest Edge server."
+        },
+        {
+          "id": "B",
+          "text": "The Design contains an error."
+        },
+        {
+          "id": "C",
+          "text": "The Activity is targeting the wrong pages."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q38)",
+      "incorrectExplanations": {},
+      "chapterId": "recommendations"
+    },
+    {
+      "id": "e409-practice-051",
+      "domainId": "troubleshooting",
+      "topic": "Question 39",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A Target developer is testing a new recommendations design but is observing an issue where the dynamic product information is not being replaced in the html code.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Append “$” to the front of all of the entity references."
+        },
+        {
+          "id": "B",
+          "text": "Append “#” to the front of all of the entity references."
+        },
+        {
+          "id": "C",
+          "text": "Append “jQuery” to the front of all of the entity references."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q39)",
+      "incorrectExplanations": {},
+      "chapterId": "troubleshooting"
+    },
+    {
+      "id": "e409-practice-052",
+      "domainId": "troubleshooting",
+      "topic": "Question 40",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client notices that JSON Offers are not being applied after adobe.target.applyOffer() is called. The Adobe Experience Cloud Debugger confirms the client is qualified for the Activity.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use a Data Provider to read the JSON Offer passed as an attribute to the provider method."
+        },
+        {
+          "id": "B",
+          "text": "Use the adobe.target.event.REQUEST_SUCCEEDED event to read the JSON Offer from the e.detail object provided to the event listener."
+        },
+        {
+          "id": "C",
+          "text": "Filter the actions array passed to adobe.target.getOffer() for all actions that contain a setContent attribute set to true. Then, read the JSON Offer from the content property on the same action object."
+        },
+        {
+          "id": "D",
+          "text": "Filter the actions array provided to adobe.target.getOffer() for all actions that have a setJson attribute set to true. Then, read the JSON Offer from the content property on the same action object."
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Question from practice exam (Q40)",
+      "incorrectExplanations": {},
+      "chapterId": "troubleshooting"
+    },
+    {
+      "id": "e409-practice-053",
+      "domainId": "fundamentals",
+      "topic": "Question 41",
+      "difficulty": "medium",
+      "type": "multiple",
+      "question": "A marketer has set up an Experience Targeting activity for their regional website targeting users from that region using Target's Geo Targeting.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The activity is created using a different at_property than the regional website."
+        },
+        {
+          "id": "B",
+          "text": "The users are using the Company's VPN that is changing their actual location."
+        },
+        {
+          "id": "C",
+          "text": "The activity is created using “URL is” under page delivery options in VEC."
+        },
+        {
+          "id": "D",
+          "text": "The users are not located in the region for which the activity has been created."
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q41)",
+      "incorrectExplanations": {},
+      "chapterId": "fundamentals"
+    },
+    {
+      "id": "e409-practice-054",
+      "domainId": "architecture",
+      "topic": "Question 42",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A client has a requirement to promote a discount offer to reorder the last purchased product by the user. The recommendation is to use Adobe Target HTML Offers with Dynamic Data. Last product purchased information is available in the data layer when a user logs into the web-application. From the data layer, the information is passed in a Target request as a profile attribute. The HTML Offer has the following code:",
+      "options": [
+        {
+          "id": "A",
+          "text": "${user.lastProductPurchased encode=\"escape\"}"
+        },
+        {
+          "id": "B",
+          "text": "${profile.lastProductPurchased}"
+        },
+        {
+          "id": "C",
+          "text": "${campaign.lastProductPurchased}"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q42)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-055",
+      "domainId": "architecture",
+      "topic": "Question 43",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A client wishes to create an experience in Adobe Target that modifies content within an iframe on their website, but is unable to modify the content in the Visual Experience Composer (VEC), despite the fact that the content within the iframe is coming from the same domain as the page in which it is embedded.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implement Target within the iframe content."
+        },
+        {
+          "id": "B",
+          "text": "Utilize a form-based activity type."
+        },
+        {
+          "id": "C",
+          "text": "Create a regional Target request (mbox) around the iframe on the page."
+        },
+        {
+          "id": "D",
+          "text": "Enable the Enhanced Experience Composer in Target Setup."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q43)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-056",
+      "domainId": "integrations",
+      "topic": "Question 44",
+      "difficulty": "hard",
+      "type": "single",
+      "question": "A client has set up a Redirect Offer within Adobe Target with Adobe Analytics as the reporting source. Data for the redirect landing page is not showing in the report. The Adobe Target Architect has confirmed that the three required libraries meet minimum version requirements and are present and implemented in the correct order on both pages.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Include additional code in the redirect offer to encode the URL parameters."
+        },
+        {
+          "id": "B",
+          "text": "Verify that the correct adobe_mc_sdid URL parameter is present on the redirect page."
+        },
+        {
+          "id": "C",
+          "text": "Verify that the correct adobe_mc_ref URL parameter is present on the redirect page."
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q44)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-057",
+      "domainId": "integrations",
+      "topic": "Question 45",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client implemented a Profile Script to define a new profile attribute based on Target request (mbox) parameters coming from different 3rd-party systems. The client complains that the wrong experiences are shown to the site visitors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use the mboxTrace debugging method."
+        },
+        {
+          "id": "B",
+          "text": "Use console.log to output values within a Profile Script."
+        },
+        {
+          "id": "C",
+          "text": "Use Activity QA URLs and check browser developer tools."
+        },
+        {
+          "id": "D",
+          "text": "Use Profile Scripts as Response Tokens."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q45)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-058",
+      "domainId": "architecture",
+      "topic": "Question 46",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The optimization team is using Profile parameters and Profile Scripts and is struggling to validate their values.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add mboxDebug=1 to the page URL to output logs and Target request (mbox) details."
+        },
+        {
+          "id": "B",
+          "text": "Use the mboxTrace debugging tool to debug Profile Scripts."
+        },
+        {
+          "id": "C",
+          "text": "Execute scripts as javascript in the browser console before saving as Profile Scripts."
+        },
+        {
+          "id": "D",
+          "text": "Use console.log statements in profile scripts to output values to the browser."
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q46)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-059",
+      "domainId": "integrations",
+      "topic": "Question 47",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An Adobe Target activity uses a new Experience Cloud audience previously created in Adobe Analytics. The activity is live, but according to the activity reporting, no visitors have yet qualified for the activity. The architect wants to determine if it is ready for use in Adobe Target.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Segments in Adobe Audience Manager"
+        },
+        {
+          "id": "B",
+          "text": "Audiences in Adobe Target"
+        },
+        {
+          "id": "C",
+          "text": "Audience Library in People Core Service"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Question from practice exam (Q47)",
+      "incorrectExplanations": {},
+      "chapterId": "integrations"
+    },
+    {
+      "id": "e409-practice-060",
+      "domainId": "architecture",
+      "topic": "Question 48",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client has a multi-tenant Adobe Target setup, where each business unit has their Workspace and properties defined in Adobe Target.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Target request (mbox) at_property parameter needs to be populated at a page level."
+        },
+        {
+          "id": "B",
+          "text": "Target request (mbox) custom parameter needs to be populated with Activity ID."
+        },
+        {
+          "id": "C",
+          "text": "Target request (mbox) profile parameter needs to be populated at a page level."
+        },
+        {
+          "id": "D",
+          "text": "Target request (mbox) user.sessionId parameter needs to be populated at a page level."
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Question from practice exam (Q48)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    },
+    {
+      "id": "e409-practice-061",
+      "domainId": "architecture",
+      "topic": "Question 49",
+      "difficulty": "easy",
+      "type": "single",
+      "question": "Refer to the exhibit:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Correct the “page” variable assignment inside the dataLayer object."
+        },
+        {
+          "id": "B",
+          "text": "Move the at.js library script and pre hiding snippet to the <HEAD>."
+        },
+        {
+          "id": "C",
+          "text": "Remove the “async” flag to load the at.js library synchronously."
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Question from practice exam (Q49)",
+      "incorrectExplanations": {},
+      "chapterId": "architecture"
+    }
+  ]
+}

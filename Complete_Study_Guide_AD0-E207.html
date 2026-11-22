@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD0-E207 complete study guide</title>
+<style>:root{
+ --bg:#f5f6fa;--surface:#ffffff;--surface-2:#f0f2f7;--text:#1d2330;--muted:#5d6678;--border:#e2e5ec;--shadow:0 1px 2px rgba(16,24,40,.05),0 4px 16px rgba(16,24,40,.06);
+ --accent:#2b59c3;--accent-soft:#e9effc;--accent-ink:#ffffff;
+ --note-bg:#eef4ff;--note-bd:#3b72e0;--key-bg:#fff7e6;--key-bd:#e39a00;--ex-bg:#eefaf3;--ex-bd:#22a565;--warn-bg:#fdf0f0;--warn-bd:#d64545;--ok-bg:#ecfaf1;--ok-bd:#1e9e5a;--fix-bg:#f4efff;--fix-bd:#7b4cd9;
+ --code-bg:#f3f4f8;--radius:12px;
+ --aa:#1473e6;--aa-soft:#e7f1fd;--tam:#d7373f;--tam-soft:#fdeced;--tbp:#d9730d;--tbp-soft:#fdf1e4;--ajo:#7b4cd9;--ajo-soft:#f1ebfd;
+ --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:"Cascadia Code",Consolas,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+ --bg:#0f1218;--surface:#171b23;--surface-2:#1e232d;--text:#e5e8ee;--muted:#9aa3b3;--border:#2b313d;--shadow:0 1px 2px rgba(0,0,0,.4);
+ --accent-soft:#1d2740;--note-bg:#18233a;--key-bg:#2b2414;--ex-bg:#14281e;--warn-bg:#2e1818;--ok-bg:#13291c;--fix-bg:#231c38;--code-bg:#1b2029;
+ --aa:#4b9cf5;--aa-soft:#15253a;--tam:#f06269;--tam-soft:#331b1e;--tbp:#f0953f;--tbp-soft:#33240f;--ajo:#a283f0;--ajo-soft:#251d3b;
+}}
+[data-s="aa"]{--accent:var(--aa);--accent-soft:var(--aa-soft)}
+[data-s="tam"]{--accent:var(--tam);--accent-soft:var(--tam-soft)}
+[data-s="tbp"]{--accent:var(--tbp);--accent-soft:var(--tbp-soft)}
+[data-s="ajo"]{--accent:var(--ajo);--accent-soft:var(--ajo-soft)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;height:60px;padding-inline:18px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-block-end:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.logo{display:grid;place-items:center;inline-size:30px;block-size:30px;border-radius:8px;background:linear-gradient(135deg,#eb1000,#7b4cd9);color:#fff;font-weight:800}
+.search{position:relative;flex:1;max-inline-size:440px;margin-inline-start:auto}
+.search input{inline-size:100%;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface-2);color:var(--text);font:inherit;font-size:14px}
+.search input:focus{outline:2px solid var(--aa);outline-offset:1px}
+.results{position:absolute;inset-inline:0;top:44px;max-block-size:60vh;overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);padding:6px}
+.results a{display:block;padding:7px 10px;border-radius:6px;color:var(--text);font-size:14px}
+.results a:hover,.results a.sel{background:var(--surface-2);text-decoration:none}
+.results small{display:block;color:var(--muted);font-size:12px}
+.results .none{padding:8px 10px;color:var(--muted);font-size:14px}
+.quick{display:flex;gap:6px}
+.quick a{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.menu-btn{display:none;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:8px;font-size:18px;padding:3px 10px;cursor:pointer}
+/* layout */
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);align-items:start}
+.sidebar{position:sticky;top:60px;block-size:calc(100vh - 60px);overflow:auto;padding:18px 14px 40px;border-inline-end:1px solid var(--border);background:var(--surface)}
+.toc{font-size:14px}
+.toc a{color:var(--text)}
+.toc-home{display:block;font-weight:700;padding:6px 10px;border-radius:8px}
+.toc-subject{margin-block-start:14px}
+.toc-subj-link{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:10px;background:var(--accent-soft);border-inline-start:4px solid var(--accent)}
+.toc-subj-link span:last-child{font-weight:600}
+.toc-subj-link:hover{text-decoration:none}
+.code{display:inline-block;font:700 11.5px/1 var(--mono);letter-spacing:.03em;color:var(--accent)}
+.toc-parts,.toc-secs{list-style:none;margin:0;padding:0}
+.toc-parts{margin-block-start:6px}
+.toc-part>a{display:block;padding:5px 10px;border-radius:6px;font-weight:500}
+.toc-secs{margin-inline-start:12px;border-inline-start:1px solid var(--border);padding-inline-start:6px}
+.toc-secs a{display:block;padding:3px 8px;border-radius:6px;font-size:13px;color:var(--muted)}
+.toc a:hover{background:var(--surface-2);text-decoration:none}
+.toc a.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.js .toc-part:not(.open) .toc-secs{display:none}
+.main{min-inline-size:0;padding:28px clamp(16px,4vw,48px) 80px}
+.main>section,.foot{max-inline-size:1040px;margin-inline:auto}
+/* overview */
+.hero{padding:36px clamp(20px,4vw,44px);border-radius:20px;background:radial-gradient(1200px 300px at 0% 0%,rgba(20,115,230,.18),transparent 60%),radial-gradient(900px 300px at 100% 100%,rgba(123,76,217,.20),transparent 60%),var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.eyebrow{margin:0;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.hero h1{margin:6px 0 10px;font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em}
+.hero .sub{margin:0;max-inline-size:760px;color:var(--muted);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-block-start:24px}
+.stats div{background:var(--surface-2);border-radius:12px;padding:12px 16px}
+.stats b{display:block;font-size:26px;line-height:1.1}
+.stats span{font-size:13px;color:var(--muted)}
+.h-sec{font-size:20px;margin:36px 0 14px;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-block-start:5px solid var(--accent);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin:6px 0 10px;font-size:18px;line-height:1.3}.card h3 a{color:var(--text)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}
+.facts div{background:var(--surface-2);border-radius:8px;padding:6px 8px}
+.facts dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.facts dd{margin:0;font-weight:700;font-size:14px}
+.mini{font-size:12.5px;color:var(--muted);margin:6px 0}
+.bar{display:flex;gap:2px;block-size:10px;border-radius:999px;overflow:hidden}
+.bar .seg{background:var(--accent)}
+.bar .seg:nth-child(2){opacity:.8}.bar .seg:nth-child(3){opacity:.62}.bar .seg:nth-child(4){opacity:.46}.bar .seg:nth-child(5){opacity:.34}.bar .seg:nth-child(6){opacity:.26}.bar .seg:nth-child(7){opacity:.18}
+.legend{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted)}
+.legend b{color:var(--text)}
+.plist{list-style:none;padding:0;margin:14px 0 0;border-block-start:1px solid var(--border)}
+.plist li a{display:flex;gap:8px;align-items:baseline;padding:7px 0;border-block-end:1px dashed var(--border);color:var(--text);font-size:14px}
+.plist .kind{flex:none}
+.kind{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+.two{display:grid;grid-template-columns:1fr 1.3fr;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:4px 22px 18px;margin-block-start:18px;box-shadow:var(--shadow)}
+.panel .h-sec{margin-block-start:18px}
+table.fixes td.was{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(214,69,69,.6)}
+table.fixes td.now{font-weight:600}
+/* subject */
+.subject{margin-block-start:56px}
+.subj-hero{position:relative;overflow:hidden;border-radius:20px;padding:28px clamp(20px,4vw,36px);background:linear-gradient(135deg,var(--accent-soft),var(--surface) 70%);border:1px solid var(--border);box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr;gap:20px 32px}
+.subj-hero::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;inline-size:6px;background:var(--accent)}
+.subj-hero h2{margin:6px 0 14px;font-size:clamp(22px,3vw,30px);line-height:1.2;letter-spacing:-.015em}
+.subj-hero .code{font-size:13px}
+.subj-parts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.subj-parts a{font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.subj-parts a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.part{margin-block-start:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.part-head{padding:20px 26px 16px;border-block-end:1px solid var(--border);background:linear-gradient(180deg,var(--accent-soft),transparent)}
+.part-head h3{margin:8px 0 4px;font-size:22px;letter-spacing:-.01em}
+.intoc{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.intoc a{display:inline-block;font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted)}
+.intoc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.qchips{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;margin-block-start:12px}
+.qchips a{text-align:center;font:600 12.5px/1 var(--mono);padding:8px 0;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.qchips a:hover{background:var(--accent);color:var(--accent-ink);text-decoration:none}
+/* prose */
+.prose{padding:8px 26px 26px}
+.prose h4{font-size:21px;line-height:1.3;margin:34px 0 12px;padding-block-start:22px;border-block-start:1px solid var(--border);letter-spacing:-.01em}
+.prose>h4:first-child,.prose>.fix+h4,.prose>p.lead+h4{border-block-start:0;padding-block-start:6px}
+.prose h5{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.prose h6{font-size:14px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.prose p{margin:10px 0}
+.prose .lead{font-size:17px;color:var(--muted);margin-block-start:16px}
+.prose ul,.prose ol{padding-inline-start:24px;margin:8px 0}
+.prose li{margin:4px 0}
+.prose li>p{margin:4px 0}
+.prose strong{font-weight:650}
+.prose code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);padding:1px 6px;border-radius:5px}
+.prose pre,.codeblock{font:13px/1.55 var(--mono);background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;white-space:pre}
+.codeblock{white-space:pre-wrap;margin:12px 0}
+.prose pre code{background:none;padding:0}
+.prose blockquote{margin:12px 0;padding:8px 16px;border-inline-start:4px solid var(--border);color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;inline-size:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:start;vertical-align:top;border-block-end:1px solid var(--border)}
+th{background:var(--surface-2);font-weight:650;font-size:13.5px}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 45%,transparent)}
+tbody tr:last-child td{border-block-end:0}
+.note,.key,.example,.warn,.ok,.fix,.qa{margin:14px 0;padding:12px 16px;border-radius:10px;border-inline-start:4px solid}
+.note{background:var(--note-bg);border-color:var(--note-bd)}
+.key{background:var(--key-bg);border-color:var(--key-bd)}
+.example{background:var(--ex-bg);border-color:var(--ex-bd)}
+.warn{background:var(--warn-bg);border-color:var(--warn-bd)}
+.ok{background:var(--ok-bg);border-color:var(--ok-bd)}
+.fix{background:var(--fix-bg);border-color:var(--fix-bd)}
+.qa{background:var(--surface-2);border-color:var(--muted)}
+.note>:first-child,.key>:first-child,.example>:first-child,.warn>:first-child,.ok>:first-child,.fix>:first-child,.qa>:first-child{margin-block-start:0}
+.note>:last-child,.key>:last-child,.example>:last-child,.warn>:last-child,.ok>:last-child,.fix>:last-child,.qa>:last-child{margin-block-end:0}
+.fix .src{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.grid .example{margin:0}
+.checklist{list-style:none;padding-inline-start:4px !important}
+.checklist li{position:relative;padding-inline-start:28px}
+.checklist li::before{content:"";position:absolute;inset-inline-start:0;top:5px;inline-size:16px;block-size:16px;border:2px solid var(--accent);border-radius:4px}
+.checklist li input{display:none}
+.badge{display:inline-block;vertical-align:middle;font:700 10.5px/1 var(--font);text-transform:uppercase;letter-spacing:.05em;padding:4px 7px;border-radius:999px;margin-inline:4px}
+.badge.ver{background:var(--ok-bg);color:var(--ok-bd);border:1px solid color-mix(in srgb,var(--ok-bd) 40%,transparent)}
+.badge.chk{background:var(--key-bg);color:#a66f00;border:1px solid color-mix(in srgb,var(--key-bd) 40%,transparent)}
+details{margin:12px 0;border:1px solid var(--border);border-radius:10px;background:var(--surface-2)}
+details>summary{cursor:pointer;padding:9px 14px;font-weight:600;color:var(--accent)}
+details[open]>summary{border-block-end:1px solid var(--border)}
+details>*:not(summary){margin-inline:14px}
+.foot{margin-block-start:48px;font-size:13.5px;color:var(--muted);text-align:center}
+.totop{position:fixed;inset-inline-end:22px;bottom:22px;display:grid;place-items:center;inline-size:42px;block-size:42px;border-radius:50%;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);color:var(--text);font-size:18px}
+.totop:hover{text-decoration:none;color:var(--aa)}
+@media (max-width:1100px){.quick{display:none}.two{grid-template-columns:1fr}.subj-hero{grid-template-columns:1fr}}
+@media (max-width:900px){
+ .layout{grid-template-columns:1fr}
+ .menu-btn{display:block}
+ .sidebar{position:static;block-size:auto;border-inline-end:0;border-block-end:1px solid var(--border)}
+ .js .sidebar{position:fixed;top:60px;inset-inline-start:0;z-index:40;inline-size:min(320px,88vw);block-size:calc(100vh - 60px);transform:translateX(-105%);transition:transform .2s ease;box-shadow:var(--shadow)}
+ [dir="rtl"] .js .sidebar{transform:translateX(105%)}
+ .js body.nav-open .sidebar{transform:none}
+ .brand span:last-child{display:none}
+ .stats,.facts{grid-template-columns:repeat(2,1fr)}
+ .prose{padding:6px 16px 20px}.part-head{padding:16px}
+}
+@media print{
+ .topbar,.sidebar,.totop,.intoc,.qchips,.subj-parts{display:none !important}
+ .layout{display:block}.main{padding:0}
+ body{background:#fff;color:#000;font-size:12pt}
+ .part,.card,.panel,.hero,.subj-hero{box-shadow:none;break-inside:auto}
+ .subject{break-before:page}
+ details{border:0}details>*{display:block}
+ a{color:inherit}
+}
+</style>
+<style>.guide-head{padding:28px 32px 12px}.guide-head h1{margin:6px 0 8px;font-size:30px}.guide-note{color:#6b6f7b;margin:0 0 16px}.guide-toc ol{padding-left:20px;columns:2}.guide-toc a{text-decoration:none}</style>
+</head>
+<body>
+<main class="guide-page" id="top">
+<header class="guide-head"><p class="eyebrow">AD0-E207</p><h1>Adobe Analytics Architect Master</h1><p class="guide-note">Complete study notes from the original Adobe Certification Study Hub. Practice questions are in the Practice tests section of the portal.</p><nav class="guide-toc" aria-label="Contents"><ol><li><a href="#aa-core">Architect study guide by exam domain</a></li><li><a href="#aa-deep">Analytics deep-dive topics</a></li><li><a href="#aa-src">Sources, open items and corrections</a></li></ol></nav></header>
+<section class="subject" id="aa" data-s="aa"><header class="subj-hero"><div class="subj-meta"><span class="code">AD0-E207</span><h2>Adobe Analytics Architect Master</h2><dl class="facts"><div><dt>Questions</dt><dd>50</dd></div><div><dt>Time</dt><dd>100 min</dd></div><div><dt>Pass mark</dt><dd>33 / 50</dd></div><div><dt>Level</dt><dd>Master</dd></div></dl></div><div class="subj-weights"><p class="mini">Exam weighting</p><div class="bar"><span class="seg" style="flex:18" title="Discovery 18%"></span><span class="seg" style="flex:54" title="Solution design 54%"></span><span class="seg" style="flex:28" title="Post implementation 28%"></span></div><ul class="legend"><li><b>18%</b> Discovery</li><li><b>54%</b> Solution design</li><li><b>28%</b> Post implementation</li></ul></div><nav aria-label="Parts" class="subj-parts"></nav></header><section class="part" id="aa-core"><header class="part-head"><span class="kind">Core guide</span><h3>Architect study guide by exam domain</h3><ul class="intoc"><li><a href="#aa-core-how-to-use-this-guide">How to use this guide</a></li><li><a href="#aa-core-1-exam-overview">1. Exam overview</a></li><li><a href="#aa-core-2-discovery-18">2. Discovery (18%)</a></li><li><a href="#aa-core-3-solution-design-54">3. Solution design (54%)</a></li><li><a href="#aa-core-4-report-suite-administration">4. Report suite administration</a></li><li><a href="#aa-core-5-segments-and-calculated-metrics">5. Segments and calculated metrics</a></li><li><a href="#aa-core-6-data-governance-and-privacy">6. Data governance and privacy</a></li><li><a href="#aa-core-7-data-extraction-sources-and-connectors">7. Data extraction, sources, and connectors</a></li><li><a href="#aa-core-8-experience-cloud-users-groups-and-permissions">8. Experience Cloud users, groups, and permissions</a></li><li><a href="#aa-core-9-architecture-scenarios">9. Architecture scenarios</a></li><li><a href="#aa-core-10-post-implementation-validation">10. Post-implementation validation</a></li><li><a href="#aa-core-11-quick-reference">11. Quick reference</a></li></ul></header><div class="prose"><h4 id="aa-core-how-to-use-this-guide">How to use this guide</h4><p>This guide is written so that anyone preparing for AD0-E207 can use it. Each section states what Adobe’s documentation says, notes where that differs from older material, and points to the source.</p><p><strong>Ground rules for this guide</strong></p><ol type="1">
+<li>Statements marked <span class="badge ver">Verified</span> were checked against Adobe’s documentation pages listed in Section 13. Statements marked <span class="badge chk">Verify</span> are general guidance or are not yet confirmed, so check them before relying on them.</li>
+<li>The practice questions in Section 12 are <strong>original</strong>, written for this guide. They do not reproduce any live or third-party exam items. Do not add recalled live exam questions to this document. Adobe’s candidate agreement prohibits sharing exam content.</li>
+<li>Do not use AI assistants or unauthorized materials during the exam. Adobe’s proctoring rules prohibit unauthorized materials and devices.</li>
+</ol><h4 id="aa-core-1-exam-overview">1. Exam overview <span class="badge ver">Verified</span></h4><p>Source: Adobe Certification page for Architect Master.</p><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exam ID</td>
+<td>AD0-E207</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>Master (3 to 5 years’ experience recommended)</td>
+</tr>
+<tr>
+<td>Passing score</td>
+<td>33 out of 50</td>
+</tr>
+<tr>
+<td>Time limit</td>
+<td>1 hour 40 minutes (100 minutes)</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>$225 (global) / $150 (India)</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>Online proctored (camera required)</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>English</td>
+</tr>
+<tr>
+<td>Recommended experience</td>
+<td>3 to 4 years designing Adobe Analytics architecture, data layer specifications, and tag management, with basic JavaScript</td>
+</tr>
+</tbody>
+</table></div><p><strong>Exam domains and weights</strong> <span class="badge ver">Verified</span></p><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Weight</th>
+<th>Objectives (summary)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Discovery</td>
+<td>18%</td>
+<td>Audit sites; investigate client needs and build business requirements; create a measurement framework</td>
+</tr>
+<tr>
+<td>2. Solution design</td>
+<td>54%</td>
+<td>Translate requirements into variables and metrics; manage report suite settings; recommend data collection methods; write technical specifications for tagging engineers and site developers; create Experience Cloud users and groups</td>
+</tr>
+<tr>
+<td>3. Post implementation</td>
+<td>28%</td>
+<td>Validate tracking with browser developer tools and Adobe reports; manage data extraction and relationships; evaluate privacy requirements and governance; manage data sources and connectors; configure segments and calculated metrics</td>
+</tr>
+</tbody>
+</table></div><p><strong>Renewal <span class="badge ver">Verified</span>:</strong> Certifications are valid for two years. Renewal is free and done by passing two short renewal modules.</p><p><strong>Practice test and prep guide <span class="badge ver">Verified</span>:</strong> Adobe offers a free practice test built from the same blueprint, and an Exam Prep Guide (EPG-E207). The prep guide content is delivered inside an Adobe course player, so it could not be read as text for this guide. Use it directly.</p><h4 id="aa-core-2-discovery-18">2. Discovery (18%)</h4><h5 id="aa-core-2-1-auditing-a-site">2.1 Auditing a site</h5><p>A site audit confirms what is already being collected before any new tracking is designed. Check:</p><ul>
+<li>Which report suites receive data, and whether they are global, individual, or virtual.</li>
+<li>Which variables and events are set on each page type (home, product, cart, checkout, confirmation, search results).</li>
+<li>Whether the page name, page URL, and campaign variables are populated and consistent.</li>
+<li>Whether the debugger and network requests show the expected values on each page <span class="badge chk">General guidance, Verify against your organization’s setup</span>.</li>
+</ul><h5 id="aa-core-2-2-business-requirements-to-measurement">2.2 Business requirements to measurement</h5><ol type="1">
+<li><strong>Start with the business goal.</strong> Example: “Grow online revenue from returning customers.”</li>
+<li><strong>Define KPIs.</strong> Example: revenue per visit, return visit rate, conversion rate.</li>
+<li><strong>Map each KPI to a metric or dimension.</strong> Example: revenue per visit uses the Revenue metric divided by Visits.</li>
+<li><strong>Map each metric to a variable or event.</strong> Example: “Return visit” needs a visitor-level definition, and “conversion” needs a success event.</li>
+<li><strong>Document the measurement framework</strong> so the tagging engineer and the developer can implement it.</li>
+</ol><h5 id="aa-core-2-3-measurement-frameworks">2.3 Measurement frameworks</h5><p>A measurement framework links each business objective to KPIs, dimensions, metrics, variables, and the data collection method. Keep it in one table so every stakeholder can review it.</p><h4 id="aa-core-3-solution-design-54">3. Solution design (54%)</h4><h5 id="aa-core-3-1-adobe-analytics-architecture-and-report-suites">3.1 Adobe Analytics architecture and report suites</h5><p><strong>Global versus individual report suites</strong> <span class="badge chk">General guidance, Verify</span></p><ul>
+<li>A global report suite collects data from several sites or apps into one place.</li>
+<li>Individual report suites keep each site separate.</li>
+<li>Rollups combine several report suites for reporting without changing collection.</li>
+</ul><p><strong>Virtual report suites</strong> <span class="badge ver">Verified</span></p><ul>
+<li>A virtual report suite is a segment applied to a parent report suite.</li>
+<li>It inherits most settings from the parent, including eVar settings, processing rules, and classifications. You change those settings on the parent, not on the virtual report suite.</li>
+<li>It has its own name, components, and permissions, and can be assigned to permission groups.</li>
+<li>You can change the visit timeout on a virtual report suite. The change is non-destructive and applies in Analysis Workspace only.</li>
+<li>You cannot upload data to a virtual report suite.</li>
+<li>Virtual report suites do not delete data. Deletion is handled through data governance (Section 6).</li>
+</ul><p><strong>Choosing global versus virtual</strong> <span class="badge chk">General guidance, Verify</span></p><p>Use one global report suite with virtual report suites when several teams need different slices of the same data. Use separate report suites when the sites need independent settings, such as different eVar definitions or time zones.</p><h5 id="aa-core-3-2-variables-and-metrics">3.2 Variables and metrics</h5><h6 id="aa-core-variable-types">Variable types</h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Scope</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eVar (conversion variable)</td>
+<td>Persists across hits according to allocation and expiration</td>
+<td>Campaign, search term, logged-in status, customer segment</td>
+</tr>
+<tr>
+<td>prop (traffic variable)</td>
+<td>Per hit, no persistence by default</td>
+<td>Page section, content type, pathing</td>
+</tr>
+<tr>
+<td>Success event</td>
+<td>Counts occurrences</td>
+<td>Purchase, add to cart, form submission, newsletter sign-up</td>
+</tr>
+<tr>
+<td>List prop or list eVar</td>
+<td>Several values in one hit, each reported separately</td>
+<td>Multiple newsletters, multiple categories, multiple colors</td>
+</tr>
+<tr>
+<td>Merchandising eVar</td>
+<td>Binds to product line items (product syntax) or to the event or order (conversion syntax)</td>
+<td>Product-level attribution such as search term to cart addition</td>
+</tr>
+<tr>
+<td>Counter</td>
+<td>Counts occurrences of a value</td>
+<td>Number of search results, number of pages viewed</td>
+</tr>
+</tbody>
+</table></div><h6 id="aa-core-evar-settings">eVar settings</h6><ul>
+<li><strong>Allocation:</strong> <em>Most Recent</em> credits the last value before the success event. <em>Original Value</em> credits the first value set.</li>
+<li><strong>Expiration:</strong> hit, visit, visitor, a specific event, or a time period. Choose expiration to match the business question.</li>
+<li><strong>Allocation changes</strong> affect how data is interpreted. Check Adobe’s current guidance before changing allocation on a live report suite <span class="badge chk">Verify</span>.</li>
+</ul><h6 id="aa-core-success-events-and-serialization">Success events and serialization <span class="badge ver">Verified</span></h6><ul>
+<li>Event serialization prevents duplicate events from being counted. Enable it in the report suite’s success event settings, then send an ID with the event.</li>
+<li>Each event has its own table. <code>event1:ABC</code> and <code>event2:ABC</code> are both counted.</li>
+<li>Deduplication is global across visitors. If visitor A sends <code>event1:ABC</code> and visitor B later sends the same ID, B’s event is ignored.</li>
+<li>Deduplication does not expire.</li>
+<li>If an event has serialization enabled but no ID, the event is always counted.</li>
+<li>Serialization IDs must be alphanumeric and up to 20 bytes. Longer values are truncated to 20 bytes.</li>
+<li>Data sources do not support event serialization.</li>
+</ul><p>For the purchase event, use the <code>purchaseID</code> variable instead of event serialization.</p><h6 id="aa-core-purchaseid">purchaseID <span class="badge ver">Verified</span></h6><ul>
+<li>Prevents hits with the same purchase from inflating reports (for example, a page refresh on the confirmation page).</li>
+<li>Purchase IDs apply to all visitors and <strong>expire after 37 months</strong>.</li>
+<li>When a purchase is recognized as a duplicate, conversion data (eVars and events) does not appear in reporting. In data feeds, the <code>duplicate_purchase</code> column is set to 1.</li>
+<li>Use only alphanumeric characters. Values longer than 20 bytes are truncated, and truncated duplicates are also deduplicated.</li>
+<li>Do not generate purchase IDs with a random function.</li>
+</ul><h6 id="aa-core-campaign-tracking">Campaign tracking <span class="badge chk">General guidance, Verify</span></h6><ul>
+<li><code>s.campaign</code> stores the tracking code. Use <code>s.Util.getQueryParam()</code> or the getQueryParam plug-in to read it from the URL.</li>
+<li>Campaign persistence (once per visit or once per visitor) controls instance counts. Confirm the persistence setting in your report suite before answering questions about counts.</li>
+</ul><h5 id="aa-core-3-3-product-strings-s-products">3.3 Product strings (s.products)</h5><p>Structure: <code>category;product;quantity;price;events;merchandising eVars</code>, with a comma between products.</p><ul>
+<li>Each field is separated by a semicolon. Keep the delimiter even when a field is empty.</li>
+<li>Multiple products are separated by a comma.</li>
+<li>Merchandising eVars use product or conversion syntax. Product syntax binds to the product line item. Conversion syntax binds to the order or event.</li>
+<li>Adobe does not support setting the <code>products</code> variable with processing rules <span class="badge ver">Verified</span>.</li>
+</ul><p><strong>Example (illustrative)</strong></p><pre><code>s.products = ";Running Shoes;1;120.00,;Socks;2;15.00";</code></pre><p>Use the documented structure for your implementation. Confirm exact syntax for merchandising eVars and events against the Implementation Guide <span class="badge chk">Verify</span>.</p><h5 id="aa-core-3-4-data-collection-methods">3.4 Data collection methods</h5><h6 id="aa-core-adobe-experience-platform-tags-formerly-adobe-launch">Adobe Experience Platform Tags (formerly Adobe Launch)</h6><ul>
+<li>Place one <strong>single asynchronous embed code in the</strong> <code>&lt;head&gt;</code> of each page that loads the property <span class="badge ver">Verified</span>.</li>
+<li>The asynchronous embed is the default. The synchronous version uses two embed codes (one in the head and one before <code>&lt;/body&gt;</code>) <span class="badge ver">Verified</span>.</li>
+<li>Data elements are referenced with <code>%name%</code> syntax <span class="badge chk">General guidance, Verify</span>.</li>
+<li><code>_satellite.track()</code> sends a custom event from code <span class="badge chk">General guidance, Verify</span>.</li>
+<li>If a data element returns <code>[object Object]</code>, the data element is reading an object. Read a specific property instead of the whole object <span class="badge chk">General guidance, Verify</span>.</li>
+</ul><h6 id="aa-core-appmeasurement-versus-web-sdk">AppMeasurement versus Web SDK <span class="badge ver">Verified, summary</span></h6><div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>AppMeasurement</th>
+<th>Adobe Experience Platform Web SDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data path</td>
+<td>Sends directly to Adobe Analytics</td>
+<td>Sends to the Adobe Experience Platform Edge Network, which can forward to Analytics</td>
+</tr>
+<tr>
+<td>Variable mapping</td>
+<td>Variables such as <code>s.eVar1</code></td>
+<td>XDM and data object mapping (for example, <code>xdm.commerce.order.purchaseID</code> and <code>data.__adobe.analytics.purchaseID</code>)</td>
+</tr>
+<tr>
+<td>Typical use</td>
+<td>Existing implementations</td>
+<td>Newer implementations and Edge Network architectures</td>
+</tr>
+</tbody>
+</table></div><p>Adobe describes both as client-side collection methods that feed the processing pipeline. The processing order described in Section 5 applies to both.</p><h6 id="aa-core-cross-domain-tracking">Cross-domain tracking <span class="badge ver">Verified</span></h6><ul>
+<li>When browsers block third-party cookies, the ID service cannot recognize a visitor who moves to a different domain.</li>
+<li><code>Visitor.appendVisitorIDsTo(url)</code> appends the Experience Cloud Visitor ID (MID) to a link, so the destination domain can recognize the visitor.</li>
+<li>You must own both the source and destination domains and have implemented the ID service.</li>
+<li>Cross-domain tracking does not work if the ECID was rejected earlier.</li>
+</ul><h6 id="aa-core-asynchronous-content">Asynchronous content <span class="badge chk">General guidance, Verify</span></h6><p>Content that loads after the page load should be tracked by listening for a specific JavaScript event (for example, a custom event raised when the content is inserted). Do not rely on a single page-load call at the bottom of the page.</p><h6 id="aa-core-single-page-applications-spa">Single-page applications (SPA) <span class="badge chk">General guidance, Verify</span></h6><p>Route changes do not reload the page, so the page view tag does not fire. Track each virtual page view with a custom event or a page view call triggered by the route change. Set the page name and page URL for each route.</p><h6 id="aa-core-mobile-apps">Mobile apps <span class="badge chk">General guidance, Verify</span></h6><p>Mobile apps use the Adobe Mobile SDK. Visit definition settings (background hits, start a new visit on app launch) control how sessions are counted.</p><h5 id="aa-core-3-5-technical-specifications">3.5 Technical specifications</h5><p>A technical specification gives the tagging engineer and the developer what they need to implement and test the tracking. Each specification should include:</p><ol type="1">
+<li><strong>Business requirement:</strong> what the business needs to measure and why.</li>
+<li><strong>Tracking requirement:</strong> the metric, dimension, or event to capture.</li>
+<li><strong>Data layer definition:</strong> the field names, data types, and where the value comes from.</li>
+<li><strong>Variable mapping:</strong> which Analytics variable receives each data layer field, and the variable type and allocation.</li>
+<li><strong>Trigger condition:</strong> the page load, link click, or event that fires the tracking.</li>
+<li><strong>Expected values:</strong> sample values for each variable.</li>
+<li><strong>Implementation instructions:</strong> where in the tag property or code the change goes.</li>
+<li><strong>Acceptance criteria:</strong> what must be true for the implementation to be accepted.</li>
+<li><strong>QA steps:</strong> how to test in development, staging, and production.</li>
+</ol><p><strong>Example specification row (illustrative)</strong></p><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Trigger</th>
+<th>Data layer field</th>
+<th>Variable</th>
+<th>Type</th>
+<th>Expected value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Track search term</td>
+<td>Search results page load</td>
+<td><code>digitalData.search.term</code></td>
+<td>eVar2</td>
+<td>Text string, Most Recent</td>
+<td>“running shoes”</td>
+</tr>
+<tr>
+<td>Count search results</td>
+<td>Search results page load</td>
+<td><code>digitalData.search.resultCount</code></td>
+<td>Counter eVar or custom event</td>
+<td>Counter</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Track newsletter sign-ups (each newsletter)</td>
+<td>Sign-up confirmation</td>
+<td><code>digitalData.newsletters</code> (array)</td>
+<td>List prop</td>
+<td>List</td>
+<td>“Weekly Deals”</td>
+</tr>
+</tbody>
+</table></div><h4 id="aa-core-4-report-suite-administration">4. Report suite administration <span class="badge ver">Verified where noted</span></h4><h5 id="aa-core-4-1-processing-rules">4.1 Processing rules <span class="badge ver">Verified</span></h5><ul>
+<li>Processing rules modify data as it is collected, before it is written to the report suite.</li>
+<li>They run in order, from rule 1. Every hit runs through every rule. There are no early exits, so the conditions must cover every hit.</li>
+<li>A report suite can contain up to 150 rules. Each rule can contain up to 30 conditions.</li>
+<li>Rules apply on save. They <strong>do not apply retroactively</strong> to data already collected.</li>
+<li>Rules apply to one report suite. You can copy them to other report suites after they are created.</li>
+<li>String comparisons are <strong>not case-sensitive</strong>.</li>
+<li>A later rule can overwrite the result of an earlier rule. A value overwritten in rule 1 is not available to later rules.</li>
+<li>Excluding data is not an intended feature of processing rules. Use bot rules, IP exclusion, or VISTA rules instead <span class="badge ver">Verified</span>.</li>
+<li>Context data variables that are not mapped to another variable are permanently lost.</li>
+<li>Test in a development report suite before enabling rules in production.</li>
+</ul><h5 id="aa-core-4-2-vista-rules">4.2 VISTA rules <span class="badge ver">Verified</span></h5><ul>
+<li>VISTA rules are a form of custom data modification that runs between data collection and processing.</li>
+<li>VISTA rules can copy a hit from one report suite to another, and can modify variables conditionally.</li>
+<li>VISTA rules require a paid engagement with Adobe Professional Services to create and maintain.</li>
+<li>Adobe recommends VISTA only as a last resort. Use processing rules, bot rules, virtual report suites, or implementation changes first.</li>
+<li>VISTA rules only affect data as it is collected. They do not change existing data.</li>
+</ul><h5 id="aa-core-4-3-processing-order">4.3 Processing order <span class="badge ver">Verified</span></h5><p>Use this order to decide where a fix should go and why data looks the way it does:</p><ol type="1">
+<li>Dynamic variables are resolved.</li>
+<li>IP obfuscation (last octet) is applied.</li>
+<li>Lookup tables (for example, Browser) are matched.</li>
+<li>IP exclusion is applied.</li>
+<li>Bot rules are applied.</li>
+<li>Geolocation dimensions (for example, Countries) are populated.</li>
+<li><strong>Processing rules</strong> are applied, including mapping of context data variables.</li>
+<li><strong>VISTA rules</strong> run (usually after processing rules, but this depends on the organization).</li>
+<li><strong>Currency conversion</strong> uses the current day’s exchange rate if the hit’s currency differs from the report suite currency.</li>
+<li>Zip code is populated based on report suite settings.</li>
+<li>Visit and visitor definition is applied. Visit number is calculated.</li>
+<li><strong>Event deduplication</strong> checks purchase IDs and event serialization IDs.</li>
+<li><strong>Visit-level marketing channel rules</strong> populate the marketing channel dimensions.</li>
+<li><strong>Variable persistence</strong> (eVar expiration and allocation) is determined.</li>
+<li>Transaction ID snapshot is stored when a new transaction ID is present.</li>
+<li><strong>IP obfuscation (remove IP)</strong> is applied after all other processing.</li>
+</ol><p><strong>What this means for exam questions</strong></p><ul>
+<li>Processing rules run after bot rules and IP exclusion, so bot traffic can be excluded before a rule changes the data.</li>
+<li>Currency conversion happens after processing rules.</li>
+<li>Full IP removal happens last.</li>
+<li>Marketing channel rules are applied after processing rules at the visit level.</li>
+</ul><h5 id="aa-core-4-4-marketing-channels">4.4 Marketing channels <span class="badge ver">Verified</span></h5><ul>
+<li>Marketing channel rules are evaluated at the visit level, and each hit is checked against them.</li>
+<li>Changing the order of marketing channel processing rules affects new data from the time you save the change. It does not reprocess historical data.</li>
+</ul><h5 id="aa-core-4-5-currency">4.5 Currency <span class="badge ver">Verified</span></h5><ul>
+<li>If a hit’s currency differs from the report suite’s base currency, currency variables are converted using the current day’s exchange rate.</li>
+</ul><h5 id="aa-core-4-6-time-zones-and-ip-settings">4.6 Time zones and IP settings <span class="badge chk">General guidance, Verify</span></h5><p>Set the report suite time zone before back-filling data. Check bot rules and IP exclusion lists whenever you launch a new site.</p><h4 id="aa-core-5-segments-and-calculated-metrics">5. Segments and calculated metrics <span class="badge chk">General guidance, Verify unless noted</span></h4><h5 id="aa-core-5-1-segment-containers">5.1 Segment containers</h5><ul>
+<li><strong>Hit container:</strong> matches individual hits (for example, a page view of a specific page).</li>
+<li><strong>Visit container:</strong> matches all hits within a visit. Use this for “visited X and then Y in the same visit.”</li>
+<li><strong>Visitor container:</strong> matches all hits for a visitor across visits. Use this for “visited X at any time.”</li>
+<li>Choose the container that matches the business question. A hit-level segment cannot answer a visit-level question.</li>
+</ul><h5 id="aa-core-5-2-sequential-segments">5.2 Sequential segments</h5><p>Sequential segments require events in a specific order (for example, a search followed by a product view within the same visit). Set the container and the sequence in the segment builder.</p><h5 id="aa-core-5-3-calculated-metrics">5.3 Calculated metrics</h5><ul>
+<li>A calculated metric uses a formula over standard metrics (for example, Orders divided by Visits).</li>
+<li>Percentages of return visits or conversion rates are calculated metrics, usually one count divided by another.</li>
+<li>Use the same segment logic on the numerator and denominator when building a percentage. Otherwise the result is not a true rate.</li>
+<li>Use unique (distinct) counts for “how many different X,” not row counts.</li>
+</ul><h4 id="aa-core-6-data-governance-and-privacy">6. Data governance and privacy <span class="badge ver">Verified where noted</span></h4><h5 id="aa-core-6-1-data-labels">6.1 Data labels <span class="badge ver">Verified</span></h5><p>Adobe Analytics has three label groups for variables:</p><ul>
+<li><strong>Identity labels (I1, I2):</strong> categorize data that can identify or contact a specific person. Use I labels on eVars that store personal identifiers.</li>
+<li><strong>Sensitive data labels (S1, S2):</strong> categorize sensitive data, such as precise geographic location (S1) or broad geographic data (S2).</li>
+<li><strong>Data governance labels:</strong> support privacy requests and contractual conditions. Some labels require an ID-PERSON label set on a variable in the same report suite. They cannot be set on events, sales eVars, or classifications.</li>
+<li><strong>Access and delete labels:</strong> indicate whether a variable’s data is returned in an access request or anonymized in a delete request.</li>
+</ul><h5 id="aa-core-6-2-privacy-service">6.2 Privacy Service <span class="badge ver">Verified</span></h5><ul>
+<li>Privacy Service provides an API and a user interface for access, delete, and opt-out requests.</li>
+<li>Each request must include at least one unique identity value for the customer.</li>
+<li>Adobe Analytics requests are processed through Privacy Service. Integrated applications respond within 30 days.</li>
+<li>The Privacy Service UI supports access and delete requests. Opt-out requests must be made through the API.</li>
+</ul><h5 id="aa-core-6-3-consent-and-opt-in">6.3 Consent and opt-in <span class="badge chk">General guidance, Verify</span></h5><p>Block data collection until consent is given. Confirm the current consent mechanism in Adobe’s documentation for your Experience Cloud setup before implementing.</p><h5 id="aa-core-6-4-pii-in-urls">6.4 PII in URLs <span class="badge chk">General guidance, Verify</span></h5><p>Personal data in query strings (for example, an email address) is captured in the page URL. Overwrite or rewrite the page URL variable to remove it before the hit is sent.</p><h5 id="aa-core-6-5-data-minimization-and-retention">6.5 Data minimization and retention <span class="badge chk">General guidance, Verify</span></h5><p>Collect only the variables the business requires. Set retention and deletion processes with the privacy team.</p><h4 id="aa-core-7-data-extraction-sources-and-connectors">7. Data extraction, sources, and connectors</h4><h5 id="aa-core-7-1-choosing-an-export-or-ingestion-tool">7.1 Choosing an export or ingestion tool <span class="badge ver">Verified, summary</span></h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Recommended tool</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hit-level data with visitor ID and hit granularity, delivered on a schedule</td>
+<td>Analytics Data Feed</td>
+<td>Most granular raw export <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Hidden variables (IP address, Experience Cloud ID, Analytics visitor ID, page URL) and denormalized table access</td>
+<td>Data Warehouse</td>
+<td>Adobe lists these as the reasons to use Data Warehouse <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Near-real-time hit-level stream (within about 30 seconds)</td>
+<td>Livestream API</td>
+<td>Partially processed hit-level data <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Summarized data for a pivot table or third-party visualization tool</td>
+<td>Report Builder or Reporting API</td>
+<td>Summarized, not hit-level <span class="badge ver">Verified for Report Builder</span></td>
+</tr>
+<tr>
+<td>Offline data permanently added to Analytics (for example, returns, call center records)</td>
+<td>Data Sources</td>
+<td>Summary or transaction ID type <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Loosely tied user or offline data (impressions, cost)</td>
+<td>Customer Attributes</td>
+<td>Adobe describes this as a less permanent option than Data Sources <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Server-side upload of event data, one event per row</td>
+<td>Bulk Data Insertion API</td>
+<td>Recommended by Adobe for server-side code <span class="badge ver">Verified</span></td>
+</tr>
+</tbody>
+</table></div><h5 id="aa-core-7-2-data-sources">7.2 Data Sources <span class="badge ver">Verified</span></h5><ul>
+<li>Data sources import online or offline data. The file is tab-delimited and uploaded to Adobe’s FTP site with a <code>.fin</code> file.</li>
+<li><strong>Summary data sources</strong> add data by day or by a limited set of dimensions.</li>
+<li><strong>Transaction ID data sources</strong> join offline rows to online hits that share the same transaction ID.</li>
+<li>Full processing data sources are no longer offered (discontinued March 25, 2021).</li>
+<li>Data sources do not support event serialization.</li>
+</ul><h5 id="aa-core-7-3-transaction-id-data-sources">7.3 Transaction ID data sources <span class="badge ver">Verified</span></h5><ul>
+<li>An online hit must include the <code>transactionID</code> variable. The online data must be processed before the data source row is uploaded. If the upload arrives first, it is treated as a summary data source.</li>
+<li>Transaction IDs expire after 25 months. Rows uploaded with an expired ID are treated as if they had no transaction ID.</li>
+<li>If the same transaction ID appears on several online hits, only the first snapshot is used.</li>
+<li>The snapshot is fixed until the ID expires.</li>
+<li>If a dimension appears in both the online and offline row, the offline value is used.</li>
+</ul><h5 id="aa-core-7-4-data-warehouse-and-data-feeds">7.4 Data Warehouse and Data Feeds <span class="badge ver">Verified, summary</span></h5><ul>
+<li>Data Warehouse exposes variables hidden in the interface, such as IP address and Experience Cloud ID.</li>
+<li>Data Feeds provide raw hit-level data that you process yourself.</li>
+<li>Choose based on whether you need hidden variables (Data Warehouse) or the most granular raw data (Data Feed).</li>
+</ul><h5 id="aa-core-7-5-customer-attributes">7.5 Customer Attributes <span class="badge ver">Verified</span></h5><p>Use Customer Attributes to bring CRM profile data into Analytics. Adobe describes Customer Attributes as a way to loosely tie user inputs or offline data to Analytics data, and recommends Data Sources for a more permanent link.</p><h4 id="aa-core-8-experience-cloud-users-groups-and-permissions">8. Experience Cloud users, groups, and permissions <span class="badge chk">General guidance, Verify</span></h4><ul>
+<li>Product profiles define what a user can do (for example, access to processing rules, admin tools).</li>
+<li>Permission groups assign report suites or virtual report suites to users.</li>
+<li>Give each team access to the virtual report suite or segment that contains only its data, not the full global report suite.</li>
+<li>Assign administrator roles to a small group. Review access regularly.</li>
+</ul><h4 id="aa-core-9-architecture-scenarios">9. Architecture scenarios</h4><p>For each scenario, the business requirement, architecture decision, recommended solution, implementation considerations, and risks are listed.</p><h5 id="aa-core-scenario-1-enterprise-website-with-several-brands">Scenario 1: Enterprise website with several brands</h5><ul>
+<li><strong>Requirement:</strong> a global view of all brands, plus brand-level access for each team.</li>
+<li><strong>Decision:</strong> one global report suite with a brand prop or eVar, and one virtual report suite per brand.</li>
+<li><strong>Solution:</strong> send all brands to the global report suite. Build a segment per brand and assign each virtual report suite to the matching permission group.</li>
+<li><strong>Considerations:</strong> virtual report suites inherit settings from the parent, so brand-specific eVar changes must be made on the parent.</li>
+<li><strong>Risks:</strong> segments on very large data sets can be slow. Test the segment performance before rollout.</li>
+</ul><h5 id="aa-core-scenario-2-e-commerce-measurement-framework">Scenario 2: E-commerce measurement framework</h5><ul>
+<li><strong>Requirement:</strong> measure revenue, product views, cart additions, and purchases, and attribute cart additions to search terms.</li>
+<li><strong>Decision:</strong> product syntax for product data, a merchandising eVar for search term attribution, a purchase event, and a <code>purchaseID</code>.</li>
+<li><strong>Solution:</strong> set a merchandising eVar with product binding for the search term, and set <code>purchaseID</code> on the confirmation page.</li>
+<li><strong>Considerations:</strong> <code>purchaseID</code> must be alphanumeric and at most 20 bytes. Product strings must keep their delimiters.</li>
+<li><strong>Risks:</strong> a refresh on the confirmation page inflates purchases unless <code>purchaseID</code> is set.</li>
+</ul><h5 id="aa-core-scenario-3-single-page-application">Scenario 3: Single-page application</h5><ul>
+<li><strong>Requirement:</strong> count each screen view and track the search term on each route.</li>
+<li><strong>Decision:</strong> track each route change as a virtual page view with a custom event or a page view call.</li>
+<li><strong>Solution:</strong> trigger the tracking on the router’s route-change event. Set the page name and page URL for each route.</li>
+<li><strong>Considerations:</strong> the page view tag does not fire on route changes unless it is triggered.</li>
+<li><strong>Risks:</strong> duplicate page views if the route-change event fires twice. Test each route.</li>
+</ul><h5 id="aa-core-scenario-4-cross-domain-tracking">Scenario 4: Cross-domain tracking</h5><ul>
+<li><strong>Requirement:</strong> keep the same visitor identity when a customer moves from a booking site to a payment site.</li>
+<li><strong>Decision:</strong> share the Experience Cloud Visitor ID with <code>Visitor.appendVisitorIDsTo</code>.</li>
+<li><strong>Solution:</strong> append the ID to outbound links to domains you own.</li>
+<li><strong>Considerations:</strong> both domains must be owned and implemented with the ID service.</li>
+<li><strong>Risks:</strong> the ID is not shared if the browser has rejected the ECID.</li>
+</ul><h5 id="aa-core-scenario-5-privacy-request-and-consent">Scenario 5: Privacy request and consent</h5><ul>
+<li><strong>Requirement:</strong> block collection until consent, and delete a customer’s data on request.</li>
+<li><strong>Decision:</strong> consent gating before any tag fires, identity labels on personal identifier eVars, and Privacy Service for access and delete requests.</li>
+<li><strong>Solution:</strong> label PII eVars with I labels. Submit delete requests through the Privacy Service API.</li>
+<li><strong>Considerations:</strong> labels apply only if the identifier is used in privacy requests.</li>
+<li><strong>Risks:</strong> personal data in query strings is captured in the page URL unless overwritten.</li>
+</ul><h5 id="aa-core-scenario-6-online-and-offline-data-integration">Scenario 6: Online and offline data integration</h5><ul>
+<li><strong>Requirement:</strong> combine online sales with returns and call-center records.</li>
+<li><strong>Decision:</strong> transaction ID data sources.</li>
+<li><strong>Solution:</strong> send <code>transactionID</code> on the online purchase hit. Upload offline rows with the matching transaction ID.</li>
+<li><strong>Considerations:</strong> the online data must process before the upload, or the row is treated as a summary row.</li>
+<li><strong>Risks:</strong> transaction IDs expire after 25 months.</li>
+</ul><h5 id="aa-core-scenario-7-near-real-time-data-to-an-internal-data-lake">Scenario 7: Near-real-time data to an internal data lake</h5><ul>
+<li><strong>Requirement:</strong> send hit-level news page view data to the company’s data lake within seconds.</li>
+<li><strong>Decision:</strong> Livestream API.</li>
+<li><strong>Solution:</strong> connect to the Livestream API and write the stream to the data lake.</li>
+<li><strong>Considerations:</strong> Livestream data is partially processed, so it does not include all fully processed features.</li>
+<li><strong>Risks:</strong> fully processed reporting (visits, segments) is not available in the stream.</li>
+</ul><h5 id="aa-core-scenario-8-troubleshooting-missing-data">Scenario 8: Troubleshooting missing data</h5><ul>
+<li><strong>Requirement:</strong> a variable is missing in reports.</li>
+<li><strong>Decision:</strong> check the stage of the processing order where the variable is changed.</li>
+<li><strong>Solution:</strong> check the request in the browser (network tab), then check processing rules, VISTA rules, and the report suite settings in that order.</li>
+<li><strong>Considerations:</strong> processing rules apply on save and not to historical data. Check whether the rule was saved and enabled, and whether the rule is in the right report suite.</li>
+<li><strong>Risks:</strong> a later rule can overwrite an earlier rule’s output.</li>
+</ul><h4 id="aa-core-10-post-implementation-validation">10. Post-implementation validation <span class="badge chk">General guidance, Verify</span></h4><h5 id="aa-core-10-1-qa-steps">10.1 QA steps</h5><ol type="1">
+<li><strong>Development:</strong> check the data layer values in the console before the tag fires.</li>
+<li><strong>Browser network tab:</strong> confirm the request is sent to the expected endpoint with the expected variable values.</li>
+<li><strong>Experience Platform Debugger:</strong> confirm the tags fire on the right events.</li>
+<li><strong>Staging:</strong> repeat the test with the staging property and report suite.</li>
+<li><strong>Production:</strong> check a small sample of real hits after publishing. Confirm the report suite receives data.</li>
+<li><strong>Report check:</strong> compare the expected values with the report for the test period. Allow for processing latency before judging.</li>
+</ol><h5 id="aa-core-10-2-common-failure-causes">10.2 Common failure causes</h5><ul>
+<li>The production tag library is not published, or the environment has the wrong embed code.</li>
+<li>The data layer value is an object, not a string.</li>
+<li>A processing rule is saved but not enabled, or is in a different report suite.</li>
+<li>A later rule or custom script overwrites the variable.</li>
+<li>Purchase ID or event serialization is blocking repeat events.</li>
+</ul><h4 id="aa-core-11-quick-reference">11. Quick reference</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchase ID expiry</td>
+<td>37 months <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Purchase ID length</td>
+<td>20 bytes maximum, alphanumeric <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Event serialization expiry</td>
+<td>Does not expire <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Event serialization scope</td>
+<td>Global across visitors, separate per event <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Event serialization ID length</td>
+<td>20 bytes maximum <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Processing rules per report suite</td>
+<td>150 maximum; 30 conditions per rule <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Processing rules retroactive</td>
+<td>No <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Processing rule string comparison</td>
+<td>Not case-sensitive <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Products variable set by processing rules</td>
+<td>Not supported <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>VISTA rule status</td>
+<td>Last resort; requires Adobe Professional Services <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Transaction ID expiry</td>
+<td>25 months <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Full processing data sources</td>
+<td>Discontinued March 25, 2021 <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Launch embed code</td>
+<td>One asynchronous embed in the head <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Virtual report suite data upload</td>
+<td>Not supported <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Visit timeout on virtual report suite</td>
+<td>Non-destructive, Workspace only <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Near-real-time hit-level data</td>
+<td>Livestream API, about 30 seconds <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>Currency conversion timing</td>
+<td>After processing rules, current day’s rate <span class="badge ver">Verified</span></td>
+</tr>
+<tr>
+<td>IP removal timing</td>
+<td>After all other processing <span class="badge ver">Verified</span></td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part" id="aa-deep"><header class="part-head"><span class="kind">Deep dive</span><h3>Analytics deep-dive topics</h3><ul class="intoc"><li><a href="#aa-deep-1-exam-strategy-and-time-management">1. Exam strategy and time management</a></li><li><a href="#aa-deep-2-data-collection-data-feed-vs-data-warehouse">2. Data collection: Data Feed vs. Data Warehouse</a></li><li><a href="#aa-deep-3-processing-and-troubleshooting-errors">3. Processing and troubleshooting errors</a></li><li><a href="#aa-deep-4-gdpr-privacy-labels-and-data-governance">4. GDPR – Privacy labels and data governance</a></li><li><a href="#aa-deep-5-metrics-metric-types-and-attribution">5. Metrics, metric types, and attribution</a></li><li><a href="#aa-deep-6-evars-props-merchandising-variables-list-variables-and-eve">6. eVars, props, merchandising variables, list variables, and events</a></li><li><a href="#aa-deep-7-duplicate-appmeasurement-js-tags">7. Duplicate AppMeasurement.js tags</a></li><li><a href="#aa-deep-8-alerts-in-adobe-analytics">8. Alerts in Adobe Analytics</a></li><li><a href="#aa-deep-9-integrating-adobe-audience-manager-with-adobe-analytics">9. Integrating Adobe Audience Manager with Adobe Analytics</a></li><li><a href="#aa-deep-10-query-string-capturing">10. Query string capturing</a></li><li><a href="#aa-deep-11-the-s-products-variable">11. The s.products variable</a></li><li><a href="#aa-deep-12-troubleshooting-scenarios-and-answers">12. Troubleshooting scenarios and answers</a></li><li><a href="#aa-deep-13-corrections-and-important-distinctions">13. Corrections and important distinctions</a></li><li><a href="#aa-deep-14-user-administration">14. User administration</a></li><li><a href="#aa-deep-15-data-layer-implementation-shopping-cart-with-cart-id">15. Data layer implementation: shopping cart with cart ID</a></li><li><a href="#aa-deep-16-practice-scenarios">16. Practice scenarios</a></li><li><a href="#aa-deep-17-quick-revision-sheet">17. Quick revision sheet</a></li><li><a href="#aa-deep-18-final-preparation-priorities">18. Final preparation priorities</a></li></ul></header><div class="prose"><h4 id="aa-deep-1-exam-strategy-and-time-management">1. Exam strategy and time management</h4><div class="warn">
+<strong>Time management</strong>
+    There is a lot of reading. Do not spend too much time on one difficult question. Read the entire question before looking at the answer choices, then flag questions that need deeper thought and return to them later.
+  </div><p>Identify keywords such as <em>most granular</em>, <em>real-time</em>, <em>after processing</em>, <em>participation</em>, <em>allocation</em>, <em>privacy</em>, and <em>attribution</em>. Eliminate options that do not satisfy the actual requirement. Be careful with questions where two options are technically valid but only one is the best fit for the business requirement.</p><p>A useful framework is to ask five questions:</p><ol>
+<li>What data needs to be captured?</li>
+<li>When does it need to be captured?</li>
+<li>When does it need to be available?</li>
+<li>How does Adobe process it?</li>
+<li>How does the analyst report on it?</li>
+</ol><h4 id="aa-deep-2-data-collection-data-feed-vs-data-warehouse">2. Data collection: Data Feed vs. Data Warehouse</h4><p>Both Data Feeds and Data Warehouse extract Adobe Analytics data, but they serve different purposes.</p><h5 id="aa-deep-2-1-data-feed">2.1 Data Feed</h5><p>Data Feed is the most granular way to extract Adobe Analytics data. It provides raw, hit-level data, generally in a columnar format, which you export to external storage and process with your own infrastructure.</p><h6 id="aa-deep-typical-use-cases">Typical use cases</h6><ul>
+<li>Building a custom data warehouse.</li>
+<li>Performing hit-level analysis.</li>
+<li>Integrating Analytics data with Snowflake, Databricks, or other platforms.</li>
+<li>Building custom attribution models.</li>
+<li>Analyzing individual visitor interactions.</li>
+<li>Creating custom reporting outside Adobe Analytics.</li>
+</ul><h6 id="aa-deep-example-fields">Example fields</h6><div class="table-wrap"><table>
+<tbody><tr><th>Field</th><th>Description</th></tr>
+<tr><td>hitid_high / hitid_low</td><td>Identifies individual hits</td></tr>
+<tr><td>visitor_id</td><td>Visitor identifier</td></tr>
+<tr><td>visit_num</td><td>Visit number</td></tr>
+<tr><td>visit_page_num</td><td>Page number within a visit</td></tr>
+<tr><td>page_event</td><td>Type of hit/event</td></tr>
+<tr><td>post_evar1</td><td>Processed eVar value</td></tr>
+<tr><td>post_prop1</td><td>Processed prop value</td></tr>
+<tr><td>post_product_list</td><td>Processed product information</td></tr>
+<tr><td>event_list</td><td>Events recorded on the hit</td></tr>
+<tr><td>timestamp</td><td>Hit timestamp</td></tr>
+</tbody></table></div><h6 id="aa-deep-important-concepts">Important concepts</h6><ul>
+<li>Data Feed operates at the hit level and exposes far more detail than aggregated reports.</li>
+<li>Raw and post-processed columns serve different analytical needs.</li>
+<li>Data Feed is not the same as a real-time reporting API.</li>
+<li>Delivery timing depends on the feed configuration and processing pipeline.</li>
+</ul><h5 id="aa-deep-2-2-data-warehouse">2.2 Data Warehouse</h5><p>Data Warehouse extracts report-oriented data based on dimensions, metrics, and selected segments.</p><h6 id="aa-deep-typical-use-cases-2">Typical use cases</h6><ul>
+<li>Extracting a large report.</li>
+<li>Creating scheduled reports.</li>
+<li>Sharing summarized analytical data with another team.</li>
+<li>Extracting visitor, visit, or page-level metrics.</li>
+<li>Creating an offline report for further analysis.</li>
+</ul><p>For example, you might extract Page Name, Visits, Unique Visitors, Orders, and Revenue. It is not intended to provide the same individual hit-level detail as Data Feed.</p><h5 id="aa-deep-2-3-comparison-of-extraction-methods">2.3 Comparison of extraction methods</h5><div class="table-wrap"><table>
+<tbody><tr><th>Feature</th><th>Data Feed</th><th>Data Warehouse</th><th>Analytics API</th><th>Report Builder</th></tr>
+<tr><td>Data granularity</td><td>Hit-level</td><td>Report-level</td><td>Report-level</td><td>Report-level</td></tr>
+<tr><td>Raw hit data</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Custom dimensions and metrics</td><td>Processed/raw columns</td><td>Selected report components</td><td>Selected report components</td><td>Selected report components</td></tr>
+<tr><td>Aggregated reporting</td><td>Requires external processing</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Automation</td><td>Scheduled delivery</td><td>Scheduled requests</td><td>API integration</td><td>Excel automation</td></tr>
+<tr><td>Primary use</td><td>Data engineering</td><td>Large report extraction</td><td>Programmatic reporting</td><td>Excel reporting</td></tr>
+</tbody></table></div><div class="qa">
+<div class="q">Question: What is the most granular way to capture Adobe Analytics data?</div>
+<div class="a">Data Feed, because it provides individual hit-level records rather than aggregated results.</div>
+</div><div class="note"><strong>Remember</strong>Data Feed = hit-level detail. Data Warehouse = report extraction. Analytics API = programmatic report retrieval. Report Builder = Excel-based reporting. Download Report = exporting an existing report.</div><h5 id="aa-deep-2-4-granularity-vs-delivery-timing">2.4 Granularity vs. delivery timing</h5><div class="table-wrap"><table>
+<tbody><tr><th>Requirement</th><th>Suitable method</th></tr>
+<tr><td>Analyze every individual tracking hit</td><td>Data Feed</td></tr>
+<tr><td>Extract a large summarized report</td><td>Data Warehouse</td></tr>
+<tr><td>Retrieve report metrics programmatically</td><td>Analytics API</td></tr>
+<tr><td>Build scheduled Excel reports</td><td>Report Builder</td></tr>
+<tr><td>Investigate individual requests and raw values</td><td>Data Feed</td></tr>
+</tbody></table></div><p>A Data Feed is not automatically real-time simply because it is granular.</p><h4 id="aa-deep-3-processing-and-troubleshooting-errors">3. Processing and troubleshooting errors</h4><p>Understand when data is captured, when it is processed, and when it becomes available in reporting.</p><h5 id="aa-deep-3-1-tracking-call-lifecycle">3.1 Tracking call lifecycle</h5><ol>
+<li><strong>Tracking call is generated.</strong> AppMeasurement or Web SDK creates a request containing variables, events, and other information.</li>
+<li><strong>Request reaches collection.</strong> The browser or application sends the beacon to Adobe's collection endpoint.</li>
+<li><strong>Collection and processing.</strong> Adobe receives the hit and processes it according to report suite configuration and processing rules.</li>
+<li><strong>Processed data becomes reportable.</strong> The hit appears in reporting interfaces such as Analysis Workspace, subject to latency.</li>
+</ol><h5 id="aa-deep-3-2-error-stages">3.2 Error stages</h5><div class="table-wrap"><table>
+<tbody><tr><th>Stage</th><th>What to inspect</th><th>What it tells you</th></tr>
+<tr><td>Before tracking call</td><td>Browser console, JavaScript errors</td><td>Whether the tracking code executed</td></tr>
+<tr><td>Tracking call</td><td>Network tab, request payload</td><td>Whether the expected variables were sent</td></tr>
+<tr><td>Collection response</td><td>Network response/status</td><td>Whether the endpoint responded</td></tr>
+<tr><td>Processing</td><td>Processing rules, VISTA rules, configuration</td><td>Whether data was modified or excluded</td></tr>
+<tr><td>Reporting</td><td>Workspace, reports, report suite</td><td>Whether processed data appears as expected</td></tr>
+</tbody></table></div><div class="ok"><strong>Best approach</strong>Start with the browser's Network tab and inspect the actual tracking beacon. Do not start by assuming Analysis Workspace is the problem.</div><h5 id="aa-deep-3-3-example-missing-purchase-event">3.3 Example: missing purchase event</h5><p>Check the following in order: whether the purchase event was in the request; whether the correct report suite was used; whether the event is configured in the report suite; whether processing rules modified or removed it; whether the event uses the expected syntax; and whether enough time has passed for reporting availability.</p><div class="warn"><strong>Trap</strong>A successful HTTP response does not prove that the expected data was processed and reported correctly.</div><h5 id="aa-deep-3-4-processing-order">3.4 Processing order</h5><p>Some processing configurations operate on collected hits, while reporting-time calculations, such as certain attribution models, operate when data is queried. Processing concepts include data collection, processing rules, VISTA rules, marketing channel processing, post-processing, and reporting calculations.</p><h5 id="aa-deep-3-5-adding-or-modifying-data-after-processing">3.5 Adding or modifying data after processing</h5><p>You cannot simply edit an already processed historical hit in place. Choose the mechanism based on the requirement:</p><div class="table-wrap"><table>
+<tbody><tr><th>Requirement</th><th>Appropriate method</th></tr>
+<tr><td>Add descriptive metadata to historical dimension values</td><td>Classifications or Classification Sets</td></tr>
+<tr><td>Change future incoming tracking data</td><td>Processing Rules</td></tr>
+<tr><td>Modify existing historical hit values</td><td>Data Repair API or supported reprocessing, where applicable</td></tr>
+<tr><td>Change reporting logic</td><td>Virtual report suites or calculated metrics</td></tr>
+<tr><td>Combine external data</td><td>Supported data imports or external integration</td></tr>
+</tbody></table></div><div class="note"><strong>Distinction</strong>A classification update is not the same as modifying the original hit.</div><h4 id="aa-deep-4-gdpr-privacy-labels-and-data-governance">4. GDPR – Privacy labels and data governance</h4><p>Navigate to <strong>Admin → Data Governance → Privacy Labeling</strong>. Privacy labels define how Adobe treats data for access and deletion requests. The five categories are Identity, Sensitivity, GDPR Access, GDPR Delete, and Namespace.</p><div class="warn"><strong>Terminology correction</strong>Your notes use L1 and L2. Adobe's official Analytics identity labels are <strong>I1</strong> and <strong>I2</strong>. Use I1 and I2 for exam preparation.</div><h5 id="aa-deep-4-1-identity-labels">4.1 Identity labels</h5><div class="table-wrap"><table>
+<tbody><tr><th>Label</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>I1</td><td>Directly identifiable information</td><td>Email address, name, phone number</td></tr>
+<tr><td>I2</td><td>Indirectly identifiable information that could identify a person when combined with other information</td><td>Persistent identifiers, account-related identifiers</td></tr>
+</tbody></table></div><p>I1 and I2 cannot be assigned to success events, and neither can be assigned to merchandising eVars.</p><h5 id="aa-deep-4-2-sensitivity-labels">4.2 Sensitivity labels</h5><div class="table-wrap"><table>
+<tbody><tr><th>Label</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>S1</td><td>Precise geolocation</td><td>Latitude and longitude from device GPS</td></tr>
+<tr><td>S2</td><td>Broadly defined geolocation</td><td>Geographic region or geofence</td></tr>
+</tbody></table></div><h5 id="aa-deep-4-3-gdpr-access-labels">4.3 GDPR Access labels</h5><div class="table-wrap"><table>
+<tbody><tr><th>Label</th><th>Meaning</th></tr>
+<tr><td>ACC-ALL</td><td>Include field values in all privacy access requests.</td></tr>
+<tr><td>ACC-PERSON</td><td>Include field values only when the specified ID-PERSON is present in the event.</td></tr>
+</tbody></table></div><div class="example"><strong>Shared device scenario:</strong> ACC-ALL can include the data in access responses for every individual associated with that device. ACC-PERSON restricts access to events containing the specified person identifier.</div><h5 id="aa-deep-4-4-gdpr-delete-labels">4.4 GDPR Delete labels</h5><div class="table-wrap"><table>
+<tbody><tr><th>Label</th><th>Meaning</th></tr>
+<tr><td>DEL-DEVICE</td><td>Anonymize field values when the specified ID-DEVICE is present in the event or identified through ID expansion.</td></tr>
+<tr><td>DEL-PERSON</td><td>Anonymize field values when the specified ID-PERSON is present in the event.</td></tr>
+</tbody></table></div><p>For shared devices, this distinction matters because a device can be used by multiple people. Deletion can affect identifiers associated with other individuals on the shared device, depending on matching and deletion behavior. Anonymizing field values can also change reports that calculate unique counts on those fields.</p><h5 id="aa-deep-4-5-namespace">4.5 Namespace</h5><p>A namespace identifies the identity context associated with a component. ECID represents Experience Cloud identity, and CRMID can represent an authenticated account identifier. A namespace is <strong>not</strong> itself a privacy label. It helps identify the identifier used for identity matching and privacy operations. A namespace is required when labeling a variable ID-DEVICE or ID-PERSON, and you should reuse a namespace when the same identifier type is stored in multiple variables.</p><h5 id="aa-deep-4-6-id-device-and-id-person">4.6 Id-device and Id-person</h5><p>An identity label describes the type of information. An ID label tells Adobe which field to search when processing a privacy request. If you intend to use Experience Cloud Visitor ID as the identifier for privacy requests, it needs the appropriate ID-DEVICE label; the namespace alone does not make it searchable.</p><h5 id="aa-deep-4-7-your-original-component-table">4.7 Your original component table</h5><div class="table-wrap"><table>
+<tbody><tr><th>Component</th><th>Identity</th><th>Sensitivity</th><th>GDPR Access</th><th>GDPR Delete</th><th>Namespace</th></tr>
+<tr><td>Page</td><td>I2</td><td>—</td><td>ACC-PERSON</td><td>DEL-DEVICE, DEL-PERSON</td><td>—</td></tr>
+<tr><td>Cart Additions</td><td>—</td><td>—</td><td>ACC-PERSON</td><td>—</td><td>—</td></tr>
+<tr><td>Latitude</td><td>—</td><td>S1</td><td>—</td><td>DEL-DEVICE, DEL-PERSON</td><td>—</td></tr>
+<tr><td>Longitude</td><td>—</td><td>S1</td><td>—</td><td>DEL-DEVICE, DEL-PERSON</td><td>—</td></tr>
+<tr><td>Experience Cloud Visitor ID</td><td>I2</td><td>—</td><td>—</td><td>DEL-DEVICE</td><td>ECID</td></tr>
+</tbody></table></div><p>Labels should be reviewed against the organization's privacy policy and the data's actual meaning. ACC-PERSON requires a properly configured ID-PERSON component and a matching identifier in the request.</p><h5 id="aa-deep-4-8-what-gdpr-protected-data-looks-like">4.8 What GDPR-protected data looks like</h5><p>Before a deletion request:</p><div class="table-wrap"><table>
+<tbody><tr><th>ECID</th><th>Person ID</th><th>Page</th><th>Latitude</th><th>Longitude</th></tr>
+<tr><td>12345</td><td>C100</td><td>Home</td><td>40.7128</td><td>-74.0060</td></tr>
+<tr><td>12345</td><td>C100</td><td>Product</td><td>40.7128</td><td>-74.0060</td></tr>
+<tr><td>67890</td><td>C200</td><td>Home</td><td>40.7306</td><td>-73.9352</td></tr>
+</tbody></table></div><p>After a successful deletion for the relevant identifiers:</p><div class="table-wrap"><table>
+<tbody><tr><th>ECID</th><th>Person ID</th><th>Page</th><th>Latitude</th><th>Longitude</th></tr>
+<tr><td>Anonymized</td><td>Anonymized</td><td>Home</td><td>Anonymized</td><td>Anonymized</td></tr>
+<tr><td>Anonymized</td><td>Anonymized</td><td>Product</td><td>Anonymized</td><td>Anonymized</td></tr>
+<tr><td>67890</td><td>C200</td><td>Home</td><td>40.7306</td><td>-73.9352</td></tr>
+</tbody></table></div><div class="note"><strong>Key point</strong>Privacy deletion does not necessarily remove an entire row or hit. It anonymizes selected field values based on the applied labels and identity matching. This is an illustration, not a guaranteed output format.</div><h5 id="aa-deep-4-9-ac-session-ac-identification-and-related-terms">4.9 AC_SESSION, AC_IDENTIFICATION, and related terms</h5><p>Your notes mention AC_SESSION, AC_NEXT, and AC_IDENTIFICATION. These are not established Adobe Analytics GDPR label names in the information you provided. Do not memorize them as substitutes for I1, I2, S1, S2, ACC-ALL, ACC-PERSON, DEL-DEVICE, or DEL-PERSON.</p><h5 id="aa-deep-4-10-latitude-and-longitude">4.10 Latitude and longitude</h5><div class="warn"><strong>Distinction</strong>Adobe's standard Geo Latitude and Geo Longitude dimensions are generally derived from IP address and represent approximate location, not precise GPS coordinates. If your implementation captures actual device GPS coordinates, those values can be S1 sensitive information. Do not assume standard Geo dimensions are precise.</div><h4 id="aa-deep-5-metrics-metric-types-and-attribution">5. Metrics, metric types, and attribution</h4><p>This section is about the difference between participation and allocation.</p><h5 id="aa-deep-5-1-participation-vs-linear-allocation">5.1 Participation vs. linear allocation</h5><p><strong>Participation</strong> gives credit to every eligible dimension item that participated in the conversion journey. If a visitor reads Blog A, Blog B, and Blog C before purchasing, all three can receive credit for the purchase. This is useful for understanding all content that contributed to a conversion.</p><p><strong>Linear allocation</strong> distributes conversion credit equally across eligible items in the attribution window, so each blog receives 33.33% and the total is 100%.</p><div class="table-wrap"><table>
+<tbody><tr><th></th><th>Participation</th><th>Linear allocation</th></tr>
+<tr><td>Credit</td><td>Each item can receive full conversion credit</td><td>Each item receives a portion</td></tr>
+<tr><td>Best for</td><td>Identifying all contributing touchpoints</td><td>Distributing conversion value</td></tr>
+</tbody></table></div><div class="example"><strong>Exam scenario:</strong> Three blog categories contributed to a purchase, and the business wants to know which participated without dividing purchase credit. Answer: Participation. If each category should receive an equal share, use Linear allocation.</div><h5 id="aa-deep-5-2-attribution-models">5.2 Attribution models</h5><div class="table-wrap"><table>
+<tbody><tr><th>Model</th><th>How credit is assigned</th></tr>
+<tr><td>First Touch</td><td>100% to the first eligible touchpoint</td></tr>
+<tr><td>Last Touch</td><td>100% to the last eligible touchpoint</td></tr>
+<tr><td>Linear</td><td>Equal credit across eligible touchpoints</td></tr>
+<tr><td>Participation</td><td>Full credit to every participating touchpoint</td></tr>
+<tr><td>U-Shaped</td><td>Greater credit to the first and last touchpoints</td></tr>
+<tr><td>J-Shaped</td><td>Greater credit to the last touchpoint</td></tr>
+<tr><td>Inverse J</td><td>Greater credit to the first touchpoint</td></tr>
+<tr><td>Time Decay</td><td>More credit to touchpoints closer to conversion</td></tr>
+</tbody></table></div><p>Also understand attribution lookback windows, visitor versus visit containers, expiration settings, eVar persistence, and allocation settings. The allocation setting on an eVar and the attribution model applied to a metric are separate concepts.</p><h4 id="aa-deep-6-evars-props-merchandising-variables-list-variables-and-eve">6. eVars, props, merchandising variables, list variables, and events</h4><p>You should understand the purpose of each variable type rather than memorize its name.</p><h5 id="aa-deep-6-1-evars-conversion-variables">6.1 eVars (conversion variables)</h5><p>eVars analyze how dimensions contribute to success events. They can persist beyond the hit where they were set, and they have configurable allocation and expiration.</p><pre><code>s.eVar1 = "Summer_Campaign";
+s.events = "event1";
+s.t();</code></pre><div class="table-wrap"><table>
+<tbody><tr><th>Setting</th><th>Purpose</th></tr>
+<tr><td>Expiration</td><td>How long the value persists (Hit, Visit, Visitor, specific event, or custom period)</td></tr>
+<tr><td>Allocation</td><td>How credit is assigned when multiple values occur</td></tr>
+<tr><td>Merchandising</td><td>Associates conversion credit with specific products</td></tr>
+<tr><td>Type</td><td>The type of value stored, such as text or counter</td></tr>
+</tbody></table></div><h5 id="aa-deep-6-2-props-traffic-variables">6.2 Props (traffic variables)</h5><p>Props support traffic and pathing analysis. They are traditionally hit-level and do not persist by default.</p><pre><code>s.prop1 = "Homepage";
+s.t();</code></pre><div class="table-wrap"><table>
+<tbody><tr><th>Feature</th><th>eVar</th><th>Prop</th></tr>
+<tr><td>Primary purpose</td><td>Conversion analysis</td><td>Traffic analysis</td></tr>
+<tr><td>Persistence</td><td>Configurable</td><td>Hit-level by default</td></tr>
+<tr><td>Allocation</td><td>Configurable</td><td>Not applicable in the same way</td></tr>
+<tr><td>Success-event attribution</td><td>Yes</td><td>Not directly like an eVar</td></tr>
+</tbody></table></div><div class="warn"><strong>Trap</strong>eVars and props are not interchangeable just because both store text.</div><h5 id="aa-deep-6-3-merchandising-evars">6.3 Merchandising eVars</h5><p>A merchandising eVar associates a conversion variable with a product rather than only with the visitor or visit. For example, if Product A was influenced by Search and Product B by Email, a merchandising eVar lets you associate each channel with the relevant product.</p><h6 id="aa-deep-two-methods">Two methods</h6><ul>
+<li><strong>Product syntax:</strong> the merchandising value is supplied alongside the product in the <code>products</code> variable.</li>
+<li><strong>Conversion variable syntax:</strong> the merchandising eVar is set separately and associated with products through the appropriate configuration, such as product finding methods.</li>
+</ul><pre><code>s.products = ";Product A;;;;eVar10=Search,;Product B;;;;eVar10=Email";</code></pre><p>This is illustrative. Actual implementation must follow the Adobe products string structure and report suite configuration.</p><h5 id="aa-deep-6-4-merchandising-props">6.4 Merchandising props</h5><div class="warn"><strong>Correction</strong>Props are not the standard mechanism for product-level conversion attribution. If a question asks how to associate a marketing channel with individual products and attribute revenue to it, the answer is a merchandising eVar, not a merchandising prop.</div><h5 id="aa-deep-6-5-list-variables">6.5 List variables</h5><p>List variables store multiple values in one variable on one hit, separated by a delimiter.</p><pre><code>s.list1 = "Sports,Technology,Finance";</code></pre><p>Use them when one interaction belongs to several categories. They have configurable persistence and expiration behavior.</p><h5 id="aa-deep-6-6-success-events">6.6 Success events</h5><div class="table-wrap"><table>
+<tbody><tr><th>Event</th><th>Meaning</th></tr>
+<tr><td>prodView</td><td>Product view</td></tr>
+<tr><td>scOpen</td><td>Shopping cart opened</td></tr>
+<tr><td>scAdd</td><td>Product added to cart</td></tr>
+<tr><td>scRemove</td><td>Product removed from cart</td></tr>
+<tr><td>scView</td><td>Shopping cart viewed</td></tr>
+<tr><td>scCheckout</td><td>Checkout initiated</td></tr>
+<tr><td>purchase</td><td>Purchase completed</td></tr>
+<tr><td>event1, event2, event10</td><td>Custom success events, if configured</td></tr>
+</tbody></table></div><p>purchase, prodView, scAdd, scRemove, scOpen, scView, and scCheckout are predefined commerce events. event10 is a custom event if configured as one. Do not assume event10 is a standard commerce event.</p><h5 id="aa-deep-6-7-which-component-should-you-enable">6.7 Which component should you enable?</h5><div class="table-wrap"><table>
+<tbody><tr><th>Requirement</th><th>Recommended component</th></tr>
+<tr><td>Track campaign name with conversion attribution</td><td>eVar</td></tr>
+<tr><td>Track page name for traffic analysis</td><td>Prop or standard Page dimension</td></tr>
+<tr><td>Track multiple categories on one hit</td><td>List variable</td></tr>
+<tr><td>Track purchase completion</td><td>Success event</td></tr>
+<tr><td>Track product-specific marketing influence</td><td>Merchandising eVar</td></tr>
+<tr><td>Track visitor interest over time</td><td>eVar or list variable, depending on requirement</td></tr>
+<tr><td>Track navigation paths</td><td>Prop with appropriate pathing configuration</td></tr>
+<tr><td>Track a custom business action</td><td>Custom success event</td></tr>
+</tbody></table></div><h4 id="aa-deep-7-duplicate-appmeasurement-js-tags">7. Duplicate AppMeasurement.js tags</h4><p>If the same tracking implementation executes twice, you may see duplicate page-view calls, duplicate custom events, inflated page views and visit-related activity, duplicate interaction tracking, inconsistent visitor or session behavior if the implementations differ, and increased network traffic.</p><p>A common cause is a page that loads AppMeasurement directly while the tag manager also loads another implementation. If both execute the same call, Adobe may receive two page-view hits.</p><h6 id="aa-deep-how-to-troubleshoot">How to troubleshoot</h6><ol>
+<li>Open Chrome Developer Tools and go to the Network tab.</li>
+<li>Filter for Adobe Analytics collection requests and reload the page.</li>
+<li>Identify duplicate requests and compare their payloads and timestamps.</li>
+<li>Inspect both the tag manager and the direct page implementation.</li>
+</ol><div class="ok"><strong>Correct principle</strong>Ensure that only the intended tracking implementation executes each measurement call.</div><h4 id="aa-deep-8-alerts-in-adobe-analytics">8. Alerts in Adobe Analytics</h4><p>You mentioned an alert that sends an SMS when visits increase or decrease by more than 25%.</p><h5 id="aa-deep-8-1-creating-an-alert">8.1 Creating an alert</h5><ol>
+<li>Open Adobe Analytics and the relevant Workspace project, or create a new one.</li>
+<li>Select the Visits metric and apply any segment or reporting scope required.</li>
+<li>Open the Alerts interface from the component or project workflow and create a new alert.</li>
+<li>Select Visits as the metric and configure the threshold condition.</li>
+<li>Set the frequency and evaluation period.</li>
+<li>Configure the recipients and available notification channels, then save.</li>
+</ol><h5 id="aa-deep-8-2-configuring-a-25-threshold">8.2 Configuring a 25% threshold</h5><p>A percentage threshold needs a comparison baseline. Distinguish between an absolute threshold (Visits exceed 10,000) and a percentage threshold (Visits increase by 25% compared with the selected baseline). The baseline, comparison period, and frequency must be selected in the alert configuration.</p><div class="example"><strong>Worked example:</strong> Yesterday's Visits = 10,000 and today's = 13,000. (13,000 − 10,000) ÷ 10,000 × 100 = +30%, so the condition is met. If today's Visits are 7,000, the change is −30%, which also meets the condition.</div><div class="warn"><strong>Trap</strong>An alert for Visits greater than 25 is not the same as an alert for Visits changing by more than 25%.</div><h5 id="aa-deep-8-3-sms-notifications">8.3 SMS notifications</h5><p>SMS availability depends on the applicable alert interface, account configuration, and supported notification options. Do not assume that entering a phone number automatically enables SMS. For exam questions, distinguish the alert condition from the delivery mechanism.</p><h5 id="aa-deep-8-4-anomaly-detection">8.4 Anomaly Detection</h5><p>Anomaly Detection identifies statistically unusual changes in metrics, such as unexpected purchase increases or decreases. It does not independently diagnose duplicate tracking or incorrect implementation.</p><h4 id="aa-deep-9-integrating-adobe-audience-manager-with-adobe-analytics">9. Integrating Adobe Audience Manager with Adobe Analytics</h4><h5 id="aa-deep-9-1-common-integration-methods">9.1 Common integration methods</h5><p><strong>Server-side forwarding:</strong> Adobe Analytics forwards eligible hit data to Audience Manager. This enables audience processing without a separate browser-side tracking implementation for the same purpose. Requirements typically include the appropriate Experience Cloud organization configuration, report suite and Audience Manager integration, correct forwarding configuration, and relevant permissions and governance controls.</p><p><strong>Audience sharing:</strong> Segments can be shared between Adobe solutions through supported integrations, such as Audience Manager to Analytics, Audience Manager to Target, and Audience Manager to Experience Platform.</p><h5 id="aa-deep-9-2-product-integrations">9.2 Product integrations</h5><div class="table-wrap"><table>
+<tbody><tr><th>Product</th><th>Integration with Adobe Analytics</th></tr>
+<tr><td>Adobe Audience Manager</td><td>Server-side forwarding and audience-sharing workflows</td></tr>
+<tr><td>Adobe Target</td><td>Analytics for Target (A4T)</td></tr>
+<tr><td>Adobe Experience Platform</td><td>Analytics Source Connector and supported data integrations</td></tr>
+<tr><td>Customer Journey Analytics</td><td>Cross-channel analysis using Experience Platform datasets</td></tr>
+<tr><td>Adobe Journey Optimizer</td><td>Experience Platform data and supported reporting integrations</td></tr>
+<tr><td>Adobe Experience Cloud</td><td>Shared identity, organization, and audience capabilities</td></tr>
+</tbody></table></div><p><strong>Analytics for Target (A4T)</strong> lets Analytics act as the reporting source for supported Target activities. Know the difference between Target activity setup, Analytics report suite selection, Experience Cloud identity, data collection integration, and A4T reporting.</p><h4 id="aa-deep-10-query-string-capturing">10. Query string capturing</h4><p>The two functions you need to distinguish have different parameter structures.</p><h5 id="aa-deep-10-1-s-util-getqueryparam">10.1 s.Util.getQueryParam()</h5><p>Syntax: <code>s.Util.getQueryParam(key, location, separator)</code></p><div class="table-wrap"><table>
+<tbody><tr><th>Parameter</th><th>Required?</th><th>Purpose</th></tr>
+<tr><td>key</td><td>Yes</td><td>Query parameter to retrieve</td></tr>
+<tr><td>location</td><td>No</td><td>URL or string to search</td></tr>
+<tr><td>separator</td><td>No</td><td>Query-string delimiter</td></tr>
+</tbody></table></div><pre><code>// For https://example.com/?cid=andre&amp;search=giant
+s.eVar1 = s.Util.getQueryParam("cid");   // andre
+
+// Search the referrer instead, with ":" as separator
+s.Util.getQueryParam("cid", document.referrer, ":");</code></pre><p>Important characteristics: it retrieves one parameter at a time, matching is case-sensitive, it can search a different location such as the referrer, and it supports a custom separator.</p><h5 id="aa-deep-10-2-s-getqueryparam">10.2 s.getQueryParam()</h5><p>Syntax: <code>s.getQueryParam(key, delimiter, location)</code></p><div class="table-wrap"><table>
+<tbody><tr><th>Parameter</th><th>Required?</th><th>Purpose</th></tr>
+<tr><td>key</td><td>Yes</td><td>One or more query parameters</td></tr>
+<tr><td>delimiter</td><td>No</td><td>Separates values when multiple keys are requested</td></tr>
+<tr><td>location</td><td>No</td><td>URL or string to search</td></tr>
+</tbody></table></div><pre><code>s.getQueryParam("cid");              // andre
+s.getQueryParam("cid,search", ":");  // andre:giant</code></pre><h5 id="aa-deep-10-3-comparison">10.3 Comparison</h5><div class="table-wrap"><table>
+<tbody><tr><th>Feature</th><th>s.Util.getQueryParam()</th><th>s.getQueryParam()</th></tr>
+<tr><td>Single parameter</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Multiple parameters</td><td>No</td><td>Yes</td></tr>
+<tr><td>Custom output delimiter</td><td>No equivalent multi-key behavior</td><td>Yes</td></tr>
+<tr><td>Custom URL location</td><td>Second argument</td><td>Third argument</td></tr>
+<tr><td>Case sensitivity</td><td>Case-sensitive</td><td>Treat as an implementation detail to verify</td></tr>
+</tbody></table></div><div class="warn"><strong>Note</strong>Do not assume the two functions are interchangeable. Your notes describe s.getQueryParam as not case-sensitive. Verify case behavior against the specific AppMeasurement version rather than assuming it.</div><h5 id="aa-deep-10-4-walmart-example">10.4 Walmart example</h5><pre><code>// https://www.walmart.com/search?q=bakery%20cookies+typeahead=bakery
+s.eVar1 = s.getQueryParam("q,typeahead", ":");
+// Expected: bakery cookies:bakery (subject to the URL's actual structure)</code></pre><h5 id="aa-deep-10-5-exam-tips">10.5 Exam tips</h5><ul>
+<li><code>s.Util.getQueryParam()</code> takes key, location, separator.</li>
+<li><code>s.getQueryParam()</code> takes key, delimiter, location.</li>
+<li>The location argument sits in a different position in each.</li>
+<li>Multi-parameter support is the major functional difference.</li>
+</ul><div class="warn"><strong>Installation correction</strong>The getQueryParam plug-in is not included in AppMeasurement by default. It is a separately installed Adobe Consulting plug-in with the signature <code>getQueryParam(qsp, de, url)</code>, where <code>qsp</code> is the comma-separated parameter names, <code>de</code> is the delimiter between returned values, and <code>url</code> is an optional URL. It is case-insensitive and supports multiple parameters. Do not assume the plug-in and the built-in method have the same signature or installation requirements.</div><h4 id="aa-deep-11-the-s-products-variable">11. The s.products variable</h4><p>The <code>s.products</code> variable captures product-related information for product-level reporting and commerce tracking, including category, product, quantity, price, merchandising eVars, and product-related events.</p><pre><code>// Product view
+s.products = ";Product A";
+s.events = "prodView";
+s.t();
+
+// Purchase of two units at a total line-item price of 100.00
+s.events = "purchase";
+s.products = ";Product A;2;100.00";</code></pre><p>General syntax: <code>category;product;quantity;price;events;eVars</code></p><p>Multiple products are separated by commas:</p><pre><code>s.products = ";Product A;2;100.00,;Product B;1;50.00";</code></pre><p>Keep product names consistent, make quantity and price reflect the intended transaction, confirm the purchase event is implemented correctly, and follow the delimiter structure exactly.</p><h4 id="aa-deep-12-troubleshooting-scenarios-and-answers">12. Troubleshooting scenarios and answers</h4><div class="qa">
+<div class="q">Q1: Purchases are higher than what is reported. How would you troubleshoot?</div>
+<div class="a">Inspect purchase calls in the Network tab and check for duplicate firing. Validate order IDs and transaction identifiers, then review the purchase implementation and the <code>s.products</code> variable. Check processing rules, VISTA rules, and report suite configuration. Compare metrics in Workspace using the same date range, segment, and attribution settings, and investigate duplicate tracking from multiple tags.</div>
+</div><div class="qa">
+<div class="q">Q2: What is the best way to troubleshoot an error?</div>
+<div class="a">Start with the browser's Developer Tools and Network tab. Inspect the tracking request, parameters, events, report suite ID, response, and any duplicate requests. Then validate processing and reporting.</div>
+</div><div class="qa">
+<div class="q">Q3: How do you limit the size of a beacon request while keeping the data?</div>
+<div class="a">Remove redundant variables, avoid sending duplicate values, use concise identifiers, reduce unnecessary custom dimensions, avoid repeatedly transmitting large objects, and send only the values relevant to each interaction. List variables can consolidate values but do not automatically reduce total bytes in every implementation.</div>
+</div><div class="qa">
+<div class="q">Q4: Which variables capture campaign name, campaign type, and visitor data for five homepage campaigns?</div>
+<div class="a">Campaign name in eVar1, campaign type in eVar2, and Unique Visitors as the standard metric. You do not need a separate visitor variable. Use the same eVars with different values for all five campaigns rather than creating five eVars. Example: <code>s.eVar1 = "Summer_Sale"; s.eVar2 = "Homepage_Banner"; s.events = "event1"; s.t();</code></div>
+</div><h4 id="aa-deep-13-corrections-and-important-distinctions">13. Corrections and important distinctions</h4><div class="table-wrap"><table>
+<tbody><tr><th>Topic</th><th>Correction</th></tr>
+<tr><td>Identity labels</td><td>Use I1 and I2, not L1 and L2.</td></tr>
+<tr><td>Geo latitude and longitude</td><td>Standard Adobe Geo dimensions are generally IP-derived and approximate. Only GPS-based values are S1.</td></tr>
+<tr><td>Data Feed timing</td><td>Data Feed is granular but not real-time. It delivers hourly or daily batches, and delivery can take several hours.</td></tr>
+<tr><td>Raw vs. processed columns</td><td><code>eVar1</code> is the value as sent; <code>post_evar1</code> is the value after processing. Use <code>post_</code> columns when you need processed values.</td></tr>
+<tr><td>Merchandising</td><td>Merchandising eVars, not merchandising props, provide product-level conversion attribution.</td></tr>
+<tr><td>Tracking response vs. reporting</td><td>A 2xx response means the collection server received the request, not that the hit was recorded. Complete reporting data typically appears about two hours after collection, though some hits take longer.</td></tr>
+<tr><td>Historical data</td><td>You cannot freely change processed historical hits through processing rules.</td></tr>
+<tr><td>Historical correction</td><td>Use the Data Repair API for supported columns, classifications for descriptive mappings, and Data Governance for privacy anonymization.</td></tr>
+</tbody></table></div><h5 id="aa-deep-processing-concepts-to-recall">Processing concepts to recall</h5><p>Dynamic variables, IP obfuscation, currency conversion, marketing channel processing, event deduplication, variable persistence, and transaction ID processing. Processing rules execute in a configured sequence.</p><h4 id="aa-deep-14-user-administration">14. User administration</h4><p>Access is managed through the Adobe Admin Console. Understand the difference between an Adobe user account, a product, a product profile, and permissions.</p><h5 id="aa-deep-adding-a-user">Adding a user</h5><ol>
+<li>Open Adobe Admin Console and go to Users.</li>
+<li>Select Add Users and enter the user's email and required details.</li>
+<li>Assign the Adobe Analytics product.</li>
+<li>Assign the appropriate product profile and confirm it has the required permissions.</li>
+<li>Save, and the user can then access Adobe Analytics.</li>
+</ol><h5 id="aa-deep-product-profiles">Product profiles</h5><p>A product profile determines what an assigned user can access, including report suites, Analysis Workspace, components, tools, and administrative functions. Profile names vary by organization, so the examples below are illustrative only.</p><div class="table-wrap"><table>
+<tbody><tr><th>User</th><th>Illustrative profile</th><th>Permissions</th></tr>
+<tr><td>Marketing analyst</td><td>Analytics Analyst</td><td>Workspace and reporting</td></tr>
+<tr><td>Analytics developer</td><td>Analytics Developer</td><td>Relevant reporting and implementation permissions</td></tr>
+<tr><td>Analytics administrator</td><td>Analytics Administrator</td><td>Administrative permissions</td></tr>
+</tbody></table></div><div class="note"><strong>Remember</strong>Assigning a user to a product does not automatically grant access to every report suite or administrative feature.</div><h4 id="aa-deep-15-data-layer-implementation-shopping-cart-with-cart-id">15. Data layer implementation: shopping cart with cart ID</h4><p>The cart identifier should be available in a structured data layer and mapped to the appropriate Analytics variable. A data layer is a structured JavaScript object that exposes business information to your tag management system.</p><pre><code>window.digitalData = {
+  page: { pageName: "Product Details", pageType: "Product" },
+  cart: {
+    cartID: "CART-123456",
+    cartTotal: 150.00,
+    currency: "USD",
+    products: [
+      { productID: "PROD-1001", productName: "Running Shoes", quantity: 1, price: 150.00 }
+    ]
+  },
+  event: { eventName: "cartAdd" }
+};</code></pre><div class="table-wrap"><table>
+<tbody><tr><th>Data layer field</th><th>Analytics mapping</th></tr>
+<tr><td>page.pageName</td><td>Page Name</td></tr>
+<tr><td>cart.cartID</td><td>eVar or prop, depending on reporting requirement</td></tr>
+<tr><td>cart.cartTotal</td><td>Appropriate currency or numeric metric</td></tr>
+<tr><td>cart.currency</td><td>Currency configuration</td></tr>
+<tr><td>cart.products.productID</td><td>Product identifier</td></tr>
+<tr><td>cart.products.productName</td><td>Product dimension</td></tr>
+<tr><td>cart.products.quantity</td><td>Products quantity</td></tr>
+<tr><td>event.eventName</td><td>Event trigger</td></tr>
+</tbody></table></div><h5 id="aa-deep-which-variable-should-store-the-cart-id">Which variable should store the cart ID?</h5><ul>
+<li><strong>eVar</strong> if you need the cart ID to persist across later hits or to receive conversion attribution.</li>
+<li><strong>Prop</strong> if you need hit-level reporting or do not require persistence.</li>
+</ul><pre><code>s.eVar20 = digitalData.cart.cartID;
+s.products = ";PROD-1001;1;150.00";
+s.events = "scAdd";
+s.t();</code></pre><h5 id="aa-deep-design-principles">Design principles</h5><p>Use consistent naming, expose business identifiers, support multiple products, include quantity, price, and currency, separate page information from commerce information, and support cart add, checkout, and purchase events. Keep the data layer independent of the tag management system, which can be Adobe Tags, Tealium iQ, or another platform.</p><h4 id="aa-deep-16-practice-scenarios">16. Practice scenarios</h4><div class="example"><strong>A.</strong> You need to understand every page a visitor viewed before purchasing. <br/><em>Answer:</em> A traffic dimension with pathing capabilities, such as the page dimension or a configured prop.</div><div class="example"><strong>B.</strong> A visitor sees three campaigns before purchasing and all three should receive full credit. <br/><em>Answer:</em> Participation.</div><div class="example"><strong>C.</strong> The same visitor's order should be divided equally across the three campaigns. <br/><em>Answer:</em> Linear.</div><div class="example"><strong>D.</strong> A customer views a product and later buys it, and you want the marketing channel associated with that specific product. <br/><em>Answer:</em> Merchandising eVar.</div><div class="example"><strong>E.</strong> One hit contains three product categories and you want them stored in a single variable. <br/><em>Answer:</em> List variable.</div><div class="example"><strong>F.</strong> A customer adds a product to the cart. <br/><em>Answer:</em> scAdd.</div><div class="example"><strong>G.</strong> A customer completes an order. <br/><em>Answer:</em> purchase.</div><div class="example"><strong>H.</strong> You want to retrieve both cid and campaign from a URL. <br/><em>Answer:</em> <code>s.getQueryParam("cid,campaign", ":")</code></div><div class="example"><strong>I.</strong> You need raw hit-level data for external analysis. <br/><em>Answer:</em> Data Feed.</div><div class="example"><strong>J.</strong> You need a scheduled report with Visits, Orders, and Revenue. <br/><em>Answer:</em> Data Warehouse or another appropriate extraction method, depending on dimensions and scale.</div><div class="example"><strong>K.</strong> A visitor's location is represented by latitude and longitude. <br/><em>Answer:</em> S1, when the values represent precise geolocation.</div><div class="example"><strong>L.</strong> A person requests deletion of data tied to an authenticated customer ID. <br/><em>Answer:</em> DEL-PERSON, when the relevant ID-PERSON is present and the component is labeled accordingly.</div><div class="example"><strong>M.</strong> The same page view appears twice. <br/><em>Answer:</em> Inspect duplicate tracking implementations, multiple AppMeasurement instances, tag manager rules, and duplicate event triggers.</div><div class="example"><strong>N.</strong> A marketing analyst needs access to only selected report suites. <br/><em>Answer:</em> Assign the appropriate product profile with the necessary permissions and report suite access.</div><h4 id="aa-deep-17-quick-revision-sheet">17. Quick revision sheet</h4><div class="table-wrap"><table>
+<tbody><tr><th>Question / keyword</th><th>Answer</th></tr>
+<tr><td>Most granular data extraction</td><td>Data Feed</td></tr>
+<tr><td>Aggregated report extraction</td><td>Data Warehouse</td></tr>
+<tr><td>Programmatic reporting</td><td>Analytics API</td></tr>
+<tr><td>Excel reporting</td><td>Report Builder</td></tr>
+<tr><td>Processed hit-level data</td><td>Data Feed <code>post_</code> columns</td></tr>
+<tr><td>Directly identifiable data</td><td>I1</td></tr>
+<tr><td>Indirectly identifiable data</td><td>I2</td></tr>
+<tr><td>Precise geolocation</td><td>S1</td></tr>
+<tr><td>Broad geolocation</td><td>S2</td></tr>
+<tr><td>Include in all access requests</td><td>ACC-ALL</td></tr>
+<tr><td>Include for matching person</td><td>ACC-PERSON</td></tr>
+<tr><td>Device-based deletion</td><td>DEL-DEVICE</td></tr>
+<tr><td>Person-based deletion</td><td>DEL-PERSON</td></tr>
+<tr><td>Participation attribution</td><td>Full credit to each participating item</td></tr>
+<tr><td>Linear attribution</td><td>Equal distribution of credit</td></tr>
+<tr><td>Conversion attribution variable</td><td>eVar</td></tr>
+<tr><td>Traffic variable</td><td>Prop</td></tr>
+<tr><td>Multiple values in one variable</td><td>List variable</td></tr>
+<tr><td>Product-level marketing attribution</td><td>Merchandising eVar</td></tr>
+<tr><td>Completed order</td><td>purchase</td></tr>
+<tr><td>Product added to cart</td><td>scAdd</td></tr>
+<tr><td>Product viewed</td><td>prodView</td></tr>
+<tr><td>Checkout started</td><td>scCheckout</td></tr>
+<tr><td>Duplicate tracking</td><td>Inspect Network requests</td></tr>
+<tr><td>Percentage-based alert</td><td>Percentage change condition</td></tr>
+<tr><td>Add an Analytics user</td><td>Adobe Admin Console</td></tr>
+<tr><td>User permissions</td><td>Product profile</td></tr>
+<tr><td>Multiple query parameters</td><td>s.getQueryParam()</td></tr>
+<tr><td>Future incoming data changes</td><td>Processing Rules</td></tr>
+<tr><td>Supported historical hit corrections</td><td>Data Repair API</td></tr>
+<tr><td>Historical descriptive mappings</td><td>Classifications</td></tr>
+</tbody></table></div><h4 id="aa-deep-18-final-preparation-priorities">18. Final preparation priorities</h4><h5 id="aa-deep-priority-1-master-these">Priority 1: Master these</h5><ul>
+<li>Data Feed vs. Data Warehouse.</li>
+<li>Processing order and historical corrections.</li>
+<li>GDPR privacy labels and identity namespaces.</li>
+<li>eVars vs. props.</li>
+<li>Merchandising eVars.</li>
+<li>Participation vs. Linear attribution.</li>
+<li>Standard commerce events.</li>
+</ul><h5 id="aa-deep-priority-2-understand-implementation">Priority 2: Understand implementation</h5><ul>
+<li>AppMeasurement and duplicate tracking.</li>
+<li>Query string functions.</li>
+<li>Products variable syntax.</li>
+<li>Data layer implementation.</li>
+<li>Audience Manager integration.</li>
+<li>Processing rules and data repair.</li>
+</ul><h5 id="aa-deep-priority-3-administration-and-reporting">Priority 3: Administration and reporting</h5><ul>
+<li>Alerts and percentage thresholds.</li>
+<li>Adobe Admin Console and product profiles.</li>
+<li>Anomaly Detection.</li>
+<li>Workspace troubleshooting.</li>
+<li>Data extraction options.</li>
+</ul><div class="ok"><strong>Study approach</strong>Focus on scenarios rather than isolated definitions. Many questions test whether you can distinguish two features that look similar but solve different problems.</div></div></section><section class="part" id="aa-src"><header class="part-head"><span class="kind">Reference</span><h3>Sources, open items and corrections</h3><ul class="intoc"><li><a href="#aa-src-13-sources">13. Sources</a></li><li><a href="#aa-src-14-open-items">14. Open items</a></li><li><a href="#aa-src-15-corrections-to-earlier-notes">15. Corrections to earlier notes</a></li></ul></header><div class="prose"><h4 id="aa-src-13-sources">13. Sources</h4><p>All sources were accessed for this guide. The page titles are as published by Adobe.</p><p><strong>Certification</strong></p><ul>
+<li>Adobe Analytics Architect Master certification page (AD0-E207): https://certification.adobe.com/certification/architect-master/168</li>
+<li>Adobe Analytics Architect Master Prep Guide (course page): https://certification.adobe.com/courses/1199. The prep guide content is inside a course player that could not be read as text.</li>
+<li>Adobe Analytics Certification Overview: https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/aa/aa-overview</li>
+</ul><p><strong>Note on links provided earlier:</strong> A practice-test link is labeled “AD4-E207.” The exam code is <strong>AD0-E207</strong>. The link page is https://certification.adobe.com/courses/1005.</p><p><strong>Implementation and admin documentation</strong></p><ul>
+<li>Processing order for data in Adobe Analytics: https://experienceleague.adobe.com/en/docs/analytics/technotes/processing-order</li>
+<li>Processing rules overview and tips: https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html</li>
+<li>Processing rule dimensions and metrics: https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rule-dimensions.html</li>
+<li>VISTA rules: https://experienceleague.adobe.com/docs/analytics/technotes/vista.html</li>
+<li>purchaseID: https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/purchaseid</li>
+<li>Event serialization: https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/events/event-serialization</li>
+<li>Util.getQueryParam: https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/util-getqueryparam</li>
+<li>getQueryParam plug-in: https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/plugins/getqueryparam</li>
+<li>Add the embed code (Tags): https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code.html</li>
+<li>appendVisitorIDsTo (cross-domain): https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/appendvisitorid.html</li>
+</ul><p><strong>Virtual report suites and report time processing</strong></p><ul>
+<li>Virtual report suites overview: https://experienceleague.adobe.com/en/docs/analytics/components/virtual-report-suites/vrs-about</li>
+<li>Virtual report suite FAQs: https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-faq.html</li>
+<li>Create virtual report suites: https://experienceleague.adobe.com/en/docs/analytics/components/virtual-report-suites/vrs-workflow/vrs-create</li>
+<li>Report time processing: https://experienceleague.adobe.com/en/docs/analytics/components/virtual-report-suites/vrs-report-time-processing</li>
+</ul><p><strong>Data export and ingestion</strong></p><ul>
+<li>Data sources overview: https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/overview</li>
+<li>Transaction ID data sources: https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/transactionid</li>
+<li>Which Adobe Analytics tool should I use: https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/which-analytics-tool</li>
+<li>Livestream and Report Builder recommendations (same page as above)</li>
+</ul><p><strong>Privacy and governance</strong></p><ul>
+<li>Privacy Service overview: https://experienceleague.adobe.com/en/docs/experience-platform/privacy/home</li>
+<li>Privacy Service and Experience Cloud applications: https://experienceleague.adobe.com/en/docs/experience-platform/privacy/experience-cloud-apps</li>
+<li>Data privacy labels for Analytics variables: https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/data-governance/data-labels/gdpr-labels</li>
+</ul><h4 id="aa-src-14-open-items">14. Open items</h4><p>These items are not yet confirmed against Adobe documentation. Check them before relying on them.</p><ul>
+<li>Campaign persistence (once per visit or per visitor) and how it affects instance counts.</li>
+<li>Exact merchandising eVar syntax in <code>s.products</code> for each binding type.</li>
+<li>Which export tool is recommended for a specific file format such as Tableau .tde. The Adobe pages reviewed do not list this format.</li>
+<li>Whether processing rules can copy hits to another report suite. Adobe documents copying rules between report suites and VISTA rules for copying hits, but did not confirm a processing rule copy action.</li>
+<li>Which function sends data to a different report suite without a page reload.</li>
+<li>The exact consent mechanism for Adobe Experience Platform Web SDK and Tags.</li>
+<li>Current status of legacy concepts (for example, Dynamic Tag Manager and the older VISTA-based approaches).</li>
+<li>Adobe’s current guidance on changing eVar allocation in a live report suite.</li>
+</ul><h4 id="aa-src-15-corrections-to-earlier-notes">15. Corrections to earlier notes</h4><p>The earlier study guide contained the following errors. This version replaces them.</p><ul>
+<li>Processing rule string comparisons are <strong>not</strong> case-sensitive. The earlier guide said they were.</li>
+<li>Question 1 (37 months for purchase ID) is <strong>correct</strong>. The earlier review flagged it wrongly.</li>
+<li>VISTA is a last-resort tool that needs Adobe Professional Services. It is not simply “legacy.”</li>
+<li>Full-processing data sources were discontinued. Only summary and transaction ID types are offered.</li>
+<li>Transaction IDs expire after 25 months.</li>
+<li>Event serialization does not expire, and deduplication is global across visitors.</li>
+<li>Data Warehouse, Data Feeds, and Livestream each have different use cases. Livestream is the documented near-real-time hit-level option.</li>
+</ul></div></section></section>
+</main>
+</body>
+</html>

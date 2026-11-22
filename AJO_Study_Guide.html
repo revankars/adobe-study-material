@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Journey Optimizer (AD0-E607) Study Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1f73b7 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .toc {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .toc h2 {
+            color: #1f73b7;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1f73b7;
+            padding-bottom: 10px;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+            margin-left: 20px;
+        }
+        
+        .toc a {
+            color: #1f73b7;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section h2 {
+            color: #1f73b7;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #1f73b7;
+            padding-bottom: 15px;
+        }
+        
+        .section h3 {
+            color: #0d47a1;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .section h4 {
+            color: #333;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .definition-box {
+            background: #e3f2fd;
+            border-left: 4px solid #1f73b7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .key-point {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th {
+            background: #0d47a1;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+        
+        table tr:hover {
+            background: #e3f2fd;
+        }
+        
+        .code-block {
+            background: #f4f4f4;
+            border-left: 4px solid #666;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .example {
+            background: #f0f7ff;
+            border: 1px solid #1f73b7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .example strong {
+            color: #0d47a1;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        button {
+            background: #1f73b7;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #0d47a1;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .breadcrumb {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .breadcrumb a {
+            color: #1f73b7;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Adobe Journey Optimizer</h1>
+            <p>Business Practitioner Professional (AD0-E607) - Comprehensive Study Guide</p>
+            <p>Exam Date: Monday, August 24, 2026</p>
+        </header>
+        
+        <div class="toc">
+            <h2>Study Domains</h2>
+            <ul>
+                <li><a onclick="showSection('domain1')">📊 Domain 1: Campaign and Journey Optimization (48%)</a></li>
+                <li><a onclick="showSection('domain2')">🎁 Domain 2: Offer Decisioning (12%)</a></li>
+                <li><a onclick="showSection('domain3')">📝 Domain 3: Content Authoring (20%)</a></li>
+                <li><a onclick="showSection('domain4')">🔧 Domain 4: Foundations of AEP (20%)</a></li>
+                <li><a onclick="showSection('guardrails')">⚠️ Critical: Guardrails & System Limits</a></li>
+                <li><a onclick="showSection('decisiontrees')">🎯 Decision Trees & Diagnosis</a></li>
+            </ul>
+        </div>
+        
+        <!-- DOMAIN 1 -->
+        <div id="domain1" class="section active">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Domain 1: Campaign and Journey Optimization (48%)</h2>
+            
+            <h3>Journey Types & Entry Points</h3>
+            
+            <h4>1. Unitary Event Journey</h4>
+            <div class="definition-box">
+                <strong>Trigger:</strong> Customer performs an action (click, purchase, form submission)<br>
+                <strong>Timing:</strong> Real-time, immediate<br>
+                <strong>Reentrance:</strong> 5-minute block (default)<br>
+                <strong>Event payload limit:</strong> 64 KB
+            </div>
+            <p><strong>Best for:</strong> Immediate reactions, real-time personalization</p>
+            <div class="example">
+                <strong>Example:</strong> Customer abandons cart → email within 15 minutes
+            </div>
+            <div class="key-point">
+                <strong>Key guardrails:</strong>
+                <ul>
+                    <li>5-minute reentrance block prevents duplicate messages</li>
+                    <li>64 KB event payload limit (exceeding drops event silently)</li>
+                    <li>1 MB journey instance limit (data accumulation during execution)</li>
+                    <li>Cannot coexist with business events in same journey</li>
+                </ul>
+            </div>
+            
+            <h4>2. Business Event Journey</h4>
+            <div class="definition-box">
+                <strong>Trigger:</strong> External system sends an event (not customer action)<br>
+                <strong>Timing:</strong> Scheduled or batch<br>
+                <strong>Best for:</strong> Aggregated data, scheduled sends
+            </div>
+            <div class="example">
+                <strong>Example:</strong> Daily purchase summary email at midnight
+            </div>
+            <div class="key-point">
+                <strong>Key guardrails:</strong>
+                <ul>
+                    <li>Cannot coexist with unitary events in same journey</li>
+                    <li>Cannot coexist with audience qualification</li>
+                </ul>
+            </div>
+            
+            <h4>3. Read Audience Journey</h4>
+            <div class="definition-box">
+                <strong>Trigger:</strong> Scheduled batch read of an audience<br>
+                <strong>Timing:</strong> Daily, weekly schedule or triggered by business event<br>
+                <strong>Best for:</strong> Batch campaigns, audience-wide initiatives
+            </div>
+            <div class="example">
+                <strong>Example:</strong> Every Monday 9 AM, read all VIP customers and send weekly digest
+            </div>
+            <div class="key-point">
+                <strong>Key guardrails:</strong>
+                <ul>
+                    <li><strong>5 concurrent instances max</strong> (organization-wide) - Stagger 5-10 minutes apart</li>
+                    <li>12-hour processing timeout</li>
+                    <li>20K profiles/sec sandbox throughput</li>
+                    <li>One audience per journey</li>
+                    <li>Cannot use with Campaign Standard activities</li>
+                </ul>
+            </div>
+            
+            <h4>4. Audience Qualification Journey</h4>
+            <div class="definition-box">
+                <strong>Trigger:</strong> Customer enters or exits an audience in real-time<br>
+                <strong>Timing:</strong> Real-time as they qualify/disqualify<br>
+                <strong>Activation delay:</strong> Up to 10 minutes
+            </div>
+            <div class="example">
+                <strong>Example:</strong> Churn score changes → immediately trigger retention journey
+            </div>
+            
+            <h3>Journey Activities</h3>
+            <table>
+                <tr>
+                    <th>Activity</th>
+                    <th>Purpose</th>
+                    <th>Key Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>Send email message</td>
+                    <td>Send promotional/transactional email</td>
+                </tr>
+                <tr>
+                    <td><strong>SMS</strong></td>
+                    <td>Send text message</td>
+                    <td>Send verification code or alert</td>
+                </tr>
+                <tr>
+                    <td><strong>Push</strong></td>
+                    <td>Send mobile push notification</td>
+                    <td>Send app notification</td>
+                </tr>
+                <tr>
+                    <td><strong>In-app</strong></td>
+                    <td>Display message within app</td>
+                    <td>Show discount banner in app</td>
+                </tr>
+                <tr>
+                    <td><strong>Condition</strong></td>
+                    <td>Branch based on rules</td>
+                    <td>IF loyalty_tier = VIP THEN... ELSE...</td>
+                </tr>
+                <tr>
+                    <td><strong>Wait</strong></td>
+                    <td>Pause for duration or until event</td>
+                    <td>Wait 3 days before next action</td>
+                </tr>
+                <tr>
+                    <td><strong>Content Decision</strong></td>
+                    <td>Select best offer to show</td>
+                    <td>Use Offer Decisioning</td>
+                </tr>
+                <tr>
+                    <td><strong>Custom Action</strong></td>
+                    <td>Call external system</td>
+                    <td>Log to analytics, call webhook</td>
+                </tr>
+                <tr>
+                    <td><strong>Jump</strong></td>
+                    <td>Transfer to another journey</td>
+                    <td>Hand off to nurture journey</td>
+                </tr>
+            </table>
+            
+            <h3>Journey Validation</h3>
+            <h4>What Gets Validated:</h4>
+            <ul>
+                <li>✅ Activity configuration (required fields filled)</li>
+                <li>✅ Event setup (correctly configured)</li>
+                <li>✅ Expression syntax (valid, fields exist)</li>
+                <li>✅ Audience references (exist and accessible)</li>
+                <li>✅ Message content (valid)</li>
+                <li>✅ Payload size (under 2 MB warning threshold)</li>
+                <li>✅ Activity count (under 50)</li>
+                <li>✅ Journey structure (no orphaned activities)</li>
+            </ul>
+            
+            <h4>What Does NOT Get Validated:</h4>
+            <ul>
+                <li>❌ Whether conditions make logical sense</li>
+                <li>❌ Whether journey achieves business goals</li>
+                <li>❌ Whether fallback offers are appropriate</li>
+            </ul>
+            
+            <h3>Journey Evaluation Metrics</h3>
+            <table>
+                <tr>
+                    <th>Metric</th>
+                    <th>Definition</th>
+                    <th>What It Tells You</th>
+                </tr>
+                <tr>
+                    <td><strong>Entries</strong></td>
+                    <td>Total profiles who entered</td>
+                    <td>Journey reach</td>
+                </tr>
+                <tr>
+                    <td><strong>Exits</strong></td>
+                    <td>Total who completed/exited</td>
+                    <td>Completion</td>
+                </tr>
+                <tr>
+                    <td><strong>Completion Rate</strong></td>
+                    <td>(Exits / Entries) × 100</td>
+                    <td>% of profiles finishing journey</td>
+                </tr>
+                <tr>
+                    <td><strong>Errors</strong></td>
+                    <td>Profiles in ERROR status</td>
+                    <td>System issues (usually 1 MB limit breach)</td>
+                </tr>
+                <tr>
+                    <td><strong>Drop-off by Activity</strong></td>
+                    <td>Where profiles exit mid-journey</td>
+                    <td>Problem activities to investigate</td>
+                </tr>
+                <tr>
+                    <td><strong>Conversion Rate</strong></td>
+                    <td>% who completed desired action</td>
+                    <td>Success of journey goal</td>
+                </tr>
+            </table>
+            
+            <h3>Troubleshooting Journey Issues</h3>
+            <table>
+                <tr>
+                    <th>Problem</th>
+                    <th>Likely Cause</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>ZERO profiles entering</td>
+                    <td>64 KB event payload limit</td>
+                    <td>Reduce event payload size</td>
+                </tr>
+                <tr>
+                    <td>SOME profiles in ERROR mid-journey</td>
+                    <td>1 MB instance limit breach</td>
+                    <td>Reduce API data or simplify conditions</td>
+                </tr>
+                <tr>
+                    <td>Journey won't publish</td>
+                    <td>50-activity limit OR 2 MB email content</td>
+                    <td>Split journey OR reduce email size</td>
+                </tr>
+                <tr>
+                    <td>High error rate (>10%)</td>
+                    <td>Data accumulation for certain profiles</td>
+                    <td>Check profile data volume patterns</td>
+                </tr>
+                <tr>
+                    <td>Low completion rate</td>
+                    <td>Restrictive conditions OR long waits</td>
+                    <td>Review conditions and timing</td>
+                </tr>
+                <tr>
+                    <td>Profiles stuck mid-journey</td>
+                    <td>Condition not matching OR system issue</td>
+                    <td>Check condition logic in journey logs</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- DOMAIN 2 -->
+        <div id="domain2" class="section">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Domain 2: Offer Decisioning (12%)</h2>
+            
+            <h3>Core Concepts</h3>
+            
+            <h4>1. Offer</h4>
+            <div class="definition-box">
+                An individual piece of content/promotion<br>
+                <strong>Examples:</strong> "Get 20% off", "Free shipping", product recommendation<br>
+                <strong>Contains:</strong> Name, channels, content, constraints, eligibility rules
+            </div>
+            
+            <h4>2. Collection</h4>
+            <div class="definition-box">
+                Grouping of related offers<br>
+                <strong>Example:</strong> "Summer Promotions" collection with 5 summer offers<br>
+                <strong>Purpose:</strong> Organize offers logically, control scope
+            </div>
+            
+            <h4>3. Decision</h4>
+            <div class="definition-box">
+                Logic that selects which offer to show<br>
+                <strong>Specifies:</strong> Collection, eligibility rules, ranking/priority, capping, fallback offer
+            </div>
+            
+            <h4>4. Placement</h4>
+            <div class="definition-box">
+                Where and how offer is delivered<br>
+                <strong>Tied to channel:</strong> Email header, Web banner, SMS text, In-app popup
+            </div>
+            
+            <h4>5. Decision Policy</h4>
+            <div class="definition-box">
+                Complete machine that brings it all together<br>
+                <strong>Formula:</strong> Decision Policy = Collection + Decision Logic + Placements + Offers
+            </div>
+            
+            <h3>The 4 Stages of Offer Decisioning</h3>
+            
+            <div class="example">
+                <strong>Stage 1: Create Offers</strong><br>
+                Define individual offers with content, channels, constraints<br>
+                Set eligibility rules per offer<br>
+                Status: Draft → Approved → Live
+            </div>
+            
+            <div class="example">
+                <strong>Stage 2: Organize Into Collections</strong><br>
+                Group related offers<br>
+                Creates logical structure
+            </div>
+            
+            <div class="example">
+                <strong>Stage 3: Build Decisions</strong><br>
+                Create decision logic (ranking, capping, eligibility)<br>
+                Select collection<br>
+                Define fallback offers<br>
+                Set up constraints
+            </div>
+            
+            <div class="example">
+                <strong>Stage 4: Deploy Decisions</strong><br>
+                Use decision in journey via Content Decision activity<br>
+                System evaluates rules in real-time for each customer<br>
+                Best matching offer selected and delivered
+            </div>
+            
+            <h3>Static vs. Dynamic Offers</h3>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Static Offer</th>
+                    <th>Dynamic Offer</th>
+                </tr>
+                <tr>
+                    <td><strong>Definition</strong></td>
+                    <td>Fixed content for all customers</td>
+                    <td>Content changes based on customer data</td>
+                </tr>
+                <tr>
+                    <td><strong>Example</strong></td>
+                    <td>"Get 20% off your next purchase"</td>
+                    <td>"Get {{discountPercentage}}% off, {{firstName}}"</td>
+                </tr>
+                <tr>
+                    <td><strong>Personalization</strong></td>
+                    <td>None (same for everyone)</td>
+                    <td>Uses profile attributes, dynamic fields</td>
+                </tr>
+                <tr>
+                    <td><strong>Complexity</strong></td>
+                    <td>Simple, easy to manage</td>
+                    <td>More complex, needs data setup</td>
+                </tr>
+                <tr>
+                    <td><strong>Performance</strong></td>
+                    <td>Faster (no data lookup needed)</td>
+                    <td>Slightly slower (evaluates expressions)</td>
+                </tr>
+            </table>
+            
+            <div class="key-point">
+                <strong>Exam Pattern:</strong> If scenario says "personalize based on customer data" → dynamic offer
+            </div>
+            
+            <h3>Capping & Ranking Logic</h3>
+            
+            <h4>How Capping Works</h4>
+            <div class="definition-box">
+                Capping is <strong>PER-OFFER</strong>, not decision-level
+            </div>
+            
+            <div class="example">
+                <strong>Example:</strong><br>
+                Offer A: "Robo-Advisor Service" (priority 1, capped at 3/month)<br>
+                Offer B: "Managed Portfolio" (priority 2, capped at 3/month)<br>
+                Offer C: "Self-Directed Trading" (priority 3, capped at 3/month)<br>
+                <br>
+                Customer has received Offer A 3 times this month (capped)<br>
+                System evaluates: A is capped, skip it<br>
+                System evaluates: B hasn't reached cap → <strong>deliver B</strong><br>
+                (Does NOT deliver fallback)
+            </div>
+            
+            <div class="warning">
+                <strong>Key Rule:</strong> When top-priority offer is capped → system selects next ranked uncapped offer. Does NOT fail decision.
+            </div>
+            
+            <h3>Using Offer Decisioning in Journeys</h3>
+            
+            <h4>Content Decision Activity</h4>
+            <ul>
+                <li>Select Decision Policy</li>
+                <li>System evaluates rules for profile</li>
+                <li>Best matching offer selected</li>
+                <li>Offer rendered in message</li>
+            </ul>
+            
+            <h3>When to Use Offer Decisioning</h3>
+            <table>
+                <tr>
+                    <th>Use When</th>
+                    <th>Don't Use When</th>
+                </tr>
+                <tr>
+                    <td>Need to choose WHICH offer based on eligibility</td>
+                    <td>Just personalizing email content</td>
+                </tr>
+                <tr>
+                    <td>Multiple offers available, system selects best</td>
+                    <td>A/B testing different subject lines</td>
+                </tr>
+                <tr>
+                    <td>Need frequency capping per offer</td>
+                    <td>Sending same generic promo to all</td>
+                </tr>
+                <tr>
+                    <td>Need ranking/priority logic</td>
+                    <td>Simple one-to-one message send</td>
+                </tr>
+            </table>
+            
+            <h3>Test Profiles & Simulation</h3>
+            
+            <h4>Test Profiles</h4>
+            <ul>
+                <li>Fake profiles used to simulate offer decisioning</li>
+                <li>Verify correct offer selected for specific segment</li>
+                <li>Test eligibility rules and capping</li>
+                <li>Validate before deploying to production</li>
+            </ul>
+            
+            <h4>Offer Simulation</h4>
+            <ul>
+                <li>Run decision policy against test profile</li>
+                <li>See which offer would be selected</li>
+                <li>Debug rules if wrong offer chosen</li>
+            </ul>
+        </div>
+        
+        <!-- DOMAIN 3 -->
+        <div id="domain3" class="section">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Domain 3: Content Authoring (20%)</h2>
+            
+            <h3>Personalized Fields</h3>
+            
+            <h4>What They Are</h4>
+            <div class="definition-box">
+                Placeholders replaced with actual customer data at send time
+            </div>
+            
+            <h4>Syntax</h4>
+            <div class="code-block">
+{{profile.attributes.firstName}}
+{{event.productName}}
+{{profile.segmentMembership.goldTier}}
+{{context.journeyName}}
+            </div>
+            
+            <h4>Data Sources</h4>
+            <ul>
+                <li><strong>Profile attributes:</strong> firstName, email, loyaltyTier, lastPurchaseDate</li>
+                <li><strong>Event data:</strong> productViewed, cartValue, eventTime</li>
+                <li><strong>Contextual data:</strong> journeyName, campaignId</li>
+            </ul>
+            
+            <h4>Key Rules</h4>
+            <ul>
+                <li>✅ Fields must exist in profile or event schema</li>
+                <li>❌ Cannot reference non-existent fields (causes failure)</li>
+                <li>✅ Can use conditional logic: {{if profile.attributes.loyaltyTier == "VIP" then "exclusive offer" else "standard offer"}}</li>
+            </ul>
+            
+            <h3>Visual Fragments</h3>
+            
+            <div class="definition-box">
+                <strong>What:</strong> Pre-designed HTML blocks (headers, footers, banners, images)<br>
+                <strong>Size limit:</strong> 100 KB max<br>
+                <strong>Channels:</strong> Email ONLY<br>
+                <strong>Status required:</strong> Must be "Live" to use
+            </div>
+            
+            <h4>Use Cases</h4>
+            <ul>
+                <li>Include branded footer in every email</li>
+                <li>Reuse logo + social links + unsubscribe + copyright</li>
+                <li>Static design blocks that don't change per customer</li>
+            </ul>
+            
+            <h4>Benefits</h4>
+            <ul>
+                <li>✅ Consistency across all emails</li>
+                <li>✅ Update once, all messages update</li>
+                <li>✅ Version control for shared content</li>
+            </ul>
+            
+            <h3>Expression Fragments</h3>
+            
+            <div class="definition-box">
+                <strong>What:</strong> Reusable personalization logic/expressions<br>
+                <strong>Size limit:</strong> 200 KB max<br>
+                <strong>Channels:</strong> Email, SMS, Push (NOT in-app)<br>
+                <strong>Status required:</strong> Must be "Live" to use
+            </div>
+            
+            <h4>Example</h4>
+            <div class="code-block">
+{{if profile.attributes.loyaltyTier == "GOLD" 
+   then "You get 30% off" 
+   else "You get 10% off"}}
+            </div>
+            
+            <h4>Use Cases</h4>
+            <ul>
+                <li>Apply same loyalty tier logic to all messages</li>
+                <li>IF/THEN logic for different messages</li>
+                <li>Reusable business rules</li>
+            </ul>
+            
+            <h4>Critical Rule</h4>
+            <div class="warning">
+                <strong>Expression fragments CANNOT be used in in-app messages</strong><br>
+                Use personalization fields for in-app instead
+            </div>
+            
+            <h3>Email Templates</h3>
+            
+            <div class="definition-box">
+                <strong>What:</strong> Pre-designed email structure<br>
+                <strong>Use:</strong> Reuse layout and branding across journeys<br>
+                <strong>Can include:</strong> Personalization fields, fragments, dynamic content
+            </div>
+            
+            <h4>Template vs. Fragment Difference</h4>
+            <table>
+                <tr>
+                    <th>Template</th>
+                    <th>Fragment</th>
+                </tr>
+                <tr>
+                    <td>Entire email structure</td>
+                    <td>Reusable content block</td>
+                </tr>
+                <tr>
+                    <td>Layout + content</td>
+                    <td>Personalization logic OR visual block</td>
+                </tr>
+                <tr>
+                    <td>Multiple uses across journeys</td>
+                    <td>Inserted into templates</td>
+                </tr>
+                <tr>
+                    <td>Can be modified per use</td>
+                    <td>Must stay consistent (live status)</td>
+                </tr>
+            </table>
+            
+            <h3>Asset Essentials</h3>
+            
+            <div class="definition-box">
+                <strong>What:</strong> System for storing and managing images/files<br>
+                <strong>Benefit:</strong> Images update automatically when source changes
+            </div>
+            
+            <h4>Features</h4>
+            <ul>
+                <li>Upload images to central repository</li>
+                <li>Reference by asset ID in emails</li>
+                <li>Version control (update source, all references update)</li>
+                <li>Organize in folders</li>
+            </ul>
+            
+            <h3>Content Experiments (A/B Testing)</h3>
+            
+            <h4>What You Can Test</h4>
+            <ul>
+                <li>✅ Subject line variations</li>
+                <li>✅ Email body copy variations</li>
+                <li>✅ Call-to-action button text</li>
+                <li>✅ Images/visual elements</li>
+                <li>✅ Different offers</li>
+            </ul>
+            
+            <h4>What You CANNOT Test</h4>
+            <ul>
+                <li>❌ Different channels (email vs. SMS) in same experiment</li>
+                <li>❌ Targeting/audience (experiment applies to all qualified profiles)</li>
+            </ul>
+            
+            <h4>Experiment Setup</h4>
+            <div class="example">
+                <strong>Example:</strong><br>
+                Control (A): "Save 30%"<br>
+                Variant B: "Limited time: 30% off"<br>
+                Variant C: "Your exclusive offer inside"<br>
+                <br>
+                Traffic split: 33% each<br>
+                Win criteria: Highest click rate<br>
+                Winner auto-sent to remaining profiles
+            </div>
+            
+            <h4>Interpreting Results</h4>
+            <div class="key-point">
+                <strong>Important:</strong> When results are close (1-2% difference), test a different variable next. The variable is likely already optimized.
+            </div>
+            
+            <h3>Fragment Usage Guide</h3>
+            <table>
+                <tr>
+                    <th>Need</th>
+                    <th>Use This</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Add customer name</td>
+                    <td>Personalization field</td>
+                    <td>{{profile.attributes.firstName}}</td>
+                </tr>
+                <tr>
+                    <td>Same footer in all emails</td>
+                    <td>Visual fragment (HTML)</td>
+                    <td>Logo + social links</td>
+                </tr>
+                <tr>
+                    <td>Same loyalty logic</td>
+                    <td>Expression fragment</td>
+                    <td>{{if loyaltyTier == VIP...}}</td>
+                </tr>
+                <tr>
+                    <td>Test subject lines</td>
+                    <td>Content experiment</td>
+                    <td>A/B test variations</td>
+                </tr>
+                <tr>
+                    <td>Reuse email layout</td>
+                    <td>Email template</td>
+                    <td>Pre-built structure</td>
+                </tr>
+                <tr>
+                    <td>Store and version images</td>
+                    <td>Asset Essentials</td>
+                    <td>Central image repository</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- DOMAIN 4 -->
+        <div id="domain4" class="section">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Domain 4: Foundations of Adobe Experience Platform (20%)</h2>
+            
+            <h3>Schemas: Profile vs. Event</h3>
+            
+            <h4>Memory Trick</h4>
+            <div class="key-point">
+                <strong>PROFILE = "WHO is the customer?" (Static attributes)</strong><br>
+                <strong>EVENT = "WHAT did they do?" + "WHEN?" (Time-series actions)</strong>
+            </div>
+            
+            <h4>Profile Schema (XDM Individual Profile)</h4>
+            <div class="definition-box">
+                <strong>Purpose:</strong> Stores customer attributes (WHO they are)<br>
+                <strong>Data type:</strong> Personal info — name, email, age, preferences, loyalty tier<br>
+                <strong>When enabled for profile:</strong> Profile data stored in Unified Profile Service (real-time access)<br>
+                <strong>Example fields:</strong> firstName, lastName, email, phone, loyaltyTier, lastPurchaseDate
+            </div>
+            
+            <h4>Event Schema (XDM ExperienceEvent)</h4>
+            <div class="definition-box">
+                <strong>Purpose:</strong> Stores what customers did (behavioral events)<br>
+                <strong>Data type:</strong> Time-series events — purchase, click, view, search<br>
+                <strong>When enabled for profile:</strong> Event data stored and linked to customer profiles<br>
+                <strong>Example fields:</strong> eventType, timestamp, productViewed, purchaseAmount, pageURL
+            </div>
+            
+            <h3>Datasets</h3>
+            
+            <h4>Datasets Enabled for Profile</h4>
+            <ul>
+                <li>✅ Data ingested into Unified Profile Service (real-time)</li>
+                <li>✅ Available for real-time personalization in journeys</li>
+                <li>✅ Can be referenced in journey conditions</li>
+                <li>⚠️ Counts against engageable profile quota (costs money)</li>
+            </ul>
+            
+            <h4>Datasets NOT Enabled for Profile</h4>
+            <ul>
+                <li>❌ Data stays in Data Lake only (not real-time)</li>
+                <li>❌ Cannot be accessed instantly in journeys</li>
+                <li>❌ Can be queried/analyzed but not for real-time personalization</li>
+                <li>✅ Does NOT count against engageable profile quota (no cost)</li>
+            </ul>
+            
+            <h4>Exam Pattern</h4>
+            <div class="key-point">
+                "Marketer wants to use purchase history in journey condition. Dataset enabled for profile?"<br>
+                <strong>Answer:</strong> YES, must be enabled for profile
+            </div>
+            
+            <h3>Identities</h3>
+            
+            <h4>Authenticated Identities (Known Customers)</h4>
+            <ul>
+                <li><strong>Email:</strong> john@example.com</li>
+                <li><strong>CRM ID:</strong> CUST-12345</li>
+                <li><strong>Mobile AAID/IDFA:</strong> Unique mobile device ID</li>
+                <li><strong>Custom ID:</strong> Your proprietary customer ID</li>
+            </ul>
+            
+            <h4>Pseudonymous Identities (Anonymous/Unknown Visitors)</h4>
+            <ul>
+                <li><strong>ECID (Experience Cloud ID):</strong> Adobe's auto-generated ID for unknown browsers</li>
+                <li><strong>Used for:</strong> Tracking anonymous website visitors</li>
+                <li><strong>Gets merged:</strong> When visitor logs in, ECID + email link together</li>
+            </ul>
+            
+            <h4>Identity Merging</h4>
+            <div class="example">
+                <strong>Scenario:</strong><br>
+                Day 1, 2 PM: Anonymous visitor (ECID-12345) views products, adds to cart<br>
+                Day 1, 3 PM: Same person logs in (email: john@example.com, CRM ID: CUST-54321)<br>
+                System links: ECID-12345 + email + CRM ID → same profile<br>
+                ALL historical data merges automatically<br>
+                <br>
+                Journey condition "if customer viewed products + added to cart in last 24 hours"<br>
+                System finds ALL merged data → triggers journey ✓
+            </div>
+            
+            <h4>Engageable Profile Impact</h4>
+            <ul>
+                <li>✅ Authenticated identities (email, CRM ID) = count as engageable</li>
+                <li>✅ Pseudonymous identities (ECID) = count as engageable too</li>
+                <li>💡 Solution: Set TTL (Time-To-Live) on pseudonymous profiles to auto-delete</li>
+                <li>💡 Recommendation: 14-day TTL for pseudonymous profiles</li>
+            </ul>
+            
+            <h3>Audiences</h3>
+            
+            <h4>Segment Builder (Rule-Based Audiences)</h4>
+            <ul>
+                <li><strong>How:</strong> Drag-and-drop conditions</li>
+                <li><strong>Timing:</strong> Batch (daily) OR streamed (real-time)</li>
+                <li><strong>Example:</strong> "Customers who spent > $500 in last 30 days"</li>
+            </ul>
+            
+            <h4>Audience Composition (Orchestrated Audiences)</h4>
+            <ul>
+                <li><strong>How:</strong> Combine multiple audiences with logic</li>
+                <li><strong>Timing:</strong> Batch evaluation</li>
+                <li><strong>Example:</strong> "(VIP customers) + (recently inactive) - (already contacted)"</li>
+                <li><strong>Limit:</strong> Max 10 active compositions per sandbox</li>
+            </ul>
+            
+            <h4>Streamed vs. Batch Audiences</h4>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Streamed</th>
+                    <th>Batch</th>
+                </tr>
+                <tr>
+                    <td><strong>Real-time update?</strong></td>
+                    <td>YES (immediately)</td>
+                    <td>NO (daily)</td>
+                </tr>
+                <tr>
+                    <td><strong>When evaluated?</strong></td>
+                    <td>Real-time as rules change</td>
+                    <td>Once per day</td>
+                </tr>
+                <tr>
+                    <td><strong>Use in journey</strong></td>
+                    <td>Audience Qualification (real-time trigger)</td>
+                    <td>Read Audience (scheduled batch)</td>
+                </tr>
+                <tr>
+                    <td><strong>When to use</strong></td>
+                    <td>Real-time journey logic</td>
+                    <td>Scheduled bulk campaigns</td>
+                </tr>
+            </table>
+            
+            <h3>Data Governance</h3>
+            
+            <h4>Common Data Labels</h4>
+            <table>
+                <tr>
+                    <th>Label</th>
+                    <th>Meaning</th>
+                    <th>Impact</th>
+                </tr>
+                <tr>
+                    <td><strong>C1</strong></td>
+                    <td>Contractual data (can use, track it)</td>
+                    <td>Requires tracking/logging</td>
+                </tr>
+                <tr>
+                    <td><strong>C2</strong></td>
+                    <td>Data can be exported out of AEP</td>
+                    <td>Allows external use</td>
+                </tr>
+                <tr>
+                    <td><strong>C3</strong></td>
+                    <td>Cannot combine with other data</td>
+                    <td>Must be isolated</td>
+                </tr>
+                <tr>
+                    <td><strong>S1</strong></td>
+                    <td>Sensitive personal data (health, financial)</td>
+                    <td>Restricted access</td>
+                </tr>
+                <tr>
+                    <td><strong>S2</strong></td>
+                    <td>Sensitive requiring consent</td>
+                    <td>Cannot use without explicit consent</td>
+                </tr>
+            </table>
+            
+            <h4>Exam Pattern</h4>
+            <div class="key-point">
+                "Healthcare data with diagnoses. What label?"<br>
+                <strong>Answer:</strong> S1 (sensitive personal data)
+            </div>
+            
+            <h3>The Data Flow in AEP</h3>
+            <div class="code-block">
+1. Data ingestion
+   ↓
+2. Schema defines structure
+   ├── Profile Schema (WHO)
+   └── Event Schema (WHAT + WHEN)
+   ↓
+3. Dataset container based on schema
+   ├── Enable for profile? (should be real-time?)
+   ↓
+4. Identities link records to customer
+   ├── Authenticated (email, CRM ID)
+   └── Pseudonymous (ECID)
+   ↓
+5. Unified Profile Service (if profile-enabled)
+   ↓
+6. Audiences segment customers
+   ├── Streamed (real-time)
+   └── Batch (daily)
+   ↓
+7. Journeys use audience + profile data
+   └── Real-time personalization
+            </div>
+        </div>
+        
+        <!-- GUARDRAILS -->
+        <div id="guardrails" class="section">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Critical: Guardrails & System Limits</h2>
+            
+            <h3>Diagnosis Framework</h3>
+            
+            <div class="key-point">
+                <strong>Is the journey publishing or running?</strong><br>
+                Publishing fails? → 50-activity, 200-journey, 2MB email, guardrail validation<br>
+                Running fails? → 64KB event, 1MB instance, 5-min reentrance, timeout
+            </div>
+            
+            <div class="key-point">
+                <strong>Are some profiles failing or ALL profiles?</strong><br>
+                ALL failing → Entry guardrail (64KB event, 50 activities)<br>
+                SOME failing → Data accumulation (1MB instance) or selective trigger (5-min block)
+            </div>
+            
+            <div class="key-point">
+                <strong>What's the data pattern?</strong><br>
+                Large accounts failing → 1MB instance<br>
+                No profiles entering → 64KB event<br>
+                Some profiles stuck → 5-min reentrance block<br>
+                Job disappeared → 12-hour timeout
+            </div>
+            
+            <h3>Quick Reference Table</h3>
+            <table>
+                <tr>
+                    <th>Guardrail</th>
+                    <th>Limit</th>
+                    <th>Applied When</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>50 activities</td>
+                    <td>50 max</td>
+                    <td>Publish</td>
+                    <td>Split journeys</td>
+                </tr>
+                <tr>
+                    <td>5-min reentrance</td>
+                    <td>5 min block</td>
+                    <td>During journey</td>
+                    <td>Expected behavior</td>
+                </tr>
+                <tr>
+                    <td>64 KB event</td>
+                    <td>64 KB max</td>
+                    <td>Event entry</td>
+                    <td>Reduce event size</td>
+                </tr>
+                <tr>
+                    <td>1 MB instance</td>
+                    <td>1 MB max</td>
+                    <td>Execution</td>
+                    <td>Reduce data lookups</td>
+                </tr>
+                <tr>
+                    <td>200 journeys</td>
+                    <td>200 max</td>
+                    <td>Publish</td>
+                    <td>Pause old ones</td>
+                </tr>
+                <tr>
+                    <td>5 Read Audience</td>
+                    <td>5 concurrent</td>
+                    <td>Runtime</td>
+                    <td>Stagger 5-10 min apart</td>
+                </tr>
+                <tr>
+                    <td>12-hour timeout</td>
+                    <td>12 hours</td>
+                    <td>Processing</td>
+                    <td>Ensure completes in time</td>
+                </tr>
+                <tr>
+                    <td>2 MB email</td>
+                    <td>2 MB processed</td>
+                    <td>Publish</td>
+                    <td>Keep authored < 1 MB</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- DECISION TREES -->
+        <div id="decisiontrees" class="section">
+            <div class="breadcrumb"><a onclick="showSection('domain1')">← Back to Domains</a></div>
+            <h2>Decision Trees & Diagnosis Framework</h2>
+            
+            <h3>Which Journey Type?</h3>
+            <div class="code-block">
+START: What triggers the journey?
+
+├─ Real-time customer action needed?
+│  └─ UNITARY EVENT JOURNEY
+│     (Watch: 64KB event, 5-min reentrance, 1MB instance)
+│
+├─ Scheduled audience batch?
+│  └─ READ AUDIENCE JOURNEY
+│     (Watch: 5 concurrent instances, 12-hour timeout)
+│
+├─ External/scheduled trigger?
+│  └─ BUSINESS EVENT JOURNEY
+│     (Watch: Can't mix with unitary events)
+│
+└─ Audience member change in real-time?
+   └─ AUDIENCE QUALIFICATION JOURNEY
+      (Watch: 10-min delay, 300 max per sandbox)
+            </div>
+            
+            <h3>Which Guardrail Is This?</h3>
+            <div class="code-block">
+START: What's the symptom?
+
+├─ ZERO profiles entering?
+│  └─ 64 KB EVENT PAYLOAD LIMIT
+│     (Events dropped at entry)
+│
+├─ SOME profiles in ERROR mid-journey?
+│  └─ 1 MB JOURNEY INSTANCE LIMIT
+│     (All profiles error? Could be 64KB)
+│
+├─ Journey won't publish?
+│  ├─ Error mentioning activities?
+│  │  └─ 50-ACTIVITY LIMIT
+│  ├─ Error mentioning size?
+│  │  └─ 2 MB EMAIL LIMIT
+│  └─ Cannot publish more journeys?
+│     └─ 200-JOURNEY LIMIT
+│
+├─ Read Audience won't publish?
+│  └─ 5 CONCURRENT INSTANCES LIMIT
+│
+├─ Same profile in journey twice in 5 min?
+│  └─ 5-MINUTE REENTRANCE BLOCK
+│
+└─ Custom action failing?
+   └─ CAPPING LIMIT (300K calls/min)
+            </div>
+            
+            <h3>Personalization, Fragments, or Fields?</h3>
+            <div class="code-block">
+START: What do you need?
+
+├─ Customer's name or simple attribute?
+│  └─ PERSONALIZATION FIELD
+│     {{profile.attributes.firstName}}
+│
+├─ Same HTML design block in all emails?
+│  ├─ Email-only?
+│  │  └─ VISUAL FRAGMENT (100 KB limit)
+│  └─ For SMS/Push too?
+│     └─ EXPRESSION FRAGMENT (200 KB limit)
+│
+├─ IF/THEN logic for different messages?
+│  ├─ Email, SMS, or Push?
+│  │  └─ EXPRESSION FRAGMENT (NOT in-app)
+│  └─ In-app message?
+│     └─ PERSONALIZATION FIELD
+│        (Expression fragments not supported)
+│
+├─ Same logic in multiple messages?
+│  └─ EXPRESSION FRAGMENT
+│     (Reusable, update once)
+│
+└─ Static footer in all emails?
+   └─ VISUAL FRAGMENT
+      (Email-only, pre-designed HTML)
+            </div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button onclick="showSection('domain1')">📊 Jump to Domain 1</button>
+            <button onclick="showSection('domain2')">🎁 Jump to Domain 2</button>
+            <button onclick="showSection('domain3')">📝 Jump to Domain 3</button>
+            <button onclick="showSection('domain4')">🔧 Jump to Domain 4</button>
+            <button onclick="showSection('guardrails')">⚠️ Jump to Guardrails</button>
+            <button onclick="showSection('decisiontrees')">🎯 Jump to Decision Trees</button>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f0f7ff; border-radius: 8px;">
+            <p style="color: #666; font-size: 0.95em;">
+                <strong>Last Updated:</strong> August 23, 2026<br>
+                <strong>Exam Date:</strong> Monday, August 24, 2026<br>
+                <strong>Good luck on your exam! You've got this. 💪</strong>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+                selectedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Show first section by default
+        window.addEventListener('load', () => {
+            showSection('domain1');
+        });
+    </script>
+</body>
+</html>

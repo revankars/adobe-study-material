@@ -1,0 +1,34 @@
+{
+  "certificationId": "ad0-e207",
+  "source": "AD0-E207_Adobe Analytics Architect Master_Study_Guide.docx",
+  "durationMinutesPerQuestion": 2,
+  "fullExamQuestionCount": 50,
+  "practiceQuestionCount": 40,
+  "passingThreshold": 0.64,
+  "passingThresholdNeedsVerification": true,
+  "examFactsNeedVerification": true,
+  "domains": [
+    {
+      "id": "discovery",
+      "name": "Discovery",
+      "weight": 18
+    },
+    {
+      "id": "solution_design",
+      "name": "Solution Design",
+      "weight": 54
+    },
+    {
+      "id": "implementation",
+      "name": "Implementation",
+      "weight": 20
+    },
+    {
+      "id": "validation",
+      "name": "Validation and Optimization",
+      "weight": 8
+    }
+  ],
+  "note": "AD0-E207 Adobe Analytics Architect Master certification exam",
+  "name": "Adobe Analytics Architect Master"
+}

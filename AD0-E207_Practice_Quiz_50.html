@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD0-E207 Practice Quiz (50 Questions)</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;max-width:760px;margin:2rem auto;padding:0 1.2rem;color:#1f2328;line-height:1.5}
+h1{font-size:1.5rem;border-bottom:2px solid #d0d7de;padding-bottom:.4rem}
+.meta{color:#57606a;font-size:.9rem;display:flex;justify-content:space-between;margin:.6rem 0}
+.bar{height:8px;background:#eaeef2;border-radius:4px;overflow:hidden}
+.bar > div{height:100%;background:#0969da;width:0}
+.card{border:1px solid #d0d7de;border-radius:8px;padding:1.2rem;margin-top:1rem}
+.q{font-size:1.05rem;font-weight:600;margin-bottom:.9rem}
+.opt{display:block;width:100%;text-align:left;border:1px solid #d0d7de;background:#fff;border-radius:6px;padding:.6rem .8rem;margin:.4rem 0;cursor:pointer;font-size:.95rem}
+.opt:hover:not(:disabled){background:#f6f8fa}
+.opt.correct{border-color:#1a7f37;background:#dafbe1}
+.opt.wrong{border-color:#cf222e;background:#ffebe9}
+.opt:disabled{cursor:default}
+.expl{margin-top:.9rem;padding:.8rem;border-radius:6px;background:#f6f8fa;font-size:.93rem}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+button.nav{background:#0969da;color:#fff;border:0;border-radius:6px;padding:.55rem 1.1rem;font-size:.95rem;cursor:pointer}
+button.nav:disabled{background:#8c959f;cursor:not-allowed}
+button.ghost{background:#fff;color:#0969da;border:1px solid #0969da}
+.score{font-size:1.4rem;font-weight:700}
+.review li{margin:.3rem 0}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<h1>AD0-E207 Adobe Analytics Architect Master: Practice Quiz</h1>
+<p style="color:#57606a;font-size:.9rem">50 original questions written for practice. Not official exam content. Passing score on the real exam is 33 out of 50. Check uncertain answers against Adobe documentation.</p>
+
+<div id="quiz">
+  <div class="meta"><span id="progress"></span><span id="running"></span></div>
+  <div class="bar"><div id="bar"></div></div>
+  <div class="card">
+    <div class="q" id="question"></div>
+    <div id="options"></div>
+    <div id="explain" class="expl hidden"></div>
+    <div class="row">
+      <button class="nav ghost" id="prev">Previous</button>
+      <button class="nav" id="next" disabled>Next</button>
+    </div>
+  </div>
+</div>
+
+<div id="result" class="card hidden">
+  <div class="score" id="score"></div>
+  <p id="verdict"></p>
+  <h3>Review</h3>
+  <ol class="review" id="review"></ol>
+  <div class="row"><button class="nav" id="restart">Restart quiz</button></div>
+</div>
+
+<script>
+const QUESTIONS = [
+{q:"An online shop uses purchaseID to stop refreshes from inflating orders. A customer returns a year later and the shop sends the same purchase ID. What happens?",o:["The purchase is counted because the visitor is different.","The purchase is de-duplicated, because purchase IDs apply to all visitors and last 37 months.","The purchase is counted once per visit.","The purchase is de-duplicated for 13 months only."],a:1,e:"Purchase IDs apply to all visitors and expire after 37 months. They are not scoped to visitors, visits, or 13 months."},
+{q:"A developer creates a purchase ID with a random number generator on each confirmation page load. What is the risk?",o:["Reports will show the purchase twice.","Each refresh creates a new ID, so duplicates are not removed.","The purchase ID will be truncated.","Revenue will be converted to the wrong currency."],a:1,e:"Adobe warns not to use a randomization function for purchase IDs, because each refresh then produces a new ID and duplicates are not caught."},
+{q:"Which statement about event serialization is correct?",o:["Serialization IDs must be numeric.","event1:ABC and event2:ABC are deduplicated against each other.","Serialization IDs expire after 13 months.","Each event has its own table, so event1:ABC and event2:ABC are both counted."],a:3,e:"Each event uses its own deduplication table, so event1:ABC and event2:ABC are both counted. IDs can be alphanumeric and do not expire."},
+{q:"A visitor sends event1:ABC today and sends event1:ABC again two years later. Is the second event counted?",o:["Yes, because the ID expired after 13 months.","No, because deduplication does not expire.","Yes, because the visitor is different.","No, because the visit timeout applies."],a:1,e:"Event deduplication does not expire, and it applies across all visitors."},
+{q:"A success event has serialization enabled, but the implementation sends no serialization ID. What happens?",o:["The event is never counted.","The event is always counted.","The event is counted once per visit.","The event is counted once per visitor."],a:1,e:"If serialization is enabled but no ID is present, Adobe always counts the event."},
+{q:"A product page needs to capture a product's category, quantity, and price, and attribute the cart addition to the search term. Which is the best approach?",o:["Store the search term in a prop only.","Use s.products with product syntax, and a merchandising eVar bound to the product.","Use a list prop with the price.","Use a page name for the product."],a:1,e:"Product strings carry product fields, and merchandising eVars bind values to the product line item."},
+{q:"A developer sets s.products through a processing rule. What should the architect say?",o:["This is supported, but only for the first product.","This is supported when the rule is in the global report suite.","Adobe does not support setting the products variable with processing rules.","This works if the rule is saved and enabled."],a:2,e:"Adobe documents that processing rules do not support setting the products variable."},
+{q:"An architect creates a processing rule today. Which data does it change?",o:["All historical data in the report suite.","Only data collected after the rule is saved.","Data in every report suite in the company.","Only data in the virtual report suites."],a:1,e:"Processing rules apply on save and do not apply retroactively. A rule applies to one report suite, though it can be copied to others."},
+{q:"A rule compares a variable to \"home\". Which value matches?",o:["Only \"home\" in lowercase.","Only \"Home\" in uppercase.","Both \"home\" and \"Home\", because string comparisons are not case-sensitive.","Neither, unless the rule is set to case-sensitive."],a:2,e:"String comparisons in processing rules are not case-sensitive."},
+{q:"A report suite needs 160 processing rules. What should the architect do?",o:["Add all 160 rules; the limit is 500.","Combine rules where possible, because a report suite supports up to 150 rules.","Create a second report suite for the rules.","Use VISTA rules for the remaining 10."],a:1,e:"Each report suite supports up to 150 processing rules. VISTA is a last resort that requires Adobe Professional Services."},
+{q:"Which step is the best first choice to exclude bot traffic from reports?",o:["A processing rule that deletes hits.","Bot rules, which run before processing rules.","A VISTA rule.","A virtual report suite."],a:1,e:"Bot rules run before processing rules in the processing order. Processing rules are not intended to exclude data."},
+{q:"A company wants to copy one hit to another report suite. Which tool supports this?",o:["Processing rules.","VISTA rules.","Classifications.","Data Sources."],a:1,e:"VISTA rules can copy a hit from one report suite to another. Processing rules operate on one report suite."},
+{q:"Currency is set to EUR, and the report suite's base currency is INR. When does conversion happen?",o:["Before processing rules.","After processing rules, using the current day's exchange rate.","Never; the hit is stored in EUR.","At report time, using the exchange rate for the report date."],a:1,e:"Currency conversion happens after processing rules and uses the current day's exchange rate."},
+{q:"When IP is fully obfuscated (remove IP), at which stage is it applied?",o:["Before bot rules.","Before geolocation lookup.","After all other processing, including visit and visitor processing.","Before IP exclusion."],a:2,e:"Full IP removal is the last step of processing. Last-octet obfuscation happens earlier."},
+{q:"A site has a cart addition event and a purchase event. The architect wants to know revenue from search terms. Which is best?",o:["A prop with the search term.","An eVar with the search term, allocated and expired to match the purchase.","A list prop with the search term.","A visitor container segment."],a:1,e:"An eVar persists values across hits and credits conversion events. Props do not persist by default."},
+{q:"A client uploads offline transaction data using the Data Sources transaction ID type. The online hit has not yet processed. What happens?",o:["The row is joined to the online hit when processing finishes.","The row is rejected.","The row is treated like a summary data source.","The row is deleted."],a:2,e:"If the online data is not processed first, the upload is treated as a summary data source."},
+{q:"How long does a transaction ID stay valid for a data source join?",o:["13 months.","25 months.","37 months.","It does not expire."],a:1,e:"Transaction IDs expire after 25 months. The 37-month period applies to purchase IDs."},
+{q:"A data source row and the online hit both contain the dimension \"region\". Which value is used?",o:["The online value.","The offline value.","Both values are shown.","Neither; the row is dropped."],a:1,e:"If a dimension is present in both, the offline value is used."},
+{q:"A media company wants news page view data in its own data lake within seconds, at hit level. Which option fits?",o:["Report Builder.","Data Warehouse.","Livestream API.","Customer Attributes."],a:2,e:"Livestream API provides hit-level, partially processed data within about 30 seconds."},
+{q:"An architect needs the IP address and the Experience Cloud Visitor ID, which are not visible in the reporting interface. Which tool gives access?",o:["Data Warehouse.","Report Builder.","Customer Attributes.","Data Sources."],a:0,e:"Adobe lists hidden variables such as IP address and Experience Cloud ID as a reason to use Data Warehouse."},
+{q:"A virtual report suite is created for one brand. Which statement is correct?",o:["Data can be uploaded directly to the virtual report suite.","It inherits most settings, such as processing rules and classifications, from the parent.","It has its own separate processing rules.","It deletes data for the brand's customers when requested."],a:1,e:"Virtual report suites inherit most settings from the parent. Data cannot be uploaded to them, and deletion is handled by data governance."},
+{q:"A virtual report suite needs a 60-minute visit timeout while the parent uses 30 minutes. What is the best approach?",o:["Change the timeout on the parent, which changes the existing data.","Change the visit timeout on the virtual report suite, which is non-destructive and applies in Workspace.","Create a processing rule to change visits.","Use a VISTA rule."],a:1,e:"The visit timeout on a virtual report suite is non-destructive and applies in Analysis Workspace."},
+{q:"A form collects a customer's email address in an eVar. Which label should the architect use?",o:["A sensitive data label.","An identity label (I1 or I2), if the value is used in privacy requests.","No label, because eVars cannot be labeled.","A governance label on the purchase event."],a:1,e:"Identity labels categorize data that can identify a person. Governance labels cannot be set on events."},
+{q:"A customer asks for their data to be deleted. Which tool should the architect use?",o:["Virtual report suite.","Privacy Service API.","Processing rule.","Report Builder."],a:1,e:"Privacy Service handles access, delete, and opt-out requests."},
+{q:"The Privacy Service UI does not support one request type. Which request is it?",o:["Access.","Delete.","Opt-out.","Status lookup."],a:2,e:"The Privacy Service UI supports access and delete requests. Opt-out requests must be made through the API."},
+{q:"A launch page needs the Tags embed code. Where should it go?",o:["At the bottom of the body only.","In the head, as one asynchronous embed code.","In a separate file loaded after the page.","In every script tag on the page."],a:1,e:"Adobe documents one asynchronous embed code in the head. The synchronous version uses two embed codes."},
+{q:"A data element returns \"[object Object]\". What is the likely cause?",o:["The tag library is not published.","The data element is reading an object, not a string. Read a specific property instead.","The browser blocks the request.","The report suite is in the wrong time zone."],a:1,e:"The return value shows the data element is reading an object. Reading a specific property returns a string."},
+{q:"A visitor moves from site A to site B, and cookies are blocked for third-party domains. Which method keeps the same visitor identity?",o:["Rely on browser caching.","Use Visitor.appendVisitorIDsTo on links to site B.","Set the same page name on both sites.","Use a campaign code only."],a:1,e:"appendVisitorIDsTo appends the visitor ID to the URL so the destination domain can recognize the visitor."},
+{q:"A single-page application changes routes without reloading. What should the architect do?",o:["Rely on the page view tag, which fires on each route change.","Trigger a page view or custom event on each route change, with the page name updated.","Use the virtual report suite.","Track only on full reloads."],a:1,e:"Route changes do not reload the page, so tracking must be triggered by the route change."},
+{q:"A visitor views ten pages in one visit. Marketing needs the number of visits in which the visitor viewed the home page and then ran a search, in that order. Which segment is correct?",o:["A hit segment for the search event.","A sequential segment with a visit container.","A visitor container segment on the home page.","A calculated metric with no segment."],a:1,e:"Sequential segments require order, and the visit container scopes the sequence to one visit."},
+{q:"A trended percentage of return visits that searched from the home page is needed. Which setup is best?",o:["A calculated metric dividing the count with the segment by the count of home page visits, with the same segment logic on both sides.","A standard metric with no segment.","A count of all page views.","A row count of search events."],a:0,e:"A rate needs matching logic on the numerator and denominator."},
+{q:"A team wants to count the number of different products bought by a customer, not the number of purchases. Which metric is correct?",o:["Row count.","A unique (distinct) count of products.","A sum of quantities.","Visits."],a:1,e:"Distinct counts answer \"how many different X\"."},
+{q:"Which report suite setting is needed before event serialization works?",o:["Classifications enabled.","The event's Unique Event Recording set to Use Event ID.","Virtual report suite created.","Data Warehouse enabled."],a:1,e:"Event serialization requires the event's Unique Event Recording setting to be set to Use Event ID."},
+{q:"A purchase event and an event serialization ID are both set on the same purchase. Which approach is recommended?",o:["Use event serialization on the purchase event.","Use purchaseID on the purchase event.","Use neither.","Use the page name."],a:1,e:"Adobe recommends purchaseID to deduplicate the purchase event."},
+{q:"Which is the best way to build a month-to-date revenue view for a single brand inside a global report suite?",o:["Create a new report suite for the brand.","Create a virtual report suite with a brand segment, and assign it to the brand's permission group.","Create a processing rule that copies revenue into a new eVar.","Export Data Feeds and filter them."],a:1,e:"A virtual report suite applies a segment to the parent and can be assigned to permission groups."},
+{q:"An architect must send a hit with a currency different from the report suite's currency. What must the architect know about the reported revenue?",o:["The revenue is stored in the original currency, not converted.","The revenue is converted to the report suite's currency at the current day's exchange rate.","The revenue is converted at the report date's rate.","The revenue is ignored."],a:1,e:"Conversion uses the current day's exchange rate."},
+{q:"Which tool should carry a rule that copies an eVar value into a prop at collection time?",o:["A processing rule, because it modifies variables as they are collected.","A classification, because it changes the report suite data.","A data source, because it imports data.","A marketing channel rule, because it changes channels."],a:0,e:"Processing rules modify data as it is collected. Classifications do not change underlying report suite data."},
+{q:"Classification data is edited in the interface. What happens to the underlying data?",o:["It is changed permanently.","It is unchanged, because classifications create dimensions based on rules or uploads.","It is deleted.","It is copied to a new report suite."],a:1,e:"Classifications do not change the underlying report suite data."},
+{q:"A tag property is published to production, but no data appears in the production report suite. What should the architect check first?",o:["The browser's network request for the production embed code and the production environment.","Whether virtual report suites are enabled.","Whether the data source is set.","Whether the marketing channels are set."],a:0,e:"Confirm the production embed loads and the request is sent. The other options do not directly affect whether production hits are sent."},
+{q:"A processing rule overwrites prop5 correctly, but a later rule overwrites it again. What is the cause?",o:["The processing rule is not saved.","A later rule overwrites the earlier rule's output, because rules run in order and every hit runs through every rule.","Processing rules cannot modify props.","Data Warehouse is not enabled."],a:1,e:"Rules run in order, and a later rule can overwrite an earlier one. Props can be modified by processing rules."},
+{q:"A processing rule overwrites eVar3 in rule 1. A subsequent rule needs the original eVar3 value. What happens?",o:["The original value is available to rule 2.","The original value is not available to any subsequent rule.","The original value is available only in virtual report suites.","The original value is restored after the rule finishes."],a:1,e:"If rule 1 overwrites eVar3, the original value is not available in any subsequent rules."},
+{q:"A context data variable is not mapped to a prop or eVar by any processing rule. What happens to its value?",o:["It is stored in the raw hit and can be recovered later.","It is recovered through Data Feeds.","It is permanently lost.","It is reprocessed by a VISTA rule."],a:2,e:"If processing rules do not map a context data variable, its value is permanently lost."},
+{q:"What is the maximum number of conditions per processing rule?",o:["10","30","50","There is no limit on conditions."],a:1,e:"Each processing rule can contain up to 30 conditions. The number of actions has no reasonable limit."},
+{q:"A dynamic variable appears in any part of an image request. What happens to its value?",o:["It is ignored.","It is copied over and treated as an independent value moving forward.","Only the first occurrence is kept.","The request is rejected."],a:1,e:"Adobe's pre-processing step copies the value of a dynamic variable and treats it as an independent value."},
+{q:"Which approach is recommended over processing rules for excluding data?",o:["A processing rule that deletes hits.","Abort at the data collection level, or a VISTA rule after data is collected.","A classification.","A virtual report suite."],a:1,e:"Excluding data is not an intended feature of processing rules. Adobe suggests aborting at collection or using VISTA after collection."},
+{q:"A processing rule re-inserts a page name value on a link tracking hit. What happens?",o:["The hit counts as a page event.","The hit is considered a page view instead of a page event.","The hit is rejected.","There is no effect."],a:1,e:"Link tracking hits strip the page dimension before processing rules. Re-inserting a page value makes the hit a page view."},
+{q:"An analyst needs Adobe data formatted as a pivot table input. Which tool fits?",o:["Analytics Data Feed.","Report Builder.","Livestream API.","Customer Attributes."],a:1,e:"Report Builder downloads data in a format suitable for pivot tables. It is summarized, not hit-level."},
+{q:"Server-side code needs to upload event data to Analytics, one event per row in CSV format. Which option fits?",o:["Data Sources FTP summary upload.","Bulk Data Insertion API.","Web SDK.","Livestream API."],a:1,e:"The Bulk Data Insertion API accepts CSV files with one event per row, and Adobe recommends it for server-side code."},
+{q:"A CRM team wants a loose tie-in of user inputs to Analytics data, with Data Sources as the more permanent option. Which tool is the first choice for the loose tie-in?",o:["Data Sources summary upload.","Customer Attributes.","Analytics Data Feed.","VISTA rule."],a:1,e:"Customer Attributes loosely ties user inputs or offline data to Analytics. Data Sources is the more permanent option."},
+{q:"Two online hits share the same transaction ID. Which snapshot is used for a data source join?",o:["Both snapshots are merged.","The most recent snapshot.","Only the first occurrence's snapshot.","Neither snapshot is used."],a:2,e:"If the same transaction ID is set on several online hits, only the first occurrence's snapshot is used."}
+];
+
+let idx=0, answers=new Array(QUESTIONS.length).fill(null);
+const $=id=>document.getElementById(id);
+
+function render(){
+  const Q=QUESTIONS[idx];
+  $('progress').textContent='Question '+(idx+1)+' of '+QUESTIONS.length;
+  const answered=answers.filter(a=>a!==null).length;
+  $('running').textContent='Answered: '+answered;
+  $('bar').style.width=((idx+1)/QUESTIONS.length*100)+'%';
+  $('question').textContent=Q.q;
+  const box=$('options'); box.innerHTML='';
+  const letters='ABCD';
+  Q.o.forEach((text,i)=>{
+    const b=document.createElement('button');
+    b.className='opt';
+    b.textContent=letters[i]+'. '+text;
+    b.disabled=answers[idx]!==null;
+    if(answers[idx]!==null){
+      if(i===Q.a) b.classList.add('correct');
+      else if(i===answers[idx]) b.classList.add('wrong');
+    }
+    b.onclick=()=>choose(i);
+    box.appendChild(b);
+  });
+  const ex=$('explain');
+  if(answers[idx]!==null){
+    ex.classList.remove('hidden');
+    ex.innerHTML='<strong>'+(answers[idx]===Q.a?'Correct.':'Incorrect. The answer is '+letters[Q.a]+'.')+'</strong> '+Q.e;
+  } else ex.classList.add('hidden');
+  $('prev').disabled=idx===0;
+  $('next').disabled=answers[idx]===null;
+  $('next').textContent= idx===QUESTIONS.length-1 ? 'See results' : 'Next';
+}
+
+function choose(i){
+  if(answers[idx]!==null) return;
+  answers[idx]=i;
+  render();
+}
+
+$('next').onclick=()=>{
+  if(idx<QUESTIONS.length-1){idx++;render();}
+  else showResult();
+};
+$('prev').onclick=()=>{ if(idx>0){idx--;render();} };
+
+function showResult(){
+  $('quiz').classList.add('hidden');
+  $('result').classList.remove('hidden');
+  const correct=answers.filter((a,i)=>a===QUESTIONS[i].a).length;
+  const pct=Math.round(correct/QUESTIONS.length*100);
+  $('score').textContent='Score: '+correct+' / '+QUESTIONS.length+' ('+pct+'%)';
+  const pass=Math.ceil(QUESTIONS.length*33/50);
+  $('verdict').textContent= correct>=pass
+    ? 'You reached the equivalent of the real exam pass mark (33 out of 50 scaled to this quiz). Keep practicing the questions you missed.'
+    : 'Below the equivalent pass mark (33 out of 50 scaled to this quiz). Review the questions you missed and the sections in the study guide.';
+  const letters='ABCD';
+  const ol=$('review'); ol.innerHTML='';
+  QUESTIONS.forEach((Q,i)=>{
+    const li=document.createElement('li');
+    const ok=answers[i]===Q.a;
+    li.innerHTML='<strong>'+(ok?'Correct':'Missed')+'</strong>: '+Q.q.replace(/</g,'&lt;')+' <em>Answer: '+letters[Q.a]+'. '+Q.o[Q.a].replace(/</g,'&lt;')+'</em>';
+    ol.appendChild(li);
+  });
+}
+
+$('restart').onclick=()=>{
+  idx=0; answers=new Array(QUESTIONS.length).fill(null);
+  $('result').classList.add('hidden'); $('quiz').classList.remove('hidden'); render();
+};
+render();
+</script>
+</body>
+</html>

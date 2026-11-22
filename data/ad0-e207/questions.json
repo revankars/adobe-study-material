@@ -1,0 +1,1462 @@
+{
+  "certificationId": "ad0-e207",
+  "source": "AD0-E207_Adobe Analytics Architect Master_Study_Guide.docx",
+  "questions": [
+    {
+      "id": "ad0-e207-practice-001",
+      "domainId": "solution_design",
+      "topic": "Question 1",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An online shop uses purchaseID to stop refreshes from inflating orders. A customer returns a year later and the shop sends the same purchase ID. What happens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The purchase is counted because the visitor is different."
+        },
+        {
+          "id": "B",
+          "text": "The purchase is de-duplicated, because purchase IDs apply to all visitors and last 37 months."
+        },
+        {
+          "id": "C",
+          "text": "The purchase is counted once per visit."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Purchase IDs apply to all visitors and expire after 37 months [Verified]. A is wrong because purchase IDs are not visitor-specific. C is wrong because visits do not scope purchase IDs. D is wrong because the expiry is 37 months, not 13.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-002",
+      "domainId": "solution_design",
+      "topic": "Question 2",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A developer uses a purchase ID made with a random number generator on each confirmation page load. What is the risk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reports will show the purchase twice."
+        },
+        {
+          "id": "B",
+          "text": "Each refresh creates a new ID, so duplicates are not removed."
+        },
+        {
+          "id": "C",
+          "text": "The purchase ID will be truncated."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Adobe warns not to generate purchase IDs with a randomization function [Verified]. A is the symptom, but B names the cause. C is wrong because truncation happens only above 20 bytes. D is unrelated.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-003",
+      "domainId": "solution_design",
+      "topic": "Question 3",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which statement about event serialization is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Serialization IDs must be numeric."
+        },
+        {
+          "id": "B",
+          "text": "event1:ABC and event2:ABC are deduplicated against each other."
+        },
+        {
+          "id": "C",
+          "text": "Serialization IDs expire after 13 months."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "D"
+      ],
+      "explanation": "Each event has its own deduplication table [Verified]. A is wrong because IDs can be alphanumeric. B is wrong for the same reason as D. C is wrong because deduplication does not expire [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-004",
+      "domainId": "solution_design",
+      "topic": "Question 4",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A visitor sends event1:ABC today and sends event1:ABC again two years later. Is the second event counted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because the ID expired after 13 months."
+        },
+        {
+          "id": "B",
+          "text": "No, because deduplication does not expire."
+        },
+        {
+          "id": "C",
+          "text": "Yes, because the visitor is different."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Deduplication does not expire [Verified]. A describes a different expiry. C is wrong because deduplication is global across visitors. D is wrong because visit timeout does not affect deduplication.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-005",
+      "domainId": "solution_design",
+      "topic": "Question 5",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A success event has serialization enabled, but the implementation sends no serialization ID. What happens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The event is never counted."
+        },
+        {
+          "id": "B",
+          "text": "The event is always counted."
+        },
+        {
+          "id": "C",
+          "text": "The event is counted once per visit."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Adobe documents that the event is always counted when no ID is present [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-006",
+      "domainId": "solution_design",
+      "topic": "Question 6",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A product page needs to capture a product’s category, quantity, and price, and attribute the cart addition to the search term. Which is the best approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Store the search term in a prop only."
+        },
+        {
+          "id": "B",
+          "text": "Use s.products with product syntax, and a merchandising eVar bound to the product."
+        },
+        {
+          "id": "C",
+          "text": "Use a list prop with the price."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Product strings carry the product fields, and merchandising eVars bind values to the product line item [Verified]. A cannot bind to the product. C does not capture product fields correctly. D is a page dimension, not product data.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-007",
+      "domainId": "solution_design",
+      "topic": "Question 7",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A developer sets s.products through a processing rule. What should the architect say?",
+      "options": [
+        {
+          "id": "A",
+          "text": "This is supported, but only for the first product."
+        },
+        {
+          "id": "B",
+          "text": "This is supported when the rule is in the global report suite."
+        },
+        {
+          "id": "C",
+          "text": "Adobe does not support setting the products variable with processing rules."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Adobe documents that processing rules do not support setting the products variable [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-008",
+      "domainId": "solution_design",
+      "topic": "Question 8",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An architect creates a processing rule today. Which data does it change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All historical data in the report suite."
+        },
+        {
+          "id": "B",
+          "text": "Only data collected after the rule is saved."
+        },
+        {
+          "id": "C",
+          "text": "Data in every report suite in the company."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Processing rules apply on save and do not apply retroactively [Verified]. A is wrong. C is wrong because a rule applies to one report suite, though it can be copied. D is wrong because virtual reports inherit rules from the parent.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-009",
+      "domainId": "solution_design",
+      "topic": "Question 9",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A rule compares a variable to “home.” Which value matches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only “home” in lowercase."
+        },
+        {
+          "id": "B",
+          "text": "Only “Home” in uppercase."
+        },
+        {
+          "id": "C",
+          "text": "Both “home” and “Home,” because string comparisons are not case-sensitive."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Adobe documents that string comparisons in processing rules are not case-sensitive [Verified]. D is wrong because there is no case-sensitive option for this comparison.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-010",
+      "domainId": "solution_design",
+      "topic": "Question 10",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A report suite needs 160 processing rules. What should the architect do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add all 160 rules; the limit is 500."
+        },
+        {
+          "id": "B",
+          "text": "Combine rules where possible, because a report suite supports up to 150 rules."
+        },
+        {
+          "id": "C",
+          "text": "Create a second report suite for the rules."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Each report suite supports up to 150 processing rules [Verified]. D is not the best first step, because VISTA is a last resort that requires Adobe Professional Services [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-011",
+      "domainId": "solution_design",
+      "topic": "Question 11",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which step is the best first choice to exclude bot traffic from reports?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A processing rule that deletes hits."
+        },
+        {
+          "id": "B",
+          "text": "Bot rules, which run before processing rules."
+        },
+        {
+          "id": "C",
+          "text": "A VISTA rule."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Bot rules run in the processing order before processing rules [Verified]. Processing rules are not intended to exclude data [Verified]. VISTA is a last resort. Virtual report suites filter views and do not delete data.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-012",
+      "domainId": "solution_design",
+      "topic": "Question 12",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A company wants to copy one hit to another report suite. Which tool supports this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Processing rules."
+        },
+        {
+          "id": "B",
+          "text": "VISTA rules."
+        },
+        {
+          "id": "C",
+          "text": "Classifications."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "VISTA rules can copy a hit from one report suite to another [Verified]. Processing rules operate on one report suite. Classifications do not change report suite data. Data Sources import offline data.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-013",
+      "domainId": "solution_design",
+      "topic": "Question 13",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Currency is set to EUR, and the report suite’s base currency is INR. When does conversion happen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Before processing rules."
+        },
+        {
+          "id": "B",
+          "text": "After processing rules, using the current day’s exchange rate."
+        },
+        {
+          "id": "C",
+          "text": "Never; the hit is stored in EUR."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Currency conversion happens after processing rules and uses the current day’s exchange rate [Verified]. D is wrong because conversion is applied at collection time, not at report time [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-014",
+      "domainId": "solution_design",
+      "topic": "Question 14",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which stage is the last step that changes IP data, when IP is fully obfuscated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Before bot rules."
+        },
+        {
+          "id": "B",
+          "text": "Before geolocation lookup."
+        },
+        {
+          "id": "C",
+          "text": "After all other processing, including visit and visitor processing."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Full IP removal is the last step of processing [Verified]. Last-octet obfuscation happens earlier, before lookups.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-015",
+      "domainId": "solution_design",
+      "topic": "Question 15",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A site has a cart addition event and a purchase event. The architect wants to know revenue from search terms. Which is best?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A prop with the search term."
+        },
+        {
+          "id": "B",
+          "text": "An eVar with the search term, allocated and expired to match the purchase."
+        },
+        {
+          "id": "C",
+          "text": "A list prop with the search term."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "An eVar persists values across hits and credits conversion events. A cannot persist. C is for multiple values per hit. D is a segment, not a variable.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-016",
+      "domainId": "solution_design",
+      "topic": "Question 16",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A client uploads offline transaction data using the Data Sources transaction ID type. The online hit has not yet processed. What happens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The row is joined to the online hit when processing finishes."
+        },
+        {
+          "id": "B",
+          "text": "The row is rejected."
+        },
+        {
+          "id": "C",
+          "text": "The row is treated like a summary data source."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "If the online data is not processed first, the upload is treated like a summary data source [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-017",
+      "domainId": "solution_design",
+      "topic": "Question 17",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "How long does a transaction ID stay valid for a data source join?",
+      "options": [
+        {
+          "id": "A",
+          "text": "13 months."
+        },
+        {
+          "id": "B",
+          "text": "25 months."
+        },
+        {
+          "id": "C",
+          "text": "37 months."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Transaction IDs expire after 25 months [Verified]. C is the purchase ID expiry, not the transaction ID expiry.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-018",
+      "domainId": "solution_design",
+      "topic": "Question 18",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A data source row and the online hit both contain the dimension “region.” Which value is used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The online value."
+        },
+        {
+          "id": "B",
+          "text": "The offline value."
+        },
+        {
+          "id": "C",
+          "text": "Both values are shown."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "If a dimension is present in both, the offline value is used [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-019",
+      "domainId": "solution_design",
+      "topic": "Question 19",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A media company wants news page view data in its own data lake within seconds, at hit level. Which option fits?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Report Builder."
+        },
+        {
+          "id": "B",
+          "text": "Data Warehouse."
+        },
+        {
+          "id": "C",
+          "text": "Livestream API."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "Livestream API provides hit-level partially processed data within about 30 seconds [Verified]. Report Builder is summarized and not hit-level. Data Warehouse is a scheduled export. Customer Attributes is for loosely tied user data.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-020",
+      "domainId": "solution_design",
+      "topic": "Question 20",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An architect needs the IP address and the Experience Cloud Visitor ID, which are not visible in the reporting interface. Which tool gives access?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data Warehouse."
+        },
+        {
+          "id": "B",
+          "text": "Report Builder."
+        },
+        {
+          "id": "C",
+          "text": "Customer Attributes."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Adobe lists hidden variables such as IP address and Experience Cloud ID as a reason to use Data Warehouse [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-021",
+      "domainId": "solution_design",
+      "topic": "Question 21",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A virtual report suite is created for one brand. Which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data can be uploaded directly to the virtual report suite."
+        },
+        {
+          "id": "B",
+          "text": "It inherits most settings, such as processing rules and classifications, from the parent."
+        },
+        {
+          "id": "C",
+          "text": "It has its own separate processing rules."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Virtual report suites inherit most settings from the parent [Verified]. A is wrong because data cannot be uploaded to a virtual report suite [Verified]. C is wrong for the same reason as B. D is wrong because data deletion is handled by data governance [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-022",
+      "domainId": "solution_design",
+      "topic": "Question 22",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A virtual report suite needs a 60-minute visit timeout while the parent uses 30 minutes. What is the best approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Change the timeout on the parent, which changes the existing data."
+        },
+        {
+          "id": "B",
+          "text": "Change the visit timeout on the virtual report suite, which is non-destructive and applies in Workspace."
+        },
+        {
+          "id": "C",
+          "text": "Create a processing rule to change visits."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "The visit timeout on a virtual report suite is non-destructive and applies in Analysis Workspace [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-023",
+      "domainId": "solution_design",
+      "topic": "Question 23",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A form collects a customer’s email address in an eVar. Which label should the architect use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sensitive data label."
+        },
+        {
+          "id": "B",
+          "text": "An identity label (I1 or I2), if the value is used in privacy requests."
+        },
+        {
+          "id": "C",
+          "text": "No label, because eVars cannot be labeled."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Identity labels categorize data that can identify a person [Verified]. Governance labels cannot be set on events [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-024",
+      "domainId": "solution_design",
+      "topic": "Question 24",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A customer asks for their data to be deleted. Which tool should the architect use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Virtual report suite."
+        },
+        {
+          "id": "B",
+          "text": "Privacy Service API."
+        },
+        {
+          "id": "C",
+          "text": "Processing rule."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Privacy Service handles access, delete, and opt-out requests [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-025",
+      "domainId": "solution_design",
+      "topic": "Question 25",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "The Privacy Service UI does not support one request type. Which request is it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Access."
+        },
+        {
+          "id": "B",
+          "text": "Delete."
+        },
+        {
+          "id": "C",
+          "text": "Opt-out."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "The Privacy Service UI supports access and delete requests. Opt-out requests must go through the API [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-026",
+      "domainId": "solution_design",
+      "topic": "Question 26",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A launch page needs the Tags embed code. Where should it go?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the bottom of the body only."
+        },
+        {
+          "id": "B",
+          "text": "In the head, as one asynchronous embed code."
+        },
+        {
+          "id": "C",
+          "text": "In a separate file loaded after the page."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Adobe documents one asynchronous embed code in the head. The synchronous version uses two embed codes [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-027",
+      "domainId": "solution_design",
+      "topic": "Question 27",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A data element returns “[object Object]”. What is the likely cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The tag library is not published."
+        },
+        {
+          "id": "B",
+          "text": "The data element is reading an object, not a string. Read a specific property instead."
+        },
+        {
+          "id": "C",
+          "text": "The browser blocks the request."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "The return value shows that the data element is reading an object. Reading a property returns a string [General guidance, Verify].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-028",
+      "domainId": "solution_design",
+      "topic": "Question 28",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A visitor moves from site A to site B, and cookies are blocked for third-party domains. Which method keeps the same visitor identity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rely on browser caching."
+        },
+        {
+          "id": "B",
+          "text": "Use Visitor.appendVisitorIDsTo on links to site"
+        },
+        {
+          "id": "C",
+          "text": "Set the same page name on both sites."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "appendVisitorIDsTo appends the visitor ID to the URL [Verified]. A is not a method. C and D do not carry identity.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-029",
+      "domainId": "solution_design",
+      "topic": "Question 29",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A single-page application changes routes without reloading. What should the architect do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rely on the page view tag, which fires on each route change."
+        },
+        {
+          "id": "B",
+          "text": "Trigger a page view or custom event on each route change, with the page name updated."
+        },
+        {
+          "id": "C",
+          "text": "Use the virtual report suite."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Route changes do not reload the page, so tracking must be triggered by the route change [General guidance, Verify].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-030",
+      "domainId": "solution_design",
+      "topic": "Question 30",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A visitor views ten pages in one visit. Marketing needs the number of visits in which the visitor viewed the home page and then ran a search, in that order. Which segment is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hit segment for the search event."
+        },
+        {
+          "id": "B",
+          "text": "A sequential segment with a visit container."
+        },
+        {
+          "id": "C",
+          "text": "A visitor container segment on the home page."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Sequential segments require order, and the visit container scopes the sequence to one visit [General guidance, Verify].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-031",
+      "domainId": "solution_design",
+      "topic": "Question 31",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A percentage of return visits that searched from the home page is needed as a trended metric. Which setup is best?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A calculated metric dividing the count with the segment by the count of home page visits, with the same segment logic on both sides."
+        },
+        {
+          "id": "B",
+          "text": "A standard metric with no segment."
+        },
+        {
+          "id": "C",
+          "text": "A count of all page views."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "A rate needs matching logic on numerator and denominator [General guidance, Verify]. B and C are not rates. D counts rows rather than unique visits.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-032",
+      "domainId": "solution_design",
+      "topic": "Question 32",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A team wants to count the number of different products bought by a customer, not the number of purchases. Which metric is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Row count."
+        },
+        {
+          "id": "B",
+          "text": "A unique (distinct) count of products."
+        },
+        {
+          "id": "C",
+          "text": "A sum of quantities."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Distinct counts answer “how many different X” [General guidance, Verify].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-033",
+      "domainId": "solution_design",
+      "topic": "Question 33",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which report suite setting is needed before event serialization works?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Classifications enabled."
+        },
+        {
+          "id": "B",
+          "text": "The event’s Unique Event Recording set to Use Event I"
+        },
+        {
+          "id": "C",
+          "text": "Virtual report suite created."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Event serialization requires the event’s Unique Event Recording setting to be set to Use Event ID [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-034",
+      "domainId": "solution_design",
+      "topic": "Question 34",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A purchase event and an event serialization ID are both set on the same purchase. Which approach is recommended?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use event serialization on the purchase event."
+        },
+        {
+          "id": "B",
+          "text": "Use purchaseID on the purchase event."
+        },
+        {
+          "id": "C",
+          "text": "Use neither."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Adobe recommends purchaseID for purchase deduplication [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-035",
+      "domainId": "solution_design",
+      "topic": "Question 35",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which is the best way to build a month-to-date revenue view for a single brand inside a global report suite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Create a new report suite for the brand."
+        },
+        {
+          "id": "B",
+          "text": "Create a virtual report suite with a brand segment, and assign it to the brand’s permission group."
+        },
+        {
+          "id": "C",
+          "text": "Create a processing rule that copies revenue into a new eVar."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A virtual report suite applies a segment to the parent and can be assigned to permission groups [Verified]. A creates a separate report suite. C does not solve access. D works, but is not the architectural choice for an access and view requirement.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-036",
+      "domainId": "solution_design",
+      "topic": "Question 36",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An architect must send a hit with a currency different from the report suite’s currency. What must the architect know about the reported revenue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The revenue is stored in the original currency, not converted."
+        },
+        {
+          "id": "B",
+          "text": "The revenue is converted to the report suite’s currency at the current day’s exchange rate."
+        },
+        {
+          "id": "C",
+          "text": "The revenue is converted at the report date’s rate."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Conversion uses the current day’s exchange rate [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-037",
+      "domainId": "solution_design",
+      "topic": "Question 37",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Which tool should carry a rule that copies an eVar value into a prop at collection time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A processing rule, because it modifies variables as they are collected."
+        },
+        {
+          "id": "B",
+          "text": "A classification, because it changes the report suite data."
+        },
+        {
+          "id": "C",
+          "text": "A data source, because it imports data."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Processing rules modify data as it is collected [Verified]. B is wrong because classifications do not change underlying report suite data [Verified]. C is wrong because data sources import data. D is wrong because marketing channel rules only classify channels.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-038",
+      "domainId": "solution_design",
+      "topic": "Question 38",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Classification data is edited in the interface. What happens to the underlying data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is changed permanently."
+        },
+        {
+          "id": "B",
+          "text": "It is unchanged, because classifications create dimensions based on rules or uploads."
+        },
+        {
+          "id": "C",
+          "text": "It is deleted."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Classifications do not change the underlying report suite data [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-039",
+      "domainId": "solution_design",
+      "topic": "Question 39",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A tag property is published to production, but no data appears in the production report suite. What should the architect check first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The browser’s network request for the production embed code and the production environment."
+        },
+        {
+          "id": "B",
+          "text": "Whether virtual report suites are enabled."
+        },
+        {
+          "id": "C",
+          "text": "Whether the data source is set."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "Confirm the production embed is loaded and the request is sent [General guidance, Verify]. The other options do not directly affect whether production hits are sent.",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-040",
+      "domainId": "solution_design",
+      "topic": "Question 40",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "A processing rule overwrites prop5 correctly, but a later rule overwrites it again. What is the cause?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The processing rule is not saved."
+        },
+        {
+          "id": "B",
+          "text": "A later rule overwrites the earlier rule’s output, because rules run in order and every hit runs through every rule."
+        },
+        {
+          "id": "C",
+          "text": "Processing rules cannot modify props."
+        },
+        {
+          "id": "D",
+          "text": "[Missing option]"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Rules run in order, and a later rule can overwrite an earlier one [Verified]. C is wrong because props can be modified [Verified].",
+      "incorrectExplanations": {},
+      "chapterId": "solution_design"
+    },
+    {
+      "id": "ad0-e207-practice-041",
+      "domainId": "solution_design",
+      "topic": "Report Suite Configuration",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "Suppose an organization is planning to launch several microsites that have very similar custom tracking on each one. The organization would like to report on the performance of individual microsites but also review data at an aggregate level. Based on this information, which report suite would satisfy the requirement and be most cost effective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Global report suite with a site name variable"
+        },
+        {
+          "id": "B",
+          "text": "Global report suite with suites for each microsite"
+        },
+        {
+          "id": "C",
+          "text": "Global report suite and individual report suite for each microsite"
+        },
+        {
+          "id": "D",
+          "text": "Individual report suite with individual report suite for each microsite"
+        }
+      ],
+      "correctAnswers": [
+        "C"
+      ],
+      "explanation": "The best solution is to use a global report suite for aggregate data combined with individual report suites for each microsite. This allows for both aggregate reporting and microsite-specific analysis while being cost-effective by using a primary global suite.",
+      "chapterId": "solution_design",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e207-practice-042",
+      "domainId": "solution_design",
+      "topic": "Report Suite Migration",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "An analyst is copying settings from a report suite to a new report suite. Which settings are exported to a new report suite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "eVar"
+        },
+        {
+          "id": "B",
+          "text": "RSID status"
+        },
+        {
+          "id": "C",
+          "text": "Enable transaction ID Recording"
+        },
+        {
+          "id": "D",
+          "text": "Pathing on variable"
+        },
+        {
+          "id": "E",
+          "text": "Classification"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "C",
+        "E"
+      ],
+      "explanation": "When copying report suite settings, the following are exported: eVars, Enable transaction ID Recording, and Classifications. RSID status and pathing on variable settings are not automatically exported to the new report suite.",
+      "chapterId": "solution_design",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e207-practice-043",
+      "domainId": "implementation",
+      "topic": "Beacon Request and Variables",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "What could be the size of the beacon request while still keeping the data? (two)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Context Data Variables"
+        },
+        {
+          "id": "B",
+          "text": "Data Insertion API"
+        },
+        {
+          "id": "C",
+          "text": "Processing Rules"
+        },
+        {
+          "id": "D",
+          "text": "Classification Rule Builder"
+        },
+        {
+          "id": "E",
+          "text": "Dynamic Variables"
+        }
+      ],
+      "correctAnswers": [
+        "B",
+        "C"
+      ],
+      "explanation": "To handle large beacon requests while keeping the data, you can use Data Insertion API and Processing Rules. These allow you to manage and process large data sets without losing information.",
+      "chapterId": "implementation",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e207-practice-044",
+      "domainId": "implementation",
+      "topic": "Exit Links Tracking",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "You want to review analytics report for your website one day, you open up to the exit links report and notice it is empty. After manually testing some exist links on your site, You do not see any data in the exit links report. What could be causing the missing images for external links? Select two.",
+      "options": [
+        {
+          "id": "A",
+          "text": "s.linkInternalFilters has not been properly defined"
+        },
+        {
+          "id": "B",
+          "text": "s.trackExternalLinks is set to false"
+        },
+        {
+          "id": "C",
+          "text": "s.trackExternalLinks = true"
+        },
+        {
+          "id": "D",
+          "text": "s.trackDownloads is set to true"
+        },
+        {
+          "id": "E",
+          "text": "s.linkDownloadFileTypes is set to false"
+        }
+      ],
+      "correctAnswers": [
+        "A",
+        "B"
+      ],
+      "explanation": "Exit links won't appear if: (1) s.linkInternalFilters has not been properly defined - this determines what links are considered internal vs external, and (2) s.trackExternalLinks is set to false - this must be enabled to track external links. Setting s.trackExternalLinks to true is correct configuration, not a problem.",
+      "chapterId": "implementation",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e207-practice-045",
+      "domainId": "data_governance",
+      "topic": "Data Governance and Export",
+      "difficulty": "medium",
+      "type": "single",
+      "question": "You want to download a file containing all current label definitions for all variables of a selected report suite. What file format is available when you use the Data Governance Dialog?",
+      "options": [
+        {
+          "id": "A",
+          "text": "CSV"
+        },
+        {
+          "id": "B",
+          "text": "PDF"
+        },
+        {
+          "id": "C",
+          "text": "XML"
+        },
+        {
+          "id": "D",
+          "text": "JSON"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "When downloading label definitions for variables from the Data Governance Dialog in Adobe Analytics, the available file format is CSV (Comma-Separated Values).",
+      "chapterId": "data_governance",
+      "incorrectExplanations": {}
+    }
+  ]
+}

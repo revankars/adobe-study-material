@@ -1,0 +1,92 @@
+{
+  "certificationId": "ad0-e408",
+  "code": "AD0-E408",
+  "name": "Adobe Target Business Practitioner Professional",
+  "specifications": {
+    "totalQuestions": 52,
+    "timeLimit": 100,
+    "passingScore": 70,
+    "validPeriod": "2 years",
+    "delivery": "Online proctored or test center"
+  },
+  "domains": [
+    {
+      "name": "Planning & Strategy",
+      "weight": 26,
+      "estimatedQuestions": 14,
+      "keyTopics": [
+        "Business KPIs and performance analysis",
+        "Optimization and experimentation strategies",
+        "Hypothesis construction",
+        "Success metrics identification",
+        "Audience requirements and targeting",
+        "Adobe Target vs. Adobe Analytics reporting",
+        "A/B testing best practices"
+      ]
+    },
+    {
+      "name": "Configuration, Executing & Managing",
+      "weight": 50,
+      "estimatedQuestions": 26,
+      "keyTopics": [
+        "Visual Experience Composer (VEC)",
+        "Form-Based Experience Composer",
+        "Activity configuration",
+        "Activity types in detail",
+        "QA procedures and preview modes",
+        "Audience configuration and logic",
+        "Activity priority and collisions",
+        "Success metrics setup"
+      ]
+    },
+    {
+      "name": "Analyzing & Reporting",
+      "weight": 16,
+      "estimatedQuestions": 8,
+      "keyTopics": [
+        "Understanding statistical concepts",
+        "Automated Personalization reporting",
+        "Multivariate testing reporting",
+        "Interpreting confidence intervals",
+        "Statistical pitfalls and false positives",
+        "Lift calculation and interpretation"
+      ]
+    },
+    {
+      "name": "Troubleshooting",
+      "weight": 8,
+      "estimatedQuestions": 4,
+      "keyTopics": [
+        "Activity delivery troubleshooting",
+        "Audience qualification issues",
+        "Debugging tools",
+        "Preset issues and recovery",
+        "Common implementation problems"
+      ]
+    }
+  ],
+  "examReadiness": {
+    "recommendedStudyHours": 20,
+    "practiceQuestions": 52,
+    "passingRate": "~70%",
+    "retakePolicies": "Can retake after 14 days"
+  },
+  "importantLimits": {
+    "maxActivitiesPerWorkspace": 10000,
+    "maxAudiencesPerWorkspace": 50000,
+    "maxOffersPerActivity": "Unlimited",
+    "maxProfileParams": "Thousands",
+    "maxMboxes": "Unlimited",
+    "sessionTimeout": "30 minutes (inactivity)",
+    "maxBatchSize": "50 entries per batch call"
+  },
+  "studyResources": {
+    "officialGuide": "Adobe Target Business Practitioner Professional Exam Guide",
+    "practiceExam": "Available through Adobe Certification Portal",
+    "documentationLinks": [
+      "Adobe Target Product Documentation",
+      "Experience League - Target Courses",
+      "Adobe Target Certification Overview"
+    ]
+  }
+}

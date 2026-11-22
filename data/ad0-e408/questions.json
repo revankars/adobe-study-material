@@ -1,0 +1,3522 @@
+{
+  "certificationId": "ad0-e408",
+  "questions": [
+    {
+      "id": "ad0-e408-practice-001",
+      "domainId": "planning_strategy",
+      "topic": "Business KPI Alignment",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An e-commerce company wants to increase customer lifetime value (LTV). Currently, their average customer makes 2.5 purchases per year with an average order value of $125.\n\nThe company wants to test personalizing product recommendations based on purchase history. Which success metric should the Adobe Target practitioner recommend as the PRIMARY metric?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Number of times \"Add to Cart\" button is clicked"
+        },
+        {
+          "id": "opt-b",
+          "text": "Total sessions from returning visitors"
+        },
+        {
+          "id": "opt-c",
+          "text": "Revenue per visitor (RPV) across all visits"
+        },
+        {
+          "id": "opt-d",
+          "text": "Average rating received on product pages"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "LTV is about monetary value over time. RPV directly measures revenue per visitor across all visits, aligning with the LTV goal.",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-002",
+      "domainId": "planning_strategy",
+      "topic": "Hypothesis Construction",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A SaaS company notices that visitors who reach the pricing page have a 12% free trial signup rate, but those who don't reach the pricing page have a 0% signup rate. The company wants to test moving pricing information above the fold on the homepage.\n\nWhich hypothesis best represents this test?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"If we move pricing above the fold, then visitors will click more links, because pricing is visually prominent\""
+        },
+        {
+          "id": "opt-b",
+          "text": "\"If we move pricing above the fold, then free trial signups increase by 20%, because visitors who see pricing earlier are more likely to convert\""
+        },
+        {
+          "id": "opt-c",
+          "text": "\"If we show discounts on pricing, then revenue increases, because discounts drive purchases\""
+        },
+        {
+          "id": "opt-d",
+          "text": "\"If we update the pricing page design, then page load speed improves, because simplified design loads faster\""
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Strong hypotheses have three components: ACTION (move pricing), OUTCOME (increase by 20%), and REASONING (earlier visibility → more conversions). This directly addresses the business observation with testable prediction.",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-003",
+      "domainId": "planning_strategy",
+      "topic": "Activity Selection - Testing Strategy",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A digital marketing agency is running a campaign for a healthcare client. The client wants to test whether their current homepage messaging resonates differently with three distinct audience segments:\n- C-level executives (want ROI data)\n- Department managers (want operational benefits)\n- End users (want ease-of-use)\n\nEach segment needs uniquely tailored messaging. The client does NOT want statistical comparison or a winner declared. They simply want to show each audience their relevant message.\n\nWhich activity type should be recommended?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Automated Personalization (AP)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multivariate Test (MVT)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Experience Targeting (XT)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Auto-Target"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "See study guide section on activity selection - testing strategy",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy"
+    },
+    {
+      "id": "ad0-e408-practice-004",
+      "domainId": "planning_strategy",
+      "topic": "Sample Size Criticality",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An online retailer has calculated their A/B test sample size as 8,000 visitors per variation (95% confidence, 80% power). They've been running the test for 1.5 weeks and have collected 4,000 visitors per variation. The variation currently shows a 12% lift in conversion rate with 88% confidence.\n\nWhat should the Adobe Target practitioner recommend?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Declare the variation as the winner and implement it, because 88% confidence exceeds 85% threshold"
+        },
+        {
+          "id": "opt-b",
+          "text": "Continue running the test until reaching the calculated 8,000 visitors per variation, because early stopping increases risk of false positives"
+        },
+        {
+          "id": "opt-c",
+          "text": "Stop the test and implement variation A (original), because the sample size is only 50% complete"
+        },
+        {
+          "id": "opt-d",
+          "text": "Run the test for one more week and check again, because one week is enough for preliminary validation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on sample size criticality",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy"
+    },
+    {
+      "id": "ad0-e408-practice-005",
+      "domainId": "planning_strategy",
+      "topic": "Audience Attribute Selection",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A luxury fashion e-commerce company wants to increase high-value customer conversions. Currently, 30% of visitors are from the United States, 20% are international, and 50% are from other regions. \n\nTheir data shows:\n- Annual income level strongly correlates with purchase value\n- Mobile vs. desktop device shows weak correlation with purchase value\n- Time since last purchase shows moderate correlation with purchase value\n- Social media followers shows no correlation with purchase value\n\nIf the company wants to target high-value customers through personalization, which audience attributes should be prioritized?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Device type, time zone, and browser type (demographics)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Annual income level and time since last purchase (business intent signals)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Number of social media followers and engagement metrics (engagement potential)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Geographic region, annual income, and mobile device type (mixed signals)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "CRITICAL SKILL: Choose audience attributes based on DATA-DRIVEN BUSINESS RELEVANCE, not demographics. Income (strong) + time since purchase (moderate) are the PREDICTORS that matter.",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-006",
+      "domainId": "planning_strategy",
+      "topic": "A4T Setup Requirements",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company implementing Analytics for Target (A4T) wants to create a success metric that tracks \"Completed purchase after viewing product comparison.\"\n\nWhat is the FIRST step in the proper A4T implementation workflow?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "In Adobe Target, select \"Adobe Analytics\" as the reporting source"
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a Calculated Metric in Adobe Analytics combining the two events, then reference that metric in Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create the success metric directly in Target's metric creation interface"
+        },
+        {
+          "id": "opt-d",
+          "text": "Set up Analytics segments for each product comparison type, then map them to Target activities"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A4T Workflow: Create Calculated Metric in Analytics FIRST → Then use in Target. Non-negotiable because Target doesn't perform complex calculations.",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-007",
+      "domainId": "planning_strategy",
+      "topic": "Testing Best Practices - Pitfalls",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is running an A/B test on a checkout page. After 5 days, the variation shows a 15% lift in conversion rate. However, they notice:\n- Day 1-3: 20% lift (peak)\n- Day 4-5: 10% lift (declining)\n- Test was supposed to run for 2 weeks\n- Currently at 30% of calculated sample size\n\nWhat is the MOST LIKELY explanation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The variation is working well and should be declared winner now, because the 15% lift is significant"
+        },
+        {
+          "id": "opt-b",
+          "text": "The test is experiencing novelty effect where new design initially outperforms, and must continue to full sample size"
+        },
+        {
+          "id": "opt-c",
+          "text": "The test sample size was miscalculated and should be reduced"
+        },
+        {
+          "id": "opt-d",
+          "text": "External factors (holidays) are affecting results and the test should be paused"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on testing best practices - pitfalls",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy"
+    },
+    {
+      "id": "ad0-e408-practice-008",
+      "domainId": "planning_strategy",
+      "topic": "Target vs. Analytics Reporting",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company is trying to decide between using Adobe Target native reporting vs. Analytics with A4T (Analytics for Target).\n\nWhich scenario indicates that A4T (Analytics with Target) would be the BEST choice?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The company only needs basic conversion rate and lift reporting, with no cross-site analysis"
+        },
+        {
+          "id": "opt-b",
+          "text": "The company needs to analyze test results using custom Analytics segments, calculated metrics, and advanced Analysis Workspace features"
+        },
+        {
+          "id": "opt-c",
+          "text": "The company wants the fastest way to report on a simple A/B test"
+        },
+        {
+          "id": "opt-d",
+          "text": "The company prefers a visual, point-and-click reporting interface"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on target vs. analytics reporting",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy"
+    },
+    {
+      "id": "ad0-e408-practice-009",
+      "domainId": "configuring_managing",
+      "topic": "VEC CSS Selector Stability",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Target practitioner is using the Visual Experience Composer (VEC) to modify a \"Special Offer\" banner on a website. The banner is nested deeply:\n\n`<div class=\"header-top\">\n  <div class=\"banner-container featured-banner primary\">\n    <div class=\"offer-text-wrapper\">\n      <span class=\"offer-price\">Save 50%</span>\n    </div>\n  </div>\n</div>`\n\nThe practitioner selects the \"Save 50%\" span element, which creates selector:  \n`.header-top .banner-container.featured-banner.primary .offer-text-wrapper .offer-price`\n\nHowever, marketing redesigns the homepage next month and removes the \"featured-banner\" class. The Target activity stops working.\n\nWhat feature should have been used to prevent this issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "URL targeting rules (to exclude redesigned pages)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Expand Section (to select a more stable parent element like .header-top)"
+        },
+        {
+          "id": "opt-c",
+          "text": "!important CSS property (to force styles to persist)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Activity collision settings (to prevent other activities from overriding)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Solution: Expand Section allows selecting parent element, creating more stable selector: \".header-top\" instead of deeply nested classes. More resistant to page changes.",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-010",
+      "domainId": "configuring_managing",
+      "topic": "Form-Based Composer - Redirect Offers",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Target practitioner is creating an A/B test using the Form-Based Experience Composer. The test must:\n- Control experience: Keep users on current landing page\n- Variation experience: Redirect users to a different promotional page\n\nThe practitioner needs to send users to a redirect offer. What is the CORRECT process?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Click \"Create\", select \"Redirect Offer\" in the offer creation dialog, type the new URL"
+        },
+        {
+          "id": "opt-b",
+          "text": "Click \"Offers\" → \"Redirect Offers\" tab → Select or create an existing redirect offer"
+        },
+        {
+          "id": "opt-c",
+          "text": "Click \"Experience\" → \"Add Redirect\" → Enter the destination URL directly in the activity"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use the VEC redirect tool (Form-Based doesn't support redirect offers)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Redirect Offers are FORM-BASED ONLY. Workflow: Click Offers → Redirect Offers tab → Select/create. Order matters. NOT available in VEC.",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-011",
+      "domainId": "configuring_managing",
+      "topic": "Audience Configuration - AND/OR Logic",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company wants to create an audience for a specific promotion. The audience should include:\n- Visitors from USA OR Canada (location OR)\n- AND must be returning customers (recency = 7+ days)\n- AND must have browsed the product category (site behavior)\n\nThe company creates audience with settings:\n```\nLocation: USA\nLocation: Canada\nVisitor Recency: 7+ days\nSite Behavior: Browsed Product Category\nLogic: ALL conditions (AND)\n```\n\nWhat is the issue with this audience?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The location fields use AND logic when OR logic is needed; visitors must match BOTH USA AND Canada (impossible)"
+        },
+        {
+          "id": "opt-b",
+          "text": "The audience is correctly configured to show only USA/Canada returning visitors"
+        },
+        {
+          "id": "opt-c",
+          "text": "The recency setting is redundant when using behavior targeting"
+        },
+        {
+          "id": "opt-d",
+          "text": "Site behavior targeting will not work without Analytics integration"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Problem: Location fields with AND logic require visitors be from USA AND Canada simultaneously (impossible). Fix: Use OR for locations: (USA OR Canada) AND Recency AND Behavior.",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-012",
+      "domainId": "configuring_managing",
+      "topic": "Activity Priority & Collision Resolution",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Target account has three activities running on the homepage:\n\nActivity 1: \"Homepage Test A\" - Priority: 500 - Page URL contains \"homepage\"  \nActivity 2: \"Homepage Test B\" - Priority: 750 - Page URL contains \"homepage\"  \nActivity 3: \"Global Campaign\" - Priority: 100 - All pages  \n\nA visitor lands on the homepage and qualifies for all three activities. Which activity will be shown?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All three activities display simultaneously to show combined personalization"
+        },
+        {
+          "id": "opt-b",
+          "text": "Homepage Test A displays (first created activity has priority)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Homepage Test B displays (highest priority: 750)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Global Campaign displays (runs on all pages so has universal coverage)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "See study guide section on activity priority & collision resolution",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-013",
+      "domainId": "configuring_managing",
+      "topic": "QA Preview Settings - Isolation vs. Realistic",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Target practitioner is QA testing a personalization activity before launch. The practitioner wants to verify that:\n1. The Target activity content displays correctly\n2. The activity functions when other live activities are present (collision handling)\n3. The activity respects audience qualification rules\n\nWhich QA preview setting configuration is needed?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"Show default content for all other activities\" = ON  \n   \"Match audience rules\" = OFF"
+        },
+        {
+          "id": "opt-b",
+          "text": "\"Show default content for all other activities\" = ON  \n   \"Match audience rules\" = ON"
+        },
+        {
+          "id": "opt-c",
+          "text": "\"Show default content for all other activities\" = OFF  \n   \"Match audience rules\" = ON"
+        },
+        {
+          "id": "opt-d",
+          "text": "\"Show default content for all other activities\" = OFF  \n   \"Match audience rules\" = OFF"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "See study guide section on qa preview settings - isolation vs. realistic",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-014",
+      "domainId": "configuring_managing",
+      "topic": "Activity Configuration - Success Metrics",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is configuring success metrics for an e-commerce test. The activity has:\n- Primary metric: Revenue (RPV)\n- Secondary metrics: Cart additions, Checkout starts, Form submissions\n\nThe practitioner needs to understand that for the Revenue metric:\n- RPV (Revenue Per Visitor) includes how many revenue-generating events?\n- For returning customers making multiple purchases in the session?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "RPV counts all purchases and repeat purchases throughout all sessions"
+        },
+        {
+          "id": "opt-b",
+          "text": "RPV counts FIRST order value only; subsequent orders increment count but don't add to RPV"
+        },
+        {
+          "id": "opt-c",
+          "text": "RPV counts only purchases made within 24 hours of activity exposure"
+        },
+        {
+          "id": "opt-d",
+          "text": "RPV counts all purchases equally regardless of timing"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on activity configuration - success metrics",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-015",
+      "domainId": "configuring_managing",
+      "topic": "Activity Experience Configuration",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is creating an Automated Personalization (AP) activity with four locations on the page:\n- Location 1: Hero banner (5 offers)\n- Location 2: Sidebar (3 offers)\n- Location 3: Footer (2 offers)\n- Location 4: Product section (4 offers)\n\nWhat is the MAXIMUM number of experiences/combinations the ML algorithm will test?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "5 + 3 + 2 + 4 = 14 total offer combinations"
+        },
+        {
+          "id": "opt-b",
+          "text": "5 × 3 × 2 × 4 = 120 total combinations"
+        },
+        {
+          "id": "opt-c",
+          "text": "Limited to 2,000 experiences (same as A/B test)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Can have up to 30,000 experiences (AP-specific limit)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on activity experience configuration",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-016",
+      "domainId": "configuring_managing",
+      "topic": "Post-Conversion Behavior",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is setting up a limited-time offer activity with the success metric \"Sign up for exclusive deal\". The company wants to track:\n- How many unique visitors signed up\n- When visitors sign up (timing)\n- If a visitor tries to sign up multiple times in same session\n\nThe expected behavior: If a visitor completes the signup action, they should exit the activity and see default content for rest of session.\n\nWhich post-conversion behavior setting is needed?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"Keep User in Activity\""
+        },
+        {
+          "id": "opt-b",
+          "text": "\"Release & Allow Reentry\""
+        },
+        {
+          "id": "opt-c",
+          "text": "\"Release & Bar Reentry\""
+        },
+        {
+          "id": "opt-d",
+          "text": "\"Increment Count & Keep User in Activity\""
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Scenario Requires: Visitor exits after signup (not keep), never sees again (bar reentry). Perfect for one-time offers or limited promotions.",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-017",
+      "domainId": "configuring_managing",
+      "topic": "Automated Personalization Report Interpretation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner reviewing an AP Activity Level Report sees:\n- Control (Random): 5.2% conversion rate\n- Targeted (Smart): 6.8% conversion rate\n- Difference: +1.6 percentage points\n\nThe practitioner concludes: \"The ML algorithm is excellent at personalizing offers for all visitor types.\"\n\nIs this conclusion correct? What would provide better insight?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, the conclusion is correct because the Targeted shows higher conversion"
+        },
+        {
+          "id": "opt-b",
+          "text": "No, to validate the conclusion, the Offer Level Report should show that EACH offer performs better when Smart vs. Random"
+        },
+        {
+          "id": "opt-c",
+          "text": "No, the Activity Level Report alone doesn't indicate algorithm quality; must review Important Attributes to understand why"
+        },
+        {
+          "id": "opt-d",
+          "text": "Yes, 1.6 percentage points is substantial improvement"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on automated personalization report interpretation",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-018",
+      "domainId": "configuring_managing",
+      "topic": "Activity-Only vs. Reusable Audiences",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is creating a one-time promotion activity that targets \"Visitors who abandoned checkout in last 3 days\". This specific audience will not be reused in future activities.\n\nShould this be:\nA) A reusable audience saved to the library for future use\n\nB) An activity-only audience created specifically for this activity\n\nC) A custom segment created in Adobe Analytics and imported\n\nD) A pre-built Adobe provided audience\n\n**Answer Key:** See end of document\n\n---\n\n### Q20: Metric Dependencies\n\nA practitioner sets up a purchase funnel test with:\n- Metric A: \"Clicked Product Comparison Button\"\n- Metric B: \"Completed Purchase\"\n\nThe practitioner wants Metric B to track ONLY purchases from visitors who clicked the comparison button first.\n\nHow should this be configured?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set up Metric B with \"Increment Count & Keep User in Activity\""
+        },
+        {
+          "id": "opt-b",
+          "text": "Set up Metric B to depend on Metric A (dependency configuration)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a combined Calculated Metric combining both events"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use A4T to track in Analytics instead"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on activity-only vs. reusable audiences",
+      "incorrectExplanations": {},
+      "chapterId": "configuring_managing"
+    },
+    {
+      "id": "ad0-e408-practice-021",
+      "domainId": "testing_analysis",
+      "topic": "Confidence and Significance",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An A/B test is running on a purchase page with:\n- Control: 4.5% conversion rate\n- Variation: 5.1% conversion rate\n- Current confidence level: 85%\n- Calculated sample size needed: 12,000 per variation\n- Current visitors per variation: 10,500\n\nWhat action should the Adobe Target practitioner take?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Declare the variation as winner; 85% confidence is acceptable"
+        },
+        {
+          "id": "opt-b",
+          "text": "Continue testing to reach 12,000 visitors per variation; need 95%+ confidence and full sample size"
+        },
+        {
+          "id": "opt-c",
+          "text": "Stop test and implement original; not enough statistical power"
+        },
+        {
+          "id": "opt-d",
+          "text": "Increase traffic allocation to variation to speed up results"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on confidence and significance",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-022",
+      "domainId": "testing_analysis",
+      "topic": "Lift Calculation and Interpretation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An A/B test results show:\n- Control conversion rate: 3.2%\n- Variation conversion rate: 4.8%\n- Confidence: 96%\n\nA stakeholder says: \"We achieved 1.6% improvement, which is what matters for revenue.\"\n\nA practitioner responds: \"Actually, the lift is 50%.\"\n\nIs the practitioner correct? Explain the difference.",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No, the practitioner is wrong; the difference is 1.6 percentage points"
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, the practitioner is correct; lift is relative improvement = (4.8-3.2)/3.2 = 50% lift"
+        },
+        {
+          "id": "opt-c",
+          "text": "The stakeholder is correct; percentage points matter more than relative lift"
+        },
+        {
+          "id": "opt-d",
+          "text": "Cannot determine which is correct without revenue data"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on lift calculation and interpretation",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-023",
+      "domainId": "testing_analysis",
+      "topic": "Automated Personalization - Important Attributes Misinterpretation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An AP activity's Important Attributes Report shows:\n- Browser Type: 35% importance\n- Device Type: 28% importance  \n- Visitor Type: 22% importance\n\nA stakeholder concludes: \"Browser type causes 35% of conversions, so we should optimize for all browsers.\"\n\nWhat is the error in this interpretation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The stakeholder is correct; we should optimize across browsers"
+        },
+        {
+          "id": "opt-b",
+          "text": "Important Attributes shows FREQUENCY of algorithm use, not causation; Browser Type was used in 35% of algorithm decisions, NOT responsible for 35% of conversions"
+        },
+        {
+          "id": "opt-c",
+          "text": "The numbers are percentages, so we can't draw conclusions about causation"
+        },
+        {
+          "id": "opt-d",
+          "text": "This interpretation is only valid if conversion rates differ by browser"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on automated personalization - important attributes misinterpretation",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-024",
+      "domainId": "testing_analysis",
+      "topic": "Novelty Effect in A/B Testing",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner observes the following lift pattern in a homepage test:\n- Week 1: 18% lift (95% confidence)\n- Week 2: 12% lift (96% confidence)\n- Week 3: 8% lift (97% confidence)\n- Week 4: 5% lift (98% confidence)\n- Current: Day 25 (sample size reached at 2 weeks)\n\nWhat is the BEST interpretation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The variation's true lift is declining; stop test immediately"
+        },
+        {
+          "id": "opt-b",
+          "text": "The variation's true lift is likely around 5%, because that's the current rate after stabilization"
+        },
+        {
+          "id": "opt-c",
+          "text": "Clear novelty effect; initial 18% was elevated due to new design appeal"
+        },
+        {
+          "id": "opt-d",
+          "text": "Results are inconclusive and test must continue indefinitely"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on novelty effect in a/b testing",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-025",
+      "domainId": "testing_analysis",
+      "topic": "Multivariate Testing Interpretation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An MVT test on product page is testing:\n- 3 headlines\n- 2 button colors\n- 2 images\n- Total: 12 experience combinations\n\nAfter running to sample size (95% confidence, Bonferroni correction), the results show:\n- Experience 1: 5.2% conversion (Headline A, Red, Image X)\n- Experience 2: 5.1% conversion (Headline B, Red, Image Y)\n- ...all others: 4.9-5.0%\n\nThe practitioner wants to understand which element has most impact.\n\nWhat additional report should be reviewed?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Activity Level Report (not available for MVT)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Experience Performance Report with Element Contribution Analysis to see impact of each element independently"
+        },
+        {
+          "id": "opt-c",
+          "text": "Auto-discovered Segments Report (not applicable to MVT)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Cannot determine element impact without running separate tests"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on multivariate testing interpretation",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-026",
+      "domainId": "testing_analysis",
+      "topic": "False Positive Risk",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner running an A/B test checks results on Days 1, 3, 5, 7, 10, 14, 21, 28, stopping on Day 21 when variation shows 94% confidence and 12% lift.\n\nWhat is the risk in this approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No risk; 94% confidence is acceptable for decision-making"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multiple peeking at results increases false positive risk beyond the stated 5% threshold; should wait for predetermined sample size"
+        },
+        {
+          "id": "opt-c",
+          "text": "The test must run full 28 days regardless"
+        },
+        {
+          "id": "opt-d",
+          "text": "Peeking is beneficial for early identification of winners"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Peeking Problem: Multiple checks inflate false positive risk from 5% to 20%+. Proper approach: Pre-calculate sample size, check ONCE after reaching it. Declaring winner early = much higher false positive risk.",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-027",
+      "domainId": "testing_analysis",
+      "topic": "Activity Delivery Troubleshooting",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Target activity is configured correctly but isn't showing to any visitors. The practitioner follows troubleshooting steps:\n\n✓ Activity status: Active  \n✓ Current date/time: Within activity duration  \n✓ URL targeting: Page URL matches  \n✓ Browser cache: Cleared  \n✓ Audience rules: User should qualify  \n\nThe activity still doesn't show. What should be checked next?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Verify Adobe Analytics integration (may be blocking Target)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Check if Activity Collisions exist; another higher-priority activity may be preventing this activity from showing"
+        },
+        {
+          "id": "opt-c",
+          "text": "Increase the activity's budget/traffic allocation percentage"
+        },
+        {
+          "id": "opt-d",
+          "text": "Switch from VEC to Form-Based Composer"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on activity delivery troubleshooting",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-practice-028",
+      "domainId": "testing_analysis",
+      "topic": "Audience Qualification Debugging",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner creates an audience for \"High-Value Customers\" defined as:\n- Annual spending > $1,000 (profile attribute)\n- AND visited product page in last 30 days (site behavior)\n\nThe audience is selected in an activity, but reports show ZERO visitors have qualified.\n\nWhat is the MOST LIKELY issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The audience rules are correct, but no high-value customers exist in traffic"
+        },
+        {
+          "id": "opt-b",
+          "text": "The profile attribute \"Annual spending\" may not be properly populated in visitor profiles; verify attribute is being passed correctly to Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "The 30-day recency window is too restrictive"
+        },
+        {
+          "id": "opt-d",
+          "text": "The AND logic is preventing qualification; should use OR instead"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Most Likely: Profile attribute not being populated correctly in visitor profiles. Verify: Attribute passed correctly, parameter name matches, data populated. Debug: Check mbox calls in browser console.",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis",
+      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
+    },
+    {
+      "id": "ad0-e408-practice-029",
+      "domainId": "testing_analysis",
+      "topic": "Preset Validation Issue",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is using a preset called \"Mobile Users Report\" that includes audience targeting for \"Mobile Visitors\". The preset was created 3 months ago.\n\nThe activity shows \"Mobile Visitors\" audience has been deleted by another team member. The preset now shows an invalid/warning icon.\n\nWhat is the proper resolution?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Delete the preset (can't be fixed)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Recreate the \"Mobile Visitors\" audience with the original rules, which will restore preset validity"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a new preset with different audience"
+        },
+        {
+          "id": "opt-d",
+          "text": "Switch to Form-Based Composer to avoid presets"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "See study guide section on preset validation issue",
+      "incorrectExplanations": {},
+      "chapterId": "testing_analysis"
+    },
+    {
+      "id": "ad0-e408-q1",
+      "type": "single",
+      "question": "An e-commerce company wants to increase customer lifetime value (LTV). Currently, their average customer makes 2.5 purchases per year with an average order value of $125. The company wants to test personalizing product recommendations based on purchase history. Which success metric should the Adobe Target practitioner recommend as the PRIMARY metric?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Number of times \"Add to Cart\" button is clicked"
+        },
+        {
+          "id": "B",
+          "text": "Total sessions from returning visitors"
+        },
+        {
+          "id": "C",
+          "text": "Revenue per visitor (RPV) across all visits"
+        },
+        {
+          "id": "D",
+          "text": "Average rating received on product pages"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The company's goal is increasing customer lifetime value (LTV) , which is fundamentally about monetary value over time . RPV directly measures revenue generated per visitor across all visits, tracking lifetime revenue. This directly aligns with the LTV business goal. Testing personalized recommenda",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q2",
+      "type": "single",
+      "question": "A SaaS company notices that visitors who reach the pricing page have a 12% free trial signup rate, but those who don't reach the pricing page have a 0% signup rate. The company wants to test moving pricing information above the fold on the homepage. Which hypothesis best represents this test?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"If we move pricing above the fold, then visitors will click more links, because pricing is visually prominent\""
+        },
+        {
+          "id": "B",
+          "text": "\"If we move pricing above the fold, then free trial signups increase by 20%, because visitors who see pricing earlier are more likely to convert\""
+        },
+        {
+          "id": "C",
+          "text": "\"If we show discounts on pricing, then revenue increases, because discounts drive purchases\""
+        },
+        {
+          "id": "D",
+          "text": "\"If we update the pricing page design, then page load speed improves, because simplified design loads faster\""
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A strong hypothesis has three components: ACTION: What you're changing (move pricing above fold) OUTCOME: Measurable expected result (increase by 20%) REASONING: Why it should work (earlier visibility → more conversions) This hypothesis directly addresses the business observation (pricing visibilit",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q3",
+      "type": "single",
+      "question": "A digital marketing agency is running a campaign for a healthcare client. The client wants to test whether their current homepage messaging resonates differently with three distinct audience segments: C-level executives (want ROI data) Department managers (want operational benefits) End users (want ease-of-use) Each segment needs uniquely tailored messaging. The client does NOT want statistical comparison or a winner declared. They simply want to show each audience their relevant message. Which ",
+      "options": [
+        {
+          "id": "A",
+          "text": "Automated Personalization (AP)"
+        },
+        {
+          "id": "B",
+          "text": "Multivariate Test (MVT)"
+        },
+        {
+          "id": "C",
+          "text": "Experience Targeting (XT)"
+        },
+        {
+          "id": "D",
+          "text": "Auto-Target"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The scenario requires: Different content for different audiences (three distinct segments) Predefined mapping (each segment gets specific message) NO statistical winner finding (not comparing which works better) This is exactly what Experience Targeting does. XT maps specific audiences to specific",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q4",
+      "type": "single",
+      "question": "An online retailer has calculated their A/B test sample size as 8,000 visitors per variation (95% confidence, 80% power). They've been running the test for 1.5 weeks and have collected 4,000 visitors per variation. The variation currently shows a 12% lift in conversion rate with 88% confidence. What should the Adobe Target practitioner recommend?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Declare the variation as the winner and implement it, because 88% confidence exceeds 85% threshold"
+        },
+        {
+          "id": "B",
+          "text": "Continue running the test until reaching the calculated 8,000 visitors per variation, because early stopping increases risk of false positives"
+        },
+        {
+          "id": "C",
+          "text": "Stop the test and implement variation A (original), because the sample size is only 50% complete"
+        },
+        {
+          "id": "D",
+          "text": "Run the test for one more week and check again, because one week is enough for preliminary validation"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "This question tests the MOST CRITICAL rule in A/B testing. You MUST reach calculated sample size BEFORE declaring winner, even if confidence seems high. The practitioner calculated 8,000 for a reason: 95% confidence requires this sample size for their baseline and expected lift 88% confidence means",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q5",
+      "type": "single",
+      "question": "A luxury fashion e-commerce company wants to increase high-value customer conversions. Currently, 30% of visitors are from the United States, 20% are international, and 50% are from other regions. Their data shows: Annual income level strongly correlates with purchase value Mobile vs. desktop device shows weak correlation with purchase value Time since last purchase shows moderate correlation with purchase value Social media followers shows no correlation with purchase value If the company wants",
+      "options": [
+        {
+          "id": "A",
+          "text": "Device type, time zone, and browser type (demographics)"
+        },
+        {
+          "id": "B",
+          "text": "Annual income level and time since last purchase (business intent signals)"
+        },
+        {
+          "id": "C",
+          "text": "Number of social media followers and engagement metrics (engagement potential)"
+        },
+        {
+          "id": "D",
+          "text": "Geographic region, annual income, and mobile device type (mixed signals)"
+        }
+      ],
+      "correctAnswers": [
+        "A"
+      ],
+      "explanation": "The question specifically states that data shows : Annual income: STRONG correlation with purchase value ✓ Time since purchase: MODERATE correlation with purchase value ✓ Mobile vs. desktop: WEAK correlation (not predictive) Social followers: NO correlation (not related) Audience attributes should",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q6",
+      "type": "single",
+      "question": "A company implementing Analytics for Target (A4T) wants to create a success metric that tracks \"Completed purchase after viewing product comparison.\" What is the FIRST step in the proper A4T implementation workflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In Adobe Target, select \"Adobe Analytics\" as the reporting source"
+        },
+        {
+          "id": "B",
+          "text": "Create a Calculated Metric in Adobe Analytics combining the two events, then reference that metric in Target"
+        },
+        {
+          "id": "C",
+          "text": "Create the success metric directly in Target's metric creation interface"
+        },
+        {
+          "id": "D",
+          "text": "Set up Analytics segments for each product comparison type, then map them to Target activities"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "A4T workflow requires specific order: FIRST: Create Calculated Metric in Analytics (the complex logic) THEN: Use in Target (references Analytics metric) This is non-negotiable because Target doesn't perform complex calculations; Analytics does. Why other answers are wrong: A) Step 1 is to create th",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q7",
+      "type": "single",
+      "question": "A practitioner is running an A/B test on a checkout page. After 5 days, the variation shows a 15% lift in conversion rate. However, they notice: Day 1-3: 20% lift (peak) Day 4-5: 10% lift (declining) Test was supposed to run for 2 weeks Currently at 30% of calculated sample size What is the MOST LIKELY explanation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The variation is working well and should be declared winner now, because the 15% lift is significant"
+        },
+        {
+          "id": "B",
+          "text": "The test is experiencing novelty effect where new design initially outperforms, and must continue to full sample size"
+        },
+        {
+          "id": "C",
+          "text": "The test sample size was miscalculated and should be reduced"
+        },
+        {
+          "id": "D",
+          "text": "External factors (holidays) are affecting results and the test should be paused"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "The declining lift pattern is CLASSIC NOVELTY EFFECT: Days 1-3: New design is exciting → 20% lift Days 4-5: Novelty wears off → 10% lift Expected Week 2+: True performance emerges The practitioner must run full 2 weeks (full sample size) because: Early lift is artificially inflated True lift will s",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-q8",
+      "type": "single",
+      "question": "A company is trying to decide between using Adobe Target native reporting vs. Analytics with A4T (Analytics for Target). Which scenario indicates that A4T (Analytics with Target) would be the BEST choice?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The company only needs basic conversion rate and lift reporting, with no cross-site analysis"
+        },
+        {
+          "id": "B",
+          "text": "The company needs to analyze test results using custom Analytics segments, calculated metrics, and advanced Analysis Workspace features"
+        },
+        {
+          "id": "C",
+          "text": "The company wants the fastest way to report on a simple A/B test"
+        },
+        {
+          "id": "D",
+          "text": "The company prefers a visual, point-and-click reporting interface"
+        }
+      ],
+      "correctAnswers": [
+        "B"
+      ],
+      "explanation": "Use A4T when you need: Custom segments (not available in Target) Calculated metrics (complex formulas) Advanced Analysis Workspace Cross-site analysis Historical segment data Use Target native reporting when: Only need basic conversion/lift/confidence Quick reporting is priority No advanced segment",
+      "difficulty": "medium",
+      "source": "imported_html",
+      "domainId": "planning_strategy",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-036",
+      "domainId": "planning_strategy",
+      "topic": "An e-commerce company wants to increase customer lifetime va...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An e-commerce company wants to increase customer lifetime value (LTV). Which success metric should be PRIMARY?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Number of times \"Add to Cart\" button clicked"
+        },
+        {
+          "id": "opt-b",
+          "text": "Total sessions from returning visitors"
+        },
+        {
+          "id": "opt-c",
+          "text": "Revenue per visitor (RPV) across all visits"
+        },
+        {
+          "id": "opt-d",
+          "text": "Average rating on product pages"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-037",
+      "domainId": "planning_strategy",
+      "topic": "A SaaS company observes that visitors reaching the pricing p...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A SaaS company observes that visitors reaching the pricing page have 12% signup rate, while those not reaching it have 0%. They want to test moving pricing above the fold. Which hypothesis best represents this?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"If we move pricing above the fold, then visitors will click more links, because pricing is visually prominent\""
+        },
+        {
+          "id": "opt-b",
+          "text": "\"If we move pricing above the fold, then free trial signups increase by 20%, because visitors who see pricing earlier are more likely to convert\""
+        },
+        {
+          "id": "opt-c",
+          "text": "\"If we show discounts on pricing, then revenue increases, because discounts drive purchases\""
+        },
+        {
+          "id": "opt-d",
+          "text": "\"If we update the pricing page design, then page load speed improves, because simplified design loads faster\""
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-038",
+      "domainId": "planning_strategy",
+      "topic": "Three distinct audience segments need uniquely tailored mess...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Three distinct audience segments need uniquely tailored messaging. Each segment receives specific message. No statistical comparison needed. Which activity type?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Automated Personalization (AP)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multivariate Test (MVT)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Experience Targeting (XT)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Auto-Target"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-039",
+      "domainId": "planning_strategy",
+      "topic": "A/B test requires 8,000 visitors per variation. After 1.5 we...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A/B test requires 8,000 visitors per variation. After 1.5 weeks: 4,000 visitors per variation collected. Variation shows 12% lift, 88% confidence. What to do?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Declare winner; 88% confidence exceeds 85% threshold"
+        },
+        {
+          "id": "opt-b",
+          "text": "Continue until 8,000 per variation; early stopping increases false positive risk"
+        },
+        {
+          "id": "opt-c",
+          "text": "Stop and implement original; only 50% sample complete"
+        },
+        {
+          "id": "opt-d",
+          "text": "Run one more week for preliminary validation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-040",
+      "domainId": "planning_strategy",
+      "topic": "Luxury fashion site analyzed data: Annual income (STRONG cor...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Luxury fashion site analyzed data: Annual income (STRONG correlation with purchase value), Mobile vs desktop (WEAK), Time since purchase (MODERATE), Social followers (NO correlation). Which attributes prioritize?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Device type, time zone, browser type"
+        },
+        {
+          "id": "opt-b",
+          "text": "Annual income level and time since last purchase"
+        },
+        {
+          "id": "opt-c",
+          "text": "Social media followers and engagement metrics"
+        },
+        {
+          "id": "opt-d",
+          "text": "Geographic region, annual income, mobile device type"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-041",
+      "domainId": "planning_strategy",
+      "topic": "Company implementing A4T needs success metric \"Completed pur...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Company implementing A4T needs success metric \"Completed purchase after viewing product comparison.\" What is FIRST step?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "In Adobe Target, select \"Adobe Analytics\" as reporting source"
+        },
+        {
+          "id": "opt-b",
+          "text": "Create Calculated Metric in Adobe Analytics combining events, then reference in Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create success metric directly in Target's metric creation interface"
+        },
+        {
+          "id": "opt-d",
+          "text": "Set up Analytics segments for each product comparison type"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-042",
+      "domainId": "planning_strategy",
+      "topic": "A/B test on checkout page after 5 days: Day 1-3: 20% lift, D...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A/B test on checkout page after 5 days: Day 1-3: 20% lift, Day 4-5: 10% lift. Test planned for 2 weeks, currently 30% of sample size. Explanation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Variation working well; declare winner now"
+        },
+        {
+          "id": "opt-b",
+          "text": "Experiencing novelty effect; continue to full sample size"
+        },
+        {
+          "id": "opt-c",
+          "text": "Sample size miscalculated; reduce it"
+        },
+        {
+          "id": "opt-d",
+          "text": "External factors affecting; pause test"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-043",
+      "domainId": "planning_strategy",
+      "topic": "When should A4T (Analytics with Target) be chosen over Targe...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "When should A4T (Analytics with Target) be chosen over Target native reporting?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Company only needs basic conversion/lift reporting"
+        },
+        {
+          "id": "opt-b",
+          "text": "Company needs custom Analytics segments, calculated metrics, Analysis Workspace"
+        },
+        {
+          "id": "opt-c",
+          "text": "Company wants fastest way to report on simple A/B test"
+        },
+        {
+          "id": "opt-d",
+          "text": "Company prefers visual, point-and-click interface"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "planning_strategy",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-044",
+      "domainId": "configuration_executing",
+      "topic": "Activity A (Higher Priority): \"New Visitors\" audience (visit...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Activity A (Higher Priority): \"New Visitors\" audience (visitor does NOT qualify). Activity B (Lower Priority): \"All Visitors\" (visitor DOES qualify). When Activity A shows default content with \"Show default content for all other activities\" ON, what happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Both Activity A and B show experiences; can stack"
+        },
+        {
+          "id": "opt-b",
+          "text": "Activity B's experience displays because visitor qualifies"
+        },
+        {
+          "id": "opt-c",
+          "text": "Default content locks in; Activity B blocked from delivering"
+        },
+        {
+          "id": "opt-d",
+          "text": "Neither activity shows; both skipped"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-045",
+      "domainId": "configuration_executing",
+      "topic": "Company runs multiple personalization activities. Wants lowe...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Company runs multiple personalization activities. Wants lower-priority activities to show experiences even if higher-priority ones show default. How to configure \"Show default content for all other activities\"?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Turn ON to block lower-priority activities"
+        },
+        {
+          "id": "opt-b",
+          "text": "Turn OFF to allow other eligible activities to be evaluated"
+        },
+        {
+          "id": "opt-c",
+          "text": "Setting doesn't affect activity evaluation"
+        },
+        {
+          "id": "opt-d",
+          "text": "Turn ON to increase personalization layers"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-046",
+      "domainId": "configuration_executing",
+      "topic": "Retailer wants custom \"customer_tier\" attribute based on pur...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Retailer wants custom \"customer_tier\" attribute based on purchase history (\"Platinum\" >$5000, \"Gold\" >$1000, \"Standard\" else). This needs reuse across multiple Target activities. Best approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create logic in each Target activity"
+        },
+        {
+          "id": "opt-b",
+          "text": "Use profile script calculating once, stored in visitor profile"
+        },
+        {
+          "id": "opt-c",
+          "text": "Pass purchase total as mbox parameter per request"
+        },
+        {
+          "id": "opt-d",
+          "text": "Import purchase data from Analytics each time"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-047",
+      "domainId": "configuration_executing",
+      "topic": "Which CAN a profile script safely access and use?",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which CAN a profile script safely access and use?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Page DOM elements and modify HTML directly"
+        },
+        {
+          "id": "opt-b",
+          "text": "Existing profile attributes, mbox parameters, geolocation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Make API calls to external services, fetch real-time data"
+        },
+        {
+          "id": "opt-d",
+          "text": "Access browser cookies directly (not passed to Target)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-048",
+      "domainId": "configuration_executing",
+      "topic": "Website passes cartValue=150 mbox parameter per request. Com...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Website passes cartValue=150 mbox parameter per request. Company also wants \"customer_segment\" (cartValue + visitCount + recency). Key DIFFERENCE in use?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Both identical; interchangeable"
+        },
+        {
+          "id": "opt-b",
+          "text": "Mbox param (raw data) vs profile script (calculated, stored in profile)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Profile scripts only for audiences; mbox params for targeting"
+        },
+        {
+          "id": "opt-d",
+          "text": "Mbox params persistent; profile scripts temporary"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-049",
+      "domainId": "configuration_executing",
+      "topic": "Content company wants article recommendations based on readi...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Content company wants article recommendations based on reading behavior. Profile script should count articles viewed, track by category, calculate engagement score (time + comments + shares), store for future decisions. Why ideal?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile scripts run JavaScript on visitor's browser"
+        },
+        {
+          "id": "opt-b",
+          "text": "Profile scripts calculate once, store; reusable across activities"
+        },
+        {
+          "id": "opt-c",
+          "text": "Profile scripts auto-updated from Analytics"
+        },
+        {
+          "id": "opt-d",
+          "text": "Profile scripts eliminate need for mbox parameters"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-050",
+      "domainId": "configuration_executing",
+      "topic": "Profile script reads purchase count, reads cartValue mbox pa...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Profile script reads purchase count, reads cartValue mbox parameter, calculates \"High Value\" (cartValue >$200), stores as profile.valueSegment. Where can it be used in activities?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Only in Automated Personalization (AP)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Only for creating library audiences"
+        },
+        {
+          "id": "opt-c",
+          "text": "In audiences, targeting, Recommendations, offer logic, reporting"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only with Form-Based Composer"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-051",
+      "domainId": "configuration_executing",
+      "topic": "Practitioner selects \"Save 50%\" span in deeply nested hierar...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Practitioner selects \"Save 50%\" span in deeply nested hierarchy. Selector: \".header-top .banner-container.featured-banner.primary .offer-text-wrapper .offer-price\". Next month marketing removes \"featured-banner\" class. Activity stops working. What feature prevents this?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "URL targeting rules"
+        },
+        {
+          "id": "opt-b",
+          "text": "Expand Section (select stable parent like .header-top)"
+        },
+        {
+          "id": "opt-c",
+          "text": "!important CSS property"
+        },
+        {
+          "id": "opt-d",
+          "text": "Activity collision settings"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-052",
+      "domainId": "configuration_executing",
+      "topic": "Practitioner creating A/B test using Form-Based. Control: Ke...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Practitioner creating A/B test using Form-Based. Control: Keep on current page. Variation: Redirect to promotional page. Needs redirect offer. CORRECT process?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Click \"Create\", select \"Redirect Offer\" in dialog"
+        },
+        {
+          "id": "opt-b",
+          "text": "Click \"Offers\" → \"Redirect Offers\" tab → Select/create offer"
+        },
+        {
+          "id": "opt-c",
+          "text": "Click \"Experience\" → \"Add Redirect\" → Enter URL"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use VEC redirect tool (Form-Based doesn't support)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-053",
+      "domainId": "configuration_executing",
+      "topic": "Audience for promotion: (USA OR Canada) AND 7+ days visitor...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Audience for promotion: (USA OR Canada) AND 7+ days visitor AND product browsed. Configuration creates: Location:USA AND Location:Canada AND Recency AND Behavior. Issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Location fields use AND when OR needed; visitors must match BOTH USA AND Canada (impossible)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Correctly configured"
+        },
+        {
+          "id": "opt-c",
+          "text": "Recency redundant"
+        },
+        {
+          "id": "opt-d",
+          "text": "Site behavior won't work without Analytics"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-054",
+      "domainId": "configuration_executing",
+      "topic": "Three activities on homepage, all visitor qualifies: Activit...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Three activities on homepage, all visitor qualifies: Activity 1 (Priority 500), Activity 2 (Priority 750), Activity 3 (Priority 100). Which displays?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All three simultaneously"
+        },
+        {
+          "id": "opt-b",
+          "text": "Activity 1 (first created)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Activity 2 (highest: 750)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Activity 3 (runs all pages)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-055",
+      "domainId": "configuration_executing",
+      "topic": "QA testing personalization activity. Need: Activity content...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "QA testing personalization activity. Need: Activity content displays correctly, Functions when other live activities present (collision handling), Respects audience qualification. Setting configuration?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"Show default\" ON, \"Match audience\" OFF"
+        },
+        {
+          "id": "opt-b",
+          "text": "\"Show default\" ON, \"Match audience\" ON"
+        },
+        {
+          "id": "opt-c",
+          "text": "\"Show default\" OFF, \"Match audience\" ON"
+        },
+        {
+          "id": "opt-d",
+          "text": "\"Show default\" OFF, \"Match audience\" OFF"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "configuration_executing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-056",
+      "domainId": "implementation_testing",
+      "topic": "A/B test: 8,000 visitors/variation calculated needed (95% co...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A/B test: 8,000 visitors/variation calculated needed (95% confidence). After 1.5 weeks: 4,000 visitors/variation. Variation shows 12% lift, 88% confidence. Recommendation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Declare winner; 88% acceptable"
+        },
+        {
+          "id": "opt-b",
+          "text": "Continue to 8,000; need 95% and full sample"
+        },
+        {
+          "id": "opt-c",
+          "text": "Stop, implement original; only 50% sample"
+        },
+        {
+          "id": "opt-d",
+          "text": "Run one more week for validation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-057",
+      "domainId": "implementation_testing",
+      "topic": "A/B test: Control 4.5%, Variation 5.1%, Confidence 96%. Stak...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A/B test: Control 4.5%, Variation 5.1%, Confidence 96%. Stakeholder: \"1.6% improvement matters for revenue.\" Practitioner: \"Actually, lift is 50%.\" Correct?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No, practitioner wrong; difference is 1.6 percentage points"
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, practitioner correct; lift=(5.1-4.5)/4.5=50%"
+        },
+        {
+          "id": "opt-c",
+          "text": "Stakeholder correct; percentage points matter most"
+        },
+        {
+          "id": "opt-d",
+          "text": "Cannot determine without revenue data"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-058",
+      "domainId": "implementation_testing",
+      "topic": "AP Activity Level Report: Control 5.2%, Targeted 6.8%, +1.6p...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "AP Activity Level Report: Control 5.2%, Targeted 6.8%, +1.6pp difference. Stakeholder concludes: \"ML algorithm excellent at personalizing.\" Conclusion correct? Better insight?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, Targeted shows higher"
+        },
+        {
+          "id": "opt-b",
+          "text": "No, Offer Level Report shows each offer performs better (Smart vs Random)"
+        },
+        {
+          "id": "opt-c",
+          "text": "No, Important Attributes shows why"
+        },
+        {
+          "id": "opt-d",
+          "text": "Yes, 1.6pp substantial"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-059",
+      "domainId": "implementation_testing",
+      "topic": "AP Important Attributes Report: Browser Type 35%, Device Typ...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "AP Important Attributes Report: Browser Type 35%, Device Type 28%, Visitor Type 22%. Stakeholder: \"Browser Type causes 35% of conversions, optimize for all browsers.\" Error?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Correct, optimize across browsers"
+        },
+        {
+          "id": "opt-b",
+          "text": "ERROR: Shows FREQUENCY of use (35% of decisions), NOT causation; not responsible for 35% conversions"
+        },
+        {
+          "id": "opt-c",
+          "text": "Percentages prevent conclusions"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only valid if conversion rates differ by browser"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-060",
+      "domainId": "implementation_testing",
+      "topic": "Test lift pattern: Week 1: 18% (95% confidence), Week 2: 12%...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Test lift pattern: Week 1: 18% (95% confidence), Week 2: 12%, Week 3: 8%, Week 4: 5% (98% confidence). Sample size reached week 2. True lift estimate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "18%; initial peak"
+        },
+        {
+          "id": "opt-b",
+          "text": "5%; stabilized after novelty wears"
+        },
+        {
+          "id": "opt-c",
+          "text": "Average of all weeks"
+        },
+        {
+          "id": "opt-d",
+          "text": "Cannot determine from pattern"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-061",
+      "domainId": "implementation_testing",
+      "topic": "MVT testing 3 headlines, 2 button colors, 2 images. Total co...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "MVT testing 3 headlines, 2 button colors, 2 images. Total combinations? Understanding element impact?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "5+2+2=9 total combinations"
+        },
+        {
+          "id": "opt-b",
+          "text": "3×2×2=12 combinations"
+        },
+        {
+          "id": "opt-c",
+          "text": "Limited to 2,000 (like A/B test)"
+        },
+        {
+          "id": "opt-d",
+          "text": "No limit for MVT"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-062",
+      "domainId": "implementation_testing",
+      "topic": "Practitioner checks test results on Days 1, 3, 5, 7, 10, 14,...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Practitioner checks test results on Days 1, 3, 5, 7, 10, 14, 21. Stops Day 21 at 94% confidence, 12% lift. Declared winner. Risk?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No risk; 94% acceptable"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multiple peeking increases false positive risk beyond 5% threshold; wait for predetermined sample size"
+        },
+        {
+          "id": "opt-c",
+          "text": "Must run full 28 days"
+        },
+        {
+          "id": "opt-d",
+          "text": "Peeking beneficial for early winners"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-063",
+      "domainId": "implementation_testing",
+      "topic": "Variation A: 6.0% ± 0.4% (5.6-6.4%). Variation B: 4.8% ± 0.3...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Variation A: 6.0% ± 0.4% (5.6-6.4%). Variation B: 4.8% ± 0.3% (4.5-5.1%). Intervals overlap status and meaning?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Overlap = no significant difference; continue testing"
+        },
+        {
+          "id": "opt-b",
+          "text": "Don't overlap = significant difference; declare winner"
+        },
+        {
+          "id": "opt-c",
+          "text": "This example DON'T overlap; A is winner"
+        },
+        {
+          "id": "opt-d",
+          "text": "Can't determine from intervals"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-064",
+      "domainId": "implementation_testing",
+      "topic": "Activity configured correctly, isn't showing. Checked: ✓ Act...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Activity configured correctly, isn't showing. Checked: ✓ Active status ✓ URL targeting ✓ Audience ✓ Cache ✓ Target library loaded. What next?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Verify Analytics integration (may block Target)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Check Activity Collisions; higher-priority activity blocking"
+        },
+        {
+          "id": "opt-c",
+          "text": "Increase activity budget/traffic allocation"
+        },
+        {
+          "id": "opt-d",
+          "text": "Switch from VEC to Form-Based"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-065",
+      "domainId": "implementation_testing",
+      "topic": "\"High-Value Customers\" audience: Annual spending >$1,000 (pr...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "\"High-Value Customers\" audience: Annual spending >$1,000 (profile attribute) AND visited product page in 30 days (site behavior). Activity shows ZERO visitors qualified. Issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No high-value customers in traffic"
+        },
+        {
+          "id": "opt-b",
+          "text": "Profile attribute \"Annual spending\" may not be properly populated; verify attribute passed to Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "30-day window too restrictive"
+        },
+        {
+          "id": "opt-d",
+          "text": "AND logic preventing; use OR instead"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-066",
+      "domainId": "implementation_testing",
+      "topic": "\"Mobile Users Report\" preset created 3 months ago references...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "\"Mobile Users Report\" preset created 3 months ago references \"Mobile Visitors\" audience. Team deleted this audience. Preset shows invalid/warning icon. Fix?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Delete preset; can't be fixed"
+        },
+        {
+          "id": "opt-b",
+          "text": "Recreate \"Mobile Visitors\" audience with original rules; preset becomes valid"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create new preset with different audience"
+        },
+        {
+          "id": "opt-d",
+          "text": "Switch to Form-Based"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-067",
+      "domainId": "implementation_testing",
+      "topic": "Need to investigate why activity isn't showing and check aud...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Need to investigate why activity isn't showing and check audience evaluation details (why qualified/not). Which tool?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "mboxDebug (?mboxDebug); shows basic info"
+        },
+        {
+          "id": "opt-b",
+          "text": "mboxTrace (?mboxTrace=true); detailed tracing, audience decisions"
+        },
+        {
+          "id": "opt-c",
+          "text": "Debugger Extension; visual only"
+        },
+        {
+          "id": "opt-d",
+          "text": "Browser Console; network tab"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "implementation_testing",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-068",
+      "domainId": "analysis_optimization",
+      "topic": "Setup purchase funnel test with Metric A: \"Clicked Product C...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Setup purchase funnel test with Metric A: \"Clicked Product Comparison\" and Metric B: \"Completed Purchase.\" Want B to track ONLY purchases from visitors who clicked comparison first. Configuration?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set B with \"Increment Count & Keep\""
+        },
+        {
+          "id": "opt-b",
+          "text": "Set B to depend on A (dependency configuration)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create combined Calculated Metric"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use A4T instead"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-069",
+      "domainId": "analysis_optimization",
+      "topic": "Limited-time exclusive deal signup activity. Want: Visitor e...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Limited-time exclusive deal signup activity. Want: Visitor exits activity after signup, sees default for rest of session. Setting?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"Keep User in Activity\""
+        },
+        {
+          "id": "opt-b",
+          "text": "\"Release & Allow Reentry\""
+        },
+        {
+          "id": "opt-c",
+          "text": "\"Release & Bar Reentry\""
+        },
+        {
+          "id": "opt-d",
+          "text": "Default settings"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-070",
+      "domainId": "analysis_optimization",
+      "topic": "AP with 4 locations: Hero (5 offers), Sidebar (3), Footer (2...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "AP with 4 locations: Hero (5 offers), Sidebar (3), Footer (2), Product (4). Max experience combinations ML tests?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "5+3+2+4=14"
+        },
+        {
+          "id": "opt-b",
+          "text": "5×3×2×4=120 combinations"
+        },
+        {
+          "id": "opt-c",
+          "text": "Limited to 2,000"
+        },
+        {
+          "id": "opt-d",
+          "text": "Up to 30,000 (AP limit)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-071",
+      "domainId": "analysis_optimization",
+      "topic": "Test day 10: Variation shows 10% lift, 92% confidence. Calcu...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Test day 10: Variation shows 10% lift, 92% confidence. Calculated sample size 15,000 per variation, currently 8,000. Declare winner?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, 92% acceptable, declare winner"
+        },
+        {
+          "id": "opt-b",
+          "text": "No, need 95% AND full sample size (early stopping risky)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Yes, 92% > 85% threshold safe"
+        },
+        {
+          "id": "opt-d",
+          "text": "Continue only 1 more week"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-072",
+      "domainId": "analysis_optimization",
+      "topic": "\"Visitors who abandoned checkout in last 3 days\" = one-time...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "\"Visitors who abandoned checkout in last 3 days\" = one-time promotion audience, won't reuse. Create as?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Reusable audience for future use"
+        },
+        {
+          "id": "opt-b",
+          "text": "Activity-only audience (specific to this activity)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Analytics segment imported"
+        },
+        {
+          "id": "opt-d",
+          "text": "Pre-built Adobe audience"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-073",
+      "domainId": "analysis_optimization",
+      "topic": "Want to verify ML algorithm found multiple distinct visitor...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Want to verify ML algorithm found multiple distinct visitor groups with different offer preferences. Which report?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Activity Level Report"
+        },
+        {
+          "id": "opt-b",
+          "text": "Offer Level Report"
+        },
+        {
+          "id": "opt-c",
+          "text": "Automated Segments Report"
+        },
+        {
+          "id": "opt-d",
+          "text": "Important Attributes Report"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-074",
+      "domainId": "analysis_optimization",
+      "topic": "Page has JavaScript-heavy content not rendering in VEC. Chan...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Page has JavaScript-heavy content not rendering in VEC. Changes need careful delivery timing. Best approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use VEC \"Edit HTML\" option"
+        },
+        {
+          "id": "opt-b",
+          "text": "Use Form-Based Composer (guaranteed delivery)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Try mboxDefine"
+        },
+        {
+          "id": "opt-d",
+          "text": "Increase loading timeout"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-075",
+      "domainId": "analysis_optimization",
+      "topic": "Practitioner checking test status daily. Best practice for r...",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Practitioner checking test status daily. Best practice for result interpretation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Check daily to monitor progress"
+        },
+        {
+          "id": "opt-b",
+          "text": "Check ONLY after reaching calculated sample size to avoid peeking bias"
+        },
+        {
+          "id": "opt-c",
+          "text": "Check weekly for balance"
+        },
+        {
+          "id": "opt-d",
+          "text": "Check when confidence hits 90%"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "",
+      "incorrectExplanations": {},
+      "chapterId": "analysis_optimization",
+      "source": "AD0-E408 Complete Practice Exam (40Q)"
+    },
+    {
+      "id": "ad0-e408-practice-076",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Understanding \"Match Audience Rules\"",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target QA specialist is previewing an activity with the following audience rules: Country = United States Device Type = Mobile Visitor Type = Returning Visitor The specialist is currently accessing from Canada on a desktop browser as a first-time visitor. They toggle \"Match audience rules to see experiences\" to OFF . What happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The activity preview is blocked because they don't match the audience rules"
+        },
+        {
+          "id": "opt-b",
+          "text": ""
+        },
+        {
+          "id": "opt-c",
+          "text": "They see default content instead of the activity"
+        },
+        {
+          "id": "opt-d",
+          "text": "The system generates an error message"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: When \"Match audience rules to see experiences\" is toggled OFF : All audience qualification rules are bypassed The QA preview shows the activity regardless of whether you match the audiences This allows testing the experience content without audience blocking Why the specialist would do this: \"I need to test if the experience content looks correct\" \"I need to debug the activity configuration\" \"I'm accessing from a location/device that doesn't match, but I want to see it anyway\" Key Concept: OFF = Bypass all audience rules for preview purposes",
+      "explanationSource": "Adobe_Certification_Study_Hub (original Target Business quiz)",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-077",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "When to Use \"Match Audience Rules\" ON",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target practitioner is validating that an activity's audience targeting is working correctly. They want to confirm that: Which preview setting should they enable?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Show default content for all other activities"
+        },
+        {
+          "id": "opt-b",
+          "text": "Disable audience rules entirely"
+        },
+        {
+          "id": "opt-c",
+          "text": ""
+        },
+        {
+          "id": "opt-d",
+          "text": "Use Form-Based Composer instead of VEC"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: When \"Match audience rules to see experiences\" is toggled ON : The QA preview respects all audience qualification rules You only see the activity if you meet all audience criteria This simulates real visitor behavior (audience qualification) Use this to: Validate audience rules are working Test that only qualified visitors see the activity Confirm audience logic (AND/OR combinations) Debug why certain visitors aren't seeing the activity Workflow for validation: Access from California → See activity ✓ Access from Texas → Don't see activity ✓ Confirm: Audience geo-rule is working correctly",
+      "explanationSource": "Adobe_Certification_Study_Hub (original Target Business quiz)",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-078",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Debugging Activity Not Showing",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An activity targeting \"Mobile users who are returning visitors\" isn't appearing during QA preview. The QA specialist is accessing from a desktop browser. They need to determine if: The experience content is correct (view it) OR the audience rules are preventing them from seeing it What should they do?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Delete and recreate the activity with simpler audience rules"
+        },
+        {
+          "id": "opt-b",
+          "text": ""
+        },
+        {
+          "id": "opt-c",
+          "text": "Pause the activity and test on a different device"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use A4T reporting to check audience data"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: The specialist is blocked from seeing the activity because: They're on desktop (not mobile) They might not be a returning visitor By toggling \"Match audience rules to see experiences\" to OFF : Audience rules are bypassed They see the experience regardless of device/visitor type They can confirm: \"The content looks good\" or \"The content has an error\" This isolates the issue: If they see it with OFF → Content is OK, audience rules are blocking them If they don't see it with OFF → There's a configuration/content issue This is the debugging approach for audience rule issues.",
+      "explanationSource": "Adobe_Certification_Study_Hub (original Target Business quiz)",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-079",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Production Simulation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target practitioner wants to preview an activity in the most realistic way possible, exactly as a qualified visitor would see it in production with all other live activities. They will access from the target audience location and have the correct visitor characteristics. What settings should they use?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "\"Match audience rules\" ON; \"Show default content\" ON"
+        },
+        {
+          "id": "opt-b",
+          "text": "\"Match audience rules\" ON; \"Show default content\" ON"
+        },
+        {
+          "id": "opt-c",
+          "text": ""
+        },
+        {
+          "id": "opt-d",
+          "text": "\"Match audience rules\" OFF; \"Show default content\" OFF"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: For production simulation (most realistic preview): \"Match audience rules\" ON = Only see activity if you qualify (production behavior) \"Show default content\" OFF = Include other live activities (show collision/priority effects) Result: Exact replica of what qualified visitors see in production Comparison table: Setting                          | Purpose\n---------------------------------|------------------\n\"Match audience rules\" = ON      | Only qualified visitors see it\n\"Show default content\" = OFF     | Other activities included (realistic) This is the most production-like preview mode.",
+      "explanationSource": "Adobe_Certification_Study_Hub (original Target Business quiz)",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-080",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Isolation vs. Realistic Preview",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Review the following scenarios and match the best preview settings: Scenario A: \"I want to see ONLY my activity content without any other activities interfering\" Scenario B: \"I want to see my activity WITH other live activities to check collision/priority\" Scenario C: \"I want to see my activity ONLY if I match the audience rules (production simulation)\" Match each scenario with the correct settings:",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Scenario A = Both OFF; Scenario B = Both ON; Scenario C = Both OFF"
+        },
+        {
+          "id": "opt-b",
+          "text": "Scenario A = Both ON; Scenario B = Both ON; Scenario C = Both ON"
+        },
+        {
+          "id": "opt-c",
+          "text": ""
+        },
+        {
+          "id": "opt-d",
+          "text": "All scenarios need the same settings"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Breaking it down: Scenario A: \"ONLY my activity content\" \"Show default content for all other activities\" = ON (isolate) \"Match audience rules\" = Could be either (depends on if you want to test audience rules) Scenario B: \"With other live activities\" \"Show default content for all other activities\" = OFF (include others) \"Match audience rules\" = Could be either Scenario C: \"Production simulation\" \"Match audience rules to see experiences\" = ON (only if qualified) \"Show default content\" = OFF (include other activities) Key Relationships: ISOLATION:\n├─ \"Show default content\" = ON ← Hides other activities\n└─ Result: See only your activity\n\nREALISTIC:\n├─ \"Show default content\" = OFF ← Includes other activities\n├─ \"Match audience rules\" = ON ← Only if you qualify\n└─ Result: Exactly what real visitor sees\n\nDEBUGGING:\n├─ \"Show default content\" = ON ← Isolate your activity\n├─ \"Match audience rules\" = OFF ← Bypass audience blocking\n└─ Result: See content even if you don't qualify",
+      "explanationSource": "Adobe_Certification_Study_Hub (original Target Business quiz)",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-081",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Technical Limits",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target practitioner needs to pass visitor profile data to Adobe Target. What is the maximum number of unique profile attributes allowed per mbox call?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "8"
+        },
+        {
+          "id": "opt-b",
+          "text": "20"
+        },
+        {
+          "id": "opt-c",
+          "text": "50"
+        },
+        {
+          "id": "opt-d",
+          "text": "100"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Adobe Target has a hard limit of 50 unique profile attributes per mbox call. If you need to pass more than 50, use the Profile Update API. Related: This is what you got wrong on Q1 (answered 50 but it showed as wrong—this might be correct, verify with Adobe docs).",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-082",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Success Metric - Post-Conversion",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An e-commerce company wants visitors to convert (purchase) only once per session. After converting, they should be removed from the activity permanently. Which post-conversion setting should be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Keep User in Activity"
+        },
+        {
+          "id": "opt-b",
+          "text": "Release & Bar Reentry"
+        },
+        {
+          "id": "opt-c",
+          "text": "Release & Allow Reentry"
+        },
+        {
+          "id": "opt-d",
+          "text": "Pause Activity"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: Keep in Activity = visitor stays, can convert again Release & Allow Reentry = exits, can return later in future sessions Release & Bar Reentry = exits permanently, never returns For \"only once, never again\" = Release & Bar Reentry This is Q5 concept from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-083",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Audience Purpose",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "When creating audiences in Adobe Target, what is the primary purpose?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "To define the overall goals of the activity"
+        },
+        {
+          "id": "opt-b",
+          "text": "To segment and target specific groups of users"
+        },
+        {
+          "id": "opt-c",
+          "text": "To configure variations for A/B testing"
+        },
+        {
+          "id": "opt-d",
+          "text": "To track user interactions on the website"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: Audiences define WHO sees what. They segment visitors into groups for targeting. Wrong: A = that's activity objectives Wrong: C = that's variations/experiences Wrong: D = that's tracking/metrics This relates to Q16 (audience targeting purpose).",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-084",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activity Type - Simultaneous Testing",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which Adobe Target activity enables the simultaneous testing of multiple elements on a page (such as headlines, buttons, and images)?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Auto-Target"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multivariate Testing (MVT)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Experience Targeting"
+        },
+        {
+          "id": "opt-d",
+          "text": "Auto-Allocate"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: MVT = test multiple elements at same time (3 headlines × 2 buttons = 6 combinations) Auto-Target = personalize whole page experiences XT = audience-specific experiences Auto-Allocate = shift traffic to winner This is a core activity type question.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-085",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Preview Settings - Isolation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target specialist is previewing an activity and wants to see ONLY that activity's content without interference from other live activities on the same page. Which setting should be toggled ON?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Show All Activities"
+        },
+        {
+          "id": "opt-b",
+          "text": "Show Default Content for All Other Activities"
+        },
+        {
+          "id": "opt-c",
+          "text": "Disable Collision Detection"
+        },
+        {
+          "id": "opt-d",
+          "text": "Preview Mode"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: ON = \"isolation mode\" = only your activity visible OFF = \"realistic preview\" = includes other activities This is Q36 from your weak areas—you got it wrong.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-086",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Audience Selection - Lead Generation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A financial services company is optimizing their website to improve lead generation. They want to test targeted offers for visitors likely to become qualified leads. What audience attributes should they focus on?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Social media engagement metrics and website traffic volume"
+        },
+        {
+          "id": "opt-b",
+          "text": "Financial goals, investment preferences, and risk tolerance"
+        },
+        {
+          "id": "opt-c",
+          "text": "Browser type and device type"
+        },
+        {
+          "id": "opt-d",
+          "text": "Total number of website visits and session duration"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: For LEAD GENERATION, audience should reflect business intent. Wrong: A = engagement doesn't predict lead quality Wrong: C = device/browser is not business-relevant Wrong: D = volume metrics don't indicate lead readiness For financial services lead gen: Financial goals ✓ (indicates intent) Investment preferences ✓ (indicates interest type) Risk tolerance ✓ (indicates qualification) This is Q2 from your weak areas—you chose \"social media metrics\" which was wrong.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-087",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Audience Selection - E-Commerce",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An e-commerce retailer wants to personalize the homepage for different customer segments to increase average order value. Which of these audience attributes would be MOST valuable for this goal?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Time of day visitor accesses the site"
+        },
+        {
+          "id": "opt-b",
+          "text": "Geographic location and language preference"
+        },
+        {
+          "id": "opt-c",
+          "text": "Purchase history and product browsing behavior"
+        },
+        {
+          "id": "opt-d",
+          "text": "Email subscription status and account age"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: For increasing AOV in e-commerce: Purchase history shows what they've bought before ✓ Browsing behavior shows current interests ✓ These predict what they'll buy next Wrong choices: A = time of day doesn't affect AOV B = location/language matters for localization, not AOV D = subscription doesn't drive AOV This is another \"business goal → audience attributes\" question.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-088",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Optimization Strategy - Root Cause",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A subscription service notices that users who don't engage with new content have higher churn rates. Rather than just adding features, what optimization strategy should be tested in Adobe Target?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Implement a gamification feature on the site"
+        },
+        {
+          "id": "opt-b",
+          "text": "Test variations of the content recommendation algorithm"
+        },
+        {
+          "id": "opt-c",
+          "text": "Launch a social media campaign"
+        },
+        {
+          "id": "opt-d",
+          "text": "Increase the frequency of content updates"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: Problem: Users not engaging with NEW content = recommendations aren't relevant Solution: Test different algorithms to improve relevance Wrong: A = adding features doesn't test the hypothesis Wrong: C = social doesn't address content relevance Wrong: D = more content won't help if not relevant This is Q3 concept (root cause vs. symptom).",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-089",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Redirect Offers - Form-Based Composer",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target practitioner wants to test sending visitors to two completely different landing pages. Which steps are needed to add a redirect offer in the Form-Based Experience Composer?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Clicking Create, selecting the Redirect Offer option, typing an offer name, and specifying the URL"
+        },
+        {
+          "id": "opt-b",
+          "text": "Clicking Offers, selecting the Redirect Offers tab, and choosing an offer"
+        },
+        {
+          "id": "opt-c",
+          "text": "Clicking Change Redirect Offer, then selecting the desired URL"
+        },
+        {
+          "id": "opt-d",
+          "text": "Using the page delivery option to modify the redirect URL"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: The exact workflow in Form-Based Composer for redirect offers: 1. Click \"Offers\" 2. Select \"Redirect Offers\" tab 3. Choose an offer (from library or create new) This is Q37 from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-090",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Custom Success Metric with A4T",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company wants to measure success when visitors BOTH click a pop-up AND view a thank you page in the same visit, using Adobe Analytics as the reporting source (A4T). How should they create this combined success metric?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set up two separate conversion goals in Adobe Target, one for \"clicked element\" and another for \"viewed page\""
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a Calculated Metric in Adobe Analytics combining the two events, then use it as a goal in Adobe Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "Use Target's out-of-box metrics without customization"
+        },
+        {
+          "id": "opt-d",
+          "text": "Implement a custom JavaScript function through Adobe Target to manually track both events"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: When using A4T with complex success metrics: 1. Go to Adobe Analytics 2. Create Calculated Metric: (Click popup) AND (View thank you page) 3. Return to Target 4. Use that Calculated Metric as success goal 5. Target metrics settings are now LOCKED (managed by Analytics) This is Q12 from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-091",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activity Type Selection - Offers in Multiple Locations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An online retailer wants to personalize their product detail page. They have 4 offer locations (hero banner, sidebar, footer, product recommendation) with 5 different offers for each location. Using machine learning, they want the algorithm to automatically determine the best combination of offers for each visitor based on visitor attributes. Which activity type is most appropriate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "A/B Test"
+        },
+        {
+          "id": "opt-b",
+          "text": "Auto-Target"
+        },
+        {
+          "id": "opt-c",
+          "text": "Automated Personalization (AP)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Multivariate Testing"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: 4 locations × 5 offers per location = personalization is location/offer-based ML algorithm determining best offer combination per visitor Key phrase: \"combining specific offers or messages\" = AP Why not others: A/B Test = compare two complete versions (not offers) Auto-Target = personalize whole page experiences (not granular offers) MVT = test elements, not offers, and no personalization per visitor This is Q35 from your weak areas—you chose Auto-Target which was wrong.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-092",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Auto-Target Attribution",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer running an Auto-Target activity notices that some visitors qualify for the activity but don't see any experience delivered. If these visitors later convert on the page, will their conversion be attributed to the Auto-Target activity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, all conversions by qualified visitors are counted"
+        },
+        {
+          "id": "opt-b",
+          "text": "No, only visitors who see an experience within the same session are counted"
+        },
+        {
+          "id": "opt-c",
+          "text": "Only if the visitor sees the activity within the same session, the conversion is counted"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only if the conversion happens within 24 hours of qualification"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Auto-Target attribution is STRICTER than A/B Test: Requirement 1: Visitor must QUALIFY (audience match, page match) Requirement 2: Visitor must ACTUALLY VIEW the experience Requirement 3: Conversion must be in SAME SESSION If any of these missing → conversion NOT counted This is Q49 from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-093",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Sample Size and False Positives",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An A/B test is running. After 5 days, Variation B shows a 12% lift in conversions with 78% statistical confidence. The team is considering ending the test and implementing Variation B. Why should they continue testing until reaching the calculated sample size?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Ending early ensures higher statistical power"
+        },
+        {
+          "id": "opt-b",
+          "text": "It accelerates the identification of true differences in conversion rates"
+        },
+        {
+          "id": "opt-c",
+          "text": "It minimizes the risk of false-positive results in the test"
+        },
+        {
+          "id": "opt-d",
+          "text": "It guarantees a 100% confidence level in the selected winner"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: At 78% confidence = 22% risk of false positive False positive = declaring winner when no real difference exists Peeking at interim results inflates false positive rate Must reach calculated sample size with 95%+ confidence Only THEN minimize false positives This is Q44 from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-094",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Risk Mitigation During Testing",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "The Product Operations team at a retail company is concerned about testing variations on their homepage that might negatively impact user experience and conversion rates. While conducting the A/B test, which approach can help mitigate this risk?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Monitor the results continuously and stop immediately if any negative impact is observed"
+        },
+        {
+          "id": "opt-b",
+          "text": "Only show the variations to a small subset of visitors initially"
+        },
+        {
+          "id": "opt-c",
+          "text": "Use only the original version as the control group"
+        },
+        {
+          "id": "opt-d",
+          "text": "Extend the test duration to gather more data"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: To mitigate risk of testing: Start with small traffic allocation (10-20%) Monitor for negative impacts Gradually increase traffic if performing well Full rollout only after confidence This is Q7 concept—risk mitigation strategy.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-095",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Recommendations Activity - Unique Configuration",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "When creating a Recommendations activity using the Form-Based Experience Composer, what configuration step is DIFFERENT compared to other activity types?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Selecting the activity name"
+        },
+        {
+          "id": "opt-b",
+          "text": "Choosing an audience segment"
+        },
+        {
+          "id": "opt-c",
+          "text": "Specifying audience refinements"
+        },
+        {
+          "id": "opt-d",
+          "text": "Setting up conversion tracking"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Recommendations unique configuration: Standard activities: audience → location → experience Recommendations: audience → location → content type → algorithm → audience refinements ← DIFFERENT Audience refinements = filter recommendations by attributes Example: \"Only show products under $50\" or \"Only 4-star rated items\" This is Q18 from your weak areas.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-096",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Business Goal → Activity Type → Audience",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A SaaS company wants to increase free trial signups by personalizing their pricing page. Different company sizes respond differently to messaging: - Small businesses (1-50 employees): Prefer simple, cost-focused messaging - Mid-market (51-500 employees): Want ROI-focused messaging - Enterprise (500+ employees): Need compliance & security messaging What is the optimal approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "A/B Test with random assignment of all visitors"
+        },
+        {
+          "id": "opt-b",
+          "text": "Experience Targeting with predefined experiences for each company size"
+        },
+        {
+          "id": "opt-c",
+          "text": "Automated Personalization with multiple offers"
+        },
+        {
+          "id": "opt-d",
+          "text": "Auto-Target with 3 complete page designs"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: Audiences are predefined: Company size (small, mid-market, enterprise) Experiences are predefined: Messaging for each segment No ML needed: Rules are simple and clear XT is perfect for \"audience → specific experience\" mapping Why not others: A/B = random assignment doesn't match segments to messages C/D = overkill for this simple rule-based scenario This combines concepts: audience selection + activity type choice.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-097",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Preview Settings + Activity Collision",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Target practitioner has two activities running on the same page: - Activity 1: Button color test (Priority: High) - Activity 2: Banner text test (Priority: Low) They want to preview Activity 2 and see exactly how it appears in production WITH Activity 1's changes included. Which setting should they use?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Toggle \"Show Default Content for All Other Activities\" ON"
+        },
+        {
+          "id": "opt-b",
+          "text": "Toggle \"Show Default Content for All Other Activities\" OFF"
+        },
+        {
+          "id": "opt-c",
+          "text": "Disable Activity 1 temporarily"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use incognito mode"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: OFF = realistic preview (includes other activities with collision/priority applied) ON = isolation preview (only Activity 2 visible) For \"see how it looks in production WITH other activities\" → OFF This is Q36 concept in different context.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-098",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "A4T Success Metric - Complex Scenario",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company uses Adobe Analytics as Target's reporting source (A4T). They want a success metric that counts as a conversion only when visitors: 1. Click the \"Start Trial\" button AND 2. Complete the trial signup form AND 3. Reach the confirmation page Where should this metric be created first?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "In Adobe Target's Goals & Settings page"
+        },
+        {
+          "id": "opt-b",
+          "text": "In Adobe Analytics as a Calculated Metric"
+        },
+        {
+          "id": "opt-c",
+          "text": "Using custom JavaScript in the page code"
+        },
+        {
+          "id": "opt-d",
+          "text": "In Target's audience builder"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Explanation: For A4T with complex metrics: 1. Create Calculated Metric in Analytics Metric = (Click button) AND (Form completion) AND (Confirmation page view) 2. Then use in Target as success goal Analytics manages complex logic when using A4T.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-099",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Traffic Allocation Risk",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A practitioner is testing a significant redesign on a high-traffic page (50,000 daily visitors). They calculate they need 10,000 visitors per variation for statistical significance. To reduce risk, what should they do FIRST?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Launch the full test immediately with 50/50 traffic split"
+        },
+        {
+          "id": "opt-b",
+          "text": "Run the test on a different, lower-traffic page"
+        },
+        {
+          "id": "opt-c",
+          "text": "Allocate only 10% of traffic to the test initially, then ramp up"
+        },
+        {
+          "id": "opt-d",
+          "text": "Test on a mobile-only audience first"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Risk mitigation strategy: Start small: 5-10% traffic Monitor for negative impacts Ramp up gradually as confidence increases Full rollout only after validation This reduces risk while still gathering data.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-100",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Auto-Target vs. AP - Real Scenario",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A mobile app company wants to personalize the in-app purchase flow. They can either: 1. Create 3 complete purchase flow designs and let ML personalize which design each user sees 2. Create 6 different offers (discount options, payment methods, etc.) in 3 locations within the flow, and let ML personalize offer combinations Which approach is Auto-Target and which is AP?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Both are Auto-Target"
+        },
+        {
+          "id": "opt-b",
+          "text": "Both are AP"
+        },
+        {
+          "id": "opt-c",
+          "text": "Approach 1 is Auto-Target; Approach 2 is AP"
+        },
+        {
+          "id": "opt-d",
+          "text": "It depends on traffic volume"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Explanation: Approach 1: 3 complete designs × ML personalization = Auto-Target Approach 2: Multiple offers × Multiple locations × ML combination = AP This is the core distinction you missed on Q35.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-101",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Profile Parameter Limit",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"You can pass 8 profile parameters per mbox call.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. You can pass up to 50 unique profile parameters per mbox call.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-102",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Post-Conversion Behavior Impact",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"If you select 'Release & Allow Reentry,' the visitor can convert multiple times in the same session.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "True. \"Release & Allow Reentry\" means they exit the activity but can re-enter in future sessions and convert again.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-103",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "A4T Settings Lock",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"When using A4T, you can customize the post-conversion behavior and counting methodology in Target's Advanced Settings.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. A4T metrics are LOCKED to \"Increment Count & Keep User in Activity\" and \"On Every Impression\" settings. They cannot be customized in Target.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-104",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Audience Refinements",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"Audience Refinements in Recommendations activity are the same as Audience Selection in standard activities.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. Audience Refinements are DIFFERENT—they filter recommendations by attributes, not define who sees the activity.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-105",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Sample Size & Confidence",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"Reaching the calculated sample size helps minimize the risk of false-positive results.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "True. Sample size ensures 95%+ confidence, which minimizes false positives (only 5% risk remaining).",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-106",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "AP Report Types",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"Automated Personalization has 4 report types: Activity Level, Offer Level, Automated Segments, and Important Attributes.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "True. AP's unique reporting structure includes all 4 types, providing granular insight into personalization performance.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-107",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Auto-Target Attribution",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"In Auto-Target, conversions count even if the visitor qualified for the activity but never actually saw an experience.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. Auto-Target requires both qualification AND viewing for conversions to count.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-108",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activity Type - ML",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"Both Auto-Target and Auto-Allocate use machine learning, but Auto-Target personalizes for each visitor while Auto-Allocate shifts traffic to the winner.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "True. This is the key distinction between them.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-109",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Preview Isolation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"When 'Show Default Content for All Other Activities' is toggled ON, the preview shows the activity with all other live activities included.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. ON = isolated preview (only your activity). OFF = realistic preview (includes other activities).",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e408-practice-110",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Form-Based Redirect Offers",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Statement: \"Redirect offers can be created in both VEC and Form-Based Composer.\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "True"
+        },
+        {
+          "id": "opt-b",
+          "text": "False"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "False. Redirect offers are Form-Based Composer only. VEC cannot manage full-page redirects effectively.",
+      "explanationSource": "Practice_Test_30_Questions.md",
+      "incorrectExplanations": {}
+    }
+  ]
+}

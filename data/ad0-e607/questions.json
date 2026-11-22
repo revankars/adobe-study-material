@@ -1,0 +1,2248 @@
+{
+  "questions": [
+    {
+      "id": "ad0-e607-practice-001",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to trigger a journey when a customer abandons their shopping cart. The system must immediately detect the cart abandonment event and send a reminder email within 15 minutes. Which journey type should be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Read Audience journey triggered daily"
+        },
+        {
+          "id": "opt-b",
+          "text": "Unitary Event journey"
+        },
+        {
+          "id": "opt-c",
+          "text": "Business Event journey"
+        },
+        {
+          "id": "opt-d",
+          "text": "Audience Qualification journey"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A Unitary Event journey is triggered in real-time by a customer action (cart abandonment). This allows immediate processing and the reminder email can be sent within 15 minutes. Read Audience is batch-scheduled. Business Event is external/scheduled. Audience Qualification reacts to audience membership changes, not custom events.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-002",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey has been configured with 52 activities. When the marketer attempts to publish it, they receive an error message. What is the most likely cause?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The event payload exceeds 64 KB"
+        },
+        {
+          "id": "opt-b",
+          "text": "The journey exceeds the 50-activity limit per journey"
+        },
+        {
+          "id": "opt-c",
+          "text": "The organization has exceeded the 200-journey production limit"
+        },
+        {
+          "id": "opt-d",
+          "text": "One of the email messages exceeds 2 MB after backend processing"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "AJO has a strict 50-activity limit per journey. The error occurs at PUBLISH time (validation). The 64 KB event limit happens at runtime (entry), not publish. The 200-journey limit would prevent creating a new journey, not publishing an existing one. The 2 MB email limit would apply, but activity count is the more direct constraint here given the numbers provided.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-003",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer creates a Read Audience journey that sends a weekly email every Monday at 9 AM. When they attempt to publish a second Read Audience journey to send on the same schedule, the journey publishes successfully but doesn't execute. What is the issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The organization has exceeded the 5 concurrent instances limit for Read Audience activities"
+        },
+        {
+          "id": "opt-b",
+          "text": "The 12-hour processing timeout was exceeded"
+        },
+        {
+          "id": "opt-c",
+          "text": "The audience size exceeds the 20K profiles/second throughput"
+        },
+        {
+          "id": "opt-d",
+          "text": "The email content exceeds 1 MB in size"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Read Audience has a hard limit of 5 CONCURRENT instances per organization. If two journeys run at the same time (both Monday 9 AM), that would be 2 instances. The issue is scheduling them to avoid overlap. The journey publishes (no publish validation error) but won't execute if it exceeds the concurrent limit. Solution: stagger execution 5-10 minutes apart.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-004",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "During testing, a customer enters a Unitary Event journey via a 'Purchase' event. Five minutes later, the same customer makes another purchase and re-enters the journey. What prevents this from happening?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The event payload limit prevents duplicate events"
+        },
+        {
+          "id": "opt-b",
+          "text": "The 5-minute reentrance block prevents the same customer from entering within 5 minutes"
+        },
+        {
+          "id": "opt-c",
+          "text": "The 1 MB journey instance limit prevents re-entry"
+        },
+        {
+          "id": "opt-d",
+          "text": "The journey version automatically increments on each entry"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "By design, Unitary Event journeys have a 5-minute reentrance block (default). This prevents the same customer from entering the journey twice within a 5-minute window. This is a FEATURE to prevent duplicate messages. The event payload and instance limits are different constraints. Version changes don't affect this.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-005",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer reviews journey reports and notices that all profiles are exiting with an ERROR status at the same point in the journey. The email was sent successfully before the error occurred. What is the most likely cause?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The event payload exceeded 64 KB"
+        },
+        {
+          "id": "opt-b",
+          "text": "The journey instance accumulated more than 1 MB of data"
+        },
+        {
+          "id": "opt-c",
+          "text": "The 50-activity limit was exceeded"
+        },
+        {
+          "id": "opt-d",
+          "text": "The email content exceeded 2 MB after processing"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "ERROR status mid-journey indicates the 1 MB journey instance limit was breached. This happens when too much data accumulates during execution (profile lookups, API data, context variables). The 64 KB event limit would prevent entry entirely. The 50-activity limit would prevent publishing. The 2 MB email limit would prevent sending the email, not cause an ERROR after send.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-006",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey uses a Condition activity to split customers based on loyalty_tier. VIP customers go to Path A, others to Path B. After 2 days, the marketer notices very few customers on Path A despite significant VIP traffic. What is a probable cause?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The condition logic is correct; Path A is naturally smaller"
+        },
+        {
+          "id": "opt-b",
+          "text": "The event payload is limiting the data available for the condition"
+        },
+        {
+          "id": "opt-c",
+          "text": "The loyalty_tier field may not exist in the profile, causing all customers to default to Path B"
+        },
+        {
+          "id": "opt-d",
+          "text": "The 5-minute reentrance block is preventing VIP customers from entering"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "If the condition references a field that doesn't exist (loyalty_tier not in schema), the condition evaluates as FALSE for all profiles, routing everyone to Path B. Validation doesn't catch missing fields (it validates syntax, not data existence). Event payload affects entry, not condition evaluation. Reentrance blocks affect entry timing, not path routing.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-007",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to build an audience-triggered journey that immediately contacts customers when they achieve Gold status. Which entry method is best?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Unitary Event based on a 'status_change' event"
+        },
+        {
+          "id": "opt-b",
+          "text": "Read Audience triggered daily"
+        },
+        {
+          "id": "opt-c",
+          "text": "Business Event triggered on status change"
+        },
+        {
+          "id": "opt-d",
+          "text": "Audience Qualification with a streamed audience"
+        }
+      ],
+      "correctAnswers": [
+        "opt-d"
+      ],
+      "explanation": "Audience Qualification is designed for real-time audience membership changes. When a customer enters a streamed audience (achieving Gold), they immediately trigger the journey. Unitary Event requires a custom event (status_change). Read Audience is batch/scheduled. Business Event is for external systems. Audience Qualification is the purpose-built solution.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-008",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey uses a 'Wait' activity set to pause for 2 days or 'until an event is received.' If the customer doesn't perform the event within 2 days, what happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The journey pauses indefinitely waiting for the event"
+        },
+        {
+          "id": "opt-b",
+          "text": "The customer automatically exits the journey"
+        },
+        {
+          "id": "opt-c",
+          "text": "The journey continues to the next activity after 2 days"
+        },
+        {
+          "id": "opt-d",
+          "text": "The journey enters ERROR status"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "A 'Wait' activity with a timeout (2 days) will continue to the next activity after the timeout expires, even if the event wasn't received. The 'or' in 'Wait for event OR until 2 days' is an OR logic: whichever comes first. If neither the event nor the timeout specification is met indefinitely, then paths diverge, but here we have a timeout.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-009",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer sends 100,000 unitary event-triggered journeys daily. After reviewing journey metrics, they notice zero profiles are entering. What is the most likely issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The event's payload size is likely exceeding the 64 KB limit"
+        },
+        {
+          "id": "opt-b",
+          "text": "The journey instance size limit is being breached"
+        },
+        {
+          "id": "opt-c",
+          "text": "The 5-minute reentrance block is preventing entry"
+        },
+        {
+          "id": "opt-d",
+          "text": "The 200-active-journey limit has been exceeded"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Zero profiles entering indicates an ENTRY-level problem. The 64 KB event payload limit is applied at entry—events exceeding this limit are silently dropped. Instance limit and reentrance block would affect specific profiles, not all of them. Journey limit would prevent publishing, not execution.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-010",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A Custom Action activity is calling an external API endpoint. The endpoint responds slowly (average 1.5 seconds). How many requests per minute can this endpoint handle according to AJO guardrails?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "300,000 calls/minute"
+        },
+        {
+          "id": "opt-b",
+          "text": "150,000 calls/30 seconds"
+        },
+        {
+          "id": "opt-c",
+          "text": "200 TPS minimum guaranteed"
+        },
+        {
+          "id": "opt-d",
+          "text": "1,000 concurrent connections"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "AJO has two custom action capping rules: fast endpoints (<0.75s) can handle 300K calls/min, BUT slow endpoints (>0.75s) are capped at 150,000 calls per 30 seconds (5K calls/min). A 1.5-second endpoint falls into the slow category. The 200 TPS is the minimum endpoint throughput requirement (endpoint must support 200 TPS).",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-011",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What does validation check in Journey Optimizer? (Select the most complete answer)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Only that all required fields are filled"
+        },
+        {
+          "id": "opt-b",
+          "text": "Activity configuration, event setup, expression syntax, audience references, message content, payload size, activity count, and journey structure"
+        },
+        {
+          "id": "opt-c",
+          "text": "Whether the journey will achieve the business goal"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only the syntax of conditions and personalization expressions"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Validation is STRUCTURAL and TECHNICAL. It checks: required fields, event configuration, expression syntax, audience existence, message validity, 50-activity limit, 2 MB payload warnings, and no orphaned activities. It does NOT check: whether logic makes business sense, whether conditions are optimal, or whether the journey achieves goals.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-012",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey enters Paused status. How long can it remain paused before being automatically unpaused?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "7 days"
+        },
+        {
+          "id": "opt-b",
+          "text": "14 days (maximum pause duration)"
+        },
+        {
+          "id": "opt-c",
+          "text": "30 days"
+        },
+        {
+          "id": "opt-d",
+          "text": "Indefinitely until manually unpaused"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journeys can be paused for a maximum of 14 days. After 14 days, they must be manually unpaused or will resume. This is a guardrail to prevent indefinite paused journeys. Additionally, there's a 10-million-profile cap across all paused journeys in an organization.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-013",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "How is completion rate calculated in a journey?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Total entries / total exits"
+        },
+        {
+          "id": "opt-b",
+          "text": "(Total exits / total entries) × 100"
+        },
+        {
+          "id": "opt-c",
+          "text": "Profiles who reached the end / total entries"
+        },
+        {
+          "id": "opt-d",
+          "text": "(Profiles who completed goal / total exits) × 100"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Completion rate = (Exits / Entries) × 100. This tells you what percentage of people who entered the journey finished it. NOT the same as conversion rate (which measures goal achievement). A low completion rate indicates high drop-off mid-journey.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-014",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer reviews journey reports and wants to know WHERE customers are dropping off (exiting prematurely). Which metric or view should they check?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Global Report → Conversion Rate"
+        },
+        {
+          "id": "opt-b",
+          "text": "Journey Report → Drop-off by Activity"
+        },
+        {
+          "id": "opt-c",
+          "text": "Tracking Statistics → Click-Through Rate"
+        },
+        {
+          "id": "opt-d",
+          "text": "All time view → Entry statistics"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Drop-off by Activity shows exactly where customers exit the journey. It breaks down the number of customers who exit at each activity, revealing problem areas. Global Reports don't show activity-level detail. Tracking Statistics is for clicks/engagement. Entry statistics show total entries, not drop-off.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-015",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey uses a 'Read Audience' activity with an audience of 5 million customers. The processing completes in 3 hours but then stops prematurely. What is likely the issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The audience exceeded the 5-million customer limit"
+        },
+        {
+          "id": "opt-b",
+          "text": "Processing was interrupted by the 12-hour timeout"
+        },
+        {
+          "id": "opt-c",
+          "text": "The 20K profiles/second throughput limit was exceeded"
+        },
+        {
+          "id": "opt-d",
+          "text": "The journey exceeded the 2 MB email content limit"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Read Audience has a 20K profiles/second sandbox throughput limit. If the audience is too large or other processes are consuming throughput, processing may slow and not complete. The 5 concurrent instances limit is different. The 12-hour timeout would stop after 12 hours (plenty of time for 5M profiles at 20K/sec). The 2 MB email limit would affect the email message, not audience processing.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-016",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey can hold a maximum of how many active journeys in production status?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "50"
+        },
+        {
+          "id": "opt-b",
+          "text": "100"
+        },
+        {
+          "id": "opt-c",
+          "text": "200"
+        },
+        {
+          "id": "opt-d",
+          "text": "500"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Maximum 200 active journeys in production status per sandbox (or 100 in development). This is a hard organizational limit. Attempting to publish beyond this will fail.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-017",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the maximum size of a journey instance (all data accumulated during execution)?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "500 KB"
+        },
+        {
+          "id": "opt-b",
+          "text": "1 MB"
+        },
+        {
+          "id": "opt-c",
+          "text": "2 MB"
+        },
+        {
+          "id": "opt-d",
+          "text": "5 MB"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Maximum journey instance size is 1 MB. When this limit is exceeded, the profile enters ERROR status and exits the journey. This is different from the 2 MB email content limit. The instance limit is about accumulated data during execution.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-018",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey is using a Business Event trigger. Can this journey also use a Unitary Event trigger in the same journey?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, they can coexist in different branches"
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, if they reference different event schemas"
+        },
+        {
+          "id": "opt-c",
+          "text": "No, Business Events and Unitary Events cannot coexist in the same journey"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only if the Business Event is processed first"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "By design, a journey can have EITHER a Business Event trigger OR a Unitary Event trigger, but NOT both. They are mutually exclusive entry types. Additionally, Business Events cannot coexist with Audience Qualification in the same journey.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-019",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "If a journey instance size reaches the 1 MB limit for a customer, what status does that customer's profile enter?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "PAUSED"
+        },
+        {
+          "id": "opt-b",
+          "text": "ERROR"
+        },
+        {
+          "id": "opt-c",
+          "text": "EXITED"
+        },
+        {
+          "id": "opt-d",
+          "text": "WARNING"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Profiles that breach the 1 MB instance size limit enter ERROR status and are removed from the journey. This is a critical guardrail. ERROR status is different from EXITED (which is normal completion).",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-020",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to personalize which journey each customer enters based on their loyalty tier. What is the best approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create separate journeys for each tier and use Condition activities to route between them"
+        },
+        {
+          "id": "opt-b",
+          "text": "Use a single journey with Condition activities branching based on loyalty_tier"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create separate journeys for each tier and trigger with separate unitary events"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use Offer Decisioning to select which journey to enter"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A single journey with Condition activities is the standard pattern for routing based on profile attributes. Creating separate journeys scales poorly and wastes activity limits. Offer Decisioning is for offer selection, not journey selection. Separate events is unnecessary.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-021",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What does a 'Jump' activity do in a journey?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Skip to the next activity"
+        },
+        {
+          "id": "opt-b",
+          "text": "Transfer to another journey"
+        },
+        {
+          "id": "opt-c",
+          "text": "Jump to a different journey version"
+        },
+        {
+          "id": "opt-d",
+          "text": "Skip the current wait period"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A Jump activity transfers the customer to another journey. This is useful for handing off between journeys (e.g., from onboarding to nurture). It doesn't skip activities or change versions.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-022",
+      "chapterId": "ch-domain1",
+      "domainId": "ch-domain1",
+      "topic": "Campaign & Journey",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the maximum email content size that can be published in a journey?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "1 MB authored content"
+        },
+        {
+          "id": "opt-b",
+          "text": "2 MB after backend processing"
+        },
+        {
+          "id": "opt-c",
+          "text": "2 MB authored content"
+        },
+        {
+          "id": "opt-d",
+          "text": "5 MB maximum"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "The email content limit is 2 MB AFTER backend processing (not authored size). Best practice is to keep authored content under 1 MB to stay comfortably under the processed limit. Visual fragments are 100 KB max, expression fragments are 200 KB max.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-023",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An organization creates three financial offers: Robo-Advisor (priority 1, capped at 3/month), Managed Portfolio (priority 2, capped at 3/month), and Self-Directed Trading (priority 3, capped at 3/month). A customer has already received Robo-Advisor 3 times this month. Which offer will the system deliver?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Fallback offer (Robo-Advisor is capped)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Managed Portfolio (priority 2, next in line)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Self-Directed Trading (priority 3)"
+        },
+        {
+          "id": "opt-d",
+          "text": "No offer (all options are exhausted)"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Capping is PER-OFFER. When Robo-Advisor is capped, the system skips it and evaluates the next ranked offer (Managed Portfolio). It does NOT fail the decision or deliver the fallback. The fallback is only delivered if NO offers match the eligibility rules.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-024",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What are the four main stages of setting up Offer Decisioning?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Define offers → Create collections → Build decisions → Deploy decisions"
+        },
+        {
+          "id": "opt-b",
+          "text": "Define offers → Define audiences → Create rules → Send offers"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create placements → Define offers → Set eligibility → Publish"
+        },
+        {
+          "id": "opt-d",
+          "text": "Create decisions → Add offers → Set rankings → Deploy"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "The standard flow is: 1) Create Offers (content, channels, eligibility), 2) Organize Into Collections (group related offers), 3) Build Decisions (ranking, capping, fallback), 4) Deploy Decisions (use in journey via Content Decision activity).",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-025",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An offer decision has been configured with Offer A (priority 1), Offer B (priority 2), and Fallback Offer C. For a particular customer, neither A nor B matches the eligibility rules. What happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The decision fails and the journey exits"
+        },
+        {
+          "id": "opt-b",
+          "text": "Fallback Offer C is delivered"
+        },
+        {
+          "id": "opt-c",
+          "text": "The lowest-ranked offer (B) is delivered"
+        },
+        {
+          "id": "opt-d",
+          "text": "The system returns an error"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "When no ranked offers match eligibility rules, the system delivers the FALLBACK OFFER. The fallback is specifically designed to be shown when primary offers don't qualify. The decision does NOT fail.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-026",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "How is Offer Decisioning different from personalization?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Offer Decisioning is automatic; personalization requires manual selection"
+        },
+        {
+          "id": "opt-b",
+          "text": "Offer Decisioning CHOOSES which offer to show; personalization CUSTOMIZES the content of a single offer"
+        },
+        {
+          "id": "opt-c",
+          "text": "They are the same feature with different names"
+        },
+        {
+          "id": "opt-d",
+          "text": "Offer Decisioning is for email; personalization is for all channels"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Offer Decisioning = SELECT WHICH OFFER (from many options based on eligibility/ranking). Personalization = CUSTOMIZE A SINGLE OFFER (insert name, discount amount, etc.). Use Offer Decisioning for multi-offer scenarios (product recommendations, eligibility-based offers). Use personalization for fields within that offer.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-027",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is a Collection in Offer Decisioning?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "A group of customers who qualify for an offer"
+        },
+        {
+          "id": "opt-b",
+          "text": "A set of related offers organized together"
+        },
+        {
+          "id": "opt-c",
+          "text": "A decision rule that determines which customer gets which offer"
+        },
+        {
+          "id": "opt-d",
+          "text": "A list of all offers ever created"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A Collection is a logical grouping of offers (e.g., 'Summer Promotions', 'Financial Products'). Collections help organize offers and control scope. They don't define customer eligibility—that's done in Decision rules.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-028",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to create a branded footer with logo, social links, and copyright text that will be reused in every email. What should they create?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "An Expression Fragment"
+        },
+        {
+          "id": "opt-b",
+          "text": "A Visual Fragment (100 KB max, email-only)"
+        },
+        {
+          "id": "opt-c",
+          "text": "An Email Template"
+        },
+        {
+          "id": "opt-d",
+          "text": "A Personalization Field"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A VISUAL FRAGMENT is a pre-designed HTML block perfect for static footers/headers. It's email-only, limited to 100 KB, and can be inserted into multiple emails. Expression fragments are for IF/THEN logic. Templates are for entire email structures. Personalization fields are for data insertion.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-029",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to apply the same loyalty-tier logic (IF goldTier THEN 'You get 30%' ELSE 'You get 10%') across 10 different emails. What is the best approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create the logic in each email separately"
+        },
+        {
+          "id": "opt-b",
+          "text": "Use an Expression Fragment and insert it into all 10 emails"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create separate emails for each tier"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use a Condition activity in the journey to send different messages"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "An EXPRESSION FRAGMENT stores reusable logic (200 KB max, email/SMS/push). Create once, use in multiple messages. Update the fragment, all emails update automatically. This is more efficient than creating logic in each email or using journey conditions for every variation.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-030",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Can Expression Fragments be used in in-app messages?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, with no restrictions"
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, but only simple expressions (no IF/THEN)"
+        },
+        {
+          "id": "opt-c",
+          "text": "No, Expression Fragments are not supported in in-app messages"
+        },
+        {
+          "id": "opt-d",
+          "text": "Only in conjunction with Visual Fragments"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Expression Fragments are supported in EMAIL, SMS, and PUSH ONLY. NOT supported in in-app. For in-app personalization, use personalization fields instead.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-031",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the purpose of Asset Essentials?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Store and manage reusable email signatures"
+        },
+        {
+          "id": "opt-b",
+          "text": "Store and version-control images and files; updates propagate automatically"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create A/B tests for email content"
+        },
+        {
+          "id": "opt-d",
+          "text": "Define email templates"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Asset Essentials is a central repository for images and files. Upload once, reference by ID, update source → all references update automatically. No need to re-upload the same image to multiple emails.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-032",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A content experiment is set up with three variations: Control (A: 'Save 30%'), Variant B ('Limited time: 30% off'), Variant C ('Your exclusive offer'). After 48 hours, the results show: A: 2.1% CTR, B: 2.0% CTR, C: 2.3% CTR. What should the marketer do next?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Declare C the winner and roll it out to all remaining customers"
+        },
+        {
+          "id": "opt-b",
+          "text": "Retest with a different variable (subject line, CTA button, etc.) since results are within 1-2%"
+        },
+        {
+          "id": "opt-c",
+          "text": "Discard all three and try completely different copy"
+        },
+        {
+          "id": "opt-d",
+          "text": "Extend the test for another week to get more data"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "When experiment results are CLOSE (1-2% difference), the variable is likely already optimized. Test a DIFFERENT variable next (e.g., CTA button color, subject line format). Don't keep testing the same variable; move on to the next optimization.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-033",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What are the two types of fragments in AJO?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Static and Dynamic Fragments"
+        },
+        {
+          "id": "opt-b",
+          "text": "Visual and Text Fragments"
+        },
+        {
+          "id": "opt-c",
+          "text": "Visual and Expression Fragments"
+        },
+        {
+          "id": "opt-d",
+          "text": "Email and SMS Fragments"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Two types: 1) VISUAL Fragment (HTML blocks, 100 KB, email-only), 2) EXPRESSION Fragment (IF/THEN logic, 200 KB, email/SMS/push). These are distinct from templates and personalization fields.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-034",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the maximum size of a Visual Fragment?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "50 KB"
+        },
+        {
+          "id": "opt-b",
+          "text": "100 KB"
+        },
+        {
+          "id": "opt-c",
+          "text": "200 KB"
+        },
+        {
+          "id": "opt-d",
+          "text": "500 KB"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Visual Fragment: 100 KB max (email-only). Expression Fragment: 200 KB max (email/SMS/push). Email content overall: 2 MB max after processing.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-035",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An email template is created for a weekly digest. It includes personalization fields ({{profile.attributes.firstName}}) and a visual fragment (footer). Can this template be reused for future digests?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No, templates cannot contain fragments"
+        },
+        {
+          "id": "opt-b",
+          "text": "No, personalization fields must be unique to each send"
+        },
+        {
+          "id": "opt-c",
+          "text": "Yes, templates with fragments and personalization fields are fully reusable"
+        },
+        {
+          "id": "opt-d",
+          "text": "Yes, but only if the personalization fields are changed each time"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Templates are designed to be reusable with personalization fields and fragments intact. The personalization fields are evaluated fresh for each recipient, and fragments are referenced (not duplicated). This is the entire purpose of templates.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-036",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which channels support Expression Fragments?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Email only"
+        },
+        {
+          "id": "opt-b",
+          "text": "Email and SMS"
+        },
+        {
+          "id": "opt-c",
+          "text": "Email, SMS, and Push (NOT in-app)"
+        },
+        {
+          "id": "opt-d",
+          "text": "All channels including in-app"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Expression Fragments: Email, SMS, Push. NOT in-app. Visual Fragments: Email only.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-037",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A dataset is created from a Profile Schema but is NOT enabled for profile. How is this data used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Data is stored in Unified Profile Service and available in real-time for personalization"
+        },
+        {
+          "id": "opt-b",
+          "text": "Data is stored in Data Lake only; available for analysis/queries but NOT for real-time journeys"
+        },
+        {
+          "id": "opt-c",
+          "text": "Data is immediately deleted; profile-disabled data has no value"
+        },
+        {
+          "id": "opt-d",
+          "text": "Data is stored but only accessible to administrators"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Profile-disabled datasets are stored in the Data Lake. Available for batch analysis, queries, reports, but NOT for real-time personalization in journeys. If you need real-time access, ENABLE FOR PROFILE.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-038",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to use a customer's purchase history (from an Event Schema dataset) in a journey condition. The dataset was recently created from Event Schema. What must be done?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Nothing; Event Schema data is automatically available for journeys"
+        },
+        {
+          "id": "opt-b",
+          "text": "Enable the dataset for profile so purchase data is available in real-time"
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a separate Profile Schema dataset"
+        },
+        {
+          "id": "opt-d",
+          "text": "Use only Profile Schema datasets in conditions; Event data cannot be accessed"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "To use data in real-time journey conditions, the DATASET must be ENABLED FOR PROFILE. This applies to both Profile Schema and Event Schema datasets. Without enabling, data is in Data Lake only.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-039",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is ECID (Experience Cloud ID)?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "An encrypted customer email address"
+        },
+        {
+          "id": "opt-b",
+          "text": "Adobe's auto-generated ID for unknown visitors; can be merged with authenticated identities"
+        },
+        {
+          "id": "opt-c",
+          "text": "A unique CRM identifier imported from your system"
+        },
+        {
+          "id": "opt-d",
+          "text": "A session ID that expires after 24 hours"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "ECID is Adobe's pseudonymous identifier for anonymous browsers. When a visitor logs in (provides email/CRM ID), their ECID merges with authenticated identities. All historical data merges automatically.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-040",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An organization notices their engageable profile count is growing rapidly, primarily from anonymous visitors. What is a recommended solution?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Delete all ECID profiles immediately"
+        },
+        {
+          "id": "opt-b",
+          "text": "Set a TTL (Time-To-Live) on pseudonymous profiles (e.g., 14 days) so they auto-delete"
+        },
+        {
+          "id": "opt-c",
+          "text": "Disallow anonymous visitors entirely"
+        },
+        {
+          "id": "opt-d",
+          "text": "Increase the organization's profile quota"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "TTL on pseudonymous profiles (14 days recommended) automatically deletes unmerged ECIDs, reducing engageable profile count and costs. This is a standard practice, not a deletion of data, just automatic cleanup.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-041",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What are the two main types of audiences in AEP?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Active and Inactive audiences"
+        },
+        {
+          "id": "opt-b",
+          "text": "Segment Builder (rule-based) and Audience Composition (orchestrated)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Streamed and Batch audiences"
+        },
+        {
+          "id": "opt-d",
+          "text": "Profile-based and Event-based audiences"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Two audience types: 1) SEGMENT BUILDER = Rule-based, drag-and-drop conditions; 2) AUDIENCE COMPOSITION = Combine multiple audiences with logic. (Streamed vs. Batch is a property of how they're EVALUATED, not the type.)",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-042",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to trigger a journey in real-time when customers qualify for a 'Gold Tier' audience. The audience must be evaluated in real-time. What type of audience is required?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch audience (daily evaluation)"
+        },
+        {
+          "id": "opt-b",
+          "text": "Streamed audience (real-time evaluation)"
+        },
+        {
+          "id": "opt-c",
+          "text": "Audience Composition"
+        },
+        {
+          "id": "opt-d",
+          "text": "Any audience works with Audience Qualification journey"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "STREAMED audiences are evaluated in real-time. BATCH audiences are evaluated once daily. For real-time triggers (Audience Qualification journey), use a STREAMED audience.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-043",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What does the data label 'S2' indicate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Sensitive financial data requiring restricted access"
+        },
+        {
+          "id": "opt-b",
+          "text": "Sensitive data requiring explicit customer consent to use"
+        },
+        {
+          "id": "opt-c",
+          "text": "Standard data that can be freely exported"
+        },
+        {
+          "id": "opt-d",
+          "text": "Secondary data not tied to a specific customer"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "S2 = Sensitive data requiring consent. S1 = Sensitive personal data (health, financial) requiring restricted access. C2 = Data can be exported. C1 = Contractual data.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-044",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the purpose of a Union Schema in AEP?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "It combines all datasets for backup purposes"
+        },
+        {
+          "id": "opt-b",
+          "text": "It represents the merged view of all profile-enabled schemas; provides complete profile view"
+        },
+        {
+          "id": "opt-c",
+          "text": "It is mandatory for all organizations"
+        },
+        {
+          "id": "opt-d",
+          "text": "It stores personally identifiable information separately"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Union Schema is the MERGED VIEW of all profile-enabled schemas for a single XDM class (Profile, ExperienceEvent). It shows all available profile attributes across all datasets, used by Unified Profile Service.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-045",
+      "chapterId": "ch-domain2",
+      "domainId": "ch-domain2",
+      "topic": "Domain 2: Offer Decisioning",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An offer needs to show different discount percentages to different customer segments (VIP: 30%, Standard: 10%). What type of offer should be created?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Static offer with two variants"
+        },
+        {
+          "id": "opt-b",
+          "text": "Dynamic offer using {{discountPercentage}} variable"
+        },
+        {
+          "id": "opt-c",
+          "text": "Two separate static offers, one for each segment"
+        },
+        {
+          "id": "opt-d",
+          "text": "A single static offer with conditional logic in the journey"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A DYNAMIC offer contains variables like {{discountPercentage}} that are replaced with actual profile data. This allows one offer to personalize based on data. Static offers have fixed content for everyone. Two separate offers would work but is less efficient than one dynamic offer.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-046",
+      "chapterId": "ch-domain3",
+      "domainId": "ch-domain3",
+      "topic": "Domain 3: Content Authoring",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to include a customer's first name in an email subject line. What is the correct syntax?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Subject: Welcome, {firstName}!"
+        },
+        {
+          "id": "opt-b",
+          "text": "Subject: Welcome, {{profile.attributes.firstName}}!"
+        },
+        {
+          "id": "opt-c",
+          "text": "Subject: Welcome, {{firstName}}!"
+        },
+        {
+          "id": "opt-d",
+          "text": "Subject: Welcome, [profile.firstName]!"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Personalization fields use {{}} syntax with the full path: {{profile.attributes.fieldName}}. The double curly braces are required. Single brackets or missing paths won't work.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-047",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "Domain 4: AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the primary difference between a Profile Schema and an Event Schema?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile stores identity; Event stores events"
+        },
+        {
+          "id": "opt-b",
+          "text": "Profile is mandatory; Event is optional"
+        },
+        {
+          "id": "opt-c",
+          "text": "Profile stores customer attributes (WHO); Event stores time-stamped behaviors (WHAT/WHEN)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Profile is never profile-enabled; Event is always profile-enabled"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Profile Schema = WHO is the customer? (Attributes: name, email, tier). Event Schema = WHAT did they do WHEN? (Time-series behaviors). Both can be profile-enabled, but their purposes differ.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-048",
+      "chapterId": "ch-domain4",
+      "domainId": "ch-domain4",
+      "topic": "Domain 4: AEP Foundations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An organization has 1 million customers in AEP. If 100,000 are pseudonymous (ECID-only) and unmerged, how should they handle the engageable profile quota?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The 100K pseudonymous profiles don't count toward quota"
+        },
+        {
+          "id": "opt-b",
+          "text": "All 1.1M profiles count equally toward engageable profile quota"
+        },
+        {
+          "id": "opt-c",
+          "text": "Only authenticated profiles count; pseudonymous are free"
+        },
+        {
+          "id": "opt-d",
+          "text": "Set a 14-day TTL to auto-delete pseudonymous profiles and reduce quota pressure"
+        }
+      ],
+      "correctAnswers": [
+        "opt-d"
+      ],
+      "explanation": "Pseudonymous profiles DO count toward engageable quota. Setting a TTL (14 days) auto-deletes unmerged ECID profiles, reducing quota pressure. This is the recommended approach.",
+      "explanationSource": "AJO_Practice_Exam_50_Questions.html",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-049",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Guardrails - Activity Limit",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer is building a customer lifecycle journey that includes:\n- Welcome email\n- 7-day wait\n- Engagement check (condition)\n- 2 email branches based on engagement\n- 3-day wait on each branch\n- SMS action\n- Product recommendation offer decision\n- Update profile activity\n- 2 additional email sends per branch\n- Final evaluation condition\n- Exit activities\nWhen they try to publish, the system returns an error. The journey has 48 activities total, well below the 50-activity limit.\n**What is the issue?**",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The 48-activity count is correct; the error is about payload size, not activity count. Reduce email content to under 1 MB."
+        },
+        {
+          "id": "opt-b",
+          "text": "Activity count reached the guardrail at a different stage. The system also counts wait activities AND condition branches, which the marketer didn't account for. Must split the journey."
+        },
+        {
+          "id": "opt-c",
+          "text": "This shouldn't fail on activity count at 48. The issue is likely that the journey exceeds the 2 MB message content limit across all email messages combined. Simplify email content."
+        },
+        {
+          "id": "opt-d",
+          "text": "The system rejects journeys with more than 1 condition. Remove the second condition and use a single email send instead."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Guardrails - Activity Limit Correct Answer: C Why C is right: The journey has 48 activities, which is under the 50-activity limit. The error isn't about activity count — it's about email message content size. After backend processing (patching links, applying transformations), the total message payload across all emails in the journey exceeds the 2 MB limit. Solution: Reduce email content to keep authored emails under 1 MB each. Why others are wrong: A) Correct diagnosis (payload size) but directs to wrong guardrail (1 MB is journey instance, 2 MB is email message content) B) Misunderstands what causes the error. Activity count is 48, well below 50 limit D) No guardrail about multiple conditions; this is false Exam lesson: Message content size is checked at publish time and can exceed 2 MB after backend processing, even if authored content seems smaller.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-050",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Type - Event-Triggered vs. Scheduled",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A financial services company wants to build a campaign for customers who reach their annual spending limit. Here's what happens:\n- Customer spends to their limit (tracked in real-time in their profile)\n- System needs to respond within 15 minutes\n- Send personalized email about annual refresh options\n- Offer financial planning consultation\n- If they click the email, send confirmation SMS\n- If they don't click in 24 hours, send SMS without email link\nWhich journey type is appropriate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Read Audience journey that runs every 15 minutes to check for customers at their spending limit and sends the initial email."
+        },
+        {
+          "id": "opt-b",
+          "text": "Unitary event journey triggered by a custom event that fires when spending limit is reached, allowing real-time response within minutes."
+        },
+        {
+          "id": "opt-c",
+          "text": "Business event journey that aggregates daily spending and sends offers batch-processed overnight."
+        },
+        {
+          "id": "opt-d",
+          "text": "Audience Qualification journey that monitors spending limit attribute changes in real-time."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journey Type - Event-Triggered vs. Scheduled Correct Answer: B Why B is right: ✅ 15-minute real-time response required → Unitary event (not Read Audience which is batch) ✅ Reacts to customer action (spending limit reached) → Event-driven ✅ Multi-step with branching (email → click/no-click → SMS) → Supported in unitary event Why others are wrong: A) Read Audience is batch/scheduled, not real-time. 15-minute requirement not met C) Business event is for external/scheduled triggers, not real-time customer actions D) Audience Qualification possible but not ideal for spending-based triggers; unitary event is cleaner Exam lesson: \"Real-time response needed\" → Unitary event. \"Scheduled batch\" → Read Audience.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-051",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Guardrails - 1 MB Instance Limit Diagnosis",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A B2B company runs a journey for accounts that download whitepapers. They observe:\n- 10,000 profiles entered the journey\n- 9,200 completed successfully\n- 800 profiles in ERROR status mid-journey\n- Error logs show \"Journey instance size exceeded\"\nInvestigation reveals:\n- All 800 error profiles are from Fortune 500 companies\n- Standard/mid-market accounts (9,200) completed fine\n- Fortune 500 accounts have significantly more historical contract data\nWhat's the root cause and solution?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The company should switch from a unitary event journey to a Read Audience journey. Read Audience journeys don't have the 1 MB instance limit."
+        },
+        {
+          "id": "opt-b",
+          "text": "The 1 MB journey instance limit is being exceeded for Fortune 500 accounts due to accumulated profile data (larger account records with extensive contract history). Solution: Reduce data retrieval from APIs or simplify conditions."
+        },
+        {
+          "id": "opt-c",
+          "text": "The error indicates the journey activity limit was exceeded. At 800 errors, the system automatically stopped processing. Must split journey."
+        },
+        {
+          "id": "opt-d",
+          "text": "This is a data governance issue. Fortune 500 data is labeled S1 and cannot be used in journeys. Remove sensitive data references."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Guardrails - 1 MB Instance Limit Diagnosis Correct Answer: B Why B is right: ✅ Selective failure (800 of 10,000) is signature of 1 MB instance limit ✅ Only Fortune 500 accounts fail (they have more data) → data-size dependent ✅ Mid-journey ERROR status → data accumulation during execution ✅ Solution: Reduce API data retrieval or simplify conditions Why others are wrong: A) Wrong premise. Read Audience journeys also have the 1 MB limit C) Activity count is not mentioned; selective failure pattern points to data size D) No governance issue mentioned; this is data accumulation Exam lesson: Selective profile failures (some complete, some error) = 1 MB instance limit.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-052",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Content Authoring - Fragments",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company wants to build an email campaign with:\n1. Dynamic greeting: \"Hi {{firstName}}, you have {{pointsBalance}} loyalty points\"\n2. Reusable logo/footer: Same branded footer in every email\n3. Conditional message: \"If VIP tier, show 'Exclusive offer'. If Standard, show 'Limited offer'\"\n4. Personalized offers: Based on purchase history\nThey ask: \"Which should be fragments and which should be personalization fields?\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create everything as personalization fields. Fragments are only for A/B testing, not for personalization."
+        },
+        {
+          "id": "opt-b",
+          "text": "The logo/footer as visual fragment, and all dynamic content (greeting, tier message, offers) as personalization fields. This separates static design from dynamic customer data."
+        },
+        {
+          "id": "opt-c",
+          "text": "The logo/footer as visual fragment, the greeting as personalization field, BUT the conditional tier message as expression fragment, and offers as personalization fields."
+        },
+        {
+          "id": "opt-d",
+          "text": "Everything as expression fragments since all of it is dynamic. This keeps all logic in one place."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Content Authoring - Fragments Correct Answer: C Why C is right: ✅ Logo/footer is static, reusable HTML → Visual fragment ✅ Greeting (firstName, pointsBalance) is simple attribute lookup → Personalization fields ✅ Conditional tier message (IF/THEN) → Expression fragment ✅ Personalized offers → Personalization fields Why others are wrong: A) Fragments aren't just for A/B testing; they're for reusable content B) Misses the conditional tier message, which should be expression fragment D) Using expression fragments for simple attribute lookups is overkill Exam lesson: Fields = simple data; Expression fragments = complex logic; Visual fragments = static design.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-053",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Offer Decisioning - Capping Logic",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An insurance company set up offer decisioning with:\n**Collection:** \"Auto Insurance Products\"\n- Offer A: \"Full Coverage - $150/month\" (priority 1)\n- Offer B: \"Basic Coverage - $80/month\" (priority 2)\n- Offer C: \"Premium Coverage - $200/month\" (priority 3)\n**Decision rules:**\n- Eligibility: Drivers with clean driving record\n- Ranking: By priority (A > B > C)\n- Capping: Each offer capped at 3 times per customer per month\nA customer qualifies for the decision (clean record). They've already received Offer A three times this month.\nWhat offer does the system deliver?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The system will deliver Offer A again. Capping only prevents the same person from getting the offer on the same day, not across the month."
+        },
+        {
+          "id": "opt-b",
+          "text": "The system will deliver Offer B. It skips the capped Offer A and ranks Offer B next (which hasn't reached cap)."
+        },
+        {
+          "id": "opt-c",
+          "text": "The system will deliver the fallback offer because the top priority offer is capped and the entire decision fails."
+        },
+        {
+          "id": "opt-d",
+          "text": "The system will deliver nothing. All offers are potentially at risk since they might exceed monthly caps. Must wait until next month."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Offer Decisioning - Capping Logic Correct Answer: B Why B is right: ✅ Capping is per-offer, not decision-level ✅ When Offer A hits cap (3/3), system skips it ✅ System evaluates next-ranked offer: Offer B (hasn't reached cap) ✅ Delivers Offer B, not fallback Why others are wrong: A) Capping is monthly, not daily C) Capping doesn't fail the entire decision; it filters and moves to next D) Not \"nothing.\" System skips capped offer and delivers next ranked Exam lesson: When top-priority offer is capped → system selects next ranked uncapped offer. No fallback needed.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-054",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "AEP Foundations - Schema Types",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retailer wants to track both customer attributes AND purchase events in AEP. They create:\n**Dataset 1 - Customer Attributes:**\n- firstName, lastName, email, tier (VIP/Standard), loyaltyPoints, lastPurchaseDate\n- Schema type: Profile Schema\n- Enabled for profile: YES\n**Dataset 2 - Purchase Events:**\n- purchaseID, purchaseDate, amount, productName, channel\n- Schema type: ExperienceEvent Schema\n- Enabled for profile: YES\nA marketer builds a journey condition: \"IF customer loyaltyPoints > 1000 AND spent > $500 in last 30 days\"\nWhich statement is correct?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Only Dataset 1 needs to be enabled for profile. Dataset 2 (events) cannot be used for real-time profile attribute lookups."
+        },
+        {
+          "id": "opt-b",
+          "text": "Both datasets should be enabled for profile from the START. Dataset 1 (Profile Schema) provides attributes; Dataset 2 (ExperienceEvent Schema) provides event history. Both must be accessible for the condition to work."
+        },
+        {
+          "id": "opt-c",
+          "text": "Only Dataset 2 needs to be enabled for profile. Event data is what drives journey decisions, not static attributes."
+        },
+        {
+          "id": "opt-d",
+          "text": "Neither dataset should be enabled for profile. Use a data source instead to query both customer and purchase data at journey time."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "AEP Foundations - Schema Types Correct Answer: B Why B is right: ✅ Profile Schema (Dataset 1) provides loyaltyPoints attribute ✅ ExperienceEvent Schema (Dataset 2) provides purchase history time-series ✅ Both must be profile-enabled for the condition to work ✅ Condition needs both: attribute lookup (loyaltyPoints) AND event query (spent $500 in 30 days) Why others are wrong: A) Wrong. Both must be enabled C) Wrong. Attributes are equally important as events D) Wrong. Datasets enabled for profile work better than querying via data source for real-time needs Exam lesson: Profile Schema = attributes; ExperienceEvent Schema = behaviors. Both need profile enablement for complete journey logic.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-055",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Types - Read Audience Concurrency",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company has 7 marketing teams. Each wants to schedule a Read Audience journey:\n- Team A: 8:00 AM (High-Value Customers)\n- Team B: 8:05 AM (Seasonal Promotion)\n- Team C: 8:10 AM (Newsletter Subscribers)\n- Team D: 8:15 AM (Cart Abandoners)\n- Team E: 8:20 AM (New Customers)\n- Team F: 8:25 AM (VIP Retention)\n- Team G: 8:30 AM (Loyalty Program)\nAssuming each job takes 1 hour to complete, what happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All 7 journeys publish successfully. The 5-minute spacing between starts ensures no concurrency issues."
+        },
+        {
+          "id": "opt-b",
+          "text": "Teams A-E (5 teams) publish successfully. Team F at 8:25 AM is blocked because it would be the 6th concurrent instance (5-instance limit). Team G can be scheduled for a different time."
+        },
+        {
+          "id": "opt-c",
+          "text": "Only Teams A-C publish. The 10-minute spacing rule requires at least 10 minutes between start times, not 5."
+        },
+        {
+          "id": "opt-d",
+          "text": "All teams except Team G publish. With 1-hour job duration and 5-minute spacing, only the last team (Team G at 8:30) would exceed the limit."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journey Types - Read Audience Concurrency Correct Answer: B Why B is right: ✅ Teams A-E (8:00-8:20 AM) = 5 concurrent instances running during 8:00-8:20 window ✅ Team F (8:25 AM) would be 6th concurrent instance → blocked ✅ Team G can be scheduled later or after earlier jobs complete Why others are wrong: A) Wrong. 5-instance limit prevents Team F C) No 10-minute rule. 5-10 minute spacing is recommendation, not requirement D) Wrong. With 1-hour duration, Team G at 8:30 would be during Teams D-E window, making it 7 concurrent (exceeds limit earlier) Exam lesson: 5 concurrent Read Audience instances organization-wide. Stagger 5-10 min apart to avoid concurrency issues.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-056",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Guardrails - Event Payload Size",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A travel company sends a booking confirmation event to trigger a journey:\n**Event payload includes:**\n- Booking confirmation details: 8 KB\n- Full itinerary (flights, hotels, car rental): 25 KB\n- Customer preferences (seat, room type, etc.): 12 KB\n- Full travel history (past 5 years of bookings): 35 KB\n- **Total: 80 KB**\nWhen this event enters the journey system:",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The event will be accepted. It's under the 1 MB journey instance limit, so no problem."
+        },
+        {
+          "id": "opt-b",
+          "text": "The event will be accepted. 80 KB is under the 64 KB event payload limit... wait, that's not right. The event exceeds 64 KB and will be silently dropped. Profiles won't enter the journey."
+        },
+        {
+          "id": "opt-c",
+          "text": "The event will be accepted but cause mid-journey errors. The accumulated data during journey execution will exceed 1 MB. Only some profiles will error."
+        },
+        {
+          "id": "opt-d",
+          "text": "The event will be accepted. The 64 KB limit only applies to business events, not unitary events."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Guardrails - Event Payload Size Correct Answer: B Why B is right: ✅ Event payload is 80 KB total ✅ 64 KB limit applies to events entering journeys ✅ 80 KB > 64 KB → event silently dropped ✅ Profiles never enter journey (no log entry) Why others are wrong: A) 1 MB limit is different; 64 KB is the event entry limit C) Event won't even enter; can't cause mid-journey errors if it's dropped at entry D) 64 KB limit applies to all events, unitary and business Exam lesson: 64 KB = event entry limit. Event dropped silently → zero profiles enter → no log entry.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-057",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Content Authoring - Content Experiment Interpretation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An email campaign ran an A/B test on call-to-action button text:\n```\nControl: \"Shop Now\"\n- 50,000 sent\n- 2,500 clicks (5% CTR)\nVariant B: \"Get 20% Off\"\n- 50,000 sent\n- 2,750 clicks (5.5% CTR)\nVariant C: \"Limited Time Offer\"\n- 50,000 sent\n- 2,650 clicks (5.3% CTR)\n```\nVariant B won with the highest click rate. The marketer asks: \"What should we test next?\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Keep testing CTA button text variations. The slight improvement (5% to 5.5%) means more refinement is needed."
+        },
+        {
+          "id": "opt-b",
+          "text": "The differences are very small (0.5% between best and worst). The CTA button variable is likely already optimized. Test a different variable like send time, email layout, or offer value."
+        },
+        {
+          "id": "opt-c",
+          "text": "Declare Variant B the permanent winner and use it in all future emails without further testing."
+        },
+        {
+          "id": "opt-d",
+          "text": "The experiment is inconclusive. The 50K sample per variant isn't large enough. Rerun with 100K per variant for statistical significance."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Content Authoring - Content Experiment Interpretation Correct Answer: B Why B is right: ✅ Differences are marginal (5%, 5.5%, 5.3%) ✅ 0.5% improvement is small; CTA variable likely optimized ✅ Better ROI testing different variable (send time, layout, offer value) Why others are wrong: A) Small differences suggest optimization plateau; test different variable C) Don't declare victory. Small improvements warrant testing new variables D) 50K sample is statistically significant; not inconclusive Exam lesson: When experiment results are close (1-2% difference), test a different variable next.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-058",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Building - Unitary Event Reentrance",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retail company built a unitary event journey triggered by \"product_viewed\" event:\n- Customer views Product A at 2:01 PM\n- Journey triggers, sends \"Still interested?\" email\n- Customer views Product A again at 2:03 PM (same product, same event type)\n- System should send another email\nWhat actually happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The customer receives two emails. Each event triggers the journey separately; there's no limit on separate events."
+        },
+        {
+          "id": "opt-b",
+          "text": "The customer receives only one email. The 5-minute reentrance block prevents the same journey from starting again until 2:06 PM."
+        },
+        {
+          "id": "opt-c",
+          "text": "The customer receives two emails. The 5-minute block only applies if it's the exact same event at the exact same time (2:01 PM exactly)."
+        },
+        {
+          "id": "opt-d",
+          "text": "The system sends no emails. The duplicate product view triggers an error state."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journey Building - Unitary Event Reentrance Correct Answer: B Why B is right: ✅ First event at 2:01 PM triggers journey ✅ 5-minute reentrance block until 2:06 PM ✅ Second event at 2:03 PM is blocked (within 5-min window) ✅ Customer receives only one email Why others are wrong: A) Wrong. 5-minute block applies per journey per profile C) Wrong. Block applies regardless of event details D) Wrong. No error state; block is expected behavior Exam lesson: Unitary events have 5-minute reentrance block. Same profile can't trigger journey twice within 5 minutes.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-059",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Offer Decisioning - Static vs. Dynamic",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A subscription company created these offers:\n**Offer A:** \"Get 30% off annual plans\"\n**Offer B:** \"Save {{discountPercentage}}% with code {{promoCode}} — Expires {{expirationDate}}\"\n**Offer C:** \"Enjoy {{planType}} plan benefits: {{benefitsList}}\"\nWhich offers should be configured as DYNAMIC offers?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Only Offer A is dynamic. It's the most personalized of the three."
+        },
+        {
+          "id": "opt-b",
+          "text": "Offer A is static. Offers B and C contain {{variables}}, so they're dynamic."
+        },
+        {
+          "id": "opt-c",
+          "text": "All three should be dynamic for consistency across the campaign."
+        },
+        {
+          "id": "opt-d",
+          "text": "Offers B and C are dynamic, but Offer A could be either static or dynamic depending on the audience."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Offer Decisioning - Static vs. Dynamic Correct Answer: B Why B is right: ✅ Offer A: No {{variables}} → Static ✅ Offer B: Contains {{discountPercentage}}, {{promoCode}}, {{expirationDate}} → Dynamic ✅ Offer C: Contains {{planType}}, {{benefitsList}} → Dynamic Why others are wrong: A) A is static, not dynamic C) Offer A is static; forcing it to be dynamic is wrong D) A is not dynamic in any scenario Exam lesson: {{variables}} in offer = dynamic. No {{variables}} = static.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-060",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "AEP Foundations - Identity Merging",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A customer's journey in AEP:\n**Day 1, 2 PM:** Anonymous browser session\n- System assigns ECID: ECID-67890\n- Customer views 10 products, adds 3 to cart\n- All tracked under ECID-67890\n**Day 1, 2:30 PM:** Customer creates account\n- Enters email: jane@example.com\n- System links ECID-67890 + email to same profile\n- CRM ID in database: CUST-54321\n- All three IDs merge to one profile\n**Day 2, 10 AM:** Read Audience journey checks for \"customers who viewed 10+ products\"\nDoes the system find Jane?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No. The product views happened before she created her account. Anonymous behavior doesn't count toward authenticated customer segments."
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes. When identity merged, all historical data (product views from ECID time) automatically linked to Jane's authenticated profile. Journey condition finds 10+ views."
+        },
+        {
+          "id": "opt-c",
+          "text": "Partially. The 10 product views are found, but Jane won't get the offer because she only had 3 items in cart (threshold might be higher)."
+        },
+        {
+          "id": "opt-d",
+          "text": "The system cannot query anonymous data. Must wait 24 hours for a full sync of historical behavior to authenticated profile."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "AEP Foundations - Identity Merging Correct Answer: B Why B is right: ✅ ECID-67890 + email merge to same profile ✅ All pre-login behavior (product views) automatically link to authenticated profile ✅ Journey condition finds 10 views ✅ Jane is included in journey Why others are wrong: A) Wrong. Anonymous behavior merges automatically on identity confirmation C) Question not about cart count; about whether views are found D) Wrong. No 24-hour sync required; merge is instant Exam lesson: When identities merge, historical data accessible immediately. No separate anonymous vs. authenticated views.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-061",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Guardrails & Journey Type - Multiple Issues",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company designed a journey that:\n- Triggers on unitary event \"page_view\" (event payload: 20 KB)\n- Immediately sends email to everyone (Activity 1)\n- Waits 1 day\n- Checks if customer is in \"Active\" audience (Activity 2)\n- Sends SMS based on decision (Activity 3)\n- Calls custom action (Activity 4)\n- Updates profile (Activity 5)\n- Then REPEATS the cycle 8 more times\nTotal: 44 activities\nWhen trying to publish, they get a warning about payload size (90% of limit), but the publish succeeds.\nAfter 1 day in production, the company observes:\n- 50,000 profiles entered\n- 45,000 completed journey\n- 5,000 profiles in ERROR status mid-journey\n- All error profiles are accounts with 10+ years of historical purchase data\n- All successful profiles are customers with <5 years of history\nWhat is happening?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The journey reached the 50-activity limit and stopped processing after 44 activities. Must reduce to fewer activities."
+        },
+        {
+          "id": "opt-b",
+          "text": "The 20 KB event + accumulated profile data for high-history accounts is pushing over the 1 MB instance limit mid-journey, causing ERROR status. Reduce profile data retrieval or simplify."
+        },
+        {
+          "id": "opt-c",
+          "text": "The custom action capping limit was exceeded. These profiles triggered the action too many times, hitting the 300K calls/min limit."
+        },
+        {
+          "id": "opt-d",
+          "text": "This is a data freshness issue. Waiting 1 day causes profile attributes to become stale, triggering errors for accounts with historical complexity."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Guardrails & Journey Type - Multiple Issues Correct Answer: B Why B is right: ✅ Not activity count issue (44 < 50) ✅ Selective failure pattern (5K of 50K error) → 1 MB instance limit ✅ Error profiles have more historical data (10+ years) → accumulation issue ✅ Successful profiles have less data (<5 years) → stay under 1 MB ✅ Solution: Reduce profile data retrieval or simplify Why others are wrong: A) Activity count is 44, under 50 limit C) Events are 20 KB; under 64 KB limit. Would affect ALL profiles at entry D) Not custom action issue (would affect all equally) Exam lesson: Selective profile errors based on data volume = 1 MB instance limit.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-062",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Content Authoring - Expression Fragment Channels",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company created an expression fragment with loyalty tier logic:\n```\n{{if profile.attributes.tier == \"GOLD\"\nthen \"Free shipping + 20% off\"\nelse \"10% off\"}}\n```\nThey want to use it in:\n- Email campaign\n- SMS campaign\n- In-app mobile message\nThe fragment is in \"Live\" status.\nWhat happens when they publish journeys using this fragment?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All three journeys work. Expression fragments are compatible with all channels."
+        },
+        {
+          "id": "opt-b",
+          "text": "Email and SMS work. In-app campaign fails because expression fragments cannot be used in in-app messages. Must use personalization fields or visual fragments for in-app."
+        },
+        {
+          "id": "opt-c",
+          "text": "Only email works. Expression fragments are email-only, designed for complex email logic."
+        },
+        {
+          "id": "opt-d",
+          "text": "The fragment must be \"Published\" status (not \"Live\") to work in journeys. Change status and retry."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Content Authoring - Expression Fragment Channels Correct Answer: B Why B is right: ✅ Email works with expression fragments ✅ SMS works with expression fragments ✅ In-app does NOT support expression fragments → must use personalization fields ✅ Fragment is in Live status (required) Why others are wrong: A) Wrong. Expression fragments NOT supported in in-app C) Wrong. Expression fragments work in email AND SMS D) Live status is correct; no need to change Exam lesson: Expression fragments NOT in-app. Use personalization fields for in-app instead.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-063",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "AEP Foundations - Profile vs. Event Data",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company ingests customer data:\n**Data 1:** memberID, firstName, lastPurchaseDate, loyaltyTier, accountStatus\n**Data 2:** purchaseID, purchaseDate, purchaseAmount, itemsSold, currency\n**Data 3:** memberID, updateDate, lastLogin, lastClickDate, sessionDuration\nThey want to use all this data in journeys for personalization. Which should be from Profile Schema (not Event Schema)?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All three. Everything is customer-related data."
+        },
+        {
+          "id": "opt-b",
+          "text": "Data 1 only. It contains customer attributes that don't have timestamps."
+        },
+        {
+          "id": "opt-c",
+          "text": "Data 1 and Data 3. Data 2 (purchases with amounts and dates) should come from Event Schema."
+        },
+        {
+          "id": "opt-d",
+          "text": "Data 1 and Data 3. All three except Data 2, which is too detailed for profile use."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "AEP Foundations - Profile vs. Event Data Correct Answer: C Why C is right: ✅ Data 1: Attributes without timestamps → Profile Schema ✅ Data 2: Purchase records with dates/amounts → Event Schema (time-series) ✅ Data 3: Activity logs with timestamps → Event Schema (should be events) ✅ But Data 3 could also work as Profile (last login, last click) depending on use Actually, reviewing more carefully: Data 3 has updateDate, lastLogin (timestamp-based activities) Should be from Event Schema for time-series data Answer should be: Data 1 only from Profile Schema Corrected answer: B (Data 1 only)",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-064",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Validation - What's Checked?",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer creates a journey and clicks \"Validate\" before publishing. The validation checks the following:\nWhich of these WILL cause validation to fail (blocking publish)?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The journey has 52 activities. Validation catches this and blocks with error \"50-activity limit exceeded.\""
+        },
+        {
+          "id": "opt-b",
+          "text": "The personalization field {{profile.attributes.customField}} references a field that doesn't exist in the schema. Validation catches this and blocks with error."
+        },
+        {
+          "id": "opt-c",
+          "text": "The journey logic requires \"IF customer is VIP AND made purchase > $1000, send premium offer. ELSE send standard offer.\" Validation checks syntax but doesn't evaluate if this logic makes business sense."
+        },
+        {
+          "id": "opt-d",
+          "text": "The email message content is 1.5 MB authored size. Validation warns (soft warning, allows publish) because it's under the 2 MB backend limit."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journey Validation - What's Checked? Correct Answer: B Why B is correct: ✅ Validation checks that all referenced fields exist in schemas ✅ {{profile.attributes.customField}} referenced but doesn't exist → validation error ✅ This blocks publishing Why others are wrong: A) Validation catches 50-activity limit at publish (error), but this isn't about syntax error C) Validation checks syntax/existence, not business logic quality D) 1.5 MB authored = soft warning (90% threshold); allows publish Exam lesson: Validation checks technical correctness (fields exist, syntax valid), not business logic.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-065",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Building - Audience Qualification Timing",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company set up an Audience Qualification journey that listens for real-time audience membership changes. When a customer's churn score crosses a threshold, they're added to \"High Churn Risk\" audience.\nExpected behavior: When customer enters audience, journey triggers immediately and sends retention email.\nObserved behavior: Customer enters audience at 10:05 AM, but doesn't receive email until 10:12 AM (7-minute delay).\nWhat's the issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "This is incorrect configuration. Audience Qualification activities don't support real-time triggering. Must use a Unitary Event journey instead."
+        },
+        {
+          "id": "opt-b",
+          "text": "The journey has the correct setup. The 10-minute activation delay is a known guardrail. Audiences take up to 10 minutes to start listening for membership changes."
+        },
+        {
+          "id": "opt-c",
+          "text": "The email send was delayed by the system due to the 5-minute reentrance block."
+        },
+        {
+          "id": "opt-d",
+          "text": "There's a data syncing delay. The churn score updated at 10:05 AM, but the audience didn't recalculate until 10:12 AM."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Journey Building - Audience Qualification Timing Correct Answer: B Why B is right: ✅ Audience Qualification activities have up to 10-minute activation delay ✅ This is a known guardrail ✅ 10:05 AM entry + ~7 min delay = 10:12 AM email is expected behavior Why others are wrong: A) Audience Qualification supports real-time (with delay); configuration is correct C) 5-minute reentrance block is for unitary events, not audience qualification D) Data syncing isn't the issue; it's the guardrail delay Exam lesson: Audience Qualification has 10-minute activation delay. This is expected.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-066",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Offer Decisioning - Using in Journeys",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company built offer decisioning with:\n- 10 different product offers in a \"New Customers\" collection\n- Decision policy that ranks offers by customer segment and location\n- Fallback offer: \"Generic 10% discount\"\nThey deploy this in a journey using a Content Decision activity in the email body.\nThe email is sent to 100K new customers. They observe:\n- 85K customers see their personalized offer\n- 15K customers see the fallback \"Generic 10% discount\"\nThe company asks: \"Why are 15K customers getting the fallback offer instead of a personalized one?\"",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The fallback offer is being shown because too many offers were delivered (hit frequency cap). The offers are cycling through fallback as a safeguard."
+        },
+        {
+          "id": "opt-b",
+          "text": "Those 15K customers likely didn't match the eligibility rules for any of the 10 offers in the collection. The decision evaluated rules, found no matches, and displayed the fallback offer."
+        },
+        {
+          "id": "opt-c",
+          "text": "The fallback offer is randomly shown to 15% of customers to test its effectiveness. This is normal behavior."
+        },
+        {
+          "id": "opt-d",
+          "text": "There's a system error. 100% of customers should see personalized offers. Only 85K indicate successful offer decisioning; the other 15K didn't receive any offer."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Offer Decisioning - Using in Journeys Correct Answer: B Why B is right: ✅ Fallback offer shown when no personalized offers match ✅ 15K customers likely didn't match eligibility rules for the 10 offers ✅ System evaluated rules, found no matches, displayed fallback Why others are wrong: A) Fallback isn't a safeguard for frequency caps; it's for no-match scenarios C) Fallback isn't randomly shown; it's shown when no offers match D) The system is working correctly; fallback offer is working as designed Exam lesson: Fallback offer displays when eligibility rules don't match for any offer in collection.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-067",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Guardrails - Combining Multiple Limits",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey logs customer activity with large API responses. Data per profile:\n- Event payload: 10 KB\n- Profile attributes: 100 KB\n- API response 1: 200 KB\n- API response 2: 180 KB\n- Email content: 150 KB\n- **Total: 640 KB per profile**\nFor a profile with higher data needs:\n- Event payload: 15 KB\n- Profile attributes: 300 KB (more historical data)\n- API response 1: 400 KB\n- API response 2: 350 KB\n- Email content: 150 KB\n- **Total: 1,215 KB per profile**\nWhat happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Both profiles complete successfully. 640 KB and 1,215 KB are both under the 2 MB email content limit."
+        },
+        {
+          "id": "opt-b",
+          "text": "Profile 1 (640 KB) completes. Profile 2 (1,215 KB) is marked ERROR because it exceeds the 1 MB journey instance limit."
+        },
+        {
+          "id": "opt-c",
+          "text": "Both profiles fail at journey entry because the event payload exceeds 64 KB."
+        },
+        {
+          "id": "opt-d",
+          "text": "Profile 2 fails because it exceeds the 2 MB message limit. Profile 1 succeeds."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Guardrails - Combining Multiple Limits Correct Answer: B Why B is right: ✅ Profile 1: 640 KB < 1 MB → completes ✅ Profile 2: 1,215 KB > 1 MB → exceeds journey instance limit → ERROR status ✅ This matches selective profile failure pattern (some profiles error based on data volume) Why others are wrong: A) 1,215 KB exceeds 1 MB limit C) Events are 10-15 KB; under 64 KB limit D) 2 MB is message content (email), not journey instance. 1 MB is the limit here Exam lesson: 1 MB journey instance limit applies to accumulated data during execution.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    },
+    {
+      "id": "ad0-e607-practice-068",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Type Decision - Complex Scenario",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A financial services company wants to send investment opportunity emails to customers based on their account status. Here's the requirement:\n- Send to customers whose \"Investment Ready\" score just changed to YES\n- Must send within 1 hour of score change (real-time trigger)\n- Email shows investment options matching their risk profile\n- Wait 48 hours\n- Check if customer clicked email or logged into investment portal\n- If YES → send follow-up with personalized portfolio suggestions\n- If NO → send SMS reminder\n- Multi-day nurture sequence continues based on engagement\nWhich journey type is best?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Read Audience journey that runs hourly to find customers whose Investment Ready score changed to YES."
+        },
+        {
+          "id": "opt-b",
+          "text": "Business event journey triggered when the Investment Ready score event fires."
+        },
+        {
+          "id": "opt-c",
+          "text": "Unitary event journey triggered by an event that fires when Investment Ready score changes to YES. This provides real-time response within hours and supports the multi-step branching."
+        },
+        {
+          "id": "opt-d",
+          "text": "Audience Qualification journey listening for real-time membership changes in \"Investment Ready\" audience."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Journey Type Decision - Complex Scenario Correct Answer: C Why C is right: ✅ \"Within 1 hour of score change\" = real-time trigger needed → Unitary event ✅ \"Score just changed to YES\" = customer action/attribute change → event-driven ✅ Multi-step, multi-day nurture with branching → supported in unitary event ✅ NOT about scheduled batch → not Read Audience Why others are wrong: A) Read Audience is batch (hourly run), not real-time within 1 hour B) Business event is for external systems, not attribute changes D) Audience Qualification possible, but unitary event cleaner for this use case Exam lesson: Real-time customer attribute/action trigger = Unitary event.",
+      "explanationSource": "AJO_Practice_Exam_Questions.md",
+      "incorrectExplanations": {}
+    }
+  ]
+}

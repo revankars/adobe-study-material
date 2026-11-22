@@ -1,0 +1,77 @@
+{
+  "certificationId": "ad0-e607",
+  "chapters": [
+    {
+      "id": "ch-domain1",
+      "title": "Campaign and Journey Optimization",
+      "domain": "Campaign and Journey Optimization",
+      "weight": 48,
+      "overview": "Master campaign and journey optimization for Adobe Journey Optimizer certification.",
+      "topics": [
+        "Journey Types & Entry Points",
+        "What Gets Validated:",
+        "1. Unitary Event Journey",
+        "Troubleshooting Journey Issues",
+        "Journey Validation",
+        "4. Audience Qualification Journey",
+        "3. Read Audience Journey",
+        "Journey Activities"
+      ],
+      "fullContent": "Journey Types & Entry Points \n1. Unitary Event Journey \nTrigger: Customer performs an action (click, purchase, form submission) Timing: Real-time, immediate Reentrance: 5-minute block (default) Event payload limit: 64 KB \nBest for: Immediate reactions, real-time personalization \nExample: Customer abandons cart \u2192 email within 15 minutes \nKey guardrails: 5-minute reentrance block prevents duplicate messages \n64 KB event payload limit (exceeding drops event silently) \n1 MB journey instance limit (data accumulation during execution) \nCannot coexist with business events in same journey \n2. Business Event Journey \nTrigger: External system sends an event (not customer action) Timing: Scheduled or batch Best for: Aggregated data, scheduled sends \nExample: Daily purchase summary email at midnight \nKey guardrails: Cannot coexist with unitary events in same journey \nCannot coexist with audience qualification \n3. Read Audience Journey \nTrigger: Scheduled batch read of an audience Timing: Daily, weekly schedule or triggered by business event Best for: Batch campaigns, audience-wide initiatives \nExample: Every Monday 9 AM, read all VIP customers and send weekly digest \nKey guardrails: 5 concurrent instances max (organization-wide) - Stagger 5-10 minutes apart \n12-hour processing timeout \n20K profiles/sec sandbox throughput \nOne audience per journey \nCannot use with Campaign Standard activities \n4. Audience Qualification Journey \nTrigger: Customer enters or exits an audience in real-time Timing: Real-time as they qualify/disqualify Activation delay: Up to 10 minutes \nExample: Churn score changes \u2192 immediately trigger retention journey \nJourney Activities \nActivity Purpose Key Use Email Send email message Send promotional/transactional email SMS Send text message Send verification code or alert Push Send mobile push notification Send app notification In-app Display message within app Show discount banner in app Condition Branch based on rules IF loyalty_tier = VIP THEN... ELSE... Wait Pause for duration or until event Wait 3 days before next action Content Decision Select best offer to show Use Offer Decisioning Custom Action Call external system Log to analytics, call webhook Jump Transfer to another journey Hand off to nurture journey Journey Validation \nWhat Gets Validated: \n\u2705 Activity configuration (required fields filled) \n\u2705 Event setup (correctly configured) \n\u2705 Expression syntax (valid, fields exist) \n\u2705 Audience references (exist and accessible) \n\u2705 Message content ("
+    },
+    {
+      "id": "ch-domain2",
+      "title": "Offer Decisioning",
+      "domain": "Offer Decisioning",
+      "weight": 12,
+      "overview": "Master offer decisioning for Adobe Journey Optimizer certification.",
+      "topics": [
+        "3. Decision",
+        "Offer Simulation",
+        "The 4 Stages of Offer Decisioning",
+        "2. Collection",
+        "Test Profiles & Simulation",
+        "Content Decision Activity",
+        "4. Placement",
+        "1. Offer"
+      ],
+      "fullContent": "Core Concepts \n1. Offer \nAn individual piece of content/promotion Examples: \"Get 20% off\", \"Free shipping\", product recommendation Contains: Name, channels, content, constraints, eligibility rules \n2. Collection \nGrouping of related offers Example: \"Summer Promotions\" collection with 5 summer offers Purpose: Organize offers logically, control scope \n3. Decision \nLogic that selects which offer to show Specifies: Collection, eligibility rules, ranking/priority, capping, fallback offer \n4. Placement \nWhere and how offer is delivered Tied to channel: Email header, Web banner, SMS text, In-app popup \n5. Decision Policy \nComplete machine that brings it all together Formula: Decision Policy = Collection + Decision Logic + Placements + Offers \nThe 4 Stages of Offer Decisioning \nStage 1: Create Offers Define individual offers with content, channels, constraints Set eligibility rules per offer Status: Draft \u2192 Approved \u2192 Live \nStage 2: Organize Into Collections Group related offers Creates logical structure \nStage 3: Build Decisions Create decision logic (ranking, capping, eligibility) Select collection Define fallback offers Set up constraints \nStage 4: Deploy Decisions Use decision in journey via Content Decision activity System evaluates rules in real-time for each customer Best matching offer selected and delivered \nStatic vs. Dynamic Offers \nAspect Static Offer Dynamic Offer Definition Fixed content for all customers Content changes based on customer data Example \"Get 20% off your next purchase\" \"Get {{discountPercentage}}% off, {{firstName}}\" Personalization None (same for everyone) Uses profile attributes, dynamic fields Complexity Simple, easy to manage More complex, needs data setup Performance Faster (no data lookup needed) Slightly slower (evaluates expressions) Exam Pattern: If scenario says \"personalize based on customer data\" \u2192 dynamic offer \nCapping & Ranking Logic \nHow Capping Works \nCapping is PER-OFFER , not decision-level \nExample: Offer A: \"Robo-Advisor Service\" (priority 1, capped at 3/month) Offer B: \"Managed Portfolio\" (priority 2, capped at 3/month) Offer C: \"Self-Directed Trading\" (priority 3, capped at 3/month) Customer has received Offer A 3 times this month (capped) System evaluates: A is capped, skip it System evaluates: B hasn't reached cap \u2192 deliver B (Does NOT deliver fallback) \nKey Rule: When top-priority offer is capped \u2192 system selects next ranked uncapped offer. Does NOT fail decision. \nUsing Offer Decisioning in Journeys \nContent "
+    },
+    {
+      "id": "ch-domain3",
+      "title": "Content Authoring",
+      "domain": "Content Authoring",
+      "weight": 20,
+      "overview": "Master content authoring for Adobe Journey Optimizer certification.",
+      "topics": [
+        "Email Templates",
+        "Key Rules",
+        "Asset Essentials",
+        "Benefits",
+        "Data Sources",
+        "Interpreting Results",
+        "Expression Fragments",
+        "Critical Rule"
+      ],
+      "fullContent": "Personalized Fields \nWhat They Are \nPlaceholders replaced with actual customer data at send time \nSyntax \n{{profile.attributes.firstName}}\n{{event.productName}}\n{{profile.segmentMembership.goldTier}}\n{{context.journeyName}} \nData Sources \nProfile attributes: firstName, email, loyaltyTier, lastPurchaseDate \nEvent data: productViewed, cartValue, eventTime \nContextual data: journeyName, campaignId \nKey Rules \n\u2705 Fields must exist in profile or event schema \n\u274c Cannot reference non-existent fields (causes failure) \n\u2705 Can use conditional logic: {{if profile.attributes.loyaltyTier == \"VIP\" then \"exclusive offer\" else \"standard offer\"}} \nVisual Fragments \nWhat: Pre-designed HTML blocks (headers, footers, banners, images) Size limit: 100 KB max Channels: Email ONLY Status required: Must be \"Live\" to use \nUse Cases \nInclude branded footer in every email \nReuse logo + social links + unsubscribe + copyright \nStatic design blocks that don't change per customer \nBenefits \n\u2705 Consistency across all emails \n\u2705 Update once, all messages update \n\u2705 Version control for shared content \nExpression Fragments \nWhat: Reusable personalization logic/expressions Size limit: 200 KB max Channels: Email, SMS, Push (NOT in-app) Status required: Must be \"Live\" to use \nExample \n{{if profile.attributes.loyaltyTier == \"GOLD\" \n then \"You get 30% off\" \n else \"You get 10% off\"}} \nUse Cases \nApply same loyalty tier logic to all messages \nIF/THEN logic for different messages \nReusable business rules \nCritical Rule \nExpression fragments CANNOT be used in in-app messages Use personalization fields for in-app instead \nEmail Templates \nWhat: Pre-designed email structure Use: Reuse layout and branding across journeys Can include: Personalization fields, fragments, dynamic content \nTemplate vs. Fragment Difference \nTemplate Fragment Entire email structure Reusable content block Layout + content Personalization logic OR visual block Multiple uses across journeys Inserted into templates Can be modified per use Must stay consistent (live status) Asset Essentials \nWhat: System for storing and managing images/files Benefit: Images update automatically when source changes \nFeatures \nUpload images to central repository \nReference by asset ID in emails \nVersion control (update source, all references update) \nOrganize in folders \nContent Experiments (A/B Testing) \nWhat You Can Test \n\u2705 Subject line variations \n\u2705 Email body copy variations \n\u2705 Call-to-action button text \n\u2705 Images/visual elements \n\u2705 Different offers \n"
+    },
+    {
+      "id": "ch-domain4",
+      "title": "Foundations of Adobe Experience Platform",
+      "domain": "Foundations of Adobe Experience Platform",
+      "weight": 20,
+      "overview": "Master foundations of adobe experience platform for Adobe Journey Optimizer certification.",
+      "topics": [
+        "Memory Trick",
+        "Datasets",
+        "Authenticated Identities (Known Customers)",
+        "Profile Schema (XDM Individual Profile)",
+        "Event Schema (XDM ExperienceEvent)",
+        "Streamed vs. Batch Audiences",
+        "Identities",
+        "Schemas: Profile vs. Event"
+      ],
+      "fullContent": "Schemas: Profile vs. Event \nMemory Trick \nPROFILE = \"WHO is the customer?\" (Static attributes) EVENT = \"WHAT did they do?\" + \"WHEN?\" (Time-series actions) \nProfile Schema (XDM Individual Profile) \nPurpose: Stores customer attributes (WHO they are) Data type: Personal info \u2014 name, email, age, preferences, loyalty tier When enabled for profile: Profile data stored in Unified Profile Service (real-time access) Example fields: firstName, lastName, email, phone, loyaltyTier, lastPurchaseDate \nEvent Schema (XDM ExperienceEvent) \nPurpose: Stores what customers did (behavioral events) Data type: Time-series events \u2014 purchase, click, view, search When enabled for profile: Event data stored and linked to customer profiles Example fields: eventType, timestamp, productViewed, purchaseAmount, pageURL \nDatasets \nDatasets Enabled for Profile \n\u2705 Data ingested into Unified Profile Service (real-time) \n\u2705 Available for real-time personalization in journeys \n\u2705 Can be referenced in journey conditions \n\u26a0\ufe0f Counts against engageable profile quota (costs money) \nDatasets NOT Enabled for Profile \n\u274c Data stays in Data Lake only (not real-time) \n\u274c Cannot be accessed instantly in journeys \n\u274c Can be queried/analyzed but not for real-time personalization \n\u2705 Does NOT count against engageable profile quota (no cost) \nExam Pattern \n\"Marketer wants to use purchase history in journey condition. Dataset enabled for profile?\" Answer: YES, must be enabled for profile \nIdentities \nAuthenticated Identities (Known Customers) \nEmail: john@example.com \nCRM ID: CUST-12345 \nMobile AAID/IDFA: Unique mobile device ID \nCustom ID: Your proprietary customer ID \nPseudonymous Identities (Anonymous/Unknown Visitors) \nECID (Experience Cloud ID): Adobe's auto-generated ID for unknown browsers \nUsed for: Tracking anonymous website visitors \nGets merged: When visitor logs in, ECID + email link together \nIdentity Merging \nScenario: Day 1, 2 PM: Anonymous visitor (ECID-12345) views products, adds to cart Day 1, 3 PM: Same person logs in (email: john@example.com, CRM ID: CUST-54321) System links: ECID-12345 + email + CRM ID \u2192 same profile ALL historical data merges automatically Journey condition \"if customer viewed products + added to cart in last 24 hours\" System finds ALL merged data \u2192 triggers journey \u2713 \nEngageable Profile Impact \n\u2705 Authenticated identities (email, CRM ID) = count as engageable \n\u2705 Pseudonymous identities (ECID) = count as engageable too \n\ud83d\udca1 Solution: Set TTL (Time-To-Live) on pseudonymous profile"
+    }
+  ]
+}

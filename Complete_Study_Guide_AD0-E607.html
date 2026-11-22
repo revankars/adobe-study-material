@@ -1,0 +1,1581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD0-E607 complete study guide</title>
+<style>:root{
+ --bg:#f5f6fa;--surface:#ffffff;--surface-2:#f0f2f7;--text:#1d2330;--muted:#5d6678;--border:#e2e5ec;--shadow:0 1px 2px rgba(16,24,40,.05),0 4px 16px rgba(16,24,40,.06);
+ --accent:#2b59c3;--accent-soft:#e9effc;--accent-ink:#ffffff;
+ --note-bg:#eef4ff;--note-bd:#3b72e0;--key-bg:#fff7e6;--key-bd:#e39a00;--ex-bg:#eefaf3;--ex-bd:#22a565;--warn-bg:#fdf0f0;--warn-bd:#d64545;--ok-bg:#ecfaf1;--ok-bd:#1e9e5a;--fix-bg:#f4efff;--fix-bd:#7b4cd9;
+ --code-bg:#f3f4f8;--radius:12px;
+ --aa:#1473e6;--aa-soft:#e7f1fd;--tam:#d7373f;--tam-soft:#fdeced;--tbp:#d9730d;--tbp-soft:#fdf1e4;--ajo:#7b4cd9;--ajo-soft:#f1ebfd;
+ --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:"Cascadia Code",Consolas,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+ --bg:#0f1218;--surface:#171b23;--surface-2:#1e232d;--text:#e5e8ee;--muted:#9aa3b3;--border:#2b313d;--shadow:0 1px 2px rgba(0,0,0,.4);
+ --accent-soft:#1d2740;--note-bg:#18233a;--key-bg:#2b2414;--ex-bg:#14281e;--warn-bg:#2e1818;--ok-bg:#13291c;--fix-bg:#231c38;--code-bg:#1b2029;
+ --aa:#4b9cf5;--aa-soft:#15253a;--tam:#f06269;--tam-soft:#331b1e;--tbp:#f0953f;--tbp-soft:#33240f;--ajo:#a283f0;--ajo-soft:#251d3b;
+}}
+[data-s="aa"]{--accent:var(--aa);--accent-soft:var(--aa-soft)}
+[data-s="tam"]{--accent:var(--tam);--accent-soft:var(--tam-soft)}
+[data-s="tbp"]{--accent:var(--tbp);--accent-soft:var(--tbp-soft)}
+[data-s="ajo"]{--accent:var(--ajo);--accent-soft:var(--ajo-soft)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;height:60px;padding-inline:18px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-block-end:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.logo{display:grid;place-items:center;inline-size:30px;block-size:30px;border-radius:8px;background:linear-gradient(135deg,#eb1000,#7b4cd9);color:#fff;font-weight:800}
+.search{position:relative;flex:1;max-inline-size:440px;margin-inline-start:auto}
+.search input{inline-size:100%;padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:var(--surface-2);color:var(--text);font:inherit;font-size:14px}
+.search input:focus{outline:2px solid var(--aa);outline-offset:1px}
+.results{position:absolute;inset-inline:0;top:44px;max-block-size:60vh;overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);padding:6px}
+.results a{display:block;padding:7px 10px;border-radius:6px;color:var(--text);font-size:14px}
+.results a:hover,.results a.sel{background:var(--surface-2);text-decoration:none}
+.results small{display:block;color:var(--muted);font-size:12px}
+.results .none{padding:8px 10px;color:var(--muted);font-size:14px}
+.quick{display:flex;gap:6px}
+.quick a{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.menu-btn{display:none;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:8px;font-size:18px;padding:3px 10px;cursor:pointer}
+/* layout */
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);align-items:start}
+.sidebar{position:sticky;top:60px;block-size:calc(100vh - 60px);overflow:auto;padding:18px 14px 40px;border-inline-end:1px solid var(--border);background:var(--surface)}
+.toc{font-size:14px}
+.toc a{color:var(--text)}
+.toc-home{display:block;font-weight:700;padding:6px 10px;border-radius:8px}
+.toc-subject{margin-block-start:14px}
+.toc-subj-link{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:10px;background:var(--accent-soft);border-inline-start:4px solid var(--accent)}
+.toc-subj-link span:last-child{font-weight:600}
+.toc-subj-link:hover{text-decoration:none}
+.code{display:inline-block;font:700 11.5px/1 var(--mono);letter-spacing:.03em;color:var(--accent)}
+.toc-parts,.toc-secs{list-style:none;margin:0;padding:0}
+.toc-parts{margin-block-start:6px}
+.toc-part>a{display:block;padding:5px 10px;border-radius:6px;font-weight:500}
+.toc-secs{margin-inline-start:12px;border-inline-start:1px solid var(--border);padding-inline-start:6px}
+.toc-secs a{display:block;padding:3px 8px;border-radius:6px;font-size:13px;color:var(--muted)}
+.toc a:hover{background:var(--surface-2);text-decoration:none}
+.toc a.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.js .toc-part:not(.open) .toc-secs{display:none}
+.main{min-inline-size:0;padding:28px clamp(16px,4vw,48px) 80px}
+.main>section,.foot{max-inline-size:1040px;margin-inline:auto}
+/* overview */
+.hero{padding:36px clamp(20px,4vw,44px);border-radius:20px;background:radial-gradient(1200px 300px at 0% 0%,rgba(20,115,230,.18),transparent 60%),radial-gradient(900px 300px at 100% 100%,rgba(123,76,217,.20),transparent 60%),var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.eyebrow{margin:0;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.hero h1{margin:6px 0 10px;font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.02em}
+.hero .sub{margin:0;max-inline-size:760px;color:var(--muted);font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-block-start:24px}
+.stats div{background:var(--surface-2);border-radius:12px;padding:12px 16px}
+.stats b{display:block;font-size:26px;line-height:1.1}
+.stats span{font-size:13px;color:var(--muted)}
+.h-sec{font-size:20px;margin:36px 0 14px;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-block-start:5px solid var(--accent);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.card h3{margin:6px 0 10px;font-size:18px;line-height:1.3}.card h3 a{color:var(--text)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px}
+.facts div{background:var(--surface-2);border-radius:8px;padding:6px 8px}
+.facts dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.facts dd{margin:0;font-weight:700;font-size:14px}
+.mini{font-size:12.5px;color:var(--muted);margin:6px 0}
+.bar{display:flex;gap:2px;block-size:10px;border-radius:999px;overflow:hidden}
+.bar .seg{background:var(--accent)}
+.bar .seg:nth-child(2){opacity:.8}.bar .seg:nth-child(3){opacity:.62}.bar .seg:nth-child(4){opacity:.46}.bar .seg:nth-child(5){opacity:.34}.bar .seg:nth-child(6){opacity:.26}.bar .seg:nth-child(7){opacity:.18}
+.legend{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted)}
+.legend b{color:var(--text)}
+.plist{list-style:none;padding:0;margin:14px 0 0;border-block-start:1px solid var(--border)}
+.plist li a{display:flex;gap:8px;align-items:baseline;padding:7px 0;border-block-end:1px dashed var(--border);color:var(--text);font-size:14px}
+.plist .kind{flex:none}
+.kind{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+.two{display:grid;grid-template-columns:1fr 1.3fr;gap:18px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:4px 22px 18px;margin-block-start:18px;box-shadow:var(--shadow)}
+.panel .h-sec{margin-block-start:18px}
+table.fixes td.was{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(214,69,69,.6)}
+table.fixes td.now{font-weight:600}
+/* subject */
+.subject{margin-block-start:56px}
+.subj-hero{position:relative;overflow:hidden;border-radius:20px;padding:28px clamp(20px,4vw,36px);background:linear-gradient(135deg,var(--accent-soft),var(--surface) 70%);border:1px solid var(--border);box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr;gap:20px 32px}
+.subj-hero::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;inline-size:6px;background:var(--accent)}
+.subj-hero h2{margin:6px 0 14px;font-size:clamp(22px,3vw,30px);line-height:1.2;letter-spacing:-.015em}
+.subj-hero .code{font-size:13px}
+.subj-parts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.subj-parts a{font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.subj-parts a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.part{margin-block-start:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.part-head{padding:20px 26px 16px;border-block-end:1px solid var(--border);background:linear-gradient(180deg,var(--accent-soft),transparent)}
+.part-head h3{margin:8px 0 4px;font-size:22px;letter-spacing:-.01em}
+.intoc{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.intoc a{display:inline-block;font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted)}
+.intoc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.qchips{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;margin-block-start:12px}
+.qchips a{text-align:center;font:600 12.5px/1 var(--mono);padding:8px 0;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.qchips a:hover{background:var(--accent);color:var(--accent-ink);text-decoration:none}
+/* prose */
+.prose{padding:8px 26px 26px}
+.prose h4{font-size:21px;line-height:1.3;margin:34px 0 12px;padding-block-start:22px;border-block-start:1px solid var(--border);letter-spacing:-.01em}
+.prose>h4:first-child,.prose>.fix+h4,.prose>p.lead+h4{border-block-start:0;padding-block-start:6px}
+.prose h5{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.prose h6{font-size:14px;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.prose p{margin:10px 0}
+.prose .lead{font-size:17px;color:var(--muted);margin-block-start:16px}
+.prose ul,.prose ol{padding-inline-start:24px;margin:8px 0}
+.prose li{margin:4px 0}
+.prose li>p{margin:4px 0}
+.prose strong{font-weight:650}
+.prose code{font-family:var(--mono);font-size:.88em;background:var(--code-bg);padding:1px 6px;border-radius:5px}
+.prose pre,.codeblock{font:13px/1.55 var(--mono);background:var(--code-bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;white-space:pre}
+.codeblock{white-space:pre-wrap;margin:12px 0}
+.prose pre code{background:none;padding:0}
+.prose blockquote{margin:12px 0;padding:8px 16px;border-inline-start:4px solid var(--border);color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;inline-size:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:start;vertical-align:top;border-block-end:1px solid var(--border)}
+th{background:var(--surface-2);font-weight:650;font-size:13.5px}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 45%,transparent)}
+tbody tr:last-child td{border-block-end:0}
+.note,.key,.example,.warn,.ok,.fix,.qa{margin:14px 0;padding:12px 16px;border-radius:10px;border-inline-start:4px solid}
+.note{background:var(--note-bg);border-color:var(--note-bd)}
+.key{background:var(--key-bg);border-color:var(--key-bd)}
+.example{background:var(--ex-bg);border-color:var(--ex-bd)}
+.warn{background:var(--warn-bg);border-color:var(--warn-bd)}
+.ok{background:var(--ok-bg);border-color:var(--ok-bd)}
+.fix{background:var(--fix-bg);border-color:var(--fix-bd)}
+.qa{background:var(--surface-2);border-color:var(--muted)}
+.note>:first-child,.key>:first-child,.example>:first-child,.warn>:first-child,.ok>:first-child,.fix>:first-child,.qa>:first-child{margin-block-start:0}
+.note>:last-child,.key>:last-child,.example>:last-child,.warn>:last-child,.ok>:last-child,.fix>:last-child,.qa>:last-child{margin-block-end:0}
+.fix .src{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.grid .example{margin:0}
+.checklist{list-style:none;padding-inline-start:4px !important}
+.checklist li{position:relative;padding-inline-start:28px}
+.checklist li::before{content:"";position:absolute;inset-inline-start:0;top:5px;inline-size:16px;block-size:16px;border:2px solid var(--accent);border-radius:4px}
+.checklist li input{display:none}
+.badge{display:inline-block;vertical-align:middle;font:700 10.5px/1 var(--font);text-transform:uppercase;letter-spacing:.05em;padding:4px 7px;border-radius:999px;margin-inline:4px}
+.badge.ver{background:var(--ok-bg);color:var(--ok-bd);border:1px solid color-mix(in srgb,var(--ok-bd) 40%,transparent)}
+.badge.chk{background:var(--key-bg);color:#a66f00;border:1px solid color-mix(in srgb,var(--key-bd) 40%,transparent)}
+details{margin:12px 0;border:1px solid var(--border);border-radius:10px;background:var(--surface-2)}
+details>summary{cursor:pointer;padding:9px 14px;font-weight:600;color:var(--accent)}
+details[open]>summary{border-block-end:1px solid var(--border)}
+details>*:not(summary){margin-inline:14px}
+.foot{margin-block-start:48px;font-size:13.5px;color:var(--muted);text-align:center}
+.totop{position:fixed;inset-inline-end:22px;bottom:22px;display:grid;place-items:center;inline-size:42px;block-size:42px;border-radius:50%;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);color:var(--text);font-size:18px}
+.totop:hover{text-decoration:none;color:var(--aa)}
+@media (max-width:1100px){.quick{display:none}.two{grid-template-columns:1fr}.subj-hero{grid-template-columns:1fr}}
+@media (max-width:900px){
+ .layout{grid-template-columns:1fr}
+ .menu-btn{display:block}
+ .sidebar{position:static;block-size:auto;border-inline-end:0;border-block-end:1px solid var(--border)}
+ .js .sidebar{position:fixed;top:60px;inset-inline-start:0;z-index:40;inline-size:min(320px,88vw);block-size:calc(100vh - 60px);transform:translateX(-105%);transition:transform .2s ease;box-shadow:var(--shadow)}
+ [dir="rtl"] .js .sidebar{transform:translateX(105%)}
+ .js body.nav-open .sidebar{transform:none}
+ .brand span:last-child{display:none}
+ .stats,.facts{grid-template-columns:repeat(2,1fr)}
+ .prose{padding:6px 16px 20px}.part-head{padding:16px}
+}
+@media print{
+ .topbar,.sidebar,.totop,.intoc,.qchips,.subj-parts{display:none !important}
+ .layout{display:block}.main{padding:0}
+ body{background:#fff;color:#000;font-size:12pt}
+ .part,.card,.panel,.hero,.subj-hero{box-shadow:none;break-inside:auto}
+ .subject{break-before:page}
+ details{border:0}details>*{display:block}
+ a{color:inherit}
+}
+</style>
+<style>.guide-head{padding:28px 32px 12px}.guide-head h1{margin:6px 0 8px;font-size:30px}.guide-note{color:#6b6f7b;margin:0 0 16px}.guide-toc ol{padding-left:20px;columns:2}.guide-toc a{text-decoration:none}</style>
+</head>
+<body>
+<main class="guide-page" id="top">
+<header class="guide-head"><p class="eyebrow">AD0-E607</p><h1>Adobe Journey Optimizer Business Practitioner Professional</h1><p class="guide-note">Complete study notes from the original Adobe Certification Study Hub. Practice questions are in the Practice tests section of the portal.</p><nav class="guide-toc" aria-label="Contents"><ol><li><a href="#ajo-d1">Campaign and journey optimization</a></li><li><a href="#ajo-d2">Offer decisioning</a></li><li><a href="#ajo-d3">Content authoring</a></li><li><a href="#ajo-d4">Foundations of Adobe Experience Platform</a></li><li><a href="#ajo-gr">Guardrails and system limits</a></li><li><a href="#ajo-dt">Decision trees and final exam tips</a></li></ol></nav></header>
+<section class="subject" id="ajo" data-s="ajo"><header class="subj-hero"><div class="subj-meta"><span class="code">AD0-E607</span><h2>Adobe Journey Optimizer Business Practitioner Professional</h2><dl class="facts"><div><dt>Questions</dt><dd>50</dd></div><div><dt>Time</dt><dd>100 min</dd></div><div><dt>Pass mark</dt><dd>31 / 50</dd></div><div><dt>Level</dt><dd>Professional</dd></div></dl></div><div class="subj-weights"><p class="mini">Exam weighting</p><div class="bar"><span class="seg" style="flex:48" title="Campaign &amp; journey optimization 48%"></span><span class="seg" style="flex:12" title="Offer decisioning 12%"></span><span class="seg" style="flex:20" title="Content authoring 20%"></span><span class="seg" style="flex:20" title="AEP foundations 20%"></span></div><ul class="legend"><li><b>48%</b> Campaign &amp; journey optimization</li><li><b>12%</b> Offer decisioning</li><li><b>20%</b> Content authoring</li><li><b>20%</b> AEP foundations</li></ul></div><nav aria-label="Parts" class="subj-parts"></nav></header><section class="part" id="ajo-d1"><header class="part-head"><span class="kind">Domain 1 · 48%</span><h3>Campaign and journey optimization</h3><ul class="intoc"><li><a href="#ajo-d1-journey-types-entry-points">Journey Types &amp; Entry Points</a></li><li><a href="#ajo-d1-journey-activities">Journey Activities</a></li><li><a href="#ajo-d1-journey-validation">Journey Validation</a></li><li><a href="#ajo-d1-journey-evaluation-metrics">Journey Evaluation Metrics</a></li><li><a href="#ajo-d1-troubleshooting-journey-issues">Troubleshooting Journey Issues</a></li><li><a href="#ajo-d1-journey-entry-points-critical-distinction">Journey Entry Points (Critical Distinction)</a></li><li><a href="#ajo-d1-journey-entry-decision-tree">Journey Entry Decision Tree</a></li><li><a href="#ajo-d1-journey-evaluation-after-running">Journey Evaluation (After Running)</a></li><li><a href="#ajo-d1-core-difference">Core Difference</a></li><li><a href="#ajo-d1-when-to-use-each">When to Use Each</a></li><li><a href="#ajo-d1-exam-scenarios">Exam Scenarios</a></li><li><a href="#ajo-d1-both-support-same-tools">Both Support Same Tools</a></li></ul></header><div class="prose"><h4 id="ajo-d1-journey-types-entry-points">Journey Types &amp; Entry Points</h4><h5 id="ajo-d1-1-unitary-event-journey">1. Unitary Event Journey</h5><div class="note">
+<strong>Trigger:</strong> Customer performs an action (click, purchase, form submission)<br/>
+<strong>Timing:</strong> Real-time, immediate<br/>
+<strong>Reentrance:</strong> 5-minute block (default)<br/>
+<strong>Event payload limit:</strong> 64 KB
+            </div><p><strong>Best for:</strong> Immediate reactions, real-time personalization</p><div class="example">
+<strong>Example:</strong> Customer abandons cart → email within 15 minutes
+            </div><div class="key">
+<strong>Key guardrails:</strong>
+<ul>
+<li>5-minute reentrance block prevents duplicate messages</li>
+<li>64 KB event payload limit (exceeding drops event silently)</li>
+<li>1 MB journey instance limit (data accumulation during execution)</li>
+<li>Cannot coexist with business events in same journey</li>
+</ul>
+</div><h5 id="ajo-d1-2-business-event-journey">2. Business Event Journey</h5><div class="note">
+<strong>Trigger:</strong> External system sends an event (not customer action)<br/>
+<strong>Timing:</strong> Scheduled or batch<br/>
+<strong>Best for:</strong> Aggregated data, scheduled sends
+            </div><div class="example">
+<strong>Example:</strong> Daily purchase summary email at midnight
+            </div><div class="key">
+<strong>Key guardrails:</strong>
+<ul>
+<li>Cannot coexist with unitary events in same journey</li>
+<li>Cannot coexist with audience qualification</li>
+</ul>
+</div><h5 id="ajo-d1-3-read-audience-journey">3. Read Audience Journey</h5><div class="note">
+<strong>Trigger:</strong> Scheduled batch read of an audience<br/>
+<strong>Timing:</strong> Daily, weekly schedule or triggered by business event<br/>
+<strong>Best for:</strong> Batch campaigns, audience-wide initiatives
+            </div><div class="example">
+<strong>Example:</strong> Every Monday 9 AM, read all VIP customers and send weekly digest
+            </div><div class="key">
+<strong>Key guardrails:</strong>
+<ul>
+<li><strong>5 concurrent instances max</strong> (organization-wide) - Stagger 5-10 minutes apart</li>
+<li>12-hour processing timeout</li>
+<li>20K profiles/sec sandbox throughput</li>
+<li>One audience per journey</li>
+<li>Cannot use with Campaign Standard activities</li>
+</ul>
+</div><h5 id="ajo-d1-4-audience-qualification-journey">4. Audience Qualification Journey</h5><div class="note">
+<strong>Trigger:</strong> Customer enters or exits an audience in real-time<br/>
+<strong>Timing:</strong> Real-time as they qualify/disqualify<br/>
+<strong>Activation delay:</strong> Up to 10 minutes
+            </div><div class="example">
+<strong>Example:</strong> Churn score changes → immediately trigger retention journey
+            </div><h4 id="ajo-d1-journey-activities">Journey Activities</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Activity</th>
+<th>Purpose</th>
+<th>Key Use</th>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>Send email message</td>
+<td>Send promotional/transactional email</td>
+</tr>
+<tr>
+<td><strong>SMS</strong></td>
+<td>Send text message</td>
+<td>Send verification code or alert</td>
+</tr>
+<tr>
+<td><strong>Push</strong></td>
+<td>Send mobile push notification</td>
+<td>Send app notification</td>
+</tr>
+<tr>
+<td><strong>In-app</strong></td>
+<td>Display message within app</td>
+<td>Show discount banner in app</td>
+</tr>
+<tr>
+<td><strong>Condition</strong></td>
+<td>Branch based on rules</td>
+<td>IF loyalty_tier = VIP THEN... ELSE...</td>
+</tr>
+<tr>
+<td><strong>Wait</strong></td>
+<td>Pause for duration or until event</td>
+<td>Wait 3 days before next action</td>
+</tr>
+<tr>
+<td><strong>Content Decision</strong></td>
+<td>Select best offer to show</td>
+<td>Use Offer Decisioning</td>
+</tr>
+<tr>
+<td><strong>Custom Action</strong></td>
+<td>Call external system</td>
+<td>Log to analytics, call webhook</td>
+</tr>
+<tr>
+<td><strong>Jump</strong></td>
+<td>Transfer to another journey</td>
+<td>Hand off to nurture journey</td>
+</tr>
+</tbody></table></div><h4 id="ajo-d1-journey-validation">Journey Validation</h4><h5 id="ajo-d1-what-gets-validated">What Gets Validated:</h5><ul>
+<li>✅ Activity configuration (required fields filled)</li>
+<li>✅ Event setup (correctly configured)</li>
+<li>✅ Expression syntax (valid, fields exist)</li>
+<li>✅ Audience references (exist and accessible)</li>
+<li>✅ Message content (valid)</li>
+<li>✅ Payload size (under 2 MB warning threshold)</li>
+<li>✅ Activity count (under 50)</li>
+<li>✅ Journey structure (no orphaned activities)</li>
+</ul><h5 id="ajo-d1-what-does-not-get-validated">What Does NOT Get Validated:</h5><ul>
+<li>❌ Whether conditions make logical sense</li>
+<li>❌ Whether journey achieves business goals</li>
+<li>❌ Whether fallback offers are appropriate</li>
+</ul><h4 id="ajo-d1-journey-evaluation-metrics">Journey Evaluation Metrics</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Metric</th>
+<th>Definition</th>
+<th>What It Tells You</th>
+</tr>
+<tr>
+<td><strong>Entries</strong></td>
+<td>Total profiles who entered</td>
+<td>Journey reach</td>
+</tr>
+<tr>
+<td><strong>Exits</strong></td>
+<td>Total who completed/exited</td>
+<td>Completion</td>
+</tr>
+<tr>
+<td><strong>Completion Rate</strong></td>
+<td>(Exits / Entries) × 100</td>
+<td>% of profiles finishing journey</td>
+</tr>
+<tr>
+<td><strong>Errors</strong></td>
+<td>Profiles in ERROR status</td>
+<td>System issues (usually 1 MB limit breach)</td>
+</tr>
+<tr>
+<td><strong>Drop-off by Activity</strong></td>
+<td>Where profiles exit mid-journey</td>
+<td>Problem activities to investigate</td>
+</tr>
+<tr>
+<td><strong>Conversion Rate</strong></td>
+<td>% who completed desired action</td>
+<td>Success of journey goal</td>
+</tr>
+</tbody></table></div><h4 id="ajo-d1-troubleshooting-journey-issues">Troubleshooting Journey Issues</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Problem</th>
+<th>Likely Cause</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>ZERO profiles entering</td>
+<td>64 KB event payload limit</td>
+<td>Reduce event payload size</td>
+</tr>
+<tr>
+<td>SOME profiles in ERROR mid-journey</td>
+<td>1 MB instance limit breach</td>
+<td>Reduce API data or simplify conditions</td>
+</tr>
+<tr>
+<td>Journey won't publish</td>
+<td>50-activity limit OR 2 MB email content</td>
+<td>Split journey OR reduce email size</td>
+</tr>
+<tr>
+<td>High error rate (&gt;10%)</td>
+<td>Data accumulation for certain profiles</td>
+<td>Check profile data volume patterns</td>
+</tr>
+<tr>
+<td>Low completion rate</td>
+<td>Restrictive conditions OR long waits</td>
+<td>Review conditions and timing</td>
+</tr>
+<tr>
+<td>Profiles stuck mid-journey</td>
+<td>Condition not matching OR system issue</td>
+<td>Check condition logic in journey logs</td>
+</tr>
+</tbody></table></div> DOMAIN 2 <h4 id="ajo-d1-journey-entry-points-critical-distinction">Journey Entry Points (Critical Distinction)</h4><h5 id="ajo-d1-1-unitary-event-journey-2">1. Unitary Event Journey</h5><p><strong>Trigger:</strong> Customer performs an action (click, purchase, form submission) <strong>Timing:</strong> Real-time, immediate <strong>Reentrance:</strong> 5-minute block (default) <strong>Event payload limit:</strong> 64 KB <strong>Best for:</strong> Immediate reactions, real-time personalization <strong>Example:</strong> Customer views product → email within 15 minutes</p><p><strong>Key guardrails:</strong></p><ul>
+<li>5-minute reentrance block prevents re-entry</li>
+<li>64 KB event payload limit</li>
+<li>1 MB journey instance limit</li>
+<li>Cannot use with business events in same journey</li>
+</ul><h5 id="ajo-d1-2-business-event-journey-2">2. Business Event Journey</h5><p><strong>Trigger:</strong> External system sends an event (not customer action) <strong>Timing:</strong> Can be scheduled or batch <strong>Reentrance:</strong> No automatic block <strong>Best for:</strong> Aggregated data, scheduled sends <strong>Example:</strong> Daily purchase summary email at midnight</p><p><strong>Key guardrails:</strong></p><ul>
+<li>Cannot coexist with unitary events</li>
+<li>Cannot coexist with audience qualification</li>
+</ul><h5 id="ajo-d1-3-read-audience-journey-2">3. Read Audience Journey</h5><p><strong>Trigger:</strong> Scheduled batch read of an audience <strong>Timing:</strong> Runs on schedule (daily, weekly) or triggered by business event <strong>Reentrance:</strong> Based on audience evaluation schedule <strong>Best for:</strong> Batch campaigns, audience-wide initiatives, scheduled sends <strong>Example:</strong> Every Monday 9 AM, read all VIP customers and send weekly digest</p><p><strong>Key guardrails:</strong></p><ul>
+<li>5 concurrent instances max (organization-wide)</li>
+<li>12-hour processing timeout</li>
+<li>20K profiles/sec sandbox throughput</li>
+<li>One audience per journey</li>
+<li>Cannot use with Campaign Standard activities</li>
+<li>Batch audiences evaluated daily only</li>
+<li>Streamed audiences always up-to-date</li>
+</ul><p><strong>Data refresh timing:</strong></p><ul>
+<li>At journey entry: Uses batch audience snapshot</li>
+<li>At Wait activity: Automatically refreshes profile attributes from Unified Profile Service</li>
+</ul><h5 id="ajo-d1-4-audience-qualification-journey-2">4. Audience Qualification Journey</h5><p><strong>Trigger:</strong> Customer enters or exits an audience in real-time <strong>Timing:</strong> Real-time as they qualify/disqualify <strong>Best for:</strong> Dynamic, real-time audience changes <strong>Example:</strong> Churn score changes → immediately trigger retention journey</p><p><strong>Key guardrails:</strong></p><ul>
+<li>Cannot use with Campaign Standard activities</li>
+<li>10-minute activation delay</li>
+<li>300 max per sandbox (across all journeys)</li>
+<li>Cannot use supplemental identifiers</li>
+<li>Cannot change audience/namespace in versions</li>
+</ul><h4 id="ajo-d1-journey-entry-decision-tree">Journey Entry Decision Tree</h4><pre><code>START HERE: What triggers the journey?
+
+├─ Customer action (click, purchase, form)?
+│  ├─ Need real-time response?
+│  │  └─ YES → UNITARY EVENT JOURNEY
+│  └─ Can wait for batch processing?
+│     └─ YES → Consider Read Audience instead
+│
+├─ External/scheduled event?
+│  └─ BUSINESS EVENT JOURNEY
+│
+├─ Scheduled audience batch process?
+│  └─ READ AUDIENCE JOURNEY
+│
+└─ Audience qualification change?
+   └─ AUDIENCE QUALIFICATION JOURNEY</code></pre><h4 id="ajo-d1-journey-evaluation-after-running">Journey Evaluation (After Running)</h4><p><strong>Key Metrics:</strong></p><ul>
+<li><strong>Entries:</strong> Total profiles who entered</li>
+<li><strong>Exits:</strong> Total who completed/exited</li>
+<li><strong>In Progress:</strong> Currently in journey</li>
+<li><strong>Errors:</strong> In error status (usually 1 MB limit)</li>
+<li><strong>Completion rate:</strong> (Exits / Entries) × 100</li>
+<li><strong>Drop-off by activity:</strong> Where profiles exit</li>
+<li><strong>Time to completion:</strong> Duration from entry to exit</li>
+<li><strong>Conversion rate:</strong> % who completed desired action</li>
+</ul><p><strong>Common Issues:</strong></p><ul>
+<li><strong>High error rate</strong> → 1 MB instance limit breach</li>
+<li><strong>Low completion</strong> → Restrictive conditions or long waits</li>
+<li><strong>Stuck mid-journey</strong> → Condition not matching or system issue</li>
+<li><strong>Selective failures</strong> → Data accumulation for certain profiles</li>
+<li><strong>No entries</strong> → 64 KB event limit (events dropped at entry)</li>
+</ul><h4 id="ajo-d1-core-difference">Core Difference</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Journey</th>
+<th>Campaign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trigger</td>
+<td>Event-driven OR scheduled audience read</td>
+<td>Scheduled send at specific time</td>
+</tr>
+<tr>
+<td>Timing</td>
+<td>Real-time or ongoing</td>
+<td>Batch/one-time or scheduled</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Days, weeks, months</td>
+<td>Usually single or coordinated sends</td>
+</tr>
+<tr>
+<td>Personalization</td>
+<td>Real-time per customer</td>
+<td>Pre-determined per segment</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Multi-step, branching, conditions</td>
+<td>Usually linear</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>React to customer action</td>
+<td>Send message to audience at time</td>
+</tr>
+</tbody>
+</table></div><h4 id="ajo-d1-when-to-use-each">When to Use Each</h4><p><strong>Use JOURNEY when:</strong></p><ul>
+<li>Customer behavior triggers message (event-driven)</li>
+<li>Need multi-step, sequential experience</li>
+<li>Want real-time personalization</li>
+<li>Need to wait and react to events</li>
+</ul><p><strong>Use CAMPAIGN when:</strong></p><ul>
+<li>Send at specific scheduled time</li>
+<li>Send same message to entire audience</li>
+<li>One-time or coordinated sends</li>
+<li>Don't need event-triggered logic</li>
+</ul><h4 id="ajo-d1-exam-scenarios">Exam Scenarios</h4><p><strong>Journey Example:</strong> "Customer books flight → email at booking → 24-hour wait → reminder email before flight" → Why: Event-triggered, multi-step, sequential</p><p><strong>Campaign Example:</strong> "Every Friday 2 PM, send newsletter to all subscribers" → Why: Scheduled time, audience-based, not event-triggered</p><h4 id="ajo-d1-both-support-same-tools">Both Support Same Tools</h4><ul>
+<li>Email, SMS, Push, In-app, Web messages</li>
+<li>Personalization fields</li>
+<li>Fragments (visual, expression)</li>
+<li>Offer Decisioning</li>
+<li>A/B testing</li>
+<li>Asset Essentials</li>
+</ul><p><strong>Difference is HOW they're triggered, not WHAT tools they use.</strong></p></div></section><section class="part" id="ajo-d2"><header class="part-head"><span class="kind">Domain 2 · 12%</span><h3>Offer decisioning</h3><ul class="intoc"><li><a href="#ajo-d2-core-concepts">Core Concepts</a></li><li><a href="#ajo-d2-the-4-stages-of-offer-decisioning">The 4 Stages of Offer Decisioning</a></li><li><a href="#ajo-d2-static-vs-dynamic-offers">Static vs. Dynamic Offers</a></li><li><a href="#ajo-d2-capping-ranking-logic">Capping &amp; Ranking Logic</a></li><li><a href="#ajo-d2-using-offer-decisioning-in-journeys">Using Offer Decisioning in Journeys</a></li><li><a href="#ajo-d2-when-to-use-offer-decisioning">When to Use Offer Decisioning</a></li><li><a href="#ajo-d2-test-profiles-simulation">Test Profiles &amp; Simulation</a></li><li><a href="#ajo-d2-core-concepts-detailed-notes">Core Concepts (detailed notes)</a></li><li><a href="#ajo-d2-static-vs-dynamic-offers-detailed-notes">Static vs. Dynamic Offers (detailed notes)</a></li><li><a href="#ajo-d2-when-to-use-offer-decisioning-detailed-notes">When to Use Offer Decisioning (detailed notes)</a></li><li><a href="#ajo-d2-configuration-levels">Configuration Levels</a></li><li><a href="#ajo-d2-using-in-journeys">Using in Journeys</a></li><li><a href="#ajo-d2-offer-hub-vs-edge-api-developer-expert">Offer Hub vs. Edge API (Developer Expert)</a></li></ul></header><div class="prose"><h4 id="ajo-d2-core-concepts">Core Concepts</h4><h5 id="ajo-d2-1-offer">1. Offer</h5><div class="note">
+                An individual piece of content/promotion<br/>
+<strong>Examples:</strong> "Get 20% off", "Free shipping", product recommendation<br/>
+<strong>Contains:</strong> Name, channels, content, constraints, eligibility rules
+            </div><h5 id="ajo-d2-2-collection">2. Collection</h5><div class="note">
+                Grouping of related offers<br/>
+<strong>Example:</strong> "Summer Promotions" collection with 5 summer offers<br/>
+<strong>Purpose:</strong> Organize offers logically, control scope
+            </div><h5 id="ajo-d2-3-decision">3. Decision</h5><div class="note">
+                Logic that selects which offer to show<br/>
+<strong>Specifies:</strong> Collection, eligibility rules, ranking/priority, capping, fallback offer
+            </div><h5 id="ajo-d2-4-placement">4. Placement</h5><div class="note">
+                Where and how offer is delivered<br/>
+<strong>Tied to channel:</strong> Email header, Web banner, SMS text, In-app popup
+            </div><h5 id="ajo-d2-5-decision-policy">5. Decision Policy</h5><div class="note">
+                Complete machine that brings it all together<br/>
+<strong>Formula:</strong> Decision Policy = Collection + Decision Logic + Placements + Offers
+            </div><h4 id="ajo-d2-the-4-stages-of-offer-decisioning">The 4 Stages of Offer Decisioning</h4><div class="example">
+<strong>Stage 1: Create Offers</strong><br/>
+                Define individual offers with content, channels, constraints<br/>
+                Set eligibility rules per offer<br/>
+                Status: Draft → Approved → Live
+            </div><div class="example">
+<strong>Stage 2: Organize Into Collections</strong><br/>
+                Group related offers<br/>
+                Creates logical structure
+            </div><div class="example">
+<strong>Stage 3: Build Decisions</strong><br/>
+                Create decision logic (ranking, capping, eligibility)<br/>
+                Select collection<br/>
+                Define fallback offers<br/>
+                Set up constraints
+            </div><div class="example">
+<strong>Stage 4: Deploy Decisions</strong><br/>
+                Use decision in journey via Content Decision activity<br/>
+                System evaluates rules in real-time for each customer<br/>
+                Best matching offer selected and delivered
+            </div><h4 id="ajo-d2-static-vs-dynamic-offers">Static vs. Dynamic Offers</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Aspect</th>
+<th>Static Offer</th>
+<th>Dynamic Offer</th>
+</tr>
+<tr>
+<td><strong>Definition</strong></td>
+<td>Fixed content for all customers</td>
+<td>Content changes based on customer data</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>"Get 20% off your next purchase"</td>
+<td>"Get {{discountPercentage}}% off, {{firstName}}"</td>
+</tr>
+<tr>
+<td><strong>Personalization</strong></td>
+<td>None (same for everyone)</td>
+<td>Uses profile attributes, dynamic fields</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Simple, easy to manage</td>
+<td>More complex, needs data setup</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Faster (no data lookup needed)</td>
+<td>Slightly slower (evaluates expressions)</td>
+</tr>
+</tbody></table></div><div class="key">
+<strong>Exam Pattern:</strong> If scenario says "personalize based on customer data" → dynamic offer
+            </div><h4 id="ajo-d2-capping-ranking-logic">Capping &amp; Ranking Logic</h4><h5 id="ajo-d2-how-capping-works">How Capping Works</h5><div class="note">
+                Capping is <strong>PER-OFFER</strong>, not decision-level
+            </div><div class="example">
+<strong>Example:</strong><br/>
+                Offer A: "Robo-Advisor Service" (priority 1, capped at 3/month)<br/>
+                Offer B: "Managed Portfolio" (priority 2, capped at 3/month)<br/>
+                Offer C: "Self-Directed Trading" (priority 3, capped at 3/month)<br/>
+<br/>
+                Customer has received Offer A 3 times this month (capped)<br/>
+                System evaluates: A is capped, skip it<br/>
+                System evaluates: B hasn't reached cap → <strong>deliver B</strong><br/>
+                (Does NOT deliver fallback)
+            </div><div class="warn">
+<strong>Key Rule:</strong> When top-priority offer is capped → system selects next ranked uncapped offer. Does NOT fail decision.
+            </div><h4 id="ajo-d2-using-offer-decisioning-in-journeys">Using Offer Decisioning in Journeys</h4><h5 id="ajo-d2-content-decision-activity">Content Decision Activity</h5><ul>
+<li>Select Decision Policy</li>
+<li>System evaluates rules for profile</li>
+<li>Best matching offer selected</li>
+<li>Offer rendered in message</li>
+</ul><h4 id="ajo-d2-when-to-use-offer-decisioning">When to Use Offer Decisioning</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Use When</th>
+<th>Don't Use When</th>
+</tr>
+<tr>
+<td>Need to choose WHICH offer based on eligibility</td>
+<td>Just personalizing email content</td>
+</tr>
+<tr>
+<td>Multiple offers available, system selects best</td>
+<td>A/B testing different subject lines</td>
+</tr>
+<tr>
+<td>Need frequency capping per offer</td>
+<td>Sending same generic promo to all</td>
+</tr>
+<tr>
+<td>Need ranking/priority logic</td>
+<td>Simple one-to-one message send</td>
+</tr>
+</tbody></table></div><h4 id="ajo-d2-test-profiles-simulation">Test Profiles &amp; Simulation</h4><h5 id="ajo-d2-test-profiles">Test Profiles</h5><ul>
+<li>Fake profiles used to simulate offer decisioning</li>
+<li>Verify correct offer selected for specific segment</li>
+<li>Test eligibility rules and capping</li>
+<li>Validate before deploying to production</li>
+</ul><h5 id="ajo-d2-offer-simulation">Offer Simulation</h5><ul>
+<li>Run decision policy against test profile</li>
+<li>See which offer would be selected</li>
+<li>Debug rules if wrong offer chosen</li>
+</ul> DOMAIN 3 <h4 id="ajo-d2-core-concepts-detailed-notes">Core Concepts (detailed notes)</h4><h5 id="ajo-d2-the-building-blocks">The Building Blocks</h5><p><strong>1. Offer</strong></p><ul>
+<li>Individual piece of content/promotion</li>
+<li>Example: "Get 20% off", "Free shipping", product recommendation</li>
+<li>Contains: Name, channels, content, constraints, eligibility rules</li>
+</ul><p><strong>2. Collection</strong></p><ul>
+<li>Grouping of related offers</li>
+<li>Example: "Summer Promotions" collection with 5 summer offers</li>
+<li>Organizes offers logically</li>
+</ul><p><strong>3. Decision</strong></p><ul>
+<li>Logic that selects which offer to show</li>
+<li>Specifies: Collection, eligibility rules, ranking/priority, capping, fallback offer</li>
+</ul><p><strong>4. Placement</strong></p><ul>
+<li>Where and how offer is delivered</li>
+<li>Tied to channel (email header, web banner, SMS text, in-app popup)</li>
+</ul><p><strong>5. Decision Policy</strong></p><ul>
+<li>Complete machine that brings it all together</li>
+<li>Decision Policy = Collection + Decision Logic + Placements + Offers</li>
+</ul><h4 id="ajo-d2-static-vs-dynamic-offers-detailed-notes">Static vs. Dynamic Offers (detailed notes)</h4><p><strong>Static Offer</strong></p><ul>
+<li>Fixed content for all customers</li>
+<li>Example: "Get 20% off your next purchase"</li>
+<li>No personalization</li>
+<li>Faster performance</li>
+</ul><p><strong>Dynamic Offer</strong></p><ul>
+<li>Content changes based on customer data</li>
+<li>Example: "Get {{discountPercentage}}% off, {{firstName}}"</li>
+<li>Uses profile attributes, dynamic fields</li>
+<li>More complex but personalized at scale</li>
+</ul><p><strong>Exam pattern:</strong> If scenario says "personalize based on customer data" → dynamic offer</p><h4 id="ajo-d2-when-to-use-offer-decisioning-detailed-notes">When to Use Offer Decisioning (detailed notes)</h4><p><strong>USE Offer Decisioning when:</strong></p><ul>
+<li>Need to choose WHICH offer to show based on eligibility rules</li>
+<li>Multiple offers available, system selects best one</li>
+<li>Need frequency capping per offer</li>
+<li>Need ranking/priority logic</li>
+</ul><p><strong>DON'T use Offer Decisioning when:</strong></p><ul>
+<li>Just personalizing email content (use personalization fields)</li>
+<li>A/B testing different subject lines (use Content Experiments)</li>
+<li>Sending same generic promo to all (simpler to send one email)</li>
+</ul><h4 id="ajo-d2-configuration-levels">Configuration Levels</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Where</th>
+<th>What You Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offer</td>
+<td>Offer Library</td>
+<td>Name, content, channels, constraints, eligibility</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Offer Library</td>
+<td>Grouping of offers</td>
+</tr>
+<tr>
+<td>Decision</td>
+<td>Decision Management</td>
+<td>Ranking, capping, eligibility, fallback</td>
+</tr>
+<tr>
+<td>Placement</td>
+<td>Offer Library</td>
+<td>Channel + location</td>
+</tr>
+<tr>
+<td>Decision Policy</td>
+<td>Decision Management</td>
+<td>Combines decision + placements</td>
+</tr>
+</tbody>
+</table></div><h4 id="ajo-d2-using-in-journeys">Using in Journeys</h4><p><strong>Content Decision Activity</strong></p><ul>
+<li>Select Decision Policy</li>
+<li>System evaluates rules for profile</li>
+<li>Best matching offer selected</li>
+<li>Offer rendered in message</li>
+</ul><p><strong>Capping Mechanics</strong></p><ul>
+<li>Capping is PER-OFFER, not decision-level</li>
+<li>When offer hits cap, system skips it</li>
+<li>Moves to next ranked offer that hasn't reached cap</li>
+<li>Fallback only triggers if ALL offers capped or none match eligibility</li>
+</ul><p><strong>Exam pattern:</strong> If top priority offer is capped → system selects next ranked offer (doesn't fail decision)</p><h4 id="ajo-d2-offer-hub-vs-edge-api-developer-expert">Offer Hub vs. Edge API (Developer Expert)</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Offer Hub</th>
+<th>Edge API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What</td>
+<td>Adobe UI for managing offers</td>
+<td>REST API for programmatic access</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Drag-and-drop in journeys</td>
+<td>Call from your application</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>Campaigns, journeys in AJO</td>
+<td>Mobile apps, websites, real-time decisions</td>
+</tr>
+<tr>
+<td>Response time</td>
+<td>Standard</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Who</td>
+<td>Marketers</td>
+<td>Developers</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part" id="ajo-d3"><header class="part-head"><span class="kind">Domain 3 · 20%</span><h3>Content authoring</h3><ul class="intoc"><li><a href="#ajo-d3-personalized-fields">Personalized Fields</a></li><li><a href="#ajo-d3-visual-fragments">Visual Fragments</a></li><li><a href="#ajo-d3-expression-fragments">Expression Fragments</a></li><li><a href="#ajo-d3-email-templates">Email Templates</a></li><li><a href="#ajo-d3-asset-essentials">Asset Essentials</a></li><li><a href="#ajo-d3-content-experiments-a-b-testing">Content Experiments (A/B Testing)</a></li><li><a href="#ajo-d3-fragment-usage-guide">Fragment Usage Guide</a></li><li><a href="#ajo-d3-the-building-blocks">The Building Blocks</a></li><li><a href="#ajo-d3-content-experiments-a-b-testing-detailed-notes">Content Experiments (A/B Testing) (detailed notes)</a></li><li><a href="#ajo-d3-fragment-management-rules">Fragment Management Rules</a></li><li><a href="#ajo-d3-common-exam-traps">Common Exam Traps</a></li></ul></header><div class="prose"><h4 id="ajo-d3-personalized-fields">Personalized Fields</h4><h5 id="ajo-d3-what-they-are">What They Are</h5><div class="note">
+                Placeholders replaced with actual customer data at send time
+            </div><h5 id="ajo-d3-syntax">Syntax</h5><div class="codeblock">{{profile.attributes.firstName}}
+{{event.productName}}
+{{profile.segmentMembership.goldTier}}
+{{context.journeyName}}</div><h5 id="ajo-d3-data-sources">Data Sources</h5><ul>
+<li><strong>Profile attributes:</strong> firstName, email, loyaltyTier, lastPurchaseDate</li>
+<li><strong>Event data:</strong> productViewed, cartValue, eventTime</li>
+<li><strong>Contextual data:</strong> journeyName, campaignId</li>
+</ul><h5 id="ajo-d3-key-rules">Key Rules</h5><ul>
+<li>✅ Fields must exist in profile or event schema</li>
+<li>❌ Cannot reference non-existent fields (causes failure)</li>
+<li>✅ Can use conditional logic: {{if profile.attributes.loyaltyTier == "VIP" then "exclusive offer" else "standard offer"}}</li>
+</ul><h4 id="ajo-d3-visual-fragments">Visual Fragments</h4><div class="note">
+<strong>What:</strong> Pre-designed HTML blocks (headers, footers, banners, images)<br/>
+<strong>Size limit:</strong> 700 KB max<br/>
+<strong>Channels:</strong> Email ONLY<br/>
+<strong>Status required:</strong> Must be "Live" to use
+            </div><h5 id="ajo-d3-use-cases">Use Cases</h5><ul>
+<li>Include branded footer in every email</li>
+<li>Reuse logo + social links + unsubscribe + copyright</li>
+<li>Static design blocks that don't change per customer</li>
+</ul><h5 id="ajo-d3-benefits">Benefits</h5><ul>
+<li>✅ Consistency across all emails</li>
+<li>✅ Update once, all messages update</li>
+<li>✅ Version control for shared content</li>
+</ul><h4 id="ajo-d3-expression-fragments">Expression Fragments</h4><div class="note">
+<strong>What:</strong> Reusable personalization logic/expressions<br/>
+<strong>Size limit:</strong> 700 KB max<br/>
+<strong>Channels:</strong> Email, SMS, Push (NOT in-app)<br/>
+<strong>Status required:</strong> Must be "Live" to use
+            </div><h5 id="ajo-d3-example">Example</h5><div class="codeblock">{{if profile.attributes.loyaltyTier == "GOLD" 
+   then "You get 30% off" 
+   else "You get 10% off"}}</div><h5 id="ajo-d3-use-cases-2">Use Cases</h5><ul>
+<li>Apply same loyalty tier logic to all messages</li>
+<li>IF/THEN logic for different messages</li>
+<li>Reusable business rules</li>
+</ul><h5 id="ajo-d3-critical-rule">Critical Rule</h5><div class="warn">
+<strong>Expression fragments CANNOT be used in in-app messages</strong><br/>
+                Use personalization fields for in-app instead
+            </div><h4 id="ajo-d3-email-templates">Email Templates</h4><div class="note">
+<strong>What:</strong> Pre-designed email structure<br/>
+<strong>Use:</strong> Reuse layout and branding across journeys<br/>
+<strong>Can include:</strong> Personalization fields, fragments, dynamic content
+            </div><h5 id="ajo-d3-template-vs-fragment-difference">Template vs. Fragment Difference</h5><div class="table-wrap"><table>
+<tbody><tr>
+<th>Template</th>
+<th>Fragment</th>
+</tr>
+<tr>
+<td>Entire email structure</td>
+<td>Reusable content block</td>
+</tr>
+<tr>
+<td>Layout + content</td>
+<td>Personalization logic OR visual block</td>
+</tr>
+<tr>
+<td>Multiple uses across journeys</td>
+<td>Inserted into templates</td>
+</tr>
+<tr>
+<td>Can be modified per use</td>
+<td>Must stay consistent (live status)</td>
+</tr>
+</tbody></table></div><h4 id="ajo-d3-asset-essentials">Asset Essentials</h4><div class="note">
+<strong>What:</strong> System for storing and managing images/files<br/>
+<strong>Benefit:</strong> Images update automatically when source changes
+            </div><h5 id="ajo-d3-features">Features</h5><ul>
+<li>Upload images to central repository</li>
+<li>Reference by asset ID in emails</li>
+<li>Version control (update source, all references update)</li>
+<li>Organize in folders</li>
+</ul><h4 id="ajo-d3-content-experiments-a-b-testing">Content Experiments (A/B Testing)</h4><h5 id="ajo-d3-what-you-can-test">What You Can Test</h5><ul>
+<li>✅ Subject line variations</li>
+<li>✅ Email body copy variations</li>
+<li>✅ Call-to-action button text</li>
+<li>✅ Images/visual elements</li>
+<li>✅ Different offers</li>
+</ul><h5 id="ajo-d3-what-you-cannot-test">What You CANNOT Test</h5><ul>
+<li>❌ Different channels (email vs. SMS) in same experiment</li>
+<li>❌ Targeting/audience (experiment applies to all qualified profiles)</li>
+</ul><h5 id="ajo-d3-experiment-setup">Experiment Setup</h5><div class="example">
+<strong>Example:</strong><br/>
+                Control (A): "Save 30%"<br/>
+                Variant B: "Limited time: 30% off"<br/>
+                Variant C: "Your exclusive offer inside"<br/>
+<br/>
+                Traffic split: 33% each<br/>
+                Win criteria: Highest click rate<br/>
+                Winner auto-sent to remaining profiles
+            </div><h5 id="ajo-d3-interpreting-results">Interpreting Results</h5><div class="key">
+<strong>Important:</strong> When results are close (1-2% difference), test a different variable next. The variable is likely already optimized.
+            </div><h4 id="ajo-d3-fragment-usage-guide">Fragment Usage Guide</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Need</th>
+<th>Use This</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>Add customer name</td>
+<td>Personalization field</td>
+<td>{{profile.attributes.firstName}}</td>
+</tr>
+<tr>
+<td>Same footer in all emails</td>
+<td>Visual fragment (HTML)</td>
+<td>Logo + social links</td>
+</tr>
+<tr>
+<td>Same loyalty logic</td>
+<td>Expression fragment</td>
+<td>{{if loyaltyTier == VIP...}}</td>
+</tr>
+<tr>
+<td>Test subject lines</td>
+<td>Content experiment</td>
+<td>A/B test variations</td>
+</tr>
+<tr>
+<td>Reuse email layout</td>
+<td>Email template</td>
+<td>Pre-built structure</td>
+</tr>
+<tr>
+<td>Store and version images</td>
+<td>Asset Essentials</td>
+<td>Central image repository</td>
+</tr>
+</tbody></table></div> DOMAIN 4 <h4 id="ajo-d3-the-building-blocks">The Building Blocks</h4><h5 id="ajo-d3-1-personalized-fields">1. Personalized Fields</h5><p><strong>What:</strong> Placeholder replaced with actual customer data at send time</p><p><strong>Syntax:</strong></p><pre><code>{{profile.attributes.firstName}}
+{{event.productName}}
+{{profile.segmentMembership.goldTier}}
+{{context.journeyName}}</code></pre><p><strong>Where data comes from:</strong></p><ul>
+<li>Profile attributes: firstName, email, loyaltyTier, lastPurchaseDate</li>
+<li>Event data: productViewed, cartValue, eventTime</li>
+<li>Contextual data: journeyName, campaignId</li>
+</ul><p><strong>Key rules:</strong></p><ul>
+<li>Fields must exist in profile or event schema</li>
+<li>Cannot reference non-existent fields (causes failure)</li>
+<li>Can use conditional logic: <code>{{if profile.attributes.loyaltyTier == "VIP" then "exclusive offer" else "standard offer"}}</code></li>
+</ul><p><strong>Exam trigger:</strong> "Add personalization to email" → use {{field}} syntax</p><h5 id="ajo-d3-2-visual-fragments">2. Visual Fragments</h5><p><strong>What:</strong> Pre-designed HTML blocks (headers, footers, banners, images)</p><p><strong>Size limit:</strong> 700 KB max</p><p><strong>Use case:</strong> "Include branded footer in every email"</p><p><strong>Example:</strong> Logo + social links + unsubscribe + copyright</p><p><strong>Channels:</strong> Email ONLY</p><p><strong>Status required:</strong> Must be "Live" to use in journeys</p><p><strong>Benefits:</strong></p><ul>
+<li>Consistency across all emails</li>
+<li>Update once, all messages update</li>
+<li>Version control for shared content</li>
+</ul><p><strong>Key rules:</strong></p><ul>
+<li>Email-only (not for SMS, in-app, push)</li>
+<li>700 KB size limit</li>
+<li>Must be Live status to use</li>
+</ul><h5 id="ajo-d3-3-expression-fragments">3. Expression Fragments</h5><p><strong>What:</strong> Reusable personalization logic/expressions</p><p><strong>Size limit:</strong> 700 KB max</p><p><strong>Use case:</strong> "Apply same loyalty tier logic to all messages"</p><p><strong>Example:</strong></p><pre><code>{{if profile.attributes.loyaltyTier == "GOLD" 
+   then "You get 30% off" 
+   else "You get 10% off"}}</code></pre><p><strong>Channels:</strong> Email, SMS, Push (NOT in-app)</p><p><strong>Status required:</strong> Must be "Live" to use</p><p><strong>Benefits:</strong></p><ul>
+<li>Consistency in business logic</li>
+<li>Easier maintenance (update logic once)</li>
+<li>Reusable across messages</li>
+</ul><p><strong>Key rules:</strong></p><ul>
+<li>Cannot be used in in-app messages</li>
+<li>700 KB size limit</li>
+<li>Must be Live status</li>
+</ul><h5 id="ajo-d3-4-email-templates">4. Email Templates</h5><p><strong>What:</strong> Pre-designed email structure</p><p><strong>Use:</strong> Reuse layout and branding across journeys</p><p><strong>Can include:</strong> Personalization fields, fragments, dynamic content</p><p><strong>Cannot include:</strong> Cannot save complex conditional logic as template (use expression fragment instead)</p><p><strong>Template vs. Fragment:</strong></p><ul>
+<li>Template: Entire email structure</li>
+<li>Fragment: Reusable content block inserted into template</li>
+</ul><h5 id="ajo-d3-5-asset-essentials">5. Asset Essentials</h5><p><strong>What:</strong> System for storing and managing images/files</p><p><strong>Features:</strong></p><ul>
+<li>Upload images to central repository</li>
+<li>Reference by asset ID in emails</li>
+<li>Version control (update source, all references update)</li>
+<li>Organize in folders</li>
+</ul><p><strong>Benefit:</strong> Ensures consistency; image updates propagate automatically</p><h4 id="ajo-d3-content-experiments-a-b-testing-detailed-notes">Content Experiments (A/B Testing) (detailed notes)</h4><h5 id="ajo-d3-what-you-can-test-2">What You Can Test</h5><ul>
+<li>Subject line variations</li>
+<li>Email body copy variations</li>
+<li>Call-to-action button text</li>
+<li>Images/visual elements</li>
+<li>Different offers</li>
+</ul><h5 id="ajo-d3-what-you-cannot-test-2">What You CANNOT Test</h5><ul>
+<li>Different channels (email vs. SMS) in same experiment</li>
+<li>Targeting/audience (applies to all qualified profiles)</li>
+</ul><h5 id="ajo-d3-experiment-structure">Experiment Structure</h5><pre><code>Email Activity with Experiment
+├── Control (A): Original subject "Save 30%"
+├── Variant B: Alternative "Limited time: 30% off"
+├── Variant C: Alternative "Your exclusive offer inside"
+├── Traffic allocation: 33% each
+└── Win criteria: Highest click rate
+    └── Winner auto-sent to remaining profiles
+    └── Results recorded</code></pre><h5 id="ajo-d3-setting-up-experiments-critical">Setting Up Experiments (Critical)</h5><p><strong>Traffic Allocation</strong></p><ul>
+<li>How many profiles get each variant?</li>
+<li>Example: 33% control, 33% variant B, 33% variant C</li>
+<li>Must total 100%</li>
+</ul><p><strong>Test Duration</strong></p><ul>
+<li>How long before declaring winner?</li>
+<li>Depends on traffic volume (no fixed minimum)</li>
+<li>Recommendation: Long enough to be statistically significant</li>
+</ul><p><strong>Win Criteria</strong></p><ul>
+<li>What metric defines "winner"?</li>
+<li>Awareness campaign → track opens</li>
+<li>Conversion campaign → track clicks or conversions</li>
+</ul><p><strong>Holdout &amp; Winner Assignment</strong></p><ul>
+<li>Holdout: Profiles not in experiment (control sample)</li>
+<li>Winner: Remaining traffic auto-gets winning variant</li>
+</ul><h5 id="ajo-d3-interpreting-results-exam-critical">Interpreting Results (Exam-Critical)</h5><p><strong>Example Results:</strong></p><pre><code>Control: 35% open rate, 7% CTR
+Variant B: 38% open rate ← Winner, 7.5% CTR
+Variant C: 32% open rate, 6% CTR</code></pre><p><strong>What it tells you:</strong></p><ul>
+<li>Variant B won (highest metrics)</li>
+<li>Urgency language resonates better</li>
+</ul><p><strong>What to test next:</strong></p><ul>
+<li>If differences are small (1-2%) → test different variable (send time, not subject)</li>
+<li>If differences are significant → declare winner, roll out</li>
+<li>Don't keep testing same variable if already optimized</li>
+</ul><p><strong>Statistical significance matters:</strong> Small differences with large sample might be noise</p><h4 id="ajo-d3-fragment-management-rules">Fragment Management Rules</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Use This</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Add customer name to email"</td>
+<td>Personalized field {{profile.attributes.firstName}}</td>
+</tr>
+<tr>
+<td>"Same footer in all emails"</td>
+<td>Visual fragment (HTML design)</td>
+</tr>
+<tr>
+<td>"Same loyalty logic in messages"</td>
+<td>Expression fragment ({{if...then}})</td>
+</tr>
+<tr>
+<td>"Test which subject line works"</td>
+<td>Content experiment (A/B test)</td>
+</tr>
+<tr>
+<td>"Reuse email layout"</td>
+<td>Email template</td>
+</tr>
+<tr>
+<td>"Store and version images"</td>
+<td>Asset Essentials</td>
+</tr>
+</tbody>
+</table></div><h4 id="ajo-d3-common-exam-traps">Common Exam Traps</h4><p><strong>Trap 1: Confusing fragments with templates</strong></p><ul>
+<li>Fragments are blocks; templates are complete structures</li>
+<li>Fragments go INSIDE templates</li>
+</ul><p><strong>Trap 2: Thinking experiments test targeting</strong></p><ul>
+<li>Experiments test MESSAGE VARIANTS, not audience segments</li>
+<li>Use journey conditions for audience targeting</li>
+</ul><p><strong>Trap 3: Using visual fragments for dynamic content</strong></p><ul>
+<li>Visual fragments are static HTML</li>
+<li>Use expression fragments for conditional logic</li>
+</ul><p><strong>Trap 4: Using expression fragments in in-app</strong></p><ul>
+<li>Expression fragments NOT supported in in-app</li>
+<li>Use personalization fields instead</li>
+</ul><p><strong>Trap 5: Ignoring statistical significance</strong></p><ul>
+<li>Small differences might be random variation</li>
+<li>Look at sample size and magnitude of difference</li>
+</ul></div></section><section class="part" id="ajo-d4"><header class="part-head"><span class="kind">Domain 4 · 20%</span><h3>Foundations of Adobe Experience Platform</h3><ul class="intoc"><li><a href="#ajo-d4-schemas-profile-vs-event">Schemas: Profile vs. Event</a></li><li><a href="#ajo-d4-datasets">Datasets</a></li><li><a href="#ajo-d4-identities">Identities</a></li><li><a href="#ajo-d4-audiences">Audiences</a></li><li><a href="#ajo-d4-data-governance">Data Governance</a></li><li><a href="#ajo-d4-the-data-flow-in-aep">The Data Flow in AEP</a></li><li><a href="#ajo-d4-schemas-the-data-blueprint">Schemas (The Data Blueprint)</a></li><li><a href="#ajo-d4-datasets-the-data-containers">Datasets (The Data Containers)</a></li><li><a href="#ajo-d4-identities-how-we-know-who-customers-are">Identities (How We Know Who Customers Are)</a></li><li><a href="#ajo-d4-audience-types">Audience Types</a></li><li><a href="#ajo-d4-critical-exam-connections">Critical Exam Connections</a></li></ul></header><div class="prose"><h4 id="ajo-d4-schemas-profile-vs-event">Schemas: Profile vs. Event</h4><h5 id="ajo-d4-memory-trick">Memory Trick</h5><div class="key">
+<strong>PROFILE = "WHO is the customer?" (Static attributes)</strong><br/>
+<strong>EVENT = "WHAT did they do?" + "WHEN?" (Time-series actions)</strong>
+</div><h5 id="ajo-d4-profile-schema-xdm-individual-profile">Profile Schema (XDM Individual Profile)</h5><div class="note">
+<strong>Purpose:</strong> Stores customer attributes (WHO they are)<br/>
+<strong>Data type:</strong> Personal info — name, email, age, preferences, loyalty tier<br/>
+<strong>When enabled for profile:</strong> Profile data stored in Unified Profile Service (real-time access)<br/>
+<strong>Example fields:</strong> firstName, lastName, email, phone, loyaltyTier, lastPurchaseDate
+            </div><h5 id="ajo-d4-event-schema-xdm-experienceevent">Event Schema (XDM ExperienceEvent)</h5><div class="note">
+<strong>Purpose:</strong> Stores what customers did (behavioral events)<br/>
+<strong>Data type:</strong> Time-series events — purchase, click, view, search<br/>
+<strong>When enabled for profile:</strong> Event data stored and linked to customer profiles<br/>
+<strong>Example fields:</strong> eventType, timestamp, productViewed, purchaseAmount, pageURL
+            </div><h4 id="ajo-d4-datasets">Datasets</h4><h5 id="ajo-d4-datasets-enabled-for-profile">Datasets Enabled for Profile</h5><ul>
+<li>✅ Data ingested into Unified Profile Service (real-time)</li>
+<li>✅ Available for real-time personalization in journeys</li>
+<li>✅ Can be referenced in journey conditions</li>
+<li>⚠️ Counts against engageable profile quota (costs money)</li>
+</ul><h5 id="ajo-d4-datasets-not-enabled-for-profile">Datasets NOT Enabled for Profile</h5><ul>
+<li>❌ Data stays in Data Lake only (not real-time)</li>
+<li>❌ Cannot be accessed instantly in journeys</li>
+<li>❌ Can be queried/analyzed but not for real-time personalization</li>
+<li>✅ Does NOT count against engageable profile quota (no cost)</li>
+</ul><h5 id="ajo-d4-exam-pattern">Exam Pattern</h5><div class="key">
+                "Marketer wants to use purchase history in journey condition. Dataset enabled for profile?"<br/>
+<strong>Answer:</strong> YES, must be enabled for profile
+            </div><h4 id="ajo-d4-identities">Identities</h4><h5 id="ajo-d4-authenticated-identities-known-customers">Authenticated Identities (Known Customers)</h5><ul>
+<li><strong>Email:</strong> john@example.com</li>
+<li><strong>CRM ID:</strong> CUST-12345</li>
+<li><strong>Mobile AAID/IDFA:</strong> Unique mobile device ID</li>
+<li><strong>Custom ID:</strong> Your proprietary customer ID</li>
+</ul><h5 id="ajo-d4-pseudonymous-identities-anonymous-unknown-visitors">Pseudonymous Identities (Anonymous/Unknown Visitors)</h5><ul>
+<li><strong>ECID (Experience Cloud ID):</strong> Adobe's auto-generated ID for unknown browsers</li>
+<li><strong>Used for:</strong> Tracking anonymous website visitors</li>
+<li><strong>Gets merged:</strong> When visitor logs in, ECID + email link together</li>
+</ul><h5 id="ajo-d4-identity-merging">Identity Merging</h5><div class="example">
+<strong>Scenario:</strong><br/>
+                Day 1, 2 PM: Anonymous visitor (ECID-12345) views products, adds to cart<br/>
+                Day 1, 3 PM: Same person logs in (email: john@example.com, CRM ID: CUST-54321)<br/>
+                System links: ECID-12345 + email + CRM ID → same profile<br/>
+                ALL historical data merges automatically<br/>
+<br/>
+                Journey condition "if customer viewed products + added to cart in last 24 hours"<br/>
+                System finds ALL merged data → triggers journey ✓
+            </div><h5 id="ajo-d4-engageable-profile-impact">Engageable Profile Impact</h5><ul>
+<li>✅ Authenticated identities (email, CRM ID) = count as engageable</li>
+<li>✅ Pseudonymous identities (ECID) = count as engageable too</li>
+<li>💡 Solution: Set TTL (Time-To-Live) on pseudonymous profiles to auto-delete</li>
+<li>💡 Recommendation: 14-day TTL for pseudonymous profiles</li>
+</ul><h4 id="ajo-d4-audiences">Audiences</h4><h5 id="ajo-d4-segment-builder-rule-based-audiences">Segment Builder (Rule-Based Audiences)</h5><ul>
+<li><strong>How:</strong> Drag-and-drop conditions</li>
+<li><strong>Timing:</strong> Batch (daily) OR streamed (real-time)</li>
+<li><strong>Example:</strong> "Customers who spent &gt; $500 in last 30 days"</li>
+</ul><h5 id="ajo-d4-audience-composition-orchestrated-audiences">Audience Composition (Orchestrated Audiences)</h5><ul>
+<li><strong>How:</strong> Combine multiple audiences with logic</li>
+<li><strong>Timing:</strong> Batch evaluation</li>
+<li><strong>Example:</strong> "(VIP customers) + (recently inactive) - (already contacted)"</li>
+<li><strong>Limit:</strong> Max 50 published compositions per sandbox</li>
+</ul><h5 id="ajo-d4-streamed-vs-batch-audiences">Streamed vs. Batch Audiences</h5><div class="table-wrap"><table>
+<tbody><tr>
+<th>Aspect</th>
+<th>Streamed</th>
+<th>Batch</th>
+</tr>
+<tr>
+<td><strong>Real-time update?</strong></td>
+<td>YES (immediately)</td>
+<td>NO (daily)</td>
+</tr>
+<tr>
+<td><strong>When evaluated?</strong></td>
+<td>Real-time as rules change</td>
+<td>Once per day</td>
+</tr>
+<tr>
+<td><strong>Use in journey</strong></td>
+<td>Audience Qualification (real-time trigger)</td>
+<td>Read Audience (scheduled batch)</td>
+</tr>
+<tr>
+<td><strong>When to use</strong></td>
+<td>Real-time journey logic</td>
+<td>Scheduled bulk campaigns</td>
+</tr>
+</tbody></table></div><h4 id="ajo-d4-data-governance">Data Governance</h4><h5 id="ajo-d4-common-data-labels">Common Data Labels</h5><div class="table-wrap"><table>
+<tbody><tr>
+<th>Label</th>
+<th>Meaning</th>
+<th>Impact</th>
+</tr>
+<tr>
+<td><strong>C1</strong></td>
+<td>Contractual data (can use, track it)</td>
+<td>Requires tracking/logging</td>
+</tr>
+<tr>
+<td><strong>C2</strong></td>
+<td>Data can be exported out of AEP</td>
+<td>Allows external use</td>
+</tr>
+<tr>
+<td><strong>C3</strong></td>
+<td>Cannot combine with other data</td>
+<td>Must be isolated</td>
+</tr>
+<tr>
+<td><strong>S1</strong></td>
+<td>Sensitive personal data (health, financial)</td>
+<td>Restricted access</td>
+</tr>
+<tr>
+<td><strong>S2</strong></td>
+<td>Sensitive requiring consent</td>
+<td>Cannot use without explicit consent</td>
+</tr>
+</tbody></table></div><h5 id="ajo-d4-exam-pattern-2">Exam Pattern</h5><div class="key">
+                "Healthcare data with diagnoses. What label?"<br/>
+<strong>Answer:</strong> S1 (sensitive personal data)
+            </div><h4 id="ajo-d4-the-data-flow-in-aep">The Data Flow in AEP</h4><div class="codeblock">1. Data ingestion
+   ↓
+2. Schema defines structure
+   ├── Profile Schema (WHO)
+   └── Event Schema (WHAT + WHEN)
+   ↓
+3. Dataset container based on schema
+   ├── Enable for profile? (should be real-time?)
+   ↓
+4. Identities link records to customer
+   ├── Authenticated (email, CRM ID)
+   └── Pseudonymous (ECID)
+   ↓
+5. Unified Profile Service (if profile-enabled)
+   ↓
+6. Audiences segment customers
+   ├── Streamed (real-time)
+   └── Batch (daily)
+   ↓
+7. Journeys use audience + profile data
+   └── Real-time personalization</div> GUARDRAILS <h4 id="ajo-d4-schemas-the-data-blueprint">Schemas (The Data Blueprint)</h4><h5 id="ajo-d4-profile-schema-xdm-individual-profile-2">Profile Schema (XDM Individual Profile)</h5><p><strong>Purpose:</strong> Stores customer attributes (WHO they are)</p><p><strong>Data type:</strong> Personal info — name, email, age, preferences, loyalty tier</p><p><strong>When enabled for profile:</strong> Profile data stored in Unified Profile Service (real-time access)</p><p><strong>Real-time access:</strong> Can be accessed instantly in journeys</p><p><strong>Example fields:</strong> firstName, lastName, email, phone, loyaltyTier, lastPurchaseDate</p><p><strong>Key rule:</strong> Attributes that describe the customer</p><h5 id="ajo-d4-event-schema-xdm-experienceevent-2">Event Schema (XDM ExperienceEvent)</h5><p><strong>Purpose:</strong> Stores what customers did (behavioral events)</p><p><strong>Data type:</strong> Time-series events — purchase, click, view, search</p><p><strong>When enabled for profile:</strong> Event data stored and linked to customer profiles</p><p><strong>Real-time access:</strong> Events can trigger journeys in real-time</p><p><strong>Example fields:</strong> eventType, timestamp, productViewed, purchaseAmount, pageURL</p><p><strong>Key rule:</strong> Actions with timestamps, what happened WHEN</p><h5 id="ajo-d4-schema-distinction-memory-trick">Schema Distinction Memory Trick</h5><pre><code>PROFILE = "WHO is the customer?" (Static attributes)
+EVENT = "WHAT did they do?" + "WHEN?" (Time-series actions)</code></pre><h4 id="ajo-d4-datasets-the-data-containers">Datasets (The Data Containers)</h4><h5 id="ajo-d4-datasets-enabled-for-profile-2">Datasets Enabled for Profile</h5><ul>
+<li>Data ingested into <strong>Unified Profile Service</strong> (real-time profile)</li>
+<li>Available for real-time personalization in journeys</li>
+<li>Can be referenced in journey conditions and personalization fields</li>
+<li>Counts against <strong>engageable profile quota</strong> (costs money)</li>
+<li>Example: Customer behavior, purchase history, preference updates</li>
+</ul><h5 id="ajo-d4-datasets-not-enabled-for-profile-2">Datasets NOT Enabled for Profile</h5><ul>
+<li>Data stays in <strong>Data Lake</strong> only (not real-time profile)</li>
+<li>Cannot be accessed instantly in journeys</li>
+<li>Can be queried/analyzed but not for real-time personalization</li>
+<li>Does NOT count against engageable profile quota (no cost)</li>
+<li>Example: Historical data for analysis, logs, archive</li>
+</ul><p><strong>Exam pattern:</strong> "Marketer wants to use purchase history in journey condition. Dataset enabled for profile?" → YES</p><h4 id="ajo-d4-identities-how-we-know-who-customers-are">Identities (How We Know Who Customers Are)</h4><h5 id="ajo-d4-authenticated-identities-known-customers-2">Authenticated Identities (Known Customers)</h5><ul>
+<li>Email: <a href="mailto:john@example.com" rel="noopener" target="_blank">john@example.com</a></li>
+<li>CRM ID: CUST-12345</li>
+<li>Mobile AAID/IDFA: Unique mobile device ID</li>
+<li>Custom ID: Your proprietary customer ID</li>
+</ul><h5 id="ajo-d4-pseudonymous-identities-anonymous-unknown-visitors-2">Pseudonymous Identities (Anonymous/Unknown Visitors)</h5><ul>
+<li><strong>ECID (Experience Cloud ID):</strong> Adobe's auto-generated ID for unknown browsers</li>
+<li>Used for: Tracking anonymous website visitors before login</li>
+<li><strong>Gets merged with authenticated ID:</strong> When visitor logs in, ECID + email link together</li>
+</ul><h5 id="ajo-d4-identity-merging-2">Identity Merging</h5><pre><code>Before login: Visitor is ECID (pseudonymous)
+  └─ All behavior linked to ECID-12345
+
+Login event: Visitor enters email john@example.com
+  └─ ECID-12345 + Email + CRM ID all link to same profile
+  └─ ALL historical data (clicks, views, carts) auto-merge
+
+Journey condition runs: "If customer viewed products + added to cart"
+  └─ System finds historical behavior from ECID time
+  └─ Triggers journey with merged data</code></pre><p><strong>Engageable profile impact:</strong></p><ul>
+<li>Authenticated identities (email, CRM ID) = count as engageable profiles</li>
+<li>Pseudonymous identities (ECID) = count as engageable profiles too</li>
+<li>Solution: Set TTL (Time-To-Live) on pseudonymous profiles to auto-delete inactive ones</li>
+<li>Recommendation: 14-day TTL for pseudonymous profiles</li>
+</ul><h4 id="ajo-d4-audience-types">Audience Types</h4><h5 id="ajo-d4-segment-builder-rule-based-audiences-2">Segment Builder (Rule-Based Audiences)</h5><ul>
+<li><strong>How:</strong> Drag-and-drop conditions (age &gt; 25 AND location = CA AND purchase &gt; $100)</li>
+<li><strong>Timing:</strong> Batch evaluation (typically daily) OR streamed (real-time)</li>
+<li><strong>Use case:</strong> Standard segmentation</li>
+<li><strong>Example:</strong> "Customers who spent &gt; $500 in last 30 days"</li>
+</ul><h5 id="ajo-d4-audience-composition-orchestrated-audiences-2">Audience Composition (Orchestrated Audiences)</h5><ul>
+<li><strong>How:</strong> Combine multiple audiences with logic (Audience A + Audience B - Audience C)</li>
+<li><strong>Timing:</strong> Batch evaluation</li>
+<li><strong>Use case:</strong> Complex audience combinations</li>
+<li><strong>Example:</strong> "(VIP customers) + (recently inactive) - (already contacted)"</li>
+<li><strong>Limit:</strong> Max 50 published compositions per sandbox</li>
+</ul><h5 id="ajo-d4-streamed-vs-batch-audiences-2">Streamed vs. Batch Audiences</h5><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Streamed</th>
+<th>Batch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Real-time update?</td>
+<td>YES (immediately)</td>
+<td>NO (daily)</td>
+</tr>
+<tr>
+<td>When evaluated?</td>
+<td>Real-time as rules change</td>
+<td>Once per day</td>
+</tr>
+<tr>
+<td>Use in journey?</td>
+<td>Audience Qualification (real-time trigger)</td>
+<td>Read Audience (scheduled batch)</td>
+</tr>
+<tr>
+<td>Recommendation</td>
+<td>Use for real-time logic</td>
+<td>Use for scheduled campaigns</td>
+</tr>
+</tbody>
+</table></div><p><strong>Exam pattern:</strong> "Real-time journey trigger when audience changes" → streamed audience + Audience Qualification activity</p><h4 id="ajo-d4-critical-exam-connections">Critical Exam Connections</h4><p><strong>Connection 1: Schemas → Datasets → Journeys</strong></p><ul>
+<li>Attribute must be in profile schema</li>
+<li>Schema used in profile-enabled dataset</li>
+<li>Data ingested into dataset</li>
+<li>Then accessible in journey</li>
+</ul><p><strong>Connection 2: Identities → Profiles → Personalization</strong></p><ul>
+<li>Anonymous visitor (ECID)</li>
+<li>Becomes customer (email, CRM ID)</li>
+<li>Identity merges automatically</li>
+<li>All historical data accessible</li>
+</ul><p><strong>Connection 3: Audiences → Journeys → Data Labels</strong></p><ul>
+<li>Health data must be labeled S1</li>
+<li>Access restricted</li>
+<li>Audience created with care</li>
+<li>Governance compliance required</li>
+</ul></div></section><section class="part" id="ajo-gr"><header class="part-head"><span class="kind">Critical</span><h3>Guardrails and system limits</h3><ul class="intoc"><li><a href="#ajo-gr-diagnosis-framework">Diagnosis Framework</a></li><li><a href="#ajo-gr-quick-reference-table">Quick Reference Table</a></li><li><a href="#ajo-gr-tier-1-most-tested-guardrails">Tier 1: Most Tested Guardrails</a></li><li><a href="#ajo-gr-quick-guardrail-reference-table">Quick Guardrail Reference Table</a></li></ul></header><div class="prose"><div class="fix"><p><strong>Verified against Adobe's AJO guardrails page (Nov 2026).</strong> Two figures in the original notes were out of date and have been corrected throughout this section:</p>
+<ul><li><strong>Fragments:</strong> any fragment can be up to <strong>700 KB</strong> (earlier notes: 100 KB visual / 200 KB expression). Up to 60 unique fragments per content variant and 120 across all variants of a message.</li>
+<li><strong>Audience compositions:</strong> up to <strong>50</strong> published per sandbox (earlier notes: 10). Federated compositions are not counted.</li>
+<li>Confirmed unchanged: 50 activities per journey; 200 live journeys (production) / 100 (development); 64 KB event payload; 1 MB journey instance; 5-minute re-entrance block for unitary journeys; 5 concurrent Read Audience instances; 12-hour Read Audience timeout; 2 MB email content; custom actions capped at 300,000 calls/min (150,000 per 30 s for slow endpoints); 1 event in max 25 journeys; 1 schema in max 100 events; 10-minute audience-qualification activation delay.</li></ul>
+<p class="src">Source: <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/essentials/guardrails" rel="noopener" target="_blank">Journey Optimizer guardrails and limitations</a></p></div><h4 id="ajo-gr-diagnosis-framework">Diagnosis Framework</h4><div class="key">
+<strong>Is the journey publishing or running?</strong><br/>
+                Publishing fails? → 50-activity, 200-journey, 2MB email, guardrail validation<br/>
+                Running fails? → 64KB event, 1MB instance, 5-min reentrance, timeout
+            </div><div class="key">
+<strong>Are some profiles failing or ALL profiles?</strong><br/>
+                ALL failing → Entry guardrail (64KB event, 50 activities)<br/>
+                SOME failing → Data accumulation (1MB instance) or selective trigger (5-min block)
+            </div><div class="key">
+<strong>What's the data pattern?</strong><br/>
+                Large accounts failing → 1MB instance<br/>
+                No profiles entering → 64KB event<br/>
+                Some profiles stuck → 5-min reentrance block<br/>
+                Job disappeared → 12-hour timeout
+            </div><h4 id="ajo-gr-quick-reference-table">Quick Reference Table</h4><div class="table-wrap"><table>
+<tbody><tr>
+<th>Guardrail</th>
+<th>Limit</th>
+<th>Applied When</th>
+<th>Solution</th>
+</tr>
+<tr>
+<td>50 activities</td>
+<td>50 max</td>
+<td>Publish</td>
+<td>Split journeys</td>
+</tr>
+<tr>
+<td>5-min reentrance</td>
+<td>5 min block</td>
+<td>During journey</td>
+<td>Expected behavior</td>
+</tr>
+<tr>
+<td>64 KB event</td>
+<td>64 KB max</td>
+<td>Event entry</td>
+<td>Reduce event size</td>
+</tr>
+<tr>
+<td>1 MB instance</td>
+<td>1 MB max</td>
+<td>Execution</td>
+<td>Reduce data lookups</td>
+</tr>
+<tr>
+<td>200 journeys</td>
+<td>200 max</td>
+<td>Publish</td>
+<td>Pause old ones</td>
+</tr>
+<tr>
+<td>5 Read Audience</td>
+<td>5 concurrent</td>
+<td>Runtime</td>
+<td>Stagger 5-10 min apart</td>
+</tr>
+<tr>
+<td>12-hour timeout</td>
+<td>12 hours</td>
+<td>Processing</td>
+<td>Ensure completes in time</td>
+</tr>
+<tr>
+<td>2 MB email</td>
+<td>2 MB processed</td>
+<td>Publish</td>
+<td>Keep authored &lt; 1 MB</td>
+</tr>
+</tbody></table></div> DECISION TREES <h4 id="ajo-gr-tier-1-most-tested-guardrails">Tier 1: Most Tested Guardrails</h4><h5 id="ajo-gr-1-the-50-activity-limit">1. The 50-Activity Limit</h5><ul>
+<li><strong>What:</strong> Maximum 50 activities per journey</li>
+<li><strong>When applied:</strong> At publish time</li>
+<li><strong>What fails:</strong> Publishing blocked with error</li>
+<li><strong>Solution:</strong> Split into sub-journeys using jump activities</li>
+<li><strong>Exam trigger:</strong> "Journey won't publish" or "Too many activities"</li>
+<li><strong>Key rule:</strong> Cannot increase limit; must split</li>
+</ul><h5 id="ajo-gr-2-the-5-minute-reentrance-block-unitary-events">2. The 5-Minute Reentrance Block (Unitary Events)</h5><ul>
+<li><strong>What:</strong> Profile cannot re-enter same unitary event journey for 5 minutes</li>
+<li><strong>Example:</strong> Event fires at 12:01 PM → journey starts. Same event at 12:03 PM → blocked until 12:06 PM</li>
+<li><strong>Why:</strong> Prevents duplicate messages</li>
+<li><strong>Exam trigger:</strong> "Why isn't customer getting second email?" or "Profile triggered twice but got one message"</li>
+<li><strong>Key rule:</strong> This is automatic; customer cannot bypass it</li>
+</ul><h5 id="ajo-gr-3-the-64-kb-event-payload-limit">3. The 64 KB Event Payload Limit</h5><ul>
+<li><strong>What:</strong> Event entering journey cannot exceed 64 KB (uncompressed JSON)</li>
+<li><strong>When applied:</strong> When event enters journey (at start activity)</li>
+<li><strong>What happens:</strong> Event silently dropped → profile never enters → no log entry</li>
+<li><strong>Symptom:</strong> Zero profiles entering despite events being sent</li>
+<li><strong>Exam trigger:</strong> "Why are NO profiles entering the journey?"</li>
+<li><strong>Key rule:</strong> 64 KB applies ONLY at entry; different from 1 MB instance limit</li>
+</ul><h5 id="ajo-gr-4-the-1-mb-journey-instance-limit">4. The 1 MB Journey Instance Limit</h5><ul>
+<li><strong>What:</strong> All data accumulated during journey execution ≤ 1 MB</li>
+<li><strong>When applied:</strong> During journey execution (mid-journey)</li>
+<li><strong>What happens:</strong> Profile marked ERROR status → exits journey</li>
+<li><strong>Symptom:</strong> SOME profiles error (usually those with more data), SOME complete</li>
+<li><strong>Data that counts:</strong> Event payload + profile attributes + API responses + email content</li>
+<li><strong>Recommendation:</strong> Keep initial event &lt; 800 KB for buffer</li>
+<li><strong>Exam trigger:</strong> "500 of 10,000 profiles errored. All errors are high-value accounts" → 1 MB limit</li>
+<li><strong>Key rule:</strong> Selective profile failures point to this limit</li>
+</ul><h5 id="ajo-gr-5-the-200-active-journeys-limit-production-100-development">5. The 200 Active Journeys Limit (Production) / 100 (Development)</h5><ul>
+<li><strong>What:</strong> Maximum 200 live/paused/closed journeys in production</li>
+<li><strong>When applied:</strong> At publish time</li>
+<li><strong>Solution:</strong> Pause or delete old journeys</li>
+<li><strong>Exam trigger:</strong> "Cannot publish journey" or "Active journey limit reached"</li>
+</ul><h5 id="ajo-gr-6-the-5-concurrent-read-audience-instances">6. The 5 Concurrent Read Audience Instances</h5><ul>
+<li><strong>What:</strong> Only 5 Read Audience journeys running simultaneously across entire organization</li>
+<li><strong>When applied:</strong> At publish time</li>
+<li><strong>Solution:</strong> Stagger start times 5-10 minutes apart</li>
+<li><strong>Exam trigger:</strong> "Why does Team 6's Read Audience journey fail to publish when Teams 1-5 succeeded?"</li>
+<li><strong>Key rule:</strong> Organization-wide limit, not per-sandbox</li>
+</ul><h5 id="ajo-gr-7-the-12-hour-read-audience-processing-timeout">7. The 12-Hour Read Audience Processing Timeout</h5><ul>
+<li><strong>What:</strong> Read Audience jobs must complete within 12 hours</li>
+<li><strong>What happens:</strong> Jobs not processed in 12 hours auto-deleted → journey doesn't run</li>
+<li><strong>Solution:</strong> Ensure audience size processes within 12 hours; split if needed</li>
+<li><strong>Exam trigger:</strong> "Read Audience job didn't execute" or "Journey ran but no profiles"</li>
+</ul><h5 id="ajo-gr-8-the-2-mb-email-message-content-size">8. The 2 MB Email Message Content Size</h5><ul>
+<li><strong>What:</strong> Final email content (after backend processing) ≤ 2 MB</li>
+<li><strong>Recommendation:</strong> Keep authored content &lt; 1 MB to allow 300-400 KB processing buffer</li>
+<li><strong>When applied:</strong> At publish time</li>
+<li><strong>What fails:</strong> Journey publication blocked if exceeded</li>
+<li><strong>Exam trigger:</strong> "Journey won't publish due to content size"</li>
+</ul><h5 id="ajo-gr-9-custom-action-capping-300k-calls-min-or-150k-calls-30-sec">9. Custom Action Capping: 300K calls/min or 150K calls/30 sec</h5><ul>
+<li><strong>Fast endpoints</strong> (&lt; 0.75 sec response): 300,000 calls per minute</li>
+<li><strong>Slow endpoints</strong> (&gt; 0.75 sec response): 150,000 calls per 30 seconds</li>
+<li><strong>Sliding window</strong> applied per sandbox, per endpoint</li>
+<li><strong>Exam trigger:</strong> "Company has 500K profiles wanting to call endpoint" → must throttle</li>
+</ul><h5 id="ajo-gr-10-fragment-size-limits">10. Fragment Size Limits</h5><ul>
+<li><strong>Any fragment (visual or expression):</strong> 700 KB max</li>
+<li><strong>Count:</strong> up to 60 unique fragments per content variant (warning at 45); 120 across all variants of a message</li>
+<li><strong>Exam trigger:</strong> "Fragment won't save, exceeds size limit"</li>
+</ul><h5 id="ajo-gr-11-business-events-cannot-coexist-with-unitary-events">11. Business Events Cannot Coexist with Unitary Events</h5><ul>
+<li><strong>Rule:</strong> Same journey cannot have both business event AND unitary event triggering</li>
+<li><strong>BUT:</strong> Different journeys CAN have different event types</li>
+<li><strong>Exam trigger:</strong> "Can we use business event in Journey A and unitary in Journey B?" → YES</li>
+</ul><h5 id="ajo-gr-12-audience-qualification-10-minute-activation-delay">12. Audience Qualification: 10-Minute Activation Delay</h5><ul>
+<li><strong>What:</strong> Up to 10 minutes for audience qualification to start listening</li>
+<li><strong>Exam trigger:</strong> "Audience activated but journey didn't start immediately"</li>
+</ul><h5 id="ajo-gr-13-audience-compositions-50-max-per-sandbox">13. Audience Compositions: 50 Max Per Sandbox</h5><ul>
+<li><strong>What:</strong> Up to 50 published audience compositions per sandbox (Federated compositions are not counted)</li>
+<li><strong>Solution:</strong> Delete old ones to create new ones</li>
+</ul><h5 id="ajo-gr-14-event-reference-limit-1-event-25-journeys-max">14. Event Reference Limit: 1 Event → 25 Journeys Max</h5><ul>
+<li><strong>What:</strong> Single event can be used by maximum 25 journeys simultaneously</li>
+<li><strong>When exceeded:</strong> Cannot publish additional journeys using that event</li>
+</ul><h5 id="ajo-gr-15-schema-reference-limit-1-schema-100-events-max">15. Schema Reference Limit: 1 Schema → 100 Events Max</h5><ul>
+<li><strong>What:</strong> Single XDM schema can be referenced by maximum 100 events</li>
+<li><strong>When exceeded:</strong> Cannot publish journeys with events using that schema</li>
+</ul><h4 id="ajo-gr-quick-guardrail-reference-table">Quick Guardrail Reference Table</h4><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Guardrail</th>
+<th>Limit</th>
+<th>Applied</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50 activities</td>
+<td>50 max</td>
+<td>Publish</td>
+<td>Split journeys</td>
+</tr>
+<tr>
+<td>5-min reentrance</td>
+<td>5 min</td>
+<td>During journey</td>
+<td>Expected behavior</td>
+</tr>
+<tr>
+<td>64 KB event</td>
+<td>64 KB</td>
+<td>Event entry</td>
+<td>Reduce event size</td>
+</tr>
+<tr>
+<td>1 MB instance</td>
+<td>1 MB</td>
+<td>Execution</td>
+<td>Reduce data lookups</td>
+</tr>
+<tr>
+<td>200 journeys</td>
+<td>200 max</td>
+<td>Publish</td>
+<td>Pause old ones</td>
+</tr>
+<tr>
+<td>5 Read Audience</td>
+<td>5 concurrent</td>
+<td>Runtime</td>
+<td>Stagger 5-10 min apart</td>
+</tr>
+<tr>
+<td>12-hour timeout</td>
+<td>12 hours</td>
+<td>Processing</td>
+<td>Ensure completes in time</td>
+</tr>
+<tr>
+<td>2 MB email</td>
+<td>2 MB processed</td>
+<td>Publish</td>
+<td>Keep authored &lt; 1 MB</td>
+</tr>
+<tr>
+<td>Custom action cap</td>
+<td>300K/min</td>
+<td>Runtime</td>
+<td>Throttle if needed</td>
+</tr>
+<tr>
+<td>Visual fragment</td>
+<td>700 KB</td>
+<td>Creation</td>
+<td>Optimize design</td>
+</tr>
+<tr>
+<td>Expression fragment</td>
+<td>700 KB</td>
+<td>Creation</td>
+<td>Simplify logic</td>
+</tr>
+<tr>
+<td>Audience compositions</td>
+<td>50 max</td>
+<td>Creation</td>
+<td>Delete old ones</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part" id="ajo-dt"><header class="part-head"><span class="kind">Exam toolkit</span><h3>Decision trees and final exam tips</h3><ul class="intoc"><li><a href="#ajo-dt-which-journey-type">Which Journey Type?</a></li><li><a href="#ajo-dt-which-guardrail-is-this">Which Guardrail Is This?</a></li><li><a href="#ajo-dt-personalization-fragments-or-fields">Personalization, Fragments, or Fields?</a></li><li><a href="#ajo-dt-should-this-be-a-journey-or-campaign">"Should This Be a Journey or Campaign?"</a></li><li><a href="#ajo-dt-profile-or-event-schema">"Profile Or Event Schema?"</a></li><li><a href="#ajo-dt-static-or-dynamic-offer">"Static or Dynamic Offer?"</a></li><li><a href="#ajo-dt-final-exam-tips">Final Exam TIPS</a></li></ul></header><div class="prose"><h4 id="ajo-dt-which-journey-type">Which Journey Type?</h4><div class="codeblock">START: What triggers the journey?
+
+├─ Real-time customer action needed?
+│  └─ UNITARY EVENT JOURNEY
+│     (Watch: 64KB event, 5-min reentrance, 1MB instance)
+│
+├─ Scheduled audience batch?
+│  └─ READ AUDIENCE JOURNEY
+│     (Watch: 5 concurrent instances, 12-hour timeout)
+│
+├─ External/scheduled trigger?
+│  └─ BUSINESS EVENT JOURNEY
+│     (Watch: Can't mix with unitary events)
+│
+└─ Audience member change in real-time?
+   └─ AUDIENCE QUALIFICATION JOURNEY
+      (Watch: 10-min delay, 300 max per sandbox)</div><h4 id="ajo-dt-which-guardrail-is-this">Which Guardrail Is This?</h4><div class="codeblock">START: What's the symptom?
+
+├─ ZERO profiles entering?
+│  └─ 64 KB EVENT PAYLOAD LIMIT
+│     (Events dropped at entry)
+│
+├─ SOME profiles in ERROR mid-journey?
+│  └─ 1 MB JOURNEY INSTANCE LIMIT
+│     (All profiles error? Could be 64KB)
+│
+├─ Journey won't publish?
+│  ├─ Error mentioning activities?
+│  │  └─ 50-ACTIVITY LIMIT
+│  ├─ Error mentioning size?
+│  │  └─ 2 MB EMAIL LIMIT
+│  └─ Cannot publish more journeys?
+│     └─ 200-JOURNEY LIMIT
+│
+├─ Read Audience won't publish?
+│  └─ 5 CONCURRENT INSTANCES LIMIT
+│
+├─ Same profile in journey twice in 5 min?
+│  └─ 5-MINUTE REENTRANCE BLOCK
+│
+└─ Custom action failing?
+   └─ CAPPING LIMIT (300K calls/min)</div><h4 id="ajo-dt-personalization-fragments-or-fields">Personalization, Fragments, or Fields?</h4><div class="codeblock">START: What do you need?
+
+├─ Customer's name or simple attribute?
+│  └─ PERSONALIZATION FIELD
+│     {{profile.attributes.firstName}}
+│
+├─ Same HTML design block in all emails?
+│  ├─ Email-only?
+│  │  └─ VISUAL FRAGMENT (700 KB limit)
+│  └─ For SMS/Push too?
+│     └─ EXPRESSION FRAGMENT (700 KB limit)
+│
+├─ IF/THEN logic for different messages?
+│  ├─ Email, SMS, or Push?
+│  │  └─ EXPRESSION FRAGMENT (NOT in-app)
+│  └─ In-app message?
+│     └─ PERSONALIZATION FIELD
+│        (Expression fragments not supported)
+│
+├─ Same logic in multiple messages?
+│  └─ EXPRESSION FRAGMENT
+│     (Reusable, update once)
+│
+└─ Static footer in all emails?
+   └─ VISUAL FRAGMENT
+      (Email-only, pre-designed HTML)</div><h4 id="ajo-dt-should-this-be-a-journey-or-campaign">"Should This Be a Journey or Campaign?"</h4><pre><code>START: How is it triggered?
+
+├─ Customer action (click, purchase, form)?
+│  ├─ Need real-time response?
+│  │  └─ YES → JOURNEY (Unitary Event)
+│  └─ Scheduled batch OK?
+│     └─ YES → JOURNEY (Read Audience)
+│
+├─ Scheduled calendar time (Tuesday 2 PM)?
+│  └─ CAMPAIGN
+│
+├─ External system sends event?
+│  └─ JOURNEY (Business Event)
+│
+└─ Audience qualification change?
+   └─ JOURNEY (Audience Qualification)</code></pre><h4 id="ajo-dt-profile-or-event-schema">"Profile Or Event Schema?"</h4><pre><code>START: What data is this?
+
+├─ Customer attribute (name, age, balance)?
+│  ├─ Stored without timestamp?
+│  │  └─ PROFILE SCHEMA
+│  │     (Enable for profile to use in journeys)
+│
+├─ Customer action (purchase, click, view)?
+│  ├─ Has timestamp?
+│  │  └─ EVENT SCHEMA
+│  │     (Enable for profile to trigger journeys)
+│
+└─ When in doubt:
+   └─ "Is this ABOUT the customer?" → Profile
+      "Is this something they DID?" → Event</code></pre><h4 id="ajo-dt-static-or-dynamic-offer">"Static or Dynamic Offer?"</h4><pre><code>START: What's in the offer?
+
+├─ Fixed text same for everyone?
+│  └─ STATIC OFFER
+│     "Get 20% off"
+│
+└─ Contains {{variables}} from customer data?
+   └─ DYNAMIC OFFER
+      "Get {{discountPercentage}}% off, {{firstName}}"</code></pre><h4 id="ajo-dt-final-exam-tips">Final Exam TIPS</h4><h5 id="ajo-dt-before-you-enter-the-exam">Before You Enter the Exam</h5><ol type="1">
+<li><strong>Review guardrails one more time</strong> — Know the symptoms and solutions</li>
+<li><strong>Remember the decision trees</strong> — Use them when you see scenarios</li>
+<li><strong>Read EVERY word</strong> — Look for exact keywords (real-time, scheduled, batch, event, audience)</li>
+</ol><h5 id="ajo-dt-during-the-exam">During the Exam</h5><ol type="1">
+<li><strong>Identify the guardrail first</strong> — Ask "which Adobe limit might apply?"</li>
+<li><strong>Look for selective patterns</strong> — Some profiles fail = data size; all profiles fail = entry guardrail</li>
+<li><strong>Match trigger to journey type</strong> — Real-time action = unitary; scheduled batch = Read Audience</li>
+<li><strong>Fragment vs. field distinction</strong> — Fields = data lookup; fragments = reusable blocks</li>
+<li><strong>Don't overthink</strong> — If answer seems obvious, it probably is</li>
+</ol><h5 id="ajo-dt-keywords-to-watch-for">Keywords to Watch For</h5><p><strong>Journey Type Indicators:</strong></p><ul>
+<li>"Real-time" → Unitary event</li>
+<li>"Immediately" → Unitary event</li>
+<li>"Scheduled" → Read Audience or Business Event</li>
+<li>"Daily" → Read Audience (batch)</li>
+<li>"Every Monday 9 AM" → Read Audience</li>
+</ul><p><strong>Guardrail Indicators:</strong></p><ul>
+<li>"Profiles not entering" → 64 KB event limit</li>
+<li>"ERROR status" → 1 MB instance limit</li>
+<li>"Won't publish" → 50-activity, 200-journey, or 2 MB limit</li>
+<li>"Some profiles fail" → 1 MB limit or selective trigger</li>
+</ul><p><strong>Personalization Indicators:</strong></p><ul>
+<li>"Name in email" → Personalization field</li>
+<li>"Same footer everywhere" → Visual fragment (email) or Expression fragment (all channels)</li>
+<li>"IF/THEN logic" → Expression fragment</li>
+<li>"HTML design block" → Visual fragment</li>
+</ul><h5 id="ajo-dt-your-strengths-based-on-practice">Your Strengths (Based on Practice)</h5><p>✅ Guardrails (5/5) — You understand patterns and symptoms ✅ Journey Building (4/5) — You understand entry points and types ✅ AEP Foundations (4/5) — You understand schemas and identities ✅ Journey vs. Campaign — Clear distinction</p><h5 id="ajo-dt-areas-to-be-careful-about">Areas to Be Careful About</h5><p>⚠️ Content Authoring (1/5) — Don't confuse fragments with fields ⚠️ Offer Decisioning (2/5) — Remember capping is per-offer, not decision-level ⚠️ Schemas (Q1) — Profile stores attributes; Event stores actions with timestamps</p><h5 id="ajo-dt-time-management">Time Management</h5><ul>
+<li>Exam likely 50-80 questions</li>
+<li>2-3 hours total time</li>
+<li>Average 2-3 minutes per question</li>
+<li>Read carefully; don't rush</li>
+</ul><h5 id="ajo-dt-if-you-get-stuck">If You Get Stuck</h5><ol type="1">
+<li>Eliminate obviously wrong answers first</li>
+<li>Look for keywords that match decision trees</li>
+<li>Ask "which guardrail?" if it's about system limits</li>
+<li>Remember: Adobe tests PATTERNS, not memorization</li>
+</ol></div></section></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "certificationId": "ad0-e607",
+  "code": "AD0-E607",
+  "name": "Adobe Journey Optimizer",
+  "specifications": {
+    "totalQuestions": 50,
+    "timeLimit": 100,
+    "passingScore": 70,
+    "validPeriod": "2 years",
+    "delivery": "Online proctored or test center",
+    "examDate": "Monday, August 24, 2026"
+  },
+  "domains": [
+    {
+      "id": "domain-1",
+      "name": "Campaign and Journey Optimization",
+      "weight": 48,
+      "estimatedQuestions": 24,
+      "keyTopics": [
+        "Journey types and entry points",
+        "Unitary Event journeys",
+        "Business Event journeys",
+        "Read Audience journeys",
+        "Audience Qualification journeys",
+        "Journey activities and configuration",
+        "Journey validation and testing",
+        "Journey evaluation metrics and monitoring"
+      ]
+    },
+    {
+      "id": "domain-2",
+      "name": "Offer Decisioning",
+      "weight": 12,
+      "estimatedQuestions": 6,
+      "keyTopics": [
+        "Offer creation and management",
+        "Collections and organization",
+        "Decisions and decision policies",
+        "Placements and channels",
+        "Static vs. Dynamic offers",
+        "Capping and frequency rules",
+        "Ranking strategies",
+        "Integration with journeys"
+      ]
+    },
+    {
+      "id": "domain-3",
+      "name": "Content Authoring",
+      "weight": 20,
+      "estimatedQuestions": 10,
+      "keyTopics": [
+        "Email message creation and design",
+        "SMS composition",
+        "Push notification configuration",
+        "In-app messaging",
+        "Dynamic content and personalization",
+        "Personalization tokens",
+        "Visual and Expression fragments",
+        "Asset and template management"
+      ]
+    },
+    {
+      "id": "domain-4",
+      "name": "Foundations of Adobe Experience Platform",
+      "weight": 20,
+      "estimatedQuestions": 10,
+      "keyTopics": [
+        "Real-time Customer Profile",
+        "Schemas and data models",
+        "Datasets and data ingestion",
+        "Audience segmentation",
+        "Identity and namespaces",
+        "Experience Events",
+        "Data governance and privacy",
+        "API basics"
+      ]
+    }
+  ]
+}

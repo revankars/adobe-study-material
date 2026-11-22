@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Adobe Target Architect Master (AD0-E409) Study Guide</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">body { font-family: Arial, Helvetica, sans-serif; line-height: 1.55; color: #222; max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+h1 { color: #1F3864; border-bottom: 2px solid #1F3864; padding-bottom: .3rem; margin-top: 2.5rem; }
+h2 { color: #1F3864; margin-top: 2rem; }
+h3 { color: #2E5597; }
+h4 { color: #2E5597; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+th, td { border: 1px solid #bfbfbf; padding: .45rem .6rem; text-align: left; vertical-align: top; }
+th { background: #D9E2F3; }
+code { background: #f2f2f2; padding: .1rem .3rem; border-radius: 3px; font-family: Consolas, "Courier New", monospace; font-size: .9em; }
+pre { background: #f2f2f2; padding: .8rem; border-radius: 4px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+header#title-block-header { text-align: center; margin-bottom: 2rem; }
+.subtitle, .date { color: #555; }
+nav#TOC { background: #f7f9fc; border: 1px solid #d9e2f3; padding: .5rem 1rem; border-radius: 4px; }
+blockquote { border-left: 4px solid #2E5597; margin: 1rem 0; padding: .2rem 1rem; color: #444; background: #f7f9fc; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Adobe Target Architect Master (AD0-E409): Complete Study Guide</h1>
+<p class="subtitle">Compiled study guide with practice questions, answer key, and verification notes</p>
+<p class="date">As of 19 November 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#about-this-document" id="toc-about-this-document">About this document</a>
+<ul>
+<li><a href="#verification-status" id="toc-verification-status">Verification status</a></li>
+<li><a href="#corrections-and-conflicts-found-while-compiling" id="toc-corrections-and-conflicts-found-while-compiling">Corrections and conflicts found while compiling</a></li>
+</ul></li>
+<li><a href="#contents" id="toc-contents">Contents</a></li>
+<li><a href="#part-1-exam-overview-and-study-strategy" id="toc-part-1-exam-overview-and-study-strategy">Part 1: Exam Overview and Study Strategy</a>
+<ul>
+<li><a href="#exam-facts" id="toc-exam-facts">Exam facts</a></li>
+<li><a href="#weighting-and-priority" id="toc-weighting-and-priority">Weighting and priority</a></li>
+</ul></li>
+<li><a href="#part-2-condensed-study-guide-core-concepts" id="toc-part-2-condensed-study-guide-core-concepts">Part 2: Condensed Study Guide (Core Concepts)</a>
+<ul>
+<li><a href="#how-to-use-this-guide" id="toc-how-to-use-this-guide">1. How to use this guide</a></li>
+<li><a href="#core-concepts-and-page-load-order" id="toc-core-concepts-and-page-load-order">2. Core concepts and page-load order</a></li>
+<li><a href="#methods-to-get-data-into-target" id="toc-methods-to-get-data-into-target">3. Methods to get data into Target</a></li>
+<li><a href="#at.js-functions" id="toc-at.js-functions">at.js functions</a></li>
+<li><a href="#target-request-mbox-parameters-and-multi-tenant-at_property" id="toc-target-request-mbox-parameters-and-multi-tenant-at_property">4. Target request (mbox) parameters and multi-tenant at_property</a></li>
+<li><a href="#multi-tenant" id="toc-multi-tenant">Multi-tenant</a></li>
+<li><a href="#at_property" id="toc-at_property">at_property</a></li>
+<li><a href="#parameter-rules-that-affect-answers" id="toc-parameter-rules-that-affect-answers">Parameter rules that affect answers</a></li>
+<li><a href="#profile-scripts-profile-attributes-audiences-and-debugging" id="toc-profile-scripts-profile-attributes-audiences-and-debugging">5. Profile scripts, profile attributes, audiences and debugging</a></li>
+<li><a href="#audience-sources" id="toc-audience-sources">Audience sources</a></li>
+<li><a href="#activities-delivery-by-url-adbox-and-redirector" id="toc-activities-delivery-by-url-adbox-and-redirector">6. Activities, delivery by URL, AdBox and redirector</a></li>
+<li><a href="#activity-types" id="toc-activity-types">Activity types</a></li>
+<li><a href="#offers-experiences-and-vec" id="toc-offers-experiences-and-vec">7. Offers, experiences and VEC</a></li>
+<li><a href="#implementation-types" id="toc-implementation-types">Implementation types</a></li>
+<li><a href="#recommendations-and-entity-attributes" id="toc-recommendations-and-entity-attributes">8. Recommendations and entity attributes</a></li>
+<li><a href="#where-product-data-comes-from" id="toc-where-product-data-comes-from">Where product data comes from</a></li>
+<li><a href="#category-recommendations" id="toc-category-recommendations">Category recommendations</a></li>
+<li><a href="#analytics-reporting-and-access" id="toc-analytics-reporting-and-access">9. Analytics, reporting and access</a></li>
+<li><a href="#mobile-server-side-and-the-q1-to-q49-answer-key" id="toc-mobile-server-side-and-the-q1-to-q49-answer-key">10. Mobile, server-side, and the Q1 to Q49 answer key</a></li>
+<li><a href="#mobile-and-server-side" id="toc-mobile-and-server-side">Mobile and server-side</a></li>
+<li><a href="#answer-key" id="toc-answer-key">Answer key</a></li>
+<li><a href="#day-study-plan" id="toc-day-study-plan">11. 3-day study plan</a></li>
+<li><a href="#chapter-1-adobe-target-fundamentals-13" id="toc-chapter-1-adobe-target-fundamentals-13">Chapter 1: Adobe Target Fundamentals (13%)</a></li>
+<li><a href="#chapter-2-integrating-with-adobe-target-18" id="toc-chapter-2-integrating-with-adobe-target-18">Chapter 2: Integrating with Adobe Target (18%)</a></li>
+<li><a href="#chapter-3-administration-and-governance-6" id="toc-chapter-3-administration-and-governance-6">Chapter 3: Administration and Governance (6%)</a></li>
+<li><a href="#chapter-4-supported-touchpoints-6" id="toc-chapter-4-supported-touchpoints-6">Chapter 4: Supported Touchpoints (6%)</a></li>
+<li><a href="#chapter-5-adobe-target-recommendations-11" id="toc-chapter-5-adobe-target-recommendations-11">Chapter 5: Adobe Target Recommendations (11%)</a></li>
+<li><a href="#chapter-6-architecture-design-and-implementation-18" id="toc-chapter-6-architecture-design-and-implementation-18">Chapter 6: Architecture, Design, and Implementation (18%)</a></li>
+<li><a href="#chapter-7-troubleshooting-28" id="toc-chapter-7-troubleshooting-28">Chapter 7: Troubleshooting (28%)</a></li>
+</ul></li>
+<li><a href="#part-4-quick-reference-independent-practice-exam-and-checklist" id="toc-part-4-quick-reference-independent-practice-exam-and-checklist">Part 4: Quick Reference, Independent Practice Exam, and Checklist</a>
+<ul>
+<li><a href="#chapter-8-quick-reference-notes" id="toc-chapter-8-quick-reference-notes">Chapter 8: Quick-Reference Notes</a></li>
+<li><a href="#chapter-9-independent-practice-exam" id="toc-chapter-9-independent-practice-exam">Chapter 9: Independent Practice Exam</a></li>
+<li><a href="#chapter-10-final-exam-readiness-checklist" id="toc-chapter-10-final-exam-readiness-checklist">Chapter 10: Final Exam-Readiness Checklist</a></li>
+<li><a href="#chapter-11-references-and-verification-list" id="toc-chapter-11-references-and-verification-list">Chapter 11: References and Verification List</a></li>
+</ul></li>
+<li><a href="#part-5-consolidated-practice-questions-source-practice-pdf" id="toc-part-5-consolidated-practice-questions-source-practice-pdf">Part 5: Consolidated Practice Questions (Source: Practice PDF)</a>
+<ul>
+<li><a href="#question-35" id="toc-question-35">Question 35</a></li>
+<li><a href="#question-36" id="toc-question-36">Question 36</a></li>
+<li><a href="#question-37" id="toc-question-37">Question 37</a></li>
+<li><a href="#question-38" id="toc-question-38">Question 38</a></li>
+<li><a href="#question-39" id="toc-question-39">Question 39</a></li>
+<li><a href="#question-40" id="toc-question-40">Question 40</a></li>
+<li><a href="#question-41" id="toc-question-41">Question 41</a></li>
+<li><a href="#question-42" id="toc-question-42">Question 42</a></li>
+<li><a href="#question-43" id="toc-question-43">Question 43</a></li>
+<li><a href="#question-44" id="toc-question-44">Question 44</a></li>
+<li><a href="#question-45" id="toc-question-45">Question 45</a></li>
+<li><a href="#question-46" id="toc-question-46">Question 46</a></li>
+<li><a href="#question-47" id="toc-question-47">Question 47</a></li>
+<li><a href="#question-48" id="toc-question-48">Question 48</a></li>
+<li><a href="#question-49" id="toc-question-49">Question 49</a></li>
+<li><a href="#question-1" id="toc-question-1">Question 1</a></li>
+<li><a href="#question-2" id="toc-question-2">Question 2</a></li>
+<li><a href="#question-3" id="toc-question-3">Question 3</a></li>
+<li><a href="#question-4" id="toc-question-4">Question 4</a></li>
+<li><a href="#question-5" id="toc-question-5">Question 5</a></li>
+<li><a href="#question-6" id="toc-question-6">Question 6</a></li>
+<li><a href="#question-7" id="toc-question-7">Question 7</a></li>
+<li><a href="#question-8" id="toc-question-8">Question 8</a></li>
+<li><a href="#question-9" id="toc-question-9">Question 9</a></li>
+<li><a href="#question-10" id="toc-question-10">Question 10</a></li>
+<li><a href="#question-11" id="toc-question-11">Question 11</a></li>
+<li><a href="#question-12" id="toc-question-12">Question 12</a></li>
+<li><a href="#question-13" id="toc-question-13">Question 13</a></li>
+<li><a href="#question-14" id="toc-question-14">Question 14</a></li>
+<li><a href="#question-15" id="toc-question-15">Question 15</a></li>
+<li><a href="#question-16" id="toc-question-16">Question 16</a></li>
+<li><a href="#question-17" id="toc-question-17">Question 17</a></li>
+<li><a href="#question-18" id="toc-question-18">Question 18</a></li>
+<li><a href="#question-19" id="toc-question-19">Question 19</a></li>
+<li><a href="#question-20" id="toc-question-20">Question 20</a></li>
+<li><a href="#question-21" id="toc-question-21">Question 21</a></li>
+<li><a href="#question-22" id="toc-question-22">Question 22</a></li>
+<li><a href="#question-23" id="toc-question-23">Question 23</a></li>
+<li><a href="#question-24" id="toc-question-24">Question 24</a></li>
+<li><a href="#question-25" id="toc-question-25">Question 25</a></li>
+<li><a href="#question-26" id="toc-question-26">Question 26</a></li>
+<li><a href="#question-27" id="toc-question-27">Question 27</a></li>
+<li><a href="#question-28" id="toc-question-28">Question 28</a></li>
+<li><a href="#question-29" id="toc-question-29">Question 29</a></li>
+<li><a href="#question-30" id="toc-question-30">Question 30</a></li>
+<li><a href="#question-31" id="toc-question-31">Question 31</a></li>
+<li><a href="#question-32" id="toc-question-32">Question 32</a></li>
+<li><a href="#question-33" id="toc-question-33">Question 33</a></li>
+<li><a href="#question-34" id="toc-question-34">Question 34</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="about-this-document">About this document</h1>
+<p>This single document combines four sources:</p>
+<ol type="1">
+<li><strong>Exam overview and domain guide</strong> (Parts 1 and 3): exam format, weightings, and detailed technical chapters.</li>
+<li><strong>Condensed study guide</strong> (uploaded file, <em>Adobe_Target_Architect_Study_Guide.docx</em>): page-load order, data methods, parameters, audiences, offers, Recommendations, and a 3-day plan.</li>
+<li><strong>Consolidated practice questions</strong> (Part 5, from <em>Adobe_Target_Architect_ADO-E409_Practice.pdf</em>): all 49 questions, with the correct answers, explanations, and verification status.</li>
+<li><strong>Independently created practice exam</strong> (Part 4, Chapter 9): new questions written for practice. They are <strong>not</strong> actual or leaked Adobe exam questions.</li>
+</ol>
+<h2 id="verification-status">Verification status</h2>
+<ul>
+<li><strong>Practice-file questions</strong> (Part 5) reproduce the answers marked in your PDF. I transcribed them from scanned images, so check them against the original PDF.</li>
+<li>Items marked <strong>[VERIFY]</strong> are version-sensitive, or they depend on a correct answer I could not confirm. Check them against the current Adobe Experience League documentation before relying on them.</li>
+<li>I did not check this guide against live Adobe documentation in this session.</li>
+</ul>
+<h2 id="corrections-and-conflicts-found-while-compiling">Corrections and conflicts found while compiling</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Item</th>
+<th>What the sources say</th>
+<th>How this guide handles it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Q42 dynamic data syntax</td>
+<td>The uploaded guide’s answer key used <code>${profile.lastPurchased}</code>. The PDF question uses <code>${profile.lastProductPurchased}</code>.</td>
+<td>Uses the PDF’s wording. The correct form is <code>${profile.lastProductPurchased}</code>.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Q46 console execution</td>
+<td>The uploaded guide said running scripts in the browser console before saving is also valid. The PDF does not mark that option as correct. Only the mboxTrace option is marked correct.</td>
+<td>Marked as <strong>[VERIFY]</strong>. Follow the PDF’s key on the exam unless documentation shows otherwise.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Q41 VPN</td>
+<td>Users on a company VPN are a plausible cause, but the PDF marks only the at_property and “URL is” options as correct.</td>
+<td>Explanation includes the VPN point. Marked <strong>[VERIFY]</strong>.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Q8 “Enable Image Offers in Adobe Target &gt; Setup”</td>
+<td>The PDF does not mark this option correct, though it looks like a required step.</td>
+<td>Marked <strong>[VERIFY]</strong>.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Global mbox naming</td>
+<td>Earlier guide: <code>target-global-mbox</code>. PDF: “auto-created global Target request (mbox)”.</td>
+<td>Both names refer to the same automatically created global mbox.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Unverified items</td>
+<td>Q3 (AdBox behavior), Q10 (Experience Cloud ID Service versus AAM DIL), Q19 (Hosts), Q27 (single-value categoryId on category pages), Q37 (Web Services Access Group)</td>
+<td>Marked <strong>[VERIFY]</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="contents">Contents</h1>
+<ul>
+<li>About this document, sources, verification status, and corrections</li>
+<li>Part 1: Exam overview and study strategy</li>
+<li>Part 2: Condensed study guide (core concepts, data methods, parameters, audiences, offers, Recommendations, study plan, and the answer key Q1 to Q49)</li>
+<li>Part 3: Detailed domain chapters (Fundamentals, Integrations, Governance, Touchpoints, Recommendations, Architecture, Troubleshooting)</li>
+<li>Part 4: Quick reference, independent practice exam with answer key, readiness checklist, and references</li>
+<li>Part 5: Consolidated practice questions (49 questions from the practice PDF, with answers, explanations, and status)</li>
+</ul>
+<h1 id="part-1-exam-overview-and-study-strategy">Part 1: Exam Overview and Study Strategy</h1>
+<h2 id="exam-facts">Exam facts</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exam code</td>
+<td>AD0-E409 (zero) on your materials; confirm spelling on Adobe’s certification page</td>
+</tr>
+<tr class="even">
+<td>Questions</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>Duration</td>
+<td>100 minutes (about 2 minutes per question)</td>
+</tr>
+<tr class="even">
+<td>Passing score</td>
+<td>32/50 (64%) <strong>[VERIFY]</strong></td>
+</tr>
+<tr class="odd">
+<td>Level</td>
+<td>Architect Master</td>
+</tr>
+<tr class="even">
+<td>Prerequisites</td>
+<td><strong>[VERIFY]</strong> on the official certification page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="weighting-and-priority">Weighting and priority</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Weight</th>
+<th>Questions (approx.)</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7. Troubleshooting</td>
+<td>28%</td>
+<td>about 14</td>
+<td>Highest</td>
+</tr>
+<tr class="even">
+<td>2. Integrating with Adobe Target</td>
+<td>18%</td>
+<td>about 9</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>6. Architect, Design, and Implement</td>
+<td>18%</td>
+<td>about 9</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>1. Target Fundamentals</td>
+<td>13%</td>
+<td>about 6 to 7</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td>5. Recommendations</td>
+<td>11%</td>
+<td>about 5 to 6</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<td>3. Administration and Governance</td>
+<td>6%</td>
+<td>about 3</td>
+<td>Low to medium</td>
+</tr>
+<tr class="odd">
+<td>4. Supported Touchpoints</td>
+<td>6%</td>
+<td>about 3</td>
+<td>Low to medium</td>
+</tr>
+</tbody>
+</table>
+<p>Troubleshooting, Integrations, and Architecture together make up 64% of the exam. Spend most of your time there. Practice reading raw request and response payloads, because troubleshooting questions often depend on them.</p>
+<h1 id="part-2-condensed-study-guide-core-concepts">Part 2: Condensed Study Guide (Core Concepts)</h1>
+<p>This part is the uploaded condensed guide. It covers page-load order, data methods, parameters, audiences, offers, Recommendations, and the study plan. Verify exact parameter names and at.js function signatures in the Adobe documentation before the exam, because they change between versions.</p>
+<h2 id="how-to-use-this-guide">1. How to use this guide</h2>
+<p>Read sections 2 to 9 in order, then use section 10 to check each question. Work through the 3-day plan in section 11. Verify exact parameter names and at.js function signatures in the Adobe documentation before the exam, because they change between versions.</p>
+<h2 id="core-concepts-and-page-load-order">2. Core concepts and page-load order</h2>
+<p>at.js is the client library that runs Target requests and applies experiences. It must load early in &lt;HEAD&gt;, after the data layer and VisitorAPI.js.</p>
+<ol type="1">
+<li><p>Data layer in &lt;HEAD&gt; before at.js (Q2).</p></li>
+<li><p>VisitorAPI.js loads first, creating the Experience Cloud ID (Q11).</p></li>
+<li><p>Pre-hiding snippet and at.js in &lt;HEAD&gt; so the page is hidden until Target responds (Q49).</p></li>
+<li><p>The global mbox fires on page load and triggers the execution order below.</p></li>
+</ol>
+<p><strong>Execution order when a Target request (mbox) arrives</strong> (documented in How at.js works):</p>
+<ol start="5" type="1">
+<li><p>Profile scripts run on Target&#39;s server, per request, before audience decisions (Q4).</p></li>
+<li><p>Profile Store builds the profile from request parameters and script output.</p></li>
+<li><p>Audiences are qualified from the Audience Library (Target, Analytics, AAM, Experience Cloud).</p></li>
+<li><p>The highest-priority qualifying activity is selected.</p></li>
+<li><p>The winning offer is applied. Inline scripts run, then remote scripts load asynchronously.</p></li>
+<li><p>The pre-hiding snippet is removed and the page is revealed.</p></li>
+</ol>
+<p><strong>Remember:</strong> scripts, then audiences, then priority, then offer applied, then page revealed.</p>
+<h2 id="methods-to-get-data-into-target">3. Methods to get data into Target</h2>
+<p>The key question for each method: where does the data come from, and is it stored in the visitor profile?</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 15%" />
+<col style="width: 32%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Method</strong></th>
+<th style="text-align: left;"><strong>Stored in profile</strong></th>
+<th style="text-align: left;"><strong>Use when</strong></th>
+<th style="text-align: left;"><strong>Remember</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Page parameters (mbox parameters)</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Describes the page or request (category, product ID, page type)</td>
+<td style="text-align: left;">Per request, not per visitor</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">In-page profile attributes (mbox profile attributes)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Visitor data on the page, such as loyalty tier</td>
+<td style="text-align: left;">Sent with the mbox and saved</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Script profile attributes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Value computed on Target&#39;s server</td>
+<td style="text-align: left;">Runs before audience evaluation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data Providers</td>
+<td style="text-align: left;">Depends</td>
+<td style="text-align: left;">Third-party data must load before render</td>
+<td style="text-align: left;">Content stays hidden until it resolves</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bulk Profile Update API</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Many visitors updated from a CSV</td>
+<td style="text-align: left;">Batch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Single Profile Update API</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">One visitor updated by API call</td>
+<td style="text-align: left;">Real-time, one visitor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Customer Attributes</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Profile data uploaded by file to Experience Cloud</td>
+<td style="text-align: left;">File-based, not page-based</td>
+</tr>
+</tbody>
+</table>
+<h2 id="at.js-functions">at.js functions</h2>
+<ul>
+<li><p>targetPageParams() supplies page-level parameters to the global mbox before the request is sent.</p></li>
+<li><p>getOffer requests one mbox and returns the offer to your code. It does not display it.</p></li>
+<li><p>getOffers requests several mboxes in one call (the batch version).</p></li>
+<li><p>applyOffer displays an offer you received. Remember: getOffer gets it, applyOffer shows it.</p></li>
+</ul>
+<p>Data collection commands send events and data from code. Single-page apps must fire a new request when the view changes, because no page load happens.</p>
+<h2 id="target-request-mbox-parameters-and-multi-tenant-at_property">4. Target request (mbox) parameters and multi-tenant at_property</h2>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">at_property</td>
+<td style="text-align: left;">Property token that ties the request to one property (Q17, Q48)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">entity.id, entity.categoryId, entity.inventory</td>
+<td style="text-align: left;">Product or category data for Recommendations</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">profile.*</td>
+<td style="text-align: left;">Visitor data sent from the page</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">user.*</td>
+<td style="text-align: left;">Attributes set by profile scripts</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mbox3rdPartyId</td>
+<td style="text-align: left;">Your own customer ID for cross-device matching (Q32)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tntId</td>
+<td style="text-align: left;">Target&#39;s visitor ID, generated if you don&#39;t supply one (Q21)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multi-tenant">Multi-tenant</h2>
+<p>One Target installation can serve several business units. Each business unit has a Workspace, and each Workspace holds properties (sites or apps). Business units never share activities, audiences, or reports.</p>
+<h2 id="at_property">at_property</h2>
+<p>at_property holds the property token, a unique ID string for one property. At page level, every page sends the token of the property it belongs to. Target then applies only that property&#39;s activities. If the token is missing or wrong, no activities apply (Q17, Q48).</p>
+<h2 id="parameter-rules-that-affect-answers">Parameter rules that affect answers</h2>
+<ul>
+<li><p>Product page entity.categoryId takes a comma-separated list: one product, several categories. Category page recommendation mboxes take one value that must match exactly (Q27).</p></li>
+<li><p>Most predefined entity attributes (for example entity.brand, entity.pageUrl) are single-value only.</p></li>
+<li><p>Use targetPageParams() for page-level data known at load time (Q30).</p></li>
+</ul>
+<h2 id="profile-scripts-profile-attributes-audiences-and-debugging">5. Profile scripts, profile attributes, audiences and debugging</h2>
+<p><strong>Profile scripts</strong> are JavaScript snippets defined in Target. They run on Target&#39;s server for every mbox call, before audience evaluation. Their output becomes user.* attributes. Scripts cannot rely on each other, because their execution order is not guaranteed (Q1, Q4).</p>
+<p><strong>Profile parameters</strong> are values the page sends with the request. They are stored in the profile and need no server-side script.</p>
+<p><strong>Splitting audiences</strong> so two activities don&#39;t overlap: use a profile script to set an attribute that each audience checks (Q5). Traffic Allocation only splits visitors within one activity.</p>
+<p><strong>Profile expiration:</strong> monthly visitors look new if the profile expires first. Increase the profile expiration above the default 14 days (Q7).</p>
+<h2 id="audience-sources">Audience sources</h2>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Source</strong></th>
+<th style="text-align: left;"><strong>What it is</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Target audiences</td>
+<td style="text-align: left;">Built from mbox parameters and profile attributes (Q16)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Analytics audiences</td>
+<td style="text-align: left;">Segments from Adobe Analytics</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AAM audiences</td>
+<td style="text-align: left;">Segments from Audience Manager, for third-party or anonymous data (Q14)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Experience Cloud audiences</td>
+<td style="text-align: left;">Built in the Audience Library (People Core Service) (Q6, Q47)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Debugging:</strong> use mboxTrace to compare profile values before and after a profile script runs (Q45, Q46). Running scripts in the browser console before saving is not marked correct in the practice key for Q46, so treat it as <strong>[VERIFY]</strong>.</p>
+<h2 id="activities-delivery-by-url-adbox-and-redirector">6. Activities, delivery by URL, AdBox and redirector</h2>
+<h2 id="activity-types">Activity types</h2>
+<ul>
+<li><p><strong>Experience Targeting:</strong> one winning experience per visitor, chosen by audience.</p></li>
+<li><p><strong>A/B Test:</strong> one variation compared with the control, traffic split evenly.</p></li>
+<li><p><strong>Multivariate test (MVT):</strong> tests combinations of several elements at once. Needs more traffic than an A/B test.</p></li>
+<li><p><strong>Automated Personalization:</strong> machine learning picks the best offer per visitor.</p></li>
+<li><p><strong>Recommendations:</strong> product suggestions from a catalog and criteria.</p></li>
+</ul>
+<p><strong>Delivery by URL</strong> sets which pages an activity runs on: URL is (exact match), URL contains, URL starts with, and regex. A rule that is too strict hides the activity in QA (Q41).</p>
+<p><strong>AdBox</strong> is the no-JavaScript method for ads and offsite content. It returns a different image while the link stays fixed. The Target URL uses the ubox/image path. It has no client-side timeout, so if Target is down, visitors see no content. It cannot show dynamic creative such as an abandoned-cart product (Q3).</p>
+<p><strong>Redirector</strong> changes the landing page of an ad. Its path is ubox/page. Use it when the destination changes, not the image. Redirectors need allowlisted hosts to avoid open redirect risk.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 36%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: left;"><strong>AdBox</strong></th>
+<th style="text-align: left;"><strong>Redirector</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Changes</td>
+<td style="text-align: left;">Image in the ad</td>
+<td style="text-align: left;">Landing page</td>
+</tr>
+<tr class="even">
+<td>Path</td>
+<td style="text-align: left;">ubox/image</td>
+<td style="text-align: left;">ubox/page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="offers-experiences-and-vec">7. Offers, experiences and VEC</h2>
+<p><strong>Experience:</strong> what the visitor sees, built in the Visual Experience Composer (VEC).</p>
+<ul>
+<li><p><strong>HTML offers</strong> for web pages, built in VEC.</p></li>
+<li><p><strong>JSON offers</strong> for apps or custom rendering. Built in Target, styled by app developers (Q20).</p></li>
+<li><p><strong>Image offers</strong> and <strong>Experience Fragments</strong> from AEM (Q12).</p></li>
+</ul>
+<p><strong>Reading a JSON offer:</strong> filter the actions array from adobe.target.getOffer() for actions with setJson set to true, then read the JSON from the content property of that action (Q40). setContent is for HTML offers.</p>
+<p><strong>Image swapping in VEC:</strong> upload image files to Adobe Experience Cloud Assets Core Service and contact Customer Care for the Scene7 account configuration (Q8).</p>
+<p><strong>AEM Experience Fragments to Target</strong> needs the Cloud Services for Target configuration in AEM and the AEM Link Externalizer (Q13).</p>
+<p><strong>VEC selectors</strong> are the CSS selectors that locate page elements. A changed page structure can break them.</p>
+<h2 id="implementation-types">Implementation types</h2>
+<ul>
+<li><p><strong>Client-side (at.js):</strong> the browser library. Load early in &lt;HEAD&gt;.</p></li>
+<li><p><strong>SPA:</strong> single-page apps must fire a new Target request on each view change.</p></li>
+<li><p><strong>Mobile:</strong> VEC in the mobile app supports Experience Targeting and A/B tests (Q28).</p></li>
+</ul>
+<h2 id="recommendations-and-entity-attributes">8. Recommendations and entity attributes</h2>
+<p>Recommendations uses a catalog built from feeds, collections, or Analytics classifications. Criteria decide which products are shown. Results are cached at Edge servers, so a no_content response can mean results are not yet cached at the nearest Edge server (Q38).</p>
+<h2 id="where-product-data-comes-from">Where product data comes from</h2>
+<ul>
+<li><p><strong>Product feeds (Google Product Feeds):</strong> reuse organic search product data and automate inclusion (Q26).</p></li>
+<li><p><strong>Feeds entity:</strong> product attributes such as profit margin (Q24).</p></li>
+<li><p><strong>Entity inventory:</strong> send live inventory with the request, entity.inventory from the data layer, instead of relying on a nightly CSV (Q23).</p></li>
+</ul>
+<h2 id="category-recommendations">Category recommendations</h2>
+<ul>
+<li><p>Product page: entity.categoryId takes a comma-separated list. Commas separate categories, colons separate subcategory levels.</p></li>
+<li><p>Category page: one categoryId only, matching the product page value exactly (Q27).</p></li>
+</ul>
+<p><strong>Catalog link:</strong> a fully qualified domain name, including the subdomain, links a request to one product catalog (Q25).</p>
+<p><strong>Templates:</strong> entity references in Recommendations design templates need a $ in front (Q39).</p>
+<h2 id="analytics-reporting-and-access">9. Analytics, reporting and access</h2>
+<ul>
+<li><p><strong>A4T (Analytics for Target)</strong> sends Target results into Analytics. Target conversions appear under the Activity Conversions metric (Q9, Q15). A4T needs at.js and VisitorAPI.js, with at.js loaded after VisitorAPI.js (Q11).</p></li>
+<li><p><strong>Reporting source:</strong> choosing Analytics as the source requires membership in the Web Services Access Group in Adobe Analytics. Enterprise permissions alone are not enough (Q37).</p></li>
+<li><p><strong>Hosts</strong> separate production traffic from dev and staging in reports (Q19).</p></li>
+<li><p><strong>Bot traffic:</strong> Target does not create or retrieve a profile for known bots, and it does not log an activity visit for reporting (Q18).</p></li>
+<li><p><strong>Experience Cloud audience status:</strong> check the Audience Library in People Core Service (Q47).</p></li>
+<li><p><strong>Customer identity:</strong> AAM segments without slowing the page use Experience Cloud ID Service (Q10).</p></li>
+<li><p><strong>Combining A/B results with Analytics data:</strong> implement A4T (Q15).</p></li>
+<li><p><strong>Credit card platinum and anonymous third-party data:</strong> Audience Manager (Q14).</p></li>
+</ul>
+<h2 id="mobile-server-side-and-the-q1-to-q49-answer-key">10. Mobile, server-side, and the Q1 to Q49 answer key</h2>
+<h2 id="mobile-and-server-side">Mobile and server-side</h2>
+<ul>
+<li><p><strong>iOS targeted locations:</strong> the two primary methods are targetLoadRequest and targetCreateRequestWithName (Q29).</p></li>
+<li><p><strong>Android with AEP Mobile SDK:</strong> retrieve a custom visitor ID passed from a CRM with getThirdPartyId() (Q31). getTntId() returns Target&#39;s own ID, and Visitor.getInstance(...).getMarketingCloudVisitorID() returns the Experience Cloud ID.</p></li>
+<li><p><strong>Same experience across devices for logged-in users:</strong> populate the mbox3rdPartyId parameter with the user&#39;s ID, and call the Visitor API setCustomerIDs with the user&#39;s ID and authenticated state (Q32).</p></li>
+<li><p><strong>Server-side:</strong> if no ID is specified, Target generates a tntId (Q21). aamUUID is an Audience Manager identifier.</p></li>
+</ul>
+<h2 id="answer-key">Answer key</h2>
+<table style="width:98%;">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Q</strong></th>
+<th style="text-align: left;"><strong>Answer</strong></th>
+<th style="text-align: left;"><strong>Why</strong></th>
+<th style="text-align: left;"><strong>Remember</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Multiple profile scripts</td>
+<td style="text-align: left;">Real-time cart data set on Review Order, read on homepage</td>
+<td style="text-align: left;">Real-time cross-page data = profile scripts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Data layer in HEAD before at.js</td>
+<td style="text-align: left;">at.js and scripts read it</td>
+<td style="text-align: left;">Data layer first</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">AdBox</td>
+<td style="text-align: left;">Only the image changes, link stays fixed</td>
+<td style="text-align: left;">Same link, new image = AdBox</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Profile scripts first</td>
+<td style="text-align: left;">Run before audiences and activity selection</td>
+<td style="text-align: left;">Scripts, audiences, priority, offer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Profile Script</td>
+<td style="text-align: left;">Sets an attribute audiences use to split visitors</td>
+<td style="text-align: left;">Non-overlapping activities = profile script</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Mbox parameters and Experience Cloud audiences</td>
+<td style="text-align: left;">Visit-based features</td>
+<td style="text-align: left;">Visit-based = mbox params + Experience Cloud audiences</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Increase profile expiration above 14 days</td>
+<td style="text-align: left;">Monthly visitors look new</td>
+<td style="text-align: left;">Longer expiration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Upload images to Assets Core Service; request Scene7 configuration</td>
+<td style="text-align: left;">VEC image swapping</td>
+<td style="text-align: left;">Images + Scene7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Activity Conversions</td>
+<td style="text-align: left;">A4T metric</td>
+<td style="text-align: left;">A4T conversions = Activity Conversions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Experience Cloud ID Service</td>
+<td style="text-align: left;">Identity match without blocking</td>
+<td style="text-align: left;">AAM without slowdown = Experience Cloud ID</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">VisitorAPI.js</td>
+<td style="text-align: left;">Creates Experience Cloud ID that Target and Analytics use</td>
+<td style="text-align: left;">Identity first</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">AEM Experience Fragments</td>
+<td style="text-align: left;">Reusable page content</td>
+<td style="text-align: left;">Reusable content = XFs</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Cloud Services for Target in AEM; Link Externalizer</td>
+<td style="text-align: left;">Connects AEM and resolves URLs</td>
+<td style="text-align: left;">AEM to Target = these two</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Adobe Audience Manager</td>
+<td style="text-align: left;">Third-party and anonymous data</td>
+<td style="text-align: left;">Anonymous data = AAM</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">A4T</td>
+<td style="text-align: left;">Test results with Analytics data</td>
+<td style="text-align: left;">Combine with Analytics = A4T</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">Target audiences</td>
+<td style="text-align: left;">Same-request data</td>
+<td style="text-align: left;">Same request = Target audiences</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">at_property missing</td>
+<td style="text-align: left;">No property match</td>
+<td style="text-align: left;">No at_property = no activity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">No profile created or retrieved; no activity visit logged</td>
+<td style="text-align: left;">Bot handling</td>
+<td style="text-align: left;">Bots = no profile, no report</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">Hosts</td>
+<td style="text-align: left;">Separate production from dev/staging</td>
+<td style="text-align: left;">Hosts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">JSON Offers built in Target</td>
+<td style="text-align: left;">App developers style content</td>
+<td style="text-align: left;">Mobile styling = JSON</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">21</td>
+<td style="text-align: left;">tntId</td>
+<td style="text-align: left;">Default server-side ID</td>
+<td style="text-align: left;">Default = tntId</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">Content hiding until Data Provider callback</td>
+<td style="text-align: left;">Async data</td>
+<td style="text-align: left;">Data Providers = async</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">23</td>
+<td style="text-align: left;">Set entity.inventory from live data layer</td>
+<td style="text-align: left;">Near real time vs nightly CSV</td>
+<td style="text-align: left;">Live inventory = request parameter</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">Feeds Entity</td>
+<td style="text-align: left;">Product attribute</td>
+<td style="text-align: left;">Attributes = feed</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">Fully qualified domain name</td>
+<td style="text-align: left;">Each market has its own catalog</td>
+<td style="text-align: left;">Domain = catalog</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">26</td>
+<td style="text-align: left;">Google Product Feeds</td>
+<td style="text-align: left;">Reuse search product data</td>
+<td style="text-align: left;">Reuse search data = Google feeds</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">entity.categoryId with a single value</td>
+<td style="text-align: left;">Category page recommendation matches one category</td>
+<td style="text-align: left;">One category page = one value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">Experience Targeting and A/B Test</td>
+<td style="text-align: left;">Mobile VEC types</td>
+<td style="text-align: left;">Mobile VEC = Targeting and A/B</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29</td>
+<td style="text-align: left;">targetLoadRequest and targetCreateRequestWithName</td>
+<td style="text-align: left;">iOS targeted location</td>
+<td style="text-align: left;">Named = WithName</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">targetPageParams()</td>
+<td style="text-align: left;">Page-level data to global mbox</td>
+<td style="text-align: left;">Page-level = targetPageParams</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">31</td>
+<td style="text-align: left;">getThirdPartyId()</td>
+<td style="text-align: left;">Reads back the CRM ID</td>
+<td style="text-align: left;">Custom ID = getThirdPartyId</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">mbox3rdPartyId and setCustomerIDs</td>
+<td style="text-align: left;">Same experience across devices</td>
+<td style="text-align: left;">Cross-device = both</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">user.categoryId</td>
+<td style="text-align: left;">Category Affinity</td>
+<td style="text-align: left;">Affinity = user.categoryId</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">34</td>
+<td style="text-align: left;">Target request (mbox) profile attributes</td>
+<td style="text-align: left;">Data layer value in one action</td>
+<td style="text-align: left;">Data layer to mbox profile attribute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">Second mbox called product-data with product ID</td>
+<td style="text-align: left;">Global already fired; second mbox adds data without duplicates</td>
+<td style="text-align: left;">Don&#39;t delay global; add second mbox</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">36</td>
+<td style="text-align: left;">Target request (mbox) parameters</td>
+<td style="text-align: left;">Real-time conversion data</td>
+<td style="text-align: left;">Real-time = mbox params</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">37</td>
+<td style="text-align: left;">Web Services Access Group in Adobe Analytics</td>
+<td style="text-align: left;">Required for Analytics reporting source</td>
+<td style="text-align: left;">Analytics source = Web Services Access</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">38</td>
+<td style="text-align: left;">Results not cached at nearest Edge</td>
+<td style="text-align: left;">no_content = not cached</td>
+<td style="text-align: left;">no_content = not cached</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">39</td>
+<td style="text-align: left;">Append $ to entity references</td>
+<td style="text-align: left;">Dynamic placeholder syntax</td>
+<td style="text-align: left;">Dynamic = $</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">Filter setJson true, read content</td>
+<td style="text-align: left;">JSON offers</td>
+<td style="text-align: left;">JSON = setJson</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">41</td>
+<td style="text-align: left;">Different at_property; URL is rule</td>
+<td style="text-align: left;">Activity hidden in QA</td>
+<td style="text-align: left;">Check at_property and URL rule</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">42</td>
+<td style="text-align: left;">${profile.lastProductPurchase</td>
+<td style="text-align: left;">d} Profile attribute</td>
+<td style="text-align: left;">Profile data = profile namespace</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">43</td>
+<td style="text-align: left;">Implement Target inside the iframe</td>
+<td style="text-align: left;">Iframe is a separate document</td>
+<td style="text-align: left;">Iframe needs its own Target</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">44</td>
+<td style="text-align: left;">adobe_mc_sdid on redirect page</td>
+<td style="text-align: left;">Analytics tracking ID</td>
+<td style="text-align: left;">Redirect reporting = sdid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">mboxTrace</td>
+<td style="text-align: left;">Compare profile values before and after</td>
+<td style="text-align: left;">Compare = mboxTrace</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">46</td>
+<td style="text-align: left;">mboxTrace</td>
+<td style="text-align: left;">Debug profile scripts</td>
+<td style="text-align: left;">Debug = mboxTrace</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">47</td>
+<td style="text-align: left;">Audience Library in People Core Service</td>
+<td style="text-align: left;">Shows processing status</td>
+<td style="text-align: left;">Status = Audience Library</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">48</td>
+<td style="text-align: left;">at_property at page level</td>
+<td style="text-align: left;">Matches page to property</td>
+<td style="text-align: left;">Page-level at_property</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">49</td>
+<td style="text-align: left;">Move at.js and pre-hiding snippet to HEAD</td>
+<td style="text-align: left;">Hiding must happen before render</td>
+<td style="text-align: left;">Target code in HEAD</td>
+</tr>
+</tbody>
+</table>
+<h2 id="day-study-plan">11. 3-day study plan</h2>
+<ul>
+<li><p><strong>Day 1:</strong> page-load order and execution (Q2, Q4, Q11, Q22, Q43, Q49), then mbox parameters and at_property (Q17, Q21, Q23, Q25, Q27, Q30, Q33 to Q36, Q48).</p></li>
+<li><p><strong>Day 2:</strong> profile scripts, audiences, and reporting (Q1, Q5 to Q7, Q9, Q10, Q14 to Q16, Q18, Q19, Q37, Q45 to Q47), then offers and Recommendations (Q3, Q8, Q12, Q13, Q20, Q24, Q26, Q38, Q39, Q40, Q42).</p></li>
+<li><p><strong>Day 3:</strong> mobile (Q28, Q29, Q31, Q32), debugging and delivery (Q41, Q44), then retake the practice exam without looking at answers.</p></li>
+</ul>
+<p><strong>Verify before the exam:</strong> Q3 (AdBox), Q10 (Experience Cloud ID Service), and Q27 (single-value categoryId) against the current documentation. # Part 3: Detailed Domain Chapters</p>
+<h2 id="chapter-1-adobe-target-fundamentals-13">Chapter 1: Adobe Target Fundamentals (13%)</h2>
+<h3 id="overview">1.1 Overview</h3>
+<p>Adobe Target is Adobe’s personalization and experimentation platform. It delivers content variations (offers) to visitors and measures their effect on business metrics. It sits in the Adobe Experience Cloud alongside Adobe Analytics, Adobe Experience Manager (AEM), and Adobe Experience Platform (AEP).</p>
+<h3 id="core-concepts">1.2 Core concepts</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Property / Client code</strong></td>
+<td>Identifies your Target account and the delivery endpoint (for example, <code>{clientCode}.tt.omtrdc.net</code>).</td>
+</tr>
+<tr class="even">
+<td><strong>Workspace</strong></td>
+<td>A Target area containing activities, audiences, and settings.</td>
+</tr>
+<tr class="odd">
+<td><strong>Mbox</strong></td>
+<td>A named container on a page or in an app where Target can deliver content. Mboxes are the main delivery unit in the legacy at.js model.</td>
+</tr>
+<tr class="even">
+<td><strong>Offer</strong></td>
+<td>The content or experience returned for an mbox.</td>
+</tr>
+<tr class="odd">
+<td><strong>Activity</strong></td>
+<td>An experiment or personalization definition: its audience, traffic, experiences, and goals.</td>
+</tr>
+<tr class="even">
+<td><strong>Experience</strong></td>
+<td>One variation within an activity, such as control or variant B. Each experience contains one or more offers.</td>
+</tr>
+<tr class="odd">
+<td><strong>Audience</strong></td>
+<td>Rules or segments that decide who sees an activity.</td>
+</tr>
+<tr class="even">
+<td><strong>Goal / Metric</strong></td>
+<td>The success measure, such as conversion, revenue, or clicks.</td>
+</tr>
+<tr class="odd">
+<td><strong>Traffic allocation</strong></td>
+<td>The share of eligible visitors who enter an activity and the share each experience receives.</td>
+</tr>
+<tr class="even">
+<td><strong>Global mbox</strong></td>
+<td>A default mbox, <code>target-global-mbox</code>, that runs on every page where at.js is loaded. The PDF practice file calls it the auto-created global Target request (mbox).</td>
+</tr>
+<tr class="odd">
+<td><strong>Order Confirmation mbox</strong></td>
+<td>A reserved mbox that Target uses on order confirmation pages to send order data for revenue and conversion measurement. <strong>[VERIFY]</strong> the exact name and setup in current docs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="activity-types-1">1.3 Activity types</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Purpose</th>
+<th>Key point</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A/B test</strong></td>
+<td>Compare discrete experiences</td>
+<td>Fixed traffic split; reports a winner by statistics</td>
+</tr>
+<tr class="even">
+<td><strong>Multivariate (MVT)</strong></td>
+<td>Test combinations of element changes</td>
+<td>Needs more traffic than A/B</td>
+</tr>
+<tr class="odd">
+<td><strong>Experience Targeting (XT)</strong></td>
+<td>Show different experiences to audience segments</td>
+<td>No statistical comparison; targets rather than tests</td>
+</tr>
+<tr class="even">
+<td><strong>Auto-Target</strong></td>
+<td>Machine learning picks the best experience per visitor from a set of options</td>
+<td>Requires enough historical data</td>
+</tr>
+<tr class="odd">
+<td><strong>Automated Personalization (AP)</strong></td>
+<td>Machine learning selects the best offer for each visitor from a set of offers</td>
+<td>Often compared with Auto-Target; verify current behavior</td>
+</tr>
+<tr class="even">
+<td><strong>Auto-Allocate</strong></td>
+<td>Gradually shifts traffic toward the better-performing experience</td>
+<td>Lets the test optimize itself while it runs</td>
+</tr>
+<tr class="odd">
+<td><strong>Recommendations</strong></td>
+<td>Returns ranked product or content items (Chapter 5)</td>
+<td>Uses catalogs and criteria</td>
+</tr>
+<tr class="even">
+<td><strong>Form-based / Hybrid / Mobile / Email</strong></td>
+<td>Covered in Chapter 4</td>
+<td>Depend on the touchpoint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-principles">1.4 Key principles</h3>
+<ul>
+<li><strong>Statistical significance</strong> tells you whether a difference is likely real. It doesn’t tell you whether the difference matters. Business significance is a separate decision.</li>
+<li><strong>Sample ratio mismatch (SRM)</strong> happens when the observed traffic split differs from the configured split. SRM usually points to an implementation or delivery problem. Investigate before trusting results.</li>
+<li><strong>Flicker (flash of original content)</strong> happens when the default content renders before Target applies the offer. Mitigate it with the at.js timeout, the body-hiding snippet, or server-side delivery.</li>
+</ul>
+<h3 id="important-exam-points">1.5 Important exam points</h3>
+<ul>
+<li>Know the difference between a test (A/B, MVT) and targeting (XT).</li>
+<li>Know which activities need historical data or machine learning.</li>
+<li>Know that the Global mbox runs without a specific mbox call. Don’t assume it handles conversion data on its own.</li>
+</ul>
+<h3 id="common-mistakes">1.6 Common mistakes</h3>
+<ul>
+<li>Confusing an <strong>mbox</strong> (delivery container) with an <strong>activity</strong> (the experiment definition). One activity can use several mboxes.</li>
+<li>Assuming traffic allocation equals audience size. Allocation applies to visitors who qualify for the audience.</li>
+<li>Expecting significance on a low-traffic test within a short window.</li>
+</ul>
+<h2 id="chapter-2-integrating-with-adobe-target-18">Chapter 2: Integrating with Adobe Target (18%)</h2>
+<h3 id="adobe-analytics-integration-a4t">2.1 Adobe Analytics integration (A4T)</h3>
+<p><strong>Analytics for Target (A4T)</strong> sends Target activity and experience data into Adobe Analytics. Analysts can then report on Target experiences alongside all other dimensions and metrics.</p>
+<ul>
+<li>Target writes <strong>activity and experience</strong> values into Analytics variables. The variables are configured in the report suite(s). <strong>[VERIFY]</strong> the mapping in current docs.</li>
+<li>A4T lets you use Analytics <strong>segments and metrics</strong> as Target audiences and goals, and Analytics reports show Target outcomes.</li>
+<li>Conversion counted in Target and in Analytics can differ because of attribution windows, deduplication, and visitor identity. Document which system is the source of truth for each KPI.</li>
+</ul>
+<p><strong>Common mistakes:</strong> assuming A4T replaces Target’s own reporting; ignoring report suite configuration, since A4T only works for report suites set up for it.</p>
+<h3 id="adobe-experience-manager-aem-integration">2.2 Adobe Experience Manager (AEM) integration</h3>
+<ul>
+<li>AEM Sites uses Target through the <strong>Target integration</strong> configured in AEM Cloud Services. <strong>[VERIFY]</strong> current setup steps.</li>
+<li>AEM can render <strong>Target offers</strong> as Experience Fragments or as offers mapped to components, so content authors can manage variations inside AEM.</li>
+<li>The <strong>Core Components</strong> library includes Target-aware components. Check the current version and whether it’s client-side or server-side rendered.</li>
+<li>Typical design: AEM renders the default content and Target supplies offers for each mbox. Authors own variations and Target owns decisions.</li>
+<li>Where rendering happens (server-side in AEM versus client-side in the browser) determines flicker, caching, and how offers are passed in.</li>
+<li>Caching: if the CDN caches pages, personalized content must bypass the cache or be delivered through a personalization layer.</li>
+</ul>
+<h3 id="adobe-experience-platform-aep-and-edge-integration">2.3 Adobe Experience Platform (AEP) and Edge integration</h3>
+<ul>
+<li><strong>Web SDK (Alloy)</strong> on the Adobe Experience Platform Edge Network can deliver Target decisions. Edge-based delivery returns <strong>personalization decisions</strong> (propositions) in the Web SDK response, which then render on the page. <strong>[VERIFY]</strong> field names and the current Edge flow.</li>
+<li><strong>Data Collection (Tags, formerly Launch)</strong> hosts the Target extension. Use it to deploy Target through the tag manager, with environments (development, staging, production).</li>
+<li><strong>Audiences:</strong> AEP audiences (segments from Real-Time CDP) can be used in Target. Activation requires the right permissions and an active connection. <strong>[VERIFY]</strong> the current supported audience sources.</li>
+<li><strong>Identity:</strong> use the same identity (ECID, customer ID) across Edge, Target, and Analytics for consistent visitor identity.</li>
+</ul>
+<h3 id="other-experience-cloud-integrations">2.4 Other Experience Cloud integrations</h3>
+<ul>
+<li><strong>Adobe Audience Manager (AAM)</strong> and <strong>Adobe Advertising</strong> audiences can be used in Target where supported. <strong>[VERIFY]</strong> availability.</li>
+<li><strong>Adobe Journey Optimizer</strong> and other products can use Target as a decisioning service. Check the current integration path.</li>
+<li><strong>Customer data:</strong> use Target data-sharing rules to define what leaves the browser and what must stay out of it. Privacy settings affect integrations.</li>
+</ul>
+<h3 id="important-exam-points-1">2.5 Important exam points</h3>
+<ul>
+<li>A4T reports Target outcomes in Analytics. It doesn’t create Target audiences by itself.</li>
+<li>AEM integration controls <strong>where rendering happens</strong>. Know the trade-offs between client-side and server-side rendering.</li>
+<li>Edge/Web SDK changes how decisions are returned. Know that Edge is the path Adobe is steering toward for new implementations. <strong>[VERIFY]</strong> the current recommendation.</li>
+</ul>
+<h3 id="common-mistakes-1">2.6 Common mistakes</h3>
+<ul>
+<li>Confusing <strong>audiences</strong> (who qualifies) with <strong>segments</strong> (Analytics filters).</li>
+<li>Forgetting that identity differences between Analytics and Target lead to mismatched numbers.</li>
+<li>Assuming an AEM component automatically personalizes. The component must be wired to Target through the configured offers.</li>
+</ul>
+<h2 id="chapter-3-administration-and-governance-6">Chapter 3: Administration and Governance (6%)</h2>
+<h3 id="roles-and-access">3.1 Roles and access</h3>
+<ul>
+<li>Access is managed through <strong>Adobe Admin Console</strong> product profiles and <strong>Target permissions</strong>. <strong>[VERIFY]</strong> the current role model in your organization.</li>
+<li>Typical roles: administrator (full control), developer (implementation), analyst (reporting), approver (sign-off), and viewer (read-only).</li>
+<li>Apply least privilege. Separate the people who build activities from the people who approve them and push them live.</li>
+</ul>
+<h3 id="environments-and-change-control">3.2 Environments and change control</h3>
+<ul>
+<li>Keep separate <strong>development, staging, and production</strong> properties, workspaces, or tag environments.</li>
+<li>Test activities in staging before promoting them. Confirm that the same code and mboxes exist in production.</li>
+<li>Use <strong>approval workflows</strong> where available for high-risk changes. <strong>[VERIFY]</strong> current approval features.</li>
+</ul>
+<h3 id="naming-conventions-and-documentation">3.3 Naming conventions and documentation</h3>
+<ul>
+<li>Use consistent names for mboxes, activities, audiences, and goals. Example: <code>pdp_hero_v2_2026Q4</code>.</li>
+<li>Record the hypothesis, primary metric, guardrail metrics, dates, owners, and the results decision for each activity.</li>
+<li>Keep an activity inventory. Retire finished tests so they don’t continue to run and consume traffic.</li>
+</ul>
+<h3 id="governance-concerns">3.4 Governance concerns</h3>
+<ul>
+<li><strong>Concurrent tests:</strong> multiple activities on the same page or audience can interact. Use exclusion groups or mutually exclusive audiences.</li>
+<li><strong>Traffic budget:</strong> limit the share of traffic in experiments to protect the core experience.</li>
+<li><strong>Privacy and consent:</strong> honor consent settings in the tag manager and Target data-sharing configuration. Personal data should not leak into mbox parameters.</li>
+<li><strong>Data retention and deletion:</strong> follow organizational and regulatory rules for visitor data.</li>
+</ul>
+<h3 id="common-mistakes-2">3.5 Common mistakes</h3>
+<ul>
+<li>Letting a test run past its decision date.</li>
+<li>Editing live activities without a test or rollback plan.</li>
+</ul>
+<h2 id="chapter-4-supported-touchpoints-6">Chapter 4: Supported Touchpoints (6%)</h2>
+<h3 id="client-side-web-delivery">4.1 Client-side (web) delivery</h3>
+<ul>
+<li><strong>at.js</strong> is the legacy client library. Adobe has moved toward the Web SDK. <strong>[VERIFY]</strong> current library recommendations and version support.</li>
+<li>The page loads the library, which calls the delivery service for each mbox. Target then applies offers in the browser.</li>
+<li><strong>Advantages:</strong> quick setup, works with most sites. <strong>Drawbacks:</strong> flicker risk, dependence on browser scripts, and limited visibility into the page.</li>
+</ul>
+<h3 id="server-side-delivery">4.2 Server-side delivery</h3>
+<ul>
+<li>Uses the <strong>Delivery API</strong> (JSON REST) or Adobe SDKs (Java, Node.js, .NET, and others). <strong>[VERIFY]</strong> the SDKs currently supported.</li>
+<li>Requests can use <strong>execute</strong> (decide now) or <strong>prefetch</strong> (decide ahead of rendering and apply later). The server renders the decided offer.</li>
+<li><strong>Advantages:</strong> no flicker, better for logged-in and complex logic, and secure handling of data. <strong>Drawbacks:</strong> developer work and a clear mbox-to-page mapping are needed. Caching requires care.</li>
+</ul>
+<h3 id="mobile-apps">4.3 Mobile apps</h3>
+<ul>
+<li>Target provides <strong>mobile SDKs</strong> for iOS and Android. Experiences use the same activity model and mboxes or offers. <strong>[VERIFY]</strong> the current mobile library and its relationship to Edge.</li>
+<li>Consider app versions and offline behavior. Experiences must degrade gracefully when the device is offline.</li>
+</ul>
+<h3 id="email">4.4 Email</h3>
+<ul>
+<li>Target personalization in email is usually delivered by <strong>calling the Target API at send time</strong> or <strong>when the email is opened</strong> through a dynamic image or content call. <strong>[VERIFY]</strong> current email integration options.</li>
+<li>Consider privacy, caching in email clients, and the lack of JavaScript in most email clients.</li>
+</ul>
+<h3 id="apis">4.5 APIs</h3>
+<ul>
+<li><strong>Delivery API:</strong> runtime decisions for web, server, and apps.</li>
+<li><strong>Management / Admin APIs:</strong> manage activities, audiences, and settings programmatically. <strong>[VERIFY]</strong> endpoints.</li>
+<li><strong>Recommendations API:</strong> returns recommendations (Chapter 5).</li>
+</ul>
+<h3 id="hybrid-implementations">4.6 Hybrid implementations</h3>
+<ul>
+<li>A <strong>hybrid</strong> design uses both client-side and server-side delivery. Example: the server decides the core page variant while the client applies small UI tweaks.</li>
+<li>The main challenge is <strong>consistency</strong>: the same visitor should get the same decision on both sides.</li>
+</ul>
+<h3 id="important-exam-points-and-common-mistakes">4.7 Important exam points and common mistakes</h3>
+<ul>
+<li>Client-side and server-side differ in <strong>flicker, latency, data access, and developer effort</strong>.</li>
+<li>Server-side isn’t always better. Client-side is simpler when the page is static and the team has limited developer resources.</li>
+<li>Email and other non-browser touchpoints can’t run JavaScript.</li>
+</ul>
+<h2 id="chapter-5-adobe-target-recommendations-11">Chapter 5: Adobe Target Recommendations (11%)</h2>
+<ul>
+<li><strong>Overview:</strong> Recommendations return ranked items (products, articles, offers) for a visitor, based on the item catalog, criteria, and algorithm.</li>
+<li><strong>Catalogs:</strong> a catalog holds the items to recommend, with attributes such as ID, name, category, price, image, and availability. Load catalogs by <strong>feed upload</strong>, <strong>API</strong>, or <strong>connector</strong>. <strong>[VERIFY]</strong> the current supported methods. Data quality matters: missing attributes, duplicate IDs, and stale availability are common causes of poor recommendations.</li>
+<li><strong>Criteria:</strong> criteria filter and rank items, for example “same category, in stock, price under $100.” They can also set business rules, such as boosting or excluding items. Criteria are evaluated at request time, so their logic affects performance.</li>
+<li><strong>Strategies:</strong> popularity-based, recently viewed, similar items, and personalized (behavior-based). <strong>[VERIFY]</strong> the current strategy list. Algorithms need data. A new site with little behavior data will get weak personalized results.</li>
+<li><strong>Configuration:</strong> create a recommendation activity, select the catalog and criteria, and map it to an mbox. Request recommendations from the Recommendations API or through the mbox on the page. Test with real catalog data in staging first.</li>
+</ul>
+<p><strong>Important exam points:</strong> the <strong>catalog</strong> supplies the items; <strong>criteria</strong> decide which items qualify and their order. Recommendations depend on catalog quality as much as on the algorithm.</p>
+<p><strong>Common mistakes:</strong> blaming the algorithm for results that come from bad catalog data; using criteria that exclude all items, which returns empty results.</p>
+<h2 id="chapter-6-architecture-design-and-implementation-18">Chapter 6: Architecture, Design, and Implementation (18%)</h2>
+<h3 id="architecture-principles">6.1 Architecture principles</h3>
+<ol type="1">
+<li><strong>Separate decisioning from content:</strong> Target decides which experience to show. AEM or the site owns the content.</li>
+<li><strong>Choose the delivery model deliberately:</strong> client-side, server-side, Edge, or hybrid. Base the choice on performance, data needs, and team skills.</li>
+<li><strong>Plan the data flow:</strong> identify what data Target needs (mbox parameters, profile attributes, audiences) and where it comes from.</li>
+<li><strong>Design for measurement:</strong> define goals and metrics before building. Check that Analytics and Target share the same definitions.</li>
+<li><strong>Plan for failure:</strong> define a default experience for when Target doesn’t respond or times out.</li>
+</ol>
+<h3 id="global-mbox">6.2 Global mbox</h3>
+<ul>
+<li><code>target-global-mbox</code> runs on every page where the library is loaded. It serves global activities and sets defaults.</li>
+<li>Keep it lightweight. Heavy activities or many global offers slow every page. Use specific mboxes for page-level experiences.</li>
+<li>Common mistake: putting everything in the global mbox, which makes it hard to troubleshoot and manage.</li>
+</ul>
+<h3 id="order-confirmation-mbox">6.3 Order Confirmation mbox</h3>
+<ul>
+<li>A <strong>reserved mbox</strong> on the order confirmation page sends order data to Target for revenue and conversion goals. <strong>[VERIFY]</strong> the name and parameters in current docs.</li>
+<li>Confirm the mbox fires exactly once per order. Duplicate firing inflates revenue. Protect against page refreshes and back-button re-fires.</li>
+<li>Order total, product IDs, and currency must be correct. Check that they match the order system.</li>
+</ul>
+<h3 id="hybrid-implementation-design">6.4 Hybrid implementation design</h3>
+<ul>
+<li>Assign each experience to a delivery method based on need. Example: server-side for logged-in pricing, client-side for layout tests.</li>
+<li>Keep the <strong>visitor identity</strong> consistent so the same visitor gets the same decision on both sides.</li>
+<li>Document which team owns each delivery path.</li>
+</ul>
+<h3 id="performance-and-flicker">6.5 Performance and flicker</h3>
+<ul>
+<li>Measure the time added by Target calls.</li>
+<li>Use timeouts and a default experience for slow responses.</li>
+<li>Prefer server-side or Edge delivery for above-the-fold content that must not flicker.</li>
+</ul>
+<h3 id="testing-and-qa">6.6 Testing and QA</h3>
+<ul>
+<li>Test each experience in each browser, device, and logged-in state.</li>
+<li>Verify that the mbox fires, the correct offer renders, and metrics arrive in Target and Analytics.</li>
+<li>Test the fallback when Target is blocked (ad blockers, consent refusal, network failure).</li>
+</ul>
+<h3 id="design-checklist">6.7 Design checklist</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Delivery method chosen and justified</label></li>
+<li><label><input type="checkbox"></input>Global mbox kept lightweight</label></li>
+<li><label><input type="checkbox"></input>Order confirmation mbox fires once per order</label></li>
+<li><label><input type="checkbox"></input>Identity consistent across Target, Analytics, and AEM</label></li>
+<li><label><input type="checkbox"></input>Default experience defined for timeouts</label></li>
+<li><label><input type="checkbox"></input>Goals and metrics agreed with stakeholders</label></li>
+<li><label><input type="checkbox"></input>Consent and privacy requirements mapped</label></li>
+<li><label><input type="checkbox"></input>Staging and production environments separated</label></li>
+</ul>
+<h3 id="important-exam-points-and-common-mistakes-1">6.8 Important exam points and common mistakes</h3>
+<ul>
+<li>Know the purpose and risks of the Global mbox and the Order Confirmation mbox.</li>
+<li>Know how hybrid designs keep decisions consistent.</li>
+<li>Common mistakes: forgetting the fallback experience; firing order confirmation logic more than once; designing a hybrid system without a shared identity.</li>
+</ul>
+<h2 id="chapter-7-troubleshooting-28">Chapter 7: Troubleshooting (28%)</h2>
+<p>Troubleshooting is the largest domain. Practice the workflow below until you can follow it without notes.</p>
+<h3 id="troubleshooting-workflow">7.1 Troubleshooting workflow</h3>
+<ol type="1">
+<li><strong>Define the symptom</strong> precisely: no offer, wrong offer, flicker, missing metrics, or traffic mismatch.</li>
+<li><strong>Check scope:</strong> one page, one browser, one audience, or everywhere?</li>
+<li><strong>Check delivery:</strong> did the library load? Did the mbox request fire? What was the response?</li>
+<li><strong>Check targeting:</strong> does the visitor qualify for the audience? Is traffic allocated?</li>
+<li><strong>Check the activity:</strong> is it live? Is the date range correct? Are the experiences and offers active?</li>
+<li><strong>Check measurement:</strong> are goals and metrics firing? Do Analytics and Target agree within tolerance?</li>
+<li><strong>Fix, retest, and document.</strong></li>
+</ol>
+<h3 id="debugging-tools">7.2 Debugging tools</h3>
+<ul>
+<li><strong>Target/Experience Cloud debugger</strong> browser extension and Target’s built-in debugging. <strong>[VERIFY]</strong> current tool names.</li>
+<li>Browser developer tools: the network tab for Target requests, the console for errors, and cookies for mbox identifiers.</li>
+<li>Debug parameters and trace options (for example, <code>mboxTrace</code> in legacy at.js). <strong>[VERIFY]</strong>.</li>
+</ul>
+<h3 id="mbox-errors">7.3 Mbox errors</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mbox never fires</td>
+<td>Library didn’t load, blocked script, consent refusal</td>
+<td>Network tab, consent state, console errors</td>
+</tr>
+<tr class="even">
+<td>Mbox fires but no offer</td>
+<td>Visitor doesn’t qualify, activity not live, no default content</td>
+<td>Audience, activity status, offer status</td>
+</tr>
+<tr class="odd">
+<td>Default content shows, expected offer doesn’t</td>
+<td>Audience mismatch, traffic allocation, timeout</td>
+<td>Activity audience, allocation, response time</td>
+</tr>
+<tr class="even">
+<td>Flicker</td>
+<td>Client-side rendering after page paint</td>
+<td>Timeout setting, body-hiding snippet, delivery method</td>
+</tr>
+<tr class="odd">
+<td>Duplicate offers or double counting</td>
+<td>Mbox defined twice, tag fired twice</td>
+<td>Page source, tag manager triggers</td>
+</tr>
+<tr class="even">
+<td>Errors in console</td>
+<td>Syntax or configuration issue</td>
+<td>Console messages, library version</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reading-target-requests-and-responses">7.4 Reading Target requests and responses</h3>
+<ul>
+<li><strong>Request:</strong> contains the client code, mbox name, visitor identifiers, page parameters, and context (device, location, and similar).</li>
+<li><strong>Response:</strong> contains the mbox name, the offer selected, the activity and experience IDs, and metadata.</li>
+<li>The exam often asks you to identify a missing parameter, a wrong mbox name, or a response that shows the visitor was excluded.</li>
+</ul>
+<p>Illustrative request (structure only; field names simplified):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;context&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;channel&quot;</span><span class="fu">:</span> <span class="st">&quot;web&quot;</span><span class="fu">,</span> <span class="dt">&quot;address&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;url&quot;</span><span class="fu">:</span> <span class="st">&quot;https://www.example.com/product/123&quot;</span> <span class="fu">}</span> <span class="fu">},</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;execute&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mboxes&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span> <span class="dt">&quot;index&quot;</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span> <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;pdp-hero&quot;</span><span class="fu">,</span> <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">&quot;productId&quot;</span><span class="fu">:</span> <span class="st">&quot;123&quot;</span> <span class="fu">}</span> <span class="fu">}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Illustrative response structure:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;execute&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;mboxes&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;index&quot;</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;pdp-hero&quot;</span><span class="fu">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&quot;options&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">{</span> <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;html&quot;</span><span class="fu">,</span> <span class="dt">&quot;content&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;div&gt;...&lt;/div&gt;&quot;</span><span class="fu">,</span> <span class="dt">&quot;eventToken&quot;</span><span class="fu">:</span> <span class="st">&quot;...&quot;</span> <span class="fu">}</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="ot">]</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>If <code>options</code> is empty or only contains default content, the visitor may not qualify or the activity may not be live. <strong>[VERIFY]</strong> the exact response schema in current docs.</p>
+<h3 id="activity-configuration-problems">7.5 Activity configuration problems</h3>
+<ul>
+<li><strong>Wrong audience:</strong> the audience rules don’t match the intended visitors.</li>
+<li><strong>Traffic too low:</strong> the allocation or audience size is too small for a result.</li>
+<li><strong>Overlapping activities:</strong> another activity on the same mbox or page takes priority.</li>
+<li><strong>Dates:</strong> the activity starts or ends at the wrong time (check time zones).</li>
+<li><strong>Goals:</strong> the primary metric is not firing or is mapped to the wrong event.</li>
+</ul>
+<h3 id="integration-problems">7.6 Integration problems</h3>
+<ul>
+<li><strong>Analytics mismatch:</strong> check report suite configuration, variable mapping, attribution windows, and time zones.</li>
+<li><strong>AEM rendering:</strong> check that offers are mapped to the right components and that caching isn’t serving the same page to everyone.</li>
+<li><strong>Edge/Web SDK:</strong> check the Edge configuration, extension version, and identity.</li>
+<li><strong>Audience sync:</strong> check the source audience is active, has the correct size, and is connected.</li>
+</ul>
+<h3 id="recommendations-problems">7.7 Recommendations problems</h3>
+<ul>
+<li><strong>Empty results:</strong> check criteria (overly restrictive) and catalog (missing or stale items).</li>
+<li><strong>Irrelevant results:</strong> check catalog attributes and the chosen strategy.</li>
+<li><strong>Slow responses:</strong> check the number of items and criteria complexity.</li>
+</ul>
+<h3 id="worked-troubleshooting-scenario">7.8 Worked troubleshooting scenario</h3>
+<p><em>Symptom:</em> a product-page hero test shows the default content for all visitors in production, but the offer appears in staging.</p>
+<ol type="1">
+<li>Confirm the production activity is live and dated correctly.</li>
+<li>Check whether the production page loads the same library and mbox name as staging. A typo in the mbox name is a common cause.</li>
+<li>Check the network request in production. If there’s no request, the library or the tag isn’t firing.</li>
+<li>If the request fires but returns default content, check the audience and traffic allocation.</li>
+<li>Check consent settings. If visitors have declined consent, Target may not deliver.</li>
+<li>Fix the root cause, retest in production with a test account, and document the change.</li>
+</ol>
+<h3 id="important-exam-points-and-common-mistakes-2">7.9 Important exam points and common mistakes</h3>
+<ul>
+<li>Work from the symptom to the layer (delivery, targeting, activity, measurement) instead of guessing.</li>
+<li>Know how to read a response and what an empty <code>options</code> list means.</li>
+<li>Most “no offer” issues come from audience, status, or delivery problems, not from the algorithm.</li>
+<li>Common mistakes: changing configuration before confirming what the request and response show; ignoring consent state when debugging; assuming a test is broken when the audience is simply too narrow.</li>
+</ul>
+<h1 id="part-4-quick-reference-independent-practice-exam-and-checklist">Part 4: Quick Reference, Independent Practice Exam, and Checklist</h1>
+<h2 id="chapter-8-quick-reference-notes">Chapter 8: Quick-Reference Notes</h2>
+<h3 id="definitions">8.1 Definitions</h3>
+<ul>
+<li><strong>Mbox:</strong> named delivery container on a page or in an app.</li>
+<li><strong>Offer:</strong> content returned for an mbox.</li>
+<li><strong>Activity:</strong> experiment or personalization definition.</li>
+<li><strong>Experience:</strong> one variation in an activity.</li>
+<li><strong>Global mbox:</strong> <code>target-global-mbox</code>, the default mbox on pages with the library.</li>
+<li><strong>Order Confirmation mbox:</strong> reserved mbox for order data. <strong>[VERIFY]</strong> name.</li>
+<li><strong>Prefetch / execute:</strong> server-side request types (decide later versus decide now).</li>
+</ul>
+<h3 id="distinctions">8.2 Distinctions</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pair</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A/B vs. XT</td>
+<td>Test with significance versus targeting without comparison</td>
+</tr>
+<tr class="even">
+<td>Auto-Target vs. Auto-Allocate</td>
+<td>Per-visitor selection versus traffic shift over time</td>
+</tr>
+<tr class="odd">
+<td>Audience vs. Analytics segment</td>
+<td>Target qualification rules versus Analytics reporting filter</td>
+</tr>
+<tr class="even">
+<td>Client-side vs. server-side</td>
+<td>Flicker and browser visibility versus no flicker and developer effort</td>
+</tr>
+<tr class="odd">
+<td>Catalog vs. criteria</td>
+<td>Items versus rules that filter and rank them</td>
+</tr>
+<tr class="even">
+<td>Execute vs. prefetch</td>
+<td>Decide now versus decide before rendering</td>
+</tr>
+<tr class="odd">
+<td>AdBox vs. Redirector</td>
+<td>Image changes with fixed link versus landing page changes</td>
+</tr>
+<tr class="even">
+<td>getOffer vs. applyOffer</td>
+<td>Retrieves the offer versus displays it</td>
+</tr>
+<tr class="odd">
+<td>Profile parameters vs. profile scripts</td>
+<td>Sent with the request versus computed on Target’s server</td>
+</tr>
+<tr class="even">
+<td>Data providers vs. targetPageParams()</td>
+<td>Asynchronous data with content hiding versus synchronous page parameters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-considerations">8.3 Configuration considerations</h3>
+<ul>
+<li>Client code and environment must match the delivery endpoint.</li>
+<li>at_property must be present at page level in multi-tenant setups.</li>
+<li>Timeouts and default content protect against slow responses.</li>
+<li>Consent settings affect whether delivery and measurement occur.</li>
+<li>Identity must be consistent across Target, Analytics, and Edge.</li>
+<li>at.js must load early in HEAD with the pre-hiding snippet, and the data layer must come before it.</li>
+</ul>
+<h3 id="best-practices">8.4 Best practices</h3>
+<ul>
+<li>Separate environments and test in staging.</li>
+<li>Name everything consistently and document each activity.</li>
+<li>Keep the Global mbox lightweight.</li>
+<li>Guard the Order Confirmation mbox against duplicate firing.</li>
+<li>Retire finished activities.</li>
+<li>Send live values (inventory, price, conversions) with the request rather than relying on nightly feeds.</li>
+</ul>
+<h3 id="commonly-misunderstood-concepts">8.5 Commonly misunderstood concepts</h3>
+<ul>
+<li>The Global mbox doesn’t replace specific mboxes.</li>
+<li>Traffic allocation applies to qualified visitors only.</li>
+<li>Traffic Allocation splits visitors within one activity. A profile script attribute splits visitors across activities.</li>
+<li>Analytics and Target numbers are expected to differ somewhat.</li>
+<li>Empty recommendations usually mean criteria or catalog problems. A <code>no_content</code> response can mean results aren’t cached yet at the Edge.</li>
+</ul>
+<h2 id="chapter-9-independent-practice-exam">Chapter 9: Independent Practice Exam</h2>
+<p><strong>Note:</strong> these questions are independently created for practice. They are not actual or leaked Adobe exam questions. They are separate from the 49 questions in Part 5.</p>
+<p><strong>Q1 (Fundamentals).</strong> Which activity type shows different experiences to audience segments without statistically comparing outcomes? A. A/B test B. Multivariate test C. Experience Targeting D. Auto-Allocate</p>
+<p><strong>Q2 (Fundamentals).</strong> A test reports a traffic split that differs noticeably from the configured split. What is the most likely issue to investigate first? A. Statistical power B. Sample ratio mismatch C. Goal definition D. Recommendation criteria</p>
+<p><strong>Q3 (Integrations).</strong> What does Analytics for Target (A4T) primarily provide? A. Creation of Target audiences from Analytics data B. Reporting of Target activity and experience data in Adobe Analytics C. Replacement of Target’s delivery engine D. Automatic AEM component rendering</p>
+<p><strong>Q4 (Governance).</strong> Why should development, staging, and production activities be separated? A. To reduce license cost B. To test changes before they affect live visitors C. To increase traffic allocation D. To avoid using audiences</p>
+<p><strong>Q5 (Touchpoints).</strong> Which delivery method is most likely to avoid visible flicker for above-the-fold content? A. Client-side at.js with default timeout B. Server-side delivery with the decision made before rendering C. Email delivery at send time D. Client-side tags with no body-hiding</p>
+<p><strong>Q6 (Recommendations).</strong> A recommendation mbox returns no items for any visitor. Which check is the most appropriate first step? A. Change the algorithm B. Review criteria and catalog data C. Increase traffic allocation D. Rename the mbox</p>
+<p><strong>Q7 (Architecture).</strong> Why should the Global mbox be kept lightweight? A. It runs on every page where the library is loaded, so heavy logic slows every page B. It cannot hold any offers C. It only works for mobile apps D. It replaces AEM</p>
+<p><strong>Q8 (Architecture).</strong> An order confirmation page is sometimes refreshed by customers. What is the main risk for the Order Confirmation mbox? A. Lower traffic allocation B. Duplicate revenue and conversion counts C. Audience mismatch D. Flicker</p>
+<p><strong>Q9 (Troubleshooting).</strong> A visitor sees default content, but the activity is live and the audience matches. The mbox request fires and returns empty options. What is the most likely next check? A. Whether the page’s font loads B. The activity’s traffic allocation and audience matching for that visitor C. The Analytics report suite name D. The Recommendations catalog</p>
+<p><strong>Q10 (Troubleshooting).</strong> Production shows no mbox request at all, while staging works. Which area should you check first? A. The algorithm settings B. Whether the library and tag load on production, and any consent or script blocking C. The traffic split D. The goal definitions</p>
+<p><strong>Q11 (Scenario).</strong> A retailer wants logged-in pricing personalized without flicker, and layout tests that don’t need server data. Which design is most appropriate? A. Client-side only for everything B. Hybrid: server-side for pricing, client-side for layout tests, with a shared visitor identity C. Email delivery for both D. Global mbox for everything</p>
+<p><strong>Q12 (Scenario).</strong> A team reports that Target conversions are 15% higher than Analytics orders for the same period. What should you check first? A. Rewrite the activity B. Compare attribution windows, deduplication, identity, and time zones between the systems C. Stop the test D. Change the algorithm</p>
+<h3 id="answer-key-1">Answer key</h3>
+<p><strong>Q1: C.</strong> Experience Targeting shows different experiences to segments and doesn’t compare them statistically. A/B and MVT are tests. Auto-Allocate shifts traffic within a test.</p>
+<p><strong>Q2: B.</strong> A traffic split that differs from configuration is a sample ratio mismatch, which usually points to implementation or delivery problems. Statistical power and goals don’t change the actual split, and recommendation criteria don’t apply.</p>
+<p><strong>Q3: B.</strong> A4T sends Target data into Analytics for reporting. It doesn’t create Target audiences by itself, replace delivery, or render AEM components.</p>
+<p><strong>Q4: B.</strong> Separate environments let teams test changes before they affect live visitors. Cost, traffic allocation, and audiences aren’t the purpose.</p>
+<p><strong>Q5: B.</strong> Server-side delivery with the decision made before rendering avoids the browser-side swap that causes flicker.</p>
+<p><strong>Q6: B.</strong> Empty recommendations usually come from criteria that exclude everything or from catalog problems.</p>
+<p><strong>Q7: A.</strong> The Global mbox runs on every page where the library loads. Heavy logic there adds cost to every page.</p>
+<p><strong>Q8: B.</strong> Refreshes or back-button returns can re-fire the Order Confirmation mbox, causing duplicate revenue and conversions.</p>
+<p><strong>Q9: B.</strong> Once the activity is live and the mbox responds with empty options, check whether the visitor is in the allocated traffic and matches the audience.</p>
+<p><strong>Q10: B.</strong> No request at all means delivery isn’t happening. Check that the library and tag load on production and that consent or script blocking isn’t stopping them.</p>
+<p><strong>Q11: B.</strong> Server-side handles logged-in pricing without flicker. Client-side handles simple layout tests cheaply. A shared identity keeps decisions consistent.</p>
+<p><strong>Q12: B.</strong> Mismatches between Target and Analytics usually come from attribution windows, deduplication, identity differences, and time zones. Check these before changing or stopping the test.</p>
+<h2 id="chapter-10-final-exam-readiness-checklist">Chapter 10: Final Exam-Readiness Checklist</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>I can state the seven domains and their weights, and I’m prioritizing Troubleshooting (28%).</label></li>
+<li><label><input type="checkbox"></input>I can explain each activity type and select the right one for a scenario.</label></li>
+<li><label><input type="checkbox"></input>I can explain A4T, AEM, and Edge/AEP integration and their trade-offs.</label></li>
+<li><label><input type="checkbox"></input>I can describe governance controls, roles, and environment separation.</label></li>
+<li><label><input type="checkbox"></input>I can compare client-side, server-side, mobile, email, and API delivery.</label></li>
+<li><label><input type="checkbox"></input>I can explain catalogs, criteria, and recommendation configuration.</label></li>
+<li><label><input type="checkbox"></input>I can design around the Global mbox, Order Confirmation mbox, and hybrid implementations.</label></li>
+<li><label><input type="checkbox"></input>I can explain page-load order: data layer, VisitorAPI.js, at.js, pre-hiding snippet, then the global mbox.</label></li>
+<li><label><input type="checkbox"></input>I can explain the methods for getting data into Target and where each one is stored.</label></li>
+<li><label><input type="checkbox"></input>I can read a Target request and response and find the problem.</label></li>
+<li><label><input type="checkbox"></input>I can work through troubleshooting from symptom to root cause.</label></li>
+<li><label><input type="checkbox"></input>I’ve verified all <strong>[VERIFY]</strong> items against current Adobe documentation.</label></li>
+<li><label><input type="checkbox"></input>I’ve completed Part 5 and reviewed every explanation, including the items I flagged.</label></li>
+<li><label><input type="checkbox"></input>I’ve confirmed the exam code, prerequisites, and current passing score on Adobe’s certification page.</label></li>
+</ul>
+<h2 id="chapter-11-references-and-verification-list">Chapter 11: References and Verification List</h2>
+<p><strong>Primary references (Adobe Experience League):</strong> - Adobe Target product documentation (activities, mboxes, delivery, audiences) - Adobe Target Delivery API and server-side SDK documentation - Analytics for Target (A4T) documentation - AEM Target integration documentation - Adobe Experience Platform Web SDK and Edge documentation - Recommendations and catalog documentation - How at.js works, and at.js function reference - Adobe Certification page for AD0-E409 (exam code, format, prerequisites, passing score)</p>
+<p><strong>Items to verify before relying on them:</strong> 1. Exact exam code spelling (AD0-E409 versus ADO-E409) 2. Prerequisites for the Master level 3. Current passing score and question count 4. Reserved name and setup for the Order Confirmation mbox 5. Global mbox behavior and default timeout values 6. Current recommended library (at.js versus Web SDK) and its version support 7. Delivery API request and response schema 8. Supported server-side SDKs and mobile SDK relationship to Edge 9. Email integration options 10. Supported audience sources and activation requirements 11. Recommendation strategies and catalog ingestion methods 12. Debugging tool names and trace parameters 13. Approval workflow availability 14. The <strong>[VERIFY]</strong> questions listed in the Corrections table on the first page of this document (Q3, Q8, Q10, Q19, Q27, Q37, Q41, Q42, Q46)</p>
+<h1 id="part-5-consolidated-practice-questions-source-practice-pdf">Part 5: Consolidated Practice Questions (Source: Practice PDF)</h1>
+<p>These 49 questions come from your practice PDF. The correct answers are the ones the PDF marks as correct. Each question shows the recorded score from the PDF. Questions 35 to 49 come first, as they do in the PDF, followed by questions 1 to 34.</p>
+<p><strong>Status key:</strong> <em>Consistent</em> means the answer matches the consolidated answer key in Part 2 and this guide’s explanation. <em>Verify</em> means the item is on the list of items to check against current Adobe documentation.</p>
+<h2 id="question-35">Question 35</h2>
+<p>An eCommerce client has Adobe Target correctly installed on their website. They have an auto-created global Target request (mbox) that runs early on in the page load but after the data layer has initialized. Many of the items in the data layer are applied to the auto-created global Target request (mbox).</p>
+<p>On product pages, the product ID is loaded into the data layer only after the Page Load DOM event has triggered. The client needs to be able to send the product ID to Adobe Target when it has loaded and receive any experiences the user should see based on that product ID.</p>
+<p>They do not want duplicate experiences that have already been received by the auto-created global Target request (mbox).</p>
+<p>According to best practices, what should the client do?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Set up a product feed to ingest the product data each day at midnight.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Create a second Target global mbox request including the product ID when available.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Delay the auto-created Target global mbox request until after the product ID has loaded into the data layer.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Create a second Target request (mbox) called ‘product-data’ including the product ID when available.</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The global mbox has already fired, so the product ID needs its own mbox once it exists. Delaying the global mbox is not the recommended pattern, and a second global mbox would repeat the same request.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-36">Question 36</h2>
+<p>An eCommerce company wants to track order conversions in real-time, and then show recommendations based on conversions.</p>
+<p>Which method should be recommended to meet the customer’s requirement?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Script Profile Attributes</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data Providers</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Target request (mbox) parameters</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>In-page Profile Attributes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Real-time conversion data is passed into Target as mbox parameters so recommendations can use it on the same request. Data providers are for asynchronous third-party data before render, not conversion data.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-37">Question 37</h2>
+<p>The eCommerce team wants to run an A/B test to promote the company email newsletter, but only to first time visitors who are not logged in and have not arrived at the website with an email campaign id.</p>
+<p>• Analytics for Target (A4T) has been configured correctly.</p>
+<p>• Adobe Analytics has a segment that meets these requirements.</p>
+<p>The person setting up the Adobe Target Activity is unable to select Adobe Analytics as the reporting source. The Adobe Target Architect has verified the user does belong to a group with access to both Analytics and Target.</p>
+<p>To which other group should the user belong?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adobe Target Product Admin</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Enterprise User Permissions Group</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Web Services Access Group in Adobe Analytics</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Choosing Analytics as the reporting source requires membership in the Web Services Access Group in Adobe Analytics. Enterprise permissions alone are not enough.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-38">Question 38</h2>
+<p>A developer recently created a new criterion for the recommendation service.</p>
+<p>After implementing a Recommendations Activity using the new criterion, the developer is unable to view the recommendation.</p>
+<p>The debugger gives the following response:</p>
+<p>no_content</p>
+<p>Assuming results are ready for the requested algorithm/key combination, what is a possible reason for this error code?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Results are not yet cached at the nearest Edge server.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>The Design contains an error.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>The Activity is targeting the wrong pages.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> A no_content response for a new recommendation criterion can mean the results are not yet cached at the nearest Edge server. Wait for caching, then retest.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-39">Question 39</h2>
+<p>A Target developer is testing a new recommendations design but is observing an issue where the dynamic product information is not being replaced in the html code.</p>
+<p>Based on the code snippet below of the Recommendations design, what should the architect recommend the developer do to resolve the issue?</p>
+<pre><code>&lt;div class=&quot;at-table-column&quot;&gt;
+  &lt;a href=&quot;entity1.pageUrl&quot;&gt;
+    &lt;img src=&quot;entity1.thumbnailUrl&quot; class=&quot;at-thumbnail&quot;/&gt;
+    &lt;br/&gt;&lt;h3&gt;entity1.name&lt;/h3&gt;
+    &lt;br/&gt;&lt;p class=&quot;at-light&quot;&gt;entity1.message&lt;/p&gt;
+    &lt;br/&gt;&lt;p class=&quot;at-light&quot;&gt;entity1.value&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Append “$” to the front of all of the entity references.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Append “#” to the front of all of the entity references.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Append “jQuery” to the front of all of the entity references.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Entity references in a Recommendations design template need a $ prefix before they are replaced with dynamic product data.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-40">Question 40</h2>
+<p>A client notices that JSON Offers are not being applied after adobe.target.applyOffer() is called. The Adobe Experience Cloud Debugger confirms the client is qualified for the Activity.</p>
+<p>How should an Adobe Target Architect explain the process of reading a JSON Offer from an Adobe Target request (mbox)?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Use a Data Provider to read the JSON Offer passed as an attribute to the provider method.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use the adobe.target.event.REQUEST_SUCCEEDED event to read the JSON Offer from the e.detail object provided to the event listener.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Filter the actions array passed to adobe.target.getOffer() for all actions that contain a setContent attribute set to true. Then, read the JSON Offer from the content property on the same action object.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Filter the actions array provided to adobe.target.getOffer() for all actions that have a setJson attribute set to true. Then, read the JSON Offer from the content property on the same action object.</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> For JSON offers, filter the actions passed to getOffer() for actions with setJson set to true, then read the JSON from the content property of that action.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-41">Question 41</h2>
+<p>A marketer has set up an Experience Targeting activity for their regional website targeting users from that region using Target’s Geo Targeting.</p>
+<p>After setting up the test the marketer has shared the Activity QA URL with the business stakeholders which looks like:</p>
+<p>https://www.regionalwebsite.com/?at_preview_token=m4o9ne46l4_vETG-Mi8Fn4sfdKGAJyg5DsJ3XxNj67A&amp;at_preview_index=1_2&amp;at_preview_listed_activities_only=true&amp;at_preview_evaluate_as_true_audience_ids=2161154</p>
+<p>However, the stakeholders are not able to see the experience using the QA URLs.</p>
+<p>What are two possible reasons the activity is not seen in QA? (Choose two.)</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The activity is created using a different at_property than the regional website.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>The users are using the Company’s VPN that is changing their actual location.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>The activity is created using “URL is” under page delivery options in VEC.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>The users are not located in the region for which the activity has been created.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The activity can be hidden in QA if it was created under a different at_property or if the URL rule (‘URL is’) does not match the page. A VPN can change geo-based targeting, but the practice key marks only the two options above as correct.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-42">Question 42</h2>
+<p>A client has a requirement to promote a discount offer to reorder the last purchased product by the user. The recommendation is to use Adobe Target HTML Offers with Dynamic Data. Last product purchased information is available in the data layer when a user logs into the web-application. From the data layer, the information is passed in a Target request as a profile attribute. The HTML Offer has the following code:</p>
+<p>The offer is not rendering the Dynamic Data.</p>
+<p>What is the correct syntax for the Dynamic Data?</p>
+<pre><code>&lt;h1&gt; Get a discount when you buy ${user.lastProductPurchased} again. Click here for further details! &lt;/h1&gt;</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>${user.lastProductPurchased encode=“escape”}</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>${profile.lastProductPurchased}</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>${campaign.lastProductPurchased}</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Profile attributes in dynamic data use the profile namespace. The practice key for this question is ${profile.lastProductPurchased}.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-43">Question 43</h2>
+<p>A client wishes to create an experience in Adobe Target that modifies content within an iframe on their website, but is unable to modify the content in the Visual Experience Composer (VEC), despite the fact that the content within the iframe is coming from the same domain as the page in which it is embedded.</p>
+<p>Which approach will give the client the ability to create experiences within an iframe?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Implement Target within the iframe content.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Utilize a form-based activity type.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Create a regional Target request (mbox) around the iframe on the page.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Enable the Enhanced Experience Composer in Target Setup.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Content inside an iframe is a separate document. Target must be implemented inside the iframe content to create experiences there.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-44">Question 44</h2>
+<p>A client has set up a Redirect Offer within Adobe Target with Adobe Analytics as the reporting source. Data for the redirect landing page is not showing in the report. The Adobe Target Architect has confirmed that the three required libraries meet minimum version requirements and are present and implemented in the correct order on both pages.</p>
+<p>What should the Adobe Target Architect do next?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Include additional code in the redirect offer to encode the URL parameters.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Verify that the correct adobe_mc_sdid URL parameter is present on the redirect page.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Verify that the correct adobe_mc_ref URL parameter is present on the redirect page.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Analytics redirect reporting depends on the adobe_mc_sdid parameter on the landing page. Without it, the redirect landing page does not appear in the report.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-45">Question 45</h2>
+<p>A client implemented a Profile Script to define a new profile attribute based on Target request (mbox) parameters coming from different 3rd-party systems. The client complains that the wrong experiences are shown to the site visitors.</p>
+<p>What can the Adobe Target Architect do to compare profile values before and after executing the Profile Script?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Use the mboxTrace debugging method.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Use console.log to output values within a Profile Script.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Use Activity QA URLs and check browser developer tools.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use Profile Scripts as Response Tokens.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> mboxTrace shows Target request and profile details, so profile values can be compared before and after the profile script runs.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-46">Question 46</h2>
+<p>The optimization team is using Profile parameters and Profile Scripts and is struggling to validate their values.</p>
+<p>Which method should the architect recommend?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Add mboxDebug=1 to the page URL to output logs and Target request (mbox) details.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use the mboxTrace debugging tool to debug Profile Scripts.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Execute scripts as javascript in the browser console before saving as Profile Scripts.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use console.log statements in profile scripts to output values to the browser.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> mboxTrace is the debugging tool for profile scripts. The practice key does not mark running scripts in the console as correct.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-47">Question 47</h2>
+<p>An Adobe Target activity uses a new Experience Cloud audience previously created in Adobe Analytics. The activity is live, but according to the activity reporting, no visitors have yet qualified for the activity. The architect wants to determine if it is ready for use in Adobe Target.</p>
+<p>Where can an Adobe Target Architect view the initial processing status of the Adobe Analytics-created Experience Cloud audience to verify readiness?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Segments in Adobe Audience Manager</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Audiences in Adobe Target</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Audience Library in People Core Service</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> The Audience Library in People Core Service shows the processing status of Experience Cloud audiences.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-48">Question 48</h2>
+<p>A client has a multi-tenant Adobe Target setup, where each business unit has their Workspace and properties defined in Adobe Target.</p>
+<p>What needs to be configured on a page before an activity can be applied to that page?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target request (mbox) at_property parameter needs to be populated at a page level.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Target request (mbox) custom parameter needs to be populated with Activity ID.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Target request (mbox) profile parameter needs to be populated at a page level.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Target request (mbox) user.sessionId parameter needs to be populated at a page level.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> In a multi-tenant setup, at_property must be populated at page level so the request maps to the correct property and its activities.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-49">Question 49</h2>
+<p>Refer to the exhibit:</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Client Product Page&lt;/title&gt;
+
+&lt;script&gt;
+  pageURL = document.location.pathname;
+  var dataLayer = {
+     page: urlPAGE;
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Client HTML --&gt;
+  &lt;!-- Pre hiding snippet --&gt;
+  &lt;script src=&quot;/scripts/at.js&quot; async&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>A client states that people within the organization are reporting page “flicker” whenever an Adobe Target campaign is running.</p>
+<p>Based on the code exhibit, what should the Architect do to fix this issue?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Correct the “page” variable assignment inside the dataLayer object.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Move the at.js library script and pre hiding snippet to the &lt;HEAD&gt;.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Remove the “async” flag to load the at.js library synchronously.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> The at.js library and the pre-hiding snippet must sit in HEAD so content is hidden before render. An async script loaded at the end of the body causes flicker.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-1">Question 1</h2>
+<p>A Client wants to display a real-time Abandoned Cart message on the homepage when a customer reaches the “Review Order” page but does not complete the order. The Abandoned Cart message should contain the product categories, total price, and a link back to the cart contents. The client also wants to report on the activity’s success using Adobe Analytics.</p>
+<p>What does the architect need to implement to support this requirement?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Analytics segments</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Target segments</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Multiple profile scripts</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Real-time cart data set on one page and used on another page requires profile scripts, because the value must persist to the visitor profile across requests.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-2">Question 2</h2>
+<p>The client ran A/B Test activities on their website for a year without the Tag Management System. The client is now using a data layer and asks the Adobe Target Architect to use values from the data layer for website personalization.</p>
+<p>Where should the Adobe Target Architect recommend placing the data layer?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>At the bottom of the &lt;BODY&gt; section before referencing at.js</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>At the bottom of the &lt;BODY&gt; section after referencing at.js</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>In the &lt;HEAD&gt; section after referencing at.js</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>In the &lt;HEAD&gt; section before referencing at.js</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The data layer must be in HEAD before at.js so that at.js and the scripts can read the values when they run.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-3">Question 3</h2>
+<p>A client would like to test alternate images within their email campaigns.</p>
+<p>One requirement is for all the images to link to the same landing page.</p>
+<p>Which implementation method will achieve this goal?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Redirector</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>AdBox</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>getOffer/applyOffer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Only the image changes and the link stays fixed, which is the AdBox behavior. A Redirector changes the landing page, and getOffer/applyOffer needs custom code.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-4">Question 4</h2>
+<p>Once the Target request (mbox) is received by Adobe Target, what gets executed first?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DOM Manipulation</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Profile scripts</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Content scripts</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Audience qualification</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Profile scripts run first on Target’s server, before audiences are qualified and the activity is selected.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-5">Question 5</h2>
+<p>A client would like to run two activities on their homepage and does not want these activities to overlap.</p>
+<p>Which feature should be used to separate visitors into two distinct audiences?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Traffic Allocation</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Data Providers</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Profile Script</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> A profile script can set an attribute that each audience checks, which splits visitors across two activities. Traffic Allocation only splits visitors within one activity.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-6">Question 6</h2>
+<p>A retail company is planning to use Automated Personalization from Adobe Target to personalize content based on user visits.</p>
+<p>What are two visit-based features that Automated Personalization supports? (Choose two.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mbox parameters</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Experience Cloud Audiences</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Rawbox implementations</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Emails</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Visit-based features in Automated Personalization use mbox parameters and Experience Cloud audiences.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-7">Question 7</h2>
+<p>A financial services website has been struggling to run their personalization activities effectively. Too many of their customers are only using the website to pay their bills once a month and are consistently showing up in the reports as New Visitors.</p>
+<p>Which option should the Adobe Target Architect recommend to fix this problem?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Increase the Target profile expiration from the default of 14 days to a value greater than one month.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Migrate Experience Targeting activities to Automated Personalization activities to capitalize on machine learning benefits.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Modify the audience criteria to include returning visitors to target website traffic at every stage of the customer journey.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The default profile expiration is 14 days. Monthly visitors look new when their profile expires first, so the expiration must be longer than one month.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-8">Question 8</h2>
+<p>An optimization team is struggling to manually update the image tags in the HTML code of the page and would prefer to use the Visual Experience Composer (VEC) to more easily swap images.</p>
+<p>Which two steps are required to ensure the marketing team can quickly swap the images? (Choose two.)</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Share image folders from Adobe Experience Cloud Assets Core Service with Adobe Target.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Contact Adobe Customer Care to provision Image Offers.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Upload image files to Adobe Experience Cloud Assets Core Service.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Enable Image Offers in Adobe Target &gt; Setup.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Contact Adobe Customer Care to request the Scene7 Account Configuration.</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Image swapping in VEC needs images uploaded to Assets Core Service and a Scene7 account configuration from Customer Care. The practice key does not mark ‘Enable Image Offers in Adobe Target &gt; Setup’ as correct.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-9">Question 9</h2>
+<p>A client wants to set up an Activity using Analytics for Target (A4T) and needs to send Target-based conversion data to Adobe Analytics.</p>
+<p>Which metric name will this data be given in Adobe Analytics?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Activity Impressions</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Activity Conversions</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Activity Goals</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> A4T conversions appear in Adobe Analytics under the Activity Conversions metric.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-10">Question 10</h2>
+<p>A client wants to personalize their homepage using segments sourced from Adobe Audience Manager (AAM) without affecting page-load performance.</p>
+<p>Which capability enables this functionality?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AAM Dynamic Integration Library (DIL)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Experience Cloud ID Service</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Analytics for Target (A4T)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The practice key marks the Experience Cloud ID Service as the capability that lets AAM segments load without slowing the page. Verify this against current documentation, because the AAM Dynamic Integration Library is a plausible alternative.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-11">Question 11</h2>
+<p>An Adobe Target architect is designing an implementation that requires the use of Analytics for Target (A4T).</p>
+<p>Which script must be loaded first?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>at.js</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>appMeasurement.js</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>VisitorAPI.js</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> VisitorAPI.js creates the Experience Cloud ID that Target and Analytics use, so it must load before at.js.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-12">Question 12</h2>
+<p>A client wishes to increase content velocity and reuse by utilizing content created in Adobe Experience Manager (AEM) within Adobe Target Automated Personalization activities.</p>
+<p>What should the architect recommend?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Use the Adobe Target createOffer API to pass JSON Offers to Adobe Target.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use AEM Experience Fragments as Adobe Target Offers.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Use AEM Content Fragments as Adobe Target Offers.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> AEM Experience Fragments can be exported to Target as offers, which provides reusable content for Automated Personalization activities.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-13">Question 13</h2>
+<p>A client has recently upgraded their Adobe Experience Manager (AEM) instance to version 6.5 and would like to utilize Experience Fragments (XFs) in Adobe Target.</p>
+<p>Which two actions are prerequisites for exporting XFs from AEM into Adobe Target? (Choose two.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Configure at.js to load in the site header template in AEM.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Add the Cloud Services for Adobe Target in AEM.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Configure the AEM Link Externalizer.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Provision Analytics for Target (A4T) Integration.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Enable Response Tokens in Adobe Target.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The prerequisites for exporting Experience Fragments are the Cloud Services for Adobe Target configuration in AEM and the AEM Link Externalizer, which resolves the URLs.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-14">Question 14</h2>
+<p>A credit card company would like to use Adobe Target to personalize their website for visitors who have used their platinum card to purchase airline tickets with their affiliate booking company. They also need to combine this data with anonymous third-party attributes.</p>
+<p>What should the Adobe Target Architect recommend as the audience source for this personalization activity?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adobe Campaign</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Adobe Target</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Adobe Audience Manager</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Anonymous third-party data combined with first-party data is handled through Adobe Audience Manager.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-15">Question 15</h2>
+<p>A client wishes to execute their A/B Testing activities on the homepage and combine the testing results with additional traffic/behavior that resides in Adobe Analytics.</p>
+<p>What should the architect do to support this requirement?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Implement server-side forwarding in Adobe Analytics.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Import Adobe Analytics segments using Experience Cloud Audiences.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Implement Analytics for Target (A4T) for results and reporting.</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> A4T sends the results of A/B tests into Analytics, where they can be combined with Analytics traffic and behavior data.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-16">Question 16</h2>
+<p>A client would like to create an Activity that shows a promotional message to visitors on the checkout success page of their site when the total value of the visitor’s order is over $100. The visitor must be identified based on information gathered on the same Target request (mbox) as the page the experience is served from.</p>
+<p>Which Audience type/source is best suited to this type of scenario?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adobe Analytics Audiences</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Audience Library Audiences (People Core Service)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Adobe Target Audiences</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Adobe Experience Cloud Device Co-Op Audiences</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Target audiences use data gathered on the same Target request, such as mbox parameters, so the checkout page can use the order value sent on that request.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-17">Question 17</h2>
+<p>A client is getting an error message in the Visual Experience Composer (VEC). The message indicates that no property is associated with a particular activity, even though there is a property assigned.</p>
+<p>What causes this error message?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The client is assigned to the wrong User Group.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>The activity is in the incorrect Workspace.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>The wrong entity.id is set for the activity.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>at_property is missing in the Adobe Target request (mbox).</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The error appears when at_property is missing from the Target request, so Target cannot match the request to the property that holds the activity.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-18">Question 18</h2>
+<p>A retail company is planning to use Adobe Target to implement A/B Testing. They are concerned that bot traffic might impact the results.</p>
+<p>What are two ways that Adobe Target handles known bot traffic? (Choose two.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It does not create or retrieve a visitor profile.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>It logs data to be sent to the Adobe Experience Platform.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>It does not log an activity visit for reporting.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>It uses bot traffic in modeling and serving personalized content.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Known bots do not create or retrieve a visitor profile, and they do not log an activity visit for reporting.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-19">Question 19</h2>
+<p>The reporting team has been struggling to segment internal development and stage environment traffic from the live website data in Adobe Target reporting. This is impacting their ability to evaluate the statistical significance of activities.</p>
+<p>Which setting should the Adobe Target Architect review and update to handle this problem?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hosts</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Custom Global Target request (mbox)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Properties</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Custom Response Tokens</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The practice key marks the Hosts setting as the one to review for separating development and staging traffic. Verify this against current documentation.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-20">Question 20</h2>
+<p>A client wishes to serve Adobe Target content to their mobile application. They prefer to manage the content using the Adobe Target UI and have the mobile application developers apply the necessary formatting/design within the application.</p>
+<p>What should the Adobe Target Architect recommend?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Build JSON Offers within Adobe Target.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Add HTML offer using the Visual Experience Composer.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Expose Experience Fragments to the mobile application.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> JSON offers are built in Target, and the app developers apply the formatting. HTML offers would be styled in the VEC rather than in the app.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-21">Question 21</h2>
+<p>When specifying a server-side implementation of Adobe Target, which ID will be generated if not explicitly defined?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>thirdPartyId</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>aamUUID</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>indexId</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>tntId</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> If a server-side implementation does not specify an ID, Target generates a tntId.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-22">Question 22</h2>
+<p>A client would like to use at.js 2.x to integrate third-party weather data from a service that provides the temperature of the site visitor’s location based on IP. This will allow the client to promote products to visitors based on their local weather.</p>
+<p>The third-party weather request needs to resolve with the temperature before the global Target request (mbox) happens. A Data Provider will be used to gather this data in lieu of targetPageParams().</p>
+<p>Why should Data Providers be used instead of targetPageParams()?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The window.targetPageParams() function disables body hiding when used.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Content hiding is enabled until the Data Provider resolves using the callback function passed to the Data Provider.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Data Providers offer a built in XHR function to make a third party request to the weather service.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>The targetPageParams() function is not supported in at.js 2.x.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Content hiding stays in place until the Data Provider resolves through its callback. This lets the weather temperature be available before the global mbox request.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-23">Question 23</h2>
+<p>An eCommerce website uses Adobe Target Recommendations. The modules on the website consistently recommend popular products that are out of stock despite having a filter set correctly that excludes products with zero inventory.</p>
+<p>• There is currently a custom CSV product feed setup that is ingested on a daily basis and includes inventory data correct at midnight every day.</p>
+<p>• The website has a live inventory value displayed on each product page, which is also included in the data layer.</p>
+<p>Which option should the client perform to ensure that products are not recommended that have zero inventory on as close to a real-time basis as possible?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Create a Collection of items that regularly sell out quickly and apply this collection to the criteria of each Recommendations activity.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Change the product feed to use Analytics Classifications instead of the CSV product feed.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Set the entity.inventory Target request (mbox) parameter value to the current live inventory value from the data layer on the Target request that is fired on the product page.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Change the product feed to use their Google Product feed data instead of the CSV product feed currently implemented. Set this to ingest at the same interval as the custom CSV product feed.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Setting entity.inventory from the live value in the data layer on the request that fires on the product page gives near-real-time inventory, instead of a nightly CSV.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-24">Question 24</h2>
+<p>The client wants to be able to recommend high-profit-margin products on low-profit-margin product pages.</p>
+<p>Which method should be used to pass profit margin product data to Adobe Target Recommendations?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>URL parameter</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Feeds Entity</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Data Source</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> The feeds entity carries product attributes, such as profit margin, that can be passed to Recommendations.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-25">Question 25</h2>
+<p>An Adobe Target Architect sends product information via a Target request (mbox) in order to update the product data inside the product catalog for a specific geographic market of a client’s website. Each geographic market has a unique product catalog, and each market has a distinct top level domain for its site.</p>
+<p>Which information links their Target request (mbox) to a specific product catalog in Adobe Target Recommendations?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A custom Target request (mbox) parameter</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>The at_property Target request (mbox) parameter</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fully qualified domain name (including sub domain)</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Fully qualified top level domain (excluding sub domain)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> The fully qualified domain name, including the subdomain, links the request to one product catalog. Each market has its own domain and its own catalog.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-26">Question 26</h2>
+<p>A digital retail client wishes to show an Adobe Target Recommendations “Most Popular Products” component on their homepage. They wish to use the same data used for organic search product messaging, as well as automate the inclusion of the product data. The client also wants to have Adobe Analytics capture recommended product click-throughs from the web and the “Most Popular Products” component.</p>
+<p>Which Adobe Target Recommendations feature should the architect recommend?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Manual upload of a CSV file</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Import Experience Cloud Audiences</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Google Product Feeds</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> Google Product Feeds reuse the same product data as organic search messaging and automate the inclusion of product data.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-27">Question 27</h2>
+<p>A client wants to display the most-purchased products in a specific category on that category’s landing page.</p>
+<p>Which Target request (mbox) parameter should be populated on that page?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>entity.id with a single value only</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>entity.categoryId with one or more values separated by a comma</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>entity.id with one or more values separated by a comma</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>entity.categoryId with a single value only</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> On a category landing page, entity.categoryId takes a single value that must match the product page value exactly. Verify this against current documentation.</p>
+<p><strong>Status:</strong> Verify</p>
+<h2 id="question-28">Question 28</h2>
+<p>Which two Adobe Target activity types can be created in the Mobile App Visual Experience Composer? (Choose two.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Experience Targeting</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Multivariate Test</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>A/B Test</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Recommendations</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Experience Targeting and A/B tests can be created in the Mobile App VEC. Multivariate tests and Recommendations cannot.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-29">Question 29</h2>
+<p>In an iOS native application with an Adobe Target implementation, what are the two primary methods to create a targeted location? (Choose two.)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>targetLoadRequest</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>targetCreateLocation</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>targetLoadRequestWithName</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>targetCreateRequest</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>targetCreateRequestWithName</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> On iOS, targetLoadRequest and targetCreateRequestWithName are the two primary methods for targeted locations.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-30">Question 30</h2>
+<p>A Healthcare company wants to develop personalized experiences based on the age and location of the visitor. The Optimization Lead wants to use JSON to pass these parameters into Adobe Target. This requires additional targeting/context information to be passed into Adobe Target.</p>
+<p>Which JavaScript function should be used to pass parameters to the auto-created global Target request (mbox)?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>adobe.target.triggerView()</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>registerExtension</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>adobe.target.getOffers()</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>targetPageParams()</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> targetPageParams() sends page-level data to the auto-created global mbox, so it is the function for passing JSON parameters such as age and location.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-31">Question 31</h2>
+<p>A client has recently implemented Adobe Target for an Android application that uses AEP Mobile SDK and passes a custom visitor ID from a CRM system.</p>
+<p>Which API method can be used to retrieve the custom visitor ID from Adobe Target?</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>getTntId()</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>getThirdPartyId()</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Visitor.getInstance(‘YOUR-UNIQUE-ORG-ID@AdobeOrg’).getMarketingCloudVisitorID();</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> getThirdPartyId() returns the custom visitor ID that was passed in from the CRM system. getTntId() returns Target’s own ID.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-32">Question 32</h2>
+<p>A client has users that authenticate on their site on every visit, but they also tend to utilize the site on multiple different devices, including laptops, mobile, and tablets at different times of the day. The client wants to ensure that a user has a consistent experience of their site across each of their devices, including showing the same user the same experience from an Adobe Target activity, regardless of what device they have authenticated on.</p>
+<p>Which two options will ensure that a user is delivered the same experience across all of their authenticated devices. (Choose two.)</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Populate the mbox3rdPartyId Adobe Target request (mbox) parameter with the user’s ID.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Populate a custom Adobe Target request (mbox) parameter with the user’s email address.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Use the Adobe Experience Cloud Visitor API method setCustomerIDs with the user’s ID and authenticated state.</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="even">
+<td>Use Adobe Experience Cloud Triggers to know when a specific user is visiting the site.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Utilize Customer Attributes in the Adobe Experience Cloud.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> The mbox3rdPartyId parameter and the Visitor API setCustomerIDs call with the authenticated state together give the same experience across devices.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-33">Question 33</h2>
+<p>A client would like to use the Category Affinity feature of Adobe Target.</p>
+<p>Which Target request (mbox) parameter should be used to record category information?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>entity.categoryId</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>user.categoryId</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>profile.categoryId</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>user.categoryAffinities</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 100%</p>
+<p><strong>Why:</strong> Category Affinity is recorded with the user.categoryId mbox parameter.</p>
+<p><strong>Status:</strong> Consistent</p>
+<h2 id="question-34">Question 34</h2>
+<p>A retail company wants to track which store is the user’s preferred store, which is only available in the site’s data layer.</p>
+<p>Which method should be recommended to bring the preferred store into Adobe Target in a single action?</p>
+<table>
+<thead>
+<tr class="header">
+<th>Answer option</th>
+<th>Correct?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>People Core Services Customer Attributes</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Target request (mbox) profile attributes</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr class="odd">
+<td>Data Providers</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Script profile parameters</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recorded score:</strong> 0%</p>
+<p><strong>Why:</strong> The preferred store is only in the data layer, so it is sent as a Target request (mbox) profile attribute in one action.</p>
+<p><strong>Status:</strong> Consistent</p>
+</body>
+</html>

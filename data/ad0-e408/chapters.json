@@ -1,0 +1,267 @@
+{
+  "certificationId": "ad0-e408",
+  "chapters": [
+    {
+      "id": "planning_strategy",
+      "title": "Planning & Strategy",
+      "domain": "Planning & Strategy",
+      "weight": 26,
+      "overview": "Understand business objectives, identify optimization opportunities, construct hypotheses, select metrics, and define audiences for Target activities.",
+      "topics": [
+        "Business KPI alignment",
+        "Hypothesis construction",
+        "Activity type selection",
+        "Sample size calculations",
+        "Audience attribute selection",
+        "Analytics for Target (A4T) setup",
+        "Testing best practices"
+      ],
+      "content": {
+        "sections": {
+          "1.1 Business KPIs and Performance Analysis": {
+            "description": "1.1 Business KPIs and Performance Analysis",
+            "fullContent": "1.1 Business KPIs and Performance Analysis\nKey Performance Indicators are measurable values showing how effectively business goals are being achieved.\nConnecting Business Goals to Target Implementation\nE-Commerce Goal Chain:\n\u2022 Business Goal: Increase average order value\n\u2022 KPI: AOV (Average Order Value)\n\u2022 Target Success Metric: Revenue (RPV)\n\u2022 Activity Type: Personalization",
+            "keyPoints": [
+              "1.1 Business KPIs and Performance Analysis\nKey Performance Indicators are measurable values showing how effectively business goals are being achieved.\nConnecting Business Goals to Target Implementation\nE-Commerce Goal Chain:\n\u2022 Business Goal: Increase average order value\n\u2022 KPI: AOV (Average Order Value)\n\u2022 Target Success Metric: Revenue (RPV)\n\u2022 Activity Type: Personalization"
+            ]
+          },
+          "1.2 Optimization and Experimentation Strategies": {
+            "description": "1.2 Optimization and Experimentation Strategies",
+            "fullContent": "1.2 Optimization and Experimentation Strategies\nActivity Type Selection Guide\nA/B Testing\n\u2022 When: Comparing 2-3 designs\n\u2022 Purpose: Find statistical winner\n\u2022 Requires: Sample size + 95% confidence\nExperience Targeting (XT)\n\u2022 When: Different audiences need different messaging\n\u2022 Purpose: Audience-specific mapping\n\u2022 No: Statistical comparison\nMultivariate Testing (MVT)\n\u2022 When: Testing 3+ elements simultaneously\n\u2022 Requires: Very high traffic (500K+)\n\u2022 Duration: 4-8 weeks\nAuto-Target\n\u2022 When: ML personalization per visitor\n\u2022 Personalizes: Whole page experience\n\u2022 Variations: 2-5 complete designs\nAutomated Personalization (AP)\n\u2022 When: ML offer combinations\n\u2022 Multiple: Offers in multiple locations\n\u2022 Complexity: Very high traffic (1M+)\nRecommendations\n\u2022 When: Product/content recommendations\n\u2022 Algorithms: Items viewed, trending, popular\n\u2022 Ongoing: Continuous optimization",
+            "keyPoints": [
+              "1.2 Optimization and Experimentation Strategies\nActivity Type Selection Guide\nA/B Testing\n\u2022 When: Comparing 2-3 designs\n\u2022 Purpose: Find statistical winner\n\u2022 Requires: Sample size + 95% confidence\nExperience Targeting (XT)\n\u2022 When: Different audiences need different messaging\n\u2022 Purpose: Audience-specific mapping\n\u2022 No: Statistical comparison\nMultivariate Testing (MVT)\n\u2022 When: Testing 3+ elements simultaneously\n\u2022 Requires: Very high traffic (500K+)\n\u2022 Duration: 4-8 weeks\nAuto-Target\n\u2022 When: ML personalization per visitor\n\u2022 Personalizes: Whole page experience\n\u2022 Variations: 2-5 complete designs\nAutomated Personalization (AP)\n\u2022 When: ML offer combinations\n\u2022 Multiple: Offers in multiple locations\n\u2022 Complexity: Very high traffic (1M+)\nRecommendations\n\u2022 When: Product/content recommendations\n\u2022 Algorithms: Items viewed, trending, popular\n\u2022 Ongoing: Continuous optimization"
+            ]
+          },
+          "1.3 Hypothesis Construction": {
+            "description": "1.3 Hypothesis Construction",
+            "fullContent": "1.3 Hypothesis Construction\nHypothesis Formula: \"If we [ACTION], then [OUTCOME] because [REASONING]\"\n\u26a0\ufe0f Critical Exam Concept: Hypotheses must be testable, specific, reasonable, measurable, and realistic. Base them on data or user research, not intuition.",
+            "keyPoints": [
+              "1.3 Hypothesis Construction\nHypothesis Formula: \"If we [ACTION], then [OUTCOME] because [REASONING]\"\n\u26a0\ufe0f Critical Exam Concept: Hypotheses must be testable, specific, reasonable, measurable, and realistic. Base them on data or user research, not intuition."
+            ]
+          },
+          "1.4 Success Metrics Identification": {
+            "description": "1.4 Success Metrics Identification",
+            "fullContent": "1.4 Success Metrics Identification\nMetric Type\nDefinition\nExamples\nUse When\nConversion\nUser completed desired action\nForm submission, purchase, signup\nDiscrete actions matter\nRevenue\nMonetary value generated\nRPV, AOV, total sales\nMonetization is goal\nEngagement\nInteraction and participation\nTime on site, clicks, scroll depth\nEngagement drives value\n\u2713 Primary Metrics: Usually ONE per activity, directly tied to business KPI\n\u2713 Secondary Metrics: Multiple allowed, provide supporting context",
+            "keyPoints": [
+              "1.4 Success Metrics Identification\nMetric Type\nDefinition\nExamples\nUse When\nConversion\nUser completed desired action\nForm submission, purchase, signup\nDiscrete actions matter\nRevenue\nMonetary value generated\nRPV, AOV, total sales\nMonetization is goal\nEngagement\nInteraction and participation\nTime on site, clicks, scroll depth\nEngagement drives value\n\u2713 Primary Metrics: Usually ONE per activity, directly tied to business KPI\n\u2713 Secondary Metrics: Multiple allowed, provide supporting context"
+            ]
+          },
+          "1.5 Audience Requirements and Targeting": {
+            "description": "1.5 Audience Requirements and Targeting",
+            "fullContent": "1.5 Audience Requirements and Targeting\n\ud83d\udd34 CRITICAL EXAM SKILL: Selecting audience attributes that match business goals, not just demographics. This appears frequently in exam questions.\nExample: Lead Generation for Financial Services\n\u2022 \u274c WRONG: Social media engagement, general demographics\n\u2022 \u2705 RIGHT: Financial goals, investment preferences, risk tolerance",
+            "keyPoints": [
+              "1.5 Audience Requirements and Targeting\n\ud83d\udd34 CRITICAL EXAM SKILL: Selecting audience attributes that match business goals, not just demographics. This appears frequently in exam questions.\nExample: Lead Generation for Financial Services\n\u2022 \u274c WRONG: Social media engagement, general demographics\n\u2022 \u2705 RIGHT: Financial goals, investment preferences, risk tolerance"
+            ]
+          },
+          "1.6 Adobe Target vs. Adobe Analytics Reporting": {
+            "description": "1.6 Adobe Target vs. Adobe Analytics Reporting",
+            "fullContent": "1.6 Adobe Target vs. Adobe Analytics Reporting\nFeature\nTarget Native\nAnalytics with A4T\nMetrics Available\nBasic set (visits, conversion, lift)\nAll Analytics events, calculated metrics\nSegmentation\nActivity-specific audiences only\nAny Analytics segment\nFlexibility\nLimited\nAdvanced Analysis Workspace\nSetup Complexity\nSimple\nRequires pre-configuration\nA4T Workflow: Create Calculated Metric in Analytics FIRST \u2192 Then use in Target \u2192 Metric settings LOCKED",
+            "keyPoints": [
+              "1.6 Adobe Target vs. Adobe Analytics Reporting\nFeature\nTarget Native\nAnalytics with A4T\nMetrics Available\nBasic set (visits, conversion, lift)\nAll Analytics events, calculated metrics\nSegmentation\nActivity-specific audiences only\nAny Analytics segment\nFlexibility\nLimited\nAdvanced Analysis Workspace\nSetup Complexity\nSimple\nRequires pre-configuration\nA4T Workflow: Create Calculated Metric in Analytics FIRST \u2192 Then use in Target \u2192 Metric settings LOCKED"
+            ]
+          },
+          "1.7 A/B Testing Best Practices": {
+            "description": "1.7 A/B Testing Best Practices",
+            "fullContent": "1.7 A/B Testing Best Practices\nThe Golden Rules\n\u2022 Wait for Calculated Sample Size - Most critical rule. Prevents false positives.\n\u2022 Maintain 95%+ Confidence - Only 5% false positive risk\n\u2022 Avoid Peeking - Multiple checks inflate false positive risk\n\u2022 Account for Novelty Effect - New designs perform better initially\n\u2022 Identify Confounds - External events can skew results\n\ud83d\udd34 Common Pitfalls:\n\u2022 Peeking at results (increases false positives from 5% to 20%+)\n\u2022 Stopping early when lift looks good (before sample size)\n\u2022 Not accounting for novelty effect (new designs initially outperform)\n\u2022 Testing without calculating sample size first\n\u2022 Confusing percentage points with relative lift\nDomain 1 Summary\n\u2022 Understand business goals and how to identify KPIs\n\u2022 Know when to use each activity type\n\u2022 Construct testable hypotheses with clear reasoning\n\u2022 Select metrics aligned to business goals\n\u2022 Choose audiences based on business relevance (not just demographics)\n\u2022 Know A4T workflow requirements\n\u2022 Understand sample size is critical (non-negotiable)\n\u2022 Know A/B testing pitfalls and solutions\n<div class=\"section\"",
+            "keyPoints": [
+              "1.7 A/B Testing Best Practices\nThe Golden Rules\n\u2022 Wait for Calculated Sample Size - Most critical rule. Prevents false positives.\n\u2022 Maintain 95%+ Confidence - Only 5% false positive risk\n\u2022 Avoid Peeking - Multiple checks inflate false positive risk\n\u2022 Account for Novelty Effect - New designs perform better initially\n\u2022 Identify Confounds - External events can skew results\n\ud83d\udd34 Common Pitfalls:\n\u2022 Peeking at results (increases false positives from 5% to 20%+)\n\u2022 Stopping early when lift looks good (before sample size)\n\u2022 Not accounting for novelty effect (new designs initially outperform)\n\u2022 Testing without calculating sample size first\n\u2022 Confusing percentage points with relative lift\nDomain 1 Summary\n\u2022 Understand business goals and how to identify KPIs\n\u2022 Know when to use each activity type\n\u2022 Construct testable hypotheses with clear reasoning\n\u2022 Select metrics aligned to business goals\n\u2022 Choose audiences based on business relevance (not just demographics)\n\u2022 Know A4T workflow requirements\n\u2022 Understand sample size is critical (non-negotiable)\n\u2022 Know A/B testing pitfalls and solutions\n<div class=\"section\""
+            ]
+          }
+        },
+        "totalLearningPoints": 18
+      }
+    },
+    {
+      "id": "configuring_managing",
+      "title": "Configuring, Executing & Managing",
+      "domain": "Configuration, Executing & Managing",
+      "weight": 50,
+      "overview": "Master technical configuration of Target activities including VEC, Form-Based Composer, audience configuration, activity management, and QA procedures.",
+      "topics": [
+        "Visual Experience Composer (VEC)",
+        "Form-Based Experience Composer",
+        "CSS selector stability",
+        "Redirect offers and content",
+        "Audience configuration and logic",
+        "Activity priority and collisions",
+        "QA and preview settings",
+        "Success metrics configuration",
+        "Experience targeting setup",
+        "Post-conversion behavior",
+        "Automated Personalization setup"
+      ],
+      "content": {
+        "sections": {
+          "2.1 Visual Experience Composer (VEC)": {
+            "description": "2.1 Visual Experience Composer (VEC)",
+            "fullContent": "2.1 Visual Experience Composer (VEC)\nVEC: Point-and-click visual interface for creating experiences without coding\nWhat VEC Can Edit\n\u2022 \u2713 Text content (headlines, copy, button labels)\n\u2022 \u2713 Images (replacements, modifications)\n\u2022 \u2713 Styling (colors, fonts, spacing)\n\u2022 \u2713 Structure (hide/show, rearrange, remove, add)\n\u2022 \u2713 Links & attributes (URLs, alt text, titles)\nWhat VEC Cannot Edit\n\u2022 \u2717 iFrames (browser security)\n\u2022 \u2717 Heavily JavaScript-rendered content\n\u2022 \u2717 Third-party widgets\n\u2022 \u2717 Server-side dynamic content\nCSS Selector Stability: This is a frequent exam topic. Avoid deeply nested selectors. Use Expand Section to select parent elements (especially those with unique IDs).\nKey VEC Features\nFeature\nPurpose\nWhen to Use\nExpand Section\nSelect parent element for stability\nWhen selectors break after page updates\n!important CSS\nOverride page CSS conflicts\nWhen Target CSS doesn't appear\nURL Targeting\nApply activity to multiple pages\nMulti-page campaigns\nEdit HTML\nDirect code editing\nComplex changes, JavaScript issues",
+            "keyPoints": [
+              "2.1 Visual Experience Composer (VEC)\nVEC: Point-and-click visual interface for creating experiences without coding\nWhat VEC Can Edit\n\u2022 \u2713 Text content (headlines, copy, button labels)\n\u2022 \u2713 Images (replacements, modifications)\n\u2022 \u2713 Styling (colors, fonts, spacing)\n\u2022 \u2713 Structure (hide/show, rearrange, remove, add)\n\u2022 \u2713 Links & attributes (URLs, alt text, titles)\nWhat VEC Cannot Edit\n\u2022 \u2717 iFrames (browser security)\n\u2022 \u2717 Heavily JavaScript-rendered content\n\u2022 \u2717 Third-party widgets\n\u2022 \u2717 Server-side dynamic content\nCSS Selector Stability: This is a frequent exam topic. Avoid deeply nested selectors. Use Expand Section to select parent elements (especially those with unique IDs).\nKey VEC Features\nFeature\nPurpose\nWhen to Use\nExpand Section\nSelect parent element for stability\nWhen selectors break after page updates\n!important CSS\nOverride page CSS conflicts\nWhen Target CSS doesn't appear\nURL Targeting\nApply activity to multiple pages\nMulti-page campaigns\nEdit HTML\nDirect code editing\nComplex changes, JavaScript issues"
+            ]
+          },
+          "2.2 Form-Based Experience Composer": {
+            "description": "2.2 Form-Based Experience Composer",
+            "fullContent": "2.2 Form-Based Experience Composer\nForm-Based Composer: Non-visual interface for creating experiences without page rendering\nWhen to Use Form-Based\n\u2022 Non-website channels (email, apps, APIs, kiosks)\n\u2022 VEC fails to load pages\n\u2022 JavaScript-heavy pages with timing issues\n\u2022 Protected pages (authentication required)\n\u26a0\ufe0f Critical: Redirect offers can ONLY be created in Form-Based Composer, NOT in VEC.\nContent Types in Form-Based\n\u2022 HTML Offer: Custom HTML code\n\u2022 JSON Offer: Structured data for SPAs/APIs\n\u2022 Image Offer: Image URL replacement\n\u2022 Redirect Offer: Send to different URL (Form-Based only)",
+            "keyPoints": [
+              "2.2 Form-Based Experience Composer\nForm-Based Composer: Non-visual interface for creating experiences without page rendering\nWhen to Use Form-Based\n\u2022 Non-website channels (email, apps, APIs, kiosks)\n\u2022 VEC fails to load pages\n\u2022 JavaScript-heavy pages with timing issues\n\u2022 Protected pages (authentication required)\n\u26a0\ufe0f Critical: Redirect offers can ONLY be created in Form-Based Composer, NOT in VEC.\nContent Types in Form-Based\n\u2022 HTML Offer: Custom HTML code\n\u2022 JSON Offer: Structured data for SPAs/APIs\n\u2022 Image Offer: Image URL replacement\n\u2022 Redirect Offer: Send to different URL (Form-Based only)"
+            ]
+          },
+          "2.3 Activity Configuration": {
+            "description": "2.3 Activity Configuration",
+            "fullContent": "2.3 Activity Configuration\nUniversal Activity Setup Flow\n\u2022 Choose Activity Type\n\u2022 Configure Audience Targeting\n\u2022 Set Goals & Settings (success metrics, duration, priority)\n\u2022 Create Experiences/Offers\n\u2022 QA & Launch\nSuccess Metrics Configuration\nSetting\nDefault\nMeaning\nIncrement Count & Keep User\nYes (default)\nVisitor stays in activity, can convert multiple times\nRelease & Allow Reentry\nOptional\nVisitor exits, can re-enter in future sessions\nRelease & Bar Reentry\nOptional\nVisitor permanently removed (one-time offers)\nActivity Priority Settings\n\u2022 Fine-grained Priority: 0-999 scale (higher = winner)\n\u2022 When collision: Highest priority shows; lower priority shows default\n\u2022 Always check: Activity Collisions tab to see conflicts",
+            "keyPoints": [
+              "2.3 Activity Configuration\nUniversal Activity Setup Flow\n\u2022 Choose Activity Type\n\u2022 Configure Audience Targeting\n\u2022 Set Goals & Settings (success metrics, duration, priority)\n\u2022 Create Experiences/Offers\n\u2022 QA & Launch\nSuccess Metrics Configuration\nSetting\nDefault\nMeaning\nIncrement Count & Keep User\nYes (default)\nVisitor stays in activity, can convert multiple times\nRelease & Allow Reentry\nOptional\nVisitor exits, can re-enter in future sessions\nRelease & Bar Reentry\nOptional\nVisitor permanently removed (one-time offers)\nActivity Priority Settings\n\u2022 Fine-grained Priority: 0-999 scale (higher = winner)\n\u2022 When collision: Highest priority shows; lower priority shows default\n\u2022 Always check: Activity Collisions tab to see conflicts"
+            ]
+          },
+          "2.4 Activity Types in Detail": {
+            "description": "2.4 Activity Types in Detail",
+            "fullContent": "2.4 Activity Types in Detail\nAutomated Personalization (AP) - Unique Characteristics\n\u2022 What it tests: Offer combinations (not page designs)\n\u2022 Locations: Multiple areas with offers\n\u2022 Combinations: Multiply offers per location (Location A offers \u00d7 Location B offers \u00d7 ...)\n\u2022 Max Experiences: Up to 30,000 (much higher than other activity types)\n\u2022 Traffic Required: Very high (1M+ monthly)\nAP Unique Reports (4 Types):\n\u2022 Activity Level Report: Control vs. Targeted\n\u2022 Offer Level Report: Each offer's Random vs. Smart performance\n\u2022 Automated Segments Report: Auto-discovered visitor groups\n\u2022 Important Attributes Report: Attribute usage frequency",
+            "keyPoints": [
+              "2.4 Activity Types in Detail\nAutomated Personalization (AP) - Unique Characteristics\n\u2022 What it tests: Offer combinations (not page designs)\n\u2022 Locations: Multiple areas with offers\n\u2022 Combinations: Multiply offers per location (Location A offers \u00d7 Location B offers \u00d7 ...)\n\u2022 Max Experiences: Up to 30,000 (much higher than other activity types)\n\u2022 Traffic Required: Very high (1M+ monthly)\nAP Unique Reports (4 Types):\n\u2022 Activity Level Report: Control vs. Targeted\n\u2022 Offer Level Report: Each offer's Random vs. Smart performance\n\u2022 Automated Segments Report: Auto-discovered visitor groups\n\u2022 Important Attributes Report: Attribute usage frequency"
+            ]
+          },
+          "2.5 QA Procedures and Preview Modes": {
+            "description": "2.5 QA Procedures and Preview Modes",
+            "fullContent": "2.5 QA Procedures and Preview Modes\n\ud83d\udd34 Important: QA conversions are NOT recorded in reporting. Use QA to test without affecting data.\nPreview Settings\nSetting\nIsolated (ON)\nRealistic (OFF)\nShow default for other activities\nSee ONLY your activity\nSee with other live activities (collisions visible)\nMatch audience rules\nBypass rules (debug mode)\nRespect rules (production-like)\nUse case\nTesting your content in isolation\nValidating real-world behavior\nQA Workflow\n\u2022 Configure preview settings\n\u2022 Access activity and verify content displays\n\u2022 Validate all elements (text, images, styling)\n\u2022 Test conversion actions\n\u2022 Check on multiple devices/browsers\n\u2022 Exit QA mode\nDomain 2 Summary\n\u2022 Understand VEC capabilities and limitations\n\u2022 Know when to use Form-Based Composer\n\u2022 Use Expand Section for stable selectors\n\u2022 Know redirect offers are Form-Based only\n\u2022 Configure success metrics for business outcomes\n\u2022 Choose activity types strategically\n\u2022 Understand AP combinations and unique reports\n\u2022 Use QA preview modes correctly\n\u2022 Know activity priority resolution\n\u2022 Understand post-conversion behavior options\n<div class=\"section\"",
+            "keyPoints": [
+              "2.5 QA Procedures and Preview Modes\n\ud83d\udd34 Important: QA conversions are NOT recorded in reporting. Use QA to test without affecting data.\nPreview Settings\nSetting\nIsolated (ON)\nRealistic (OFF)\nShow default for other activities\nSee ONLY your activity\nSee with other live activities (collisions visible)\nMatch audience rules\nBypass rules (debug mode)\nRespect rules (production-like)\nUse case\nTesting your content in isolation\nValidating real-world behavior\nQA Workflow\n\u2022 Configure preview settings\n\u2022 Access activity and verify content displays\n\u2022 Validate all elements (text, images, styling)\n\u2022 Test conversion actions\n\u2022 Check on multiple devices/browsers\n\u2022 Exit QA mode\nDomain 2 Summary\n\u2022 Understand VEC capabilities and limitations\n\u2022 Know when to use Form-Based Composer\n\u2022 Use Expand Section for stable selectors\n\u2022 Know redirect offers are Form-Based only\n\u2022 Configure success metrics for business outcomes\n\u2022 Choose activity types strategically\n\u2022 Understand AP combinations and unique reports\n\u2022 Use QA preview modes correctly\n\u2022 Know activity priority resolution\n\u2022 Understand post-conversion behavior options\n<div class=\"section\""
+            ]
+          }
+        },
+        "totalLearningPoints": 32
+      }
+    },
+    {
+      "id": "analyzing_reporting",
+      "title": "Analyzing & Reporting",
+      "domain": "Analyzing & Reporting",
+      "weight": 16,
+      "overview": "Understand statistical concepts, interpret test results with confidence intervals, analyze AP and MVT reporting, and validate test quality.",
+      "topics": [
+        "Confidence and significance",
+        "Lift calculation and interpretation",
+        "Statistical pitfalls and false positives",
+        "Automated Personalization reporting",
+        "Novelty effects in testing",
+        "Multivariate test interpretation",
+        "Report customization",
+        "Performance metrics"
+      ],
+      "content": {
+        "sections": {
+          "3.1 Understanding Statistical Concepts": {
+            "description": "3.1 Understanding Statistical Concepts",
+            "fullContent": "3.1 Understanding Statistical Concepts\nConversion Rate\nFormula: (Conversions / Visitors) \u00d7 100\nExample: 50 conversions / 1,000 visitors = 5%\nLift\nFormula: (Variation% - Control%) / Control% \u00d7 100\nExample: (6% - 5%) / 5% \u00d7 100 = 20% lift\n\u26a0\ufe0f Common Confusion: 20% lift in relative terms \u2260 20 percentage points\n20% relative lift = 1 percentage point absolute difference (5% \u2192 6%)\nConfidence and Significance\nConfidence Level\nFalse Positive Risk\nAction\n95%+ Confidence\n5% (acceptable)\nDECLARE WINNER\n80-94% Confidence\n6-20% (high risk)\nContinue testing\n<80% Confidence\n>20% (very high)\nMuch more data needed\nSample Size Importance: You MUST reach calculated sample size before declaring winner, even if confidence seems high at 85-90%.",
+            "keyPoints": [
+              "3.1 Understanding Statistical Concepts\nConversion Rate\nFormula: (Conversions / Visitors) \u00d7 100\nExample: 50 conversions / 1,000 visitors = 5%\nLift\nFormula: (Variation% - Control%) / Control% \u00d7 100\nExample: (6% - 5%) / 5% \u00d7 100 = 20% lift\n\u26a0\ufe0f Common Confusion: 20% lift in relative terms \u2260 20 percentage points\n20% relative lift = 1 percentage point absolute difference (5% \u2192 6%)\nConfidence and Significance\nConfidence Level\nFalse Positive Risk\nAction\n95%+ Confidence\n5% (acceptable)\nDECLARE WINNER\n80-94% Confidence\n6-20% (high risk)\nContinue testing\n<80% Confidence\n>20% (very high)\nMuch more data needed\nSample Size Importance: You MUST reach calculated sample size before declaring winner, even if confidence seems high at 85-90%."
+            ]
+          },
+          "3.2 Automated Personalization Reporting": {
+            "description": "3.2 Automated Personalization Reporting",
+            "fullContent": "3.2 Automated Personalization Reporting\nReport 1: Activity Level Report\n\u2022 Shows: Control (random) vs. Targeted (AI)\n\u2022 Answers: \"Is personalization working?\"\nReport 2: Offer Level Report\n\u2022 Shows: Each offer's Random vs. Smart performance\n\u2022 Key: Compare same offer (Random vs. Smart), NOT different offers\nReport 3: Automated Segments Report\n\u2022 Shows: Auto-discovered visitor groups\n\u2022 Reveals: Which segments prefer which offers\nReport 4: Important Attributes Report\n\u2022 Shows: Which attributes ML used most\n\u2022 CRITICAL MISUNDERSTANDING: This is FREQUENCY of use, NOT causation\n\ud83d\udd34 Important Attributes Mistake:\n\u274c \"Device Type causes 28% of conversions\"\n\u2705 \"Algorithm used Device Type in 28% of decisions\"",
+            "keyPoints": [
+              "3.2 Automated Personalization Reporting\nReport 1: Activity Level Report\n\u2022 Shows: Control (random) vs. Targeted (AI)\n\u2022 Answers: \"Is personalization working?\"\nReport 2: Offer Level Report\n\u2022 Shows: Each offer's Random vs. Smart performance\n\u2022 Key: Compare same offer (Random vs. Smart), NOT different offers\nReport 3: Automated Segments Report\n\u2022 Shows: Auto-discovered visitor groups\n\u2022 Reveals: Which segments prefer which offers\nReport 4: Important Attributes Report\n\u2022 Shows: Which attributes ML used most\n\u2022 CRITICAL MISUNDERSTANDING: This is FREQUENCY of use, NOT causation\n\ud83d\udd34 Important Attributes Mistake:\n\u274c \"Device Type causes 28% of conversions\"\n\u2705 \"Algorithm used Device Type in 28% of decisions\""
+            ]
+          },
+          "3.3 Multivariate Testing Reporting": {
+            "description": "3.3 Multivariate Testing Reporting",
+            "fullContent": "3.3 Multivariate Testing Reporting\nExperience Performance Report\n\u2022 Shows each element combination's performance\n\u2022 Comparison of all combinations side-by-side\nElement Contribution Analysis\n\u2022 Breaks down impact of individual elements\n\u2022 Shows which variables matter most\nBonferroni Correction\n\u2022 What it does: Adjusts significance threshold for multiple comparisons\n\u2022 Why: Testing many elements inflates false positive risk\n\u2022 Solution: Stricter threshold per comparison",
+            "keyPoints": [
+              "3.3 Multivariate Testing Reporting\nExperience Performance Report\n\u2022 Shows each element combination's performance\n\u2022 Comparison of all combinations side-by-side\nElement Contribution Analysis\n\u2022 Breaks down impact of individual elements\n\u2022 Shows which variables matter most\nBonferroni Correction\n\u2022 What it does: Adjusts significance threshold for multiple comparisons\n\u2022 Why: Testing many elements inflates false positive risk\n\u2022 Solution: Stricter threshold per comparison"
+            ]
+          },
+          "3.4 Interpreting Confidence Intervals": {
+            "description": "3.4 Interpreting Confidence Intervals",
+            "fullContent": "3.4 Interpreting Confidence Intervals\nExample:\nVariation: 6.2% \u00b1 0.4%\n95% Confidence Interval: 5.8% - 6.6%\nMeans: 95% confident true rate is between 5.8% - 6.6%\nOverlapping vs. Non-Overlapping Intervals\n\u2022 Intervals OVERLAP: No significant difference (continue testing)\n\u2022 Intervals DON'T OVERLAP: Significant difference (safe to declare winner)\nDomain 3 Summary\n\u2022 Understand conversion rate, lift, confidence calculations\n\u2022 Know 95%+ confidence requirement for declaring winner\n\u2022 Know sample size is CRITICAL (non-negotiable)\n\u2022 Understand false positive risks and causes\n\u2022 Know AP's 4 unique report types\n\u2022 Remember: Important Attributes \u2260 causation\n\u2022 Understand novelty effect in test interpretation\n\u2022 Can interpret confidence intervals\n<div class=\"section\"",
+            "keyPoints": [
+              "3.4 Interpreting Confidence Intervals\nExample:\nVariation: 6.2% \u00b1 0.4%\n95% Confidence Interval: 5.8% - 6.6%\nMeans: 95% confident true rate is between 5.8% - 6.6%\nOverlapping vs. Non-Overlapping Intervals\n\u2022 Intervals OVERLAP: No significant difference (continue testing)\n\u2022 Intervals DON'T OVERLAP: Significant difference (safe to declare winner)\nDomain 3 Summary\n\u2022 Understand conversion rate, lift, confidence calculations\n\u2022 Know 95%+ confidence requirement for declaring winner\n\u2022 Know sample size is CRITICAL (non-negotiable)\n\u2022 Understand false positive risks and causes\n\u2022 Know AP's 4 unique report types\n\u2022 Remember: Important Attributes \u2260 causation\n\u2022 Understand novelty effect in test interpretation\n\u2022 Can interpret confidence intervals\n<div class=\"section\""
+            ]
+          }
+        },
+        "totalLearningPoints": 17
+      }
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "domain": "Troubleshooting",
+      "weight": 8,
+      "overview": "Debug common issues, troubleshoot activity delivery problems, resolve audience qualification issues, and validate preset configurations.",
+      "topics": [
+        "Activity delivery troubleshooting",
+        "Audience qualification debugging",
+        "Preset validation and recovery",
+        "Debugging tools and techniques",
+        "Common implementation issues",
+        "Network and performance issues"
+      ],
+      "content": {
+        "sections": {
+          "4.1 Activity Delivery Troubleshooting": {
+            "description": "4.1 Activity Delivery Troubleshooting",
+            "fullContent": "4.1 Activity Delivery Troubleshooting\nSystematic Troubleshooting Checklist\n\u2022 Verify Activity Status: Active? Past start date? Before end date?\n\u2022 Verify Audience: Do you match audience rules?\n\u2022 Verify URL Targeting: Current page matches URL rules?\n\u2022 Clear Browser Cache: Try incognito/private mode\n\u2022 Check Target Library: at.js or alloy.js loaded in console?\n\u2022 Check Collisions: Higher priority activities hiding yours?\n\u2022 Verify CSS Selectors: Page design changed? Selectors broken?",
+            "keyPoints": [
+              "4.1 Activity Delivery Troubleshooting\nSystematic Troubleshooting Checklist\n\u2022 Verify Activity Status: Active? Past start date? Before end date?\n\u2022 Verify Audience: Do you match audience rules?\n\u2022 Verify URL Targeting: Current page matches URL rules?\n\u2022 Clear Browser Cache: Try incognito/private mode\n\u2022 Check Target Library: at.js or alloy.js loaded in console?\n\u2022 Check Collisions: Higher priority activities hiding yours?\n\u2022 Verify CSS Selectors: Page design changed? Selectors broken?"
+            ]
+          },
+          "4.2 Audience Qualification Issues": {
+            "description": "4.2 Audience Qualification Issues",
+            "fullContent": "4.2 Audience Qualification Issues\nCommon Audience Problems\n\u2022 No visitors qualify: Check AND/OR logic, attribute population\n\u2022 Wrong audience assigned: Verify audience definition\n\u2022 Profile attributes missing: Confirm parameter passing\nDebug Checklist:\n\u2022 Check browser console for mbox calls\n\u2022 Verify parameters are being sent\n\u2022 Check parameter names match exactly\n\u2022 Validate audience works in isolation",
+            "keyPoints": [
+              "4.2 Audience Qualification Issues\nCommon Audience Problems\n\u2022 No visitors qualify: Check AND/OR logic, attribute population\n\u2022 Wrong audience assigned: Verify audience definition\n\u2022 Profile attributes missing: Confirm parameter passing\nDebug Checklist:\n\u2022 Check browser console for mbox calls\n\u2022 Verify parameters are being sent\n\u2022 Check parameter names match exactly\n\u2022 Validate audience works in isolation"
+            ]
+          },
+          "4.3 Debugging Tools": {
+            "description": "4.3 Debugging Tools",
+            "fullContent": "4.3 Debugging Tools\nTool\nPurpose\nDetail Level\nWhen to Use\nmboxDebug (?mboxDebug)\nBasic request/response inspection\nLow\nQuick checks\nmboxTrace (?mboxTrace=true)\nDetailed tracing of decisions\nHigh\nDeep debugging\nDebugger Extension\nGraphical debugging interface\nMedium\nVisual inspection\nBrowser Console (F12)\nJavaScript-level debugging\nHigh\nError investigation",
+            "keyPoints": [
+              "4.3 Debugging Tools\nTool\nPurpose\nDetail Level\nWhen to Use\nmboxDebug (?mboxDebug)\nBasic request/response inspection\nLow\nQuick checks\nmboxTrace (?mboxTrace=true)\nDetailed tracing of decisions\nHigh\nDeep debugging\nDebugger Extension\nGraphical debugging interface\nMedium\nVisual inspection\nBrowser Console (F12)\nJavaScript-level debugging\nHigh\nError investigation"
+            ]
+          },
+          "4.4 Preset Issues": {
+            "description": "4.4 Preset Issues",
+            "fullContent": "4.4 Preset Issues\nPreset: Saved reporting configuration that depends on referenced objects (audiences, metrics)\nWhen Presets Become Invalid\n\u2022 Referenced audience deleted\n\u2022 Referenced metric removed\n\u2022 Referenced objects changed/renamed\nFixing Invalid Presets\n\u2022 Identify missing/changed object\n\u2022 Recreate with original definition (or update references)\n\u2022 Preset automatically becomes valid\nDomain 4 Summary\n\u2022 Follow systematic troubleshooting approach\n\u2022 Know when to check each factor (status, audience, URL, cache, collisions)\n\u2022 Use appropriate debugging tool for situation\n\u2022 Understand preset dependencies\n\u2022 Know how to fix invalid presets\n<div class=\"section\"",
+            "keyPoints": [
+              "4.4 Preset Issues\nPreset: Saved reporting configuration that depends on referenced objects (audiences, metrics)\nWhen Presets Become Invalid\n\u2022 Referenced audience deleted\n\u2022 Referenced metric removed\n\u2022 Referenced objects changed/renamed\nFixing Invalid Presets\n\u2022 Identify missing/changed object\n\u2022 Recreate with original definition (or update references)\n\u2022 Preset automatically becomes valid\nDomain 4 Summary\n\u2022 Follow systematic troubleshooting approach\n\u2022 Know when to check each factor (status, audience, URL, cache, collisions)\n\u2022 Use appropriate debugging tool for situation\n\u2022 Understand preset dependencies\n\u2022 Know how to fix invalid presets\n<div class=\"section\""
+            ]
+          }
+        },
+        "totalLearningPoints": 14
+      }
+    }
+  ],
+  "quickRevision": [
+    {
+      "title": "Activity Types Quick Reference",
+      "text": "A/B Test (compare variations) \u2192 XT (predetermined audiences) \u2192 MVT (element combinations) \u2192 AP (ML offer optimization) \u2192 Auto-Target (ML whole-page)"
+    },
+    {
+      "title": "Audience Configuration Rule",
+      "text": "Same field within condition = OR logic. Different fields = use AND/OR toggle. Example: (USA OR Canada) AND (Recency 7+ days)"
+    },
+    {
+      "title": "Sample Size & Confidence",
+      "text": "Must reach CALCULATED sample size at 95% confidence. Early stopping = false positive risk. Continue to full sample size before declaring winner."
+    },
+    {
+      "title": "VEC CSS Selector Stability",
+      "text": "Deep nesting = brittle selectors. Use Expand Section to select stable parent elements. Test selector stability before deploying."
+    },
+    {
+      "title": "AP Reporting Pitfalls",
+      "text": "Important Attributes \u2260 best performing offers. Automated Segments \u2260 audience targeting. Focus on actual offer performance."
+    },
+    {
+      "title": "A4T Implementation",
+      "text": "Adobe Analytics must be reporting source FIRST in Target, then create metrics in Target that reference Analytics events/metrics."
+    },
+    {
+      "title": "Statistical Significance",
+      "text": "95% confidence = 5% margin of error. Watch for novelty effects (improvement drops after initial period). Always run to calculated sample size."
+    },
+    {
+      "title": "Troubleshooting Flow",
+      "text": "Check mbox delivery \u2192 Verify audience qualification \u2192 Test CSS selectors \u2192 Validate offer content \u2192 Check preset configuration."
+    }
+  ]
+}

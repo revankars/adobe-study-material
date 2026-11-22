@@ -1,0 +1,193 @@
+{
+  "certificationId": "ad0-e409",
+  "chapters": [
+    {
+      "id": "discovery",
+      "title": "Adobe Target Fundamentals",
+      "topics": [
+        {
+          "title": "1.1 Overview",
+          "content": "Adobe Target is Adobe\u2019s personalization and experimentation platform. It delivers content variations (offers) to visitors and measures their effect on business metrics. It sits in the Adobe Experience Cloud alongside Adobe Analytics, Adobe Experience Manager (AEM), and Adobe Experience Platform (AEP)."
+        },
+        {
+          "title": "1.4 Key principles",
+          "content": "Statistical significance tells you whether a difference is likely real. It doesn\u2019t tell you whether the difference matters. Business significance is a separate decision.\nSample ratio mismatch (SRM) happens when the observed traffic split differs from the configured split. SRM usually points to an implementation or delivery problem. Investigate before trusting results.\nFlicker (flash of original content) happens when the default content renders before Target applies the offer. Mitigate it with the at.js timeout, the body-hiding snippet, or server-side delivery."
+        },
+        {
+          "title": "1.5 Important exam points",
+          "content": "Know the difference between a test (A/B, MVT) and targeting (XT).\nKnow which activities need historical data or machine learning.\nKnow that the Global mbox runs without a specific mbox call. Don\u2019t assume it handles conversion data on its own."
+        },
+        {
+          "title": "1.6 Common mistakes",
+          "content": "Confusing an mbox (delivery container) with an activity (the experiment definition). One activity can use several mboxes.\nAssuming traffic allocation equals audience size. Allocation applies to visitors who qualify for the audience.\nExpecting significance on a low-traffic test within a short window."
+        }
+      ]
+    },
+    {
+      "id": "solution_design",
+      "title": "Architecture, Design, and Implementation",
+      "topics": [
+        {
+          "title": "6.1 Architecture principles",
+          "content": "Separate decisioning from content: Target decides which experience to show. AEM or the site owns the content.\nChoose the delivery model deliberately: client-side, server-side, Edge, or hybrid. Base the choice on performance, data needs, and team skills.\nPlan the data flow: identify what data Target needs (mbox parameters, profile attributes, audiences) and where it comes from.\nDesign for measurement: define goals and metrics before building. Check that Analytics and Target share the same definitions.\nPlan for failure: define a default experience for when Target doesn\u2019t respond or times out."
+        },
+        {
+          "title": "6.2 Global mbox",
+          "content": "target-global-mbox runs on every page where the library is loaded. It serves global activities and sets defaults.\nKeep it lightweight. Heavy activities or many global offers slow every page. Use specific mboxes for page-level experiences.\nCommon mistake: putting everything in the global mbox, which makes it hard to troubleshoot and manage."
+        },
+        {
+          "title": "6.3 Order Confirmation mbox",
+          "content": "A reserved mbox on the order confirmation page sends order data to Target for revenue and conversion goals. [VERIFY] the name and parameters in current docs.\nConfirm the mbox fires exactly once per order. Duplicate firing inflates revenue. Protect against page refreshes and back-button re-fires.\nOrder total, product IDs, and currency must be correct. Check that they match the order system."
+        },
+        {
+          "title": "6.4 Hybrid implementation design",
+          "content": "Assign each experience to a delivery method based on need. Example: server-side for logged-in pricing, client-side for layout tests.\nKeep the visitor identity consistent so the same visitor gets the same decision on both sides.\nDocument which team owns each delivery path."
+        },
+        {
+          "title": "6.5 Performance and flicker",
+          "content": "Measure the time added by Target calls.\nUse timeouts and a default experience for slow responses.\nPrefer server-side or Edge delivery for above-the-fold content that must not flicker."
+        },
+        {
+          "title": "6.6 Testing and QA",
+          "content": "Test each experience in each browser, device, and logged-in state.\nVerify that the mbox fires, the correct offer renders, and metrics arrive in Target and Analytics.\nTest the fallback when Target is blocked (ad blockers, consent refusal, network failure)."
+        },
+        {
+          "title": "6.7 Design checklist",
+          "content": "\u2610 Delivery method chosen and justified\n\u2610 Global mbox kept lightweight\n\u2610 Order confirmation mbox fires once per order\n\u2610 Identity consistent across Target, Analytics, and AEM\n\u2610 Default experience defined for timeouts\n\u2610 Goals and metrics agreed with stakeholders\n\u2610 Consent and privacy requirements mapped\n\u2610 Staging and production environments separated"
+        },
+        {
+          "title": "6.8 Important exam points and common mistakes",
+          "content": "Know the purpose and risks of the Global mbox and the Order Confirmation mbox.\nKnow how hybrid designs keep decisions consistent.\nCommon mistakes: forgetting the fallback experience; firing order confirmation logic more than once; designing a hybrid system without a shared identity."
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Supported Touchpoints",
+      "topics": [
+        {
+          "title": "4.1 Client-side (web) delivery",
+          "content": "at.js is the legacy client library. Adobe has moved toward the Web SDK. [VERIFY] current library recommendations and version support.\nThe page loads the library, which calls the delivery service for each mbox. Target then applies offers in the browser.\nAdvantages: quick setup, works with most sites. Drawbacks: flicker risk, dependence on browser scripts, and limited visibility into the page."
+        },
+        {
+          "title": "4.2 Server-side delivery",
+          "content": "Uses the Delivery API (JSON REST) or Adobe SDKs (Java, Node.js, .NET, and others). [VERIFY] the SDKs currently supported.\nRequests can use execute (decide now) or prefetch (decide ahead of rendering and apply later). The server renders the decided offer.\nAdvantages: no flicker, better for logged-in and complex logic, and secure handling of data. Drawbacks: developer work and a clear mbox-to-page mapping are needed. Caching requires care."
+        },
+        {
+          "title": "4.3 Mobile apps",
+          "content": "Target provides mobile SDKs for iOS and Android. Experiences use the same activity model and mboxes or offers. [VERIFY] the current mobile library and its relationship to Edge.\nConsider app versions and offline behavior. Experiences must degrade gracefully when the device is offline."
+        },
+        {
+          "title": "4.4 Email",
+          "content": "Target personalization in email is usually delivered by calling the Target API at send time or when the email is opened through a dynamic image or content call. [VERIFY] current email integration options.\nConsider privacy, caching in email clients, and the lack of JavaScript in most email clients."
+        },
+        {
+          "title": "4.5 APIs",
+          "content": "Delivery API: runtime decisions for web, server, and apps.\nManagement / Admin APIs: manage activities, audiences, and settings programmatically. [VERIFY] endpoints.\nRecommendations API: returns recommendations (Chapter 5)."
+        },
+        {
+          "title": "4.6 Hybrid implementations",
+          "content": "A hybrid design uses both client-side and server-side delivery. Example: the server decides the core page variant while the client applies small UI tweaks.\nThe main challenge is consistency: the same visitor should get the same decision on both sides."
+        },
+        {
+          "title": "4.7 Important exam points and common mistakes",
+          "content": "Client-side and server-side differ in flicker, latency, data access, and developer effort.\nServer-side isn\u2019t always better. Client-side is simpler when the page is static and the team has limited developer resources.\nEmail and other non-browser touchpoints can\u2019t run JavaScript."
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": "Administration and Governance",
+      "topics": [
+        {
+          "title": "3.1 Roles and access",
+          "content": "Access is managed through Adobe Admin Console product profiles and Target permissions. [VERIFY] the current role model in your organization.\nTypical roles: administrator (full control), developer (implementation), analyst (reporting), approver (sign-off), and viewer (read-only).\nApply least privilege. Separate the people who build activities from the people who approve them and push them live."
+        },
+        {
+          "title": "3.2 Environments and change control",
+          "content": "Keep separate development, staging, and production properties, workspaces, or tag environments.\nTest activities in staging before promoting them. Confirm that the same code and mboxes exist in production.\nUse approval workflows where available for high-risk changes. [VERIFY] current approval features."
+        },
+        {
+          "title": "3.3 Naming conventions and documentation",
+          "content": "Use consistent names for mboxes, activities, audiences, and goals. Example: pdp_hero_v2_2026Q4.\nRecord the hypothesis, primary metric, guardrail metrics, dates, owners, and the results decision for each activity.\nKeep an activity inventory. Retire finished tests so they don\u2019t continue to run and consume traffic."
+        },
+        {
+          "title": "3.4 Governance concerns",
+          "content": "Concurrent tests: multiple activities on the same page or audience can interact. Use exclusion groups or mutually exclusive audiences.\nTraffic budget: limit the share of traffic in experiments to protect the core experience.\nPrivacy and consent: honor consent settings in the tag manager and Target data-sharing configuration. Personal data should not leak into mbox parameters.\nData retention and deletion: follow organizational and regulatory rules for visitor data."
+        },
+        {
+          "title": "3.5 Common mistakes",
+          "content": "Letting a test run past its decision date.\nEditing live activities without a test or rollback plan."
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "title": "Integrating with Adobe Target",
+      "topics": [
+        {
+          "title": "2.1 Adobe Analytics integration (A4T)",
+          "content": "Analytics for Target (A4T) sends Target activity and experience data into Adobe Analytics. Analysts can then report on Target experiences alongside all other dimensions and metrics.\nTarget writes activity and experience values into Analytics variables. The variables are configured in the report suite(s). [VERIFY] the mapping in current docs.\nA4T lets you use Analytics segments and metrics as Target audiences and goals, and Analytics reports show Target outcomes.\nConversion counted in Target and in Analytics can differ because of attribution windows, deduplication, and visitor identity. Document which system is the source of truth for each KPI.\nCommon mistakes: assuming A4T replaces Target\u2019s own reporting; ignoring report suite configuration, since A4T only works for report suites set up for it."
+        },
+        {
+          "title": "2.2 Adobe Experience Manager (AEM) integration",
+          "content": "AEM Sites uses Target through the Target integration configured in AEM Cloud Services. [VERIFY] current setup steps.\nAEM can render Target offers as Experience Fragments or as offers mapped to components, so content authors can manage variations inside AEM.\nThe Core Components library includes Target-aware components. Check the current version and whether it\u2019s client-side or server-side rendered.\nTypical design: AEM renders the default content and Target supplies offers for each mbox. Authors own variations and Target owns decisions.\nWhere rendering happens (server-side in AEM versus client-side in the browser) determines flicker, caching, and how offers are passed in.\nCaching: if the CDN caches pages, personalized content must bypass the cache or be delivered through a personalization layer."
+        },
+        {
+          "title": "2.3 Adobe Experience Platform (AEP) and Edge integration",
+          "content": "Web SDK (Alloy) on the Adobe Experience Platform Edge Network can deliver Target decisions. Edge-based delivery returns personalization decisions (propositions) in the Web SDK response, which then render on the page. [VERIFY] field names and the current Edge flow.\nData Collection (Tags, formerly Launch) hosts the Target extension. Use it to deploy Target through the tag manager, with environments (development, staging, production).\nAudiences: AEP audiences (segments from Real-Time CDP) can be used in Target. Activation requires the right permissions and an active connection. [VERIFY] the current supported audience sources.\nIdentity: use the same identity (ECID, customer ID) across Edge, Target, and Analytics for consistent visitor identity."
+        },
+        {
+          "title": "2.4 Other Experience Cloud integrations",
+          "content": "Adobe Audience Manager (AAM) and Adobe Advertising audiences can be used in Target where supported. [VERIFY] availability.\nAdobe Journey Optimizer and other products can use Target as a decisioning service. Check the current integration path.\nCustomer data: use Target data-sharing rules to define what leaves the browser and what must stay out of it. Privacy settings affect integrations."
+        },
+        {
+          "title": "2.5 Important exam points",
+          "content": "A4T reports Target outcomes in Analytics. It doesn\u2019t create Target audiences by itself.\nAEM integration controls where rendering happens. Know the trade-offs between client-side and server-side rendering.\nEdge/Web SDK changes how decisions are returned. Know that Edge is the path Adobe is steering toward for new implementations. [VERIFY] the current recommendation."
+        },
+        {
+          "title": "2.6 Common mistakes",
+          "content": "Confusing audiences (who qualifies) with segments (Analytics filters).\nForgetting that identity differences between Analytics and Target lead to mismatched numbers.\nAssuming an AEM component automatically personalizes. The component must be wired to Target through the configured offers."
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "topics": [
+        {
+          "title": "7.1 Troubleshooting workflow",
+          "content": "Define the symptom precisely: no offer, wrong offer, flicker, missing metrics, or traffic mismatch.\nCheck scope: one page, one browser, one audience, or everywhere?\nCheck delivery: did the library load? Did the mbox request fire? What was the response?\nCheck targeting: does the visitor qualify for the audience? Is traffic allocated?\nCheck the activity: is it live? Is the date range correct? Are the experiences and offers active?\nCheck measurement: are goals and metrics firing? Do Analytics and Target agree within tolerance?\nFix, retest, and document."
+        },
+        {
+          "title": "7.2 Debugging tools",
+          "content": "Target/Experience Cloud debugger browser extension and Target\u2019s built-in debugging. [VERIFY] current tool names.\nBrowser developer tools: the network tab for Target requests, the console for errors, and cookies for mbox identifiers.\nDebug parameters and trace options (for example, mboxTrace in legacy at.js). [VERIFY]."
+        },
+        {
+          "title": "7.4 Reading Target requests and responses",
+          "content": "Request: contains the client code, mbox name, visitor identifiers, page parameters, and context (device, location, and similar).\nResponse: contains the mbox name, the offer selected, the activity and experience IDs, and metadata.\nThe exam often asks you to identify a missing parameter, a wrong mbox name, or a response that shows the visitor was excluded.\nIllustrative request (structure only; field names simplified):\nIllustrative response structure:\nIf options is empty or only contains default content, the visitor may not qualify or the activity may not be live. [VERIFY] the exact response schema in current docs."
+        },
+        {
+          "title": "7.5 Activity configuration problems",
+          "content": "Wrong audience: the audience rules don\u2019t match the intended visitors.\nTraffic too low: the allocation or audience size is too small for a result.\nOverlapping activities: another activity on the same mbox or page takes priority.\nDates: the activity starts or ends at the wrong time (check time zones).\nGoals: the primary metric is not firing or is mapped to the wrong event."
+        },
+        {
+          "title": "7.6 Integration problems",
+          "content": "Analytics mismatch: check report suite configuration, variable mapping, attribution windows, and time zones.\nAEM rendering: check that offers are mapped to the right components and that caching isn\u2019t serving the same page to everyone.\nEdge/Web SDK: check the Edge configuration, extension version, and identity.\nAudience sync: check the source audience is active, has the correct size, and is connected."
+        },
+        {
+          "title": "7.7 Recommendations problems",
+          "content": "Empty results: check criteria (overly restrictive) and catalog (missing or stale items).\nIrrelevant results: check catalog attributes and the chosen strategy.\nSlow responses: check the number of items and criteria complexity."
+        },
+        {
+          "title": "7.8 Worked troubleshooting scenario",
+          "content": "Symptom: a product-page hero test shows the default content for all visitors in production, but the offer appears in staging.\nConfirm the production activity is live and dated correctly.\nCheck whether the production page loads the same library and mbox name as staging. A typo in the mbox name is a common cause.\nCheck the network request in production. If there\u2019s no request, the library or the tag isn\u2019t firing.\nIf the request fires but returns default content, check the audience and traffic allocation.\nCheck consent settings. If visitors have declined consent, Target may not deliver.\nFix the root cause, retest in production with a test account, and document the change."
+        },
+        {
+          "title": "7.9 Important exam points and common mistakes",
+          "content": "Work from the symptom to the layer (delivery, targeting, activity, measurement) instead of guessing.\nKnow how to read a response and what an empty options list means.\nMost \u201cno offer\u201d issues come from audience, status, or delivery problems, not from the algorithm.\nCommon mistakes: changing configuration before confirming what the request and response show; ignoring consent state when debugging; assuming a test is broken when the audience is simply too narrow."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ad0-e207",
+    "name": "Adobe Analytics Architect Master",
+    "code": "AD0-E207",
+    "description": "Analytics architecture and implementation study track.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e207/exam.json",
+    "chaptersFile": "data/ad0-e207/chapters.json",
+    "questionsFile": "data/ad0-e207/questions.json",
+    "icon": "📊",
+    "officialLinks": {
+      "examDetails": "https://certification.adobe.com/certification/architect-master/168",
+      "examPrepGuide": "https://certification.adobe.com/courses/1199",
+      "certificationPortal": "https://certification.adobe.com/courses/168",
+      "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/aa/aa-overview",
+      "practiceTest": "https://certification.adobe.com/courses/1005"
+    }
+  },
+  {
+    "id": "ad0-e408",
+    "name": "Adobe Target Business Practitioner Professional",
+    "code": "AD0-E408",
+    "description": "Adobe Target business-practitioner study track.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e408/exam.json",
+    "chaptersFile": "data/ad0-e408/chapters.json",
+    "questionsFile": "data/ad0-e408/questions.json",
+    "icon": "🎯",
+    "officialLinks": {
+      "examDetails": "https://certification.adobe.com/certification/target-business-practitioner-professional/184",
+      "examPrepGuide": "https://certification.adobe.com/courses/1203",
+      "certificationPortal": "https://certification.adobe.com/courses/184",
+      "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/at/at-overview",
+      "practiceTest": "https://certification.adobe.com/certification/target-business-practitioner-professional/184"
+    }
+  },
+  {
+    "id": "ad0-e409",
+    "name": "Adobe Target Architect Master",
+    "code": "AD0-E409",
+    "description": "Architecture, integration, implementation, and troubleshooting for Adobe Target.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e409/exam.json",
+    "chaptersFile": "data/ad0-e409/chapters.json",
+    "questionsFile": "data/ad0-e409/questions.json",
+    "icon": "🏆",
+    "officialLinks": {
+      "examDetails": "https://certification.adobe.com/certification/target-architect-master/185",
+      "examPrepGuide": "https://certification.adobe.com/courses/1205",
+      "certificationPortal": "https://certification.adobe.com/courses/185",
+      "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/at/at-overview",
+      "practiceTest": "https://certification.adobe.com/certification/target-architect-master/185?tab=certificate4"
+    }
+  },
+  {
+    "id": "ad0-e607",
+    "name": "Adobe Journey Optimizer",
+    "code": "AD0-E607",
+    "description": "Master journey optimization, offer decisioning, and content authoring in Adobe Journey Optimizer.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e607/exam.json",
+    "chaptersFile": "data/ad0-e607/chapters.json",
+    "questionsFile": "data/ad0-e607/questions.json",
+    "icon": "🚀",
+    "officialLinks": {
+      "examDetails": "https://certification.adobe.com/certification/journey-optimizer",
+      "examPrepGuide": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/ajo",
+      "certificationPortal": "https://certification.adobe.com",
+      "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/ajo/ajo-overview",
+      "practiceTest": "https://certification.adobe.com/certification/journey-optimizer"
+    }
+  }
+]

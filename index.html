@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#171717">
+    <meta name="description" content="A personal study and practice portal for Adobe certification exams.">
+    <title>Adobe Certification Study Portal</title>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261121101400">
+    <script src="assets/js/data-bundle.js" defer></script>
+    <script src="assets/js/portal.bundle.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" data-view="dashboard" aria-label="Adobe Study Portal home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span><strong>Study Portal</strong><small>Adobe certifications</small></span>
+        </a>
+        <p class="nav-label">LEARNING</p>
+        <nav class="primary-nav">
+          <button class="nav-link active" data-view="dashboard"><span aria-hidden="true">⌂</span> Dashboard</button>
+          <button class="nav-link" data-view="study"><span aria-hidden="true">▤</span> Study material</button>
+          <button class="nav-link" data-view="practice"><span aria-hidden="true">✓</span> Practice tests</button>
+          <button class="nav-link" data-view="mock"><span aria-hidden="true">◷</span> Mock examination</button>
+          <button class="nav-link" data-view="revision"><span aria-hidden="true">✦</span> Quick revision</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="local-note"><span class="status-dot"></span><span>Progress saved on this browser</span></div>
+        </div>
+      </aside>
+
+      <div class="app-main">
+        <header class="topbar">
+          <button class="icon-button mobile-menu" data-action="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+          <div class="breadcrumb"><span>Learning workspace</span><span aria-hidden="true">/</span><strong id="current-section">Dashboard</strong></div>
+          <label class="search-wrap">
+            <span aria-hidden="true">⌕</span>
+            <input id="global-search" type="search" placeholder="Search chapters and questions" aria-label="Search study material">
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="avatar" aria-label="Personal study profile">S</button>
+        </header>
+        <main id="app-content" tabindex="-1" aria-live="polite">
+          <div class="loading-state"><span class="spinner"></span><p>Loading your study workspace…</p></div>
+        </main>
+        <footer class="app-footer">
+          <span>Independent study tool · Not affiliated with or endorsed by Adobe</span>
+          <button data-action="reset" class="text-button">Reset learning progress</button>
+        </footer>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <input type="file" id="import-file" accept=".json" style="display: none;">
+  </body>
+</html>

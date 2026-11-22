@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Target AD0-E408 - Comprehensive Study Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .exam-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+
+        .toc h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            padding: 8px 0;
+            margin-left: 20px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            padding: 20px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #d4edda;
+            padding: 20px;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .danger-box {
+            background: #f8d7da;
+            padding: 20px;
+            border-left: 4px solid #dc3545;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background: #667eea;
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background: #f0f0f0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .definition {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .definition strong {
+            color: #764ba2;
+        }
+
+        .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 3px solid #17a2b8;
+        }
+
+        .example strong {
+            color: #17a2b8;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .nested-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #667eea;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .back-to-top {
+                display: none;
+            }
+
+            .print-only {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Adobe Target Business Practitioner Professional</h1>
+            <p>AD0-E408 Comprehensive Study Guide</p>
+            <div class="exam-stats">
+                <div class="stat">
+                    <div class="stat-value">52</div>
+                    <div class="stat-label">Total Questions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100</div>
+                    <div class="stat-label">Minutes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">70%</div>
+                    <div class="stat-label">Passing Score</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Domains</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- TABLE OF CONTENTS -->
+            <div class="toc">
+                <h2>📋 Table of Contents</h2>
+                <ul>
+                    <li><a href="#overview">Exam Overview</a></li>
+                    <li><a href="https://certification.adobe.com/certification/target-business-practitioner-professional/184" target="_blank" rel="noopener">Official Examination Objectives</a></li>
+                    <li><a href="#domain1">Domain 1: Planning & Strategy (26%)</a></li>
+                    <li><a href="#domain2">Domain 2: Configuration, Executing & Managing (50%)</a></li>
+                    <li><a href="#domain3">Domain 3: Analyzing & Reporting (16%)</a></li>
+                    <li><a href="#domain4">Domain 4: Troubleshooting (8%)</a></li>
+                    <li><a href="#comparisons">Technical Comparisons</a></li>
+                    <li><a href="#limits">Target Limits Reference</a></li>
+                    <li><a href="#checklist">Exam Readiness Checklist</a></li>
+                </ul>
+            </div>
+
+            <!-- EXAM OVERVIEW -->
+            <div class="section" id="overview">
+                <h2>Exam Overview</h2>
+                
+                <h3>Test Specifications</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Exam Code</td>
+                            <td>AD0-E408</td>
+                        </tr>
+                        <tr>
+                            <td>Exam Name</td>
+                            <td>Adobe Target Business Practitioner Professional</td>
+                        </tr>
+                        <tr>
+                            <td>Total Questions</td>
+                            <td>52 (mix of multiple choice and scenario-based)</td>
+                        </tr>
+                        <tr>
+                            <td>Time Limit</td>
+                            <td>100 minutes (~1.5 minutes per question)</td>
+                        </tr>
+                        <tr>
+                            <td>Passing Score</td>
+                            <td>Approximately 70% (36-37 correct)</td>
+                        </tr>
+                        <tr>
+                            <td>Valid Period</td>
+                            <td>2 years from passing date</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery</td>
+                            <td>Online proctored or test center</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Exam Domains & Weightings</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Domain</th>
+                            <th>Weight</th>
+                            <th>Questions</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Planning & Strategy</td>
+                            <td>26%</td>
+                            <td>~14 Q</td>
+                            <td>Business goals, hypotheses, metrics, audiences</td>
+                        </tr>
+                        <tr>
+                            <td>Configuring, Executing & Managing</td>
+                            <td>50%</td>
+                            <td>~26 Q</td>
+                            <td>Activities, VEC, settings, management</td>
+                        </tr>
+                        <tr>
+                            <td>Analyzing & Reporting</td>
+                            <td>16%</td>
+                            <td>~8 Q</td>
+                            <td>Reports, statistics, confidence, lift</td>
+                        </tr>
+                        <tr>
+                            <td>Troubleshooting</td>
+                            <td>8%</td>
+                            <td>~4 Q</td>
+                            <td>Issues, debugging, validation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- DOMAIN 1 -->
+            <div class="section" id="domain1">
+                <h2>Domain 1: Planning & Strategy (26%)</h2>
+                
+                <div class="info-box">
+                    <strong>Domain Focus:</strong> Understanding business objectives, identifying optimization opportunities, and planning effective testing strategies. You must translate business goals into Target activities.
+                </div>
+
+                <h3>1.1 Business KPIs and Performance Analysis</h3>
+                <p>Key Performance Indicators are measurable values showing how effectively business goals are being achieved.</p>
+                
+                <h4>Connecting Business Goals to Target Implementation</h4>
+                <div class="example">
+                    <strong>E-Commerce Goal Chain:</strong>
+                    <ul>
+                        <li>Business Goal: Increase average order value</li>
+                        <li>KPI: AOV (Average Order Value)</li>
+                        <li>Target Success Metric: Revenue (RPV)</li>
+                        <li>Activity Type: Personalization</li>
+                    </ul>
+                </div>
+
+                <h3>1.2 Optimization and Experimentation Strategies</h3>
+                
+                <h4>Activity Type Selection Guide</h4>
+                <div class="nested">
+                    <div class="nested-item">
+                        <strong>A/B Testing</strong>
+                        <ul>
+                            <li>When: Comparing 2-3 designs</li>
+                            <li>Purpose: Find statistical winner</li>
+                            <li>Requires: Sample size + 95% confidence</li>
+                        </ul>
+                    </div>
+                    <div class="nested-item">
+                        <strong>Experience Targeting (XT)</strong>
+                        <ul>
+                            <li>When: Different audiences need different messaging</li>
+                            <li>Purpose: Audience-specific mapping</li>
+                            <li>No: Statistical comparison</li>
+                        </ul>
+                    </div>
+                    <div class="nested-item">
+                        <strong>Multivariate Testing (MVT)</strong>
+                        <ul>
+                            <li>When: Testing 3+ elements simultaneously</li>
+                            <li>Requires: Very high traffic (500K+)</li>
+                            <li>Duration: 4-8 weeks</li>
+                        </ul>
+                    </div>
+                    <div class="nested-item">
+                        <strong>Auto-Target</strong>
+                        <ul>
+                            <li>When: ML personalization per visitor</li>
+                            <li>Personalizes: Whole page experience</li>
+                            <li>Variations: 2-5 complete designs</li>
+                        </ul>
+                    </div>
+                    <div class="nested-item">
+                        <strong>Automated Personalization (AP)</strong>
+                        <ul>
+                            <li>When: ML offer combinations</li>
+                            <li>Multiple: Offers in multiple locations</li>
+                            <li>Complexity: Very high traffic (1M+)</li>
+                        </ul>
+                    </div>
+                    <div class="nested-item">
+                        <strong>Recommendations</strong>
+                        <ul>
+                            <li>When: Product/content recommendations</li>
+                            <li>Algorithms: Items viewed, trending, popular</li>
+                            <li>Ongoing: Continuous optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>1.3 Hypothesis Construction</h3>
+                
+                <div class="definition">
+                    <strong>Hypothesis Formula:</strong> "If we [ACTION], then [OUTCOME] because [REASONING]"
+                </div>
+
+                <div class="highlight">
+                    <strong>⚠️ Critical Exam Concept:</strong> Hypotheses must be testable, specific, reasonable, measurable, and realistic. Base them on data or user research, not intuition.
+                </div>
+
+                <h3>1.4 Success Metrics Identification</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric Type</th>
+                            <th>Definition</th>
+                            <th>Examples</th>
+                            <th>Use When</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Conversion</td>
+                            <td>User completed desired action</td>
+                            <td>Form submission, purchase, signup</td>
+                            <td>Discrete actions matter</td>
+                        </tr>
+                        <tr>
+                            <td>Revenue</td>
+                            <td>Monetary value generated</td>
+                            <td>RPV, AOV, total sales</td>
+                            <td>Monetization is goal</td>
+                        </tr>
+                        <tr>
+                            <td>Engagement</td>
+                            <td>Interaction and participation</td>
+                            <td>Time on site, clicks, scroll depth</td>
+                            <td>Engagement drives value</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="success-box">
+                    <strong>✓ Primary Metrics:</strong> Usually ONE per activity, directly tied to business KPI
+                </div>
+
+                <div class="success-box">
+                    <strong>✓ Secondary Metrics:</strong> Multiple allowed, provide supporting context
+                </div>
+
+                <h3>1.5 Audience Requirements and Targeting</h3>
+                
+                <div class="danger-box">
+                    <strong>🔴 CRITICAL EXAM SKILL:</strong> Selecting audience attributes that match business goals, not just demographics. This appears frequently in exam questions.
+                </div>
+
+                <div class="example">
+                    <strong>Example: Lead Generation for Financial Services</strong>
+                    <ul>
+                        <li>❌ WRONG: Social media engagement, general demographics</li>
+                        <li>✅ RIGHT: Financial goals, investment preferences, risk tolerance</li>
+                    </ul>
+                </div>
+
+                <h3>1.6 Adobe Target vs. Adobe Analytics Reporting</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Target Native</th>
+                            <th>Analytics with A4T</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Metrics Available</td>
+                            <td>Basic set (visits, conversion, lift)</td>
+                            <td>All Analytics events, calculated metrics</td>
+                        </tr>
+                        <tr>
+                            <td>Segmentation</td>
+                            <td>Activity-specific audiences only</td>
+                            <td>Any Analytics segment</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Limited</td>
+                            <td>Advanced Analysis Workspace</td>
+                        </tr>
+                        <tr>
+                            <td>Setup Complexity</td>
+                            <td>Simple</td>
+                            <td>Requires pre-configuration</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight">
+                    <strong>A4T Workflow:</strong> Create Calculated Metric in Analytics FIRST → Then use in Target → Metric settings LOCKED
+                </div>
+
+                <h3>1.7 A/B Testing Best Practices</h3>
+
+                <h4>The Golden Rules</h4>
+                <ol>
+                    <li><strong>Wait for Calculated Sample Size</strong> - Most critical rule. Prevents false positives.</li>
+                    <li><strong>Maintain 95%+ Confidence</strong> - Only 5% false positive risk</li>
+                    <li><strong>Avoid Peeking</strong> - Multiple checks inflate false positive risk</li>
+                    <li><strong>Account for Novelty Effect</strong> - New designs perform better initially</li>
+                    <li><strong>Identify Confounds</strong> - External events can skew results</li>
+                </ol>
+
+                <div class="danger-box">
+                    <strong>🔴 Common Pitfalls:</strong>
+                    <ul>
+                        <li>Peeking at results (increases false positives from 5% to 20%+)</li>
+                        <li>Stopping early when lift looks good (before sample size)</li>
+                        <li>Not accounting for novelty effect (new designs initially outperform)</li>
+                        <li>Testing without calculating sample size first</li>
+                        <li>Confusing percentage points with relative lift</li>
+                    </ul>
+                </div>
+
+                <h4>Domain 1 Summary</h4>
+                <ul class="checklist">
+                    <li>Understand business goals and how to identify KPIs</li>
+                    <li>Know when to use each activity type</li>
+                    <li>Construct testable hypotheses with clear reasoning</li>
+                    <li>Select metrics aligned to business goals</li>
+                    <li>Choose audiences based on business relevance (not just demographics)</li>
+                    <li>Know A4T workflow requirements</li>
+                    <li>Understand sample size is critical (non-negotiable)</li>
+                    <li>Know A/B testing pitfalls and solutions</li>
+                </ul>
+            </div>
+
+            <!-- DOMAIN 2 -->
+            <div class="section" id="domain2">
+                <h2>Domain 2: Configuration, Executing & Managing (50%)</h2>
+                
+                <div class="highlight">
+                    <strong>⚠️ IMPORTANT:</strong> Domain 2 is 50% of the exam (~26 questions). Mastering this domain is critical.
+                </div>
+
+                <h3>2.1 Visual Experience Composer (VEC)</h3>
+
+                <div class="definition">
+                    <strong>VEC:</strong> Point-and-click visual interface for creating experiences without coding
+                </div>
+
+                <h4>What VEC Can Edit</h4>
+                <ul>
+                    <li>✓ Text content (headlines, copy, button labels)</li>
+                    <li>✓ Images (replacements, modifications)</li>
+                    <li>✓ Styling (colors, fonts, spacing)</li>
+                    <li>✓ Structure (hide/show, rearrange, remove, add)</li>
+                    <li>✓ Links & attributes (URLs, alt text, titles)</li>
+                </ul>
+
+                <h4>What VEC Cannot Edit</h4>
+                <ul>
+                    <li>✗ iFrames (browser security)</li>
+                    <li>✗ Heavily JavaScript-rendered content</li>
+                    <li>✗ Third-party widgets</li>
+                    <li>✗ Server-side dynamic content</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>CSS Selector Stability:</strong> This is a frequent exam topic. Avoid deeply nested selectors. Use Expand Section to select parent elements (especially those with unique IDs).
+                </div>
+
+                <h4>Key VEC Features</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Purpose</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Expand Section</td>
+                            <td>Select parent element for stability</td>
+                            <td>When selectors break after page updates</td>
+                        </tr>
+                        <tr>
+                            <td>!important CSS</td>
+                            <td>Override page CSS conflicts</td>
+                            <td>When Target CSS doesn't appear</td>
+                        </tr>
+                        <tr>
+                            <td>URL Targeting</td>
+                            <td>Apply activity to multiple pages</td>
+                            <td>Multi-page campaigns</td>
+                        </tr>
+                        <tr>
+                            <td>Edit HTML</td>
+                            <td>Direct code editing</td>
+                            <td>Complex changes, JavaScript issues</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2.2 Form-Based Experience Composer</h3>
+
+                <div class="definition">
+                    <strong>Form-Based Composer:</strong> Non-visual interface for creating experiences without page rendering
+                </div>
+
+                <h4>When to Use Form-Based</h4>
+                <ul>
+                    <li>Non-website channels (email, apps, APIs, kiosks)</li>
+                    <li>VEC fails to load pages</li>
+                    <li>JavaScript-heavy pages with timing issues</li>
+                    <li>Protected pages (authentication required)</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>⚠️ Critical:</strong> Redirect offers can ONLY be created in Form-Based Composer, NOT in VEC.
+                </div>
+
+                <h4>Content Types in Form-Based</h4>
+                <ul>
+                    <li><strong>HTML Offer:</strong> Custom HTML code</li>
+                    <li><strong>JSON Offer:</strong> Structured data for SPAs/APIs</li>
+                    <li><strong>Image Offer:</strong> Image URL replacement</li>
+                    <li><strong>Redirect Offer:</strong> Send to different URL (Form-Based only)</li>
+                </ul>
+
+                <h3>2.3 Activity Configuration</h3>
+
+                <h4>Universal Activity Setup Flow</h4>
+                <ol>
+                    <li>Choose Activity Type</li>
+                    <li>Configure Audience Targeting</li>
+                    <li>Set Goals & Settings (success metrics, duration, priority)</li>
+                    <li>Create Experiences/Offers</li>
+                    <li>QA & Launch</li>
+                </ol>
+
+                <h4>Success Metrics Configuration</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Default</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Increment Count & Keep User</td>
+                            <td>Yes (default)</td>
+                            <td>Visitor stays in activity, can convert multiple times</td>
+                        </tr>
+                        <tr>
+                            <td>Release & Allow Reentry</td>
+                            <td>Optional</td>
+                            <td>Visitor exits, can re-enter in future sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Release & Bar Reentry</td>
+                            <td>Optional</td>
+                            <td>Visitor permanently removed (one-time offers)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Activity Priority Settings</h4>
+                <ul>
+                    <li><strong>Fine-grained Priority:</strong> 0-999 scale (higher = winner)</li>
+                    <li><strong>When collision:</strong> Highest priority shows; lower priority shows default</li>
+                    <li><strong>Always check:</strong> Activity Collisions tab to see conflicts</li>
+                </ul>
+
+                <h3>2.4 Activity Types in Detail</h3>
+
+                <h4>Automated Personalization (AP) - Unique Characteristics</h4>
+                <ul>
+                    <li><strong>What it tests:</strong> Offer combinations (not page designs)</li>
+                    <li><strong>Locations:</strong> Multiple areas with offers</li>
+                    <li><strong>Combinations:</strong> Multiply offers per location (Location A offers × Location B offers × ...)</li>
+                    <li><strong>Max Experiences:</strong> Up to 30,000 (much higher than other activity types)</li>
+                    <li><strong>Traffic Required:</strong> Very high (1M+ monthly)</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>AP Unique Reports (4 Types):</strong>
+                    <ol>
+                        <li>Activity Level Report: Control vs. Targeted</li>
+                        <li>Offer Level Report: Each offer's Random vs. Smart performance</li>
+                        <li>Automated Segments Report: Auto-discovered visitor groups</li>
+                        <li>Important Attributes Report: Attribute usage frequency</li>
+                    </ol>
+                </div>
+
+                <h3>2.5 QA Procedures and Preview Modes</h3>
+
+                <div class="danger-box">
+                    <strong>🔴 Important:</strong> QA conversions are NOT recorded in reporting. Use QA to test without affecting data.
+                </div>
+
+                <h4>Preview Settings</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Isolated (ON)</th>
+                            <th>Realistic (OFF)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Show default for other activities</td>
+                            <td>See ONLY your activity</td>
+                            <td>See with other live activities (collisions visible)</td>
+                        </tr>
+                        <tr>
+                            <td>Match audience rules</td>
+                            <td>Bypass rules (debug mode)</td>
+                            <td>Respect rules (production-like)</td>
+                        </tr>
+                        <tr>
+                            <td>Use case</td>
+                            <td>Testing your content in isolation</td>
+                            <td>Validating real-world behavior</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>QA Workflow</h4>
+                <ol>
+                    <li>Configure preview settings</li>
+                    <li>Access activity and verify content displays</li>
+                    <li>Validate all elements (text, images, styling)</li>
+                    <li>Test conversion actions</li>
+                    <li>Check on multiple devices/browsers</li>
+                    <li>Exit QA mode</li>
+                </ol>
+
+                <h4>Domain 2 Summary</h4>
+                <ul class="checklist">
+                    <li>Understand VEC capabilities and limitations</li>
+                    <li>Know when to use Form-Based Composer</li>
+                    <li>Use Expand Section for stable selectors</li>
+                    <li>Know redirect offers are Form-Based only</li>
+                    <li>Configure success metrics for business outcomes</li>
+                    <li>Choose activity types strategically</li>
+                    <li>Understand AP combinations and unique reports</li>
+                    <li>Use QA preview modes correctly</li>
+                    <li>Know activity priority resolution</li>
+                    <li>Understand post-conversion behavior options</li>
+                </ul>
+            </div>
+
+            <!-- DOMAIN 3 -->
+            <div class="section" id="domain3">
+                <h2>Domain 3: Analyzing & Reporting (16%)</h2>
+
+                <h3>3.1 Understanding Statistical Concepts</h3>
+
+                <h4>Conversion Rate</h4>
+                <div class="definition">
+                    <strong>Formula:</strong> (Conversions / Visitors) × 100
+                    <br>
+                    <strong>Example:</strong> 50 conversions / 1,000 visitors = 5%
+                </div>
+
+                <h4>Lift</h4>
+                <div class="definition">
+                    <strong>Formula:</strong> (Variation% - Control%) / Control% × 100
+                    <br>
+                    <strong>Example:</strong> (6% - 5%) / 5% × 100 = 20% lift
+                </div>
+
+                <div class="danger-box">
+                    <strong>⚠️ Common Confusion:</strong> 20% lift in relative terms ≠ 20 percentage points
+                    <br>
+                    20% relative lift = 1 percentage point absolute difference (5% → 6%)
+                </div>
+
+                <h4>Confidence and Significance</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Confidence Level</th>
+                            <th>False Positive Risk</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>95%+ Confidence</td>
+                            <td>5% (acceptable)</td>
+                            <td>DECLARE WINNER</td>
+                        </tr>
+                        <tr>
+                            <td>80-94% Confidence</td>
+                            <td>6-20% (high risk)</td>
+                            <td>Continue testing</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;80% Confidence</td>
+                            <td>&gt;20% (very high)</td>
+                            <td>Much more data needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight">
+                    <strong>Sample Size Importance:</strong> You MUST reach calculated sample size before declaring winner, even if confidence seems high at 85-90%.
+                </div>
+
+                <h3>3.2 Automated Personalization Reporting</h3>
+
+                <h4>Report 1: Activity Level Report</h4>
+                <ul>
+                    <li><strong>Shows:</strong> Control (random) vs. Targeted (AI)</li>
+                    <li><strong>Answers:</strong> "Is personalization working?"</li>
+                </ul>
+
+                <h4>Report 2: Offer Level Report</h4>
+                <ul>
+                    <li><strong>Shows:</strong> Each offer's Random vs. Smart performance</li>
+                    <li><strong>Key:</strong> Compare same offer (Random vs. Smart), NOT different offers</li>
+                </ul>
+
+                <h4>Report 3: Automated Segments Report</h4>
+                <ul>
+                    <li><strong>Shows:</strong> Auto-discovered visitor groups</li>
+                    <li><strong>Reveals:</strong> Which segments prefer which offers</li>
+                </ul>
+
+                <h4>Report 4: Important Attributes Report</h4>
+                <ul>
+                    <li><strong>Shows:</strong> Which attributes ML used most</li>
+                    <li><strong>CRITICAL MISUNDERSTANDING:</strong> This is FREQUENCY of use, NOT causation</li>
+                </ul>
+
+                <div class="danger-box">
+                    <strong>🔴 Important Attributes Mistake:</strong>
+                    <br>
+                    ❌ "Device Type causes 28% of conversions"
+                    <br>
+                    ✅ "Algorithm used Device Type in 28% of decisions"
+                </div>
+
+                <h3>3.3 Multivariate Testing Reporting</h3>
+
+                <h4>Experience Performance Report</h4>
+                <ul>
+                    <li>Shows each element combination's performance</li>
+                    <li>Comparison of all combinations side-by-side</li>
+                </ul>
+
+                <h4>Element Contribution Analysis</h4>
+                <ul>
+                    <li>Breaks down impact of individual elements</li>
+                    <li>Shows which variables matter most</li>
+                </ul>
+
+                <h4>Bonferroni Correction</h4>
+                <ul>
+                    <li><strong>What it does:</strong> Adjusts significance threshold for multiple comparisons</li>
+                    <li><strong>Why:</strong> Testing many elements inflates false positive risk</li>
+                    <li><strong>Solution:</strong> Stricter threshold per comparison</li>
+                </ul>
+
+                <h3>3.4 Interpreting Confidence Intervals</h3>
+
+                <div class="example">
+                    <strong>Example:</strong>
+                    <br>
+                    Variation: 6.2% ± 0.4%
+                    <br>
+                    95% Confidence Interval: 5.8% - 6.6%
+                    <br>
+                    Means: 95% confident true rate is between 5.8% - 6.6%
+                </div>
+
+                <h4>Overlapping vs. Non-Overlapping Intervals</h4>
+                <ul>
+                    <li><strong>Intervals OVERLAP:</strong> No significant difference (continue testing)</li>
+                    <li><strong>Intervals DON'T OVERLAP:</strong> Significant difference (safe to declare winner)</li>
+                </ul>
+
+                <h4>Domain 3 Summary</h4>
+                <ul class="checklist">
+                    <li>Understand conversion rate, lift, confidence calculations</li>
+                    <li>Know 95%+ confidence requirement for declaring winner</li>
+                    <li>Know sample size is CRITICAL (non-negotiable)</li>
+                    <li>Understand false positive risks and causes</li>
+                    <li>Know AP's 4 unique report types</li>
+                    <li>Remember: Important Attributes ≠ causation</li>
+                    <li>Understand novelty effect in test interpretation</li>
+                    <li>Can interpret confidence intervals</li>
+                </ul>
+            </div>
+
+            <!-- DOMAIN 4 -->
+            <div class="section" id="domain4">
+                <h2>Domain 4: Troubleshooting (8%)</h2>
+
+                <h3>4.1 Activity Delivery Troubleshooting</h3>
+
+                <h4>Systematic Troubleshooting Checklist</h4>
+                <ol>
+                    <li><strong>Verify Activity Status:</strong> Active? Past start date? Before end date?</li>
+                    <li><strong>Verify Audience:</strong> Do you match audience rules?</li>
+                    <li><strong>Verify URL Targeting:</strong> Current page matches URL rules?</li>
+                    <li><strong>Clear Browser Cache:</strong> Try incognito/private mode</li>
+                    <li><strong>Check Target Library:</strong> at.js or alloy.js loaded in console?</li>
+                    <li><strong>Check Collisions:</strong> Higher priority activities hiding yours?</li>
+                    <li><strong>Verify CSS Selectors:</strong> Page design changed? Selectors broken?</li>
+                </ol>
+
+                <h3>4.2 Audience Qualification Issues</h3>
+
+                <h4>Common Audience Problems</h4>
+                <ul>
+                    <li><strong>No visitors qualify:</strong> Check AND/OR logic, attribute population</li>
+                    <li><strong>Wrong audience assigned:</strong> Verify audience definition</li>
+                    <li><strong>Profile attributes missing:</strong> Confirm parameter passing</li>
+                </ul>
+
+                <div class="example">
+                    <strong>Debug Checklist:</strong>
+                    <ul>
+                        <li>Check browser console for mbox calls</li>
+                        <li>Verify parameters are being sent</li>
+                        <li>Check parameter names match exactly</li>
+                        <li>Validate audience works in isolation</li>
+                    </ul>
+                </div>
+
+                <h3>4.3 Debugging Tools</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Detail Level</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mboxDebug (?mboxDebug)</td>
+                            <td>Basic request/response inspection</td>
+                            <td>Low</td>
+                            <td>Quick checks</td>
+                        </tr>
+                        <tr>
+                            <td>mboxTrace (?mboxTrace=true)</td>
+                            <td>Detailed tracing of decisions</td>
+                            <td>High</td>
+                            <td>Deep debugging</td>
+                        </tr>
+                        <tr>
+                            <td>Debugger Extension</td>
+                            <td>Graphical debugging interface</td>
+                            <td>Medium</td>
+                            <td>Visual inspection</td>
+                        </tr>
+                        <tr>
+                            <td>Browser Console (F12)</td>
+                            <td>JavaScript-level debugging</td>
+                            <td>High</td>
+                            <td>Error investigation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4.4 Preset Issues</h3>
+
+                <div class="definition">
+                    <strong>Preset:</strong> Saved reporting configuration that depends on referenced objects (audiences, metrics)
+                </div>
+
+                <h4>When Presets Become Invalid</h4>
+                <ul>
+                    <li>Referenced audience deleted</li>
+                    <li>Referenced metric removed</li>
+                    <li>Referenced objects changed/renamed</li>
+                </ul>
+
+                <h4>Fixing Invalid Presets</h4>
+                <ol>
+                    <li>Identify missing/changed object</li>
+                    <li>Recreate with original definition (or update references)</li>
+                    <li>Preset automatically becomes valid</li>
+                </ol>
+
+                <h4>Domain 4 Summary</h4>
+                <ul class="checklist">
+                    <li>Follow systematic troubleshooting approach</li>
+                    <li>Know when to check each factor (status, audience, URL, cache, collisions)</li>
+                    <li>Use appropriate debugging tool for situation</li>
+                    <li>Understand preset dependencies</li>
+                    <li>Know how to fix invalid presets</li>
+                </ul>
+            </div>
+
+            <!-- TECHNICAL COMPARISONS -->
+            <div class="section" id="comparisons">
+                <h2>Technical Comparisons & Quick Reference</h2>
+
+                <h3>Activity Type Comparison Matrix</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>A/B Test</th>
+                            <th>XT</th>
+                            <th>MVT</th>
+                            <th>Auto-Target</th>
+                            <th>AP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Purpose</td>
+                            <td>Find winner</td>
+                            <td>Audience mapping</td>
+                            <td>Element combo</td>
+                            <td>Per-visitor ML</td>
+                            <td>Offer combo ML</td>
+                        </tr>
+                        <tr>
+                            <td>Personalizes</td>
+                            <td>No</td>
+                            <td>Manual</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Uses ML</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Finds winner</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>Indirectly</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Traffic needed</td>
+                            <td>Medium</td>
+                            <td>Low</td>
+                            <td>Very high</td>
+                            <td>Med-high</td>
+                            <td>Very high</td>
+                        </tr>
+                        <tr>
+                            <td>Duration</td>
+                            <td>1-4 weeks</td>
+                            <td>1-2 weeks</td>
+                            <td>4-8 weeks</td>
+                            <td>2+ weeks</td>
+                            <td>2+ weeks</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Success Metrics Quick Reference</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Definition</th>
+                            <th>Examples</th>
+                            <th>Primary or Secondary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Conversion</td>
+                            <td>Action completed</td>
+                            <td>Form submit, signup, download</td>
+                            <td>Either</td>
+                        </tr>
+                        <tr>
+                            <td>Revenue</td>
+                            <td>Monetary value</td>
+                            <td>RPV, AOV, total sales</td>
+                            <td>Primary</td>
+                        </tr>
+                        <tr>
+                            <td>Engagement</td>
+                            <td>Interaction level</td>
+                            <td>Time, clicks, scroll depth</td>
+                            <td>Secondary</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>VEC vs. Form-Based Decision Matrix</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Tool</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Simple visual changes (text, images)</td>
+                            <td>VEC</td>
+                            <td>Visual editing makes it easier</td>
+                        </tr>
+                        <tr>
+                            <td>Redirect offer test</td>
+                            <td>Form-Based</td>
+                            <td>Redirect only in Form-Based</td>
+                        </tr>
+                        <tr>
+                            <td>VEC page won't load</td>
+                            <td>Form-Based</td>
+                            <td>Fallback when VEC fails</td>
+                        </tr>
+                        <tr>
+                            <td>Email campaign</td>
+                            <td>Form-Based</td>
+                            <td>Non-web channel</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript-heavy page</td>
+                            <td>Form-Based</td>
+                            <td>Avoids timing issues</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TARGET LIMITS -->
+            <div class="section" id="limits">
+                <h2>Target Limits Reference (Corrected)</h2>
+
+                <div class="danger-box">
+                    <strong>⚠️ CRITICAL UPDATE:</strong> These limits have been corrected based on official Adobe documentation. Pay special attention to the differences between standard calls and API endpoints.
+                </div>
+
+                <h3>Mbox and Profile Parameters - Three Scenarios</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Call Type</th>
+                            <th>Mbox Parameters</th>
+                            <th>Profile Parameters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standard mbox calls</td>
+                            <td>500</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>Batch Delivery API</td>
+                            <td>50</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Batch Mbox v2 & Delivery API</td>
+                            <td>100</td>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight">
+                    <strong>Parameter Value Limits:</strong>
+                    <ul>
+                        <li>Mbox parameter name: 128 characters max</li>
+                        <li>Mbox parameter value: 5,000 characters max</li>
+                        <li>Profile parameter value: 256 characters max</li>
+                    </ul>
+                </div>
+
+                <h3>Important Activity and Offer Limits</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Limit</th>
+                            <th>Value</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Audiences per mbox</td>
+                            <td>50</td>
+                            <td>Hard limit</td>
+                        </tr>
+                        <tr>
+                            <td>Offer size</td>
+                            <td>1024 KB</td>
+                            <td>Per offer</td>
+                        </tr>
+                        <tr>
+                            <td>Total offers per account</td>
+                            <td>150,000</td>
+                            <td>Hard limit</td>
+                        </tr>
+                        <tr>
+                            <td>Success metrics per activity</td>
+                            <td>200</td>
+                            <td>Hard limit</td>
+                        </tr>
+                        <tr>
+                            <td>Experiences (standard activities)</td>
+                            <td>2,000</td>
+                            <td>A/B, XT, MVT, Auto-Target</td>
+                        </tr>
+                        <tr>
+                            <td>Experiences (AP)</td>
+                            <td>30,000</td>
+                            <td>Much higher for offers</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent requests per session</td>
+                            <td>100</td>
+                            <td>Blocks at 100</td>
+                        </tr>
+                        <tr>
+                            <td>Mboxes per batch request</td>
+                            <td>50</td>
+                            <td>Hard limit</td>
+                        </tr>
+                        <tr>
+                            <td>HTTP POST body size</td>
+                            <td>60 MB</td>
+                            <td>Content delivery</td>
+                        </tr>
+                        <tr>
+                            <td>API calls per minute</td>
+                            <td>50</td>
+                            <td>Admin, Reporting, Bulk Profile (not Delivery)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- EXAM READINESS CHECKLIST -->
+            <div class="section" id="checklist">
+                <h2>Final Exam Readiness Checklist</h2>
+
+                <h3>Domain 1: Planning & Strategy Knowledge</h3>
+                <ul class="checklist">
+                    <li>Understand business goals and how to identify KPIs</li>
+                    <li>Can align business goals to Target activities</li>
+                    <li>Know when to use each activity type</li>
+                    <li>Can construct testable hypotheses</li>
+                    <li>Know primary vs. secondary metrics</li>
+                    <li>Understand metric types (conversion, revenue, engagement)</li>
+                    <li>Can match audience attributes to business goals (CRITICAL)</li>
+                    <li>Understand A4T workflow and when to use it</li>
+                    <li>Know A/B testing best practices (sample size is CRITICAL)</li>
+                </ul>
+
+                <h3>Domain 2: Configuration & Management Knowledge</h3>
+                <ul class="checklist">
+                    <li>Understand VEC capabilities and limitations</li>
+                    <li>Know when to use Form-Based Composer</li>
+                    <li>Can create stable CSS selectors in VEC</li>
+                    <li>Understand Expand Section feature</li>
+                    <li>Know audience creation and management</li>
+                    <li>Can configure activity with proper settings</li>
+                    <li>Understand all 6 activity types deeply</li>
+                    <li>Know QA procedures and preview modes</li>
+                    <li>Understand activity priority and collision</li>
+                    <li>Know metric dependencies</li>
+                    <li>Understand post-conversion behavior options</li>
+                </ul>
+
+                <h3>Domain 3: Analyzing & Reporting Knowledge</h3>
+                <ul class="checklist">
+                    <li>Understand conversion rate calculation</li>
+                    <li>Can calculate and interpret lift</li>
+                    <li>Know confidence thresholds (95%+ = declare winner)</li>
+                    <li>Understand sample size importance</li>
+                    <li>Know AP's 4 report types</li>
+                    <li>Understand why Important Attributes ≠ causation</li>
+                    <li>Can interpret confidence intervals</li>
+                    <li>Know false positive risks and causes</li>
+                    <li>Understand novelty effect</li>
+                    <li>Can identify confounding variables</li>
+                </ul>
+
+                <h3>Domain 4: Troubleshooting Knowledge</h3>
+                <ul class="checklist">
+                    <li>Know activity delivery troubleshooting steps</li>
+                    <li>Can identify audience qualification issues</li>
+                    <li>Understand preset dependencies</li>
+                    <li>Know how to use mboxTrace debugging</li>
+                    <li>Understand CSS selector fragility</li>
+                    <li>Can validate activity qualification</li>
+                </ul>
+
+                <h3>Practice & Preparation</h3>
+                <ul class="checklist">
+                    <li>Reviewed all weak area questions from practice test</li>
+                    <li>Understand why each wrong answer was wrong</li>
+                    <li>Can explain correct reasoning for each question</li>
+                    <li>Completed 30-question practice examination</li>
+                    <li>Scored 24+/30 on practice exam</li>
+                    <li>Understand patterns in exam questions</li>
+                    <li>Feel confident in weak area mastery</li>
+                </ul>
+
+                <h3>Exam Day Readiness</h3>
+                <ul class="checklist">
+                    <li>Know decision frameworks for activity selection</li>
+                    <li>Know when sample size is CRITICAL</li>
+                    <li>Know audience attribute selection matters most</li>
+                    <li>Can distinguish AP from Auto-Target</li>
+                    <li>Know all Target limits from reference table</li>
+                    <li>Understand A/B testing pitfalls</li>
+                    <li>Ready for scenario-based questions</li>
+                    <li>Feel confident in overall knowledge</li>
+                </ul>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <p><strong>Adobe Target Business Practitioner Professional (AD0-E408)</strong></p>
+                <p>Comprehensive Study Guide | Complete Exam Preparation Resource</p>
+                <p style="margin-top: 20px; color: #999; font-size: 0.9em;">
+                    Based on official Adobe examination objectives | Last updated based on official documentation
+                </p>
+                <p style="color: #999; font-size: 0.9em; margin-top: 10px;">
+                    You are well-prepared. Trust your knowledge. Pass with confidence. 🎯
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

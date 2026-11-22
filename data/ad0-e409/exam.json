@@ -1,0 +1,49 @@
+{
+  "certificationId": "ad0-e409",
+  "source": "Adobe_Target_Architect_Study_Guide_Complete.docx provided by the user",
+  "durationMinutesPerQuestion": 2,
+  "fullExamQuestionCount": 50,
+  "practiceQuestionCount": 12,
+  "passingThreshold": 0.64,
+  "passingThresholdNeedsVerification": true,
+  "examFactsNeedVerification": true,
+  "domains": [
+    {
+      "id": "troubleshooting",
+      "name": "Troubleshooting",
+      "weight": 28
+    },
+    {
+      "id": "integrations",
+      "name": "Integrating with Adobe Target",
+      "weight": 18
+    },
+    {
+      "id": "architecture",
+      "name": "Architect, Design, and Implement",
+      "weight": 18
+    },
+    {
+      "id": "fundamentals",
+      "name": "Target Fundamentals",
+      "weight": 13
+    },
+    {
+      "id": "recommendations",
+      "name": "Recommendations",
+      "weight": 11
+    },
+    {
+      "id": "governance",
+      "name": "Administration and Governance",
+      "weight": 6
+    },
+    {
+      "id": "touchpoints",
+      "name": "Supported Touchpoints",
+      "weight": 6
+    }
+  ],
+  "note": "The provided guide lists 50 questions, 100 minutes, and a 64% passing score; it explicitly marks current exam facts and the passing score for verification. This app's mock exam is a 12-question sample, not a full-length simulation.",
+  "name": "Adobe Target Architect Master"
+}

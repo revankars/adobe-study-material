@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Journey Optimizer - 50-Question Practice Exam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .exam-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .exam-header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .exam-header h1 {
+            color: #1f73b7;
+            margin-bottom: 10px;
+        }
+        
+        .exam-header p {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .exam-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-box {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 4px solid #1f73b7;
+        }
+        
+        .stat-box .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1f73b7;
+        }
+        
+        .stat-box .label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .timer {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #d32f2f;
+            text-align: center;
+            padding: 15px;
+            background: #fff3e0;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .start-screen {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .start-screen h2 {
+            color: #1f73b7;
+            margin-bottom: 20px;
+        }
+        
+        .start-screen p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .info-item {
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 6px;
+        }
+        
+        .info-item strong {
+            color: #0d47a1;
+        }
+        
+        .start-screen button {
+            background: #1f73b7;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .start-screen button:hover {
+            background: #0d47a1;
+        }
+        
+        .question-screen {
+            display: none;
+        }
+        
+        .question-screen.active {
+            display: block;
+        }
+        
+        .question-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .question-number {
+            color: #1f73b7;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .question-text {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .question-domain {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #e3f2fd;
+            color: #0d47a1;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .option {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .option:hover {
+            border-color: #1f73b7;
+            background: #f0f7ff;
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        
+        .option label {
+            cursor: pointer;
+            margin: 0;
+            display: block;
+        }
+        
+        .option.selected {
+            border-color: #1f73b7;
+            background: #e3f2fd;
+        }
+        
+        .option.correct {
+            border-color: #4caf50;
+            background: #e8f5e9;
+        }
+        
+        .option.incorrect {
+            border-color: #d32f2f;
+            background: #ffebee;
+        }
+        
+        .explanation {
+            background: #f5f5f5;
+            padding: 20px;
+            border-left: 4px solid #1f73b7;
+            margin-top: 20px;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .explanation.show {
+            display: block;
+        }
+        
+        .explanation h4 {
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+        
+        .explanation p {
+            margin-bottom: 10px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .explanation p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .explanation strong {
+            color: #0d47a1;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        
+        button.nav-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        
+        button.prev-btn {
+            background: #666;
+            color: white;
+        }
+        
+        button.prev-btn:hover {
+            background: #444;
+        }
+        
+        button.prev-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        button.next-btn {
+            background: #1f73b7;
+            color: white;
+        }
+        
+        button.next-btn:hover {
+            background: #0d47a1;
+        }
+        
+        button.next-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        button.submit-btn {
+            background: #4caf50;
+            color: white;
+            padding: 12px 40px;
+            font-size: 1.1em;
+        }
+        
+        button.submit-btn:hover {
+            background: #388e3c;
+        }
+        
+        .results-screen {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .results-screen.active {
+            display: block;
+        }
+        
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .score-circle.pass {
+            background: #4caf50;
+        }
+        
+        .score-circle.fail {
+            background: #d32f2f;
+        }
+        
+        .results-screen h2 {
+            color: #1f73b7;
+            margin-bottom: 20px;
+        }
+        
+        .results-breakdown {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .domain-result {
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            border-left: 4px solid #1f73b7;
+        }
+        
+        .domain-result-title {
+            font-weight: bold;
+            color: #0d47a1;
+        }
+        
+        .domain-result-score {
+            font-size: 1.3em;
+            color: #1f73b7;
+            margin-top: 5px;
+        }
+        
+        .review-button {
+            background: #1f73b7;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        
+        .review-button:hover {
+            background: #0d47a1;
+        }
+        
+        .progress-bar {
+            background: #ddd;
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #1f73b7;
+            height: 100%;
+            transition: width 0.3s;
+        }
+        
+        .question-progress {
+            text-align: center;
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="exam-container">
+        <!-- HEADER -->
+        <div class="exam-header">
+            <h1>Adobe Journey Optimizer (AD0-E607)</h1>
+            <p>Business Practitioner Professional Practice Exam</p>
+            <p>50 Questions | 100 Minutes | Pass: 31/50 (62%)</p>
+        </div>
+        
+        <!-- START SCREEN -->
+        <div class="start-screen" id="startScreen">
+            <h2>Welcome to Your Practice Exam</h2>
+            <p>This comprehensive practice exam simulates the official Adobe Journey Optimizer certification test.</p>
+            
+            <div class="exam-info">
+                <div class="info-item">
+                    <strong>Total Questions:</strong> 50
+                </div>
+                <div class="info-item">
+                    <strong>Time Limit:</strong> 100 minutes (1 hour 40 min)
+                </div>
+                <div class="info-item">
+                    <strong>Pass Score:</strong> 31/50 (62%)
+                </div>
+                <div class="info-item">
+                    <strong>Format:</strong> Multiple Choice (A-D)
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 25px; margin-bottom: 15px; color: #0d47a1;">Domain Breakdown:</h3>
+            <div class="exam-info">
+                <div class="info-item">
+                    <strong>Domain 1:</strong> Campaign & Journey Optimization<br>
+                    <span style="color: #666;">24 questions (48%)</span>
+                </div>
+                <div class="info-item">
+                    <strong>Domain 2:</strong> Offer Decisioning<br>
+                    <span style="color: #666;">6 questions (12%)</span>
+                </div>
+                <div class="info-item">
+                    <strong>Domain 3:</strong> Content Authoring<br>
+                    <span style="color: #666;">10 questions (20%)</span>
+                </div>
+                <div class="info-item">
+                    <strong>Domain 4:</strong> AEP Foundations<br>
+                    <span style="color: #666;">10 questions (20%)</span>
+                </div>
+            </div>
+            
+            <p style="margin-top: 25px; color: #d32f2f; font-weight: bold;">⏱️ Timer will start when you begin. You can pause anytime.</p>
+            
+            <button onclick="startExam()">Start Exam</button>
+        </div>
+        
+        <!-- TIMER (shown during exam) -->
+        <div class="timer" id="timerDisplay" style="display:none;">
+            Time Remaining: <span id="timeLeft">100:00</span> | ⏸️ <span id="pauseBtn" onclick="togglePause()" style="cursor:pointer;">Pause</span>
+        </div>
+        
+        <!-- EXAM STATS -->
+        <div class="exam-stats" id="examStats" style="display:none;">
+            <div class="stat-box">
+                <div class="value" id="questionsAnswered">0</div>
+                <div class="label">Answered</div>
+            </div>
+            <div class="stat-box">
+                <div class="value" id="questionsRemaining">50</div>
+                <div class="label">Remaining</div>
+            </div>
+            <div class="stat-box">
+                <div class="value" id="currentCorrect">0</div>
+                <div class="label">Correct So Far</div>
+            </div>
+            <div class="stat-box">
+                <div class="value" id="currentPercent">0%</div>
+                <div class="label">Progress</div>
+            </div>
+        </div>
+        
+        <!-- QUESTIONS SCREEN -->
+        <div class="question-screen" id="questionScreen">
+            <div class="question-progress">
+                <span id="questionCounter">Question 1 of 50</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                </div>
+            </div>
+            
+            <div class="question-card">
+                <div class="question-domain" id="domainBadge">Domain 1: Campaign & Journey</div>
+                <div class="question-number" id="questionNum">Q1</div>
+                <div class="question-text" id="questionText"></div>
+                
+                <div class="options" id="optionsContainer"></div>
+                
+                <div class="explanation" id="explanation"></div>
+                
+                <div class="navigation">
+                    <button class="nav-btn prev-btn" onclick="previousQuestion()" id="prevBtn">← Previous</button>
+                    <button class="nav-btn next-btn" onclick="nextQuestion()" id="nextBtn">Next →</button>
+                    <button class="nav-btn submit-btn" onclick="submitExam()" id="submitBtn" style="display:none;">Submit Exam</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- RESULTS SCREEN -->
+        <div class="results-screen" id="resultsScreen">
+            <div class="score-circle" id="scoreCircle">0%</div>
+            <h2 id="resultTitle">Exam Complete</h2>
+            <p id="resultMessage" style="font-size: 1.1em; color: #666; margin-bottom: 20px;"></p>
+            
+            <div id="resultsBreakdown"></div>
+            
+            <button class="review-button" onclick="reviewAnswers()">Review All Answers</button>
+            <button class="review-button" onclick="restartExam()" style="background: #666;">Retake Exam</button>
+        </div>
+    </div>
+    
+    <script>
+        // =============== EXAM DATA ===============
+        const questions = [
+            // ======= DOMAIN 1: Campaign & Journey (24 questions) =======
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer wants to trigger a journey when a customer abandons their shopping cart. The system must immediately detect the cart abandonment event and send a reminder email within 15 minutes. Which journey type should be used?",
+                options: {
+                    A: "Read Audience journey triggered daily",
+                    B: "Unitary Event journey",
+                    C: "Business Event journey",
+                    D: "Audience Qualification journey"
+                },
+                correct: "B",
+                explanation: "A Unitary Event journey is triggered in real-time by a customer action (cart abandonment). This allows immediate processing and the reminder email can be sent within 15 minutes. Read Audience is batch-scheduled. Business Event is external/scheduled. Audience Qualification reacts to audience membership changes, not custom events.",
+                keywords: "unitary event, real-time trigger, immediate"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey has been configured with 52 activities. When the marketer attempts to publish it, they receive an error message. What is the most likely cause?",
+                options: {
+                    A: "The event payload exceeds 64 KB",
+                    B: "The journey exceeds the 50-activity limit per journey",
+                    C: "The organization has exceeded the 200-journey production limit",
+                    D: "One of the email messages exceeds 2 MB after backend processing"
+                },
+                correct: "B",
+                explanation: "AJO has a strict 50-activity limit per journey. The error occurs at PUBLISH time (validation). The 64 KB event limit happens at runtime (entry), not publish. The 200-journey limit would prevent creating a new journey, not publishing an existing one. The 2 MB email limit would apply, but activity count is the more direct constraint here given the numbers provided.",
+                keywords: "50 activities, publish validation"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer creates a Read Audience journey that sends a weekly email every Monday at 9 AM. When they attempt to publish a second Read Audience journey to send on the same schedule, the journey publishes successfully but doesn't execute. What is the issue?",
+                options: {
+                    A: "The organization has exceeded the 5 concurrent instances limit for Read Audience activities",
+                    B: "The 12-hour processing timeout was exceeded",
+                    C: "The audience size exceeds the 20K profiles/second throughput",
+                    D: "The email content exceeds 1 MB in size"
+                },
+                correct: "A",
+                explanation: "Read Audience has a hard limit of 5 CONCURRENT instances per organization. If two journeys run at the same time (both Monday 9 AM), that would be 2 instances. The issue is scheduling them to avoid overlap. The journey publishes (no publish validation error) but won't execute if it exceeds the concurrent limit. Solution: stagger execution 5-10 minutes apart.",
+                keywords: "5 concurrent instances, Read Audience, scheduling"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "During testing, a customer enters a Unitary Event journey via a 'Purchase' event. Five minutes later, the same customer makes another purchase and re-enters the journey. What prevents this from happening?",
+                options: {
+                    A: "The event payload limit prevents duplicate events",
+                    B: "The 5-minute reentrance block prevents the same customer from entering within 5 minutes",
+                    C: "The 1 MB journey instance limit prevents re-entry",
+                    D: "The journey version automatically increments on each entry"
+                },
+                correct: "B",
+                explanation: "By design, Unitary Event journeys have a 5-minute reentrance block (default). This prevents the same customer from entering the journey twice within a 5-minute window. This is a FEATURE to prevent duplicate messages. The event payload and instance limits are different constraints. Version changes don't affect this.",
+                keywords: "5-minute reentrance block, unitary event"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer reviews journey reports and notices that all profiles are exiting with an ERROR status at the same point in the journey. The email was sent successfully before the error occurred. What is the most likely cause?",
+                options: {
+                    A: "The event payload exceeded 64 KB",
+                    B: "The journey instance accumulated more than 1 MB of data",
+                    C: "The 50-activity limit was exceeded",
+                    D: "The email content exceeded 2 MB after processing"
+                },
+                correct: "B",
+                explanation: "ERROR status mid-journey indicates the 1 MB journey instance limit was breached. This happens when too much data accumulates during execution (profile lookups, API data, context variables). The 64 KB event limit would prevent entry entirely. The 50-activity limit would prevent publishing. The 2 MB email limit would prevent sending the email, not cause an ERROR after send.",
+                keywords: "ERROR status, 1 MB instance limit, data accumulation"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey uses a Condition activity to split customers based on loyalty_tier. VIP customers go to Path A, others to Path B. After 2 days, the marketer notices very few customers on Path A despite significant VIP traffic. What is a probable cause?",
+                options: {
+                    A: "The condition logic is correct; Path A is naturally smaller",
+                    B: "The event payload is limiting the data available for the condition",
+                    C: "The loyalty_tier field may not exist in the profile, causing all customers to default to Path B",
+                    D: "The 5-minute reentrance block is preventing VIP customers from entering"
+                },
+                correct: "C",
+                explanation: "If the condition references a field that doesn't exist (loyalty_tier not in schema), the condition evaluates as FALSE for all profiles, routing everyone to Path B. Validation doesn't catch missing fields (it validates syntax, not data existence). Event payload affects entry, not condition evaluation. Reentrance blocks affect entry timing, not path routing.",
+                keywords: "condition logic, field validation, path routing"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer wants to build an audience-triggered journey that immediately contacts customers when they achieve Gold status. Which entry method is best?",
+                options: {
+                    A: "Unitary Event based on a 'status_change' event",
+                    B: "Read Audience triggered daily",
+                    C: "Business Event triggered on status change",
+                    D: "Audience Qualification with a streamed audience"
+                },
+                correct: "D",
+                explanation: "Audience Qualification is designed for real-time audience membership changes. When a customer enters a streamed audience (achieving Gold), they immediately trigger the journey. Unitary Event requires a custom event (status_change). Read Audience is batch/scheduled. Business Event is for external systems. Audience Qualification is the purpose-built solution.",
+                keywords: "audience qualification, real-time membership, streamed"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey uses a 'Wait' activity set to pause for 2 days or 'until an event is received.' If the customer doesn't perform the event within 2 days, what happens?",
+                options: {
+                    A: "The journey pauses indefinitely waiting for the event",
+                    B: "The customer automatically exits the journey",
+                    C: "The journey continues to the next activity after 2 days",
+                    D: "The journey enters ERROR status"
+                },
+                correct: "C",
+                explanation: "A 'Wait' activity with a timeout (2 days) will continue to the next activity after the timeout expires, even if the event wasn't received. The 'or' in 'Wait for event OR until 2 days' is an OR logic: whichever comes first. If neither the event nor the timeout specification is met indefinitely, then paths diverge, but here we have a timeout.",
+                keywords: "wait activity, timeout, event condition"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer sends 100,000 unitary event-triggered journeys daily. After reviewing journey metrics, they notice zero profiles are entering. What is the most likely issue?",
+                options: {
+                    A: "The event's payload size is likely exceeding the 64 KB limit",
+                    B: "The journey instance size limit is being breached",
+                    C: "The 5-minute reentrance block is preventing entry",
+                    D: "The 200-active-journey limit has been exceeded"
+                },
+                correct: "A",
+                explanation: "Zero profiles entering indicates an ENTRY-level problem. The 64 KB event payload limit is applied at entry—events exceeding this limit are silently dropped. Instance limit and reentrance block would affect specific profiles, not all of them. Journey limit would prevent publishing, not execution.",
+                keywords: "zero entries, 64 KB payload limit, event dropped"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A Custom Action activity is calling an external API endpoint. The endpoint responds slowly (average 1.5 seconds). How many requests per minute can this endpoint handle according to AJO guardrails?",
+                options: {
+                    A: "300,000 calls/minute",
+                    B: "150,000 calls/30 seconds",
+                    C: "200 TPS minimum guaranteed",
+                    D: "1,000 concurrent connections"
+                },
+                correct: "B",
+                explanation: "AJO has two custom action capping rules: fast endpoints (<0.75s) can handle 300K calls/min, BUT slow endpoints (>0.75s) are capped at 150,000 calls per 30 seconds (5K calls/min). A 1.5-second endpoint falls into the slow category. The 200 TPS is the minimum endpoint throughput requirement (endpoint must support 200 TPS).",
+                keywords: "custom action capping, endpoint latency, slow endpoint"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "What does validation check in Journey Optimizer? (Select the most complete answer)",
+                options: {
+                    A: "Only that all required fields are filled",
+                    B: "Activity configuration, event setup, expression syntax, audience references, message content, payload size, activity count, and journey structure",
+                    C: "Whether the journey will achieve the business goal",
+                    D: "Only the syntax of conditions and personalization expressions"
+                },
+                correct: "B",
+                explanation: "Validation is STRUCTURAL and TECHNICAL. It checks: required fields, event configuration, expression syntax, audience existence, message validity, 50-activity limit, 2 MB payload warnings, and no orphaned activities. It does NOT check: whether logic makes business sense, whether conditions are optimal, or whether the journey achieves goals.",
+                keywords: "validation scope, what gets validated"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey enters Paused status. How long can it remain paused before being automatically unpaused?",
+                options: {
+                    A: "7 days",
+                    B: "14 days (maximum pause duration)",
+                    C: "30 days",
+                    D: "Indefinitely until manually unpaused"
+                },
+                correct: "B",
+                explanation: "Journeys can be paused for a maximum of 14 days. After 14 days, they must be manually unpaused or will resume. This is a guardrail to prevent indefinite paused journeys. Additionally, there's a 10-million-profile cap across all paused journeys in an organization.",
+                keywords: "pause duration, 14 days, maximum pause"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "How is completion rate calculated in a journey?",
+                options: {
+                    A: "Total entries / total exits",
+                    B: "(Total exits / total entries) × 100",
+                    C: "Profiles who reached the end / total entries",
+                    D: "(Profiles who completed goal / total exits) × 100"
+                },
+                correct: "B",
+                explanation: "Completion rate = (Exits / Entries) × 100. This tells you what percentage of people who entered the journey finished it. NOT the same as conversion rate (which measures goal achievement). A low completion rate indicates high drop-off mid-journey.",
+                keywords: "completion rate formula"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer reviews journey reports and wants to know WHERE customers are dropping off (exiting prematurely). Which metric or view should they check?",
+                options: {
+                    A: "Global Report → Conversion Rate",
+                    B: "Journey Report → Drop-off by Activity",
+                    C: "Tracking Statistics → Click-Through Rate",
+                    D: "All time view → Entry statistics"
+                },
+                correct: "B",
+                explanation: "Drop-off by Activity shows exactly where customers exit the journey. It breaks down the number of customers who exit at each activity, revealing problem areas. Global Reports don't show activity-level detail. Tracking Statistics is for clicks/engagement. Entry statistics show total entries, not drop-off.",
+                keywords: "drop-off, activity-level analysis"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey uses a 'Read Audience' activity with an audience of 5 million customers. The processing completes in 3 hours but then stops prematurely. What is likely the issue?",
+                options: {
+                    A: "The audience exceeded the 5-million customer limit",
+                    B: "Processing was interrupted by the 12-hour timeout",
+                    C: "The 20K profiles/second throughput limit was exceeded",
+                    D: "The journey exceeded the 2 MB email content limit"
+                },
+                correct: "C",
+                explanation: "Read Audience has a 20K profiles/second sandbox throughput limit. If the audience is too large or other processes are consuming throughput, processing may slow and not complete. The 5 concurrent instances limit is different. The 12-hour timeout would stop after 12 hours (plenty of time for 5M profiles at 20K/sec). The 2 MB email limit would affect the email message, not audience processing.",
+                keywords: "read audience throughput, 20K profiles/sec"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey can hold a maximum of how many active journeys in production status?",
+                options: {
+                    A: "50",
+                    B: "100",
+                    C: "200",
+                    D: "500"
+                },
+                correct: "C",
+                explanation: "Maximum 200 active journeys in production status per sandbox (or 100 in development). This is a hard organizational limit. Attempting to publish beyond this will fail.",
+                keywords: "200 journeys maximum, production limit"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "What is the maximum size of a journey instance (all data accumulated during execution)?",
+                options: {
+                    A: "500 KB",
+                    B: "1 MB",
+                    C: "2 MB",
+                    D: "5 MB"
+                },
+                correct: "B",
+                explanation: "Maximum journey instance size is 1 MB. When this limit is exceeded, the profile enters ERROR status and exits the journey. This is different from the 2 MB email content limit. The instance limit is about accumulated data during execution.",
+                keywords: "1 MB instance limit"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A journey is using a Business Event trigger. Can this journey also use a Unitary Event trigger in the same journey?",
+                options: {
+                    A: "Yes, they can coexist in different branches",
+                    B: "Yes, if they reference different event schemas",
+                    C: "No, Business Events and Unitary Events cannot coexist in the same journey",
+                    D: "Only if the Business Event is processed first"
+                },
+                correct: "C",
+                explanation: "By design, a journey can have EITHER a Business Event trigger OR a Unitary Event trigger, but NOT both. They are mutually exclusive entry types. Additionally, Business Events cannot coexist with Audience Qualification in the same journey.",
+                keywords: "business event, unitary event, mutually exclusive"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "If a journey instance size reaches the 1 MB limit for a customer, what status does that customer's profile enter?",
+                options: {
+                    A: "PAUSED",
+                    B: "ERROR",
+                    C: "EXITED",
+                    D: "WARNING"
+                },
+                correct: "B",
+                explanation: "Profiles that breach the 1 MB instance size limit enter ERROR status and are removed from the journey. This is a critical guardrail. ERROR status is different from EXITED (which is normal completion).",
+                keywords: "ERROR status, instance limit breach"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "A marketer wants to personalize which journey each customer enters based on their loyalty tier. What is the best approach?",
+                options: {
+                    A: "Create separate journeys for each tier and use Condition activities to route between them",
+                    B: "Use a single journey with Condition activities branching based on loyalty_tier",
+                    C: "Create separate journeys for each tier and trigger with separate unitary events",
+                    D: "Use Offer Decisioning to select which journey to enter"
+                },
+                correct: "B",
+                explanation: "A single journey with Condition activities is the standard pattern for routing based on profile attributes. Creating separate journeys scales poorly and wastes activity limits. Offer Decisioning is for offer selection, not journey selection. Separate events is unnecessary.",
+                keywords: "condition activity routing, loyalty tier personalization"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "What does a 'Jump' activity do in a journey?",
+                options: {
+                    A: "Skip to the next activity",
+                    B: "Transfer to another journey",
+                    C: "Jump to a different journey version",
+                    D: "Skip the current wait period"
+                },
+                correct: "B",
+                explanation: "A Jump activity transfers the customer to another journey. This is useful for handing off between journeys (e.g., from onboarding to nurture). It doesn't skip activities or change versions.",
+                keywords: "jump activity, journey transfer"
+            },
+            {
+                domain: "Domain 1: Campaign & Journey",
+                question: "What is the maximum email content size that can be published in a journey?",
+                options: {
+                    A: "1 MB authored content",
+                    B: "2 MB after backend processing",
+                    C: "2 MB authored content",
+                    D: "5 MB maximum"
+                },
+                correct: "B",
+                explanation: "The email content limit is 2 MB AFTER backend processing (not authored size). Best practice is to keep authored content under 1 MB to stay comfortably under the processed limit. Visual fragments are 100 KB max, expression fragments are 200 KB max.",
+                keywords: "2 MB email limit, backend processing"
+            },
+            // ======= DOMAIN 2: Offer Decisioning (6 questions) =======
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "An offer needs to show different discount percentages to different customer segments (VIP: 30%, Standard: 10%). What type of offer should be created?",
+                options: {
+                    A: "Static offer with two variants",
+                    B: "Dynamic offer using {{discountPercentage}} variable",
+                    C: "Two separate static offers, one for each segment",
+                    D: "A single static offer with conditional logic in the journey"
+                },
+                correct: "B",
+                explanation: "A DYNAMIC offer contains variables like {{discountPercentage}} that are replaced with actual profile data. This allows one offer to personalize based on data. Static offers have fixed content for everyone. Two separate offers would work but is less efficient than one dynamic offer.",
+                keywords: "dynamic offer, variables, personalization"
+            },
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "An organization creates three financial offers: Robo-Advisor (priority 1, capped at 3/month), Managed Portfolio (priority 2, capped at 3/month), and Self-Directed Trading (priority 3, capped at 3/month). A customer has already received Robo-Advisor 3 times this month. Which offer will the system deliver?",
+                options: {
+                    A: "Fallback offer (Robo-Advisor is capped)",
+                    B: "Managed Portfolio (priority 2, next in line)",
+                    C: "Self-Directed Trading (priority 3)",
+                    D: "No offer (all options are exhausted)"
+                },
+                correct: "B",
+                explanation: "Capping is PER-OFFER. When Robo-Advisor is capped, the system skips it and evaluates the next ranked offer (Managed Portfolio). It does NOT fail the decision or deliver the fallback. The fallback is only delivered if NO offers match the eligibility rules.",
+                keywords: "capping per-offer, priority ranking, skip capped"
+            },
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "What are the four main stages of setting up Offer Decisioning?",
+                options: {
+                    A: "Define offers → Create collections → Build decisions → Deploy decisions",
+                    B: "Define offers → Define audiences → Create rules → Send offers",
+                    C: "Create placements → Define offers → Set eligibility → Publish",
+                    D: "Create decisions → Add offers → Set rankings → Deploy"
+                },
+                correct: "A",
+                explanation: "The standard flow is: 1) Create Offers (content, channels, eligibility), 2) Organize Into Collections (group related offers), 3) Build Decisions (ranking, capping, fallback), 4) Deploy Decisions (use in journey via Content Decision activity).",
+                keywords: "offer decisioning stages, workflow"
+            },
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "An offer decision has been configured with Offer A (priority 1), Offer B (priority 2), and Fallback Offer C. For a particular customer, neither A nor B matches the eligibility rules. What happens?",
+                options: {
+                    A: "The decision fails and the journey exits",
+                    B: "Fallback Offer C is delivered",
+                    C: "The lowest-ranked offer (B) is delivered",
+                    D: "The system returns an error"
+                },
+                correct: "B",
+                explanation: "When no ranked offers match eligibility rules, the system delivers the FALLBACK OFFER. The fallback is specifically designed to be shown when primary offers don't qualify. The decision does NOT fail.",
+                keywords: "fallback offer, eligibility rules, no match"
+            },
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "How is Offer Decisioning different from personalization?",
+                options: {
+                    A: "Offer Decisioning is automatic; personalization requires manual selection",
+                    B: "Offer Decisioning CHOOSES which offer to show; personalization CUSTOMIZES the content of a single offer",
+                    C: "They are the same feature with different names",
+                    D: "Offer Decisioning is for email; personalization is for all channels"
+                },
+                correct: "B",
+                explanation: "Offer Decisioning = SELECT WHICH OFFER (from many options based on eligibility/ranking). Personalization = CUSTOMIZE A SINGLE OFFER (insert name, discount amount, etc.). Use Offer Decisioning for multi-offer scenarios (product recommendations, eligibility-based offers). Use personalization for fields within that offer.",
+                keywords: "offer decisioning vs personalization, selection vs customization"
+            },
+            {
+                domain: "Domain 2: Offer Decisioning",
+                question: "What is a Collection in Offer Decisioning?",
+                options: {
+                    A: "A group of customers who qualify for an offer",
+                    B: "A set of related offers organized together",
+                    C: "A decision rule that determines which customer gets which offer",
+                    D: "A list of all offers ever created"
+                },
+                correct: "B",
+                explanation: "A Collection is a logical grouping of offers (e.g., 'Summer Promotions', 'Financial Products'). Collections help organize offers and control scope. They don't define customer eligibility—that's done in Decision rules.",
+                keywords: "collection, offer organization"
+            },
+            // ======= DOMAIN 3: Content Authoring (10 questions) =======
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "A marketer wants to include a customer's first name in an email subject line. What is the correct syntax?",
+                options: {
+                    A: "Subject: Welcome, {firstName}!",
+                    B: "Subject: Welcome, {{profile.attributes.firstName}}!",
+                    C: "Subject: Welcome, {{firstName}}!",
+                    D: "Subject: Welcome, [profile.firstName]!"
+                },
+                correct: "B",
+                explanation: "Personalization fields use {{}} syntax with the full path: {{profile.attributes.fieldName}}. The double curly braces are required. Single brackets or missing paths won't work.",
+                keywords: "personalization field syntax, {{profile.attributes}}"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "A marketer wants to create a branded footer with logo, social links, and copyright text that will be reused in every email. What should they create?",
+                options: {
+                    A: "An Expression Fragment",
+                    B: "A Visual Fragment (100 KB max, email-only)",
+                    C: "An Email Template",
+                    D: "A Personalization Field"
+                },
+                correct: "B",
+                explanation: "A VISUAL FRAGMENT is a pre-designed HTML block perfect for static footers/headers. It's email-only, limited to 100 KB, and can be inserted into multiple emails. Expression fragments are for IF/THEN logic. Templates are for entire email structures. Personalization fields are for data insertion.",
+                keywords: "visual fragment, branded footer, reusable HTML"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "A marketer wants to apply the same loyalty-tier logic (IF goldTier THEN 'You get 30%' ELSE 'You get 10%') across 10 different emails. What is the best approach?",
+                options: {
+                    A: "Create the logic in each email separately",
+                    B: "Use an Expression Fragment and insert it into all 10 emails",
+                    C: "Create separate emails for each tier",
+                    D: "Use a Condition activity in the journey to send different messages"
+                },
+                correct: "B",
+                explanation: "An EXPRESSION FRAGMENT stores reusable logic (200 KB max, email/SMS/push). Create once, use in multiple messages. Update the fragment, all emails update automatically. This is more efficient than creating logic in each email or using journey conditions for every variation.",
+                keywords: "expression fragment, reusable logic, consistency"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "Can Expression Fragments be used in in-app messages?",
+                options: {
+                    A: "Yes, with no restrictions",
+                    B: "Yes, but only simple expressions (no IF/THEN)",
+                    C: "No, Expression Fragments are not supported in in-app messages",
+                    D: "Only in conjunction with Visual Fragments"
+                },
+                correct: "C",
+                explanation: "Expression Fragments are supported in EMAIL, SMS, and PUSH ONLY. NOT supported in in-app. For in-app personalization, use personalization fields instead.",
+                keywords: "expression fragment limitations, in-app restriction"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "What is the purpose of Asset Essentials?",
+                options: {
+                    A: "Store and manage reusable email signatures",
+                    B: "Store and version-control images and files; updates propagate automatically",
+                    C: "Create A/B tests for email content",
+                    D: "Define email templates"
+                },
+                correct: "B",
+                explanation: "Asset Essentials is a central repository for images and files. Upload once, reference by ID, update source → all references update automatically. No need to re-upload the same image to multiple emails.",
+                keywords: "asset essentials, image repository, version control"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "A content experiment is set up with three variations: Control (A: 'Save 30%'), Variant B ('Limited time: 30% off'), Variant C ('Your exclusive offer'). After 48 hours, the results show: A: 2.1% CTR, B: 2.0% CTR, C: 2.3% CTR. What should the marketer do next?",
+                options: {
+                    A: "Declare C the winner and roll it out to all remaining customers",
+                    B: "Retest with a different variable (subject line, CTA button, etc.) since results are within 1-2%",
+                    C: "Discard all three and try completely different copy",
+                    D: "Extend the test for another week to get more data"
+                },
+                correct: "B",
+                explanation: "When experiment results are CLOSE (1-2% difference), the variable is likely already optimized. Test a DIFFERENT variable next (e.g., CTA button color, subject line format). Don't keep testing the same variable; move on to the next optimization.",
+                keywords: "experiment interpretation, close results, next variable"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "What are the two types of fragments in AJO?",
+                options: {
+                    A: "Static and Dynamic Fragments",
+                    B: "Visual and Text Fragments",
+                    C: "Visual and Expression Fragments",
+                    D: "Email and SMS Fragments"
+                },
+                correct: "C",
+                explanation: "Two types: 1) VISUAL Fragment (HTML blocks, 100 KB, email-only), 2) EXPRESSION Fragment (IF/THEN logic, 200 KB, email/SMS/push). These are distinct from templates and personalization fields.",
+                keywords: "fragment types, visual vs expression"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "What is the maximum size of a Visual Fragment?",
+                options: {
+                    A: "50 KB",
+                    B: "100 KB",
+                    C: "200 KB",
+                    D: "500 KB"
+                },
+                correct: "B",
+                explanation: "Visual Fragment: 100 KB max (email-only). Expression Fragment: 200 KB max (email/SMS/push). Email content overall: 2 MB max after processing.",
+                keywords: "visual fragment size limit, 100 KB"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "An email template is created for a weekly digest. It includes personalization fields ({{profile.attributes.firstName}}) and a visual fragment (footer). Can this template be reused for future digests?",
+                options: {
+                    A: "No, templates cannot contain fragments",
+                    B: "No, personalization fields must be unique to each send",
+                    C: "Yes, templates with fragments and personalization fields are fully reusable",
+                    D: "Yes, but only if the personalization fields are changed each time"
+                },
+                correct: "C",
+                explanation: "Templates are designed to be reusable with personalization fields and fragments intact. The personalization fields are evaluated fresh for each recipient, and fragments are referenced (not duplicated). This is the entire purpose of templates.",
+                keywords: "template reusability, fragments + personalization"
+            },
+            {
+                domain: "Domain 3: Content Authoring",
+                question: "Which channels support Expression Fragments?",
+                options: {
+                    A: "Email only",
+                    B: "Email and SMS",
+                    C: "Email, SMS, and Push (NOT in-app)",
+                    D: "All channels including in-app"
+                },
+                correct: "C",
+                explanation: "Expression Fragments: Email, SMS, Push. NOT in-app. Visual Fragments: Email only.",
+                keywords: "expression fragment channels, in-app restriction"
+            },
+            // ======= DOMAIN 4: AEP Foundations (10 questions) =======
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "What is the primary difference between a Profile Schema and an Event Schema?",
+                options: {
+                    A: "Profile stores identity; Event stores events",
+                    B: "Profile is mandatory; Event is optional",
+                    C: "Profile stores customer attributes (WHO); Event stores time-stamped behaviors (WHAT/WHEN)",
+                    D: "Profile is never profile-enabled; Event is always profile-enabled"
+                },
+                correct: "C",
+                explanation: "Profile Schema = WHO is the customer? (Attributes: name, email, tier). Event Schema = WHAT did they do WHEN? (Time-series behaviors). Both can be profile-enabled, but their purposes differ.",
+                keywords: "profile schema vs event schema, attributes vs behaviors"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "A dataset is created from a Profile Schema but is NOT enabled for profile. How is this data used?",
+                options: {
+                    A: "Data is stored in Unified Profile Service and available in real-time for personalization",
+                    B: "Data is stored in Data Lake only; available for analysis/queries but NOT for real-time journeys",
+                    C: "Data is immediately deleted; profile-disabled data has no value",
+                    D: "Data is stored but only accessible to administrators"
+                },
+                correct: "B",
+                explanation: "Profile-disabled datasets are stored in the Data Lake. Available for batch analysis, queries, reports, but NOT for real-time personalization in journeys. If you need real-time access, ENABLE FOR PROFILE.",
+                keywords: "profile-disabled dataset, data lake, batch access"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "A marketer wants to use a customer's purchase history (from an Event Schema dataset) in a journey condition. The dataset was recently created from Event Schema. What must be done?",
+                options: {
+                    A: "Nothing; Event Schema data is automatically available for journeys",
+                    B: "Enable the dataset for profile so purchase data is available in real-time",
+                    C: "Create a separate Profile Schema dataset",
+                    D: "Use only Profile Schema datasets in conditions; Event data cannot be accessed"
+                },
+                correct: "B",
+                explanation: "To use data in real-time journey conditions, the DATASET must be ENABLED FOR PROFILE. This applies to both Profile Schema and Event Schema datasets. Without enabling, data is in Data Lake only.",
+                keywords: "profile-enabled dataset, journey conditions, real-time access"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "What is ECID (Experience Cloud ID)?",
+                options: {
+                    A: "An encrypted customer email address",
+                    B: "Adobe's auto-generated ID for unknown visitors; can be merged with authenticated identities",
+                    C: "A unique CRM identifier imported from your system",
+                    D: "A session ID that expires after 24 hours"
+                },
+                correct: "B",
+                explanation: "ECID is Adobe's pseudonymous identifier for anonymous browsers. When a visitor logs in (provides email/CRM ID), their ECID merges with authenticated identities. All historical data merges automatically.",
+                keywords: "ECID, pseudonymous, identity merging"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "An organization notices their engageable profile count is growing rapidly, primarily from anonymous visitors. What is a recommended solution?",
+                options: {
+                    A: "Delete all ECID profiles immediately",
+                    B: "Set a TTL (Time-To-Live) on pseudonymous profiles (e.g., 14 days) so they auto-delete",
+                    C: "Disallow anonymous visitors entirely",
+                    D: "Increase the organization's profile quota"
+                },
+                correct: "B",
+                explanation: "TTL on pseudonymous profiles (14 days recommended) automatically deletes unmerged ECIDs, reducing engageable profile count and costs. This is a standard practice, not a deletion of data, just automatic cleanup.",
+                keywords: "pseudonymous TTL, 14 days, cost management"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "What are the two main types of audiences in AEP?",
+                options: {
+                    A: "Active and Inactive audiences",
+                    B: "Segment Builder (rule-based) and Audience Composition (orchestrated)",
+                    C: "Streamed and Batch audiences",
+                    D: "Profile-based and Event-based audiences"
+                },
+                correct: "B",
+                explanation: "Two audience types: 1) SEGMENT BUILDER = Rule-based, drag-and-drop conditions; 2) AUDIENCE COMPOSITION = Combine multiple audiences with logic. (Streamed vs. Batch is a property of how they're EVALUATED, not the type.)",
+                keywords: "segment builder vs composition, audience types"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "A marketer wants to trigger a journey in real-time when customers qualify for a 'Gold Tier' audience. The audience must be evaluated in real-time. What type of audience is required?",
+                options: {
+                    A: "Batch audience (daily evaluation)",
+                    B: "Streamed audience (real-time evaluation)",
+                    C: "Audience Composition",
+                    D: "Any audience works with Audience Qualification journey"
+                },
+                correct: "B",
+                explanation: "STREAMED audiences are evaluated in real-time. BATCH audiences are evaluated once daily. For real-time triggers (Audience Qualification journey), use a STREAMED audience.",
+                keywords: "streamed audience, real-time evaluation, qualification journey"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "What does the data label 'S2' indicate?",
+                options: {
+                    A: "Sensitive financial data requiring restricted access",
+                    B: "Sensitive data requiring explicit customer consent to use",
+                    C: "Standard data that can be freely exported",
+                    D: "Secondary data not tied to a specific customer"
+                },
+                correct: "B",
+                explanation: "S2 = Sensitive data requiring consent. S1 = Sensitive personal data (health, financial) requiring restricted access. C2 = Data can be exported. C1 = Contractual data.",
+                keywords: "data label S2, consent requirement"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "What is the purpose of a Union Schema in AEP?",
+                options: {
+                    A: "It combines all datasets for backup purposes",
+                    B: "It represents the merged view of all profile-enabled schemas; provides complete profile view",
+                    C: "It is mandatory for all organizations",
+                    D: "It stores personally identifiable information separately"
+                },
+                correct: "B",
+                explanation: "Union Schema is the MERGED VIEW of all profile-enabled schemas for a single XDM class (Profile, ExperienceEvent). It shows all available profile attributes across all datasets, used by Unified Profile Service.",
+                keywords: "union schema, merged profile view"
+            },
+            {
+                domain: "Domain 4: AEP Foundations",
+                question: "An organization has 1 million customers in AEP. If 100,000 are pseudonymous (ECID-only) and unmerged, how should they handle the engageable profile quota?",
+                options: {
+                    A: "The 100K pseudonymous profiles don't count toward quota",
+                    B: "All 1.1M profiles count equally toward engageable profile quota",
+                    C: "Only authenticated profiles count; pseudonymous are free",
+                    D: "Set a 14-day TTL to auto-delete pseudonymous profiles and reduce quota pressure"
+                },
+                correct: "D",
+                explanation: "Pseudonymous profiles DO count toward engageable quota. Setting a TTL (14 days) auto-deletes unmerged ECID profiles, reducing quota pressure. This is the recommended approach.",
+                keywords: "pseudonymous quota impact, TTL cleanup"
+            }
+        ];
+        
+        // =============== EXAM STATE ===============
+        let currentQuestion = 0;
+        let answers = Array(50).fill(null);
+        let examStarted = false;
+        let examTime = 100 * 60; // 100 minutes in seconds
+        let examPaused = false;
+        let timerInterval = null;
+        
+        // =============== FUNCTIONS ===============
+        function startExam() {
+            examStarted = true;
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('examStats').style.display = 'grid';
+            document.getElementById('timerDisplay').style.display = 'block';
+            document.getElementById('questionScreen').classList.add('active');
+            
+            startTimer();
+            displayQuestion(0);
+        }
+        
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                if (!examPaused && examTime > 0) {
+                    examTime--;
+                    updateTimerDisplay();
+                    if (examTime === 0) {
+                        clearInterval(timerInterval);
+                        submitExam();
+                    }
+                }
+            }, 1000);
+        }
+        
+        function updateTimerDisplay() {
+            const minutes = Math.floor(examTime / 60);
+            const seconds = examTime % 60;
+            document.getElementById('timeLeft').textContent = 
+                `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+        
+        function togglePause() {
+            examPaused = !examPaused;
+            document.getElementById('pauseBtn').textContent = examPaused ? '▶️ Resume' : '⏸️ Pause';
+        }
+        
+        function displayQuestion(index) {
+            currentQuestion = index;
+            const q = questions[index];
+            
+            // Update progress
+            document.getElementById('questionCounter').textContent = `Question ${index + 1} of 50`;
+            document.getElementById('progressFill').style.width = ((index + 1) / 50 * 100) + '%';
+            document.getElementById('questionNum').textContent = `Q${index + 1}`;
+            document.getElementById('domainBadge').textContent = q.domain;
+            document.getElementById('questionText').textContent = q.question;
+            
+            // Clear previous options
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+            
+            // Display options
+            const optionKeys = ['A', 'B', 'C', 'D'];
+            optionKeys.forEach(key => {
+                const div = document.createElement('div');
+                div.className = 'option';
+                if (answers[index] === key) div.classList.add('selected');
+                
+                div.innerHTML = `
+                    <input type="radio" id="opt${key}" name="answer" value="${key}" 
+                           ${answers[index] === key ? 'checked' : ''} 
+                           onchange="selectAnswer('${key}')">
+                    <label for="opt${key}">${key}: ${q.options[key]}</label>
+                `;
+                container.appendChild(div);
+            });
+            
+            // Hide explanation initially
+            document.getElementById('explanation').classList.remove('show');
+            document.getElementById('explanation').innerHTML = '';
+            
+            // Update nav buttons
+            document.getElementById('prevBtn').disabled = (index === 0);
+            document.getElementById('nextBtn').style.display = (index < 49) ? 'block' : 'none';
+            document.getElementById('submitBtn').style.display = (index === 49) ? 'block' : 'none';
+            
+            updateStats();
+        }
+        
+        function selectAnswer(option) {
+            answers[currentQuestion] = option;
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            document.querySelector(`input[value="${option}"]`).parentElement.classList.add('selected');
+            updateStats();
+        }
+        
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                displayQuestion(currentQuestion - 1);
+            }
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < 49) {
+                displayQuestion(currentQuestion + 1);
+            }
+        }
+        
+        function submitExam() {
+            clearInterval(timerInterval);
+            showResults();
+        }
+        
+        function showResults() {
+            document.getElementById('questionScreen').classList.remove('active');
+            document.getElementById('examStats').style.display = 'none';
+            document.getElementById('timerDisplay').style.display = 'none';
+            document.getElementById('resultsScreen').classList.add('active');
+            
+            let correctCount = 0;
+            let domainScores = {
+                'Domain 1: Campaign & Journey': { correct: 0, total: 24 },
+                'Domain 2: Offer Decisioning': { correct: 0, total: 6 },
+                'Domain 3: Content Authoring': { correct: 0, total: 10 },
+                'Domain 4: AEP Foundations': { correct: 0, total: 10 }
+            };
+            
+            answers.forEach((answer, index) => {
+                const domain = questions[index].domain;
+                if (answer === questions[index].correct) {
+                    correctCount++;
+                    domainScores[domain].correct++;
+                }
+            });
+            
+            const percentage = Math.round((correctCount / 50) * 100);
+            const passed = correctCount >= 31;
+            
+            document.getElementById('scoreCircle').textContent = percentage + '%';
+            document.getElementById('scoreCircle').className = passed ? 'score-circle pass' : 'score-circle fail';
+            document.getElementById('resultTitle').textContent = passed ? '🎉 PASSED!' : '❌ Did Not Pass';
+            document.getElementById('resultMessage').textContent = 
+                `You scored ${correctCount} out of 50 (${percentage}%). ${passed ? 'Great job! Continue to the full exam.' : 'Review the material and try again.'}`;
+            
+            let breakdown = '<div class="results-breakdown">';
+            Object.keys(domainScores).forEach(domain => {
+                const score = domainScores[domain];
+                const pct = Math.round((score.correct / score.total) * 100);
+                breakdown += `
+                    <div class="domain-result">
+                        <div class="domain-result-title">${domain}</div>
+                        <div class="domain-result-score">${score.correct}/${score.total} (${pct}%)</div>
+                    </div>
+                `;
+            });
+            breakdown += '</div>';
+            
+            document.getElementById('resultsBreakdown').innerHTML = breakdown;
+        }
+        
+        function reviewAnswers() {
+            document.getElementById('resultsScreen').classList.remove('active');
+            document.getElementById('questionScreen').classList.add('active');
+            document.getElementById('examStats').style.display = 'grid';
+            document.getElementById('nextBtn').style.display = 'block';
+            document.getElementById('submitBtn').style.display = 'none';
+            currentQuestion = 0;
+            showReviewMode();
+        }
+        
+        function showReviewMode() {
+            const q = questions[currentQuestion];
+            const userAnswer = answers[currentQuestion];
+            const isCorrect = userAnswer === q.correct;
+            
+            displayQuestion(currentQuestion);
+            
+            // Show explanation
+            const explDiv = document.getElementById('explanation');
+            const expText = `
+                <h4>${isCorrect ? '✅ Correct!' : '❌ Incorrect'}</h4>
+                <p><strong>Your answer:</strong> ${userAnswer || 'Not answered'}</p>
+                <p><strong>Correct answer:</strong> ${q.correct}</p>
+                <p>${q.explanation}</p>
+            `;
+            explDiv.innerHTML = expText;
+            explDiv.classList.add('show');
+            
+            // Highlight options
+            document.querySelectorAll('.option').forEach(opt => {
+                const input = opt.querySelector('input');
+                opt.classList.remove('correct', 'incorrect');
+                if (input.value === q.correct) {
+                    opt.classList.add('correct');
+                } else if (input.value === userAnswer && !isCorrect) {
+                    opt.classList.add('incorrect');
+                }
+            });
+        }
+        
+        function restartExam() {
+            location.reload();
+        }
+        
+        function updateStats() {
+            const answered = answers.filter(a => a !== null).length;
+            const remaining = 50 - answered;
+            const correct = answers.filter((a, i) => a === questions[i].correct).length;
+            const pct = Math.round((correct / (answered || 1)) * 100);
+            
+            document.getElementById('questionsAnswered').textContent = answered;
+            document.getElementById('questionsRemaining').textContent = remaining;
+            document.getElementById('currentCorrect').textContent = correct;
+            document.getElementById('currentPercent').textContent = pct + '%';
+        }
+    </script>
+</body>
+</html>
