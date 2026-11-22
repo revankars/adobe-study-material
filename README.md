@@ -25,6 +25,8 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Editing
 
+Quick revision summaries are generated from the complete guides by `python3 tools/build_quick_revision.py`. Run it after changing a guide, then run `tools/build_bundle.py`.
+
 The page loads two generated files: `assets/js/portal.bundle.js` (all the code) and `assets/js/data-bundle.js` (all the data). After changing anything in `assets/js/` or `data/`, regenerate them:
 
 ```bash

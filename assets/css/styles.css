@@ -2451,3 +2451,16 @@ h3 { font-size: 16px; }
 .study-frame-title{font-weight:600;color:inherit}
 .study-frame-open{margin-left:auto;font-size:14px}
 .study-frame{flex:1 1 auto;width:100%;border:1px solid #e2e2e2;border-radius:12px;background:#fff}
+
+/* Quick revision summaries */
+.qr-summary .revision-header { margin-bottom: 20px; }
+.qr-summary .revision-header h1 { margin: 10px 0 6px; }
+.qr-part { background: #fff; border: 1px solid #e6e6e6; border-radius: 14px; padding: 18px 22px; margin: 16px 0; }
+.qr-part h2 { margin: 0 0 10px; font-size: 18px; }
+.qr-points { list-style: none; margin: 0; padding: 0; }
+.qr-points li + li { border-top: 1px solid #f0f0f0; }
+.qr-point { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; background: none; border: 0; padding: 10px 4px; cursor: pointer; font: inherit; color: inherit; }
+.qr-point:hover { background: #f7f7f7; }
+.qr-point:focus-visible { outline: 2px solid #0078d4; outline-offset: 2px; }
+.qr-text { flex: 1; line-height: 1.5; }
+.qr-open { white-space: nowrap; font-size: 13px; color: #0078d4; font-weight: 600; }

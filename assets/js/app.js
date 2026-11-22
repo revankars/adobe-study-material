@@ -1,12 +1,12 @@
 import { createInitialState, loadProgress, saveProgress, downloadProgress, validateImportedProgress } from "./storage.js";
-import { renderDashboard, renderRevision, populateCertificationCounts } from "./dashboard.js";
+import { renderDashboard, populateCertificationCounts } from "./dashboard.js";
 import { escapeHtml } from "./study.js";
 import { loadJson } from "./data.js";
 import { createQuizSession, selectedAnswer, setAnswer, submitCurrentAnswer, buildResult, renderQuiz, renderResult } from "./quiz.js";
 import { renderPracticeTestsSelection } from "./practice-tests.js";
 import { renderMockTestsSelection } from "./mock-tests.js";
 import { renderStudyMaterialSelection } from "./study-selection.js";
-import { renderQuickRevisionSelection } from "./quick-revision.js";
+import { renderQuickRevisionSelection, renderQuickRevisionSummary } from "./quick-revision.js";
 
 let state = createInitialState();
 let certifications = [];
@@ -17,6 +17,7 @@ let currentQuizSession = null;
 let currentCertificationId = "ad0-e409";
 let currentChapterId = null; // Track which chapter/section is selected
 let currentTopicId = null; // Track which topic is being viewed
+let quickRevisionByCert = {}; // Summaries from data/<cert>/quick-revision.json
 let loadedCertsData = {}; // Cache loaded cert data: { "ad0-e409": {chapters, questions, exam}, ... }
 let currentStudyMaterialHtml = null; // Cache loaded study material HTML
 let currentStudyViewingCertId = null; // Track which certification's study material is being viewed
@@ -81,6 +82,11 @@ async function loadCertification(certId) {
       return;
     }
     currentCertificationId = certId;
+    try {
+      quickRevisionByCert[certId] = await loadJson(`data/${certId}/quick-revision.json`);
+    } catch (error) {
+      console.warn("No quick revision summary for", certId);
+    }
     console.log("Fetching data from:", cert.examFile, cert.chaptersFile, cert.questionsFile);
     const [examData, chaptersData, questionsData] = await Promise.all([
       loadJson(cert.examFile),
@@ -138,6 +144,12 @@ function viewStudyMaterialSelection() {
 
 async function viewStudyMaterial(certId) {
   setSectionName("Study material");
+  openStudyGuide(certId, null, "study");
+}
+
+// Shows a complete study guide in its own frame. An anchor opens that section directly.
+// "from" decides where the back button goes: the study subjects or quick revision.
+function openStudyGuide(certId, anchor, from) {
   const studyGuideFiles = {
     "ad0-e207": "Complete_Study_Guide_AD0-E207.html",
     "ad0-e408": "Complete_Study_Guide_AD0-E408.html",
@@ -151,17 +163,21 @@ async function viewStudyMaterial(certId) {
   }
   const cert = certifications.find((c) => c.id === certId);
   const title = escapeHtml(cert ? cert.name : certId);
+  const src = anchor ? `${filename}#${encodeURIComponent(anchor)}` : filename;
+  const back = from === "revision"
+    ? `<button class="btn-back-to-subjects" data-action="start-revision" data-cert-id="${escapeHtml(certId)}">← Quick revision</button>`
+    : `<button class="btn-back-to-subjects" data-action="view-study-selection">← Study subjects</button>`;
   currentStudyViewingCertId = certId;
   document.body.classList.add("viewing-study-material");
   // Each guide is shown in its own frame so its styles and scripts cannot affect the portal.
   getContentElement().innerHTML = `
     <div class="study-frame-wrap">
       <div class="study-frame-bar">
-        <button class="btn-back-to-subjects" data-action="view-study-selection">← Study subjects</button>
+        ${back}
         <span class="study-frame-title">${title} study guide</span>
         <a class="study-frame-open" href="${filename}" target="_blank" rel="noopener">Open in new tab ↗</a>
       </div>
-      <iframe class="study-frame" src="${filename}" title="${title} study guide"></iframe>
+      <iframe class="study-frame" src="${src}" title="${title} study guide"></iframe>
     </div>`;
 }
 
@@ -263,21 +279,19 @@ function viewMock() {
 }
 
 function viewQuickRevisionForCertification(certId) {
-  // Load chapters and exam data
-  if (loadedCertsData[certId]?.chapters && loadedCertsData[certId]?.exam) {
-    const certChapters = loadedCertsData[certId].chapters;
-    const certExam = loadedCertsData[certId].exam;
-    setSectionName("Quick revision");
-    getContentElement().innerHTML = renderRevision(certChapters, certExam);
-    attachEventListeners();
+  const cert = certifications.find((c) => c.id === certId);
+  const summary = quickRevisionByCert[certId];
+  if (!cert || !summary) {
+    showToast("No quick revision available for this certification yet");
     return;
   }
-  showToast("No quick revision available for this certification yet");
+  setSectionName("Quick revision");
+  getContentElement().innerHTML = renderQuickRevisionSummary(cert, summary);
 }
 
 function viewRevision() {
   setSectionName("Quick revision");
-  const content = renderQuickRevisionSelection(certifications);
+  const content = renderQuickRevisionSelection(certifications, quickRevisionByCert);
   getContentElement().innerHTML = content;
   
   // Add event listeners for starting quick revision
@@ -529,6 +543,18 @@ function handleAction(event) {
       } else {
         viewMock();
       }
+      break;
+
+    case "open-study-section": {
+      const sectionCertId = event.currentTarget.getAttribute("data-cert-id");
+      const anchor = event.currentTarget.getAttribute("data-anchor");
+      setSectionName("Quick revision");
+      openStudyGuide(sectionCertId, anchor, "revision");
+      break;
+    }
+
+    case "view-revision-selection":
+      viewRevision();
       break;
 
     case "start-revision":

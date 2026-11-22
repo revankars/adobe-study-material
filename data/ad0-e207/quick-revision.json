@@ -1,0 +1,140 @@
+{
+  "certificationId": "ad0-e207",
+  "guide": "Complete_Study_Guide_AD0-E207.html",
+  "parts": [
+    {
+      "id": "aa-core",
+      "title": "Architect study guide by exam domain",
+      "points": [
+        {
+          "text": "This guide is written so that anyone preparing for AD0-E207 can use it.",
+          "anchor": "aa-core-how-to-use-this-guide"
+        },
+        {
+          "text": "Source: Adobe Certification page for Architect Master.",
+          "anchor": "aa-core-1-exam-overview"
+        },
+        {
+          "text": "Which report suites receive data, and whether they are global, individual, or virtual.",
+          "anchor": "aa-core-2-discovery-18"
+        },
+        {
+          "text": "Global versus individual report suites General guidance, Verify",
+          "anchor": "aa-core-3-solution-design-54"
+        },
+        {
+          "text": "Processing rules modify data as it is collected, before it is written to the report suite.",
+          "anchor": "aa-core-4-report-suite-administration"
+        },
+        {
+          "text": "Hit container: matches individual hits (for example, a page view of a specific page).",
+          "anchor": "aa-core-5-segments-and-calculated-metrics"
+        },
+        {
+          "text": "Identity labels (I1, I2): categorize data that can identify or contact a specific person.",
+          "anchor": "aa-core-6-data-governance-and-privacy"
+        },
+        {
+          "text": "Data sources import online or offline data.",
+          "anchor": "aa-core-7-data-extraction-sources-and-connectors"
+        },
+        {
+          "text": "Product profiles define what a user can do (for example, access to processing rules, admin tools).",
+          "anchor": "aa-core-8-experience-cloud-users-groups-and-permissions"
+        },
+        {
+          "text": "For each scenario, the business requirement, architecture decision, recommended solution, implementation considerations, and risks are listed.",
+          "anchor": "aa-core-9-architecture-scenarios"
+        },
+        {
+          "text": "Development: check the data layer values in the console before the tag fires.",
+          "anchor": "aa-core-10-post-implementation-validation"
+        }
+      ]
+    },
+    {
+      "id": "aa-deep",
+      "title": "Analytics deep-dive topics",
+      "points": [
+        {
+          "text": "Identify keywords such as most granular , real-time , after processing , participation , allocation , privacy , and attribution .",
+          "anchor": "aa-deep-1-exam-strategy-and-time-management"
+        },
+        {
+          "text": "Both Data Feeds and Data Warehouse extract Adobe Analytics data, but they serve different purposes.",
+          "anchor": "aa-deep-2-data-collection-data-feed-vs-data-warehouse"
+        },
+        {
+          "text": "Understand when data is captured, when it is processed, and when it becomes available in reporting.",
+          "anchor": "aa-deep-3-processing-and-troubleshooting-errors"
+        },
+        {
+          "text": "Navigate to Admin → Data Governance → Privacy Labeling .",
+          "anchor": "aa-deep-4-gdpr-privacy-labels-and-data-governance"
+        },
+        {
+          "text": "This section is about the difference between participation and allocation.",
+          "anchor": "aa-deep-5-metrics-metric-types-and-attribution"
+        },
+        {
+          "text": "You should understand the purpose of each variable type rather than memorize its name.",
+          "anchor": "aa-deep-6-evars-props-merchandising-variables-list-variables-and-eve"
+        },
+        {
+          "text": "If the same tracking implementation executes twice, you may see duplicate page-view calls, duplicate custom events, inflated page views and visit-related activity, duplicate interaction…",
+          "anchor": "aa-deep-7-duplicate-appmeasurement-js-tags"
+        },
+        {
+          "text": "You mentioned an alert that sends an SMS when visits increase or decrease by more than 25%.",
+          "anchor": "aa-deep-8-alerts-in-adobe-analytics"
+        },
+        {
+          "text": "Server-side forwarding: Adobe Analytics forwards eligible hit data to Audience Manager.",
+          "anchor": "aa-deep-9-integrating-adobe-audience-manager-with-adobe-analytics"
+        },
+        {
+          "text": "The two functions you need to distinguish have different parameter structures.",
+          "anchor": "aa-deep-10-query-string-capturing"
+        },
+        {
+          "text": "The s.products variable captures product-related information for product-level reporting and commerce tracking, including category, product, quantity, price, merchandising eVars, and…",
+          "anchor": "aa-deep-11-the-s-products-variable"
+        },
+        {
+          "text": "Dynamic variables, IP obfuscation, currency conversion, marketing channel processing, event deduplication, variable persistence, and transaction ID processing.",
+          "anchor": "aa-deep-13-corrections-and-important-distinctions"
+        },
+        {
+          "text": "Access is managed through the Adobe Admin Console.",
+          "anchor": "aa-deep-14-user-administration"
+        },
+        {
+          "text": "The cart identifier should be available in a structured data layer and mapped to the appropriate Analytics variable.",
+          "anchor": "aa-deep-15-data-layer-implementation-shopping-cart-with-cart-id"
+        },
+        {
+          "text": "Processing order and historical corrections.",
+          "anchor": "aa-deep-18-final-preparation-priorities"
+        }
+      ]
+    },
+    {
+      "id": "aa-src",
+      "title": "Sources, open items and corrections",
+      "points": [
+        {
+          "text": "All sources were accessed for this guide.",
+          "anchor": "aa-src-13-sources"
+        },
+        {
+          "text": "These items are not yet confirmed against Adobe documentation.",
+          "anchor": "aa-src-14-open-items"
+        },
+        {
+          "text": "The earlier study guide contained the following errors.",
+          "anchor": "aa-src-15-corrections-to-earlier-notes"
+        }
+      ]
+    }
+  ]
+}

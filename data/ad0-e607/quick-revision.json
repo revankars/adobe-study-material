@@ -1,0 +1,166 @@
+{
+  "certificationId": "ad0-e607",
+  "guide": "Complete_Study_Guide_AD0-E607.html",
+  "parts": [
+    {
+      "id": "ajo-d1",
+      "title": "Campaign and journey optimization",
+      "points": [
+        {
+          "text": "Best for: Immediate reactions, real-time personalization",
+          "anchor": "ajo-d1-journey-types-entry-points"
+        },
+        {
+          "text": "✅ Activity configuration (required fields filled)",
+          "anchor": "ajo-d1-journey-validation"
+        },
+        {
+          "text": "Trigger: Customer performs an action (click, purchase, form submission) Timing: Real-time, immediate Reentrance: 5-minute block (default) Event payload limit: 64 KB Best for: Immediate…",
+          "anchor": "ajo-d1-journey-entry-points-critical-distinction"
+        },
+        {
+          "text": "Entries: Total profiles who entered",
+          "anchor": "ajo-d1-journey-evaluation-after-running"
+        },
+        {
+          "text": "Customer behavior triggers message (event-driven)",
+          "anchor": "ajo-d1-when-to-use-each"
+        },
+        {
+          "text": "Journey Example: \"Customer books flight → email at booking → 24-hour wait → reminder email before flight\" → Why: Event-triggered, multi-step, sequential",
+          "anchor": "ajo-d1-exam-scenarios"
+        },
+        {
+          "text": "Email, SMS, Push, In-app, Web messages",
+          "anchor": "ajo-d1-both-support-same-tools"
+        }
+      ]
+    },
+    {
+      "id": "ajo-d2",
+      "title": "Offer decisioning",
+      "points": [
+        {
+          "text": "System evaluates rules for profile",
+          "anchor": "ajo-d2-using-offer-decisioning-in-journeys"
+        },
+        {
+          "text": "Fake profiles used to simulate offer decisioning",
+          "anchor": "ajo-d2-test-profiles-simulation"
+        },
+        {
+          "text": "Individual piece of content/promotion",
+          "anchor": "ajo-d2-core-concepts-detailed-notes"
+        },
+        {
+          "text": "Fixed content for all customers",
+          "anchor": "ajo-d2-static-vs-dynamic-offers-detailed-notes"
+        },
+        {
+          "text": "Need to choose WHICH offer to show based on eligibility rules",
+          "anchor": "ajo-d2-when-to-use-offer-decisioning-detailed-notes"
+        },
+        {
+          "text": "System evaluates rules for profile",
+          "anchor": "ajo-d2-using-in-journeys"
+        }
+      ]
+    },
+    {
+      "id": "ajo-d3",
+      "title": "Content authoring",
+      "points": [
+        {
+          "text": "Profile attributes: firstName, email, loyaltyTier, lastPurchaseDate",
+          "anchor": "ajo-d3-personalized-fields"
+        },
+        {
+          "text": "Include branded footer in every email",
+          "anchor": "ajo-d3-visual-fragments"
+        },
+        {
+          "text": "Apply same loyalty tier logic to all messages",
+          "anchor": "ajo-d3-expression-fragments"
+        },
+        {
+          "text": "Upload images to central repository",
+          "anchor": "ajo-d3-asset-essentials"
+        },
+        {
+          "text": "❌ Different channels (email vs.",
+          "anchor": "ajo-d3-content-experiments-a-b-testing"
+        },
+        {
+          "text": "What: Placeholder replaced with actual customer data at send time",
+          "anchor": "ajo-d3-the-building-blocks"
+        },
+        {
+          "text": "Different channels (email vs.",
+          "anchor": "ajo-d3-content-experiments-a-b-testing-detailed-notes"
+        },
+        {
+          "text": "Trap 1: Confusing fragments with templates",
+          "anchor": "ajo-d3-common-exam-traps"
+        }
+      ]
+    },
+    {
+      "id": "ajo-d4",
+      "title": "Foundations of Adobe Experience Platform",
+      "points": [
+        {
+          "text": "✅ Data ingested into Unified Profile Service (real-time)",
+          "anchor": "ajo-d4-datasets"
+        },
+        {
+          "text": "Mobile AAID/IDFA: Unique mobile device ID",
+          "anchor": "ajo-d4-identities"
+        },
+        {
+          "text": "Timing: Batch (daily) OR streamed (real-time)",
+          "anchor": "ajo-d4-audiences"
+        },
+        {
+          "text": "Purpose: Stores customer attributes (WHO they are)",
+          "anchor": "ajo-d4-schemas-the-data-blueprint"
+        },
+        {
+          "text": "Data ingested into Unified Profile Service (real-time profile)",
+          "anchor": "ajo-d4-datasets-the-data-containers"
+        },
+        {
+          "text": "Mobile AAID/IDFA: Unique mobile device ID",
+          "anchor": "ajo-d4-identities-how-we-know-who-customers-are"
+        },
+        {
+          "text": "How: Drag-and-drop conditions (age > 25 AND location = CA AND purchase > $100)",
+          "anchor": "ajo-d4-audience-types"
+        },
+        {
+          "text": "Connection 1: Schemas → Datasets → Journeys",
+          "anchor": "ajo-d4-critical-exam-connections"
+        }
+      ]
+    },
+    {
+      "id": "ajo-gr",
+      "title": "Guardrails and system limits",
+      "points": [
+        {
+          "text": "What: Maximum 50 activities per journey",
+          "anchor": "ajo-gr-tier-1-most-tested-guardrails"
+        }
+      ]
+    },
+    {
+      "id": "ajo-dt",
+      "title": "Decision trees and final exam tips",
+      "points": [
+        {
+          "text": "Review guardrails one more time — Know the symptoms and solutions",
+          "anchor": "ajo-dt-final-exam-tips"
+        }
+      ]
+    }
+  ]
+}

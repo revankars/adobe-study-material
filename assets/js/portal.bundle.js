@@ -282,119 +282,7 @@ async function populateCertificationCounts(certifications) {
 }
 
 
-function renderRevision(chapters, exam) {
-  // Build quick revision cards
-  // Prefer quickRevision array if it exists (like in AD0-E408), otherwise build from topics
-  let quickRevisionCards = [];
-  
-  if (chapters.quickRevision && Array.isArray(chapters.quickRevision)) {
-    // Use the pre-built quickRevision array
-    quickRevisionCards = chapters.quickRevision;
-  } else {
-    // Fall back to building from chapter topics
-    quickRevisionCards = chapters.chapters.flatMap((chapter) => {
-      // If chapter has topics array (AD0-E408, AD0-E409), use those
-      if (chapter.topics && Array.isArray(chapter.topics)) {
-        return chapter.topics.map((topic) => ({
-          title: typeof topic === 'string' ? topic : topic.title,
-          text: typeof topic === 'object' && topic.content ? topic.content : ''
-        }));
-      }
-      
-      // If chapter has fullContent string (AD0-E207), extract main sections
-      if (chapter.fullContent && typeof chapter.fullContent === 'string') {
-        // Extract lines that start with bullet + number pattern: "• 1. ", "• 2. ", "• 3. ", etc.
-        const lines = chapter.fullContent.split('\n');
-        const cards = [];
-        
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i];
-          // Look for pattern like "• 1. Title" or "• 2. Title (percentage)"
-          const match = line.match(/^•\s+(\d+)\.\s+(.+?)(?:\s*\([^)]*\))?$/);
-          if (match) {
-            const sectionNum = match[1];
-            const sectionTitle = match[2].trim();
-            
-            // Collect next few lines as content (until next section or end)
-            let content = '';
-            for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
-              const nextLine = lines[j];
-              // Stop if we hit another main section or subsection
-              if (nextLine.match(/^•\s+(\d+)\.|^•\s+(\d+\.\d+)/)) break;
-              if (nextLine.trim()) content += ' ' + nextLine.trim();
-            }
-            
-            cards.push({
-              title: sectionTitle.substring(0, 60),
-              text: content.substring(0, 200)
-            });
-            
-            // Limit to 10 cards
-            if (cards.length >= 10) break;
-          }
-        }
-        
-        if (cards.length > 0) return cards;
-      }
-      
-      // If chapter has content string (AD0-E207 fallback), split into sections
-      if (chapter.content && typeof chapter.content === 'string') {
-        // Split by common section markers (numbers/bullets/headers)
-        const sections = chapter.content
-          .split(/\n(?=[\d•\-\*]\s|[A-Z][A-Z\s]{2,}:)/g)
-          .filter(s => s.trim().length > 0)
-          .slice(0, 10) // Limit to 10 cards per chapter
-          .map((section) => {
-            const lines = section.trim().split('\n');
-            const title = lines[0].substring(0, 60).trim();
-            const text = lines.slice(1).join(' ').trim().substring(0, 200);
-            return { title, text };
-          });
-        return sections.length > 0 ? sections : [
-          { title: chapter.title || 'Chapter', text: chapter.content.substring(0, 200) }
-        ];
-      }
-      
-      // Fallback: create card from chapter title and overview
-      return [{
-        title: chapter.title || 'Unknown',
-        text: chapter.overview || ''
-      }];
-    });
-  }
-
-  // Build domain priorities using exam data
-  let domainsList = '';
-  if (exam && exam.domains && Array.isArray(exam.domains)) {
-    domainsList = exam.domains.map((domain) => {
-      const weight = domain.weight || 0;
-      const domainName = domain.name || domain.id || 'Unknown';
-      return `<div class="domain-row"><span>${escapeHtml(domainName)}</span><div class="progress-track"><span style="width:${weight}%"></span></div><strong>${weight}%</strong></div>`;
-    }).join("");
-  } else {
-    // Fallback: build from chapter topics (old behavior)
-    domainsList = chapters.chapters.map((chapter) => {
-      // Normalize weight: convert string with % to number, handle null
-      let weight = chapter.weight;
-      if (typeof weight === 'string') {
-        weight = parseInt(weight, 10) || 0;
-      } else if (weight === null || weight === undefined) {
-        weight = 0;
-      }
-      
-      const domain = chapter.domain || chapter.title || 'Unknown';
-      return `<div class="domain-row"><span>${escapeHtml(domain)}</span><div class="progress-track"><span style="width:${weight}%"></span></div><strong>${weight}%</strong></div>`;
-    }).join("");
-  }
-
-  return `
-    <div class="page-heading"><div><p class="eyebrow">Fast review</p><h1>Quick revision</h1><p>Concise comparisons and troubleshooting reminders extracted from the study guide.</p></div><button class="text-button" data-action="return-to-revision"><span>← Back</span></button></div>
-    <div class="revision-grid">${quickRevisionCards.map((item) => `<article class="revision-card"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text.substring(0, 200))}${item.text.length > 200 ? '…' : ''}</p></article>`).join("")}</div>
-    <div class="section-title"><h2>Domain priorities</h2><span>Guide weighting only · verify the current blueprint</span></div>
-    <div class="panel">${domainsList}</div>
-    <div class="callout"><strong>Source caveat</strong>The supplied guide explicitly identifies version-sensitive and unverified items. Follow each chapter's verification note and consult current Adobe documentation before relying on those details.</div>`;
-}
-  return { renderDashboard, populateCertificationCounts, renderRevision };
+  return { renderDashboard, populateCertificationCounts };
 })();
 
 const NS_quiz = (function () {
@@ -978,127 +866,100 @@ function renderStudyMaterialSelection(certifications) {
 })();
 
 const NS_quick_revision = (function () {
+  const { escapeHtml } = NS_study;
 /**
- * Quick Revision Component
- * Displays three revision blocks for each certification subject
- * Users can select and access revision materials independently
+ * Quick Revision: a short summary of each study part, taken from the complete study guides.
+ * Each point links to its full section in the guide.
  */
 
-function renderQuickRevisionSelection(certifications) {
-  const certificationsList = certifications.filter(cert => cert.contentAvailable);
-  
-  // Map to get chapter/topic counts
-  const topicCounts = {
-    'ad0-e207': 12,  // Adobe Analytics Architect
-    'ad0-e408': 8,   // Adobe Target Business Practitioner
-    'ad0-e409': 15,  // Adobe Target Architect
-    'ad0-e607': 8    // Adobe Journey Optimizer
-  };
-  
-  const revisionBlocksHtml = certificationsList
-    .map(cert => {
-      const count = topicCounts[cert.id] || 0;
-      const revisionName = `${cert.code} - ${cert.name}`;
-      const description = getRevisionDescription(cert.id);
-      const icon = cert.icon || '📚';
-      
+function renderQuickRevisionSelection(certifications, summaries) {
+  const cards = certifications
+    .filter((cert) => cert.contentAvailable)
+    .map((cert) => {
+      const summary = summaries[cert.id];
+      const parts = summary ? summary.parts.length : 0;
+      const points = summary ? summary.parts.reduce((total, part) => total + part.points.length, 0) : 0;
       return `
         <div class="revision-block">
           <div class="revision-block-header">
-            <div class="revision-icon">${icon}</div>
+            <div class="revision-icon">${escapeHtml(cert.icon || "📚")}</div>
             <div class="revision-info">
-              <h3>${revisionName}</h3>
-              <p class="revision-code">${cert.code}</p>
+              <h3>${escapeHtml(cert.code)} - ${escapeHtml(cert.name)}</h3>
+              <p class="revision-code">${escapeHtml(cert.code)}</p>
             </div>
           </div>
-          
           <div class="revision-block-body">
-            <p class="revision-description">${description}</p>
-            
+            <p class="revision-description">${summary ? "One line for each section of the study guide, with a link to the full text." : "Summary not available yet."}</p>
             <div class="revision-stats">
-              <div class="stat">
-                <span class="stat-label">Topics</span>
-                <span class="stat-value">${count}</span>
-              </div>
-              <div class="stat">
-                <span class="stat-label">Type</span>
-                <span class="stat-value">Revision</span>
-              </div>
-              <div class="stat">
-                <span class="stat-label">Mode</span>
-                <span class="stat-value">Review</span>
-              </div>
-            </div>
-            
-            <div class="revision-features">
-              <h4>Quick Review Includes:</h4>
-              <ul>
-                <li>✓ Key concepts summary</li>
-                <li>✓ Domain weighting guide</li>
-                <li>✓ Important reminders</li>
-                <li>✓ Best practices checklist</li>
-                <li>✓ Quick troubleshooting tips</li>
-              </ul>
+              <div class="stat"><span class="stat-label">Parts</span><span class="stat-value">${parts}</span></div>
+              <div class="stat"><span class="stat-label">Points</span><span class="stat-value">${points}</span></div>
             </div>
           </div>
-          
           <div class="revision-block-footer">
-            <button class="btn-start-revision ${count === 0 ? 'disabled' : ''}" data-action="start-revision" data-cert-id="${cert.id}" ${count === 0 ? 'disabled' : ''}>
-              ${count === 0 ? 'Coming Soon' : 'Start Quick Revision'}
+            <button class="btn-start-revision" data-action="start-revision" data-cert-id="${escapeHtml(cert.id)}" ${summary ? "" : "disabled"}>
+              ${summary ? "Open quick revision" : "Coming soon"}
             </button>
-            ${count === 0 ? '<p class="revision-unavailable">Content coming soon</p>' : ''}
           </div>
-        </div>
-      `;
+        </div>`;
     })
-    .join('');
-  
+    .join("");
+
   return `
     <div class="quick-revision-container">
       <div class="revision-header">
         <h1>Quick Revision</h1>
-        <p class="revision-subtitle">Fast review and troubleshooting guides for your Adobe certifications</p>
+        <p class="revision-subtitle">A short summary of each study part. Open a point to read its full section.</p>
       </div>
-      
-      <div class="revision-intro">
-        <p>Select a certification below to access quick revision materials. Perfect for:</p>
-        <ul>
-          <li>Last-minute study before the exam</li>
-          <li>Reviewing key concepts and domains</li>
-          <li>Quick reference during learning</li>
-          <li>Reinforcing important topics</li>
-        </ul>
-      </div>
-      
-      <div class="quick-revision-grid">
-        ${revisionBlocksHtml}
-      </div>
-    </div>
-  `;
+      <div class="quick-revision-grid">${cards}</div>
+    </div>`;
 }
 
-function getRevisionDescription(certId) {
-  const descriptions = {
-    'ad0-e207': 'Quick revision guide for Adobe Analytics Architect Master certification (AD0-E207). Fast reference for key concepts, domains, and best practices.',
-    'ad0-e408': 'Quick revision guide for Adobe Target Business Practitioner Professional certification (AD0-E408). Essential topics and quick tips for exam preparation.',
-    'ad0-e409': 'Quick revision guide for Adobe Target Architect Master certification (AD0-E409). Advanced concepts, troubleshooting, and architecture patterns.',
-    'ad0-e607': 'Quick revision guide for Adobe Journey Optimizer certification (AD0-E607). Fast reference for journeys, offers, content, and platform fundamentals.'
-  };
-  return descriptions[certId] || 'Quick revision guide for Adobe certification';
+function renderQuickRevisionSummary(cert, summary) {
+  const parts = summary.parts
+    .map(
+      (part) => `
+        <section class="qr-part">
+          <h2>${escapeHtml(part.title)}</h2>
+          <ul class="qr-points">
+            ${part.points
+              .map(
+                (point) => `
+              <li>
+                <button class="qr-point" data-action="open-study-section" data-cert-id="${escapeHtml(cert.id)}" data-anchor="${escapeHtml(point.anchor)}">
+                  <span class="qr-text">${escapeHtml(point.text)}</span>
+                  <span class="qr-open">Open section →</span>
+                </button>
+              </li>`
+              )
+              .join("")}
+          </ul>
+        </section>`
+    )
+    .join("");
+
+  return `
+    <div class="quick-revision-container qr-summary">
+      <div class="revision-header">
+        <button class="btn-back-to-subjects" data-action="view-revision-selection">← All quick revisions</button>
+        <h1>${escapeHtml(cert.code)} quick revision</h1>
+        <p class="revision-subtitle">${escapeHtml(cert.name)}. Open a point to read its full section in the study guide.</p>
+      </div>
+      ${parts}
+    </div>`;
 }
-  return { renderQuickRevisionSelection };
+  return { renderQuickRevisionSelection, renderQuickRevisionSummary };
 })();
 
 const NS_app = (function () {
   const { createInitialState, loadProgress, saveProgress, downloadProgress, validateImportedProgress } = NS_storage;
-  const { renderDashboard, renderRevision, populateCertificationCounts } = NS_dashboard;
+  const { renderDashboard, populateCertificationCounts } = NS_dashboard;
   const { escapeHtml } = NS_study;
   const { loadJson } = NS_data;
   const { createQuizSession, selectedAnswer, setAnswer, submitCurrentAnswer, buildResult, renderQuiz, renderResult } = NS_quiz;
   const { renderPracticeTestsSelection } = NS_practice_tests;
   const { renderMockTestsSelection } = NS_mock_tests;
   const { renderStudyMaterialSelection } = NS_study_selection;
-  const { renderQuickRevisionSelection } = NS_quick_revision;
+  const { renderQuickRevisionSelection, renderQuickRevisionSummary } = NS_quick_revision;
 
 let state = createInitialState();
 let certifications = [];
@@ -1109,6 +970,7 @@ let currentQuizSession = null;
 let currentCertificationId = "ad0-e409";
 let currentChapterId = null; // Track which chapter/section is selected
 let currentTopicId = null; // Track which topic is being viewed
+let quickRevisionByCert = {}; // Summaries from data/<cert>/quick-revision.json
 let loadedCertsData = {}; // Cache loaded cert data: { "ad0-e409": {chapters, questions, exam}, ... }
 let currentStudyMaterialHtml = null; // Cache loaded study material HTML
 let currentStudyViewingCertId = null; // Track which certification's study material is being viewed
@@ -1173,6 +1035,11 @@ async function loadCertification(certId) {
       return;
     }
     currentCertificationId = certId;
+    try {
+      quickRevisionByCert[certId] = await loadJson(`data/${certId}/quick-revision.json`);
+    } catch (error) {
+      console.warn("No quick revision summary for", certId);
+    }
     console.log("Fetching data from:", cert.examFile, cert.chaptersFile, cert.questionsFile);
     const [examData, chaptersData, questionsData] = await Promise.all([
       loadJson(cert.examFile),
@@ -1230,6 +1097,12 @@ function viewStudyMaterialSelection() {
 
 async function viewStudyMaterial(certId) {
   setSectionName("Study material");
+  openStudyGuide(certId, null, "study");
+}
+
+// Shows a complete study guide in its own frame. An anchor opens that section directly.
+// "from" decides where the back button goes: the study subjects or quick revision.
+function openStudyGuide(certId, anchor, from) {
   const studyGuideFiles = {
     "ad0-e207": "Complete_Study_Guide_AD0-E207.html",
     "ad0-e408": "Complete_Study_Guide_AD0-E408.html",
@@ -1243,17 +1116,21 @@ async function viewStudyMaterial(certId) {
   }
   const cert = certifications.find((c) => c.id === certId);
   const title = escapeHtml(cert ? cert.name : certId);
+  const src = anchor ? `${filename}#${encodeURIComponent(anchor)}` : filename;
+  const back = from === "revision"
+    ? `<button class="btn-back-to-subjects" data-action="start-revision" data-cert-id="${escapeHtml(certId)}">← Quick revision</button>`
+    : `<button class="btn-back-to-subjects" data-action="view-study-selection">← Study subjects</button>`;
   currentStudyViewingCertId = certId;
   document.body.classList.add("viewing-study-material");
   // Each guide is shown in its own frame so its styles and scripts cannot affect the portal.
   getContentElement().innerHTML = `
     <div class="study-frame-wrap">
       <div class="study-frame-bar">
-        <button class="btn-back-to-subjects" data-action="view-study-selection">← Study subjects</button>
+        ${back}
         <span class="study-frame-title">${title} study guide</span>
         <a class="study-frame-open" href="${filename}" target="_blank" rel="noopener">Open in new tab ↗</a>
       </div>
-      <iframe class="study-frame" src="${filename}" title="${title} study guide"></iframe>
+      <iframe class="study-frame" src="${src}" title="${title} study guide"></iframe>
     </div>`;
 }
 
@@ -1355,21 +1232,19 @@ function viewMock() {
 }
 
 function viewQuickRevisionForCertification(certId) {
-  // Load chapters and exam data
-  if (loadedCertsData[certId]?.chapters && loadedCertsData[certId]?.exam) {
-    const certChapters = loadedCertsData[certId].chapters;
-    const certExam = loadedCertsData[certId].exam;
-    setSectionName("Quick revision");
-    getContentElement().innerHTML = renderRevision(certChapters, certExam);
-    attachEventListeners();
+  const cert = certifications.find((c) => c.id === certId);
+  const summary = quickRevisionByCert[certId];
+  if (!cert || !summary) {
+    showToast("No quick revision available for this certification yet");
     return;
   }
-  showToast("No quick revision available for this certification yet");
+  setSectionName("Quick revision");
+  getContentElement().innerHTML = renderQuickRevisionSummary(cert, summary);
 }
 
 function viewRevision() {
   setSectionName("Quick revision");
-  const content = renderQuickRevisionSelection(certifications);
+  const content = renderQuickRevisionSelection(certifications, quickRevisionByCert);
   getContentElement().innerHTML = content;
   
   // Add event listeners for starting quick revision
@@ -1621,6 +1496,18 @@ function handleAction(event) {
       } else {
         viewMock();
       }
+      break;
+
+    case "open-study-section": {
+      const sectionCertId = event.currentTarget.getAttribute("data-cert-id");
+      const anchor = event.currentTarget.getAttribute("data-anchor");
+      setSectionName("Quick revision");
+      openStudyGuide(sectionCertId, anchor, "revision");
+      break;
+    }
+
+    case "view-revision-selection":
+      viewRevision();
       break;
 
     case "start-revision":

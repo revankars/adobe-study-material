@@ -1,0 +1,110 @@
+{
+  "certificationId": "ad0-e408",
+  "guide": "Complete_Study_Guide_AD0-E408.html",
+  "parts": [
+    {
+      "id": "tbp-core",
+      "title": "Study guide by exam domain",
+      "points": [
+        {
+          "text": "Key Performance Indicators are measurable values showing how effectively business goals are being achieved.",
+          "anchor": "tbp-core-domain-1-planning-strategy-26"
+        },
+        {
+          "text": "✓ Text content (headlines, copy, button labels)",
+          "anchor": "tbp-core-domain-2-configuration-executing-managing-50"
+        },
+        {
+          "text": "Shows: Control (random) vs.",
+          "anchor": "tbp-core-domain-3-analyzing-reporting-16"
+        },
+        {
+          "text": "Verify Activity Status: Active?",
+          "anchor": "tbp-core-domain-4-troubleshooting-8"
+        }
+      ]
+    },
+    {
+      "id": "tbp-ref",
+      "title": "Comparisons, limits and readiness checklist",
+      "points": [
+        {
+          "text": "Mbox parameter name: 128 characters max",
+          "anchor": "tbp-ref-target-limits-reference-corrected"
+        },
+        {
+          "text": "Understand business goals and how to identify KPIs",
+          "anchor": "tbp-ref-final-exam-readiness-checklist"
+        }
+      ]
+    },
+    {
+      "id": "tbp-qa",
+      "title": "QA and preview settings",
+      "points": [
+        {
+          "text": "You've just identified an important exam question we need to cover deeply.",
+          "anchor": "tbp-qa-critical-exam-concept-qa-preview-modes"
+        },
+        {
+          "text": "Preview activities before going live",
+          "anchor": "tbp-qa-what-is-qa-mode"
+        },
+        {
+          "text": "ON = Preview ONLY your activity in isolation (ignore all other live activities)",
+          "anchor": "tbp-qa-the-3-main-qa-preview-options"
+        },
+        {
+          "text": "You want to preview an activity that's already live on your site.",
+          "anchor": "tbp-qa-how-these-work-together"
+        },
+        {
+          "text": "❌ Visitor impressions are NOT tracked",
+          "anchor": "tbp-qa-important-considerations"
+        },
+        {
+          "text": "Answer: \"Match audience rules to see experiences\" = ON",
+          "anchor": "tbp-qa-exam-question-patterns"
+        },
+        {
+          "text": "❌ WRONG: Confusing \"Match audience rules\" with \"Show default content\"",
+          "anchor": "tbp-qa-exam-study-focus"
+        },
+        {
+          "text": "✓ What \"Match audience rules to see experiences\" means ✓ How it differs from \"Show default content\" ✓ When to use ON vs.",
+          "anchor": "tbp-qa-you-now-understand"
+        },
+        {
+          "text": "Audience rules - Q6, Q7, Q16 (your weak areas)",
+          "anchor": "tbp-qa-related-exam-concepts"
+        },
+        {
+          "text": "Question: A Target practitioner has an activity targeting \"Returning mobile visitors from the US.\" They want to preview the activity in their current QA environment, but they're accessing…",
+          "anchor": "tbp-qa-practice-question"
+        },
+        {
+          "text": "This is different from whether the activity actually targets certain audiences—the audience rules are always in place for real visitors.",
+          "anchor": "tbp-qa-key-takeaway-for-exam"
+        }
+      ]
+    },
+    {
+      "id": "tbp-res",
+      "title": "Official Adobe resources for weak areas",
+      "points": [
+        {
+          "text": "Adobe Target Limits - Profile Parameters: The limit is 50 unique profile attributes per mbox call.",
+          "anchor": "tbp-res-critical-resources-to-read"
+        },
+        {
+          "text": "Session 1 (2 hours): Technical & Metrics",
+          "anchor": "tbp-res-study-schedule"
+        },
+        {
+          "text": "Weak: 4-8 questions (same type mistakes eliminated)",
+          "anchor": "tbp-res-exam-readiness-after-studying"
+        }
+      ]
+    }
+  ]
+}

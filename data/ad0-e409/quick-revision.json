@@ -1,0 +1,154 @@
+{
+  "certificationId": "ad0-e409",
+  "guide": "Complete_Study_Guide_AD0-E409.html",
+  "parts": [
+    {
+      "id": "tam-about",
+      "title": "About this guide and exam strategy",
+      "points": [
+        {
+          "text": "Exam overview and domain guide (Parts 1 and 3): exam format, weightings, and detailed technical chapters.",
+          "anchor": "tam-about-about-this-document"
+        },
+        {
+          "text": "Troubleshooting, Integrations, and Architecture together make up 64% of the exam.",
+          "anchor": "tam-about-weighting-and-priority"
+        }
+      ]
+    },
+    {
+      "id": "tam-core",
+      "title": "Condensed core concepts",
+      "points": [
+        {
+          "text": "Read sections 2 to 9 in order, then use section 10 to check each question.",
+          "anchor": "tam-core-1-how-to-use-this-guide"
+        },
+        {
+          "text": "at.js is the client library that runs Target requests and applies experiences.",
+          "anchor": "tam-core-2-core-concepts-and-page-load-order"
+        },
+        {
+          "text": "The key question for each method: where does the data come from, and is it stored in the visitor profile?",
+          "anchor": "tam-core-3-methods-to-get-data-into-target"
+        },
+        {
+          "text": "targetPageParams() supplies page-level parameters to the global mbox before the request is sent.",
+          "anchor": "tam-core-at-js-functions"
+        },
+        {
+          "text": "One Target installation can serve several business units.",
+          "anchor": "tam-core-multi-tenant"
+        },
+        {
+          "text": "at_property holds the property token, a unique ID string for one property.",
+          "anchor": "tam-core-at-property"
+        },
+        {
+          "text": "Product page entity.categoryId takes a comma-separated list: one product, several categories.",
+          "anchor": "tam-core-parameter-rules-that-affect-answers"
+        },
+        {
+          "text": "Profile scripts are JavaScript snippets defined in Target.",
+          "anchor": "tam-core-5-profile-scripts-profile-attributes-audiences-and-debugging"
+        },
+        {
+          "text": "Debugging: use mboxTrace to compare profile values before and after a profile script runs (Q45, Q46).",
+          "anchor": "tam-core-audience-sources"
+        },
+        {
+          "text": "Experience Targeting: one winning experience per visitor, chosen by audience.",
+          "anchor": "tam-core-activity-types"
+        },
+        {
+          "text": "Experience: what the visitor sees, built in the Visual Experience Composer (VEC).",
+          "anchor": "tam-core-7-offers-experiences-and-vec"
+        },
+        {
+          "text": "Client-side (at.js): the browser library.",
+          "anchor": "tam-core-implementation-types"
+        },
+        {
+          "text": "Recommendations uses a catalog built from feeds, collections, or Analytics classifications.",
+          "anchor": "tam-core-8-recommendations-and-entity-attributes"
+        },
+        {
+          "text": "Product feeds (Google Product Feeds): reuse organic search product data and automate inclusion (Q26).",
+          "anchor": "tam-core-where-product-data-comes-from"
+        },
+        {
+          "text": "Product page: entity.categoryId takes a comma-separated list.",
+          "anchor": "tam-core-category-recommendations"
+        },
+        {
+          "text": "A4T (Analytics for Target) sends Target results into Analytics.",
+          "anchor": "tam-core-9-analytics-reporting-and-access"
+        },
+        {
+          "text": "iOS targeted locations: the two primary methods are targetLoadRequest and targetCreateRequestWithName (Q29).",
+          "anchor": "tam-core-mobile-and-server-side"
+        },
+        {
+          "text": "Day 1: page-load order and execution (Q2, Q4, Q11, Q22, Q43, Q49), then mbox parameters and at_property (Q17, Q21, Q23, Q25, Q27, Q30, Q33 to Q36, Q48).",
+          "anchor": "tam-core-11-3-day-study-plan"
+        }
+      ]
+    },
+    {
+      "id": "tam-ch",
+      "title": "Chapters by exam domain",
+      "points": [
+        {
+          "text": "Adobe Target is Adobe’s personalization and experimentation platform.",
+          "anchor": "tam-ch-chapter-1-adobe-target-fundamentals-13"
+        },
+        {
+          "text": "Analytics for Target (A4T) sends Target activity and experience data into Adobe Analytics.",
+          "anchor": "tam-ch-chapter-2-integrating-with-adobe-target-18"
+        },
+        {
+          "text": "Access is managed through Adobe Admin Console product profiles and Target permissions .",
+          "anchor": "tam-ch-chapter-3-administration-and-governance-6"
+        },
+        {
+          "text": "at.js is the legacy client library.",
+          "anchor": "tam-ch-chapter-4-supported-touchpoints-6"
+        },
+        {
+          "text": "Overview: Recommendations return ranked items (products, articles, offers) for a visitor, based on the item catalog, criteria, and algorithm.",
+          "anchor": "tam-ch-chapter-5-adobe-target-recommendations-11"
+        },
+        {
+          "text": "Separate decisioning from content: Target decides which experience to show.",
+          "anchor": "tam-ch-chapter-6-architecture-design-and-implementation-18"
+        },
+        {
+          "text": "Troubleshooting is the largest domain.",
+          "anchor": "tam-ch-chapter-7-troubleshooting-28"
+        }
+      ]
+    },
+    {
+      "id": "tam-ref",
+      "title": "Quick reference, practice exam and checklist",
+      "points": [
+        {
+          "text": "Mbox: named delivery container on a page or in an app.",
+          "anchor": "tam-ref-chapter-8-quick-reference-notes"
+        },
+        {
+          "text": "Note: these questions are independently created for practice.",
+          "anchor": "tam-ref-chapter-9-independent-practice-exam"
+        },
+        {
+          "text": "I can state the seven domains and their weights, and I’m prioritizing Troubleshooting (28%).",
+          "anchor": "tam-ref-chapter-10-final-exam-readiness-checklist"
+        },
+        {
+          "text": "Primary references (Adobe Experience League): - Adobe Target product documentation (activities, mboxes, delivery, audiences) - Adobe Target Delivery API and server-side SDK documentation -…",
+          "anchor": "tam-ref-chapter-11-references-and-verification-list"
+        }
+      ]
+    }
+  ]
+}
