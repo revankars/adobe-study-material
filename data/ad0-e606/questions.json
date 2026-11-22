@@ -1,0 +1,500 @@
+{
+  "certificationId": "ad0-e606",
+  "questions": [
+    {
+      "id": "ad0-e606-practice-001",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey must start immediately when a customer completes checkout. Which entry pattern best fits?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Scheduled batch audience"
+        },
+        {
+          "id": "opt-b",
+          "text": "Unitary event trigger"
+        },
+        {
+          "id": "opt-c",
+          "text": "Static dataset query"
+        },
+        {
+          "id": "opt-d",
+          "text": "Custom action as entry"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Checkout completion is an occurrence associated with a customer. Use a unitary event and validate identity and payload schema.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-002",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A journey must retrieve current shipment status from an external order service. Which object fits?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Custom data source"
+        },
+        {
+          "id": "opt-b",
+          "text": "Audience definition"
+        },
+        {
+          "id": "opt-c",
+          "text": "Email surface"
+        },
+        {
+          "id": "opt-d",
+          "text": "Union schema"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "A custom data source retrieves external information at runtime. A custom action performs an operation.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-003",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "The journey must call an external service to create a support ticket. Configure what?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Custom data source"
+        },
+        {
+          "id": "opt-b",
+          "text": "Custom action"
+        },
+        {
+          "id": "opt-c",
+          "text": "Merge policy"
+        },
+        {
+          "id": "opt-d",
+          "text": "Offer representation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Creating a ticket is an operation, so use a custom action. Plan authentication, mapping, timeout and error handling.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-004",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which distinction between schema and dataset is correct?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Schema stores records"
+        },
+        {
+          "id": "opt-b",
+          "text": "Schema defines structure; dataset stores conforming records"
+        },
+        {
+          "id": "opt-c",
+          "text": "They are interchangeable"
+        },
+        {
+          "id": "opt-d",
+          "text": "Dataset is union schema"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A schema defines structure and semantics; a dataset stores ingested records.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-005",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is a union schema in the Profile context?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Combined file dataset"
+        },
+        {
+          "id": "opt-b",
+          "text": "Manually authored channel schema"
+        },
+        {
+          "id": "opt-c",
+          "text": "Generated combined view of Profile-enabled schemas sharing a class"
+        },
+        {
+          "id": "opt-d",
+          "text": "Identity namespace"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "A union schema is a combined Profile view, not a dataset for direct ingestion.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-006",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An offer has top ranking but the profile fails its eligibility rule. What happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "It wins due to rank"
+        },
+        {
+          "id": "opt-b",
+          "text": "It is excluded from eligible candidates"
+        },
+        {
+          "id": "opt-c",
+          "text": "Journey always fails"
+        },
+        {
+          "id": "opt-d",
+          "text": "Ranking overrides eligibility"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Eligibility determines whether it can be shown; ranking chooses among eligible offers.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-007",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which capability regulates delivery processing rate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Suppression"
+        },
+        {
+          "id": "opt-b",
+          "text": "Throttling"
+        },
+        {
+          "id": "opt-c",
+          "text": "Eligibility"
+        },
+        {
+          "id": "opt-d",
+          "text": "Identity stitching"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Throttling controls rate. Suppression excludes recipients; capping limits frequency/exposure.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-008",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A customer must never receive a campaign because the address is on a do-not-contact list. Which control?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Throttling"
+        },
+        {
+          "id": "opt-b",
+          "text": "Suppression"
+        },
+        {
+          "id": "opt-c",
+          "text": "Ranking"
+        },
+        {
+          "id": "opt-d",
+          "text": "Wait"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Suppression excludes recipients; throttling does not express a do-not-contact rule.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-009",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A preview displays blank first name. What should be checked first?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Increase throughput"
+        },
+        {
+          "id": "opt-b",
+          "text": "Verify attribute path and test-profile value; add fallback if needed"
+        },
+        {
+          "id": "opt-c",
+          "text": "Change sandbox"
+        },
+        {
+          "id": "opt-d",
+          "text": "Change offer rank"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Check path, data availability, null/empty values, and fallback behavior.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-010",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Many profiles enter a journey but few reach the message action. First diagnostic?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Change subdomain"
+        },
+        {
+          "id": "opt-b",
+          "text": "Inspect branch counts, conditions, waits, exits and action errors"
+        },
+        {
+          "id": "opt-c",
+          "text": "Rebuild schemas"
+        },
+        {
+          "id": "opt-d",
+          "text": "Increase offer priority"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Locate where profiles stop progressing using journey path/activity reporting.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-011",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which statement about proof and validation is accurate?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Proof guarantees publish"
+        },
+        {
+          "id": "opt-b",
+          "text": "Validation replaces proof"
+        },
+        {
+          "id": "opt-c",
+          "text": "Proof checks rendering; validation checks configuration requirements"
+        },
+        {
+          "id": "opt-d",
+          "text": "They are identical"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Proof/preview checks recipient rendering. Validation checks configuration readiness.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-012",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Immediate audience qualification at the edge is required. Which method should be considered if supported?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge segmentation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Nightly export"
+        },
+        {
+          "id": "opt-d",
+          "text": "Manual upload"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Edge segmentation supports rapid evaluation in edge contexts for supported rules.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-013",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A cart journey sends repeated messages for the same cart. What should be investigated?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Email font"
+        },
+        {
+          "id": "opt-b",
+          "text": "Duplicate events, re-entry, overlapping journeys, conversion exits"
+        },
+        {
+          "id": "opt-c",
+          "text": "Union schema name"
+        },
+        {
+          "id": "opt-d",
+          "text": "Offer image"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Duplicate events, re-entry, concurrent journeys and missing exits can cause duplicate sends.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-014",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What does an identity namespace do?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Stores full profile"
+        },
+        {
+          "id": "opt-b",
+          "text": "Gives context to an identity value, e.g. email or ECID"
+        },
+        {
+          "id": "opt-c",
+          "text": "Defines branch"
+        },
+        {
+          "id": "opt-d",
+          "text": "Controls throttling"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "A namespace defines the type/context of an identifier.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    },
+    {
+      "id": "ad0-e606-practice-015",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Journey Optimizer Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "No more than a defined number of promotional messages per person in a time window. Which concept?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Capping/frequency control"
+        },
+        {
+          "id": "opt-b",
+          "text": "Field groups"
+        },
+        {
+          "id": "opt-c",
+          "text": "Edge segmentation"
+        },
+        {
+          "id": "opt-d",
+          "text": "Data source"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Capping/frequency controls limit exposure within a defined scope and period.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E606.html (practice questions)"
+    }
+  ]
+}

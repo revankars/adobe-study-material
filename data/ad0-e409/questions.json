@@ -588,7 +588,7 @@
       "domainId": "architecture",
       "topic": "Question 6",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "A retail company is planning to use Automated Personalization from Adobe Target to personalize content based on user visits.",
       "options": [
         {
@@ -649,7 +649,7 @@
       "domainId": "fundamentals",
       "topic": "Question 8",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "An optimization team is struggling to manually update the image tags in the HTML code of the page and would prefer to use the Visual Experience Composer (VEC) to more easily swap images.",
       "options": [
         {
@@ -798,7 +798,7 @@
       "domainId": "architecture",
       "topic": "Question 13",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "A client has recently upgraded their Adobe Experience Manager (AEM) instance to version 6.5 and would like to utilize Experience Fragments (XFs) in Adobe Target.",
       "options": [
         {
@@ -955,7 +955,7 @@
       "domainId": "architecture",
       "topic": "Question 18",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "A retail company is planning to use Adobe Target to implement A/B Testing. They are concerned that bot traffic might impact the results.",
       "options": [
         {
@@ -1264,7 +1264,7 @@
       "domainId": "fundamentals",
       "topic": "Question 28",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "Which two Adobe Target activity types can be created in the Mobile App Visual Experience Composer? (Choose two.)",
       "options": [
         {
@@ -1297,7 +1297,7 @@
       "domainId": "architecture",
       "topic": "Question 29",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "In an iOS native application with an Adobe Target implementation, what are the two primary methods to create a targeted location? (Choose two.)",
       "options": [
         {
@@ -1394,7 +1394,7 @@
       "domainId": "architecture",
       "topic": "Question 32",
       "difficulty": "hard",
-      "type": "multiple",
+      "type": "multi",
       "question": "A client has users that authenticate on their site on every visit, but they also tend to utilize the site on multiple different devices, including laptops, mobile, and tablets at different times of the day. The client wants to ensure that a user has a consistent experience of their site across each of their devices, including showing the same user the same experience from an Adobe Target activity, regardless of what device they have authenticated on.",
       "options": [
         {
@@ -1675,7 +1675,7 @@
       "domainId": "fundamentals",
       "topic": "Question 41",
       "difficulty": "medium",
-      "type": "multiple",
+      "type": "multi",
       "question": "A marketer has set up an Experience Targeting activity for their regional website targeting users from that region using Target's Geo Targeting.",
       "options": [
         {

@@ -15,7 +15,10 @@
       "certificationPortal": "https://certification.adobe.com/courses/168",
       "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/aa/aa-overview",
       "practiceTest": "https://certification.adobe.com/courses/1005"
-    }
+    },
+    "questionCount": 45,
+    "studyChapters": 3,
+    "studyTopics": 33
   },
   {
     "id": "ad0-e408",
@@ -33,7 +36,10 @@
       "certificationPortal": "https://certification.adobe.com/courses/184",
       "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/at/at-overview",
       "practiceTest": "https://certification.adobe.com/certification/target-business-practitioner-professional/184"
-    }
+    },
+    "questionCount": 105,
+    "studyChapters": 4,
+    "studyTopics": 25
   },
   {
     "id": "ad0-e409",
@@ -51,7 +57,10 @@
       "certificationPortal": "https://certification.adobe.com/courses/185",
       "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/at/at-overview",
       "practiceTest": "https://certification.adobe.com/certification/target-architect-master/185?tab=certificate4"
-    }
+    },
+    "questionCount": 61,
+    "studyChapters": 4,
+    "studyTopics": 36
   },
   {
     "id": "ad0-e607",
@@ -69,6 +78,46 @@
       "certificationPortal": "https://certification.adobe.com",
       "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/ajo/ajo-overview",
       "practiceTest": "https://certification.adobe.com/certification/journey-optimizer"
-    }
+    },
+    "questionCount": 68,
+    "studyChapters": 6,
+    "studyTopics": 58
+  },
+  {
+    "id": "ad0-e605",
+    "name": "Adobe Real-Time CDP Developer Expert",
+    "code": "AD0-E605",
+    "description": "Real-Time CDP developer track: data modeling, identity, segmentation, governance, ingestion and activation.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e605/exam.json",
+    "chaptersFile": "data/ad0-e605/chapters.json",
+    "questionsFile": "data/ad0-e605/questions.json",
+    "icon": "⚡",
+    "questionCount": 126,
+    "officialLinks": {
+      "examDetails": "https://experienceleague.adobe.com/docs/certification/program/technical-certifications/rtcdp/rtcdp-expert/rtcdp-e-technical.html?lang=en",
+      "overview": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/rtcdp/rtcdp-overview",
+      "certificationPortal": "https://certification.adobe.com/certification/real-time-customer-data-platform-developer-expert/198"
+    },
+    "studyChapters": 6,
+    "studyTopics": 36
+  },
+  {
+    "id": "ad0-e606",
+    "name": "Adobe Journey Optimizer Developer Expert",
+    "code": "AD0-E606",
+    "description": "Journey Optimizer developer track: journeys, offers, content, data modeling and troubleshooting.",
+    "contentAvailable": true,
+    "examFile": "data/ad0-e606/exam.json",
+    "chaptersFile": "data/ad0-e606/chapters.json",
+    "questionsFile": "data/ad0-e606/questions.json",
+    "icon": "🧭",
+    "questionCount": 15,
+    "officialLinks": {
+      "examDetails": "https://experienceleague.adobe.com/en/docs/certification/program/technical-certifications/ajo/ajo-expert/ajo-e-developer-23-10",
+      "certificationPortal": "https://certification.adobe.com/certification/journey-optimizer-developer-expert/199"
+    },
+    "studyChapters": 10,
+    "studyTopics": 34
   }
 ]

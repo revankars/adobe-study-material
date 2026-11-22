@@ -2,72 +2,6 @@
   "certificationId": "ad0-e408",
   "questions": [
     {
-      "id": "ad0-e408-practice-001",
-      "domainId": "planning_strategy",
-      "topic": "Business KPI Alignment",
-      "difficulty": "professional",
-      "type": "single",
-      "question": "An e-commerce company wants to increase customer lifetime value (LTV). Currently, their average customer makes 2.5 purchases per year with an average order value of $125.\n\nThe company wants to test personalizing product recommendations based on purchase history. Which success metric should the Adobe Target practitioner recommend as the PRIMARY metric?",
-      "options": [
-        {
-          "id": "opt-a",
-          "text": "Number of times \"Add to Cart\" button is clicked"
-        },
-        {
-          "id": "opt-b",
-          "text": "Total sessions from returning visitors"
-        },
-        {
-          "id": "opt-c",
-          "text": "Revenue per visitor (RPV) across all visits"
-        },
-        {
-          "id": "opt-d",
-          "text": "Average rating received on product pages"
-        }
-      ],
-      "correctAnswers": [
-        "opt-c"
-      ],
-      "explanation": "LTV is about monetary value over time. RPV directly measures revenue per visitor across all visits, aligning with the LTV goal.",
-      "incorrectExplanations": {},
-      "chapterId": "planning_strategy",
-      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
-    },
-    {
-      "id": "ad0-e408-practice-002",
-      "domainId": "planning_strategy",
-      "topic": "Hypothesis Construction",
-      "difficulty": "professional",
-      "type": "single",
-      "question": "A SaaS company notices that visitors who reach the pricing page have a 12% free trial signup rate, but those who don't reach the pricing page have a 0% signup rate. The company wants to test moving pricing information above the fold on the homepage.\n\nWhich hypothesis best represents this test?",
-      "options": [
-        {
-          "id": "opt-a",
-          "text": "\"If we move pricing above the fold, then visitors will click more links, because pricing is visually prominent\""
-        },
-        {
-          "id": "opt-b",
-          "text": "\"If we move pricing above the fold, then free trial signups increase by 20%, because visitors who see pricing earlier are more likely to convert\""
-        },
-        {
-          "id": "opt-c",
-          "text": "\"If we show discounts on pricing, then revenue increases, because discounts drive purchases\""
-        },
-        {
-          "id": "opt-d",
-          "text": "\"If we update the pricing page design, then page load speed improves, because simplified design loads faster\""
-        }
-      ],
-      "correctAnswers": [
-        "opt-b"
-      ],
-      "explanation": "Strong hypotheses have three components: ACTION (move pricing), OUTCOME (increase by 20%), and REASONING (earlier visibility → more conversions). This directly addresses the business observation with testable prediction.",
-      "incorrectExplanations": {},
-      "chapterId": "planning_strategy",
-      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
-    },
-    {
       "id": "ad0-e408-practice-003",
       "domainId": "planning_strategy",
       "topic": "Activity Selection - Testing Strategy",
@@ -96,38 +30,6 @@
         "opt-c"
       ],
       "explanation": "See study guide section on activity selection - testing strategy",
-      "incorrectExplanations": {},
-      "chapterId": "planning_strategy"
-    },
-    {
-      "id": "ad0-e408-practice-004",
-      "domainId": "planning_strategy",
-      "topic": "Sample Size Criticality",
-      "difficulty": "professional",
-      "type": "single",
-      "question": "An online retailer has calculated their A/B test sample size as 8,000 visitors per variation (95% confidence, 80% power). They've been running the test for 1.5 weeks and have collected 4,000 visitors per variation. The variation currently shows a 12% lift in conversion rate with 88% confidence.\n\nWhat should the Adobe Target practitioner recommend?",
-      "options": [
-        {
-          "id": "opt-a",
-          "text": "Declare the variation as the winner and implement it, because 88% confidence exceeds 85% threshold"
-        },
-        {
-          "id": "opt-b",
-          "text": "Continue running the test until reaching the calculated 8,000 visitors per variation, because early stopping increases risk of false positives"
-        },
-        {
-          "id": "opt-c",
-          "text": "Stop the test and implement variation A (original), because the sample size is only 50% complete"
-        },
-        {
-          "id": "opt-d",
-          "text": "Run the test for one more week and check again, because one week is enough for preliminary validation"
-        }
-      ],
-      "correctAnswers": [
-        "opt-b"
-      ],
-      "explanation": "See study guide section on sample size criticality",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy"
     },
@@ -165,39 +67,6 @@
       "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
     },
     {
-      "id": "ad0-e408-practice-006",
-      "domainId": "planning_strategy",
-      "topic": "A4T Setup Requirements",
-      "difficulty": "professional",
-      "type": "single",
-      "question": "A company implementing Analytics for Target (A4T) wants to create a success metric that tracks \"Completed purchase after viewing product comparison.\"\n\nWhat is the FIRST step in the proper A4T implementation workflow?",
-      "options": [
-        {
-          "id": "opt-a",
-          "text": "In Adobe Target, select \"Adobe Analytics\" as the reporting source"
-        },
-        {
-          "id": "opt-b",
-          "text": "Create a Calculated Metric in Adobe Analytics combining the two events, then reference that metric in Target"
-        },
-        {
-          "id": "opt-c",
-          "text": "Create the success metric directly in Target's metric creation interface"
-        },
-        {
-          "id": "opt-d",
-          "text": "Set up Analytics segments for each product comparison type, then map them to Target activities"
-        }
-      ],
-      "correctAnswers": [
-        "opt-b"
-      ],
-      "explanation": "A4T Workflow: Create Calculated Metric in Analytics FIRST → Then use in Target. Non-negotiable because Target doesn't perform complex calculations.",
-      "incorrectExplanations": {},
-      "chapterId": "planning_strategy",
-      "explanationSource": "AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html"
-    },
-    {
       "id": "ad0-e408-practice-007",
       "domainId": "planning_strategy",
       "topic": "Testing Best Practices - Pitfalls",
@@ -226,38 +95,6 @@
         "opt-b"
       ],
       "explanation": "See study guide section on testing best practices - pitfalls",
-      "incorrectExplanations": {},
-      "chapterId": "planning_strategy"
-    },
-    {
-      "id": "ad0-e408-practice-008",
-      "domainId": "planning_strategy",
-      "topic": "Target vs. Analytics Reporting",
-      "difficulty": "professional",
-      "type": "single",
-      "question": "A company is trying to decide between using Adobe Target native reporting vs. Analytics with A4T (Analytics for Target).\n\nWhich scenario indicates that A4T (Analytics with Target) would be the BEST choice?",
-      "options": [
-        {
-          "id": "opt-a",
-          "text": "The company only needs basic conversion rate and lift reporting, with no cross-site analysis"
-        },
-        {
-          "id": "opt-b",
-          "text": "The company needs to analyze test results using custom Analytics segments, calculated metrics, and advanced Analysis Workspace features"
-        },
-        {
-          "id": "opt-c",
-          "text": "The company wants the fastest way to report on a simple A/B test"
-        },
-        {
-          "id": "opt-d",
-          "text": "The company prefers a visual, point-and-click reporting interface"
-        }
-      ],
-      "correctAnswers": [
-        "opt-b"
-      ],
-      "explanation": "See study guide section on target vs. analytics reporting",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy"
     },
@@ -898,7 +735,7 @@
         }
       ],
       "correctAnswers": [
-        "A"
+        "C"
       ],
       "explanation": "The company's goal is increasing customer lifetime value (LTV) , which is fundamentally about monetary value over time . RPV directly measures revenue generated per visitor across all visits, tracking lifetime revenue. This directly aligns with the LTV business goal. Testing personalized recommenda",
       "difficulty": "medium",
@@ -1151,10 +988,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "LTV is about monetary value over time. RPV directly measures revenue per visitor across all visits, aligning with the LTV goal.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-037",
@@ -1184,10 +1022,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Strong hypotheses have three components: ACTION (move pricing), OUTCOME (increase by 20%), and REASONING (earlier visibility → more conversions). This directly addresses the business observation with testable prediction.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-038",
@@ -1217,10 +1056,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "XT maps specific audiences to specific experiences without statistical comparison. Perfect for predefined audience-to-message mappings.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-039",
@@ -1250,10 +1090,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "CRITICAL RULE: MUST reach calculated sample size BEFORE declaring winner. Sample size + 95% confidence are BOTH required (non-negotiable). This prevents false positives.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-040",
@@ -1283,10 +1124,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "CRITICAL SKILL: Choose audience attributes based on DATA-DRIVEN BUSINESS RELEVANCE, not demographics. Income (strong) + time since purchase (moderate) are the PREDICTORS that matter.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-041",
@@ -1316,10 +1158,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "A4T Workflow: Create Calculated Metric in Analytics FIRST → Then use in Target. Non-negotiable because Target doesn't perform complex calculations.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-042",
@@ -1349,10 +1192,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Novelty Effect Pattern: New design excitement (Days 1-3) → 20%, Novelty wears off (Days 4-5) → 10%. Run full 2 weeks for accurate baseline, not inflated initial lift.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-043",
@@ -1382,10 +1226,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Use A4T when: Custom segments, calculated metrics, Analysis Workspace, cross-site analysis. Use Target native when: Basic reporting, quick turnaround, no advanced segmentation needed.",
       "incorrectExplanations": {},
       "chapterId": "planning_strategy",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-044",
@@ -1415,10 +1260,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "When ON: Activity A shows default → locks it in → Activity B prevented from showing. Think: \"If higher-priority activity decides on default, that's final. Don't let other activities change it.\"",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-045",
@@ -1448,10 +1294,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "When OFF: Default not final → Continue evaluating lower-priority → If qualify, deliver → Layered personalization possible. Best practice: OFF for layered activities, ON only for blocking.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-046",
@@ -1481,10 +1328,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Profile Script Benefits: Calculate ONCE → Reuse across activities → Store in profile (persistent) → Avoid repeating logic → Perfect for derived attributes.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-047",
@@ -1514,10 +1362,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "CAN Access: Profile attributes, mbox params, page params, geolocation, device info, referrer, time/date, previous values. CANNOT: Page DOM, API calls, client-side JS, cookies (unless passed to Target). Why? Runs SERVER-SIDE on Target servers, not browser.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-048",
@@ -1547,10 +1396,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Mbox Params: Sent with request (temporary), raw data. Profile Scripts: Run on Target server (persistent), calculated/derived. Use Case: Profile scripts ideal for combining multiple data points into single reusable attribute.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-049",
@@ -1580,10 +1430,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Benefits: Calculates engagement score from multiple data points → Stores in profile → Reusable across recommendation activities → Available for audiences, targeting, reporting → Avoids repeating logic. Perfect for building visitor profiles based on behavior.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-050",
@@ -1613,10 +1464,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "Can Use In: Audiences, XT, AP, Recommendations criteria, offer logic, reporting. Example: Create audience \"profile.valueSegment == 'High Value'\" → Use across multiple activities.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-051",
@@ -1646,10 +1498,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Solution: Expand Section allows selecting parent element, creating more stable selector: \".header-top\" instead of deeply nested classes. More resistant to page changes.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-052",
@@ -1679,10 +1532,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Redirect Offers are FORM-BASED ONLY. Workflow: Click Offers → Redirect Offers tab → Select/create. Order matters. NOT available in VEC.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-053",
@@ -1712,10 +1566,11 @@
       "correctAnswers": [
         "opt-a"
       ],
-      "explanation": "",
+      "explanation": "Problem: Location fields with AND logic require visitors be from USA AND Canada simultaneously (impossible). Fix: Use OR for locations: (USA OR Canada) AND Recency AND Behavior.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-054",
@@ -1745,10 +1600,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "Rule: When collision, higher priority wins. 750 > 500 > 100. Activity 2 displays; others show default.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-055",
@@ -1778,10 +1634,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "OFF: See other live activities (collision visible). ON: Respect audience rules (production-like). This = realistic preview: activity respects audiences AND collides with others.",
       "incorrectExplanations": {},
       "chapterId": "configuration_executing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-056",
@@ -1811,10 +1668,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "MUST HAVE: Sample size + 95% confidence. Both required (non-negotiable). 88% = 12% false positive risk. Early stopping = much higher false positive risk.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-057",
@@ -1844,10 +1702,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Lift = Relative improvement (percentage change): (5.1-4.5)/4.5 × 100 = 13.3% lift, not 50% (my calc was wrong, but concept right). Key: Percentage points (1.6%) vs Relative lift (percent improvement). Lift is standard business metric.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-058",
@@ -1877,10 +1736,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Activity Level alone doesn't prove algorithm quality (could be one offer improved dramatically, others flat). Validate with: Offer Level Report showing EACH offer performs better (Smart > Random).",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-059",
@@ -1910,10 +1770,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "CRITICAL MISUNDERSTANDING: Important Attributes = FREQUENCY of algorithm use, NOT causation. Browser Type used in 35% of decisions, NOT responsible for 35% conversions.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-060",
@@ -1943,10 +1804,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Novelty Effect: Initial 18% artificially inflated (new design excitement) → Stabilizes → True performance is stabilized rate. Week 4 (5%) likely true lift after novelty wears off.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-061",
@@ -1976,10 +1838,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Multiply: Each location's options multiply (3 × 2 × 2). To understand element impact: Review Experience Performance Report with Element Contribution Analysis after reaching sample size.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-062",
@@ -2009,10 +1872,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Peeking Problem: Multiple checks inflate false positive risk from 5% to 20%+. Proper approach: Pre-calculate sample size, check ONCE after reaching it. Declaring winner early = much higher false positive risk.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-063",
@@ -2042,10 +1906,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "A: 5.6-6.4% vs B: 4.5-5.1% = NO overlap. When intervals don't overlap = significant difference = safe to declare winner. When overlap = continue testing.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-064",
@@ -2075,10 +1940,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "After basic checks: Activity Collisions = another higher-priority activity preventing this one from showing. Check Activity Collisions tab; may need to adjust priority.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-065",
@@ -2108,10 +1974,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Most Likely: Profile attribute not being populated correctly in visitor profiles. Verify: Attribute passed correctly, parameter name matches, data populated. Debug: Check mbox calls in browser console.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-066",
@@ -2141,10 +2008,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Preset Dependency Fix: Identify deleted object → Recreate with original definition → Preset automatically becomes valid.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-067",
@@ -2174,10 +2042,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "mboxTrace shows: All mbox calls, audience evaluation (yes/no), activity assignment decisions, specific rejection reasons, full request/response detail. When: Activity not showing, audience not qualifying, detailed troubleshooting needed.",
       "incorrectExplanations": {},
       "chapterId": "implementation_testing",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-068",
@@ -2207,10 +2076,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Metric Dependency: Configures B to count ONLY if A occurred first. Pure funnel tracking at activity level.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-069",
@@ -2240,10 +2110,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "Scenario Requires: Visitor exits after signup (not keep), never sees again (bar reentry). Perfect for one-time offers or limited promotions.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-070",
@@ -2273,10 +2144,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Multiply: Offers per location multiply (5 × 3 × 2 × 4 = 120). ML algorithm learns which combinations work best.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-071",
@@ -2306,10 +2178,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "GOLDEN RULE: Both sample size AND 95% confidence required. Early stopping (even at 92%) = much higher false positive risk.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-072",
@@ -2339,10 +2212,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "One-time use = Activity-only: Cleaner library, prevents accidental reuse, specific scope, deleted when activity ends.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-073",
@@ -2372,10 +2246,11 @@
       "correctAnswers": [
         "opt-c"
       ],
-      "explanation": "",
+      "explanation": "Auto-discovered Segments: Shows visitor groups created by algorithm, their offer preferences. Reveals which segments prefer which offers.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-074",
@@ -2405,10 +2280,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "When VEC Fails: JavaScript timing issues → Form-Based Composer guaranteed delivery. Avoids timing problems.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-075",
@@ -2438,10 +2314,11 @@
       "correctAnswers": [
         "opt-b"
       ],
-      "explanation": "",
+      "explanation": "Peeking Problem: Daily checks inflate false positive risk (5% → 20%+). Proper approach: Pre-calculate sample size, check ONCE after reaching it.",
       "incorrectExplanations": {},
       "chapterId": "analysis_optimization",
-      "source": "AD0-E408 Complete Practice Exam (40Q)"
+      "source": "AD0-E408 Complete Practice Exam (40Q)",
+      "explanationSource": "source file"
     },
     {
       "id": "ad0-e408-practice-076",

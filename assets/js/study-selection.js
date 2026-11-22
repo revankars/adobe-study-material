@@ -7,42 +7,15 @@
 export function renderStudyMaterialSelection(certifications) {
   const certificationsList = certifications.filter(cert => cert.contentAvailable);
   
-  // Map certifications to their study guide files
-  const studyGuides = {
-    'ad0-e207': {
-      name: 'AD0-E207 - Adobe Analytics Architect Master',
-      chapters: 5,
-      topics: 18,
-      description: 'Comprehensive study guide covering analytics architecture, implementation, and best practices',
-      icon: '📊'
-    },
-    'ad0-e408': {
-      name: 'AD0-E408 - Adobe Target Business Practitioner Professional',
-      chapters: 4,
-      topics: 12,
-      description: 'Complete study material for Target implementation, configuration, and optimization',
-      icon: '🎯'
-    },
-    'ad0-e409': {
-      name: 'AD0-E409 - Adobe Target Architect Master',
-      chapters: 6,
-      topics: 20,
-      description: 'Advanced study guide for Target architecture, integration, and advanced scenarios',
-      icon: '🏗️'
-    },
-    'ad0-e607': {
-      name: 'AD0-E607 - Adobe Journey Optimizer',
-      chapters: 4,
-      topics: 20,
-      description: 'Master journey optimization, offer decisioning, and content authoring in Adobe Journey Optimizer',
-      icon: '🚀'
-    }
-  };
-  
   const studyCardsHtml = certificationsList
     .map(cert => {
-      const guide = studyGuides[cert.id] || {};
-      const icon = guide.icon || '📚';
+      const guide = {
+        name: `${cert.code} - ${cert.name}`,
+        chapters: cert.studyChapters ?? 0,
+        topics: cert.studyTopics ?? 0,
+        description: cert.description || '',
+      };
+      const icon = cert.icon || '📚';
       
       return `
         <div class="study-subject-card">

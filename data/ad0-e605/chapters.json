@@ -1,0 +1,95 @@
+{
+  "certificationId": "ad0-e605",
+  "chapters": [
+    {
+      "id": "architecture",
+      "title": "Data Architecture",
+      "domain": "Data Architecture",
+      "overview": "Design a consistent XDM model that supports profile unification, segmentation, personalization, and activation without unnecessary ingestion or operational complexity.",
+      "topics": [
+        "Core architect decisions",
+        "XDM foundations: class, field group, schema, dataset",
+        "Primary keys, identities, and namespaces",
+        "Relationships, cardinality, and multi-entity design",
+        "Profile enablement: decide deliberately",
+        "Healthcare architect scenarios from your notes",
+        "Data architecture exam traps"
+      ],
+      "content": ""
+    },
+    {
+      "id": "segmentation",
+      "title": "Segmentation and Audiences",
+      "domain": "Segmentation and Audiences",
+      "overview": "Segmentation converts profile attributes, events, and related entity data into audience membership. The key exam skill is selecting evaluation method based on latency, query shape, data availability, and use case.",
+      "topics": [
+        "Core areas",
+        "Batch vs streaming vs edge",
+        "Multi-entity, sequential, dynamic segmentation",
+        "Aggregate functions and export jobs"
+      ],
+      "content": ""
+    },
+    {
+      "id": "profile",
+      "title": "Profile and Identity",
+      "domain": "Profile and Identity",
+      "overview": "Identity Service connects identity values into an identity graph. Real-Time Customer Profile uses that graph and profile fragments to construct a merged operational profile.",
+      "topics": [
+        "Primary and secondary identities",
+        "Merge policies: conflict resolution",
+        "Profile collapse, split, and identity graph changes",
+        "Hub profile vs Edge profile",
+        "Profile size and guardrails",
+        "Fast knowledge answers"
+      ],
+      "content": ""
+    },
+    {
+      "id": "governance",
+      "title": "Governance, DULE, ABAC, and Consent",
+      "domain": "Governance, DULE, ABAC, and Consent",
+      "overview": "Governance questions test whether you can distinguish the right to access data from the permitted use of data.",
+      "topics": [
+        "DULE framework: labels + policies + marketing actions",
+        "Policy enforcement workflow",
+        "ABAC vs DULE",
+        "Consent",
+        "Scenario: ethnicity-related field",
+        "Scenario: enabling ABAC on a field"
+      ],
+      "content": ""
+    },
+    {
+      "id": "ingestion",
+      "title": "Data Sources and Ingestion",
+      "domain": "Data Sources and Ingestion",
+      "overview": "Ingestion questions test source compatibility, batch vs streaming behavior, Profile enablement, identity mapping, data correction, monitoring, throughput, and latency.",
+      "topics": [
+        "Batch vs streaming ingestion",
+        "Data flow and storage layers",
+        "Latency: documented expectations, not promises",
+        "What happens when incorrect data is ingested again?",
+        "Identity mapping during ingestion",
+        "Operational controls and monitoring",
+        "Security and authentication"
+      ],
+      "content": ""
+    },
+    {
+      "id": "activation",
+      "title": "Activation and Destinations",
+      "domain": "Activation and Destinations",
+      "overview": "Activation sends qualified audience/profile data to an external destination. Destination setup, audience selection, attribute mapping, schedule, governance, and monitoring are separate decisions.",
+      "topics": [
+        "Destination patterns",
+        "Audience activation vs dataset export",
+        "Activation configuration checklist",
+        "Guardrails and mapping limits",
+        "Multiple audiences on one destination",
+        "When activation fails: choose the correct fix"
+      ],
+      "content": ""
+    }
+  ]
+}

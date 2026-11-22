@@ -1,0 +1,126 @@
+{
+  "certificationId": "ad0-e606",
+  "chapters": [
+    {
+      "id": "blueprint",
+      "title": "Exam blueprint",
+      "domain": "Exam blueprint",
+      "overview": "Permissions, sandboxes, channels, events, actions, data sources, APIs.",
+      "topics": [],
+      "content": ""
+    },
+    {
+      "id": "foundation",
+      "title": "AJO and RTCDP foundations",
+      "domain": "AJO and RTCDP foundations",
+      "overview": "Adobe Journey Optimizer is built on Adobe Experience Platform. Platform provides the data foundation; AJO uses that foundation to orchestrate experiences and deliver messages.",
+      "topics": [],
+      "content": ""
+    },
+    {
+      "id": "admin",
+      "title": "1. Administration and configuration 20%",
+      "domain": "1. Administration and configuration 20%",
+      "overview": "Access is managed through users, roles, permissions, and product-level access. A role groups permissions; users receive access through role assignment. Apply least privilege: grant only the capabilities needed for the task.",
+      "topics": [
+        "1.1 Permissions, roles, and ABAC",
+        "1.2 Sandboxes and business-unit separation",
+        "1.3 Channel administration",
+        "1.4 Events, custom actions, custom data sources",
+        "1.5 AJO APIs and operational controls"
+      ],
+      "content": ""
+    },
+    {
+      "id": "journeys",
+      "title": "2. Journey orchestration 22%",
+      "domain": "2. Journey orchestration 22%",
+      "overview": "Coordinate channels around customer state and preferences, not by blindly sending the same message everywhere. Example: on cart abandonment, wait, check for purchase, send email if consented and reachable, wait and re-check conversion, then consider push only if eligible. If no channel is eligible, exit or follow an approved non-marketing path.",
+      "topics": [
+        "2.1 Choose a journey pattern",
+        "2.2 Journey build sequence",
+        "2.3 Activities and branching",
+        "2.4 Multi-channel, multi-step design",
+        "2.5 Entrance, re-entry, and concurrency",
+        "2.6 Test mode, proof, and experimentation",
+        "2.7 Reporting and performance metrics"
+      ],
+      "content": ""
+    },
+    {
+      "id": "offers",
+      "title": "3. Offer decisioning 16%",
+      "domain": "3. Offer decisioning 16%",
+      "overview": "Eligibility answers can this offer be shown? Ranking answers which eligible offer should be selected? An offer with the highest priority but a failed eligibility rule must not win. Ranking is not a substitute for compliance or eligibility.",
+      "topics": [
+        "3.1 Core objects",
+        "3.2 Offer creation workflow",
+        "3.3 Eligibility vs ranking",
+        "3.4 Test profiles and simulation",
+        "3.5 Offer Hub / Decisions Hub vs Edge Decisioning API",
+        "3.6 Guardrails"
+      ],
+      "content": ""
+    },
+    {
+      "id": "content",
+      "title": "4. Content authoring 22%",
+      "domain": "4. Content authoring 22%",
+      "overview": "Content authoring includes channel-specific configuration, rendering, personalization, fallback behavior, compliance, link validation, and test-profile verification—not just copywriting.",
+      "topics": [
+        "4.1 Lifecycle",
+        "4.2 Channel-specific considerations",
+        "4.3 Templates",
+        "4.4 Personalization and helper functions",
+        "4.5 Preview, proof, validation, approval, publish, pause",
+        "4.6 Consent and suppression"
+      ],
+      "content": ""
+    },
+    {
+      "id": "data",
+      "title": "5. Data modeling 18%",
+      "domain": "5. Data modeling 18%",
+      "overview": "XDM schemas define structure and meaning. A schema combines a class and field groups, with custom fields where appropriate. Schemas create consistent data structures across source systems and Platform services.",
+      "topics": [
+        "5.1 XDM schemas and schema types",
+        "5.2 Datasets",
+        "5.3 Union schemas",
+        "5.4 Real-Time Customer Profile",
+        "5.5 Identity, namespaces, and identity graph",
+        "5.6 Ingestion patterns",
+        "5.7 Segmentation Service: batch, streaming, edge",
+        "5.8 Identity and segmentation guardrails"
+      ],
+      "content": ""
+    },
+    {
+      "id": "debug",
+      "title": "Advanced troubleshooting",
+      "domain": "Advanced troubleshooting",
+      "overview": "Expert questions often give a symptom and ask for the best diagnostic sequence. Find where the flow breaks, inspect evidence at that layer, and change one thing at a time.",
+      "topics": [
+        "Incident handling sequence"
+      ],
+      "content": ""
+    },
+    {
+      "id": "api",
+      "title": "API revision framework",
+      "domain": "API revision framework",
+      "overview": "For each API family named in the outline—capping, throttling, suppression lists, object copy, and interactive message execution—prepare a reference sheet with these fields:",
+      "topics": [],
+      "content": ""
+    },
+    {
+      "id": "scenarios",
+      "title": "Scenario-based decision framework",
+      "domain": "Scenario-based decision framework",
+      "overview": "",
+      "topics": [
+        "Common distractors"
+      ],
+      "content": ""
+    }
+  ]
+}

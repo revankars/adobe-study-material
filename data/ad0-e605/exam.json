@@ -1,0 +1,76 @@
+{
+  "certificationId": "ad0-e605",
+  "code": "AD0-E605",
+  "name": "Adobe Real-Time CDP Developer Expert",
+  "specifications": {
+    "totalQuestions": 10
+  },
+  "domains": [
+    {
+      "name": "Data Architecture",
+      "keyTopics": [
+        "Core architect decisions",
+        "XDM foundations: class, field group, schema, dataset",
+        "Primary keys, identities, and namespaces",
+        "Relationships, cardinality, and multi-entity design",
+        "Profile enablement: decide deliberately",
+        "Healthcare architect scenarios from your notes",
+        "Data architecture exam traps"
+      ]
+    },
+    {
+      "name": "Segmentation and Audiences",
+      "keyTopics": [
+        "Core areas",
+        "Batch vs streaming vs edge",
+        "Multi-entity, sequential, dynamic segmentation",
+        "Aggregate functions and export jobs"
+      ]
+    },
+    {
+      "name": "Profile and Identity",
+      "keyTopics": [
+        "Primary and secondary identities",
+        "Merge policies: conflict resolution",
+        "Profile collapse, split, and identity graph changes",
+        "Hub profile vs Edge profile",
+        "Profile size and guardrails",
+        "Fast knowledge answers"
+      ]
+    },
+    {
+      "name": "Governance, DULE, ABAC, and Consent",
+      "keyTopics": [
+        "DULE framework: labels + policies + marketing actions",
+        "Policy enforcement workflow",
+        "ABAC vs DULE",
+        "Consent",
+        "Scenario: ethnicity-related field",
+        "Scenario: enabling ABAC on a field"
+      ]
+    },
+    {
+      "name": "Data Sources and Ingestion",
+      "keyTopics": [
+        "Batch vs streaming ingestion",
+        "Data flow and storage layers",
+        "Latency: documented expectations, not promises",
+        "What happens when incorrect data is ingested again?",
+        "Identity mapping during ingestion",
+        "Operational controls and monitoring",
+        "Security and authentication"
+      ]
+    },
+    {
+      "name": "Activation and Destinations",
+      "keyTopics": [
+        "Destination patterns",
+        "Audience activation vs dataset export",
+        "Activation configuration checklist",
+        "Guardrails and mapping limits",
+        "Multiple audiences on one destination",
+        "When activation fails: choose the correct fix"
+      ]
+    }
+  ]
+}

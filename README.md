@@ -8,8 +8,10 @@ A static study site for four Adobe certifications:
 | AD0-E408 | Adobe Target Business Practitioner Professional |
 | AD0-E409 | Adobe Target Architect Master |
 | AD0-E607 | Adobe Journey Optimizer Business Practitioner Professional |
+| AD0-E605 | Adobe Real-Time CDP Developer Expert |
+| AD0-E606 | Adobe Journey Optimizer Developer Expert |
 
-It has five sections: a dashboard, study material, practice tests, mock examinations, and quick revision. A search box covers chapters and questions.
+It covers six certifications and has five sections: a dashboard, study material, practice tests, mock examinations, and quick revision. A search box covers chapters and questions.
 
 This is an independent study resource. It is not affiliated with or endorsed by Adobe. Always check the latest official Adobe exam guides and Experience League documentation.
 
@@ -60,3 +62,15 @@ Upload the whole folder to a repository, then choose **Settings → Pages → De
 ## Original source files
 
 `original-sources/` holds the files the study material was built from: the original `Adobe_Certification_Study_Hub.html` and the practice question files (`AD0-E408_COMPLETE_PRACTICE_EXAM_40Q.html`, `Practice_Test_30_Questions.md`, `AJO_Practice_Exam_50_Questions.html`, `AJO_Practice_Exam_Questions.md`).
+
+## Real-Time CDP and Journey Optimizer Developer Expert tracks
+
+`tools/import_new_tracks.py` builds these two tracks from `original-sources/`:
+
+- The complete study guides for AD0-E605 and AD0-E606 are the uploaded guides, unchanged except for added heading anchors.
+- The graded practice sets are the questions and answer keys in those guides: 10 for AD0-E605 and 15 for AD0-E606. The question bank is not part of the portal.
+- `data/ad0-e605/question-bank.json` holds the Real-Time CDP master practice bank as a review-only list. The source does not state the correct answers for these questions, so they are not scored. Please check them against Adobe's official material before relying on them.
+
+The AD0-E605 guide is titled "Architect" in the uploaded file. Confirm that it matches the Developer Expert exam.
+
+Run `python3 tools/import_new_tracks.py`, `python3 tools/build_study_stats.py`, `python3 tools/build_quick_revision.py` and `python3 tools/build_bundle.py` after changing these files.

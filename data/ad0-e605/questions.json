@@ -1,0 +1,3914 @@
+{
+  "certificationId": "ad0-e605",
+  "questions": [
+    {
+      "id": "ad0-e605-practice-001",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A member’s current preferred language must be a profile attribute. Best starting class?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "ExperienceEvent"
+        },
+        {
+          "id": "opt-b",
+          "text": "XDM Individual Profile"
+        },
+        {
+          "id": "opt-c",
+          "text": "Custom time-series class"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Individual Profile is record-oriented and represents an individual’s attributes/current state.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-002",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A patient books an appointment at 10:42 AM. Best model for the booking occurrence?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Static profile field only"
+        },
+        {
+          "id": "opt-b",
+          "text": "Provider record"
+        },
+        {
+          "id": "opt-c",
+          "text": "ExperienceEvent"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "A timestamped action/occurrence is modeled as an ExperienceEvent.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-003",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "CRM must always win over a marketing import when customer status conflicts. Which merge method?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Dataset precedence"
+        },
+        {
+          "id": "opt-b",
+          "text": "Timestamp ordered"
+        },
+        {
+          "id": "opt-c",
+          "text": "Edge segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Dataset precedence explicitly prioritizes a trusted source dataset.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-004",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A visitor needs an audience decision during the current page visit. Which method to investigate first?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge"
+        },
+        {
+          "id": "opt-c",
+          "text": "Dataset export"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Edge segmentation is intended for same-page and next-page personalization when eligible.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-005",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Only a restricted role should view a sensitive schema field. Which control?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Dataset precedence"
+        },
+        {
+          "id": "opt-b",
+          "text": "Streaming segmentation"
+        },
+        {
+          "id": "opt-c",
+          "text": "ABAC"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "ABAC controls which users/roles can access data.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-006",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Activation is prohibited due to a data usage label and enabled policy. Which framework?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "DULE / Data Governance"
+        },
+        {
+          "id": "opt-b",
+          "text": "ABAC only"
+        },
+        {
+          "id": "opt-c",
+          "text": "Union schema"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "DULE evaluates labels against policies and marketing actions to govern data use.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-007",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What represents the combined field structure of Profile-enabled schemas based on the same class?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Identity graph"
+        },
+        {
+          "id": "opt-b",
+          "text": "Union schema"
+        },
+        {
+          "id": "opt-c",
+          "text": "Destination dataflow"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Union schemas aggregate the structure of Profile-enabled schemas sharing the same class.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-008",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Audience based on a member’s related Plan entity attributes: which capability?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile collapse"
+        },
+        {
+          "id": "opt-b",
+          "text": "ABAC"
+        },
+        {
+          "id": "opt-c",
+          "text": "Multi-entity segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Multi-entity segmentation uses related dimension entities through schema relationships.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-009",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which mechanism supports batch updates to Profile records without creating a new ExperienceEvent?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile upsert/patch"
+        },
+        {
+          "id": "opt-b",
+          "text": "Add another event timestamp"
+        },
+        {
+          "id": "opt-c",
+          "text": "Change namespace label"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Supported batch Profile updates use an upsert/patch workflow and identity fields.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-010",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP Developer Expert",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Data science needs raw dataset records in cloud storage, not audience membership. Which workflow?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Audience activation only"
+        },
+        {
+          "id": "opt-b",
+          "text": "Dataset export"
+        },
+        {
+          "id": "opt-c",
+          "text": "Edge segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Dataset export sends raw dataset records; audience activation sends profiles qualified for an audience.",
+      "incorrectExplanations": {},
+      "explanationSource": "Complete_Study_Guide_AD0-E605.html (practice questions)"
+    },
+    {
+      "id": "ad0-e605-practice-011",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Segmentation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A campaign targets two audiences: (1) loyal customers, and (2) loyal customers who visited the site in the last 24 hours. Which evaluation method should be used for each audience?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "(1) Batch, (2) Streaming"
+        },
+        {
+          "id": "opt-b",
+          "text": "(1) Streaming, (2) Streaming"
+        },
+        {
+          "id": "opt-c",
+          "text": "(1) Batch, (2) Batch"
+        },
+        {
+          "id": "opt-d",
+          "text": "(1) Edge, (2) Edge"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Loyalty status is a profile attribute that updates on a daily batch cycle, so batch segmentation fits. A visit in the last 24 hours changes continuously, so streaming segmentation keeps membership current.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-012",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A business practitioner exports plain-text phone number and email for each profile to a social advertising destination. Which identity mapping is valid?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "IdentityMap: Phone_E.164 and IdentityMap: Email"
+        },
+        {
+          "id": "opt-b",
+          "text": "IdentityMap: Phone_E.164 and xdm:personalEmail.address"
+        },
+        {
+          "id": "opt-c",
+          "text": "IdentityMap: Phone_SHA256_E.164 and IdentityMap: Email_LC_SHA256"
+        },
+        {
+          "id": "opt-d",
+          "text": "IdentityMap: Phone and IdentityMap: Email_LC_SHA256"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "For plain-text values, use the Phone_E.164 and Email namespaces. The platform hashes them on activation when the transformation option is applied. The hashed namespaces are for values that were hashed before ingestion, so option C would be wrong for plain text.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-013",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Destinations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A business practitioner must join behavioral data from an analytics system with uploaded CRM data to qualify users for an audience before sending a personalized message. Which destination type should be selected?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Connections"
+        },
+        {
+          "id": "opt-b",
+          "text": "Extensions"
+        },
+        {
+          "id": "opt-c",
+          "text": "Analytics"
+        },
+        {
+          "id": "opt-d",
+          "text": "Dataset export"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Connections use guided workflows that join the full customer profile and audiences before activation. Extensions only forward raw event data, which does not fit this use case.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-014",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Customer AI",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which Customer AI use case is supported?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Predict which customers will buy a product launching next quarter"
+        },
+        {
+          "id": "opt-b",
+          "text": "Track propensity scores for a segment of users over time"
+        },
+        {
+          "id": "opt-c",
+          "text": "Determine the exact price point at which a customer will buy"
+        },
+        {
+          "id": "opt-d",
+          "text": "Recommend products from a catalog of thousands of SKUs"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Customer AI scores individual profiles and lets you track propensity over time for a segment. It is not designed for future product launches, dynamic pricing, or product recommendation at catalog scale.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-015",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Ingestion",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which batch source supports partial ingestion?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Web SDK"
+        },
+        {
+          "id": "opt-b",
+          "text": "Streaming HTTP API"
+        },
+        {
+          "id": "opt-c",
+          "text": "FTP/SFTP"
+        },
+        {
+          "id": "opt-d",
+          "text": "Edge Network Server API"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Every batch ingestion source supports partial ingestion, and streaming ingestion sources do not. Web SDK, the streaming HTTP API, and the Edge Network Server API are all streaming sources. FTP/SFTP is a batch cloud-storage source.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-016",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Destinations",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A business needs raw web event data forwarded in real time to an external analytics tool, without joining it to profile data. Which destination type fits?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile export connection"
+        },
+        {
+          "id": "opt-b",
+          "text": "Dataset export"
+        },
+        {
+          "id": "opt-c",
+          "text": "Extension (event forwarding)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Batch audience export"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Extensions forward raw event data to external systems and do not join it to profile data. Connections and batch exports work on profile and audience data.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-017",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Schema and identity",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data architect builds an XDM Experience Event schema for Web SDK data that must be used in Real-Time Customer Profile. Does the architect need to select a field as the primary identity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "No, the primary identity comes from the identityMap"
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, select a field and mark it as primary"
+        },
+        {
+          "id": "opt-c",
+          "text": "No, a field is marked as primary automatically"
+        },
+        {
+          "id": "opt-d",
+          "text": "Yes, select the identityMap and mark it as primary"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Event schemas include identityMap by default. When the schema is enabled for Profile, the primary identity is chosen from the identityMap, so no schema field needs to be marked.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-018",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Ingestion",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Profile records are being dropped during ingestion. Which record size limit causes this?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "10KB"
+        },
+        {
+          "id": "opt-b",
+          "text": "100KB"
+        },
+        {
+          "id": "opt-c",
+          "text": "1MB"
+        },
+        {
+          "id": "opt-d",
+          "text": "50MB"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Profile records larger than 100KB are dropped, and events larger than 10KB are dropped. The 50MB limit applies to the total size of a stored profile, not to a single record.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-019",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Identity",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the maximum number of identities in an identity graph for an individual profile?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "5"
+        },
+        {
+          "id": "opt-b",
+          "text": "25"
+        },
+        {
+          "id": "opt-c",
+          "text": "50"
+        },
+        {
+          "id": "opt-d",
+          "text": "100"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Individual profile identity graphs are limited to 50 identities. Profiles above that limit are excluded from segmentation, exports, and lookups.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-020",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Ingestion",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A batch file updates only some fields of existing profiles, and upsert is not enabled. What happens to the fields that are not in the file?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "They keep their current values"
+        },
+        {
+          "id": "opt-b",
+          "text": "They are overwritten with null"
+        },
+        {
+          "id": "opt-c",
+          "text": "The batch is rejected"
+        },
+        {
+          "id": "opt-d",
+          "text": "There is no effect on the profile"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Without upsert, a batch that includes only some fields replaces the existing record. Fields that are not in the batch are set to null. Upsert keeps existing values for fields that are not included.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-021",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Identity",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A graph already holds 50 identities and a new record links one more identity. What happens?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The oldest identity is removed (first in, first out)"
+        },
+        {
+          "id": "opt-b",
+          "text": "The new identity is rejected"
+        },
+        {
+          "id": "opt-c",
+          "text": "The profile is excluded from segmentation"
+        },
+        {
+          "id": "opt-d",
+          "text": "All ECIDs are removed"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "The identity graph limit is 50. When a new identity is linked to a full graph, the oldest identity is removed to make room for it. Deletion happens in the Identity Service, not in Real-Time Customer Profile.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-022",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A visitor views a loan page on a banking website and the next page should reflect that visit in the same browsing session. Which evaluation method delivers this?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch segmentation"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge segmentation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Dataset export"
+        },
+        {
+          "id": "opt-d",
+          "text": "Streaming segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Edge segmentation evaluates audiences in real time for web and mobile experiences. It supports same-page and next-page personalization, which is what the next page needs.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-023",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data steward wants every identity for a customer exported as a separate record. Which identifier should be selected in the destination workflow?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "IdentityMap: email"
+        },
+        {
+          "id": "opt-b",
+          "text": "xdm:personalEmail.address"
+        },
+        {
+          "id": "opt-c",
+          "text": "A separate XDM attribute for each email"
+        },
+        {
+          "id": "opt-d",
+          "text": "An array attribute holding the emails"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "The identity map holds every identity for a namespace, so IdentityMap: email exports each email address. A single attribute holds only one value per profile.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-024",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Activation",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A streaming destination receives audience qualification events but never receives exit (disqualification) events. What should be checked first?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Whether the audience is smaller than 30% of profiles"
+        },
+        {
+          "id": "opt-b",
+          "text": "Whether the segment changes trigger is enabled in When to activate"
+        },
+        {
+          "id": "opt-c",
+          "text": "Whether the destination mapping includes the email attribute"
+        },
+        {
+          "id": "opt-d",
+          "text": "Whether the dataset is enabled for Profile"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Exports are triggered by audience qualification and disqualification by default. If exit events are missing, check the When to activate settings. The segment changes trigger must be enabled to send exits.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-practice-025",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Audiences",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer uploads an externally generated audience from a CSV for a year-long campaign. Months later the profile count is zero and the audience cannot be activated. What is the most likely reason?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "A 90-day data expiration"
+        },
+        {
+          "id": "opt-b",
+          "text": "A 30-day data expiration, after which the dataset stays visible but the audience cannot be activated"
+        },
+        {
+          "id": "opt-c",
+          "text": "A 30-day expiration that deletes the dataset"
+        },
+        {
+          "id": "opt-d",
+          "text": "A 90-day expiration that deletes the dataset"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Externally generated audiences have a 30-day data expiration. After that, the dataset stays visible in the inventory, but the audience cannot be activated and its profile count shows zero.",
+      "incorrectExplanations": {},
+      "explanationSource": "Adobe Experience Platform documentation (reviewed for this practice set)"
+    },
+    {
+      "id": "ad0-e605-dev-01",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retail brand has these SQL tables: Orders (order_id, customer_id, order_date, total_amount), OrderItems (order_id, sku, qty, price) and Customers (customer_id, email). They want to segment on \"customers who bought SKU X at least three times in the last 30 days.\" How should this be modeled in Adobe Real-Time CDP?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Denormalize everything into one Profile record with an array of all historical purchases inside the profile attributes."
+        },
+        {
+          "id": "opt-b",
+          "text": "Join Orders and OrderItems and ingest as ExperienceEvent, then use event-based conditions for the segment."
+        },
+        {
+          "id": "opt-c",
+          "text": "Store OrderItems as a Lookup dataset and join it to Profile at segmentation time."
+        },
+        {
+          "id": "opt-d",
+          "text": "Convert OrderItems into Offer Decisioning items and segment on offers instead of events."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-02",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer is creating a data model for an insurance company. They must send a daily email to each customer about current active claims. Customers may have multiple claims, but only one most recent claim may be active. The only claim details stored are claim ID and status. They want to track all claim IDs for a customer and create segments that target customers with active claims. How should the developer create the schema?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create an individual profile schema for the customer and another individual profile schema for claim details, joined by claim ID."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create an individual profile schema for the customer and add claims as an object array to the customer schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create an individual profile schema for the customer and an event schema for claim details with customer ID."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-04",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A banking customer has customer ID, debitCardHash and internetBankingId, which are unique to the customer, present in the profile schema, and used in different transaction event-based schemas. RMID identifies the relationship manager for the customer. What is the correct identity type for each identity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "customerID, debitCardHash, internetBankingId and RMID are all Cross-Device ID."
+        },
+        {
+          "id": "opt-b",
+          "text": "customerID, debitCardHash and internetBankingId are Cross-Device ID, and RMID is a non-people identifier."
+        },
+        {
+          "id": "opt-c",
+          "text": "debitCardHash and internetBankingId are Cross-Device ID, and customerID and RMID are non-people identifiers."
+        },
+        {
+          "id": "opt-d",
+          "text": "customerID is Cross-Device ID, internetBankingId and debitCardHash are Device ID, and RMID is a non-people identifier."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-05",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer is designing the schema to ingest web events with Adobe Web SDK for a website that has pre-login and post-login experiences. The CRM ID is only available after the user logs in. What is the recommended approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use identityMap with the CRM ID marked as secondary identifier when available."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use identityMap with the CRM ID marked as primary identifier when available."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use a schema field with the CRM ID marked as primary identifier in the schema."
+        },
+        {
+          "id": "opt-d",
+          "text": "Use a schema field with the CRM ID marked as secondary identifier in the schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-06",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which attribute data type must be used to create a primary identity field in Adobe Real-Time CDP?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "String"
+        },
+        {
+          "id": "opt-b",
+          "text": "Map"
+        },
+        {
+          "id": "opt-c",
+          "text": "Long"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-07",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Real-Time CDP developer is creating a unified customer profile in Adobe Experience Platform for a retail brand. There are three data sources, each with a different schema: Data source 1 (orderId, orderTotal, timestamp, customerEmail); Data source 2 (loyaltyId, pointsBalance, customerEmail); Data source 3 (receiptId, storeLocation, purchaseAmount, customerEmail). Which attributes are recommended for primary and secondary identity in each schema?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Source 1: orderId primary, customerEmail secondary. Source 2: loyaltyId primary, customerEmail secondary. Source 3: receiptId primary, customerEmail secondary."
+        },
+        {
+          "id": "opt-b",
+          "text": "Source 1: orderId primary, customerEmail secondary. Source 2: loyaltyId primary, customerEmail secondary. Source 3: customerEmail primary, receiptId secondary."
+        },
+        {
+          "id": "opt-c",
+          "text": "Source 1: orderId primary, customerEmail secondary. Source 2: loyaltyId primary, customerEmail secondary. Source 3: receiptId primary, storeLocation secondary."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-08",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Refer to the exhibit. A data engineer is modeling a relational database (Customer, Order, Product List, Product) as XDM schemas before ingestion into Adobe Experience Platform. Which XDM schema classes model the entity relationship diagram?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Customer as an XDM Individual Profile schema, Product as a custom schema, and Order as an XDM Experience Event schema, with Product List as an array in the Order schema."
+        },
+        {
+          "id": "opt-b",
+          "text": "Order, Customer and Product as XDM Individual Profile schemas, with Product List as an XDM custom schema and as an object in the Customer schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Customer and Product List as XDM custom schemas, and Order as an XDM Individual Profile schema, with Product as an array inside the Product List schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-09",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer is implementing Adobe Real-Time CDP for a retail organization. Website: ECID, hashed email collected at login, CRM ID available only after authentication. Mobile app: mobile device ID, hashed email after login. CRM: CRM ID as primary key, plaintext email, loyalty ID, phone number. Offline point-of-sale: loyalty ID, hashed email, transaction ID. Which field should be the primary person identifier to ensure profile integrity across these sources?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Hashed email ID"
+        },
+        {
+          "id": "opt-b",
+          "text": "CRM ID"
+        },
+        {
+          "id": "opt-c",
+          "text": "Loyalty ID"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-10",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "How should an entity be classified if it is an immutable record of the system at a specific point in time?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile"
+        },
+        {
+          "id": "opt-b",
+          "text": "Event"
+        },
+        {
+          "id": "opt-c",
+          "text": "Lookup"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-11",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What would happen if a field is considered a potential identity field but is excluded from being marked as identity in an Adobe Experience Platform schema?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "It will not participate in the identity graph."
+        },
+        {
+          "id": "opt-b",
+          "text": "It will break data ingestion."
+        },
+        {
+          "id": "opt-c",
+          "text": "It will still stitch automatically."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-12",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Which identity type is considered by Identity Service when generating identity graphs?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Cross-device ID"
+        },
+        {
+          "id": "opt-b",
+          "text": "Non-people identifier"
+        },
+        {
+          "id": "opt-c",
+          "text": "Partner ID"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-13",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "In Adobe Real-Time CDP, what is the default Time-to-Live (TTL) for profiles stored in the Edge profile store if no custom TTL is configured?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "30 days"
+        },
+        {
+          "id": "opt-b",
+          "text": "14 days"
+        },
+        {
+          "id": "opt-c",
+          "text": "7 days"
+        },
+        {
+          "id": "opt-d",
+          "text": "90 days"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-14",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Two datasets contribute to profiles in Adobe Real-Time CDP: Dataset 1 (CRM) and Dataset 2 (EDW). The profile must use attributes from the CRM dataset whenever the same field exists in both. What is the correct merge policy configuration?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set the merge policy to Dataset precedence and assign the highest priority to the CRM dataset."
+        },
+        {
+          "id": "opt-b",
+          "text": "Set the merge policy to Timestamp ordered and assign the highest priority to the CRM dataset."
+        },
+        {
+          "id": "opt-c",
+          "text": "Set the merge policy to Dataset precedence and assign the lowest priority to the CRM dataset."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-16",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "Which two statements describe how streaming upserts work in Adobe Experience Platform? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Source data must be pre-batched for streaming upserts before it can be processed in Adobe Experience Platform."
+        },
+        {
+          "id": "opt-b",
+          "text": "Only attributes with changed values are recorded in the data lake during streaming upserts, which makes it a preferred way to update profiles."
+        },
+        {
+          "id": "opt-c",
+          "text": "If an incoming record shares an identity with an existing profile, only the changed attributes are updated without replacing the entire profile fragment."
+        },
+        {
+          "id": "opt-d",
+          "text": "Both record and event datasets enabled for profile ingestion can be updated using streaming upserts."
+        },
+        {
+          "id": "opt-e",
+          "text": "Streaming upserts allow incoming records to update existing profiles in real time if a primary identity match is found."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c",
+        "opt-e"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-17",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "When does the timer start for profile data retention at the Edge by default?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "From the last access into the Hub profile"
+        },
+        {
+          "id": "opt-b",
+          "text": "From the last ingestion into the Hub profile"
+        },
+        {
+          "id": "opt-c",
+          "text": "From the last ingestion into the Edge profile"
+        },
+        {
+          "id": "opt-d",
+          "text": "From the last access into the Edge profile"
+        }
+      ],
+      "correctAnswers": [
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-18",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Experience Platform developer has a timestamp-ordered merge policy set as the default. The developer prefers to use an existing dataset precedence merge policy when viewing customer profiles or creating audiences. What should the developer do after setting the default merge policy to dataset precedence?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Manually assign the merge policy only to newly created audiences."
+        },
+        {
+          "id": "opt-b",
+          "text": "Manually assign the new merge policy to existing audiences."
+        },
+        {
+          "id": "opt-c",
+          "text": "Wait for the system to automatically update the merge policies used for new and existing audiences."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-19",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer submits a batch ingestion job. After several minutes the data does not appear in the dataset, and the developer must determine whether the job succeeded, failed or is still processing. Which API call should be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "GET /catalog/dataSets/{DATASET_ID}/views"
+        },
+        {
+          "id": "opt-b",
+          "text": "GET /catalog/batches/{BATCH_ID}"
+        },
+        {
+          "id": "opt-c",
+          "text": "GET /catalog/dataSets/{DATASET_ID}"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-20",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An organization captures five zone codes for each customer address (1 North, 2 South, 3 East, 4 West, 5 Central). The business wants to replace the zone codes with zone names in Adobe Real-Time CDP. Which approach is recommended?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use the 'matches_regex' function to match the zone code with a regular expression and replace it with the zone name."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the 'decode' data prep function during ingestion, with the zone name as a key-value pair."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use the 'substr' data prep function during ingestion to replace the zone code with the zone name."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-21",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer sets up a dataflow that brings data from an S3 folder into the ProductDetails dataset. A business user drops ProductX.csv into the folder, and the dataflow writes it to the dataset. Later the user removes some rows from ProductX.csv, uploads it again to the same folder along with ProductY.csv. What does this do to the ProductDetails dataset?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "It replaces the ProductX.csv data already present and appends the ProductY.csv data."
+        },
+        {
+          "id": "opt-b",
+          "text": "It only appends ProductY.csv to the dataset, because the dataset name for the first file is unchanged."
+        },
+        {
+          "id": "opt-c",
+          "text": "It appends the data from both ProductX.csv and ProductY.csv to the existing data in the dataset."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-22",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Streaming events are arriving in Adobe Experience Platform but do not appear in the real-time profile. What is the cause?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "There is a misconfigured merge policy."
+        },
+        {
+          "id": "opt-b",
+          "text": "The dataset is not enabled for Profile."
+        },
+        {
+          "id": "opt-c",
+          "text": "The wrong cloud storage connector is used."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-24",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Experience Platform ingestion monitor shows failed batches from Web SDK with errors such as \"data type mismatch: expected string, found integer.\" What is the next step to find where on the website the mismatched payload is generated?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Switch the dataset schema field to accept the payload data type."
+        },
+        {
+          "id": "opt-b",
+          "text": "Enable debug logging and test each page of the website for erroneous payloads."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use the Data Access API to retrieve and inspect the failed batch."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-25",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company ingests web behavioral data through streaming. Events appear in the dataset but do not qualify users into audiences. Which configuration issue is likely?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The dataset is not enabled for Profile."
+        },
+        {
+          "id": "opt-b",
+          "text": "The merge policy prioritizes CRM data over web data."
+        },
+        {
+          "id": "opt-c",
+          "text": "The identity namespace was not created as a custom namespace."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-26",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A developer uploads a CSV file for batch ingestion into Adobe Real-Time CDP. The job fails during validation with schema-related errors. Which two conditions must be verified? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Ensure a system-generated identifier field is included in the file."
+        },
+        {
+          "id": "opt-b",
+          "text": "Ensure the data types in the file match the schema definition."
+        },
+        {
+          "id": "opt-c",
+          "text": "Ensure all required fields contain non-null values."
+        },
+        {
+          "id": "opt-d",
+          "text": "Ensure all schema fields are included in the CSV file."
+        },
+        {
+          "id": "opt-e",
+          "text": "Ensure a timestamp field is included for every record."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-27",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A telecom client has data science models that update once a day, so some profile attributes may be out of date. Another profile schema holds the customer's latest attributes, refreshed every two hours from CRM. What is the correct merge policy configuration?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create a Timestamp ordered and Active-on-Edge merge policy to use the profile attributes for edge segmentation."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a Dataset precedence merge policy with the data science models-based schema as the highest priority to run data-driven marketing strategies."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a Dataset precedence merge policy by giving the CRM-based profile schema the highest priority."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-28",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Experience Platform developer wants an audience of users who completed an offline purchase in the last 48 hours and visited the website in the last 24 hours, as a streaming audience. What is the correct approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create two streaming audiences, one for offline purchase events and one for website visit events, then create a new streaming audience that references both using the inSegment() function."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a batch audience for offline purchase events and a streaming audience for website visit events, then create a new streaming audience that references both using the inSegment() function."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a single streaming audience by directly chaining two Experience Event conditions, with separate CHAIN() logic for offline purchases within 48 hours and web page views within 24 hours."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-29",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An online retailer wants same-page or next-page personalization on its website, based on behavioral data collected with Web SDK. Which audience evaluation method is suitable?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch evaluation"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge evaluation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Streaming evaluation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-30",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An automobile company launched an electric vehicle (EV) variation of an ICE SUV. It wants to send a pre-booking email to customers who bought a vehicle in the past five years but not within the last year, using ICE SUV attributes and purchase attributes. Which type of segment should the developer create?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Sequential segment"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multi-entity segment"
+        },
+        {
+          "id": "opt-c",
+          "text": "Dynamic segment"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-31",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketing team wants an audience of users who made a purchase last week or signed up for the newsletter. Two audiences already exist: Recent Purchase (purchase event in the last week) and Signed for Newsletter (newsletter sign-up event). Which merge type should be used in audience composition?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Union"
+        },
+        {
+          "id": "opt-b",
+          "text": "Intersection"
+        },
+        {
+          "id": "opt-c",
+          "text": "Overlap"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-32",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retail customer runs a win-back campaign. The target customers purchased any product three to six months ago, had a product page view five days before, and have no add-to-cart or checkout event in the last three months. What is the correct method of segment evaluation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Streaming segmentation method"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge segmentation method"
+        },
+        {
+          "id": "opt-c",
+          "text": "Batch segmentation method"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-35",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A bank ingests profile data from a CRM system (highly trusted, updated nightly) and a call center system (less reliable, near real-time). Both populate the phoneNumber attribute. Marketing reports inconsistent phone numbers in activated audiences. What is the most appropriate solution?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Configure a merge policy that prioritizes the CRM as the primary dataset."
+        },
+        {
+          "id": "opt-b",
+          "text": "Enable streaming ingestion for the CRM dataset instead of batch."
+        },
+        {
+          "id": "opt-c",
+          "text": "Delete the call center dataset from Profile to avoid attribute conflict."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-37",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A media company wants customers to be targeted instantly after a purchase event in a time-sensitive email marketing campaign. Which connection is used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Streaming HTTP API connectors"
+        },
+        {
+          "id": "opt-b",
+          "text": "Cloud storage connectors"
+        },
+        {
+          "id": "opt-c",
+          "text": "SFTP connectors"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-38",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketing team activates a batch audience from Adobe Real-Time CDP to a cloud storage destination such as Amazon S3. Which statement reflects documented behavior?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Batch audience exports are delivered on a scheduled basis and generate full or incremental files, depending on configuration."
+        },
+        {
+          "id": "opt-b",
+          "text": "Batch activation automatically pushes updates every time a profile attribute changes in the Hub profile."
+        },
+        {
+          "id": "opt-c",
+          "text": "Batch destinations only support JSON format for file-based exports."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-39",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer must send an audience to an email marketing platform through a recurring import job. Each new exported file must overwrite the previous file in the destination storage location. Which action meets this requirement?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "During the audience export scheduling step of activating the destination, configure the export file name to include only static values and remove the date and time components."
+        },
+        {
+          "id": "opt-b",
+          "text": "During the audience export scheduling step of activating the destination, configure the folder path to static values and remove the date and time components."
+        },
+        {
+          "id": "opt-c",
+          "text": "While setting up the destination connection, enable the option to overwrite incremental files, which automatically replaces existing files with every new export."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-40",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer activates an audience of 10 profiles to a streaming destination, then deactivates it, updates its criteria so the audience grows to 100 profiles, and reactivates it. No new profiles qualify and no additional qualification events occur. What happens after reactivation?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The destination receives the newly added 90 profiles."
+        },
+        {
+          "id": "opt-b",
+          "text": "The destination does not receive any profiles."
+        },
+        {
+          "id": "opt-c",
+          "text": "The destination receives all 100 profiles."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-41",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retail company configures a CRM destination for audience activation. The connection test succeeds, but no profiles appear in the CRM after activation. What is the likely configuration issue?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The audience segment was not evaluated using the appropriate evaluation method required for activation to external CRM destinations."
+        },
+        {
+          "id": "opt-b",
+          "text": "The dataset used for profile ingestion was created with an ExperienceEvent schema instead of a profile-enabled schema required for activation."
+        },
+        {
+          "id": "opt-c",
+          "text": "The identity namespace selected in the destination mapping does not match the identifier expected by the CRM system."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-42",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer activates an audience of 500 profiles to a streaming destination. The developer deactivates it, updates the criteria so the audience grows to 750, but the additional 250 profiles never qualify. After reactivating to the same destination, the destination still did not receive the 250 profiles. What is the reason?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Streaming destinations enforce a maximum audience size per activation."
+        },
+        {
+          "id": "opt-b",
+          "text": "Streaming destinations perform a full audience backfill upon reactivation."
+        },
+        {
+          "id": "opt-c",
+          "text": "Reactivating an updated audience to the same streaming destination does not trigger a backfill."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-43",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A telecom business wants to use edge destinations such as Adobe Target to personalize pages based on profile attributes. Which two ways make XDM profile attributes such as loyaltyTier, loyaltyOffer and firstName available in the personalization destinations? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile attributes can be added to an event schema to use them in personalization destinations based on the latest event."
+        },
+        {
+          "id": "opt-b",
+          "text": "Creating a data stream by adding the XDM profile schema and the Adobe Target extension makes all profile attributes in the schema available in Target."
+        },
+        {
+          "id": "opt-c",
+          "text": "Profile attributes can be mapped in the Target connection while activating the segments."
+        },
+        {
+          "id": "opt-d",
+          "text": "Identity fields can be added to the destination to make profile attributes available in the Target destination."
+        },
+        {
+          "id": "opt-e",
+          "text": "Profile attributes are available by default in the edge destinations for personalization."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-45",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A client company that uses Adobe Real-Time CDP receives a request to delete one customer's data. Its data governance framework is in place and its data is labeled with activation policies. What is the recommended best practice?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use the Privacy Service by submitting the customer's known identities."
+        },
+        {
+          "id": "opt-b",
+          "text": "Run a query on the customer's known identities in Query Service to find and delete their data."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use the Data Hygiene API with the customer's known identities to manually delete their data."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-46",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A developer must ensure profile data is not kept for longer than a set time and that average profile size stays below a set value. Which two tools are relevant? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Data Hygiene API configuring a dataset TTL"
+        },
+        {
+          "id": "opt-b",
+          "text": "Privacy Service"
+        },
+        {
+          "id": "opt-c",
+          "text": "Manual dataset deletion"
+        },
+        {
+          "id": "opt-d",
+          "text": "A scheduled Data Distiller query"
+        },
+        {
+          "id": "opt-e",
+          "text": "Identity Store deletion"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-47",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An organization keeps web events collected from its website only for 30 days in the profile store, but wants to keep this data in downstream systems such as Customer Journey Analytics for up to two years. How can this be enforced?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set the Pseudonymous Profile data expiry to 30 days."
+        },
+        {
+          "id": "opt-b",
+          "text": "Set the dataset event expiry to 30 days."
+        },
+        {
+          "id": "opt-c",
+          "text": "Set the dataset expiry to 30 days through the Data Hygiene API."
+        },
+        {
+          "id": "opt-d",
+          "text": "Set the Experience Event profile dataset retention to 30 days."
+        }
+      ],
+      "correctAnswers": [
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-49",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A developer works with a US-based healthcare client to ensure that fields which could contain personal health information are marked properly in a dataset. Some data must be exported to third parties while sensitive data stays secure. Why is field-level labeling preferred over dataset-only labeling?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "It improves the performance of data merges."
+        },
+        {
+          "id": "opt-b",
+          "text": "It allows more granular control over activation."
+        },
+        {
+          "id": "opt-c",
+          "text": "It reduces the likelihood of failed ingestion."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-dev-50",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A developer must protect customers' personally identifiable information (PII) from being shared with third parties while keeping other data available for personalization. The data engineering team has already configured the schemas and datasets. Which two actions are required? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Apply the I1 label to the schema fields that define the PII information."
+        },
+        {
+          "id": "opt-b",
+          "text": "Configure and enable a consent policy that combines the I1 label with the Share with Third Parties marketing action."
+        },
+        {
+          "id": "opt-c",
+          "text": "Apply the I1 label to the datasets where the PII information is stored."
+        },
+        {
+          "id": "opt-d",
+          "text": "Configure and enable a governance policy that combines the I1 label with the Share with Third Parties marketing action."
+        },
+        {
+          "id": "opt-e",
+          "text": "Apply the I1 label to audiences that will use the PII information."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Developer_Practice_exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Developer_Practice_exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-01",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data architect creates two XDM schemas, Schema A and Schema B. What are the three requirements for defining a schema relationship so that Schema A references Schema B for multi-entity segmentation? (Choose three.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Schema A and Schema B must have a relationship defined between them."
+        },
+        {
+          "id": "opt-b",
+          "text": "Schema A must belong to the same schema class as Schema B."
+        },
+        {
+          "id": "opt-c",
+          "text": "Both schemas should have the same fields marked as identities."
+        },
+        {
+          "id": "opt-d",
+          "text": "Schema A and Schema B must each have a primary identity."
+        },
+        {
+          "id": "opt-e",
+          "text": "Schema A and Schema B must each be enabled for Real-Time Customer Profile."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-d",
+        "opt-e"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-02",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "While modeling the real-time customer profile, a customer can have multiple address types (Home, Office, Shipping) as seen from the data warehouse. What is the best option for modeling the customer addresses for the Real-Time Customer Profile?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Model each address as its own distinct object within an XDM Individual Profile class-based schema."
+        },
+        {
+          "id": "opt-b",
+          "text": "Model addresses as individual events using an XDM Experience Event class-based schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Model addresses as an array of addresses in an XDM Individual Profile class-based schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-03",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A financial services customer wants to suppress people from active credit card campaigns as soon as they submit an application. Each application submit contains an offer that is always associated with a credit card name. In which two ways could a developer model the application submit event so real-time suppression is supported? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The offer is modeled as an object within the Application Submit schema."
+        },
+        {
+          "id": "opt-b",
+          "text": "The offer is de-normalized back into the Application Submit schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Application Submit is modeled as an XDM Individual Profile class-based schema."
+        },
+        {
+          "id": "opt-d",
+          "text": "Application Submit is modeled as an XDM Experience Event class-based schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b",
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-04",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data architect must create an XDM Individual Profile class-based schema from a relational model. The business has stored the history of all home addresses for each customer (possibly hundreds), each with a type of home, and only one address has the primary indicator set. Marketing needs to use this data for audiences and personalization. What is the best way to translate this into a single schema?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Customer with the Home Address flattened into Street, Region, Country and Postal Code fields."
+        },
+        {
+          "id": "opt-b",
+          "text": "Customer with Home Addresses as an array, each with Street, Region, Country, Postal Code and Primary Indicator."
+        },
+        {
+          "id": "opt-c",
+          "text": "Customer with Home Address 1 and Home Address 2 as separate sets of fields."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-05",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A relational diagram shows a Gamer (parent entity) with many Owned Games (child entity). Each owned game is a property of the gamer. How will the Owned Games table act within the parent entity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Acts as an object array."
+        },
+        {
+          "id": "opt-b",
+          "text": "Acts as a new schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Acts as an array of values."
+        },
+        {
+          "id": "opt-d",
+          "text": "Acts as an object."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-06",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company wants to capture customer_id and email_address as identities in its data feeds within the Real-Time Customer Profile. What are the recommended identity types?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "customer_id uses Cookie ID and email_address uses Device ID."
+        },
+        {
+          "id": "opt-b",
+          "text": "customer_id uses Cross-Device ID and email_address uses Email."
+        },
+        {
+          "id": "opt-c",
+          "text": "customer_id uses Person ID and email_address uses Email."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-07",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data engineer is bringing in an external list of audience memberships to Adobe Experience Platform. Which two XDM schema classes should be used to create the schemas? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Profile Definition"
+        },
+        {
+          "id": "opt-b",
+          "text": "XDM Individual Profile"
+        },
+        {
+          "id": "opt-c",
+          "text": "Segment Definition"
+        },
+        {
+          "id": "opt-d",
+          "text": "XDM ExperienceEvent"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-08",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer is working on a schema that has not been enabled for Profile and contains an out-of-the-box field group. In addition to adding a relationship and marking it as identity, what valid change can be made to the out-of-the-box field group?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Change the display name."
+        },
+        {
+          "id": "opt-b",
+          "text": "Change the field name."
+        },
+        {
+          "id": "opt-c",
+          "text": "Mark as required."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-09",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data architect is configuring an XDM data model to onboard customer data to the Real-Time Customer Profile. Which three items should be kept in mind when defining identities? (Choose three.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Field(s) intended to be used for the identity service must be of type string."
+        },
+        {
+          "id": "opt-b",
+          "text": "A schema's identity field(s) should have values unique to a single customer profile."
+        },
+        {
+          "id": "opt-c",
+          "text": "A schema must have a single primary identity to be enabled for use in the Real-Time Customer Profile."
+        },
+        {
+          "id": "opt-d",
+          "text": "A schema must have one primary identity and one other person identity."
+        },
+        {
+          "id": "opt-e",
+          "text": "A schema must use an identityMap for ingesting identities."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-b",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-10",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data architect is working for a global marketing agency. A client requests changes to an existing schema to capture new data points. Which two changes to a schema are breaking changes when data is already loaded into Adobe Experience Platform? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Renaming an existing field in the schema."
+        },
+        {
+          "id": "opt-b",
+          "text": "Removing a previously defined field from the schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Adding new fields to the schema to capture additional data."
+        },
+        {
+          "id": "opt-d",
+          "text": "Enabling the schema to participate in Profile."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-12",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data engineer is preparing a schema for a company. Which two ways should service details (name, cost, type, category) be defined in the AEP data model so they are consistent and reusable at both record and time-series levels? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create a Field Group (cross-class)."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a Data Type."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a Class."
+        },
+        {
+          "id": "opt-d",
+          "text": "Create a Schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-13",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "An architect is onboarding e-commerce data into Adobe Experience Platform. Given the ERD with Customer, Orders, Order Line Items and Product, what are the three correct mappings of source entities into AEP classes? (Choose three.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create Order Line Items as an Experience Event."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create Orders as an Experience Event."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create Product as a custom class."
+        },
+        {
+          "id": "opt-d",
+          "text": "Create Product and Order Line Items as custom classes."
+        },
+        {
+          "id": "opt-e",
+          "text": "Embed Order Line Items as an object array in Orders."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b",
+        "opt-c",
+        "opt-e"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-14",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Multiple records within the same XDM Individual Profile class-based dataset are related to each other through the identity graph. What is expected in terms of how those records are merged at profile assembly?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The profile uses the last processed fragment as the truth and uses the other fragments in timestamp order to fill in the gaps."
+        },
+        {
+          "id": "opt-b",
+          "text": "The profile randomly picks a fragment as the truth and uses the other fragments in timestamp order to fill in the gaps."
+        },
+        {
+          "id": "opt-c",
+          "text": "The profile keeps only one fragment and ignores the other fragments completely."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-15",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer notices strange behavior in emails and finds a profile with multiple email identities. What should the marketer do next to identify the root cause?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use the Identity graph viewer to retrieve the list of data sources."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the Identity graph viewer to retrieve the Identity Map linked to the profile."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use the Identity API to list the identity mappings for the email."
+        },
+        {
+          "id": "opt-d",
+          "text": "Use the Identity API to get the details of the identity namespace definition."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-16",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer wants to use edge segmentation, so hub profiles related to active edge profiles are stored on the edge. What is the time to live for these edge profiles?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "7 days"
+        },
+        {
+          "id": "opt-b",
+          "text": "14 days"
+        },
+        {
+          "id": "opt-c",
+          "text": "24 hours"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-17",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer sets up a web personalization campaign that uses Edge segments for same-page and next-page personalization. What should be kept in mind when configuring the segments?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The hub profile is a subset of the edge profile, so the destination does not need to be configured for the profile attributes or segments."
+        },
+        {
+          "id": "opt-b",
+          "text": "The edge profile and hub profile contain the same data, so the destination must be configured for the attributes or segments."
+        },
+        {
+          "id": "opt-c",
+          "text": "The edge profile and hub profile contain the same data, so the destination does not need to be configured."
+        },
+        {
+          "id": "opt-d",
+          "text": "The edge profile is a subset of the hub profile, so the destination must be configured for the profile attributes or segments needed for the campaign."
+        }
+      ],
+      "correctAnswers": [
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-18",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A consultant notices that two profiles have collapsed due to shared identities. What is the best way to determine the specific dataset or batch responsible for the collapsed identity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Look up the profile using the shared identity namespace and value, and identify the dataset and batch that caused the issue."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the identity graph viewer with the shared identity namespace and value to locate the dataset and batch that caused the issue."
+        },
+        {
+          "id": "opt-c",
+          "text": "Browse the datasets enabled for Profile using Query Service until the batch that caused the issue is found."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-19",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "Which two XDM schema classes is the Real-Time Customer Profile's primary entity composed of? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "XDM Individual Profile classes"
+        },
+        {
+          "id": "opt-b",
+          "text": "Custom XDM classes"
+        },
+        {
+          "id": "opt-c",
+          "text": "XDM Experience Event classes"
+        },
+        {
+          "id": "opt-d",
+          "text": "B2B XDM classes"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-20",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer loads both first and last name from two sources (Loyalty and CRM). At activation, the marketer wants the first name from the Loyalty schema and the last name from the CRM schema. Can the marketer accomplish this?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Yes, by configuring a merge policy with dataset precedence set to Loyalty first and CRM second."
+        },
+        {
+          "id": "opt-b",
+          "text": "Yes, by configuring a merge policy with field precedence, first name from Loyalty and last name from CRM."
+        },
+        {
+          "id": "opt-c",
+          "text": "No, this cannot be done because merge policies cannot pick and choose fields from various datasets."
+        },
+        {
+          "id": "opt-d",
+          "text": "No, this cannot be done because merge policies cannot merge record-based datasets together."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-21",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "Which two considerations should be kept in mind when architecting data using dimensional entities? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Dimensional entities can be either time series data or record data."
+        },
+        {
+          "id": "opt-b",
+          "text": "Dimensional entities require secondary identities to link to profiles through schema relationships."
+        },
+        {
+          "id": "opt-c",
+          "text": "Profile data populated through dimensional entities requires batch segmentation evaluation."
+        },
+        {
+          "id": "opt-d",
+          "text": "Dimensional entities can be used as lookups or classifications to simplify the data modeling process."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c",
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-22",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A customer has noticed incorrect data was loaded into the Real-Time Customer Profile for only two profiles, from a single XDM Individual Profile class-based dataset. What can the customer do to correct the problem?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Delete the batch that created the problem from the dataset in the data lake and let the profile roll back to its previous state."
+        },
+        {
+          "id": "opt-b",
+          "text": "Re-load all the affected profiles with the correct data and have the profile update and/or replace the existing records in the dataset."
+        },
+        {
+          "id": "opt-c",
+          "text": "Look up each profile in the UI and update the incorrect attributes manually."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-23",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "What is the maximum number of stitched identities in an identity graph for a Real-Time Customer Profile?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "50"
+        },
+        {
+          "id": "opt-b",
+          "text": "150"
+        },
+        {
+          "id": "opt-c",
+          "text": "1000"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-24",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "When sending data through the HTTP API source connector, how would a data engineer troubleshoot to make sure the payload is formatted properly in real time?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "All data is ingested and Query Service reporting identifies any records that do not pass custom validation rules."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the synchronous validation query parameter to validate that the payload matches the schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use the asynchronous validation query parameter to validate that the payload matches the schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-25",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer configured a new dataset enabled for Profile, using an individual profile-based schema with Email as its primary identity. The file contains 100 profile fragments, but only 75 profile fragments are created after ingestion, with no errors. What could be the reason?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The identity graph collapsed 25 of the profile fragments into the existing 75 profile fragments."
+        },
+        {
+          "id": "opt-b",
+          "text": "75 profile fragments were ingested successfully and 25 profile fragments failed to ingest."
+        },
+        {
+          "id": "opt-c",
+          "text": "25 of the profile fragments had repeated primary identity values."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-26",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to create a segment and define the segmentation evaluation in Edge. Which should the team enable so these events are ingested and processed for segmentation in real time on the Edge?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Capture web event data through the Web SDK."
+        },
+        {
+          "id": "opt-b",
+          "text": "Capture web event data through the Adobe Analytics Data Connector."
+        },
+        {
+          "id": "opt-c",
+          "text": "Capture web event data through the HTTP API."
+        },
+        {
+          "id": "opt-d",
+          "text": "Capture web event data through Azure Data Lake Storage."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-28",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A large retailer is moving customer loyalty data from a data warehouse to Adobe Real-Time CDP. The source connectors do not support this warehouse. The data architect wants to push the data through the API so it can be used in a segment within a few minutes. What is the efficient way to ingest this data?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use the Batch Ingestion API to ingest this data in bulk."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the Data Landing Zone API to ingest this data immediately."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use a single HTTP API request to send multiple messages."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-29",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer must send website data to the Adobe Edge Network Server API. Mid-stream, some data is routed to a different edge, probably because a customer turns a VPN on or off, so the edge profile does not qualify in real time. How should the engineer ensure all data in the session is routed to the same edge?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use the Web SDK."
+        },
+        {
+          "id": "opt-b",
+          "text": "Build a middleware service to catch and resolve these issues."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use location hints in the calls."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-30",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineering team must onboard about 300GB of batch data from multiple JSON files as a historical load. What is the most efficient way to ingest the data?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Ingest the data using a database source connector."
+        },
+        {
+          "id": "opt-b",
+          "text": "Ingest the data using a cloud storage source connector."
+        },
+        {
+          "id": "opt-c",
+          "text": "Ingest the data using the batch ingestion API."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-31",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer loads an order event with status \"order_placed\" into the Real-Time Customer Profile using an Experience Event class-based dataset with the email address as primary identity. Hours later the engineer sends an updated event with status \"order_shipped\" and the same _id. The new event does not appear on the profile, but it is in the data lake. Why?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The Real-Time Customer Profile skipped the record because the timestamp was different."
+        },
+        {
+          "id": "opt-b",
+          "text": "The Real-Time Customer Profile had a processing error during ingestion."
+        },
+        {
+          "id": "opt-c",
+          "text": "The Real-Time Customer Profile skipped the record because the _id already existed."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-32",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer must send IoT device data into the AEP Edge Network using the Edge Network Server API, with secured and real-time APIs. Which endpoint configuration is required?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "edge.adobedc.net"
+        },
+        {
+          "id": "opt-b",
+          "text": "server.adobedc.net"
+        },
+        {
+          "id": "opt-c",
+          "text": "realtime.adobedc.net"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-33",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer has a requirement to enrich an audience that was already created with a few additional attributes from a specific dataset. Which method should the marketer use to create the new enriched audience?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create Audience with the \"Build rule\" method."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create Audience with the \"Enrich audience\" method."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create Audience with the \"Compose audience\" method."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-34",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "In a client's Real-Time CDP implementation, in-store transaction data arrives through HTTP APIs, and CRM data is ingested in batch mode four times a day. The client wants to target CRM profiles who made purchases at particular stores in a specific city within the last 24 hours. How soon could a customer be targeted in streaming destinations?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Within minutes"
+        },
+        {
+          "id": "opt-b",
+          "text": "Within an hour"
+        },
+        {
+          "id": "opt-c",
+          "text": "Within 24 hours"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-35",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A global e-commerce company wants to use Adobe Real-Time CDP to implement different types of segmentation (edge, streaming, batch) to drive personalized marketing campaigns. What are the two best options to consider? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Streaming segmentation"
+        },
+        {
+          "id": "opt-b",
+          "text": "Multi-entity segmentation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Edge segmentation"
+        },
+        {
+          "id": "opt-d",
+          "text": "Batch segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-37",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Given a segment with the definition \"Email address is not null and City = Chicago and State = Illinois\". A profile meets the criteria. Three segment job runs follow: T1 (no change), T2 (city changes to Oakbrook), T3 (email address value changes). What is the segment membership status at each time period?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Exited, Realized, Exited"
+        },
+        {
+          "id": "opt-b",
+          "text": "Realized, Exited, Exited"
+        },
+        {
+          "id": "opt-c",
+          "text": "Realized, Exited, Realized"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-38",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to create an audience by ranking the existing set based on loyalty points and selecting the top 1000 profiles, and to enrich it with city and gender from a profile-enabled record dataset, using Adobe Experience Platform. Which method should be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Compose Audience"
+        },
+        {
+          "id": "opt-b",
+          "text": "Import Audience"
+        },
+        {
+          "id": "opt-c",
+          "text": "Rule-based Audience"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-39",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants to create a segment for an Adobe Target activity that qualifies users who enter the site based on campaign codes from paid search, and must deliver a dynamic experience. What kind of segment should be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Streaming segmentation"
+        },
+        {
+          "id": "opt-b",
+          "text": "Edge segmentation"
+        },
+        {
+          "id": "opt-c",
+          "text": "Batch segmentation"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-40",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer wants a segment of profiles with seven attributes (LoyaltyId, LoyaltyLevel, Location, Age, MaritalStatus, Email, Phone). The segment should qualify all profiles with LoyaltyLevel and Age, and disqualify profiles that have either MaritalStatus or Location. How can the audience rule builder be used?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Drag LoyaltyLevel and Age into an \"Include all\" container, then drag MaritalStatus and Location into an \"Exclude any of\" container."
+        },
+        {
+          "id": "opt-b",
+          "text": "Drag LoyaltyLevel and Age into an \"Include all\" container, then drag MaritalStatus and Location into an \"Exclude all\" container."
+        },
+        {
+          "id": "opt-c",
+          "text": "Drag LoyaltyLevel and Age into an \"Include any of\" container, then drag MaritalStatus and Location into an \"Exclude all\" container."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-41",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer has a last-minute request to create an audience in Real-Time CDP for activation through Adobe Campaign and Facebook. The marketer uploads a file of customer data to create the audience. How long will it take for the audience to be activated into Adobe Campaign and Facebook?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The audience must be manually activated."
+        },
+        {
+          "id": "opt-b",
+          "text": "Immediately after creation."
+        },
+        {
+          "id": "opt-c",
+          "text": "Within the next 24 hours."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-42",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer needs a streaming audience that uses data spanning the last 7 days. The definition has batch logic (profiles that started an application in the last 7 days but never submitted it) and stream logic (currently living in the mid-west and viewing credit card options on the website). How best could they build this audience so that it can be streaming qualified?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Use Data Distiller to create an attribute using the batch logic, load it to the profile, and include it in the audience definition with the stream-based logic."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use an audience for the batch logic and include that audience in the audience definition with the stream-based logic."
+        },
+        {
+          "id": "opt-c",
+          "text": "Use profile computed attributes for the batch logic and include them in the audience definition with the stream-based logic."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-43",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data engineer creates a streaming segment whose definition includes existing audiences and a page view web event. After selecting the evaluation method, an error allows only batch evaluation. What are two possible reasons? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The segment definition combines an audience with multiple page view events (last 30 days)."
+        },
+        {
+          "id": "opt-b",
+          "text": "The segment definition combines an audience with multiple page view events (last 24 hours)."
+        },
+        {
+          "id": "opt-c",
+          "text": "The segment definition combines an audience, a page view event (any time), and a profile attribute."
+        },
+        {
+          "id": "opt-d",
+          "text": "The segment definition combines an audience and a page view event (last 24 hours)."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-44",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A consultant needs to activate all profiles in Audience1 via an HTTP API destination. Some of these profiles are also in Audience2 and Audience3. When Audience1 is activated, which audiences are exported in the segmentMembership field?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Audience1, Audience2, Audience3"
+        },
+        {
+          "id": "opt-b",
+          "text": "Audience1"
+        },
+        {
+          "id": "opt-c",
+          "text": "Audience1, Audience3"
+        },
+        {
+          "id": "opt-d",
+          "text": "Audience1, Audience2"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-51",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Real-Time CDP administrator wants to better control how downstream marketers enable segments for activations. What next step should the administrator take to better protect the dataset from being misused in activations?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Set entity limits across Adobe RTCDP components."
+        },
+        {
+          "id": "opt-b",
+          "text": "Establish data usage labels across the Adobe RTCDP."
+        },
+        {
+          "id": "opt-c",
+          "text": "Lean on performance guardrails of the Adobe RTCDP."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-52",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data architect must enable same-page and next-page personalization through Adobe Target based on customer interaction on the website. Which two are prerequisites for activating audiences to Adobe Target for onsite personalization? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Implement a custom merge policy to evaluate audiences in real time."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a separate workspace in Adobe Target for real-time and next-page personalization."
+        },
+        {
+          "id": "opt-c",
+          "text": "Grant users access to the default workspace and the Approver role."
+        },
+        {
+          "id": "opt-d",
+          "text": "Activate the Active-On-Edge merge policy to constantly evaluate audiences on the edge."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c",
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-53",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A customer is looking to implement the Adobe Real-Time CDP (RTCDP) platform and has a number of customers who have agreed to have their data collected for personalization, but have opted out to have their data shared with a third party. How should the data engineer create the related objects to be compliant with the Adobe RTCDP data collection policy?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create a profile-enabled dataset based on a schema that contains a privacy and consent field group, and apply the C2 label."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create a profile-enabled dataset and use data collection to stream data into advertising details based on a field group, and apply the C2 label."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create a profile-enabled dataset and configure the Opt-in privacy preference using Adobe Data Collection, and apply the C2 label."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-54",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A company has completed its Adobe Experience Platform implementation and is onboarding data and profiles. The data steward notices that Addressable Audience is significantly exceeding the license amount. Which two mechanisms can reduce the size of Addressable Audience for profiles that have already been onboarded? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Data Lifecycle"
+        },
+        {
+          "id": "opt-b",
+          "text": "Privacy Service"
+        },
+        {
+          "id": "opt-c",
+          "text": "Experience Event expiration (TTL)"
+        },
+        {
+          "id": "opt-d",
+          "text": "Disable Datasets for Profile"
+        },
+        {
+          "id": "opt-e",
+          "text": "Data Distiller"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-55",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company based in California wants to delete profile data from the Adobe Experience Platform profile store and data lake based on a customer request, and has given a list of profiles to a Real-Time CDP consultant. What is the recommended approach?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Leverage the Privacy Service and submit the delete request under the CCPA regulation type for a given namespace and identity value."
+        },
+        {
+          "id": "opt-b",
+          "text": "Build a custom solution using the delete entity API to delete the profiles from both the data lake and the profile store."
+        },
+        {
+          "id": "opt-c",
+          "text": "Leverage Query Service, create a query that excludes the profiles shared by the customer, delete the batches from the dataset, and insert data from the query output."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-56",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "After going live with Adobe Real-Time CDP, a data architect notices that a field defined in field group A should actually be part of field group B. How can this issue be resolved?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Remove the field from field group A and create it inside field group B after creating all datasets for the target XDM schema."
+        },
+        {
+          "id": "opt-b",
+          "text": "Use the move schema endpoint in the schema registry API after deleting all datasets linked to the schema."
+        },
+        {
+          "id": "opt-c",
+          "text": "Remove the field from field group A and create it inside field group B after deleting all datasets linked to the XDM schema."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-57",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A retail company operates a mobile app and a website. It collects geographic data such as latitude, longitude, device sensor data and IP addresses, and wants to create location-based segments in Adobe Real-Time CDP. Which data usage label should be applied?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Contract Data Labels"
+        },
+        {
+          "id": "opt-b",
+          "text": "Sensitive Data Labels"
+        },
+        {
+          "id": "opt-c",
+          "text": "Identity Data Labels"
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-58",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer is working on defining a data usage policy via automatic enforcement and has configured dataset labels C1 and C2 to enforce the restriction. The data engineer has set up the marketing actions, enabled the policy, and while activating audiences to destinations, realizes that the policy violations did not occur. How can the data engineer ensure that the data policy is enforced successfully?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Exclude the labels C1 and C2 from any audience upon activation."
+        },
+        {
+          "id": "opt-b",
+          "text": "Include the labels C1 and C2 in the same audience upon activation."
+        },
+        {
+          "id": "opt-c",
+          "text": "Include the labels C1 and C2 in separate audiences upon activation."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-59",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer views the license usage dashboard each morning and sees the average profile richness at about 300KB per profile, against a 100KB contract. The marketer removes a dataset contributing about 150KB per profile, confirms the data is deleted, but the dashboard still shows 300KB at the end of the day. Assuming no other factors, why does the dashboard show the old value?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The marketer forgot that the license usage dashboard only updates one time per day."
+        },
+        {
+          "id": "opt-b",
+          "text": "The marketer needs to wait until the next streaming segmentation job runs."
+        },
+        {
+          "id": "opt-c",
+          "text": "The marketer needs to manually run the \"Update license usage\" job to refresh the metrics."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-60",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A company has a policy to restrict access of marketers from viewing PII fields within the Real-Time CDP. The data architect plans to use the attribute-based access control feature to fulfil this requirement. The data architect notices that when they apply labels in one schema, other schemas inherit those same labels. Why is this happening?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Labels are applied at a field within a field group and inherited by the schemas that use that field group."
+        },
+        {
+          "id": "opt-b",
+          "text": "Labels are applied at a field group and inherited by the schemas that use that field group."
+        },
+        {
+          "id": "opt-c",
+          "text": "Labels are applied at a field level and inherited by the schemas that use that field."
+        }
+      ],
+      "correctAnswers": [
+        "opt-a"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-61",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "Given the following schema field: Schema Field: personEmail.address; Core Labels Applied: I1 and I2; Custom Labels Applied: CUSTOM_1 and CUSTOM_2. Assuming the Default Access Policy is enabled, what is the fewest amount of label(s) added to a user's role in order to access the above schema field?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Add \"I1 and I2\" to the access role."
+        },
+        {
+          "id": "opt-b",
+          "text": "Add \"I1 and I2\" and \"CUSTOM_1\" to the access role."
+        },
+        {
+          "id": "opt-c",
+          "text": "Add \"I1 or I2 or CUSTOM_1 or CUSTOM_2\" to the access role."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-62",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An architect for a healthcare organization must collect web analytics data with these rules: the home page cannot collect known identifiers and is not restricted healthcare data; after login, known identifiers can be collected but linked data is restricted healthcare data; onsite personalization can only use non-restricted data. Assuming all web analytics data is enabled for Profile with ECID as the primary identity, how should the platform be configured?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Create one sandbox with two datasets, one labeled as restricted and one unlabeled, and create audiences using only the unlabeled dataset."
+        },
+        {
+          "id": "opt-b",
+          "text": "Create two sandboxes, one to collect the restricted data and one to collect the non-restricted data, and connect the personalization tool to the non-restricted sandbox."
+        },
+        {
+          "id": "opt-c",
+          "text": "Create one sandbox and apply the restricted label only to the known customer identifiers."
+        }
+      ],
+      "correctAnswers": [
+        "opt-b"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-63",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data engineer uses the Identity Graph Viewer to review relationships for a customer. A node (ECID 12345678) shows Dataset ID, no dataset name and no batch ID. What monitoring capabilities can the engineer use to get more information about the dataset associated with this identity?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Utilize the Dataset Service API to look up the Dataset ID."
+        },
+        {
+          "id": "opt-b",
+          "text": "Utilize Query Service to look up the ECID fragment and obtain the missing batch ID."
+        },
+        {
+          "id": "opt-c",
+          "text": "Utilize audit logs, filter by dataset, and review the logs to obtain information on the dataset ID."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-64",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A data engineer must set up alerts for a Real-Time CDP project. Which two channels of alerts are available to the engineer? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Alerts API"
+        },
+        {
+          "id": "opt-b",
+          "text": "Data Collection UI Alerts"
+        },
+        {
+          "id": "opt-c",
+          "text": "Adobe IO Events"
+        },
+        {
+          "id": "opt-d",
+          "text": "Platform UI"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c",
+        "opt-d"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-65",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A data architect has scheduled queries in Adobe Experience Platform Query Service and wants an alert when a scheduled query fails. The query run failure option is missing from the alert section, but source flow run alerts are available. What is a possible reason?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "The data architect is missing the manage alert permissions for Query Service."
+        },
+        {
+          "id": "opt-b",
+          "text": "The sandbox the data architect is using is not enabled for alerts."
+        },
+        {
+          "id": "opt-c",
+          "text": "The data architect is trying to configure the alert in the development sandbox."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-66",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "multi",
+      "question": "A marketer needs to quickly validate that data ingested into a dataset was processed to Profile successfully. In Adobe Experience Platform, in which two ways can the marketer do this? (Choose two.)",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Monitoring > Batch"
+        },
+        {
+          "id": "opt-b",
+          "text": "Query Service"
+        },
+        {
+          "id": "opt-c",
+          "text": "Sources > Data Flow"
+        },
+        {
+          "id": "opt-d",
+          "text": "Identities > Browse"
+        },
+        {
+          "id": "opt-e",
+          "text": "Dataset > Activity"
+        }
+      ],
+      "correctAnswers": [
+        "opt-a",
+        "opt-e"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-67",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "A marketer must ensure smooth delivery of audience data to destinations. The marketer monitors these alerts: Segment Job Failure, Segment Job Delay and Identity Service Flow Run Failure. Which additional alert can the marketer proactively monitor as part of the data delivery process?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Query service scheduled query failure"
+        },
+        {
+          "id": "opt-b",
+          "text": "Segment Definition Disabled"
+        },
+        {
+          "id": "opt-c",
+          "text": "Identity Service Flow Run Delay"
+        },
+        {
+          "id": "opt-d",
+          "text": "Sources Flow Run Failure"
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    },
+    {
+      "id": "ad0-e605-exam-68",
+      "chapterId": null,
+      "domainId": null,
+      "topic": "Real-Time CDP practice",
+      "difficulty": "professional",
+      "type": "single",
+      "question": "An Adobe Real-Time CDP customer has 5 million profiles and a 300KB average profile richness license. Current usage is 4 million profiles across multiple identities with 100KB profile richness. The marketing team wants new prospect use cases to increase customer acquisition. What key question should the data team ask the marketers to stay within license compliance?",
+      "options": [
+        {
+          "id": "opt-a",
+          "text": "Number of identifiers and their respective types, such as people identifier or cross-domain."
+        },
+        {
+          "id": "opt-b",
+          "text": "Number of attributes along with cardinality and the overlap with the existing set of attributes in the data model."
+        },
+        {
+          "id": "opt-c",
+          "text": "Number of unique prospects, average number of events per prospect, and look-back period."
+        }
+      ],
+      "correctAnswers": [
+        "opt-c"
+      ],
+      "explanation": "Answer key taken from RT_CDP_Exam.pdf. The source gives no rationale.",
+      "incorrectExplanations": {},
+      "explanationSource": "RT_CDP_Exam.pdf"
+    }
+  ]
+}

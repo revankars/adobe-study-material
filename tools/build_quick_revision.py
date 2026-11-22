@@ -15,6 +15,8 @@ GUIDES = {
     "ad0-e408": "Complete_Study_Guide_AD0-E408.html",
     "ad0-e409": "Complete_Study_Guide_AD0-E409.html",
     "ad0-e607": "Complete_Study_Guide_AD0-E607.html",
+    "ad0-e605": "Complete_Study_Guide_AD0-E605.html",
+    "ad0-e606": "Complete_Study_Guide_AD0-E606.html",
 }
 MAX_POINT = 190
 
@@ -43,9 +45,41 @@ def section_text(h4):
         node = node.find_next_sibling()
     return [t for t in out if len(t) > 30]
 
+def build_plain(soup):
+    """Guides written as plain sections: each <section id> is a part, each <h3> a point."""
+    parts_out = []
+    for section in soup.select("main section[id]"):
+        if section["id"] in ("start", "quiz", "check", "sources"):
+            continue
+        h2 = section.find("h2")
+        if not h2:
+            continue
+        title = clean(h2.get_text(" ", strip=True))
+        points = []
+        for h3 in section.find_all("h3"):
+            node, text = h3.find_next_sibling(), ""
+            while node is not None and node.name not in ("h3", "h2", "section"):
+                if node.name == "p":
+                    t = clean(node.get_text(" ", strip=True))
+                    if len(t) > 30 and not t.endswith(":"):
+                        text = t
+                        break
+                node = node.find_next_sibling()
+            if text and h3.get("id"):
+                points.append({"text": first_sentence(text), "anchor": h3["id"]})
+        if points:
+            parts_out.append({"id": section["id"], "title": title, "points": points})
+    return parts_out
+
 def build(cert, filename):
     soup = BeautifulSoup((ROOT / filename).read_text(encoding="utf8"), "html.parser")
     subject = soup.select_one("section.subject")
+    if subject is None:
+        parts_out = build_plain(soup)
+        data = {"certificationId": cert, "guide": filename, "parts": parts_out}
+        out = ROOT / "data" / cert / "quick-revision.json"
+        out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf8")
+        return out, len(parts_out), sum(len(p["points"]) for p in parts_out)
     parts_out = []
     for part in subject.select(":scope > section.part"):
         kind = part.select_one(".kind")

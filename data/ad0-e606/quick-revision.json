@@ -1,0 +1,124 @@
+{
+  "certificationId": "ad0-e606",
+  "guide": "Complete_Study_Guide_AD0-E606.html",
+  "parts": [
+    {
+      "id": "admin",
+      "title": "1. Administration and configuration 20%",
+      "points": [
+        {
+          "text": "Access is managed through users, roles, permissions, and product-level access.",
+          "anchor": "h-1-1-permissions-roles-and-abac"
+        },
+        {
+          "text": "A sandbox is a logical partition in an Experience Platform environment used to isolate assets and data for development, testing, or production.",
+          "anchor": "h-1-2-sandboxes-and-business-unit-separation"
+        },
+        {
+          "text": "Channel administration establishes the infrastructure and identity configuration needed to deliver messages.",
+          "anchor": "h-1-3-channel-administration"
+        },
+        {
+          "text": "A unitary event is associated with an individual profile and can trigger an individual journey.",
+          "anchor": "h-1-4-events-custom-actions-custom-data-sources"
+        }
+      ]
+    },
+    {
+      "id": "journeys",
+      "title": "2. Journey orchestration 22%",
+      "points": [
+        {
+          "text": "Coordinate channels around customer state and preferences, not by blindly sending the same message everywhere.",
+          "anchor": "h-2-4-multi-channel-multi-step-design"
+        },
+        {
+          "text": "Re-entry is a business rule.",
+          "anchor": "h-2-5-entrance-re-entry-and-concurrency"
+        },
+        {
+          "text": "Minimum test matrix: eligible profile; missing optional attribute; missing required identity/address; no consent/opt-out; already converted; duplicate event; action success; action business…",
+          "anchor": "h-2-6-test-mode-proof-and-experimentation"
+        },
+        {
+          "text": "Read metrics as a funnel: eligible/entered → progressed → branched → action executed → accepted by provider → delivered/engaged where reporting supports it.",
+          "anchor": "h-2-7-reporting-and-performance-metrics"
+        }
+      ]
+    },
+    {
+      "id": "offers",
+      "title": "3. Offer decisioning 16%",
+      "points": [
+        {
+          "text": "Eligibility answers can this offer be shown?",
+          "anchor": "h-3-3-eligibility-vs-ranking"
+        },
+        {
+          "text": "Simulation verifies candidate offers and the decision result for a selected profile/context.",
+          "anchor": "h-3-4-test-profiles-and-simulation"
+        },
+        {
+          "text": "Your reading list also names the Decisions Hub API as a delivery path.",
+          "anchor": "h-3-5-offer-hub-decisions-hub-vs-edge-decisioning-api"
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "title": "4. Content authoring 22%",
+      "points": [
+        {
+          "text": "Content authoring includes channel-specific configuration, rendering, personalization, fallback behavior, compliance, link validation, and test-profile verification—not just copywriting.",
+          "anchor": "h-4-1-lifecycle"
+        },
+        {
+          "text": "Templates standardize layout and approved patterns.",
+          "anchor": "h-4-3-templates"
+        },
+        {
+          "text": "Personalization syntax accesses profile, event, and contextual data and applies expressions.",
+          "anchor": "h-4-4-personalization-and-helper-functions"
+        },
+        {
+          "text": "Validation is not proof: validation checks configuration; proof checks what a person sees.",
+          "anchor": "h-4-5-preview-proof-validation-approval-publish-pause"
+        },
+        {
+          "text": "A contact address or device token does not automatically grant permission to contact.",
+          "anchor": "h-4-6-consent-and-suppression"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "5. Data modeling 18%",
+      "points": [
+        {
+          "text": "XDM schemas define structure and meaning.",
+          "anchor": "h-5-1-xdm-schemas-and-schema-types"
+        },
+        {
+          "text": "A dataset stores records conforming to a schema.",
+          "anchor": "h-5-2-datasets"
+        },
+        {
+          "text": "A union schema is a system-generated combined view of schemas that share a compatible class and are enabled for Real-Time Customer Profile.",
+          "anchor": "h-5-3-union-schemas"
+        },
+        {
+          "text": "Profile combines fragments from Profile-enabled datasets and identity relationships into a unified view.",
+          "anchor": "h-5-4-real-time-customer-profile"
+        },
+        {
+          "text": "An identity is an identifier for a person/entity.",
+          "anchor": "h-5-5-identity-namespaces-and-identity-graph"
+        },
+        {
+          "text": "Guardrails can limit audience complexity, evaluation methods, data volume, identity graph behavior, and processing capacity.",
+          "anchor": "h-5-8-identity-and-segmentation-guardrails"
+        }
+      ]
+    }
+  ]
+}

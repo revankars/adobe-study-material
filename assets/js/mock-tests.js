@@ -12,17 +12,9 @@
 export function renderMockTestsSelection(certifications) {
   const certificationsList = certifications.filter(cert => cert.contentAvailable);
   
-  // Map to get question counts (actual counts from loaded data)
-  const questionCounts = {
-    'ad0-e207': 45,  // Adobe Analytics Architect
-    'ad0-e408': 110,  // Adobe Target Business Practitioner
-    'ad0-e409': 61,  // Adobe Target Architect
-    'ad0-e607': 68   // Adobe Journey Optimizer
-  };
-  
   const testBlocksHtml = certificationsList
     .map(cert => {
-      const count = questionCounts[cert.id] || 0;
+      const count = cert.questionCount || 0;
       const testName = `${cert.code} - ${cert.name}`;
       const description = getMockTestDescription(cert.id);
       const icon = cert.icon || '🎯';

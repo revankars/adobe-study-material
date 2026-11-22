@@ -1,0 +1,73 @@
+{
+  "certificationId": "ad0-e606",
+  "code": "AD0-E606",
+  "name": "Adobe Journey Optimizer Developer Expert",
+  "specifications": {
+    "totalQuestions": 15
+  },
+  "examLogistics": "Exam logistics:",
+  "domains": [
+    {
+      "name": "Administration and configuration",
+      "weight": 20,
+      "keyTopics": [
+        "1.1 Permissions, roles, and ABAC",
+        "1.2 Sandboxes and business-unit separation",
+        "1.3 Channel administration",
+        "1.4 Events, custom actions, custom data sources",
+        "1.5 AJO APIs and operational controls"
+      ]
+    },
+    {
+      "name": "Journey orchestration",
+      "weight": 22,
+      "keyTopics": [
+        "2.1 Choose a journey pattern",
+        "2.2 Journey build sequence",
+        "2.3 Activities and branching",
+        "2.4 Multi-channel, multi-step design",
+        "2.5 Entrance, re-entry, and concurrency",
+        "2.6 Test mode, proof, and experimentation",
+        "2.7 Reporting and performance metrics"
+      ]
+    },
+    {
+      "name": "Offer decisioning",
+      "weight": 16,
+      "keyTopics": [
+        "3.1 Core objects",
+        "3.2 Offer creation workflow",
+        "3.3 Eligibility vs ranking",
+        "3.4 Test profiles and simulation",
+        "3.5 Offer Hub / Decisions Hub vs Edge Decisioning API",
+        "3.6 Guardrails"
+      ]
+    },
+    {
+      "name": "Content authoring",
+      "weight": 22,
+      "keyTopics": [
+        "4.1 Lifecycle",
+        "4.2 Channel-specific considerations",
+        "4.3 Templates",
+        "4.4 Personalization and helper functions",
+        "4.5 Preview, proof, validation, approval, publish, pause",
+        "4.6 Consent and suppression"
+      ]
+    },
+    {
+      "name": "Data modeling",
+      "weight": 18,
+      "keyTopics": [
+        "5.1 XDM schemas and schema types",
+        "5.2 Datasets",
+        "5.3 Union schemas",
+        "5.4 Real-Time Customer Profile",
+        "5.5 Identity, namespaces, and identity graph",
+        "5.6 Ingestion patterns",
+        "5.7 Segmentation Service: batch, streaming, edge",
+        "5.8 Identity and segmentation guardrails"
+      ]
+    }
+  ]
+}

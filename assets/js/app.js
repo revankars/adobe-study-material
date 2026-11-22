@@ -155,6 +155,8 @@ function openStudyGuide(certId, anchor, from) {
     "ad0-e408": "Complete_Study_Guide_AD0-E408.html",
     "ad0-e409": "Complete_Study_Guide_AD0-E409.html",
     "ad0-e607": "Complete_Study_Guide_AD0-E607.html",
+    "ad0-e605": "Complete_Study_Guide_AD0-E605.html",
+    "ad0-e606": "Complete_Study_Guide_AD0-E606.html",
   };
   const filename = studyGuideFiles[certId];
   if (!filename) {

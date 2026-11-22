@@ -1,0 +1,126 @@
+{
+  "certificationId": "ad0-e605",
+  "guide": "Complete_Study_Guide_AD0-E605.html",
+  "parts": [
+    {
+      "id": "architecture",
+      "title": "Data Architecture",
+      "points": [
+        {
+          "text": "Other standard classes can represent entities such as Provider, Plan, Payer, Product, or Store.",
+          "anchor": "xdm"
+        },
+        {
+          "text": "Do not confuse a record key with a person identity.",
+          "anchor": "keys"
+        },
+        {
+          "text": "Relationships connect separate entity schemas.",
+          "anchor": "relationships"
+        },
+        {
+          "text": "Enable a dataset for Real-Time Customer Profile when its records must contribute to unified profile attributes, identity stitching, or Profile-based audience use cases.",
+          "anchor": "h-profile-enablement-decide-deliberately"
+        }
+      ]
+    },
+    {
+      "id": "segmentation",
+      "title": "Segmentation and Audiences",
+      "points": [
+        {
+          "text": "Plan schedule/export jobs, dynamic personalization, guardrails, merge-policy impact, evaluation methods, relationship requirements, aggregates, sequential logic, segment membership, and…",
+          "anchor": "h-core-areas"
+        },
+        {
+          "text": "Current eligibility nuance: Adobe’s streaming rules have evolved.",
+          "anchor": "evaluation"
+        },
+        {
+          "text": "Segment Builder supports numeric aggregations SUM, AVERAGE, MIN, and MAX .",
+          "anchor": "aggregates"
+        }
+      ]
+    },
+    {
+      "id": "profile",
+      "title": "Profile and Identity",
+      "points": [
+        {
+          "text": "Primary/secondary designation affects how profile fragments are stored and linked.",
+          "anchor": "h-primary-and-secondary-identities"
+        },
+        {
+          "text": "Example: Loyalty says Gold; CRM says Silver.",
+          "anchor": "merge"
+        },
+        {
+          "text": "When identity updates remove an incorrect link and an over-stitched profile separates into distinct valid profiles, the concept being tested is profile collapse / graph recomputation (also…",
+          "anchor": "h-profile-collapse-split-and-identity-graph-changes"
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": "Governance, DULE, ABAC, and Consent",
+      "points": [
+        {
+          "text": "Adobe labels commonly use categories such as identity (I), sensitive (S), and contractual (C), with more specific labels under these families.",
+          "anchor": "h-dule-framework-labels-policies-marketing-actions"
+        },
+        {
+          "text": "Consent is a customer preference/permission signal that can determine whether a profile is eligible for activation.",
+          "anchor": "h-consent"
+        },
+        {
+          "text": "Ethnicity is sensitive personal information.",
+          "anchor": "h-scenario-ethnicity-related-field"
+        }
+      ]
+    },
+    {
+      "id": "ingestion",
+      "title": "Data Sources and Ingestion",
+      "points": [
+        {
+          "text": "Source connectors and ingestion modes are not interchangeable.",
+          "anchor": "h-batch-vs-streaming-ingestion"
+        },
+        {
+          "text": "Streaming ingestion data is persisted to the Data Lake.",
+          "anchor": "h-data-flow-and-storage-layers"
+        },
+        {
+          "text": "Adobe’s current streaming ingestion overview lists expected latency targets of under 15 minutes at the 95th percentile for B2C Profile ingestion and under 30 minutes at the 95th percentile…",
+          "anchor": "h-latency-documented-expectations-not-promises"
+        },
+        {
+          "text": "Batch replay: replaces an already ingested batch, equivalent to deleting the old batch and ingesting a new one.",
+          "anchor": "h-what-happens-when-incorrect-data-is-ingested-again"
+        },
+        {
+          "text": "Authentication depends on ingestion path: source connector credentials, API credentials/OAuth or service-account mechanisms, and connection-specific methods.",
+          "anchor": "h-security-and-authentication"
+        }
+      ]
+    },
+    {
+      "id": "activation",
+      "title": "Activation and Destinations",
+      "points": [
+        {
+          "text": "Activate an audience when the requirement is to send profiles grouped by qualification.",
+          "anchor": "h-audience-activation-vs-dataset-export"
+        },
+        {
+          "text": "Limits vary by destination and partner.",
+          "anchor": "h-guardrails-and-mapping-limits"
+        },
+        {
+          "text": "It is often possible to add multiple audiences to one destination dataflow, but mappings and settings depend on the destination/workflow.",
+          "anchor": "h-multiple-audiences-on-one-destination"
+        }
+      ]
+    }
+  ]
+}

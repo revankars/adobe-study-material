@@ -1319,7 +1319,7 @@
       "domainId": "solution_design",
       "topic": "Report Suite Migration",
       "difficulty": "medium",
-      "type": "single",
+      "type": "multi",
       "question": "An analyst is copying settings from a report suite to a new report suite. Which settings are exported to a new report suite?",
       "options": [
         {
@@ -1357,7 +1357,7 @@
       "domainId": "implementation",
       "topic": "Beacon Request and Variables",
       "difficulty": "medium",
-      "type": "single",
+      "type": "multi",
       "question": "What could be the size of the beacon request while still keeping the data? (two)",
       "options": [
         {
@@ -1394,7 +1394,7 @@
       "domainId": "implementation",
       "topic": "Exit Links Tracking",
       "difficulty": "medium",
-      "type": "single",
+      "type": "multi",
       "question": "You want to review analytics report for your website one day, you open up to the exit links report and notice it is empty. After manually testing some exist links on your site, You do not see any data in the exit links report. What could be causing the missing images for external links? Select two.",
       "options": [
         {
